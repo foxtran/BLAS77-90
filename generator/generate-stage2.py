@@ -12,7 +12,6 @@ def extract_interface(lst: list[str], first: str, last: str) -> list[str]:
 
 
 def apply_interface_transforms(text: str) -> str:
-    # Simple string replacements
     text = text.replace("1_8:", "")
     text = text.replace("logical(8)", "logical(blas77_int)")
     text = text.replace("integer(8)", "integer(blas77_int)")
@@ -25,14 +24,12 @@ def apply_interface_transforms(text: str) -> str:
     # character((...),1) -> character((...))
     text = re.sub(r"character\(([^)]*),1\)", r"character(\1)", text)
 
-    # character( -> character(len=
     text = text.replace("character(", "character(len=")
 
     return text
 
 
 def process_include(text: str) -> str:
-    # Add CNAME(...) to function/subroutine lines
     rec = False
     if "recursive" in text:
         text = text.replace("recursive ", "")
