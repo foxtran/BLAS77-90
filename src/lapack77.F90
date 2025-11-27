@@ -29,8 +29,8 @@ module lapack77
 #   include "include/lapack/cgedmdq.f90"
 #   include "include/lapack/cgeequ.f90"
 #   include "include/lapack/cgeequb.f90"
-#   include "include/lapack/cgees.f90"
-#   include "include/lapack/cgeesx.f90"
+
+
 #   include "include/lapack/cgeev.f90"
 #   include "include/lapack/cgeevx.f90"
 #   include "include/lapack/cgegs.f90"
@@ -89,9 +89,9 @@ module lapack77
 #   include "include/lapack/cgetsqrhrt.f90"
 #   include "include/lapack/cggbak.f90"
 #   include "include/lapack/cggbal.f90"
-#   include "include/lapack/cgges3.f90"
-#   include "include/lapack/cgges.f90"
-#   include "include/lapack/cggesx.f90"
+
+
+
 #   include "include/lapack/cggev3.f90"
 #   include "include/lapack/cggev.f90"
 #   include "include/lapack/cggevx.f90"
@@ -455,8 +455,8 @@ module lapack77
 #   include "include/lapack/dgedmdq.f90"
 #   include "include/lapack/dgeequ.f90"
 #   include "include/lapack/dgeequb.f90"
-#   include "include/lapack/dgees.f90"
-#   include "include/lapack/dgeesx.f90"
+
+
 #   include "include/lapack/dgeev.f90"
 #   include "include/lapack/dgeevx.f90"
 #   include "include/lapack/dgegs.f90"
@@ -515,9 +515,9 @@ module lapack77
 #   include "include/lapack/dgetsqrhrt.f90"
 #   include "include/lapack/dggbak.f90"
 #   include "include/lapack/dggbal.f90"
-#   include "include/lapack/dgges3.f90"
-#   include "include/lapack/dgges.f90"
-#   include "include/lapack/dggesx.f90"
+
+
+
 #   include "include/lapack/dggev3.f90"
 #   include "include/lapack/dggev.f90"
 #   include "include/lapack/dggevx.f90"
@@ -859,8 +859,8 @@ module lapack77
 #   include "include/lapack/sgedmdq.f90"
 #   include "include/lapack/sgeequ.f90"
 #   include "include/lapack/sgeequb.f90"
-#   include "include/lapack/sgees.f90"
-#   include "include/lapack/sgeesx.f90"
+
+
 #   include "include/lapack/sgeev.f90"
 #   include "include/lapack/sgeevx.f90"
 #   include "include/lapack/sgegs.f90"
@@ -919,9 +919,9 @@ module lapack77
 #   include "include/lapack/sgetsqrhrt.f90"
 #   include "include/lapack/sggbak.f90"
 #   include "include/lapack/sggbal.f90"
-#   include "include/lapack/sgges3.f90"
-#   include "include/lapack/sgges.f90"
-#   include "include/lapack/sggesx.f90"
+
+
+
 #   include "include/lapack/sggev3.f90"
 #   include "include/lapack/sggev.f90"
 #   include "include/lapack/sggevx.f90"
@@ -1256,8 +1256,8 @@ module lapack77
 #   include "include/lapack/zgedmdq.f90"
 #   include "include/lapack/zgeequ.f90"
 #   include "include/lapack/zgeequb.f90"
-#   include "include/lapack/zgees.f90"
-#   include "include/lapack/zgeesx.f90"
+
+
 #   include "include/lapack/zgeev.f90"
 #   include "include/lapack/zgeevx.f90"
 #   include "include/lapack/zgegs.f90"
@@ -1316,9 +1316,9 @@ module lapack77
 #   include "include/lapack/zgetsqrhrt.f90"
 #   include "include/lapack/zggbak.f90"
 #   include "include/lapack/zggbal.f90"
-#   include "include/lapack/zgges3.f90"
-#   include "include/lapack/zgges.f90"
-#   include "include/lapack/zggesx.f90"
+
+
+
 #   include "include/lapack/zggev3.f90"
 #   include "include/lapack/zggev.f90"
 #   include "include/lapack/zggevx.f90"

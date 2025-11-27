@@ -130,6 +130,9 @@ def process_routine(fname: Path, src_dir: Path, library_name: str) -> (str, str)
     with out_path.open("w", encoding="utf-8") as f:
         f.write(include)
 
+    if "procedure" in include:
+        return ("", "")
+
     return (f'#   include "{out_fname}"', wrapper)
 
 

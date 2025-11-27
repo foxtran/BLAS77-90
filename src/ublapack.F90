@@ -622,60 +622,7 @@ subroutine ub_cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   call cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
 end subroutine ub_cgeequb
 
-subroutine ub_cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/cgees.f90"
-  end interface
 
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f32) :: w(*)
-  integer(blas77_int) :: ldvs
-  complex(blas77_f32) :: vs(ldvs,*)
-  complex(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f32) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-end subroutine ub_cgees
-
-subroutine ub_cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/cgeesx.f90"
-  end interface
-
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f32) :: w(*)
-  integer(blas77_int) :: ldvs
-  complex(blas77_f32) :: vs(ldvs,*)
-  real(blas77_f32) :: rconde
-  real(blas77_f32) :: rcondv
-  complex(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f32) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-end subroutine ub_cgeesx
 
 subroutine ub_cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -2017,106 +1964,8 @@ subroutine ub_cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   call cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
 end subroutine ub_cggbal
 
-subroutine ub_cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/cgges3.f90"
-  end interface
 
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f32) :: alpha(*)
-  complex(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f32) :: vsr(ldvsr,*)
-  complex(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f32) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
 
-  call cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine ub_cgges3
-
-subroutine ub_cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/cgges.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f32) :: alpha(*)
-  complex(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f32) :: vsr(ldvsr,*)
-  complex(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f32) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine ub_cgges
-
-subroutine ub_cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/cggesx.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f32) :: alpha(*)
-  complex(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f32) :: vsr(ldvsr,*)
-  real(blas77_f32) :: rconde(2)
-  real(blas77_f32) :: rcondv(2)
-  complex(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f32) :: rwork(*)
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-end subroutine ub_cggesx
 
 subroutine ub_cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -10694,62 +10543,7 @@ subroutine ub_dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   call dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
 end subroutine ub_dgeequb
 
-subroutine ub_dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/dgees.f90"
-  end interface
 
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f64) :: wr(*)
-  real(blas77_f64) :: wi(*)
-  integer(blas77_int) :: ldvs
-  real(blas77_f64) :: vs(ldvs,*)
-  real(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-end subroutine ub_dgees
-
-subroutine ub_dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/dgeesx.f90"
-  end interface
-
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f64) :: wr(*)
-  real(blas77_f64) :: wi(*)
-  integer(blas77_int) :: ldvs
-  real(blas77_f64) :: vs(ldvs,*)
-  real(blas77_f64) :: rconde
-  real(blas77_f64) :: rcondv
-  real(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine ub_dgeesx
 
 subroutine ub_dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -12078,106 +11872,8 @@ subroutine ub_dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   call dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
 end subroutine ub_dggbal
 
-subroutine ub_dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/dgges3.f90"
-  end interface
 
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f64) :: alphar(*)
-  real(blas77_f64) :: alphai(*)
-  real(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f64) :: vsr(ldvsr,*)
-  real(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
 
-  call dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine ub_dgges3
-
-subroutine ub_dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/dgges.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f64) :: alphar(*)
-  real(blas77_f64) :: alphai(*)
-  real(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f64) :: vsr(ldvsr,*)
-  real(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine ub_dgges
-
-subroutine ub_dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/dggesx.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f64) :: alphar(*)
-  real(blas77_f64) :: alphai(*)
-  real(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f64) :: vsr(ldvsr,*)
-  real(blas77_f64) :: rconde(2)
-  real(blas77_f64) :: rcondv(2)
-  real(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine ub_dggesx
 
 subroutine ub_dggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -20192,62 +19888,7 @@ subroutine ub_sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   call sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
 end subroutine ub_sgeequb
 
-subroutine ub_sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/sgees.f90"
-  end interface
 
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f32) :: wr(*)
-  real(blas77_f32) :: wi(*)
-  integer(blas77_int) :: ldvs
-  real(blas77_f32) :: vs(ldvs,*)
-  real(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-end subroutine ub_sgees
-
-subroutine ub_sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/sgeesx.f90"
-  end interface
-
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f32) :: wr(*)
-  real(blas77_f32) :: wi(*)
-  integer(blas77_int) :: ldvs
-  real(blas77_f32) :: vs(ldvs,*)
-  real(blas77_f32) :: rconde
-  real(blas77_f32) :: rcondv
-  real(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine ub_sgeesx
 
 subroutine ub_sgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -21576,106 +21217,8 @@ subroutine ub_sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   call sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
 end subroutine ub_sggbal
 
-subroutine ub_sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/sgges3.f90"
-  end interface
 
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f32) :: alphar(*)
-  real(blas77_f32) :: alphai(*)
-  real(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f32) :: vsr(ldvsr,*)
-  real(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
 
-  call sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine ub_sgges3
-
-subroutine ub_sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/sgges.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f32) :: alphar(*)
-  real(blas77_f32) :: alphai(*)
-  real(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f32) :: vsr(ldvsr,*)
-  real(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine ub_sgges
-
-subroutine ub_sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/sggesx.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  real(blas77_f32) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  real(blas77_f32) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  real(blas77_f32) :: alphar(*)
-  real(blas77_f32) :: alphai(*)
-  real(blas77_f32) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  real(blas77_f32) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  real(blas77_f32) :: vsr(ldvsr,*)
-  real(blas77_f32) :: rconde(2)
-  real(blas77_f32) :: rcondv(2)
-  real(blas77_f32) :: work(*)
-  integer(blas77_int) :: lwork
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine ub_sggesx
 
 subroutine ub_sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -29573,60 +29116,7 @@ subroutine ub_zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   call zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
 end subroutine ub_zgeequb
 
-subroutine ub_zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/zgees.f90"
-  end interface
 
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f64) :: w(*)
-  integer(blas77_int) :: ldvs
-  complex(blas77_f64) :: vs(ldvs,*)
-  complex(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f64) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-end subroutine ub_zgees
-
-subroutine ub_zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/zgeesx.f90"
-  end interface
-
-  character(len=1) :: jobvs
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: select
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f64) :: w(*)
-  integer(blas77_int) :: ldvs
-  complex(blas77_f64) :: vs(ldvs,*)
-  real(blas77_f64) :: rconde
-  real(blas77_f64) :: rcondv
-  complex(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f64) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-end subroutine ub_zgeesx
 
 subroutine ub_zgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -30968,106 +30458,8 @@ subroutine ub_zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   call zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
 end subroutine ub_zggbal
 
-subroutine ub_zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/zgges3.f90"
-  end interface
 
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f64) :: alpha(*)
-  complex(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f64) :: vsr(ldvsr,*)
-  complex(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f64) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
 
-  call zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine ub_zgges3
-
-subroutine ub_zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/zgges.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f64) :: alpha(*)
-  complex(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f64) :: vsr(ldvsr,*)
-  complex(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f64) :: rwork(*)
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine ub_zgges
-
-subroutine ub_zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-  use blas77_types
-  implicit none
-  interface
-#   include "include/lapack/zggesx.f90"
-  end interface
-
-  character(len=1) :: jobvsl
-  character(len=1) :: jobvsr
-  character(len=1) :: sort
-  procedure(logical(blas77_int)) :: selctg
-  character(len=1) :: sense
-  integer(blas77_int) :: n
-  integer(blas77_int) :: lda
-  complex(blas77_f64) :: a(lda,*)
-  integer(blas77_int) :: ldb
-  complex(blas77_f64) :: b(ldb,*)
-  integer(blas77_int) :: sdim
-  complex(blas77_f64) :: alpha(*)
-  complex(blas77_f64) :: beta(*)
-  integer(blas77_int) :: ldvsl
-  complex(blas77_f64) :: vsl(ldvsl,*)
-  integer(blas77_int) :: ldvsr
-  complex(blas77_f64) :: vsr(ldvsr,*)
-  real(blas77_f64) :: rconde(2)
-  real(blas77_f64) :: rcondv(2)
-  complex(blas77_f64) :: work(*)
-  integer(blas77_int) :: lwork
-  real(blas77_f64) :: rwork(*)
-  integer(blas77_int) :: iwork(*)
-  integer(blas77_int) :: liwork
-  logical(blas77_int) :: bwork(*)
-  integer(blas77_int) :: info
-
-  call zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-end subroutine ub_zggesx
 
 subroutine ub_zggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
