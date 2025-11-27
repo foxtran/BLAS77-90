@@ -1,7 +1,7 @@
 subroutine dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) CNAME(dsb2st_kernels)
 import
 character(len=1)::uplo
-logical::wantz
+logical(blas77_int)::wantz
 integer(blas77_int)::ttype
 integer(blas77_int)::st
 integer(blas77_int)::ed

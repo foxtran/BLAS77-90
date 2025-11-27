@@ -3,7 +3,7 @@ import
 character(len=1)::side
 character(len=1)::eigsrc
 character(len=1)::initv
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::ldh
 real(blas77_f64)::h(ldh,*)

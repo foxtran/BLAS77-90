@@ -2,7 +2,7 @@ subroutine stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,wor
 import
 character(len=1)::job
 character(len=1)::howmny
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::lda
 real(blas77_f32)::a(lda,*)

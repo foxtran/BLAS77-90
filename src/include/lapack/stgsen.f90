@@ -1,9 +1,9 @@
 subroutine stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) CNAME(stgsen)
 import
 integer(blas77_int)::ijob
-logical::wantq
-logical::wantz
-logical::select(*)
+logical(blas77_int)::wantq
+logical(blas77_int)::wantz
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::lda
 real(blas77_f32)::a(lda,*)

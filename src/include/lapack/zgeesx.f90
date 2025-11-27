@@ -2,7 +2,7 @@ subroutine zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,w
 import
 character(len=1)::jobvs
 character(len=1)::sort
-procedure(logical)::select
+procedure(logical(blas77_int))::select
 character(len=1)::sense
 integer(blas77_int)::n
 integer(blas77_int)::lda
@@ -16,6 +16,6 @@ real(blas77_f64)::rcondv
 complex(blas77_f64)::work(*)
 integer(blas77_int)::lwork
 real(blas77_f64)::rwork(*)
-logical::bwork(*)
+logical(blas77_int)::bwork(*)
 integer(blas77_int)::info
 end

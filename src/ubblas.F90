@@ -1610,7 +1610,7 @@ function ub_lsame(ca,cb)
 
   character(len=1) :: ca
   character(len=1) :: cb
-  logical :: ub_lsame
+  logical(blas77_int) :: ub_lsame
 
   ub_lsame = lsame(ca,cb)
 end function lsame

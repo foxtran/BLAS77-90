@@ -8,7 +8,7 @@ integer(blas77_int)::lda
 complex(blas77_f32)::a(lda,*)
 integer(blas77_int)::ldaf
 complex(blas77_f32)::af(ldaf,*)
-logical::colequ
+logical(blas77_int)::colequ
 real(blas77_f32)::c(*)
 integer(blas77_int)::ldb
 complex(blas77_f32)::b(ldb,*)
@@ -26,6 +26,6 @@ real(blas77_f32)::rcond
 integer(blas77_int)::ithresh
 real(blas77_f32)::rthresh
 real(blas77_f32)::dz_ub
-logical::ignore_cwise
+logical(blas77_int)::ignore_cwise
 integer(blas77_int)::info
 end

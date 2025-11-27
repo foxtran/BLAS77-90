@@ -8,7 +8,7 @@ integer(blas77_int)::ldaf
 complex(blas77_f64)::af(ldaf,*)
 integer(blas77_int)::ipiv(*)
 real(blas77_f64)::c(*)
-logical::capply
+logical(blas77_int)::capply
 integer(blas77_int)::info
 complex(blas77_f64)::work(*)
 real(blas77_f64)::rwork(*)

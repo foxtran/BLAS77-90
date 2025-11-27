@@ -2,7 +2,7 @@ subroutine strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,in
 import
 character(len=1)::side
 character(len=1)::howmny
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::ldt
 real(blas77_f32)::t(ldt,*)

@@ -12,6 +12,6 @@ real(blas77_f64)::dmin2
 real(blas77_f64)::dn
 real(blas77_f64)::dnm1
 real(blas77_f64)::dnm2
-logical::ieee
+logical(blas77_int)::ieee
 real(blas77_f64)::eps
 end

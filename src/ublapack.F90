@@ -631,7 +631,7 @@ subroutine ub_cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -642,7 +642,7 @@ subroutine ub_cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f32) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
@@ -657,7 +657,7 @@ subroutine ub_cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -671,7 +671,7 @@ subroutine ub_cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f32) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
@@ -2027,7 +2027,7 @@ subroutine ub_cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -2043,7 +2043,7 @@ subroutine ub_cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f32) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
@@ -2059,7 +2059,7 @@ subroutine ub_cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -2075,7 +2075,7 @@ subroutine ub_cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f32) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
@@ -2091,7 +2091,7 @@ subroutine ub_cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -2112,7 +2112,7 @@ subroutine ub_cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
@@ -2208,7 +2208,7 @@ subroutine ub_cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,v
   integer(blas77_int) :: lwork
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: iwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
@@ -2735,7 +2735,7 @@ subroutine ub_chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   end interface
 
   character(len=1) :: uplo
-  logical :: wantz
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: ttype
   integer(blas77_int) :: st
   integer(blas77_int) :: ed
@@ -4675,7 +4675,7 @@ subroutine ub_chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,wor
   character(len=1) :: side
   character(len=1) :: eigsrc
   character(len=1) :: initv
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldh
   complex(blas77_f32) :: h(ldh,*)
@@ -4760,7 +4760,7 @@ function ub_cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,wor
   complex(blas77_f32) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f32) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f32) :: work(*)
   real(blas77_f32) :: rwork(*)
@@ -4812,7 +4812,7 @@ subroutine ub_cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ldafb
   complex(blas77_f32) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
@@ -4830,7 +4830,7 @@ subroutine ub_cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -4893,7 +4893,7 @@ function ub_cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f32) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f32) :: work(*)
   real(blas77_f32) :: rwork(*)
@@ -4941,7 +4941,7 @@ subroutine ub_cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ldaf
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
@@ -4959,7 +4959,7 @@ subroutine ub_cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -5019,7 +5019,7 @@ function ub_cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f32) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f32) :: work(*)
   real(blas77_f32) :: rwork(*)
@@ -5067,7 +5067,7 @@ subroutine ub_cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
@@ -5085,7 +5085,7 @@ subroutine ub_cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -5143,7 +5143,7 @@ function ub_cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   integer(blas77_int) :: ldaf
   complex(blas77_f32) :: af(ldaf,*)
   real(blas77_f32) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f32) :: work(*)
   real(blas77_f32) :: rwork(*)
@@ -5189,7 +5189,7 @@ subroutine ub_cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ldaf
   complex(blas77_f32) :: af(ldaf,*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
@@ -5207,7 +5207,7 @@ subroutine ub_cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -5268,7 +5268,7 @@ function ub_cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f32) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f32) :: work(*)
   real(blas77_f32) :: rwork(*)
@@ -5316,7 +5316,7 @@ subroutine ub_cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   complex(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
@@ -5334,7 +5334,7 @@ subroutine ub_cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -5756,8 +5756,8 @@ subroutine ub_claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
 #   include "include/lapack/claqz1.f90"
   end interface
 
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: k
   integer(blas77_int),intent(in) :: istartm
   integer(blas77_int),intent(in) :: istopm
@@ -5785,9 +5785,9 @@ subroutine ub_claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
 #   include "include/lapack/claqz2.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -5824,9 +5824,9 @@ subroutine ub_claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta
 #   include "include/lapack/claqz3.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -7333,7 +7333,7 @@ subroutine ub_cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   complex(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: nzc
   integer(blas77_int) :: isuppz(*)
-  logical :: tryrac
+  logical(blas77_int) :: tryrac
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
@@ -8292,7 +8292,7 @@ subroutine ub_ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lds
   complex(blas77_f32) :: s(lds,*)
@@ -8318,8 +8318,8 @@ subroutine ub_ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
 #   include "include/lapack/ctgexc.f90"
   end interface
 
-  logical :: wantq
-  logical :: wantz
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -8344,9 +8344,9 @@ subroutine ub_ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ld
   end interface
 
   integer(blas77_int) :: ijob
-  logical :: wantq
-  logical :: wantz
-  logical :: select(*)
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -8416,7 +8416,7 @@ subroutine ub_ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
@@ -8761,7 +8761,7 @@ subroutine ub_ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
@@ -8789,7 +8789,7 @@ subroutine ub_ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
@@ -8862,7 +8862,7 @@ subroutine ub_ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
 
   character(len=1) :: job
   character(len=1) :: compq
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
@@ -8888,7 +8888,7 @@ subroutine ub_ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
@@ -10703,7 +10703,7 @@ subroutine ub_dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -10714,7 +10714,7 @@ subroutine ub_dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
   real(blas77_f64) :: vs(ldvs,*)
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
@@ -10729,7 +10729,7 @@ subroutine ub_dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -10745,7 +10745,7 @@ subroutine ub_dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
@@ -12088,7 +12088,7 @@ subroutine ub_dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -12104,7 +12104,7 @@ subroutine ub_dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   real(blas77_f64) :: vsr(ldvsr,*)
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
@@ -12120,7 +12120,7 @@ subroutine ub_dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -12136,7 +12136,7 @@ subroutine ub_dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   real(blas77_f64) :: vsr(ldvsr,*)
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
@@ -12152,7 +12152,7 @@ subroutine ub_dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -12173,7 +12173,7 @@ subroutine ub_dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
@@ -12269,7 +12269,7 @@ subroutine ub_dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,v
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
@@ -12826,7 +12826,7 @@ subroutine ub_dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m
   character(len=1) :: side
   character(len=1) :: eigsrc
   character(len=1) :: initv
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldh
   real(blas77_f64) :: h(ldh,*)
@@ -12939,7 +12939,7 @@ subroutine ub_dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ldafb
   real(blas77_f64) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
@@ -12957,7 +12957,7 @@ subroutine ub_dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -13045,7 +13045,7 @@ subroutine ub_dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ldaf
   real(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
@@ -13063,7 +13063,7 @@ subroutine ub_dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -13142,7 +13142,7 @@ subroutine ub_dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: ldaf
   real(blas77_f64) :: af(ldaf,*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
@@ -13160,7 +13160,7 @@ subroutine ub_dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -13246,7 +13246,7 @@ subroutine ub_dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   real(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
@@ -13264,7 +13264,7 @@ subroutine ub_dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -13447,7 +13447,7 @@ subroutine ub_dlaed6(kniter,orgati,rho,d,z,finit,tau,info)
   end interface
 
   integer(blas77_int) :: kniter
-  logical :: orgati
+  logical(blas77_int) :: orgati
   real(blas77_f64) :: rho
   real(blas77_f64) :: d(3)
   real(blas77_f64) :: z(3)
@@ -13872,8 +13872,8 @@ subroutine ub_dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
 #   include "include/lapack/dlaqz2.f90"
   end interface
 
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: k
   integer(blas77_int),intent(in) :: istartm
   integer(blas77_int),intent(in) :: istopm
@@ -13901,9 +13901,9 @@ subroutine ub_dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
 #   include "include/lapack/dlaqz3.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -13940,9 +13940,9 @@ subroutine ub_dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a
 #   include "include/lapack/dlaqz4.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -14168,7 +14168,7 @@ subroutine ub_dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype
   integer(blas77_int) :: nfail
   integer(blas77_int) :: iter
   integer(blas77_int) :: ndiv
-  logical :: ieee
+  logical(blas77_int) :: ieee
   integer(blas77_int) :: ttype
   real(blas77_f64) :: dmin1
   real(blas77_f64) :: dmin2
@@ -14225,7 +14225,7 @@ subroutine ub_dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps
   real(blas77_f64) :: dn
   real(blas77_f64) :: dnm1
   real(blas77_f64) :: dnm2
-  logical :: ieee
+  logical(blas77_int) :: ieee
   real(blas77_f64) :: eps
 
   call dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
@@ -16269,7 +16269,7 @@ subroutine ub_dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   end interface
 
   character(len=1) :: uplo
-  logical :: wantz
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: ttype
   integer(blas77_int) :: st
   integer(blas77_int) :: ed
@@ -17112,7 +17112,7 @@ subroutine ub_dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   real(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: nzc
   integer(blas77_int) :: isuppz(*)
-  logical :: tryrac
+  logical(blas77_int) :: tryrac
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
@@ -18654,7 +18654,7 @@ subroutine ub_dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lds
   real(blas77_f64) :: s(lds,*)
@@ -18679,8 +18679,8 @@ subroutine ub_dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,
 #   include "include/lapack/dtgexc.f90"
   end interface
 
-  logical :: wantq
-  logical :: wantz
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -18707,9 +18707,9 @@ subroutine ub_dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,
   end interface
 
   integer(blas77_int) :: ijob
-  logical :: wantq
-  logical :: wantz
-  logical :: select(*)
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -18780,7 +18780,7 @@ subroutine ub_dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
@@ -19125,7 +19125,7 @@ subroutine ub_dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
@@ -19151,7 +19151,7 @@ subroutine ub_dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
@@ -19224,7 +19224,7 @@ subroutine ub_dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwo
 
   character(len=1) :: job
   character(len=1) :: compq
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
@@ -19253,7 +19253,7 @@ subroutine ub_dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
@@ -20201,7 +20201,7 @@ subroutine ub_sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -20212,7 +20212,7 @@ subroutine ub_sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
   real(blas77_f32) :: vs(ldvs,*)
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
@@ -20227,7 +20227,7 @@ subroutine ub_sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -20243,7 +20243,7 @@ subroutine ub_sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
@@ -21586,7 +21586,7 @@ subroutine ub_sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -21602,7 +21602,7 @@ subroutine ub_sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   real(blas77_f32) :: vsr(ldvsr,*)
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
@@ -21618,7 +21618,7 @@ subroutine ub_sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -21634,7 +21634,7 @@ subroutine ub_sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   real(blas77_f32) :: vsr(ldvsr,*)
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
@@ -21650,7 +21650,7 @@ subroutine ub_sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -21671,7 +21671,7 @@ subroutine ub_sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
@@ -21767,7 +21767,7 @@ subroutine ub_sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,v
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
@@ -22324,7 +22324,7 @@ subroutine ub_shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m
   character(len=1) :: side
   character(len=1) :: eigsrc
   character(len=1) :: initv
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldh
   real(blas77_f32) :: h(ldh,*)
@@ -22437,7 +22437,7 @@ subroutine ub_sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ldafb
   real(blas77_f32) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
@@ -22455,7 +22455,7 @@ subroutine ub_sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -22543,7 +22543,7 @@ subroutine ub_sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ldaf
   real(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
@@ -22561,7 +22561,7 @@ subroutine ub_sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -22640,7 +22640,7 @@ subroutine ub_sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ldaf
   real(blas77_f32) :: af(ldaf,*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
@@ -22658,7 +22658,7 @@ subroutine ub_sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -22744,7 +22744,7 @@ subroutine ub_sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   real(blas77_f32) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
@@ -22762,7 +22762,7 @@ subroutine ub_sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f32) :: rthresh
   real(blas77_f32) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -22945,7 +22945,7 @@ subroutine ub_slaed6(kniter,orgati,rho,d,z,finit,tau,info)
   end interface
 
   integer(blas77_int) :: kniter
-  logical :: orgati
+  logical(blas77_int) :: orgati
   real(blas77_f32) :: rho
   real(blas77_f32) :: d(3)
   real(blas77_f32) :: z(3)
@@ -23370,8 +23370,8 @@ subroutine ub_slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
 #   include "include/lapack/slaqz2.f90"
   end interface
 
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: k
   integer(blas77_int),intent(in) :: istartm
   integer(blas77_int),intent(in) :: istopm
@@ -23399,9 +23399,9 @@ subroutine ub_slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
 #   include "include/lapack/slaqz3.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -23438,9 +23438,9 @@ subroutine ub_slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a
 #   include "include/lapack/slaqz4.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -23666,7 +23666,7 @@ subroutine ub_slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype
   integer(blas77_int) :: nfail
   integer(blas77_int) :: iter
   integer(blas77_int) :: ndiv
-  logical :: ieee
+  logical(blas77_int) :: ieee
   integer(blas77_int) :: ttype
   real(blas77_f32) :: dmin1
   real(blas77_f32) :: dmin2
@@ -23723,7 +23723,7 @@ subroutine ub_slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps
   real(blas77_f32) :: dn
   real(blas77_f32) :: dnm1
   real(blas77_f32) :: dnm2
-  logical :: ieee
+  logical(blas77_int) :: ieee
   real(blas77_f32) :: eps
 
   call slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
@@ -25767,7 +25767,7 @@ subroutine ub_ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   end interface
 
   character(len=1) :: uplo
-  logical :: wantz
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: ttype
   integer(blas77_int) :: st
   integer(blas77_int) :: ed
@@ -26562,7 +26562,7 @@ subroutine ub_sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   real(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: nzc
   integer(blas77_int) :: isuppz(*)
-  logical :: tryrac
+  logical(blas77_int) :: tryrac
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
@@ -28104,7 +28104,7 @@ subroutine ub_stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lds
   real(blas77_f32) :: s(lds,*)
@@ -28129,8 +28129,8 @@ subroutine ub_stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,
 #   include "include/lapack/stgexc.f90"
   end interface
 
-  logical :: wantq
-  logical :: wantz
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -28157,9 +28157,9 @@ subroutine ub_stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,
   end interface
 
   integer(blas77_int) :: ijob
-  logical :: wantq
-  logical :: wantz
-  logical :: select(*)
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -28230,7 +28230,7 @@ subroutine ub_stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
@@ -28575,7 +28575,7 @@ subroutine ub_strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
@@ -28601,7 +28601,7 @@ subroutine ub_strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
@@ -28674,7 +28674,7 @@ subroutine ub_strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwo
 
   character(len=1) :: job
   character(len=1) :: compq
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
@@ -28703,7 +28703,7 @@ subroutine ub_strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
@@ -29582,7 +29582,7 @@ subroutine ub_zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -29593,7 +29593,7 @@ subroutine ub_zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f64) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
@@ -29608,7 +29608,7 @@ subroutine ub_zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
 
   character(len=1) :: jobvs
   character(len=1) :: sort
-  procedure(logical) :: select
+  procedure(logical(blas77_int)) :: select
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -29622,7 +29622,7 @@ subroutine ub_zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f64) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
@@ -30978,7 +30978,7 @@ subroutine ub_zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -30994,7 +30994,7 @@ subroutine ub_zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f64) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
@@ -31010,7 +31010,7 @@ subroutine ub_zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -31026,7 +31026,7 @@ subroutine ub_zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   real(blas77_f64) :: rwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
@@ -31042,7 +31042,7 @@ subroutine ub_zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   character(len=1) :: jobvsl
   character(len=1) :: jobvsr
   character(len=1) :: sort
-  procedure(logical) :: selctg
+  procedure(logical(blas77_int)) :: selctg
   character(len=1) :: sense
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
@@ -31063,7 +31063,7 @@ subroutine ub_zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: liwork
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
@@ -31159,7 +31159,7 @@ subroutine ub_zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,v
   integer(blas77_int) :: lwork
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: iwork(*)
-  logical :: bwork(*)
+  logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
   call zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
@@ -31686,7 +31686,7 @@ subroutine ub_zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   end interface
 
   character(len=1) :: uplo
-  logical :: wantz
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: ttype
   integer(blas77_int) :: st
   integer(blas77_int) :: ed
@@ -33613,7 +33613,7 @@ subroutine ub_zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,wor
   character(len=1) :: side
   character(len=1) :: eigsrc
   character(len=1) :: initv
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldh
   complex(blas77_f64) :: h(ldh,*)
@@ -33698,7 +33698,7 @@ function ub_zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,wor
   complex(blas77_f64) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f64) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f64) :: work(*)
   real(blas77_f64) :: rwork(*)
@@ -33750,7 +33750,7 @@ subroutine ub_zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ldafb
   complex(blas77_f64) :: afb(ldafb,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
@@ -33768,7 +33768,7 @@ subroutine ub_zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -33831,7 +33831,7 @@ function ub_zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f64) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f64) :: work(*)
   real(blas77_f64) :: rwork(*)
@@ -33879,7 +33879,7 @@ subroutine ub_zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ldaf
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
@@ -33897,7 +33897,7 @@ subroutine ub_zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -33957,7 +33957,7 @@ function ub_zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f64) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f64) :: work(*)
   real(blas77_f64) :: rwork(*)
@@ -34005,7 +34005,7 @@ subroutine ub_zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
@@ -34023,7 +34023,7 @@ subroutine ub_zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -34081,7 +34081,7 @@ function ub_zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   integer(blas77_int) :: ldaf
   complex(blas77_f64) :: af(ldaf,*)
   real(blas77_f64) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f64) :: work(*)
   real(blas77_f64) :: rwork(*)
@@ -34127,7 +34127,7 @@ subroutine ub_zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: ldaf
   complex(blas77_f64) :: af(ldaf,*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
@@ -34145,7 +34145,7 @@ subroutine ub_zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -34206,7 +34206,7 @@ function ub_zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
   real(blas77_f64) :: c(*)
-  logical :: capply
+  logical(blas77_int) :: capply
   integer(blas77_int) :: info
   complex(blas77_f64) :: work(*)
   real(blas77_f64) :: rwork(*)
@@ -34254,7 +34254,7 @@ subroutine ub_zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ldaf
   complex(blas77_f64) :: af(ldaf,*)
   integer(blas77_int) :: ipiv(*)
-  logical :: colequ
+  logical(blas77_int) :: colequ
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
@@ -34272,7 +34272,7 @@ subroutine ub_zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: ithresh
   real(blas77_f64) :: rthresh
   real(blas77_f64) :: dz_ub
-  logical :: ignore_cwise
+  logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
   call zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
@@ -34694,8 +34694,8 @@ subroutine ub_zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
 #   include "include/lapack/zlaqz1.f90"
   end interface
 
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: k
   integer(blas77_int),intent(in) :: istartm
   integer(blas77_int),intent(in) :: istopm
@@ -34723,9 +34723,9 @@ subroutine ub_zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
 #   include "include/lapack/zlaqz2.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -34762,9 +34762,9 @@ subroutine ub_zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta
 #   include "include/lapack/zlaqz3.f90"
   end interface
 
-  logical,intent(in) :: ilschur
-  logical,intent(in) :: ilq
-  logical,intent(in) :: ilz
+  logical(blas77_int),intent(in) :: ilschur
+  logical(blas77_int),intent(in) :: ilq
+  logical(blas77_int),intent(in) :: ilz
   integer(blas77_int),intent(in) :: n
   integer(blas77_int),intent(in) :: ilo
   integer(blas77_int),intent(in) :: ihi
@@ -36271,7 +36271,7 @@ subroutine ub_zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   complex(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: nzc
   integer(blas77_int) :: isuppz(*)
-  logical :: tryrac
+  logical(blas77_int) :: tryrac
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iwork(*)
@@ -37230,7 +37230,7 @@ subroutine ub_ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lds
   complex(blas77_f64) :: s(lds,*)
@@ -37256,8 +37256,8 @@ subroutine ub_ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
 #   include "include/lapack/ztgexc.f90"
   end interface
 
-  logical :: wantq
-  logical :: wantz
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -37282,9 +37282,9 @@ subroutine ub_ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ld
   end interface
 
   integer(blas77_int) :: ijob
-  logical :: wantq
-  logical :: wantz
-  logical :: select(*)
+  logical(blas77_int) :: wantq
+  logical(blas77_int) :: wantz
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -37354,7 +37354,7 @@ subroutine ub_ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
@@ -37699,7 +37699,7 @@ subroutine ub_ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
@@ -37727,7 +37727,7 @@ subroutine ub_ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,
 
   character(len=1) :: side
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
@@ -37800,7 +37800,7 @@ subroutine ub_ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
 
   character(len=1) :: job
   character(len=1) :: compq
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
@@ -37826,7 +37826,7 @@ subroutine ub_ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
 
   character(len=1) :: job
   character(len=1) :: howmny
-  logical :: select(*)
+  logical(blas77_int) :: select(*)
   integer(blas77_int) :: n
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)

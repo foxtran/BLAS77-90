@@ -15,7 +15,7 @@ integer(blas77_int)::ldz
 real(blas77_f32)::z(ldz,*)
 integer(blas77_int)::nzc
 integer(blas77_int)::isuppz(*)
-logical::tryrac
+logical(blas77_int)::tryrac
 real(blas77_f32)::work(*)
 integer(blas77_int)::lwork
 integer(blas77_int)::iwork(*)

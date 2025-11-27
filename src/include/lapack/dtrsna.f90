@@ -2,7 +2,7 @@ subroutine dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
 import
 character(len=1)::job
 character(len=1)::howmny
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::ldt
 real(blas77_f64)::t(ldt,*)

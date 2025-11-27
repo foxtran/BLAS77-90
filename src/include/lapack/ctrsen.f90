@@ -2,7 +2,7 @@ subroutine ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) CNAM
 import
 character(len=1)::job
 character(len=1)::compq
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::ldt
 complex(blas77_f32)::t(ldt,*)

@@ -2,7 +2,7 @@ subroutine sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcon
 import
 character(len=1)::jobvs
 character(len=1)::sort
-procedure(logical)::select
+procedure(logical(blas77_int))::select
 character(len=1)::sense
 integer(blas77_int)::n
 integer(blas77_int)::lda
@@ -18,6 +18,6 @@ real(blas77_f32)::work(*)
 integer(blas77_int)::lwork
 integer(blas77_int)::iwork(*)
 integer(blas77_int)::liwork
-logical::bwork(*)
+logical(blas77_int)::bwork(*)
 integer(blas77_int)::info
 end

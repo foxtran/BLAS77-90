@@ -14,7 +14,7 @@ def extract_interface(lst: list[str], first: str, last: str) -> list[str]:
 def apply_interface_transforms(text: str) -> str:
     # Simple string replacements
     text = text.replace("1_8:", "")
-    text = text.replace("logical(8)", "logical")
+    text = text.replace("logical(8)", "logical(blas77_int)")
     text = text.replace("integer(8)", "integer(blas77_int)")
     text = text.replace("real(4)", "real(blas77_f32)")
     text = text.replace("real(8)", "real(blas77_f64)")

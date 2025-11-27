@@ -2,7 +2,7 @@ subroutine ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwo
 import
 character(len=1)::side
 character(len=1)::howmny
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::lds
 complex(blas77_f64)::s(lds,*)

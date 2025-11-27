@@ -2,7 +2,7 @@ subroutine ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
 import
 character(len=1)::job
 character(len=1)::howmny
-logical::select(*)
+logical(blas77_int)::select(*)
 integer(blas77_int)::n
 integer(blas77_int)::ldt
 complex(blas77_f32)::t(ldt,*)

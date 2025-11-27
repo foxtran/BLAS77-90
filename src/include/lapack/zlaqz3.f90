@@ -1,8 +1,8 @@
 subroutine zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) CNAME(zlaqz3)
 import
-logical,intent(in)::ilschur
-logical,intent(in)::ilq
-logical,intent(in)::ilz
+logical(blas77_int),intent(in)::ilschur
+logical(blas77_int),intent(in)::ilq
+logical(blas77_int),intent(in)::ilz
 integer(blas77_int),intent(in)::n
 integer(blas77_int),intent(in)::ilo
 integer(blas77_int),intent(in)::ihi

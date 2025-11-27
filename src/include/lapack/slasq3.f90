@@ -11,7 +11,7 @@ real(blas77_f32)::qmax
 integer(blas77_int)::nfail
 integer(blas77_int)::iter
 integer(blas77_int)::ndiv
-logical::ieee
+logical(blas77_int)::ieee
 integer(blas77_int)::ttype
 real(blas77_f32)::dmin1
 real(blas77_f32)::dmin2

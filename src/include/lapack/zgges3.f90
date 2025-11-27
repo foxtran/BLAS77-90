@@ -3,7 +3,7 @@ import
 character(len=1)::jobvsl
 character(len=1)::jobvsr
 character(len=1)::sort
-procedure(logical)::selctg
+procedure(logical(blas77_int))::selctg
 integer(blas77_int)::n
 integer(blas77_int)::lda
 complex(blas77_f64)::a(lda,*)
@@ -19,6 +19,6 @@ complex(blas77_f64)::vsr(ldvsr,*)
 complex(blas77_f64)::work(*)
 integer(blas77_int)::lwork
 real(blas77_f64)::rwork(*)
-logical::bwork(*)
+logical(blas77_int)::bwork(*)
 integer(blas77_int)::info
 end

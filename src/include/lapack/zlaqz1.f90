@@ -1,7 +1,7 @@
 subroutine zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) CNAME(zlaqz1)
 import
-logical,intent(in)::ilq
-logical,intent(in)::ilz
+logical(blas77_int),intent(in)::ilq
+logical(blas77_int),intent(in)::ilz
 integer(blas77_int),intent(in)::k
 integer(blas77_int),intent(in)::istartm
 integer(blas77_int),intent(in)::istopm

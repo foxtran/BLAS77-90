@@ -27,6 +27,6 @@ complex(blas77_f32)::work(*)
 integer(blas77_int)::lwork
 real(blas77_f32)::rwork(*)
 integer(blas77_int)::iwork(*)
-logical::bwork(*)
+logical(blas77_int)::bwork(*)
 integer(blas77_int)::info
 end

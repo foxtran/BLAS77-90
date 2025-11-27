@@ -27,6 +27,6 @@ real(blas77_f32)::rcondv(*)
 real(blas77_f32)::work(*)
 integer(blas77_int)::lwork
 integer(blas77_int)::iwork(*)
-logical::bwork(*)
+logical(blas77_int)::bwork(*)
 integer(blas77_int)::info
 end
