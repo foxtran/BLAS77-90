@@ -1,7 +1,7 @@
 #include "cname-rules.inc"
 
 module lapack77
-  use blas77_types_mod
+  use blas77_types
   implicit none
   public
 

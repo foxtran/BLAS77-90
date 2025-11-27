@@ -138,7 +138,7 @@ def process_library(library_name: str, interface_dir: Path, src_dir: Path):
         '#include "cname-rules.inc"',
         "",
         f"module {library_name}77",
-        "  use blas77_types_mod",
+        "  use blas77_types",
         "  implicit none",
         "  public",
         "",
