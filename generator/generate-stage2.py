@@ -87,9 +87,11 @@ def process_wrapper(code: str, library_name: str) -> str:
         "  interface",
         f'#   include "include/{library_name}/{name}.f90"',
         "  end interface",
+        "",
     ]
 
     out.extend(body_lines)
+    out.append("")
 
     if kind == "subroutine":
         call_args = args[1:-1]
