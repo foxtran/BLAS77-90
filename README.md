@@ -7,3 +7,5 @@ BLAS77-90 uses [Reference LAPACK](https://github.com/Reference-LAPACK/lapack) fo
 
 Generation consists from several stages:
 1. Extracting API of non-auxiliary functions of BLAS and LAPACK
+2. Using API, generate corresponding blas77 and lapack77 modules.
+3. Using API, generate corresponding ubblas and ublapack wrappers.
