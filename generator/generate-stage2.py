@@ -83,12 +83,24 @@ def process_wrapper(code: str, library_name: str) -> str:
     out = [
         f"{kind} ub_{name}{args}",
         "  use blas77_types",
-        "  implicit none",
-        "  interface",
-        f'#   include "include/{library_name}/{name}.f90"',
-        "  end interface",
-        "",
     ]
+
+    # Apple Accelerate has non-standard API for some BLAS functions
+    workaround = False
+    if name in ["cdotu", "zdotu", "cdotc", "zdotc"]:
+        out.append(f"  use blas77, only: {name}")
+        workaround = True
+
+    out.append("  implicit none")
+
+    if not workaround:
+        out.extend([
+            "  interface",
+            f'#   include "include/{library_name}/{name}.f90"',
+            "  end interface",
+        ])
+
+    out.append("")
 
     out.extend(body_lines)
     out.append("")

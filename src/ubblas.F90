@@ -53,10 +53,8 @@ end subroutine ccopy
 
 function ub_cdotc(n,cx,incx,cy,incy)
   use blas77_types
+  use blas77, only: cdotc
   implicit none
-  interface
-#   include "include/blas/cdotc.f90"
-  end interface
 
   integer(blas77_int) :: n
   complex(blas77_f32) :: cx(*)
@@ -70,10 +68,8 @@ end function cdotc
 
 function ub_cdotu(n,cx,incx,cy,incy)
   use blas77_types
+  use blas77, only: cdotu
   implicit none
-  interface
-#   include "include/blas/cdotu.f90"
-  end interface
 
   integer(blas77_int) :: n
   complex(blas77_f32) :: cx(*)
@@ -2518,10 +2514,8 @@ end subroutine zcopy
 
 function ub_zdotc(n,zx,incx,zy,incy)
   use blas77_types
+  use blas77, only: zdotc
   implicit none
-  interface
-#   include "include/blas/zdotc.f90"
-  end interface
 
   integer(blas77_int) :: n
   complex(blas77_f64) :: zx(*)
@@ -2535,10 +2529,8 @@ end function zdotc
 
 function ub_zdotu(n,zx,incx,zy,incy)
   use blas77_types
+  use blas77, only: zdotu
   implicit none
-  interface
-#   include "include/blas/zdotu.f90"
-  end interface
 
   integer(blas77_int) :: n
   complex(blas77_f64) :: zx(*)
