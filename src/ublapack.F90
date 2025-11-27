@@ -38,7 +38,7 @@ subroutine ub_cbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,
   integer(blas77_int) :: info
 
   call cbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info)
-end subroutine cbbcsd
+end subroutine ub_cbbcsd
 
 subroutine ub_cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
   use blas77_types
@@ -64,7 +64,7 @@ subroutine ub_cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
   integer(blas77_int) :: info
 
   call cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
-end subroutine cbdsqr
+end subroutine ub_cbdsqr
 
 subroutine ub_cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info)
   use blas77_types
@@ -94,7 +94,7 @@ subroutine ub_cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwo
   integer(blas77_int) :: info
 
   call cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info)
-end subroutine cgbbrd
+end subroutine ub_cgbbrd
 
 subroutine ub_cgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -117,7 +117,7 @@ subroutine ub_cgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call cgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
-end subroutine cgbcon
+end subroutine ub_cgbcon
 
 subroutine ub_cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -140,7 +140,7 @@ subroutine ub_cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine cgbequ
+end subroutine ub_cgbequ
 
 subroutine ub_cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -163,7 +163,7 @@ subroutine ub_cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine cgbequb
+end subroutine ub_cgbequb
 
 subroutine ub_cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -193,7 +193,7 @@ subroutine ub_cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,
   integer(blas77_int) :: info
 
   call cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cgbrfs
+end subroutine ub_cgbrfs
 
 subroutine ub_cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -231,7 +231,7 @@ subroutine ub_cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,
   integer(blas77_int) :: info
 
   call cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cgbrfsx
+end subroutine ub_cgbrfsx
 
 subroutine ub_cgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -252,7 +252,7 @@ subroutine ub_cgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine cgbsv
+end subroutine ub_cgbsv
 
 subroutine ub_cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -287,7 +287,7 @@ subroutine ub_cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,
   integer(blas77_int) :: info
 
   call cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cgbsvx
+end subroutine ub_cgbsvx
 
 subroutine ub_cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -327,7 +327,7 @@ subroutine ub_cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b
   integer(blas77_int) :: info
 
   call cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cgbsvxx
+end subroutine ub_cgbsvxx
 
 subroutine ub_cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -346,7 +346,7 @@ subroutine ub_cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine cgbtf2
+end subroutine ub_cgbtf2
 
 subroutine ub_cgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -365,7 +365,7 @@ subroutine ub_cgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call cgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine cgbtrf
+end subroutine ub_cgbtrf
 
 subroutine ub_cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -387,7 +387,7 @@ subroutine ub_cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine cgbtrs
+end subroutine ub_cgbtrs
 
 subroutine ub_cgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   use blas77_types
@@ -408,7 +408,7 @@ subroutine ub_cgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call cgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
-end subroutine cgebak
+end subroutine ub_cgebak
 
 subroutine ub_cgebal(job,n,a,lda,ilo,ihi,scale,info)
   use blas77_types
@@ -427,7 +427,7 @@ subroutine ub_cgebal(job,n,a,lda,ilo,ihi,scale,info)
   integer(blas77_int) :: info
 
   call cgebal(job,n,a,lda,ilo,ihi,scale,info)
-end subroutine cgebal
+end subroutine ub_cgebal
 
 subroutine ub_cgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   use blas77_types
@@ -448,7 +448,7 @@ subroutine ub_cgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   integer(blas77_int) :: info
 
   call cgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
-end subroutine cgebd2
+end subroutine ub_cgebd2
 
 subroutine ub_cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   use blas77_types
@@ -470,7 +470,7 @@ subroutine ub_cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
-end subroutine cgebrd
+end subroutine ub_cgebrd
 
 subroutine ub_cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -490,7 +490,7 @@ subroutine ub_cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
-end subroutine cgecon
+end subroutine ub_cgecon
 
 subroutine ub_cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -532,7 +532,7 @@ subroutine ub_cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,
   integer(blas77_int),intent(out) :: info
 
   call cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cgedmd
+end subroutine ub_cgedmd
 
 subroutine ub_cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -578,7 +578,7 @@ subroutine ub_cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy
   integer(blas77_int),intent(out) :: info
 
   call cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info)
-end subroutine cgedmdq
+end subroutine ub_cgedmdq
 
 subroutine ub_cgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -599,7 +599,7 @@ subroutine ub_cgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call cgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine cgeequ
+end subroutine ub_cgeequ
 
 subroutine ub_cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -620,7 +620,7 @@ subroutine ub_cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine cgeequb
+end subroutine ub_cgeequb
 
 subroutine ub_cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -646,7 +646,7 @@ subroutine ub_cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
   integer(blas77_int) :: info
 
   call cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-end subroutine cgees
+end subroutine ub_cgees
 
 subroutine ub_cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -675,7 +675,7 @@ subroutine ub_cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
   integer(blas77_int) :: info
 
   call cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-end subroutine cgeesx
+end subroutine ub_cgeesx
 
 subroutine ub_cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -700,7 +700,7 @@ subroutine ub_cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine cgeev
+end subroutine ub_cgeev
 
 subroutine ub_cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info)
   use blas77_types
@@ -733,7 +733,7 @@ subroutine ub_cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,
   integer(blas77_int) :: info
 
   call cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info)
-end subroutine cgeevx
+end subroutine ub_cgeevx
 
 subroutine ub_cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info)
   use blas77_types
@@ -761,7 +761,7 @@ subroutine ub_cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,w
   integer(blas77_int) :: info
 
   call cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info)
-end subroutine cgegs
+end subroutine ub_cgegs
 
 subroutine ub_cgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -789,7 +789,7 @@ subroutine ub_cgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lw
   integer(blas77_int) :: info
 
   call cgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine cgegv
+end subroutine ub_cgegv
 
 subroutine ub_cgehd2(n,ilo,ihi,a,lda,tau,work,info)
   use blas77_types
@@ -808,7 +808,7 @@ subroutine ub_cgehd2(n,ilo,ihi,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgehd2(n,ilo,ihi,a,lda,tau,work,info)
-end subroutine cgehd2
+end subroutine ub_cgehd2
 
 subroutine ub_cgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -828,7 +828,7 @@ subroutine ub_cgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine cgehrd
+end subroutine ub_cgehrd
 
 subroutine ub_cgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -860,7 +860,7 @@ subroutine ub_cgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwo
   integer(blas77_int) :: info
 
   call cgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info)
-end subroutine cgejsv
+end subroutine ub_cgejsv
 
 subroutine ub_cgelq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -878,7 +878,7 @@ subroutine ub_cgelq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgelq2(m,n,a,lda,tau,work,info)
-end subroutine cgelq2
+end subroutine ub_cgelq2
 
 subroutine ub_cgelq(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -898,7 +898,7 @@ subroutine ub_cgelq(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgelq(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine cgelq
+end subroutine ub_cgelq
 
 subroutine ub_cgelqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -917,7 +917,7 @@ subroutine ub_cgelqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgelqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine cgelqf
+end subroutine ub_cgelqf
 
 subroutine ub_cgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -939,7 +939,7 @@ subroutine ub_cgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine cgelqs
+end subroutine ub_cgelqs
 
 subroutine ub_cgelqt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -957,7 +957,7 @@ subroutine ub_cgelqt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call cgelqt3(m,n,a,lda,t,ldt,info)
-end subroutine cgelqt3
+end subroutine ub_cgelqt3
 
 subroutine ub_cgelqt(m,n,mb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -977,7 +977,7 @@ subroutine ub_cgelqt(m,n,mb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call cgelqt(m,n,mb,a,lda,t,ldt,work,info)
-end subroutine cgelqt
+end subroutine ub_cgelqt
 
 subroutine ub_cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -999,7 +999,7 @@ subroutine ub_cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine cgels
+end subroutine ub_cgels
 
 subroutine ub_cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -1025,7 +1025,7 @@ subroutine ub_cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,in
   integer(blas77_int) :: info
 
   call cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
-end subroutine cgelsd
+end subroutine ub_cgelsd
 
 subroutine ub_cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
   use blas77_types
@@ -1050,7 +1050,7 @@ subroutine ub_cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
-end subroutine cgelss
+end subroutine ub_cgelss
 
 subroutine ub_cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -1072,7 +1072,7 @@ subroutine ub_cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine cgelst
+end subroutine ub_cgelst
 
 subroutine ub_cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
   use blas77_types
@@ -1096,7 +1096,7 @@ subroutine ub_cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
   integer(blas77_int) :: info
 
   call cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
-end subroutine cgelsx
+end subroutine ub_cgelsx
 
 subroutine ub_cgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
   use blas77_types
@@ -1121,7 +1121,7 @@ subroutine ub_cgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
-end subroutine cgelsy
+end subroutine ub_cgelsy
 
 subroutine ub_cgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -1146,7 +1146,7 @@ subroutine ub_cgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine cgemlq
+end subroutine ub_cgemlq
 
 subroutine ub_cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -1171,7 +1171,7 @@ subroutine ub_cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine cgemlqt
+end subroutine ub_cgemlqt
 
 subroutine ub_cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -1196,7 +1196,7 @@ subroutine ub_cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine cgemqr
+end subroutine ub_cgemqr
 
 subroutine ub_cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -1221,7 +1221,7 @@ subroutine ub_cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine cgemqrt
+end subroutine ub_cgemqrt
 
 subroutine ub_cgeql2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -1239,7 +1239,7 @@ subroutine ub_cgeql2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgeql2(m,n,a,lda,tau,work,info)
-end subroutine cgeql2
+end subroutine ub_cgeql2
 
 subroutine ub_cgeqlf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -1258,7 +1258,7 @@ subroutine ub_cgeqlf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgeqlf(m,n,a,lda,tau,work,lwork,info)
-end subroutine cgeqlf
+end subroutine ub_cgeqlf
 
 subroutine ub_cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
   use blas77_types
@@ -1279,7 +1279,7 @@ subroutine ub_cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
-end subroutine cgeqp3
+end subroutine ub_cgeqp3
 
 subroutine ub_cgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -1308,7 +1308,7 @@ subroutine ub_cgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrm
   integer(blas77_int) :: info
 
   call cgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info)
-end subroutine cgeqp3rk
+end subroutine ub_cgeqp3rk
 
 subroutine ub_cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
   use blas77_types
@@ -1328,7 +1328,7 @@ subroutine ub_cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
   integer(blas77_int) :: info
 
   call cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
-end subroutine cgeqpf
+end subroutine ub_cgeqpf
 
 subroutine ub_cgeqr2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -1346,7 +1346,7 @@ subroutine ub_cgeqr2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgeqr2(m,n,a,lda,tau,work,info)
-end subroutine cgeqr2
+end subroutine ub_cgeqr2
 
 subroutine ub_cgeqr2p(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -1364,7 +1364,7 @@ subroutine ub_cgeqr2p(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgeqr2p(m,n,a,lda,tau,work,info)
-end subroutine cgeqr2p
+end subroutine ub_cgeqr2p
 
 subroutine ub_cgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -1384,7 +1384,7 @@ subroutine ub_cgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgeqr(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine cgeqr
+end subroutine ub_cgeqr
 
 subroutine ub_cgeqrf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -1403,7 +1403,7 @@ subroutine ub_cgeqrf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgeqrf(m,n,a,lda,tau,work,lwork,info)
-end subroutine cgeqrf
+end subroutine ub_cgeqrf
 
 subroutine ub_cgeqrfp(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -1422,7 +1422,7 @@ subroutine ub_cgeqrfp(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgeqrfp(m,n,a,lda,tau,work,lwork,info)
-end subroutine cgeqrfp
+end subroutine ub_cgeqrfp
 
 subroutine ub_cgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -1444,7 +1444,7 @@ subroutine ub_cgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine cgeqrs
+end subroutine ub_cgeqrs
 
 subroutine ub_cgeqrt2(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -1462,7 +1462,7 @@ subroutine ub_cgeqrt2(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call cgeqrt2(m,n,a,lda,t,ldt,info)
-end subroutine cgeqrt2
+end subroutine ub_cgeqrt2
 
 subroutine ub_cgeqrt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -1480,7 +1480,7 @@ subroutine ub_cgeqrt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call cgeqrt3(m,n,a,lda,t,ldt,info)
-end subroutine cgeqrt3
+end subroutine ub_cgeqrt3
 
 subroutine ub_cgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -1500,7 +1500,7 @@ subroutine ub_cgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call cgeqrt(m,n,nb,a,lda,t,ldt,work,info)
-end subroutine cgeqrt
+end subroutine ub_cgeqrt
 
 subroutine ub_cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -1528,7 +1528,7 @@ subroutine ub_cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,
   integer(blas77_int) :: info
 
   call cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cgerfs
+end subroutine ub_cgerfs
 
 subroutine ub_cgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -1564,7 +1564,7 @@ subroutine ub_cgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcon
   integer(blas77_int) :: info
 
   call cgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cgerfsx
+end subroutine ub_cgerfsx
 
 subroutine ub_cgerq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -1582,7 +1582,7 @@ subroutine ub_cgerq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cgerq2(m,n,a,lda,tau,work,info)
-end subroutine cgerq2
+end subroutine ub_cgerq2
 
 subroutine ub_cgerqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -1601,7 +1601,7 @@ subroutine ub_cgerqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgerqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine cgerqf
+end subroutine ub_cgerqf
 
 subroutine ub_cgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -1627,7 +1627,7 @@ subroutine ub_cgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   integer(blas77_int) :: info
 
   call cgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
-end subroutine cgesdd
+end subroutine ub_cgesdd
 
 subroutine ub_cgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -1646,7 +1646,7 @@ subroutine ub_cgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine cgesv
+end subroutine ub_cgesv
 
 subroutine ub_cgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
   use blas77_types
@@ -1672,7 +1672,7 @@ subroutine ub_cgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
-end subroutine cgesvd
+end subroutine ub_cgesvd
 
 subroutine ub_cgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info)
   use blas77_types
@@ -1705,7 +1705,7 @@ subroutine ub_cgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,i
   integer(blas77_int) :: info
 
   call cgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info)
-end subroutine cgesvdq
+end subroutine ub_cgesvdq
 
 subroutine ub_cgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -1738,7 +1738,7 @@ subroutine ub_cgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,
   integer(blas77_int) :: info
 
   call cgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
-end subroutine cgesvdx
+end subroutine ub_cgesvdx
 
 subroutine ub_cgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info)
   use blas77_types
@@ -1765,7 +1765,7 @@ subroutine ub_cgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrw
   integer(blas77_int) :: info
 
   call cgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info)
-end subroutine cgesvj
+end subroutine ub_cgesvj
 
 subroutine ub_cgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -1798,7 +1798,7 @@ subroutine ub_cgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,
   integer(blas77_int) :: info
 
   call cgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cgesvx
+end subroutine ub_cgesvx
 
 subroutine ub_cgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -1836,7 +1836,7 @@ subroutine ub_cgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx
   integer(blas77_int) :: info
 
   call cgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cgesvxx
+end subroutine ub_cgesvxx
 
 subroutine ub_cgetf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -1853,7 +1853,7 @@ subroutine ub_cgetf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call cgetf2(m,n,a,lda,ipiv,info)
-end subroutine cgetf2
+end subroutine ub_cgetf2
 
 subroutine ub_cgetrf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -1870,7 +1870,7 @@ subroutine ub_cgetrf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call cgetrf2(m,n,a,lda,ipiv,info)
-end subroutine cgetrf2
+end subroutine ub_cgetrf2
 
 subroutine ub_cgetrf(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -1887,7 +1887,7 @@ subroutine ub_cgetrf(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call cgetrf(m,n,a,lda,ipiv,info)
-end subroutine cgetrf
+end subroutine ub_cgetrf
 
 subroutine ub_cgetri(n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -1905,7 +1905,7 @@ subroutine ub_cgetri(n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgetri(n,a,lda,ipiv,work,lwork,info)
-end subroutine cgetri
+end subroutine ub_cgetri
 
 subroutine ub_cgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -1925,7 +1925,7 @@ subroutine ub_cgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine cgetrs
+end subroutine ub_cgetrs
 
 subroutine ub_cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -1947,7 +1947,7 @@ subroutine ub_cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine cgetsls
+end subroutine ub_cgetsls
 
 subroutine ub_cgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -1970,7 +1970,7 @@ subroutine ub_cgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
-end subroutine cgetsqrhrt
+end subroutine ub_cgetsqrhrt
 
 subroutine ub_cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   use blas77_types
@@ -1992,7 +1992,7 @@ subroutine ub_cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
-end subroutine cggbak
+end subroutine ub_cggbak
 
 subroutine ub_cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   use blas77_types
@@ -2015,7 +2015,7 @@ subroutine ub_cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   integer(blas77_int) :: info
 
   call cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
-end subroutine cggbal
+end subroutine ub_cggbal
 
 subroutine ub_cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -2047,7 +2047,7 @@ subroutine ub_cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   integer(blas77_int) :: info
 
   call cgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine cgges3
+end subroutine ub_cgges3
 
 subroutine ub_cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -2079,7 +2079,7 @@ subroutine ub_cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   integer(blas77_int) :: info
 
   call cgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine cgges
+end subroutine ub_cgges
 
 subroutine ub_cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -2116,7 +2116,7 @@ subroutine ub_cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   integer(blas77_int) :: info
 
   call cggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-end subroutine cggesx
+end subroutine ub_cggesx
 
 subroutine ub_cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -2144,7 +2144,7 @@ subroutine ub_cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,l
   integer(blas77_int) :: info
 
   call cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine cggev3
+end subroutine ub_cggev3
 
 subroutine ub_cggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -2172,7 +2172,7 @@ subroutine ub_cggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lw
   integer(blas77_int) :: info
 
   call cggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine cggev
+end subroutine ub_cggev
 
 subroutine ub_cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
   use blas77_types
@@ -2212,7 +2212,7 @@ subroutine ub_cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,v
   integer(blas77_int) :: info
 
   call cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
-end subroutine cggevx
+end subroutine ub_cggevx
 
 subroutine ub_cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   use blas77_types
@@ -2236,7 +2236,7 @@ subroutine ub_cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   integer(blas77_int) :: info
 
   call cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
-end subroutine cggglm
+end subroutine ub_cggglm
 
 subroutine ub_cgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -2263,7 +2263,7 @@ subroutine ub_cgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,in
   integer(blas77_int) :: info
 
   call cgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
-end subroutine cgghd3
+end subroutine ub_cgghd3
 
 subroutine ub_cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   use blas77_types
@@ -2288,7 +2288,7 @@ subroutine ub_cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   integer(blas77_int) :: info
 
   call cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
-end subroutine cgghrd
+end subroutine ub_cgghrd
 
 subroutine ub_cgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   use blas77_types
@@ -2312,7 +2312,7 @@ subroutine ub_cgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   integer(blas77_int) :: info
 
   call cgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
-end subroutine cgglse
+end subroutine ub_cgglse
 
 subroutine ub_cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -2335,7 +2335,7 @@ subroutine ub_cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine cggqrf
+end subroutine ub_cggqrf
 
 subroutine ub_cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -2358,7 +2358,7 @@ subroutine ub_cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine cggrqf
+end subroutine ub_cggrqf
 
 subroutine ub_cggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -2394,7 +2394,7 @@ subroutine ub_cggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ld
   integer(blas77_int) :: info
 
   call cggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info)
-end subroutine cggsvd3
+end subroutine ub_cggsvd3
 
 subroutine ub_cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info)
   use blas77_types
@@ -2429,7 +2429,7 @@ subroutine ub_cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info)
-end subroutine cggsvd
+end subroutine ub_cggsvd
 
 subroutine ub_cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info)
   use blas77_types
@@ -2466,7 +2466,7 @@ subroutine ub_cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info)
-end subroutine cggsvp3
+end subroutine ub_cggsvp3
 
 subroutine ub_cggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info)
   use blas77_types
@@ -2502,7 +2502,7 @@ subroutine ub_cggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,
   integer(blas77_int) :: info
 
   call cggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info)
-end subroutine cggsvp
+end subroutine ub_cggsvp
 
 subroutine ub_cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -2530,7 +2530,7 @@ subroutine ub_cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   integer(blas77_int) :: info
 
   call cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine cgsvj0
+end subroutine ub_cgsvj0
 
 subroutine ub_cgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -2559,7 +2559,7 @@ subroutine ub_cgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,
   integer(blas77_int) :: info
 
   call cgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine cgsvj1
+end subroutine ub_cgsvj1
 
 subroutine ub_cgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -2581,7 +2581,7 @@ subroutine ub_cgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call cgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
-end subroutine cgtcon
+end subroutine ub_cgtcon
 
 subroutine ub_cgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -2612,7 +2612,7 @@ subroutine ub_cgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,b
   integer(blas77_int) :: info
 
   call cgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cgtrfs
+end subroutine ub_cgtrfs
 
 subroutine ub_cgtsv(n,nrhs,dl,d,du,b,ldb,info)
   use blas77_types
@@ -2631,7 +2631,7 @@ subroutine ub_cgtsv(n,nrhs,dl,d,du,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgtsv(n,nrhs,dl,d,du,b,ldb,info)
-end subroutine cgtsv
+end subroutine ub_cgtsv
 
 subroutine ub_cgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -2664,7 +2664,7 @@ subroutine ub_cgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call cgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cgtsvx
+end subroutine ub_cgtsvx
 
 subroutine ub_cgttrf(n,dl,d,du,du2,ipiv,info)
   use blas77_types
@@ -2682,7 +2682,7 @@ subroutine ub_cgttrf(n,dl,d,du,du2,ipiv,info)
   integer(blas77_int) :: info
 
   call cgttrf(n,dl,d,du,du2,ipiv,info)
-end subroutine cgttrf
+end subroutine ub_cgttrf
 
 subroutine ub_cgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   use blas77_types
@@ -2704,7 +2704,7 @@ subroutine ub_cgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
-end subroutine cgttrs
+end subroutine ub_cgttrs
 
 subroutine ub_cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   use blas77_types
@@ -2725,7 +2725,7 @@ subroutine ub_cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   complex(blas77_f32) :: b(ldb,*)
 
   call cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
-end subroutine cgtts2
+end subroutine ub_cgtts2
 
 subroutine ub_chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
   use blas77_types
@@ -2751,7 +2751,7 @@ subroutine ub_chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   complex(blas77_f32) :: work(*)
 
   call chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
-end subroutine chb2st_kernels
+end subroutine ub_chb2st_kernels
 
 subroutine ub_chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
   use blas77_types
@@ -2775,7 +2775,7 @@ subroutine ub_chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
-end subroutine chbev_2stage
+end subroutine ub_chbev_2stage
 
 subroutine ub_chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -2798,7 +2798,7 @@ subroutine ub_chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
-end subroutine chbev
+end subroutine ub_chbev
 
 subroutine ub_chbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -2825,7 +2825,7 @@ subroutine ub_chbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwo
   integer(blas77_int) :: info
 
   call chbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chbevd_2stage
+end subroutine ub_chbevd_2stage
 
 subroutine ub_chbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -2852,7 +2852,7 @@ subroutine ub_chbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwor
   integer(blas77_int) :: info
 
   call chbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chbevd
+end subroutine ub_chbevd
 
 subroutine ub_chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -2887,7 +2887,7 @@ subroutine ub_chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,absto
   integer(blas77_int) :: info
 
   call chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine chbevx_2stage
+end subroutine ub_chbevx_2stage
 
 subroutine ub_chbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -2921,7 +2921,7 @@ subroutine ub_chbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z
   integer(blas77_int) :: info
 
   call chbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine chbevx
+end subroutine ub_chbevx
 
 subroutine ub_chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
   use blas77_types
@@ -2946,7 +2946,7 @@ subroutine ub_chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
   integer(blas77_int) :: info
 
   call chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
-end subroutine chbgst
+end subroutine ub_chbgst
 
 subroutine ub_chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -2972,7 +2972,7 @@ subroutine ub_chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
-end subroutine chbgv
+end subroutine ub_chbgv
 
 subroutine ub_chbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3002,7 +3002,7 @@ subroutine ub_chbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,
   integer(blas77_int) :: info
 
   call chbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chbgvd
+end subroutine ub_chbgvd
 
 subroutine ub_chbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -3039,7 +3039,7 @@ subroutine ub_chbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,a
   integer(blas77_int) :: info
 
   call chbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine chbgvx
+end subroutine ub_chbgvx
 
 subroutine ub_chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   use blas77_types
@@ -3062,7 +3062,7 @@ subroutine ub_chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
-end subroutine chbtrd
+end subroutine ub_chbtrd
 
 subroutine ub_checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -3083,7 +3083,7 @@ subroutine ub_checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
-end subroutine checon_3
+end subroutine ub_checon_3
 
 subroutine ub_checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -3103,7 +3103,7 @@ subroutine ub_checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine checon
+end subroutine ub_checon
 
 subroutine ub_checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -3123,7 +3123,7 @@ subroutine ub_checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine checon_rook
+end subroutine ub_checon_rook
 
 subroutine ub_cheequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -3143,7 +3143,7 @@ subroutine ub_cheequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call cheequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine cheequb
+end subroutine ub_cheequb
 
 subroutine ub_cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   use blas77_types
@@ -3164,7 +3164,7 @@ subroutine ub_cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
-end subroutine cheev_2stage
+end subroutine ub_cheev_2stage
 
 subroutine ub_cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   use blas77_types
@@ -3185,7 +3185,7 @@ subroutine ub_cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
-end subroutine cheev
+end subroutine ub_cheev
 
 subroutine ub_cheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3209,7 +3209,7 @@ subroutine ub_cheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,li
   integer(blas77_int) :: info
 
   call cheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cheevd_2stage
+end subroutine ub_cheevd_2stage
 
 subroutine ub_cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3233,7 +3233,7 @@ subroutine ub_cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,in
   integer(blas77_int) :: info
 
   call cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cheevd
+end subroutine ub_cheevd
 
 subroutine ub_cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3267,7 +3267,7 @@ subroutine ub_cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cheevr_2stage
+end subroutine ub_cheevr_2stage
 
 subroutine ub_cheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3301,7 +3301,7 @@ subroutine ub_cheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz
   integer(blas77_int) :: info
 
   call cheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cheevr
+end subroutine ub_cheevr
 
 subroutine ub_cheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -3333,7 +3333,7 @@ subroutine ub_cheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call cheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine cheevx_2stage
+end subroutine ub_cheevx_2stage
 
 subroutine ub_cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -3365,7 +3365,7 @@ subroutine ub_cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,l
   integer(blas77_int) :: info
 
   call cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine cheevx
+end subroutine ub_cheevx
 
 subroutine ub_chegs2(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -3384,7 +3384,7 @@ subroutine ub_chegs2(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call chegs2(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine chegs2
+end subroutine ub_chegs2
 
 subroutine ub_chegst(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -3403,7 +3403,7 @@ subroutine ub_chegst(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call chegst(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine chegst
+end subroutine ub_chegst
 
 subroutine ub_chegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   use blas77_types
@@ -3427,7 +3427,7 @@ subroutine ub_chegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info
   integer(blas77_int) :: info
 
   call chegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
-end subroutine chegv_2stage
+end subroutine ub_chegv_2stage
 
 subroutine ub_chegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   use blas77_types
@@ -3451,7 +3451,7 @@ subroutine ub_chegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call chegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
-end subroutine chegv
+end subroutine ub_chegv
 
 subroutine ub_chegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -3478,7 +3478,7 @@ subroutine ub_chegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwo
   integer(blas77_int) :: info
 
   call chegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chegvd
+end subroutine ub_chegvd
 
 subroutine ub_chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -3513,7 +3513,7 @@ subroutine ub_chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,
   integer(blas77_int) :: info
 
   call chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine chegvx
+end subroutine ub_chegvx
 
 subroutine ub_cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -3541,7 +3541,7 @@ subroutine ub_cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,r
   integer(blas77_int) :: info
 
   call cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cherfs
+end subroutine ub_cherfs
 
 subroutine ub_cherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -3576,7 +3576,7 @@ subroutine ub_cherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call cherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cherfsx
+end subroutine ub_cherfsx
 
 subroutine ub_chesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -3601,7 +3601,7 @@ subroutine ub_chesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call chesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine chesv_aa_2stage
+end subroutine ub_chesv_aa_2stage
 
 subroutine ub_chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -3623,7 +3623,7 @@ subroutine ub_chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine chesv_aa
+end subroutine ub_chesv_aa
 
 subroutine ub_chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -3645,7 +3645,7 @@ subroutine ub_chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine chesv
+end subroutine ub_chesv
 
 subroutine ub_chesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -3668,7 +3668,7 @@ subroutine ub_chesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call chesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine chesv_rk
+end subroutine ub_chesv_rk
 
 subroutine ub_chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -3690,7 +3690,7 @@ subroutine ub_chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine chesv_rook
+end subroutine ub_chesv_rook
 
 subroutine ub_chesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
   use blas77_types
@@ -3721,7 +3721,7 @@ subroutine ub_chesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call chesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
-end subroutine chesvx
+end subroutine ub_chesvx
 
 subroutine ub_chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -3758,7 +3758,7 @@ subroutine ub_chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine chesvxx
+end subroutine ub_chesvxx
 
 subroutine ub_chetd2(uplo,n,a,lda,d,e,tau,info)
   use blas77_types
@@ -3777,7 +3777,7 @@ subroutine ub_chetd2(uplo,n,a,lda,d,e,tau,info)
   integer(blas77_int) :: info
 
   call chetd2(uplo,n,a,lda,d,e,tau,info)
-end subroutine chetd2
+end subroutine ub_chetd2
 
 subroutine ub_chetf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -3794,7 +3794,7 @@ subroutine ub_chetf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call chetf2(uplo,n,a,lda,ipiv,info)
-end subroutine chetf2
+end subroutine ub_chetf2
 
 subroutine ub_chetf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -3812,7 +3812,7 @@ subroutine ub_chetf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call chetf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine chetf2_rk
+end subroutine ub_chetf2_rk
 
 subroutine ub_chetf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -3829,7 +3829,7 @@ subroutine ub_chetf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call chetf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine chetf2_rook
+end subroutine ub_chetf2_rook
 
 subroutine ub_chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   use blas77_types
@@ -3853,7 +3853,7 @@ subroutine ub_chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,in
   integer(blas77_int) :: info
 
   call chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
-end subroutine chetrd_2stage
+end subroutine ub_chetrd_2stage
 
 subroutine ub_chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
   use blas77_types
@@ -3878,7 +3878,7 @@ subroutine ub_chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwo
   integer(blas77_int) :: info
 
   call chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
-end subroutine chetrd_hb2st
+end subroutine ub_chetrd_hb2st
 
 subroutine ub_chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   use blas77_types
@@ -3900,7 +3900,7 @@ subroutine ub_chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
-end subroutine chetrd_he2hb
+end subroutine ub_chetrd_he2hb
 
 subroutine ub_chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   use blas77_types
@@ -3921,7 +3921,7 @@ subroutine ub_chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
-end subroutine chetrd
+end subroutine ub_chetrd
 
 subroutine ub_chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -3943,7 +3943,7 @@ subroutine ub_chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine chetrf_aa_2stage
+end subroutine ub_chetrf_aa_2stage
 
 subroutine ub_chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -3962,7 +3962,7 @@ subroutine ub_chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine chetrf_aa
+end subroutine ub_chetrf_aa
 
 subroutine ub_chetrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -3981,7 +3981,7 @@ subroutine ub_chetrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine chetrf
+end subroutine ub_chetrf
 
 subroutine ub_chetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -4001,7 +4001,7 @@ subroutine ub_chetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine chetrf_rk
+end subroutine ub_chetrf_rk
 
 subroutine ub_chetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -4020,7 +4020,7 @@ subroutine ub_chetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine chetrf_rook
+end subroutine ub_chetrf_rook
 
 subroutine ub_chetri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -4039,7 +4039,7 @@ subroutine ub_chetri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine chetri2
+end subroutine ub_chetri2
 
 subroutine ub_chetri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -4058,7 +4058,7 @@ subroutine ub_chetri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call chetri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine chetri2x
+end subroutine ub_chetri2x
 
 subroutine ub_chetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -4078,7 +4078,7 @@ subroutine ub_chetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine chetri_3
+end subroutine ub_chetri_3
 
 subroutine ub_chetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -4098,7 +4098,7 @@ subroutine ub_chetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call chetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine chetri_3x
+end subroutine ub_chetri_3x
 
 subroutine ub_chetri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -4116,7 +4116,7 @@ subroutine ub_chetri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call chetri(uplo,n,a,lda,ipiv,work,info)
-end subroutine chetri
+end subroutine ub_chetri
 
 subroutine ub_chetri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -4134,7 +4134,7 @@ subroutine ub_chetri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call chetri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine chetri_rook
+end subroutine ub_chetri_rook
 
 subroutine ub_chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -4155,7 +4155,7 @@ subroutine ub_chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine chetrs2
+end subroutine ub_chetrs2
 
 subroutine ub_chetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -4176,7 +4176,7 @@ subroutine ub_chetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call chetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine chetrs_3
+end subroutine ub_chetrs_3
 
 subroutine ub_chetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -4199,7 +4199,7 @@ subroutine ub_chetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call chetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine chetrs_aa_2stage
+end subroutine ub_chetrs_aa_2stage
 
 subroutine ub_chetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -4221,7 +4221,7 @@ subroutine ub_chetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call chetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine chetrs_aa
+end subroutine ub_chetrs_aa
 
 subroutine ub_chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -4241,7 +4241,7 @@ subroutine ub_chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine chetrs
+end subroutine ub_chetrs
 
 subroutine ub_chetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -4261,7 +4261,7 @@ subroutine ub_chetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call chetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine chetrs_rook
+end subroutine ub_chetrs_rook
 
 subroutine ub_chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   use blas77_types
@@ -4282,7 +4282,7 @@ subroutine ub_chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   complex(blas77_f32) :: c(*)
 
   call chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
-end subroutine chfrk
+end subroutine ub_chfrk
 
 subroutine ub_chgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info)
   use blas77_types
@@ -4313,7 +4313,7 @@ subroutine ub_chgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ld
   integer(blas77_int) :: info
 
   call chgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info)
-end subroutine chgeqz
+end subroutine ub_chgeqz
 
 function ub_chla_transtype(trans)
   use blas77_types
@@ -4326,7 +4326,7 @@ function ub_chla_transtype(trans)
   character(len=1) :: ub_chla_transtype
 
   ub_chla_transtype = chla_transtype(trans)
-end function chla_transtype
+end function ub_chla_transtype
 
 subroutine ub_chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -4345,7 +4345,7 @@ subroutine ub_chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
-end subroutine chpcon
+end subroutine ub_chpcon
 
 subroutine ub_chpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -4366,7 +4366,7 @@ subroutine ub_chpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call chpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
-end subroutine chpev
+end subroutine ub_chpev
 
 subroutine ub_chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -4391,7 +4391,7 @@ subroutine ub_chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork
   integer(blas77_int) :: info
 
   call chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chpevd
+end subroutine ub_chpevd
 
 subroutine ub_chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -4421,7 +4421,7 @@ subroutine ub_chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwor
   integer(blas77_int) :: info
 
   call chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine chpevx
+end subroutine ub_chpevx
 
 subroutine ub_chpgst(itype,uplo,n,ap,bp,info)
   use blas77_types
@@ -4438,7 +4438,7 @@ subroutine ub_chpgst(itype,uplo,n,ap,bp,info)
   integer(blas77_int) :: info
 
   call chpgst(itype,uplo,n,ap,bp,info)
-end subroutine chpgst
+end subroutine ub_chpgst
 
 subroutine ub_chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -4461,7 +4461,7 @@ subroutine ub_chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
-end subroutine chpgv
+end subroutine ub_chpgv
 
 subroutine ub_chpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -4488,7 +4488,7 @@ subroutine ub_chpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwo
   integer(blas77_int) :: info
 
   call chpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine chpgvd
+end subroutine ub_chpgvd
 
 subroutine ub_chpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -4520,7 +4520,7 @@ subroutine ub_chpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,
   integer(blas77_int) :: info
 
   call chpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine chpgvx
+end subroutine ub_chpgvx
 
 subroutine ub_chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -4546,7 +4546,7 @@ subroutine ub_chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,in
   integer(blas77_int) :: info
 
   call chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine chprfs
+end subroutine ub_chprfs
 
 subroutine ub_chpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -4565,7 +4565,7 @@ subroutine ub_chpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call chpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine chpsv
+end subroutine ub_chpsv
 
 subroutine ub_chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -4593,7 +4593,7 @@ subroutine ub_chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine chpsvx
+end subroutine ub_chpsvx
 
 subroutine ub_chptrd(uplo,n,ap,d,e,tau,info)
   use blas77_types
@@ -4611,7 +4611,7 @@ subroutine ub_chptrd(uplo,n,ap,d,e,tau,info)
   integer(blas77_int) :: info
 
   call chptrd(uplo,n,ap,d,e,tau,info)
-end subroutine chptrd
+end subroutine ub_chptrd
 
 subroutine ub_chptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -4627,7 +4627,7 @@ subroutine ub_chptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call chptrf(uplo,n,ap,ipiv,info)
-end subroutine chptrf
+end subroutine ub_chptrf
 
 subroutine ub_chptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -4644,7 +4644,7 @@ subroutine ub_chptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call chptri(uplo,n,ap,ipiv,work,info)
-end subroutine chptri
+end subroutine ub_chptri
 
 subroutine ub_chptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -4663,7 +4663,7 @@ subroutine ub_chptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call chptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine chptrs
+end subroutine ub_chptrs
 
 subroutine ub_chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info)
   use blas77_types
@@ -4693,7 +4693,7 @@ subroutine ub_chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,wor
   integer(blas77_int) :: info
 
   call chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info)
-end subroutine chsein
+end subroutine ub_chsein
 
 subroutine ub_chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
   use blas77_types
@@ -4717,7 +4717,7 @@ subroutine ub_chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
-end subroutine chseqr
+end subroutine ub_chseqr
 
 subroutine ub_cla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   use blas77_types
@@ -4741,7 +4741,7 @@ subroutine ub_cla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
-end subroutine cla_gbamv
+end subroutine ub_cla_gbamv
 
 function ub_cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -4767,7 +4767,7 @@ function ub_cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,wor
   real(blas77_f32) :: ub_cla_gbrcond_c
 
   ub_cla_gbrcond_c = cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork)
-end function cla_gbrcond_c
+end function ub_cla_gbrcond_c
 
 function ub_cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork)
   use blas77_types
@@ -4792,7 +4792,7 @@ function ub_cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork
   real(blas77_f32) :: ub_cla_gbrcond_x
 
   ub_cla_gbrcond_x = cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork)
-end function cla_gbrcond_x
+end function ub_cla_gbrcond_x
 
 subroutine ub_cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -4834,7 +4834,7 @@ subroutine ub_cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: info
 
   call cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine cla_gbrfsx_extended
+end subroutine ub_cla_gbrfsx_extended
 
 function ub_cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   use blas77_types
@@ -4854,7 +4854,7 @@ function ub_cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   real(blas77_f32) :: ub_cla_gbrpvgrw
 
   ub_cla_gbrpvgrw = cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
-end function cla_gbrpvgrw
+end function ub_cla_gbrpvgrw
 
 subroutine ub_cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -4876,7 +4876,7 @@ subroutine ub_cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine cla_geamv
+end subroutine ub_cla_geamv
 
 function ub_cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -4900,7 +4900,7 @@ function ub_cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f32) :: ub_cla_gercond_c
 
   ub_cla_gercond_c = cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function cla_gercond_c
+end function ub_cla_gercond_c
 
 function ub_cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -4923,7 +4923,7 @@ function ub_cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f32) :: ub_cla_gercond_x
 
   ub_cla_gercond_x = cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function cla_gercond_x
+end function ub_cla_gercond_x
 
 subroutine ub_cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -4963,7 +4963,7 @@ subroutine ub_cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: info
 
   call cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine cla_gerfsx_extended
+end subroutine ub_cla_gerfsx_extended
 
 function ub_cla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   use blas77_types
@@ -4981,7 +4981,7 @@ function ub_cla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   real(blas77_f32) :: ub_cla_gerpvgrw
 
   ub_cla_gerpvgrw = cla_gerpvgrw(n,ncols,a,lda,af,ldaf)
-end function cla_gerpvgrw
+end function ub_cla_gerpvgrw
 
 subroutine ub_cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -5002,7 +5002,7 @@ subroutine ub_cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine cla_heamv
+end subroutine ub_cla_heamv
 
 function ub_cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -5026,7 +5026,7 @@ function ub_cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f32) :: ub_cla_hercond_c
 
   ub_cla_hercond_c = cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function cla_hercond_c
+end function ub_cla_hercond_c
 
 function ub_cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -5049,7 +5049,7 @@ function ub_cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f32) :: ub_cla_hercond_x
 
   ub_cla_hercond_x = cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function cla_hercond_x
+end function ub_cla_hercond_x
 
 subroutine ub_cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -5089,7 +5089,7 @@ subroutine ub_cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine cla_herfsx_extended
+end subroutine ub_cla_herfsx_extended
 
 function ub_cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -5110,7 +5110,7 @@ function ub_cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f32) :: ub_cla_herpvgrw
 
   ub_cla_herpvgrw = cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function cla_herpvgrw
+end function ub_cla_herpvgrw
 
 subroutine ub_cla_lin_berr(n,nz,nrhs,res,ayb,berr)
   use blas77_types
@@ -5127,7 +5127,7 @@ subroutine ub_cla_lin_berr(n,nz,nrhs,res,ayb,berr)
   real(blas77_f32) :: berr(nrhs)
 
   call cla_lin_berr(n,nz,nrhs,res,ayb,berr)
-end subroutine cla_lin_berr
+end subroutine ub_cla_lin_berr
 
 function ub_cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   use blas77_types
@@ -5150,7 +5150,7 @@ function ub_cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   real(blas77_f32) :: ub_cla_porcond_c
 
   ub_cla_porcond_c = cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
-end function cla_porcond_c
+end function ub_cla_porcond_c
 
 function ub_cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
   use blas77_types
@@ -5172,7 +5172,7 @@ function ub_cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
   real(blas77_f32) :: ub_cla_porcond_x
 
   ub_cla_porcond_x = cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
-end function cla_porcond_x
+end function ub_cla_porcond_x
 
 subroutine ub_cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -5211,7 +5211,7 @@ subroutine ub_cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: info
 
   call cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine cla_porfsx_extended
+end subroutine ub_cla_porfsx_extended
 
 function ub_cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   use blas77_types
@@ -5230,7 +5230,7 @@ function ub_cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   real(blas77_f32) :: ub_cla_porpvgrw
 
   ub_cla_porpvgrw = cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
-end function cla_porpvgrw
+end function ub_cla_porpvgrw
 
 subroutine ub_cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -5251,7 +5251,7 @@ subroutine ub_cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine cla_syamv
+end subroutine ub_cla_syamv
 
 function ub_cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -5275,7 +5275,7 @@ function ub_cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f32) :: ub_cla_syrcond_c
 
   ub_cla_syrcond_c = cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function cla_syrcond_c
+end function ub_cla_syrcond_c
 
 function ub_cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -5298,7 +5298,7 @@ function ub_cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f32) :: ub_cla_syrcond_x
 
   ub_cla_syrcond_x = cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function cla_syrcond_x
+end function ub_cla_syrcond_x
 
 subroutine ub_cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -5338,7 +5338,7 @@ subroutine ub_cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine cla_syrfsx_extended
+end subroutine ub_cla_syrfsx_extended
 
 function ub_cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -5359,7 +5359,7 @@ function ub_cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f32) :: ub_cla_syrpvgrw
 
   ub_cla_syrpvgrw = cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function cla_syrpvgrw
+end function ub_cla_syrpvgrw
 
 subroutine ub_cla_wwaddw(n,x,y,w)
   use blas77_types
@@ -5374,7 +5374,7 @@ subroutine ub_cla_wwaddw(n,x,y,w)
   complex(blas77_f32) :: w(*)
 
   call cla_wwaddw(n,x,y,w)
-end subroutine cla_wwaddw
+end subroutine ub_cla_wwaddw
 
 subroutine ub_claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
   use blas77_types
@@ -5396,7 +5396,7 @@ subroutine ub_claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
   integer(blas77_int) :: info
 
   call claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
-end subroutine claed0
+end subroutine ub_claed0
 
 subroutine ub_claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info)
   use blas77_types
@@ -5429,7 +5429,7 @@ subroutine ub_claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,
   integer(blas77_int) :: info
 
   call claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info)
-end subroutine claed7
+end subroutine ub_claed7
 
 subroutine ub_claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info)
   use blas77_types
@@ -5461,7 +5461,7 @@ subroutine ub_claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,
   integer(blas77_int) :: info
 
   call claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info)
-end subroutine claed8
+end subroutine ub_claed8
 
 subroutine ub_clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -5482,7 +5482,7 @@ subroutine ub_clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   complex(blas77_f32) :: work(*)
 
   call clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine clahef_aa
+end subroutine ub_clahef_aa
 
 subroutine ub_clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -5503,7 +5503,7 @@ subroutine ub_clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine clahef
+end subroutine ub_clahef
 
 subroutine ub_clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -5525,7 +5525,7 @@ subroutine ub_clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine clahef_rk
+end subroutine ub_clahef_rk
 
 subroutine ub_clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -5546,7 +5546,7 @@ subroutine ub_clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine clahef_rook
+end subroutine ub_clahef_rook
 
 subroutine ub_clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info)
   use blas77_types
@@ -5581,7 +5581,7 @@ subroutine ub_clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldg
   integer(blas77_int) :: info
 
   call clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info)
-end subroutine clals0
+end subroutine ub_clals0
 
 subroutine ub_clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info)
   use blas77_types
@@ -5618,7 +5618,7 @@ subroutine ub_clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,p
   integer(blas77_int) :: info
 
   call clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info)
-end subroutine clalsa
+end subroutine ub_clalsa
 
 subroutine ub_clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
   use blas77_types
@@ -5643,7 +5643,7 @@ subroutine ub_clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,in
   integer(blas77_int) :: info
 
   call clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
-end subroutine clalsd
+end subroutine ub_clalsd
 
 subroutine ub_clamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -5670,7 +5670,7 @@ subroutine ub_clamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call clamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine clamswlq
+end subroutine ub_clamswlq
 
 subroutine ub_clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -5697,7 +5697,7 @@ subroutine ub_clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine clamtsqr
+end subroutine ub_clamtsqr
 
 function ub_clanhf(norm,transr,uplo,n,a,work)
   use blas77_types
@@ -5715,7 +5715,7 @@ function ub_clanhf(norm,transr,uplo,n,a,work)
   real(blas77_f32) :: ub_clanhf
 
   ub_clanhf = clanhf(norm,transr,uplo,n,a,work)
-end function clanhf
+end function ub_clanhf
 
 subroutine ub_claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info)
   use blas77_types
@@ -5747,7 +5747,7 @@ subroutine ub_claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,
   integer(blas77_int),intent(out) :: info
 
   call claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info)
-end subroutine claqz0
+end subroutine ub_claqz0
 
 subroutine ub_claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
   use blas77_types
@@ -5776,7 +5776,7 @@ subroutine ub_claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
   complex(blas77_f32) :: z(ldz,*)
 
   call claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
-end subroutine claqz1
+end subroutine ub_claqz1
 
 subroutine ub_claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info)
   use blas77_types
@@ -5815,7 +5815,7 @@ subroutine ub_claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
   integer(blas77_int),intent(out) :: info
 
   call claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info)
-end subroutine claqz2
+end subroutine ub_claqz2
 
 subroutine ub_claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
   use blas77_types
@@ -5851,7 +5851,7 @@ subroutine ub_claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta
   integer(blas77_int),intent(out) :: info
 
   call claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
-end subroutine claqz3
+end subroutine ub_claqz3
 
 subroutine ub_clarfy(uplo,n,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -5870,7 +5870,7 @@ subroutine ub_clarfy(uplo,n,v,incv,tau,c,ldc,work)
   complex(blas77_f32) :: work(*)
 
   call clarfy(uplo,n,v,incv,tau,c,ldc,work)
-end subroutine clarfy
+end subroutine ub_clarfy
 
 subroutine ub_clarscl2(m,n,d,x,ldx)
   use blas77_types
@@ -5886,7 +5886,7 @@ subroutine ub_clarscl2(m,n,d,x,ldx)
   complex(blas77_f32) :: x(ldx,*)
 
   call clarscl2(m,n,d,x,ldx)
-end subroutine clarscl2
+end subroutine ub_clarscl2
 
 subroutine ub_clarz(side,m,n,l,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -5907,7 +5907,7 @@ subroutine ub_clarz(side,m,n,l,v,incv,tau,c,ldc,work)
   complex(blas77_f32) :: work(*)
 
   call clarz(side,m,n,l,v,incv,tau,c,ldc,work)
-end subroutine clarz
+end subroutine ub_clarz
 
 subroutine ub_clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
   use blas77_types
@@ -5934,7 +5934,7 @@ subroutine ub_clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldw
   complex(blas77_f32) :: work(ldwork,*)
 
   call clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
-end subroutine clarzb
+end subroutine ub_clarzb
 
 subroutine ub_clarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   use blas77_types
@@ -5954,7 +5954,7 @@ subroutine ub_clarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   complex(blas77_f32) :: t(ldt,*)
 
   call clarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
-end subroutine clarzt
+end subroutine ub_clarzt
 
 subroutine ub_clascl2(m,n,d,x,ldx)
   use blas77_types
@@ -5970,7 +5970,7 @@ subroutine ub_clascl2(m,n,d,x,ldx)
   complex(blas77_f32) :: x(ldx,*)
 
   call clascl2(m,n,d,x,ldx)
-end subroutine clascl2
+end subroutine ub_clascl2
 
 subroutine ub_claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -5992,7 +5992,7 @@ subroutine ub_claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine claswlq
+end subroutine ub_claswlq
 
 subroutine ub_clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -6013,7 +6013,7 @@ subroutine ub_clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   complex(blas77_f32) :: work(*)
 
   call clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine clasyf_aa
+end subroutine ub_clasyf_aa
 
 subroutine ub_clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -6034,7 +6034,7 @@ subroutine ub_clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine clasyf
+end subroutine ub_clasyf
 
 subroutine ub_clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -6056,7 +6056,7 @@ subroutine ub_clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine clasyf_rk
+end subroutine ub_clasyf_rk
 
 subroutine ub_clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -6077,7 +6077,7 @@ subroutine ub_clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine clasyf_rook
+end subroutine ub_clasyf_rook
 
 subroutine ub_clatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
   use blas77_types
@@ -6103,7 +6103,7 @@ subroutine ub_clatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work
   integer(blas77_int) :: info
 
   call clatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
-end subroutine clatrs3
+end subroutine ub_clatrs3
 
 subroutine ub_clatrz(m,n,l,a,lda,tau,work)
   use blas77_types
@@ -6121,7 +6121,7 @@ subroutine ub_clatrz(m,n,l,a,lda,tau,work)
   complex(blas77_f32) :: work(*)
 
   call clatrz(m,n,l,a,lda,tau,work)
-end subroutine clatrz
+end subroutine ub_clatrz
 
 subroutine ub_clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -6143,7 +6143,7 @@ subroutine ub_clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine clatsqr
+end subroutine ub_clatsqr
 
 subroutine ub_clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   use blas77_types
@@ -6164,7 +6164,7 @@ subroutine ub_clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   complex(blas77_f32) :: work(*)
 
   call clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
-end subroutine clatzm
+end subroutine ub_clatzm
 
 subroutine ub_claunhr_col_getrfnp2(m,n,a,lda,d,info)
   use blas77_types
@@ -6181,7 +6181,7 @@ subroutine ub_claunhr_col_getrfnp2(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call claunhr_col_getrfnp2(m,n,a,lda,d,info)
-end subroutine claunhr_col_getrfnp2
+end subroutine ub_claunhr_col_getrfnp2
 
 subroutine ub_claunhr_col_getrfnp(m,n,a,lda,d,info)
   use blas77_types
@@ -6198,7 +6198,7 @@ subroutine ub_claunhr_col_getrfnp(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call claunhr_col_getrfnp(m,n,a,lda,d,info)
-end subroutine claunhr_col_getrfnp
+end subroutine ub_claunhr_col_getrfnp
 
 subroutine ub_cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -6219,7 +6219,7 @@ subroutine ub_cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
-end subroutine cpbcon
+end subroutine ub_cpbcon
 
 subroutine ub_cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   use blas77_types
@@ -6239,7 +6239,7 @@ subroutine ub_cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
-end subroutine cpbequ
+end subroutine ub_cpbequ
 
 subroutine ub_cpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6267,7 +6267,7 @@ subroutine ub_cpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work
   integer(blas77_int) :: info
 
   call cpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cpbrfs
+end subroutine ub_cpbrfs
 
 subroutine ub_cpbstf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -6284,7 +6284,7 @@ subroutine ub_cpbstf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call cpbstf(uplo,n,kd,ab,ldab,info)
-end subroutine cpbstf
+end subroutine ub_cpbstf
 
 subroutine ub_cpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -6304,7 +6304,7 @@ subroutine ub_cpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine cpbsv
+end subroutine ub_cpbsv
 
 subroutine ub_cpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6336,7 +6336,7 @@ subroutine ub_cpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call cpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cpbsvx
+end subroutine ub_cpbsvx
 
 subroutine ub_cpbtf2(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -6353,7 +6353,7 @@ subroutine ub_cpbtf2(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call cpbtf2(uplo,n,kd,ab,ldab,info)
-end subroutine cpbtf2
+end subroutine ub_cpbtf2
 
 subroutine ub_cpbtrf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -6370,7 +6370,7 @@ subroutine ub_cpbtrf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call cpbtrf(uplo,n,kd,ab,ldab,info)
-end subroutine cpbtrf
+end subroutine ub_cpbtrf
 
 subroutine ub_cpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -6390,7 +6390,7 @@ subroutine ub_cpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine cpbtrs
+end subroutine ub_cpbtrs
 
 subroutine ub_cpftrf(transr,uplo,n,a,info)
   use blas77_types
@@ -6406,7 +6406,7 @@ subroutine ub_cpftrf(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call cpftrf(transr,uplo,n,a,info)
-end subroutine cpftrf
+end subroutine ub_cpftrf
 
 subroutine ub_cpftri(transr,uplo,n,a,info)
   use blas77_types
@@ -6422,7 +6422,7 @@ subroutine ub_cpftri(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call cpftri(transr,uplo,n,a,info)
-end subroutine cpftri
+end subroutine ub_cpftri
 
 subroutine ub_cpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   use blas77_types
@@ -6441,7 +6441,7 @@ subroutine ub_cpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
-end subroutine cpftrs
+end subroutine ub_cpftrs
 
 subroutine ub_cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -6461,7 +6461,7 @@ subroutine ub_cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
-end subroutine cpocon
+end subroutine ub_cpocon
 
 subroutine ub_cpoequ(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -6479,7 +6479,7 @@ subroutine ub_cpoequ(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call cpoequ(n,a,lda,s,scond,amax,info)
-end subroutine cpoequ
+end subroutine ub_cpoequ
 
 subroutine ub_cpoequb(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -6497,7 +6497,7 @@ subroutine ub_cpoequb(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call cpoequb(n,a,lda,s,scond,amax,info)
-end subroutine cpoequb
+end subroutine ub_cpoequb
 
 subroutine ub_cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6524,7 +6524,7 @@ subroutine ub_cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,
   integer(blas77_int) :: info
 
   call cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cporfs
+end subroutine ub_cporfs
 
 subroutine ub_cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -6558,7 +6558,7 @@ subroutine ub_cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n
   integer(blas77_int) :: info
 
   call cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cporfsx
+end subroutine ub_cporfsx
 
 subroutine ub_cposv(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -6577,7 +6577,7 @@ subroutine ub_cposv(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call cposv(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine cposv
+end subroutine ub_cposv
 
 subroutine ub_cposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6608,7 +6608,7 @@ subroutine ub_cposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,fe
   integer(blas77_int) :: info
 
   call cposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cposvx
+end subroutine ub_cposvx
 
 subroutine ub_cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -6644,7 +6644,7 @@ subroutine ub_cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,r
   integer(blas77_int) :: info
 
   call cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine cposvxx
+end subroutine ub_cposvxx
 
 subroutine ub_cpotf2(uplo,n,a,lda,info)
   use blas77_types
@@ -6660,7 +6660,7 @@ subroutine ub_cpotf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call cpotf2(uplo,n,a,lda,info)
-end subroutine cpotf2
+end subroutine ub_cpotf2
 
 subroutine ub_cpotrf2(uplo,n,a,lda,info)
   use blas77_types
@@ -6676,7 +6676,7 @@ subroutine ub_cpotrf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call cpotrf2(uplo,n,a,lda,info)
-end subroutine cpotrf2
+end subroutine ub_cpotrf2
 
 subroutine ub_cpotrf(uplo,n,a,lda,info)
   use blas77_types
@@ -6692,7 +6692,7 @@ subroutine ub_cpotrf(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call cpotrf(uplo,n,a,lda,info)
-end subroutine cpotrf
+end subroutine ub_cpotrf
 
 subroutine ub_cpotri(uplo,n,a,lda,info)
   use blas77_types
@@ -6708,7 +6708,7 @@ subroutine ub_cpotri(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call cpotri(uplo,n,a,lda,info)
-end subroutine cpotri
+end subroutine ub_cpotri
 
 subroutine ub_cpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -6727,7 +6727,7 @@ subroutine ub_cpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine cpotrs
+end subroutine ub_cpotrs
 
 subroutine ub_cppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -6746,7 +6746,7 @@ subroutine ub_cppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call cppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
-end subroutine cppcon
+end subroutine ub_cppcon
 
 subroutine ub_cppequ(uplo,n,ap,s,scond,amax,info)
   use blas77_types
@@ -6764,7 +6764,7 @@ subroutine ub_cppequ(uplo,n,ap,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call cppequ(uplo,n,ap,s,scond,amax,info)
-end subroutine cppequ
+end subroutine ub_cppequ
 
 subroutine ub_cpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6789,7 +6789,7 @@ subroutine ub_cpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   integer(blas77_int) :: info
 
   call cpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cpprfs
+end subroutine ub_cpprfs
 
 subroutine ub_cppsv(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -6807,7 +6807,7 @@ subroutine ub_cppsv(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call cppsv(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine cppsv
+end subroutine ub_cppsv
 
 subroutine ub_cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6836,7 +6836,7 @@ subroutine ub_cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr
   integer(blas77_int) :: info
 
   call cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cppsvx
+end subroutine ub_cppsvx
 
 subroutine ub_cpptrf(uplo,n,ap,info)
   use blas77_types
@@ -6851,7 +6851,7 @@ subroutine ub_cpptrf(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call cpptrf(uplo,n,ap,info)
-end subroutine cpptrf
+end subroutine ub_cpptrf
 
 subroutine ub_cpptri(uplo,n,ap,info)
   use blas77_types
@@ -6866,7 +6866,7 @@ subroutine ub_cpptri(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call cpptri(uplo,n,ap,info)
-end subroutine cpptri
+end subroutine ub_cpptri
 
 subroutine ub_cpptrs(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -6884,7 +6884,7 @@ subroutine ub_cpptrs(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpptrs(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine cpptrs
+end subroutine ub_cpptrs
 
 subroutine ub_cpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -6904,7 +6904,7 @@ subroutine ub_cpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call cpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine cpstf2
+end subroutine ub_cpstf2
 
 subroutine ub_cpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -6924,7 +6924,7 @@ subroutine ub_cpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call cpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine cpstrf
+end subroutine ub_cpstrf
 
 subroutine ub_cptcon(n,d,e,anorm,rcond,rwork,info)
   use blas77_types
@@ -6942,7 +6942,7 @@ subroutine ub_cptcon(n,d,e,anorm,rcond,rwork,info)
   integer(blas77_int) :: info
 
   call cptcon(n,d,e,anorm,rcond,rwork,info)
-end subroutine cptcon
+end subroutine ub_cptcon
 
 subroutine ub_cpteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -6961,7 +6961,7 @@ subroutine ub_cpteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call cpteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine cpteqr
+end subroutine ub_cpteqr
 
 subroutine ub_cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -6988,7 +6988,7 @@ subroutine ub_cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info
   integer(blas77_int) :: info
 
   call cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine cptrfs
+end subroutine ub_cptrfs
 
 subroutine ub_cptsv(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -7006,7 +7006,7 @@ subroutine ub_cptsv(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call cptsv(n,nrhs,d,e,b,ldb,info)
-end subroutine cptsv
+end subroutine ub_cptsv
 
 subroutine ub_cptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -7034,7 +7034,7 @@ subroutine ub_cptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwor
   integer(blas77_int) :: info
 
   call cptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cptsvx
+end subroutine ub_cptsvx
 
 subroutine ub_cpttrf(n,d,e,info)
   use blas77_types
@@ -7049,7 +7049,7 @@ subroutine ub_cpttrf(n,d,e,info)
   integer(blas77_int) :: info
 
   call cpttrf(n,d,e,info)
-end subroutine cpttrf
+end subroutine ub_cpttrf
 
 subroutine ub_cpttrs(uplo,n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -7068,7 +7068,7 @@ subroutine ub_cpttrs(uplo,n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call cpttrs(uplo,n,nrhs,d,e,b,ldb,info)
-end subroutine cpttrs
+end subroutine ub_cpttrs
 
 subroutine ub_cptts2(iuplo,n,nrhs,d,e,b,ldb)
   use blas77_types
@@ -7086,7 +7086,7 @@ subroutine ub_cptts2(iuplo,n,nrhs,d,e,b,ldb)
   complex(blas77_f32) :: b(ldb,*)
 
   call cptts2(iuplo,n,nrhs,d,e,b,ldb)
-end subroutine cptts2
+end subroutine ub_cptts2
 
 subroutine ub_cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -7105,7 +7105,7 @@ subroutine ub_cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
-end subroutine cspcon
+end subroutine ub_cspcon
 
 subroutine ub_csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -7131,7 +7131,7 @@ subroutine ub_csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,in
   integer(blas77_int) :: info
 
   call csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine csprfs
+end subroutine ub_csprfs
 
 subroutine ub_cspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -7150,7 +7150,7 @@ subroutine ub_cspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call cspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine cspsv
+end subroutine ub_cspsv
 
 subroutine ub_cspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -7178,7 +7178,7 @@ subroutine ub_cspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call cspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine cspsvx
+end subroutine ub_cspsvx
 
 subroutine ub_csptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -7194,7 +7194,7 @@ subroutine ub_csptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call csptrf(uplo,n,ap,ipiv,info)
-end subroutine csptrf
+end subroutine ub_csptrf
 
 subroutine ub_csptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -7211,7 +7211,7 @@ subroutine ub_csptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call csptri(uplo,n,ap,ipiv,work,info)
-end subroutine csptri
+end subroutine ub_csptri
 
 subroutine ub_csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -7230,7 +7230,7 @@ subroutine ub_csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine csptrs
+end subroutine ub_csptrs
 
 subroutine ub_cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -7254,7 +7254,7 @@ subroutine ub_cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info
   integer(blas77_int) :: info
 
   call cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine cstedc
+end subroutine ub_cstedc
 
 subroutine ub_cstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -7285,7 +7285,7 @@ subroutine ub_cstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call cstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine cstegr
+end subroutine ub_cstegr
 
 subroutine ub_cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -7309,7 +7309,7 @@ subroutine ub_cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   integer(blas77_int) :: info
 
   call cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
-end subroutine cstein
+end subroutine ub_cstein
 
 subroutine ub_cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -7341,7 +7341,7 @@ subroutine ub_cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   integer(blas77_int) :: info
 
   call cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
-end subroutine cstemr
+end subroutine ub_cstemr
 
 subroutine ub_csteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -7360,7 +7360,7 @@ subroutine ub_csteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call csteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine csteqr
+end subroutine ub_csteqr
 
 subroutine ub_csycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -7381,7 +7381,7 @@ subroutine ub_csycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call csycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
-end subroutine csycon_3
+end subroutine ub_csycon_3
 
 subroutine ub_csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -7401,7 +7401,7 @@ subroutine ub_csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine csycon
+end subroutine ub_csycon
 
 subroutine ub_csycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -7421,7 +7421,7 @@ subroutine ub_csycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call csycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine csycon_rook
+end subroutine ub_csycon_rook
 
 subroutine ub_csyconv(uplo,way,n,a,lda,ipiv,e,info)
   use blas77_types
@@ -7440,7 +7440,7 @@ subroutine ub_csyconv(uplo,way,n,a,lda,ipiv,e,info)
   integer(blas77_int) :: info
 
   call csyconv(uplo,way,n,a,lda,ipiv,e,info)
-end subroutine csyconv
+end subroutine ub_csyconv
 
 subroutine ub_csyconvf(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -7459,7 +7459,7 @@ subroutine ub_csyconvf(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call csyconvf(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine csyconvf
+end subroutine ub_csyconvf
 
 subroutine ub_csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -7478,7 +7478,7 @@ subroutine ub_csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine csyconvf_rook
+end subroutine ub_csyconvf_rook
 
 subroutine ub_csyequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -7498,7 +7498,7 @@ subroutine ub_csyequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call csyequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine csyequb
+end subroutine ub_csyequb
 
 subroutine ub_csyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -7526,7 +7526,7 @@ subroutine ub_csyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,r
   integer(blas77_int) :: info
 
   call csyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine csyrfs
+end subroutine ub_csyrfs
 
 subroutine ub_csyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -7561,7 +7561,7 @@ subroutine ub_csyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call csyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine csyrfsx
+end subroutine ub_csyrfsx
 
 subroutine ub_csysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -7586,7 +7586,7 @@ subroutine ub_csysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call csysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine csysv_aa_2stage
+end subroutine ub_csysv_aa_2stage
 
 subroutine ub_csysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -7608,7 +7608,7 @@ subroutine ub_csysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call csysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine csysv_aa
+end subroutine ub_csysv_aa
 
 subroutine ub_csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -7630,7 +7630,7 @@ subroutine ub_csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine csysv
+end subroutine ub_csysv
 
 subroutine ub_csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -7653,7 +7653,7 @@ subroutine ub_csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine csysv_rk
+end subroutine ub_csysv_rk
 
 subroutine ub_csysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -7675,7 +7675,7 @@ subroutine ub_csysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call csysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine csysv_rook
+end subroutine ub_csysv_rook
 
 subroutine ub_csysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
   use blas77_types
@@ -7706,7 +7706,7 @@ subroutine ub_csysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call csysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
-end subroutine csysvx
+end subroutine ub_csysvx
 
 subroutine ub_csysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -7743,7 +7743,7 @@ subroutine ub_csysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call csysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine csysvxx
+end subroutine ub_csysvxx
 
 subroutine ub_csytf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -7760,7 +7760,7 @@ subroutine ub_csytf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call csytf2(uplo,n,a,lda,ipiv,info)
-end subroutine csytf2
+end subroutine ub_csytf2
 
 subroutine ub_csytf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -7778,7 +7778,7 @@ subroutine ub_csytf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call csytf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine csytf2_rk
+end subroutine ub_csytf2_rk
 
 subroutine ub_csytf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -7795,7 +7795,7 @@ subroutine ub_csytf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call csytf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine csytf2_rook
+end subroutine ub_csytf2_rook
 
 subroutine ub_csytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -7817,7 +7817,7 @@ subroutine ub_csytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine csytrf_aa_2stage
+end subroutine ub_csytrf_aa_2stage
 
 subroutine ub_csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -7836,7 +7836,7 @@ subroutine ub_csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine csytrf_aa
+end subroutine ub_csytrf_aa
 
 subroutine ub_csytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -7855,7 +7855,7 @@ subroutine ub_csytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine csytrf
+end subroutine ub_csytrf
 
 subroutine ub_csytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -7875,7 +7875,7 @@ subroutine ub_csytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine csytrf_rk
+end subroutine ub_csytrf_rk
 
 subroutine ub_csytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -7894,7 +7894,7 @@ subroutine ub_csytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine csytrf_rook
+end subroutine ub_csytrf_rook
 
 subroutine ub_csytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -7913,7 +7913,7 @@ subroutine ub_csytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine csytri2
+end subroutine ub_csytri2
 
 subroutine ub_csytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -7932,7 +7932,7 @@ subroutine ub_csytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call csytri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine csytri2x
+end subroutine ub_csytri2x
 
 subroutine ub_csytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -7952,7 +7952,7 @@ subroutine ub_csytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine csytri_3
+end subroutine ub_csytri_3
 
 subroutine ub_csytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -7972,7 +7972,7 @@ subroutine ub_csytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call csytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine csytri_3x
+end subroutine ub_csytri_3x
 
 subroutine ub_csytri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -7990,7 +7990,7 @@ subroutine ub_csytri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call csytri(uplo,n,a,lda,ipiv,work,info)
-end subroutine csytri
+end subroutine ub_csytri
 
 subroutine ub_csytri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -8008,7 +8008,7 @@ subroutine ub_csytri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call csytri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine csytri_rook
+end subroutine ub_csytri_rook
 
 subroutine ub_csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -8029,7 +8029,7 @@ subroutine ub_csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine csytrs2
+end subroutine ub_csytrs2
 
 subroutine ub_csytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -8050,7 +8050,7 @@ subroutine ub_csytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call csytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine csytrs_3
+end subroutine ub_csytrs_3
 
 subroutine ub_csytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -8073,7 +8073,7 @@ subroutine ub_csytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call csytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine csytrs_aa_2stage
+end subroutine ub_csytrs_aa_2stage
 
 subroutine ub_csytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -8095,7 +8095,7 @@ subroutine ub_csytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call csytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine csytrs_aa
+end subroutine ub_csytrs_aa
 
 subroutine ub_csytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -8115,7 +8115,7 @@ subroutine ub_csytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call csytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine csytrs
+end subroutine ub_csytrs
 
 subroutine ub_csytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -8135,7 +8135,7 @@ subroutine ub_csytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call csytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine csytrs_rook
+end subroutine ub_csytrs_rook
 
 subroutine ub_ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
   use blas77_types
@@ -8157,7 +8157,7 @@ subroutine ub_ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
-end subroutine ctbcon
+end subroutine ub_ctbcon
 
 subroutine ub_ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -8185,7 +8185,7 @@ subroutine ub_ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,wor
   integer(blas77_int) :: info
 
   call ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ctbrfs
+end subroutine ub_ctbrfs
 
 subroutine ub_ctbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -8207,7 +8207,7 @@ subroutine ub_ctbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call ctbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine ctbtrs
+end subroutine ub_ctbtrs
 
 subroutine ub_ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   use blas77_types
@@ -8229,7 +8229,7 @@ subroutine ub_ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   complex(blas77_f32) :: b(0:ldb-1,0:*)
 
   call ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
-end subroutine ctfsm
+end subroutine ub_ctfsm
 
 subroutine ub_ctftri(transr,uplo,diag,n,a,info)
   use blas77_types
@@ -8246,7 +8246,7 @@ subroutine ub_ctftri(transr,uplo,diag,n,a,info)
   integer(blas77_int) :: info
 
   call ctftri(transr,uplo,diag,n,a,info)
-end subroutine ctftri
+end subroutine ub_ctftri
 
 subroutine ub_ctfttp(transr,uplo,n,arf,ap,info)
   use blas77_types
@@ -8263,7 +8263,7 @@ subroutine ub_ctfttp(transr,uplo,n,arf,ap,info)
   integer(blas77_int) :: info
 
   call ctfttp(transr,uplo,n,arf,ap,info)
-end subroutine ctfttp
+end subroutine ub_ctfttp
 
 subroutine ub_ctfttr(transr,uplo,n,arf,a,lda,info)
   use blas77_types
@@ -8281,7 +8281,7 @@ subroutine ub_ctfttr(transr,uplo,n,arf,a,lda,info)
   integer(blas77_int) :: info
 
   call ctfttr(transr,uplo,n,arf,a,lda,info)
-end subroutine ctfttr
+end subroutine ub_ctfttr
 
 subroutine ub_ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
   use blas77_types
@@ -8309,7 +8309,7 @@ subroutine ub_ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
   integer(blas77_int) :: info
 
   call ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
-end subroutine ctgevc
+end subroutine ub_ctgevc
 
 subroutine ub_ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
   use blas77_types
@@ -8334,7 +8334,7 @@ subroutine ub_ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
   integer(blas77_int) :: info
 
   call ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
-end subroutine ctgexc
+end subroutine ub_ctgexc
 
 subroutine ub_ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -8369,7 +8369,7 @@ subroutine ub_ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ld
   integer(blas77_int) :: info
 
   call ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
-end subroutine ctgsen
+end subroutine ub_ctgsen
 
 subroutine ub_ctgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
   use blas77_types
@@ -8405,7 +8405,7 @@ subroutine ub_ctgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u
   integer(blas77_int) :: info
 
   call ctgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
-end subroutine ctgsja
+end subroutine ub_ctgsja
 
 subroutine ub_ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
   use blas77_types
@@ -8436,7 +8436,7 @@ subroutine ub_ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
   integer(blas77_int) :: info
 
   call ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
-end subroutine ctgsna
+end subroutine ub_ctgsna
 
 subroutine ub_ctgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
   use blas77_types
@@ -8469,7 +8469,7 @@ subroutine ub_ctgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,di
   integer(blas77_int) :: info
 
   call ctgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
-end subroutine ctgsyl
+end subroutine ub_ctgsyl
 
 subroutine ub_ctpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
   use blas77_types
@@ -8489,7 +8489,7 @@ subroutine ub_ctpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ctpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
-end subroutine ctpcon
+end subroutine ub_ctpcon
 
 subroutine ub_ctplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -8510,7 +8510,7 @@ subroutine ub_ctplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call ctplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine ctplqt2
+end subroutine ub_ctplqt2
 
 subroutine ub_ctplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -8533,7 +8533,7 @@ subroutine ub_ctplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call ctplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine ctplqt
+end subroutine ub_ctplqt
 
 subroutine ub_ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -8561,7 +8561,7 @@ subroutine ub_ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine ctpmlqt
+end subroutine ub_ctpmlqt
 
 subroutine ub_ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -8589,7 +8589,7 @@ subroutine ub_ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine ctpmqrt
+end subroutine ub_ctpmqrt
 
 subroutine ub_ctpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -8610,7 +8610,7 @@ subroutine ub_ctpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call ctpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine ctpqrt2
+end subroutine ub_ctpqrt2
 
 subroutine ub_ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -8633,7 +8633,7 @@ subroutine ub_ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine ctpqrt
+end subroutine ub_ctpqrt
 
 subroutine ub_ctprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -8659,7 +8659,7 @@ subroutine ub_ctprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,
   integer(blas77_int) :: info
 
   call ctprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ctprfs
+end subroutine ub_ctprfs
 
 subroutine ub_ctptri(uplo,diag,n,ap,info)
   use blas77_types
@@ -8675,7 +8675,7 @@ subroutine ub_ctptri(uplo,diag,n,ap,info)
   integer(blas77_int) :: info
 
   call ctptri(uplo,diag,n,ap,info)
-end subroutine ctptri
+end subroutine ub_ctptri
 
 subroutine ub_ctptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -8695,7 +8695,7 @@ subroutine ub_ctptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call ctptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
-end subroutine ctptrs
+end subroutine ub_ctptrs
 
 subroutine ub_ctpttf(transr,uplo,n,ap,arf,info)
   use blas77_types
@@ -8712,7 +8712,7 @@ subroutine ub_ctpttf(transr,uplo,n,ap,arf,info)
   integer(blas77_int) :: info
 
   call ctpttf(transr,uplo,n,ap,arf,info)
-end subroutine ctpttf
+end subroutine ub_ctpttf
 
 subroutine ub_ctpttr(uplo,n,ap,a,lda,info)
   use blas77_types
@@ -8729,7 +8729,7 @@ subroutine ub_ctpttr(uplo,n,ap,a,lda,info)
   integer(blas77_int) :: info
 
   call ctpttr(uplo,n,ap,a,lda,info)
-end subroutine ctpttr
+end subroutine ub_ctpttr
 
 subroutine ub_ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
   use blas77_types
@@ -8750,7 +8750,7 @@ subroutine ub_ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
-end subroutine ctrcon
+end subroutine ub_ctrcon
 
 subroutine ub_ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info)
   use blas77_types
@@ -8778,7 +8778,7 @@ subroutine ub_ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
   integer(blas77_int) :: info
 
   call ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info)
-end subroutine ctrevc3
+end subroutine ub_ctrevc3
 
 subroutine ub_ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
   use blas77_types
@@ -8804,7 +8804,7 @@ subroutine ub_ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,
   integer(blas77_int) :: info
 
   call ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
-end subroutine ctrevc
+end subroutine ub_ctrevc
 
 subroutine ub_ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
   use blas77_types
@@ -8824,7 +8824,7 @@ subroutine ub_ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
   integer(blas77_int) :: info
 
   call ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
-end subroutine ctrexc
+end subroutine ub_ctrexc
 
 subroutine ub_ctrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -8851,7 +8851,7 @@ subroutine ub_ctrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwo
   integer(blas77_int) :: info
 
   call ctrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ctrrfs
+end subroutine ub_ctrrfs
 
 subroutine ub_ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
   use blas77_types
@@ -8877,7 +8877,7 @@ subroutine ub_ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
   integer(blas77_int) :: info
 
   call ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
-end subroutine ctrsen
+end subroutine ub_ctrsen
 
 subroutine ub_ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info)
   use blas77_types
@@ -8906,7 +8906,7 @@ subroutine ub_ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
   integer(blas77_int) :: info
 
   call ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info)
-end subroutine ctrsna
+end subroutine ub_ctrsna
 
 subroutine ub_ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info)
   use blas77_types
@@ -8932,7 +8932,7 @@ subroutine ub_ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork
   integer(blas77_int) :: info
 
   call ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info)
-end subroutine ctrsyl3
+end subroutine ub_ctrsyl3
 
 subroutine ub_ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   use blas77_types
@@ -8956,7 +8956,7 @@ subroutine ub_ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   integer(blas77_int) :: info
 
   call ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
-end subroutine ctrsyl
+end subroutine ub_ctrsyl
 
 subroutine ub_ctrti2(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -8973,7 +8973,7 @@ subroutine ub_ctrti2(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call ctrti2(uplo,diag,n,a,lda,info)
-end subroutine ctrti2
+end subroutine ub_ctrti2
 
 subroutine ub_ctrtri(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -8990,7 +8990,7 @@ subroutine ub_ctrtri(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call ctrtri(uplo,diag,n,a,lda,info)
-end subroutine ctrtri
+end subroutine ub_ctrtri
 
 subroutine ub_ctrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -9011,7 +9011,7 @@ subroutine ub_ctrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call ctrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
-end subroutine ctrtrs
+end subroutine ub_ctrtrs
 
 subroutine ub_ctrttf(transr,uplo,n,a,lda,arf,info)
   use blas77_types
@@ -9029,7 +9029,7 @@ subroutine ub_ctrttf(transr,uplo,n,a,lda,arf,info)
   integer(blas77_int) :: info
 
   call ctrttf(transr,uplo,n,a,lda,arf,info)
-end subroutine ctrttf
+end subroutine ub_ctrttf
 
 subroutine ub_ctrttp(uplo,n,a,lda,ap,info)
   use blas77_types
@@ -9046,7 +9046,7 @@ subroutine ub_ctrttp(uplo,n,a,lda,ap,info)
   integer(blas77_int) :: info
 
   call ctrttp(uplo,n,a,lda,ap,info)
-end subroutine ctrttp
+end subroutine ub_ctrttp
 
 subroutine ub_ctzrqf(m,n,a,lda,tau,info)
   use blas77_types
@@ -9063,7 +9063,7 @@ subroutine ub_ctzrqf(m,n,a,lda,tau,info)
   integer(blas77_int) :: info
 
   call ctzrqf(m,n,a,lda,tau,info)
-end subroutine ctzrqf
+end subroutine ub_ctzrqf
 
 subroutine ub_ctzrzf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9082,7 +9082,7 @@ subroutine ub_ctzrzf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call ctzrzf(m,n,a,lda,tau,work,lwork,info)
-end subroutine ctzrzf
+end subroutine ub_ctzrzf
 
 subroutine ub_cunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -9108,7 +9108,7 @@ subroutine ub_cunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call cunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine cunbdb1
+end subroutine ub_cunbdb1
 
 subroutine ub_cunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -9134,7 +9134,7 @@ subroutine ub_cunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call cunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine cunbdb2
+end subroutine ub_cunbdb2
 
 subroutine ub_cunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -9160,7 +9160,7 @@ subroutine ub_cunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call cunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine cunbdb3
+end subroutine ub_cunbdb3
 
 subroutine ub_cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
   use blas77_types
@@ -9187,7 +9187,7 @@ subroutine ub_cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phan
   integer(blas77_int) :: info
 
   call cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
-end subroutine cunbdb4
+end subroutine ub_cunbdb4
 
 subroutine ub_cunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -9212,7 +9212,7 @@ subroutine ub_cunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine cunbdb5
+end subroutine ub_cunbdb5
 
 subroutine ub_cunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -9237,7 +9237,7 @@ subroutine ub_cunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine cunbdb6
+end subroutine ub_cunbdb6
 
 subroutine ub_cunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
   use blas77_types
@@ -9270,7 +9270,7 @@ subroutine ub_cunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,t
   integer(blas77_int) :: info
 
   call cunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
-end subroutine cunbdb
+end subroutine ub_cunbdb
 
 subroutine ub_cuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -9304,7 +9304,7 @@ subroutine ub_cuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,l
   integer(blas77_int) :: info
 
   call cuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info)
-end subroutine cuncsd2by1
+end subroutine ub_cuncsd2by1
 
 subroutine ub_cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -9347,7 +9347,7 @@ subroutine ub_cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,l
   integer(blas77_int) :: info
 
   call cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info)
-end subroutine cuncsd
+end subroutine ub_cuncsd
 
 subroutine ub_cung2l(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -9366,7 +9366,7 @@ subroutine ub_cung2l(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cung2l(m,n,k,a,lda,tau,work,info)
-end subroutine cung2l
+end subroutine ub_cung2l
 
 subroutine ub_cung2r(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -9385,7 +9385,7 @@ subroutine ub_cung2r(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cung2r(m,n,k,a,lda,tau,work,info)
-end subroutine cung2r
+end subroutine ub_cung2r
 
 subroutine ub_cungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9406,7 +9406,7 @@ subroutine ub_cungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
-end subroutine cungbr
+end subroutine ub_cungbr
 
 subroutine ub_cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9426,7 +9426,7 @@ subroutine ub_cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine cunghr
+end subroutine ub_cunghr
 
 subroutine ub_cungl2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -9445,7 +9445,7 @@ subroutine ub_cungl2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cungl2(m,n,k,a,lda,tau,work,info)
-end subroutine cungl2
+end subroutine ub_cungl2
 
 subroutine ub_cunglq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9465,7 +9465,7 @@ subroutine ub_cunglq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunglq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine cunglq
+end subroutine ub_cunglq
 
 subroutine ub_cungql(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9485,7 +9485,7 @@ subroutine ub_cungql(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungql(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine cungql
+end subroutine ub_cungql
 
 subroutine ub_cungqr(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9505,7 +9505,7 @@ subroutine ub_cungqr(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungqr(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine cungqr
+end subroutine ub_cungqr
 
 subroutine ub_cungr2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -9524,7 +9524,7 @@ subroutine ub_cungr2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call cungr2(m,n,k,a,lda,tau,work,info)
-end subroutine cungr2
+end subroutine ub_cungr2
 
 subroutine ub_cungrq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9544,7 +9544,7 @@ subroutine ub_cungrq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungrq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine cungrq
+end subroutine ub_cungrq
 
 subroutine ub_cungtr(uplo,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -9563,7 +9563,7 @@ subroutine ub_cungtr(uplo,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungtr(uplo,n,a,lda,tau,work,lwork,info)
-end subroutine cungtr
+end subroutine ub_cungtr
 
 subroutine ub_cungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -9585,7 +9585,7 @@ subroutine ub_cungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine cungtsqr
+end subroutine ub_cungtsqr
 
 subroutine ub_cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -9607,7 +9607,7 @@ subroutine ub_cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine cungtsqr_row
+end subroutine ub_cungtsqr_row
 
 subroutine ub_cunhr_col(m,n,nb,a,lda,t,ldt,d,info)
   use blas77_types
@@ -9627,7 +9627,7 @@ subroutine ub_cunhr_col(m,n,nb,a,lda,t,ldt,d,info)
   integer(blas77_int) :: info
 
   call cunhr_col(m,n,nb,a,lda,t,ldt,d,info)
-end subroutine cunhr_col
+end subroutine ub_cunhr_col
 
 subroutine ub_cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   use blas77_types
@@ -9651,7 +9651,7 @@ subroutine ub_cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
-end subroutine cunm22
+end subroutine ub_cunm22
 
 subroutine ub_cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -9674,7 +9674,7 @@ subroutine ub_cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine cunm2l
+end subroutine ub_cunm2l
 
 subroutine ub_cunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -9697,7 +9697,7 @@ subroutine ub_cunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine cunm2r
+end subroutine ub_cunm2r
 
 subroutine ub_cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9722,7 +9722,7 @@ subroutine ub_cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmbr
+end subroutine ub_cunmbr
 
 subroutine ub_cunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9747,7 +9747,7 @@ subroutine ub_cunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmhr
+end subroutine ub_cunmhr
 
 subroutine ub_cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -9770,7 +9770,7 @@ subroutine ub_cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine cunml2
+end subroutine ub_cunml2
 
 subroutine ub_cunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9794,7 +9794,7 @@ subroutine ub_cunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmlq
+end subroutine ub_cunmlq
 
 subroutine ub_cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9818,7 +9818,7 @@ subroutine ub_cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmql
+end subroutine ub_cunmql
 
 subroutine ub_cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9842,7 +9842,7 @@ subroutine ub_cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmqr
+end subroutine ub_cunmqr
 
 subroutine ub_cunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -9865,7 +9865,7 @@ subroutine ub_cunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine cunmr2
+end subroutine ub_cunmr2
 
 subroutine ub_cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -9889,7 +9889,7 @@ subroutine ub_cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
-end subroutine cunmr3
+end subroutine ub_cunmr3
 
 subroutine ub_cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9913,7 +9913,7 @@ subroutine ub_cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmrq
+end subroutine ub_cunmrq
 
 subroutine ub_cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9938,7 +9938,7 @@ subroutine ub_cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmrz
+end subroutine ub_cunmrz
 
 subroutine ub_cunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -9962,7 +9962,7 @@ subroutine ub_cunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call cunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine cunmtr
+end subroutine ub_cunmtr
 
 subroutine ub_cupgtr(uplo,n,ap,tau,q,ldq,work,info)
   use blas77_types
@@ -9981,7 +9981,7 @@ subroutine ub_cupgtr(uplo,n,ap,tau,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call cupgtr(uplo,n,ap,tau,q,ldq,work,info)
-end subroutine cupgtr
+end subroutine ub_cupgtr
 
 subroutine ub_cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   use blas77_types
@@ -10003,7 +10003,7 @@ subroutine ub_cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
-end subroutine cupmtr
+end subroutine ub_cupmtr
 
 subroutine ub_dbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info)
   use blas77_types
@@ -10043,7 +10043,7 @@ subroutine ub_dbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,
   integer(blas77_int) :: info
 
   call dbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info)
-end subroutine dbbcsd
+end subroutine ub_dbbcsd
 
 subroutine ub_dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
   use blas77_types
@@ -10068,7 +10068,7 @@ subroutine ub_dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
   integer(blas77_int) :: info
 
   call dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
-end subroutine dbdsdc
+end subroutine ub_dbdsdc
 
 subroutine ub_dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
   use blas77_types
@@ -10094,7 +10094,7 @@ subroutine ub_dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
-end subroutine dbdsqr
+end subroutine ub_dbdsqr
 
 subroutine ub_dbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
   use blas77_types
@@ -10122,7 +10122,7 @@ subroutine ub_dbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,in
   integer(blas77_int) :: info
 
   call dbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
-end subroutine dbdsvdx
+end subroutine ub_dbdsvdx
 
 subroutine ub_ddisna(job,m,n,d,sep,info)
   use blas77_types
@@ -10139,7 +10139,7 @@ subroutine ub_ddisna(job,m,n,d,sep,info)
   integer(blas77_int) :: info
 
   call ddisna(job,m,n,d,sep,info)
-end subroutine ddisna
+end subroutine ub_ddisna
 
 subroutine ub_dgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info)
   use blas77_types
@@ -10168,7 +10168,7 @@ subroutine ub_dgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,inf
   integer(blas77_int) :: info
 
   call dgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info)
-end subroutine dgbbrd
+end subroutine ub_dgbbrd
 
 subroutine ub_dgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -10191,7 +10191,7 @@ subroutine ub_dgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dgbcon
+end subroutine ub_dgbcon
 
 subroutine ub_dgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -10214,7 +10214,7 @@ subroutine ub_dgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call dgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine dgbequ
+end subroutine ub_dgbequ
 
 subroutine ub_dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -10237,7 +10237,7 @@ subroutine ub_dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine dgbequb
+end subroutine ub_dgbequb
 
 subroutine ub_dgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -10267,7 +10267,7 @@ subroutine ub_dgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,
   integer(blas77_int) :: info
 
   call dgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dgbrfs
+end subroutine ub_dgbrfs
 
 subroutine ub_dgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -10305,7 +10305,7 @@ subroutine ub_dgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,
   integer(blas77_int) :: info
 
   call dgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dgbrfsx
+end subroutine ub_dgbrfsx
 
 subroutine ub_dgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -10326,7 +10326,7 @@ subroutine ub_dgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine dgbsv
+end subroutine ub_dgbsv
 
 subroutine ub_dgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -10361,7 +10361,7 @@ subroutine ub_dgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,
   integer(blas77_int) :: info
 
   call dgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dgbsvx
+end subroutine ub_dgbsvx
 
 subroutine ub_dgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -10401,7 +10401,7 @@ subroutine ub_dgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b
   integer(blas77_int) :: info
 
   call dgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dgbsvxx
+end subroutine ub_dgbsvxx
 
 subroutine ub_dgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -10420,7 +10420,7 @@ subroutine ub_dgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call dgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine dgbtf2
+end subroutine ub_dgbtf2
 
 subroutine ub_dgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -10439,7 +10439,7 @@ subroutine ub_dgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call dgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine dgbtrf
+end subroutine ub_dgbtrf
 
 subroutine ub_dgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -10461,7 +10461,7 @@ subroutine ub_dgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine dgbtrs
+end subroutine ub_dgbtrs
 
 subroutine ub_dgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   use blas77_types
@@ -10482,7 +10482,7 @@ subroutine ub_dgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call dgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
-end subroutine dgebak
+end subroutine ub_dgebak
 
 subroutine ub_dgebal(job,n,a,lda,ilo,ihi,scale,info)
   use blas77_types
@@ -10501,7 +10501,7 @@ subroutine ub_dgebal(job,n,a,lda,ilo,ihi,scale,info)
   integer(blas77_int) :: info
 
   call dgebal(job,n,a,lda,ilo,ihi,scale,info)
-end subroutine dgebal
+end subroutine ub_dgebal
 
 subroutine ub_dgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   use blas77_types
@@ -10522,7 +10522,7 @@ subroutine ub_dgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   integer(blas77_int) :: info
 
   call dgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
-end subroutine dgebd2
+end subroutine ub_dgebd2
 
 subroutine ub_dgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   use blas77_types
@@ -10544,7 +10544,7 @@ subroutine ub_dgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
-end subroutine dgebrd
+end subroutine ub_dgebrd
 
 subroutine ub_dgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -10564,7 +10564,7 @@ subroutine ub_dgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
-end subroutine dgecon
+end subroutine ub_dgecon
 
 subroutine ub_dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -10605,7 +10605,7 @@ subroutine ub_dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,
   integer(blas77_int),intent(out) :: info
 
   call dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info)
-end subroutine dgedmd
+end subroutine ub_dgedmd
 
 subroutine ub_dgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -10650,7 +10650,7 @@ subroutine ub_dgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy
   integer(blas77_int),intent(out) :: info
 
   call dgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info)
-end subroutine dgedmdq
+end subroutine ub_dgedmdq
 
 subroutine ub_dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -10671,7 +10671,7 @@ subroutine ub_dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine dgeequ
+end subroutine ub_dgeequ
 
 subroutine ub_dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -10692,7 +10692,7 @@ subroutine ub_dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine dgeequb
+end subroutine ub_dgeequb
 
 subroutine ub_dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
   use blas77_types
@@ -10718,7 +10718,7 @@ subroutine ub_dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
   integer(blas77_int) :: info
 
   call dgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-end subroutine dgees
+end subroutine ub_dgees
 
 subroutine ub_dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -10749,7 +10749,7 @@ subroutine ub_dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
   integer(blas77_int) :: info
 
   call dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine dgeesx
+end subroutine ub_dgeesx
 
 subroutine ub_dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -10774,7 +10774,7 @@ subroutine ub_dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine dgeev
+end subroutine ub_dgeev
 
 subroutine ub_dgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info)
   use blas77_types
@@ -10808,7 +10808,7 @@ subroutine ub_dgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,
   integer(blas77_int) :: info
 
   call dgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info)
-end subroutine dgeevx
+end subroutine ub_dgeevx
 
 subroutine ub_dgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info)
   use blas77_types
@@ -10836,7 +10836,7 @@ subroutine ub_dgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr
   integer(blas77_int) :: info
 
   call dgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info)
-end subroutine dgegs
+end subroutine ub_dgegs
 
 subroutine ub_dgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -10864,7 +10864,7 @@ subroutine ub_dgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr
   integer(blas77_int) :: info
 
   call dgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine dgegv
+end subroutine ub_dgegv
 
 subroutine ub_dgehd2(n,ilo,ihi,a,lda,tau,work,info)
   use blas77_types
@@ -10883,7 +10883,7 @@ subroutine ub_dgehd2(n,ilo,ihi,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgehd2(n,ilo,ihi,a,lda,tau,work,info)
-end subroutine dgehd2
+end subroutine ub_dgehd2
 
 subroutine ub_dgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -10903,7 +10903,7 @@ subroutine ub_dgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine dgehrd
+end subroutine ub_dgehrd
 
 subroutine ub_dgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info)
   use blas77_types
@@ -10933,7 +10933,7 @@ subroutine ub_dgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,wor
   integer(blas77_int) :: info
 
   call dgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info)
-end subroutine dgejsv
+end subroutine ub_dgejsv
 
 subroutine ub_dgelq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -10951,7 +10951,7 @@ subroutine ub_dgelq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgelq2(m,n,a,lda,tau,work,info)
-end subroutine dgelq2
+end subroutine ub_dgelq2
 
 subroutine ub_dgelq(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -10971,7 +10971,7 @@ subroutine ub_dgelq(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelq(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine dgelq
+end subroutine ub_dgelq
 
 subroutine ub_dgelqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -10990,7 +10990,7 @@ subroutine ub_dgelqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine dgelqf
+end subroutine ub_dgelqf
 
 subroutine ub_dgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -11012,7 +11012,7 @@ subroutine ub_dgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine dgelqs
+end subroutine ub_dgelqs
 
 subroutine ub_dgelqt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -11030,7 +11030,7 @@ subroutine ub_dgelqt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call dgelqt3(m,n,a,lda,t,ldt,info)
-end subroutine dgelqt3
+end subroutine ub_dgelqt3
 
 subroutine ub_dgelqt(m,n,mb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -11050,7 +11050,7 @@ subroutine ub_dgelqt(m,n,mb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call dgelqt(m,n,mb,a,lda,t,ldt,work,info)
-end subroutine dgelqt
+end subroutine ub_dgelqt
 
 subroutine ub_dgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -11072,7 +11072,7 @@ subroutine ub_dgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine dgels
+end subroutine ub_dgels
 
 subroutine ub_dgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
   use blas77_types
@@ -11097,7 +11097,7 @@ subroutine ub_dgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
   integer(blas77_int) :: info
 
   call dgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
-end subroutine dgelsd
+end subroutine ub_dgelsd
 
 subroutine ub_dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
   use blas77_types
@@ -11121,7 +11121,7 @@ subroutine ub_dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
-end subroutine dgelss
+end subroutine ub_dgelss
 
 subroutine ub_dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -11143,7 +11143,7 @@ subroutine ub_dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine dgelst
+end subroutine ub_dgelst
 
 subroutine ub_dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
   use blas77_types
@@ -11166,7 +11166,7 @@ subroutine ub_dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
   integer(blas77_int) :: info
 
   call dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
-end subroutine dgelsx
+end subroutine ub_dgelsx
 
 subroutine ub_dgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
   use blas77_types
@@ -11190,7 +11190,7 @@ subroutine ub_dgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
-end subroutine dgelsy
+end subroutine ub_dgelsy
 
 subroutine ub_dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -11215,7 +11215,7 @@ subroutine ub_dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine dgemlq
+end subroutine ub_dgemlq
 
 subroutine ub_dgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -11240,7 +11240,7 @@ subroutine ub_dgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine dgemlqt
+end subroutine ub_dgemlqt
 
 subroutine ub_dgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -11265,7 +11265,7 @@ subroutine ub_dgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine dgemqr
+end subroutine ub_dgemqr
 
 subroutine ub_dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -11290,7 +11290,7 @@ subroutine ub_dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine dgemqrt
+end subroutine ub_dgemqrt
 
 subroutine ub_dgeql2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -11308,7 +11308,7 @@ subroutine ub_dgeql2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgeql2(m,n,a,lda,tau,work,info)
-end subroutine dgeql2
+end subroutine ub_dgeql2
 
 subroutine ub_dgeqlf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -11327,7 +11327,7 @@ subroutine ub_dgeqlf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqlf(m,n,a,lda,tau,work,lwork,info)
-end subroutine dgeqlf
+end subroutine ub_dgeqlf
 
 subroutine ub_dgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
   use blas77_types
@@ -11347,7 +11347,7 @@ subroutine ub_dgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
-end subroutine dgeqp3
+end subroutine ub_dgeqp3
 
 subroutine ub_dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info)
   use blas77_types
@@ -11375,7 +11375,7 @@ subroutine ub_dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrm
   integer(blas77_int) :: info
 
   call dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info)
-end subroutine dgeqp3rk
+end subroutine ub_dgeqp3rk
 
 subroutine ub_dgeqpf(m,n,a,lda,jpvt,tau,work,info)
   use blas77_types
@@ -11394,7 +11394,7 @@ subroutine ub_dgeqpf(m,n,a,lda,jpvt,tau,work,info)
   integer(blas77_int) :: info
 
   call dgeqpf(m,n,a,lda,jpvt,tau,work,info)
-end subroutine dgeqpf
+end subroutine ub_dgeqpf
 
 subroutine ub_dgeqr2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -11412,7 +11412,7 @@ subroutine ub_dgeqr2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgeqr2(m,n,a,lda,tau,work,info)
-end subroutine dgeqr2
+end subroutine ub_dgeqr2
 
 subroutine ub_dgeqr2p(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -11430,7 +11430,7 @@ subroutine ub_dgeqr2p(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgeqr2p(m,n,a,lda,tau,work,info)
-end subroutine dgeqr2p
+end subroutine ub_dgeqr2p
 
 subroutine ub_dgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -11450,7 +11450,7 @@ subroutine ub_dgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqr(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine dgeqr
+end subroutine ub_dgeqr
 
 subroutine ub_dgeqrf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -11469,7 +11469,7 @@ subroutine ub_dgeqrf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqrf(m,n,a,lda,tau,work,lwork,info)
-end subroutine dgeqrf
+end subroutine ub_dgeqrf
 
 subroutine ub_dgeqrfp(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -11488,7 +11488,7 @@ subroutine ub_dgeqrfp(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqrfp(m,n,a,lda,tau,work,lwork,info)
-end subroutine dgeqrfp
+end subroutine ub_dgeqrfp
 
 subroutine ub_dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -11510,7 +11510,7 @@ subroutine ub_dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine dgeqrs
+end subroutine ub_dgeqrs
 
 subroutine ub_dgeqrt2(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -11528,7 +11528,7 @@ subroutine ub_dgeqrt2(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call dgeqrt2(m,n,a,lda,t,ldt,info)
-end subroutine dgeqrt2
+end subroutine ub_dgeqrt2
 
 subroutine ub_dgeqrt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -11546,7 +11546,7 @@ subroutine ub_dgeqrt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call dgeqrt3(m,n,a,lda,t,ldt,info)
-end subroutine dgeqrt3
+end subroutine ub_dgeqrt3
 
 subroutine ub_dgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -11566,7 +11566,7 @@ subroutine ub_dgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call dgeqrt(m,n,nb,a,lda,t,ldt,work,info)
-end subroutine dgeqrt
+end subroutine ub_dgeqrt
 
 subroutine ub_dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -11594,7 +11594,7 @@ subroutine ub_dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,
   integer(blas77_int) :: info
 
   call dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dgerfs
+end subroutine ub_dgerfs
 
 subroutine ub_dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -11630,7 +11630,7 @@ subroutine ub_dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcon
   integer(blas77_int) :: info
 
   call dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dgerfsx
+end subroutine ub_dgerfsx
 
 subroutine ub_dgerq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -11648,7 +11648,7 @@ subroutine ub_dgerq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dgerq2(m,n,a,lda,tau,work,info)
-end subroutine dgerq2
+end subroutine ub_dgerq2
 
 subroutine ub_dgerqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -11667,7 +11667,7 @@ subroutine ub_dgerqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgerqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine dgerqf
+end subroutine ub_dgerqf
 
 subroutine ub_dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   use blas77_types
@@ -11692,7 +11692,7 @@ subroutine ub_dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   integer(blas77_int) :: info
 
   call dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
-end subroutine dgesdd
+end subroutine ub_dgesdd
 
 subroutine ub_dgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -11711,7 +11711,7 @@ subroutine ub_dgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine dgesv
+end subroutine ub_dgesv
 
 subroutine ub_dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
   use blas77_types
@@ -11736,7 +11736,7 @@ subroutine ub_dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
-end subroutine dgesvd
+end subroutine ub_dgesvd
 
 subroutine ub_dgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info)
   use blas77_types
@@ -11769,7 +11769,7 @@ subroutine ub_dgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,i
   integer(blas77_int) :: info
 
   call dgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info)
-end subroutine dgesvdq
+end subroutine ub_dgesvdq
 
 subroutine ub_dgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   use blas77_types
@@ -11801,7 +11801,7 @@ subroutine ub_dgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,
   integer(blas77_int) :: info
 
   call dgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
-end subroutine dgesvdx
+end subroutine ub_dgesvdx
 
 subroutine ub_dgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
   use blas77_types
@@ -11826,7 +11826,7 @@ subroutine ub_dgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
-end subroutine dgesvj
+end subroutine ub_dgesvj
 
 subroutine ub_dgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -11859,7 +11859,7 @@ subroutine ub_dgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,
   integer(blas77_int) :: info
 
   call dgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dgesvx
+end subroutine ub_dgesvx
 
 subroutine ub_dgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -11897,7 +11897,7 @@ subroutine ub_dgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx
   integer(blas77_int) :: info
 
   call dgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dgesvxx
+end subroutine ub_dgesvxx
 
 subroutine ub_dgetf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -11914,7 +11914,7 @@ subroutine ub_dgetf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call dgetf2(m,n,a,lda,ipiv,info)
-end subroutine dgetf2
+end subroutine ub_dgetf2
 
 subroutine ub_dgetrf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -11931,7 +11931,7 @@ subroutine ub_dgetrf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call dgetrf2(m,n,a,lda,ipiv,info)
-end subroutine dgetrf2
+end subroutine ub_dgetrf2
 
 subroutine ub_dgetrf(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -11948,7 +11948,7 @@ subroutine ub_dgetrf(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call dgetrf(m,n,a,lda,ipiv,info)
-end subroutine dgetrf
+end subroutine ub_dgetrf
 
 subroutine ub_dgetri(n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -11966,7 +11966,7 @@ subroutine ub_dgetri(n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgetri(n,a,lda,ipiv,work,lwork,info)
-end subroutine dgetri
+end subroutine ub_dgetri
 
 subroutine ub_dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -11986,7 +11986,7 @@ subroutine ub_dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine dgetrs
+end subroutine ub_dgetrs
 
 subroutine ub_dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -12008,7 +12008,7 @@ subroutine ub_dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine dgetsls
+end subroutine ub_dgetsls
 
 subroutine ub_dgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -12031,7 +12031,7 @@ subroutine ub_dgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
-end subroutine dgetsqrhrt
+end subroutine ub_dgetsqrhrt
 
 subroutine ub_dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   use blas77_types
@@ -12053,7 +12053,7 @@ subroutine ub_dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
-end subroutine dggbak
+end subroutine ub_dggbak
 
 subroutine ub_dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   use blas77_types
@@ -12076,7 +12076,7 @@ subroutine ub_dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   integer(blas77_int) :: info
 
   call dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
-end subroutine dggbal
+end subroutine ub_dggbal
 
 subroutine ub_dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
   use blas77_types
@@ -12108,7 +12108,7 @@ subroutine ub_dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   integer(blas77_int) :: info
 
   call dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine dgges3
+end subroutine ub_dgges3
 
 subroutine ub_dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
   use blas77_types
@@ -12140,7 +12140,7 @@ subroutine ub_dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   integer(blas77_int) :: info
 
   call dgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine dgges
+end subroutine ub_dgges
 
 subroutine ub_dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -12177,7 +12177,7 @@ subroutine ub_dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   integer(blas77_int) :: info
 
   call dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine dggesx
+end subroutine ub_dggesx
 
 subroutine ub_dggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -12205,7 +12205,7 @@ subroutine ub_dggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldv
   integer(blas77_int) :: info
 
   call dggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine dggev3
+end subroutine ub_dggev3
 
 subroutine ub_dggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -12233,7 +12233,7 @@ subroutine ub_dggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr
   integer(blas77_int) :: info
 
   call dggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine dggev
+end subroutine ub_dggev
 
 subroutine ub_dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
   use blas77_types
@@ -12273,7 +12273,7 @@ subroutine ub_dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,v
   integer(blas77_int) :: info
 
   call dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
-end subroutine dggevx
+end subroutine ub_dggevx
 
 subroutine ub_dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   use blas77_types
@@ -12297,7 +12297,7 @@ subroutine ub_dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   integer(blas77_int) :: info
 
   call dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
-end subroutine dggglm
+end subroutine ub_dggglm
 
 subroutine ub_dgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -12324,7 +12324,7 @@ subroutine ub_dgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,in
   integer(blas77_int) :: info
 
   call dgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
-end subroutine dgghd3
+end subroutine ub_dgghd3
 
 subroutine ub_dgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   use blas77_types
@@ -12349,7 +12349,7 @@ subroutine ub_dgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   integer(blas77_int) :: info
 
   call dgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
-end subroutine dgghrd
+end subroutine ub_dgghrd
 
 subroutine ub_dgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   use blas77_types
@@ -12373,7 +12373,7 @@ subroutine ub_dgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   integer(blas77_int) :: info
 
   call dgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
-end subroutine dgglse
+end subroutine ub_dgglse
 
 subroutine ub_dggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -12396,7 +12396,7 @@ subroutine ub_dggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call dggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine dggqrf
+end subroutine ub_dggqrf
 
 subroutine ub_dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -12419,7 +12419,7 @@ subroutine ub_dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine dggrqf
+end subroutine ub_dggrqf
 
 subroutine ub_dggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info)
   use blas77_types
@@ -12454,7 +12454,7 @@ subroutine ub_dggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ld
   integer(blas77_int) :: info
 
   call dggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info)
-end subroutine dggsvd3
+end subroutine ub_dggsvd3
 
 subroutine ub_dggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info)
   use blas77_types
@@ -12488,7 +12488,7 @@ subroutine ub_dggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call dggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info)
-end subroutine dggsvd
+end subroutine ub_dggsvd
 
 subroutine ub_dggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info)
   use blas77_types
@@ -12524,7 +12524,7 @@ subroutine ub_dggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call dggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info)
-end subroutine dggsvp3
+end subroutine ub_dggsvp3
 
 subroutine ub_dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info)
   use blas77_types
@@ -12559,7 +12559,7 @@ subroutine ub_dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,
   integer(blas77_int) :: info
 
   call dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info)
-end subroutine dggsvp
+end subroutine ub_dggsvp
 
 subroutine ub_dgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -12587,7 +12587,7 @@ subroutine ub_dgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   integer(blas77_int) :: info
 
   call dgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine dgsvj0
+end subroutine ub_dgsvj0
 
 subroutine ub_dgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -12616,7 +12616,7 @@ subroutine ub_dgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,
   integer(blas77_int) :: info
 
   call dgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine dgsvj1
+end subroutine ub_dgsvj1
 
 subroutine ub_dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -12639,7 +12639,7 @@ subroutine ub_dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dgtcon
+end subroutine ub_dgtcon
 
 subroutine ub_dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -12670,7 +12670,7 @@ subroutine ub_dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,b
   integer(blas77_int) :: info
 
   call dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dgtrfs
+end subroutine ub_dgtrfs
 
 subroutine ub_dgtsv(n,nrhs,dl,d,du,b,ldb,info)
   use blas77_types
@@ -12689,7 +12689,7 @@ subroutine ub_dgtsv(n,nrhs,dl,d,du,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgtsv(n,nrhs,dl,d,du,b,ldb,info)
-end subroutine dgtsv
+end subroutine ub_dgtsv
 
 subroutine ub_dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -12722,7 +12722,7 @@ subroutine ub_dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dgtsvx
+end subroutine ub_dgtsvx
 
 subroutine ub_dgttrf(n,dl,d,du,du2,ipiv,info)
   use blas77_types
@@ -12740,7 +12740,7 @@ subroutine ub_dgttrf(n,dl,d,du,du2,ipiv,info)
   integer(blas77_int) :: info
 
   call dgttrf(n,dl,d,du,du2,ipiv,info)
-end subroutine dgttrf
+end subroutine ub_dgttrf
 
 subroutine ub_dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   use blas77_types
@@ -12762,7 +12762,7 @@ subroutine ub_dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
-end subroutine dgttrs
+end subroutine ub_dgttrs
 
 subroutine ub_dgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   use blas77_types
@@ -12783,7 +12783,7 @@ subroutine ub_dgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   real(blas77_f64) :: b(ldb,*)
 
   call dgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
-end subroutine dgtts2
+end subroutine ub_dgtts2
 
 subroutine ub_dhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -12814,7 +12814,7 @@ subroutine ub_dhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,
   integer(blas77_int) :: info
 
   call dhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info)
-end subroutine dhgeqz
+end subroutine ub_dhgeqz
 
 subroutine ub_dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info)
   use blas77_types
@@ -12844,7 +12844,7 @@ subroutine ub_dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m
   integer(blas77_int) :: info
 
   call dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info)
-end subroutine dhsein
+end subroutine ub_dhsein
 
 subroutine ub_dhseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
   use blas77_types
@@ -12869,7 +12869,7 @@ subroutine ub_dhseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call dhseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
-end subroutine dhseqr
+end subroutine ub_dhseqr
 
 subroutine ub_dla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   use blas77_types
@@ -12893,7 +12893,7 @@ subroutine ub_dla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
-end subroutine dla_gbamv
+end subroutine ub_dla_gbamv
 
 function ub_dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -12919,7 +12919,7 @@ function ub_dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,i
   real(blas77_f64) :: ub_dla_gbrcond
 
   ub_dla_gbrcond = dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork)
-end function dla_gbrcond
+end function ub_dla_gbrcond
 
 subroutine ub_dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -12961,7 +12961,7 @@ subroutine ub_dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: info
 
   call dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine dla_gbrfsx_extended
+end subroutine ub_dla_gbrfsx_extended
 
 function ub_dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   use blas77_types
@@ -12981,7 +12981,7 @@ function ub_dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   real(blas77_f64) :: ub_dla_gbrpvgrw
 
   ub_dla_gbrpvgrw = dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
-end function dla_gbrpvgrw
+end function ub_dla_gbrpvgrw
 
 subroutine ub_dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -13003,7 +13003,7 @@ subroutine ub_dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dla_geamv
+end subroutine ub_dla_geamv
 
 function ub_dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -13027,7 +13027,7 @@ function ub_dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   real(blas77_f64) :: ub_dla_gercond
 
   ub_dla_gercond = dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
-end function dla_gercond
+end function ub_dla_gercond
 
 subroutine ub_dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -13067,7 +13067,7 @@ subroutine ub_dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: info
 
   call dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine dla_gerfsx_extended
+end subroutine ub_dla_gerfsx_extended
 
 function ub_dla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   use blas77_types
@@ -13085,7 +13085,7 @@ function ub_dla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   real(blas77_f64) :: ub_dla_gerpvgrw
 
   ub_dla_gerpvgrw = dla_gerpvgrw(n,ncols,a,lda,af,ldaf)
-end function dla_gerpvgrw
+end function ub_dla_gerpvgrw
 
 subroutine ub_dla_lin_berr(n,nz,nrhs,res,ayb,berr)
   use blas77_types
@@ -13102,7 +13102,7 @@ subroutine ub_dla_lin_berr(n,nz,nrhs,res,ayb,berr)
   real(blas77_f64) :: berr(nrhs)
 
   call dla_lin_berr(n,nz,nrhs,res,ayb,berr)
-end subroutine dla_lin_berr
+end subroutine ub_dla_lin_berr
 
 function ub_dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
   use blas77_types
@@ -13125,7 +13125,7 @@ function ub_dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
   real(blas77_f64) :: ub_dla_porcond
 
   ub_dla_porcond = dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
-end function dla_porcond
+end function ub_dla_porcond
 
 subroutine ub_dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -13164,7 +13164,7 @@ subroutine ub_dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: info
 
   call dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine dla_porfsx_extended
+end subroutine ub_dla_porfsx_extended
 
 function ub_dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   use blas77_types
@@ -13183,7 +13183,7 @@ function ub_dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   real(blas77_f64) :: ub_dla_porpvgrw
 
   ub_dla_porpvgrw = dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
-end function dla_porpvgrw
+end function ub_dla_porpvgrw
 
 subroutine ub_dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -13204,7 +13204,7 @@ subroutine ub_dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dla_syamv
+end subroutine ub_dla_syamv
 
 function ub_dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -13228,7 +13228,7 @@ function ub_dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   real(blas77_f64) :: ub_dla_syrcond
 
   ub_dla_syrcond = dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
-end function dla_syrcond
+end function ub_dla_syrcond
 
 subroutine ub_dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -13268,7 +13268,7 @@ subroutine ub_dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine dla_syrfsx_extended
+end subroutine ub_dla_syrfsx_extended
 
 function ub_dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -13289,7 +13289,7 @@ function ub_dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f64) :: ub_dla_syrpvgrw
 
   ub_dla_syrpvgrw = dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function dla_syrpvgrw
+end function ub_dla_syrpvgrw
 
 subroutine ub_dla_wwaddw(n,x,y,w)
   use blas77_types
@@ -13304,7 +13304,7 @@ subroutine ub_dla_wwaddw(n,x,y,w)
   real(blas77_f64) :: w(*)
 
   call dla_wwaddw(n,x,y,w)
-end subroutine dla_wwaddw
+end subroutine ub_dla_wwaddw
 
 subroutine ub_dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
   use blas77_types
@@ -13327,7 +13327,7 @@ subroutine ub_dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
   integer(blas77_int) :: info
 
   call dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
-end subroutine dlaed0
+end subroutine ub_dlaed0
 
 subroutine ub_dlaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
   use blas77_types
@@ -13348,7 +13348,7 @@ subroutine ub_dlaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
   integer(blas77_int) :: info
 
   call dlaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
-end subroutine dlaed1
+end subroutine ub_dlaed1
 
 subroutine ub_dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info)
   use blas77_types
@@ -13376,7 +13376,7 @@ subroutine ub_dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,co
   integer(blas77_int) :: info
 
   call dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info)
-end subroutine dlaed2
+end subroutine ub_dlaed2
 
 subroutine ub_dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
   use blas77_types
@@ -13401,7 +13401,7 @@ subroutine ub_dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
   integer(blas77_int) :: info
 
   call dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
-end subroutine dlaed3
+end subroutine ub_dlaed3
 
 subroutine ub_dlaed4(n,i,d,z,delta,rho,dlam,info)
   use blas77_types
@@ -13420,7 +13420,7 @@ subroutine ub_dlaed4(n,i,d,z,delta,rho,dlam,info)
   integer(blas77_int) :: info
 
   call dlaed4(n,i,d,z,delta,rho,dlam,info)
-end subroutine dlaed4
+end subroutine ub_dlaed4
 
 subroutine ub_dlaed5(i,d,z,delta,rho,dlam)
   use blas77_types
@@ -13437,7 +13437,7 @@ subroutine ub_dlaed5(i,d,z,delta,rho,dlam)
   real(blas77_f64) :: dlam
 
   call dlaed5(i,d,z,delta,rho,dlam)
-end subroutine dlaed5
+end subroutine ub_dlaed5
 
 subroutine ub_dlaed6(kniter,orgati,rho,d,z,finit,tau,info)
   use blas77_types
@@ -13456,7 +13456,7 @@ subroutine ub_dlaed6(kniter,orgati,rho,d,z,finit,tau,info)
   integer(blas77_int) :: info
 
   call dlaed6(kniter,orgati,rho,d,z,finit,tau,info)
-end subroutine dlaed6
+end subroutine ub_dlaed6
 
 subroutine ub_dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info)
   use blas77_types
@@ -13489,7 +13489,7 @@ subroutine ub_dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,
   integer(blas77_int) :: info
 
   call dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info)
-end subroutine dlaed7
+end subroutine ub_dlaed7
 
 subroutine ub_dlaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info)
   use blas77_types
@@ -13522,7 +13522,7 @@ subroutine ub_dlaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,
   integer(blas77_int) :: info
 
   call dlaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info)
-end subroutine dlaed8
+end subroutine ub_dlaed8
 
 subroutine ub_dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
   use blas77_types
@@ -13546,7 +13546,7 @@ subroutine ub_dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
   integer(blas77_int) :: info
 
   call dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
-end subroutine dlaed9
+end subroutine ub_dlaed9
 
 subroutine ub_dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info)
   use blas77_types
@@ -13571,7 +13571,7 @@ subroutine ub_dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qp
   integer(blas77_int) :: info
 
   call dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info)
-end subroutine dlaeda
+end subroutine ub_dlaeda
 
 subroutine ub_dlagtf(n,a,lambda,b,c,tol,d,in,info)
   use blas77_types
@@ -13591,7 +13591,7 @@ subroutine ub_dlagtf(n,a,lambda,b,c,tol,d,in,info)
   integer(blas77_int) :: info
 
   call dlagtf(n,a,lambda,b,c,tol,d,in,info)
-end subroutine dlagtf
+end subroutine ub_dlagtf
 
 subroutine ub_dlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info)
   use blas77_types
@@ -13626,7 +13626,7 @@ subroutine ub_dlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldg
   integer(blas77_int) :: info
 
   call dlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info)
-end subroutine dlals0
+end subroutine ub_dlals0
 
 subroutine ub_dlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info)
   use blas77_types
@@ -13663,7 +13663,7 @@ subroutine ub_dlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,p
   integer(blas77_int) :: info
 
   call dlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info)
-end subroutine dlalsa
+end subroutine ub_dlalsa
 
 subroutine ub_dlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
   use blas77_types
@@ -13687,7 +13687,7 @@ subroutine ub_dlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
   integer(blas77_int) :: info
 
   call dlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
-end subroutine dlalsd
+end subroutine ub_dlalsd
 
 subroutine ub_dlamrg(n1,n2,a,dtrd1,dtrd2,index)
   use blas77_types
@@ -13704,7 +13704,7 @@ subroutine ub_dlamrg(n1,n2,a,dtrd1,dtrd2,index)
   integer(blas77_int) :: index(*)
 
   call dlamrg(n1,n2,a,dtrd1,dtrd2,index)
-end subroutine dlamrg
+end subroutine ub_dlamrg
 
 subroutine ub_dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -13731,7 +13731,7 @@ subroutine ub_dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine dlamswlq
+end subroutine ub_dlamswlq
 
 subroutine ub_dlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -13758,7 +13758,7 @@ subroutine ub_dlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine dlamtsqr
+end subroutine ub_dlamtsqr
 
 function ub_dlansf(norm,transr,uplo,n,a,work)
   use blas77_types
@@ -13776,7 +13776,7 @@ function ub_dlansf(norm,transr,uplo,n,a,work)
   real(blas77_f64) :: ub_dlansf
 
   ub_dlansf = dlansf(norm,transr,uplo,n,a,work)
-end function dlansf
+end function ub_dlansf
 
 subroutine ub_dlaorhr_col_getrfnp2(m,n,a,lda,d,info)
   use blas77_types
@@ -13793,7 +13793,7 @@ subroutine ub_dlaorhr_col_getrfnp2(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call dlaorhr_col_getrfnp2(m,n,a,lda,d,info)
-end subroutine dlaorhr_col_getrfnp2
+end subroutine ub_dlaorhr_col_getrfnp2
 
 subroutine ub_dlaorhr_col_getrfnp(m,n,a,lda,d,info)
   use blas77_types
@@ -13810,7 +13810,7 @@ subroutine ub_dlaorhr_col_getrfnp(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call dlaorhr_col_getrfnp(m,n,a,lda,d,info)
-end subroutine dlaorhr_col_getrfnp
+end subroutine ub_dlaorhr_col_getrfnp
 
 subroutine ub_dlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info)
   use blas77_types
@@ -13842,7 +13842,7 @@ subroutine ub_dlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,
   integer(blas77_int),intent(out) :: info
 
   call dlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info)
-end subroutine dlaqz0
+end subroutine ub_dlaqz0
 
 subroutine ub_dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
   use blas77_types
@@ -13863,7 +13863,7 @@ subroutine ub_dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
   real(blas77_f64),intent(out) :: v(*)
 
   call dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
-end subroutine dlaqz1
+end subroutine ub_dlaqz1
 
 subroutine ub_dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
   use blas77_types
@@ -13892,7 +13892,7 @@ subroutine ub_dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
   real(blas77_f64) :: z(ldz,*)
 
   call dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
-end subroutine dlaqz2
+end subroutine ub_dlaqz2
 
 subroutine ub_dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info)
   use blas77_types
@@ -13931,7 +13931,7 @@ subroutine ub_dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
   integer(blas77_int),intent(out) :: info
 
   call dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info)
-end subroutine dlaqz3
+end subroutine ub_dlaqz3
 
 subroutine ub_dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
   use blas77_types
@@ -13968,7 +13968,7 @@ subroutine ub_dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a
   integer(blas77_int),intent(out) :: info
 
   call dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
-end subroutine dlaqz4
+end subroutine ub_dlaqz4
 
 subroutine ub_dlarfy(uplo,n,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -13987,7 +13987,7 @@ subroutine ub_dlarfy(uplo,n,v,incv,tau,c,ldc,work)
   real(blas77_f64) :: work(*)
 
   call dlarfy(uplo,n,v,incv,tau,c,ldc,work)
-end subroutine dlarfy
+end subroutine ub_dlarfy
 
 function ub_dlarmm(anorm,bnorm,cnorm)
   use blas77_types
@@ -14002,7 +14002,7 @@ function ub_dlarmm(anorm,bnorm,cnorm)
   real(blas77_f64) :: ub_dlarmm
 
   ub_dlarmm = dlarmm(anorm,bnorm,cnorm)
-end function dlarmm
+end function ub_dlarmm
 
 subroutine ub_dlarscl2(m,n,d,x,ldx)
   use blas77_types
@@ -14018,7 +14018,7 @@ subroutine ub_dlarscl2(m,n,d,x,ldx)
   real(blas77_f64) :: x(ldx,*)
 
   call dlarscl2(m,n,d,x,ldx)
-end subroutine dlarscl2
+end subroutine ub_dlarscl2
 
 subroutine ub_dlartgs(x,y,sigma,cs,sn)
   use blas77_types
@@ -14034,7 +14034,7 @@ subroutine ub_dlartgs(x,y,sigma,cs,sn)
   real(blas77_f64) :: sn
 
   call dlartgs(x,y,sigma,cs,sn)
-end subroutine dlartgs
+end subroutine ub_dlartgs
 
 subroutine ub_dlarz(side,m,n,l,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -14055,7 +14055,7 @@ subroutine ub_dlarz(side,m,n,l,v,incv,tau,c,ldc,work)
   real(blas77_f64) :: work(*)
 
   call dlarz(side,m,n,l,v,incv,tau,c,ldc,work)
-end subroutine dlarz
+end subroutine ub_dlarz
 
 subroutine ub_dlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
   use blas77_types
@@ -14082,7 +14082,7 @@ subroutine ub_dlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldw
   real(blas77_f64) :: work(ldwork,*)
 
   call dlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
-end subroutine dlarzb
+end subroutine ub_dlarzb
 
 subroutine ub_dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   use blas77_types
@@ -14102,7 +14102,7 @@ subroutine ub_dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   real(blas77_f64) :: t(ldt,*)
 
   call dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
-end subroutine dlarzt
+end subroutine ub_dlarzt
 
 subroutine ub_dlascl2(m,n,d,x,ldx)
   use blas77_types
@@ -14118,7 +14118,7 @@ subroutine ub_dlascl2(m,n,d,x,ldx)
   real(blas77_f64) :: x(ldx,*)
 
   call dlascl2(m,n,d,x,ldx)
-end subroutine dlascl2
+end subroutine ub_dlascl2
 
 subroutine ub_dlasq1(n,d,e,work,info)
   use blas77_types
@@ -14134,7 +14134,7 @@ subroutine ub_dlasq1(n,d,e,work,info)
   integer(blas77_int) :: info
 
   call dlasq1(n,d,e,work,info)
-end subroutine dlasq1
+end subroutine ub_dlasq1
 
 subroutine ub_dlasq2(n,z,info)
   use blas77_types
@@ -14148,7 +14148,7 @@ subroutine ub_dlasq2(n,z,info)
   integer(blas77_int) :: info
 
   call dlasq2(n,z,info)
-end subroutine dlasq2
+end subroutine ub_dlasq2
 
 subroutine ub_dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau)
   use blas77_types
@@ -14179,7 +14179,7 @@ subroutine ub_dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype
   real(blas77_f64) :: tau
 
   call dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau)
-end subroutine dlasq3
+end subroutine ub_dlasq3
 
 subroutine ub_dlasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
   use blas77_types
@@ -14204,7 +14204,7 @@ subroutine ub_dlasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
   real(blas77_f64) :: g
 
   call dlasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
-end subroutine dlasq4
+end subroutine ub_dlasq4
 
 subroutine ub_dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
   use blas77_types
@@ -14229,7 +14229,7 @@ subroutine ub_dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps
   real(blas77_f64) :: eps
 
   call dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
-end subroutine dlasq5
+end subroutine ub_dlasq5
 
 subroutine ub_dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
   use blas77_types
@@ -14250,7 +14250,7 @@ subroutine ub_dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
   real(blas77_f64) :: dnm2
 
   call dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
-end subroutine dlasq6
+end subroutine ub_dlasq6
 
 subroutine ub_dlasrt(id,n,d,info)
   use blas77_types
@@ -14265,7 +14265,7 @@ subroutine ub_dlasrt(id,n,d,info)
   integer(blas77_int) :: info
 
   call dlasrt(id,n,d,info)
-end subroutine dlasrt
+end subroutine ub_dlasrt
 
 subroutine ub_dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -14287,7 +14287,7 @@ subroutine ub_dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine dlaswlq
+end subroutine ub_dlaswlq
 
 subroutine ub_dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -14308,7 +14308,7 @@ subroutine ub_dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   real(blas77_f64) :: work(*)
 
   call dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine dlasyf_aa
+end subroutine ub_dlasyf_aa
 
 subroutine ub_dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -14329,7 +14329,7 @@ subroutine ub_dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine dlasyf
+end subroutine ub_dlasyf
 
 subroutine ub_dlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -14351,7 +14351,7 @@ subroutine ub_dlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call dlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine dlasyf_rk
+end subroutine ub_dlasyf_rk
 
 subroutine ub_dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -14372,7 +14372,7 @@ subroutine ub_dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine dlasyf_rook
+end subroutine ub_dlasyf_rook
 
 subroutine ub_dlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
   use blas77_types
@@ -14398,7 +14398,7 @@ subroutine ub_dlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work
   integer(blas77_int) :: info
 
   call dlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
-end subroutine dlatrs3
+end subroutine ub_dlatrs3
 
 subroutine ub_dlatrz(m,n,l,a,lda,tau,work)
   use blas77_types
@@ -14416,7 +14416,7 @@ subroutine ub_dlatrz(m,n,l,a,lda,tau,work)
   real(blas77_f64) :: work(*)
 
   call dlatrz(m,n,l,a,lda,tau,work)
-end subroutine dlatrz
+end subroutine ub_dlatrz
 
 subroutine ub_dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -14438,7 +14438,7 @@ subroutine ub_dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine dlatsqr
+end subroutine ub_dlatsqr
 
 subroutine ub_dlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   use blas77_types
@@ -14459,7 +14459,7 @@ subroutine ub_dlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   real(blas77_f64) :: work(*)
 
   call dlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
-end subroutine dlatzm
+end subroutine ub_dlatzm
 
 subroutine ub_dopgtr(uplo,n,ap,tau,q,ldq,work,info)
   use blas77_types
@@ -14478,7 +14478,7 @@ subroutine ub_dopgtr(uplo,n,ap,tau,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call dopgtr(uplo,n,ap,tau,q,ldq,work,info)
-end subroutine dopgtr
+end subroutine ub_dopgtr
 
 subroutine ub_dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   use blas77_types
@@ -14500,7 +14500,7 @@ subroutine ub_dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
-end subroutine dopmtr
+end subroutine ub_dopmtr
 
 subroutine ub_dorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -14526,7 +14526,7 @@ subroutine ub_dorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call dorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine dorbdb1
+end subroutine ub_dorbdb1
 
 subroutine ub_dorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -14552,7 +14552,7 @@ subroutine ub_dorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call dorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine dorbdb2
+end subroutine ub_dorbdb2
 
 subroutine ub_dorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -14578,7 +14578,7 @@ subroutine ub_dorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call dorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine dorbdb3
+end subroutine ub_dorbdb3
 
 subroutine ub_dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
   use blas77_types
@@ -14605,7 +14605,7 @@ subroutine ub_dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phan
   integer(blas77_int) :: info
 
   call dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
-end subroutine dorbdb4
+end subroutine ub_dorbdb4
 
 subroutine ub_dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -14630,7 +14630,7 @@ subroutine ub_dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine dorbdb5
+end subroutine ub_dorbdb5
 
 subroutine ub_dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -14655,7 +14655,7 @@ subroutine ub_dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine dorbdb6
+end subroutine ub_dorbdb6
 
 subroutine ub_dorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
   use blas77_types
@@ -14688,7 +14688,7 @@ subroutine ub_dorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,t
   integer(blas77_int) :: info
 
   call dorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
-end subroutine dorbdb
+end subroutine ub_dorbdb
 
 subroutine ub_dorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info)
   use blas77_types
@@ -14720,7 +14720,7 @@ subroutine ub_dorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,l
   integer(blas77_int) :: info
 
   call dorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info)
-end subroutine dorcsd2by1
+end subroutine ub_dorcsd2by1
 
 subroutine ub_dorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info)
   use blas77_types
@@ -14761,7 +14761,7 @@ subroutine ub_dorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,l
   integer(blas77_int) :: info
 
   call dorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info)
-end subroutine dorcsd
+end subroutine ub_dorcsd
 
 subroutine ub_dorg2l(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -14780,7 +14780,7 @@ subroutine ub_dorg2l(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dorg2l(m,n,k,a,lda,tau,work,info)
-end subroutine dorg2l
+end subroutine ub_dorg2l
 
 subroutine ub_dorg2r(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -14799,7 +14799,7 @@ subroutine ub_dorg2r(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dorg2r(m,n,k,a,lda,tau,work,info)
-end subroutine dorg2r
+end subroutine ub_dorg2r
 
 subroutine ub_dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14820,7 +14820,7 @@ subroutine ub_dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
-end subroutine dorgbr
+end subroutine ub_dorgbr
 
 subroutine ub_dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14840,7 +14840,7 @@ subroutine ub_dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine dorghr
+end subroutine ub_dorghr
 
 subroutine ub_dorgl2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -14859,7 +14859,7 @@ subroutine ub_dorgl2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dorgl2(m,n,k,a,lda,tau,work,info)
-end subroutine dorgl2
+end subroutine ub_dorgl2
 
 subroutine ub_dorglq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14879,7 +14879,7 @@ subroutine ub_dorglq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorglq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine dorglq
+end subroutine ub_dorglq
 
 subroutine ub_dorgql(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14899,7 +14899,7 @@ subroutine ub_dorgql(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgql(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine dorgql
+end subroutine ub_dorgql
 
 subroutine ub_dorgqr(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14919,7 +14919,7 @@ subroutine ub_dorgqr(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgqr(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine dorgqr
+end subroutine ub_dorgqr
 
 subroutine ub_dorgr2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -14938,7 +14938,7 @@ subroutine ub_dorgr2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call dorgr2(m,n,k,a,lda,tau,work,info)
-end subroutine dorgr2
+end subroutine ub_dorgr2
 
 subroutine ub_dorgrq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14958,7 +14958,7 @@ subroutine ub_dorgrq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgrq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine dorgrq
+end subroutine ub_dorgrq
 
 subroutine ub_dorgtr(uplo,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -14977,7 +14977,7 @@ subroutine ub_dorgtr(uplo,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgtr(uplo,n,a,lda,tau,work,lwork,info)
-end subroutine dorgtr
+end subroutine ub_dorgtr
 
 subroutine ub_dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -14999,7 +14999,7 @@ subroutine ub_dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine dorgtsqr
+end subroutine ub_dorgtsqr
 
 subroutine ub_dorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -15021,7 +15021,7 @@ subroutine ub_dorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine dorgtsqr_row
+end subroutine ub_dorgtsqr_row
 
 subroutine ub_dorhr_col(m,n,nb,a,lda,t,ldt,d,info)
   use blas77_types
@@ -15041,7 +15041,7 @@ subroutine ub_dorhr_col(m,n,nb,a,lda,t,ldt,d,info)
   integer(blas77_int) :: info
 
   call dorhr_col(m,n,nb,a,lda,t,ldt,d,info)
-end subroutine dorhr_col
+end subroutine ub_dorhr_col
 
 subroutine ub_dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   use blas77_types
@@ -15065,7 +15065,7 @@ subroutine ub_dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
-end subroutine dorm22
+end subroutine ub_dorm22
 
 subroutine ub_dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -15088,7 +15088,7 @@ subroutine ub_dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine dorm2l
+end subroutine ub_dorm2l
 
 subroutine ub_dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -15111,7 +15111,7 @@ subroutine ub_dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine dorm2r
+end subroutine ub_dorm2r
 
 subroutine ub_dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15136,7 +15136,7 @@ subroutine ub_dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormbr
+end subroutine ub_dormbr
 
 subroutine ub_dormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15161,7 +15161,7 @@ subroutine ub_dormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormhr
+end subroutine ub_dormhr
 
 subroutine ub_dorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -15184,7 +15184,7 @@ subroutine ub_dorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine dorml2
+end subroutine ub_dorml2
 
 subroutine ub_dormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15208,7 +15208,7 @@ subroutine ub_dormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormlq
+end subroutine ub_dormlq
 
 subroutine ub_dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15232,7 +15232,7 @@ subroutine ub_dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormql
+end subroutine ub_dormql
 
 subroutine ub_dormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15256,7 +15256,7 @@ subroutine ub_dormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormqr
+end subroutine ub_dormqr
 
 subroutine ub_dormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -15279,7 +15279,7 @@ subroutine ub_dormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine dormr2
+end subroutine ub_dormr2
 
 subroutine ub_dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -15303,7 +15303,7 @@ subroutine ub_dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
-end subroutine dormr3
+end subroutine ub_dormr3
 
 subroutine ub_dormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15327,7 +15327,7 @@ subroutine ub_dormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormrq
+end subroutine ub_dormrq
 
 subroutine ub_dormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15352,7 +15352,7 @@ subroutine ub_dormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormrz
+end subroutine ub_dormrz
 
 subroutine ub_dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -15376,7 +15376,7 @@ subroutine ub_dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine dormtr
+end subroutine ub_dormtr
 
 subroutine ub_dpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -15397,7 +15397,7 @@ subroutine ub_dpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
-end subroutine dpbcon
+end subroutine ub_dpbcon
 
 subroutine ub_dpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   use blas77_types
@@ -15417,7 +15417,7 @@ subroutine ub_dpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call dpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
-end subroutine dpbequ
+end subroutine ub_dpbequ
 
 subroutine ub_dpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -15445,7 +15445,7 @@ subroutine ub_dpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work
   integer(blas77_int) :: info
 
   call dpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dpbrfs
+end subroutine ub_dpbrfs
 
 subroutine ub_dpbstf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -15462,7 +15462,7 @@ subroutine ub_dpbstf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call dpbstf(uplo,n,kd,ab,ldab,info)
-end subroutine dpbstf
+end subroutine ub_dpbstf
 
 subroutine ub_dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -15482,7 +15482,7 @@ subroutine ub_dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine dpbsv
+end subroutine ub_dpbsv
 
 subroutine ub_dpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -15514,7 +15514,7 @@ subroutine ub_dpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call dpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dpbsvx
+end subroutine ub_dpbsvx
 
 subroutine ub_dpbtf2(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -15531,7 +15531,7 @@ subroutine ub_dpbtf2(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call dpbtf2(uplo,n,kd,ab,ldab,info)
-end subroutine dpbtf2
+end subroutine ub_dpbtf2
 
 subroutine ub_dpbtrf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -15548,7 +15548,7 @@ subroutine ub_dpbtrf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call dpbtrf(uplo,n,kd,ab,ldab,info)
-end subroutine dpbtrf
+end subroutine ub_dpbtrf
 
 subroutine ub_dpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -15568,7 +15568,7 @@ subroutine ub_dpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine dpbtrs
+end subroutine ub_dpbtrs
 
 subroutine ub_dpftrf(transr,uplo,n,a,info)
   use blas77_types
@@ -15584,7 +15584,7 @@ subroutine ub_dpftrf(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call dpftrf(transr,uplo,n,a,info)
-end subroutine dpftrf
+end subroutine ub_dpftrf
 
 subroutine ub_dpftri(transr,uplo,n,a,info)
   use blas77_types
@@ -15600,7 +15600,7 @@ subroutine ub_dpftri(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call dpftri(transr,uplo,n,a,info)
-end subroutine dpftri
+end subroutine ub_dpftri
 
 subroutine ub_dpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   use blas77_types
@@ -15619,7 +15619,7 @@ subroutine ub_dpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
-end subroutine dpftrs
+end subroutine ub_dpftrs
 
 subroutine ub_dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -15639,7 +15639,7 @@ subroutine ub_dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
-end subroutine dpocon
+end subroutine ub_dpocon
 
 subroutine ub_dpoequ(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -15657,7 +15657,7 @@ subroutine ub_dpoequ(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call dpoequ(n,a,lda,s,scond,amax,info)
-end subroutine dpoequ
+end subroutine ub_dpoequ
 
 subroutine ub_dpoequb(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -15675,7 +15675,7 @@ subroutine ub_dpoequb(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call dpoequb(n,a,lda,s,scond,amax,info)
-end subroutine dpoequb
+end subroutine ub_dpoequb
 
 subroutine ub_dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -15702,7 +15702,7 @@ subroutine ub_dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: info
 
   call dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dporfs
+end subroutine ub_dporfs
 
 subroutine ub_dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -15736,7 +15736,7 @@ subroutine ub_dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n
   integer(blas77_int) :: info
 
   call dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dporfsx
+end subroutine ub_dporfsx
 
 subroutine ub_dposv(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -15755,7 +15755,7 @@ subroutine ub_dposv(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call dposv(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine dposv
+end subroutine ub_dposv
 
 subroutine ub_dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -15786,7 +15786,7 @@ subroutine ub_dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,fe
   integer(blas77_int) :: info
 
   call dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dposvx
+end subroutine ub_dposvx
 
 subroutine ub_dposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -15822,7 +15822,7 @@ subroutine ub_dposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,r
   integer(blas77_int) :: info
 
   call dposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dposvxx
+end subroutine ub_dposvxx
 
 subroutine ub_dpotf2(uplo,n,a,lda,info)
   use blas77_types
@@ -15838,7 +15838,7 @@ subroutine ub_dpotf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dpotf2(uplo,n,a,lda,info)
-end subroutine dpotf2
+end subroutine ub_dpotf2
 
 subroutine ub_dpotrf2(uplo,n,a,lda,info)
   use blas77_types
@@ -15854,7 +15854,7 @@ subroutine ub_dpotrf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dpotrf2(uplo,n,a,lda,info)
-end subroutine dpotrf2
+end subroutine ub_dpotrf2
 
 subroutine ub_dpotrf(uplo,n,a,lda,info)
   use blas77_types
@@ -15870,7 +15870,7 @@ subroutine ub_dpotrf(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dpotrf(uplo,n,a,lda,info)
-end subroutine dpotrf
+end subroutine ub_dpotrf
 
 subroutine ub_dpotri(uplo,n,a,lda,info)
   use blas77_types
@@ -15886,7 +15886,7 @@ subroutine ub_dpotri(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dpotri(uplo,n,a,lda,info)
-end subroutine dpotri
+end subroutine ub_dpotri
 
 subroutine ub_dpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -15905,7 +15905,7 @@ subroutine ub_dpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine dpotrs
+end subroutine ub_dpotrs
 
 subroutine ub_dppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -15924,7 +15924,7 @@ subroutine ub_dppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
-end subroutine dppcon
+end subroutine ub_dppcon
 
 subroutine ub_dppequ(uplo,n,ap,s,scond,amax,info)
   use blas77_types
@@ -15942,7 +15942,7 @@ subroutine ub_dppequ(uplo,n,ap,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call dppequ(uplo,n,ap,s,scond,amax,info)
-end subroutine dppequ
+end subroutine ub_dppequ
 
 subroutine ub_dpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -15967,7 +15967,7 @@ subroutine ub_dpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   integer(blas77_int) :: info
 
   call dpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dpprfs
+end subroutine ub_dpprfs
 
 subroutine ub_dppsv(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -15985,7 +15985,7 @@ subroutine ub_dppsv(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call dppsv(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine dppsv
+end subroutine ub_dppsv
 
 subroutine ub_dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -16014,7 +16014,7 @@ subroutine ub_dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr
   integer(blas77_int) :: info
 
   call dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dppsvx
+end subroutine ub_dppsvx
 
 subroutine ub_dpptrf(uplo,n,ap,info)
   use blas77_types
@@ -16029,7 +16029,7 @@ subroutine ub_dpptrf(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call dpptrf(uplo,n,ap,info)
-end subroutine dpptrf
+end subroutine ub_dpptrf
 
 subroutine ub_dpptri(uplo,n,ap,info)
   use blas77_types
@@ -16044,7 +16044,7 @@ subroutine ub_dpptri(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call dpptri(uplo,n,ap,info)
-end subroutine dpptri
+end subroutine ub_dpptri
 
 subroutine ub_dpptrs(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -16062,7 +16062,7 @@ subroutine ub_dpptrs(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpptrs(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine dpptrs
+end subroutine ub_dpptrs
 
 subroutine ub_dpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -16082,7 +16082,7 @@ subroutine ub_dpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call dpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine dpstf2
+end subroutine ub_dpstf2
 
 subroutine ub_dpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -16102,7 +16102,7 @@ subroutine ub_dpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call dpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine dpstrf
+end subroutine ub_dpstrf
 
 subroutine ub_dptcon(n,d,e,anorm,rcond,work,info)
   use blas77_types
@@ -16120,7 +16120,7 @@ subroutine ub_dptcon(n,d,e,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call dptcon(n,d,e,anorm,rcond,work,info)
-end subroutine dptcon
+end subroutine ub_dptcon
 
 subroutine ub_dpteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -16139,7 +16139,7 @@ subroutine ub_dpteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dpteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine dpteqr
+end subroutine ub_dpteqr
 
 subroutine ub_dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
   use blas77_types
@@ -16164,7 +16164,7 @@ subroutine ub_dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
   integer(blas77_int) :: info
 
   call dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
-end subroutine dptrfs
+end subroutine ub_dptrfs
 
 subroutine ub_dptsv(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -16182,7 +16182,7 @@ subroutine ub_dptsv(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call dptsv(n,nrhs,d,e,b,ldb,info)
-end subroutine dptsv
+end subroutine ub_dptsv
 
 subroutine ub_dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info)
   use blas77_types
@@ -16209,7 +16209,7 @@ subroutine ub_dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info
   integer(blas77_int) :: info
 
   call dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info)
-end subroutine dptsvx
+end subroutine ub_dptsvx
 
 subroutine ub_dpttrf(n,d,e,info)
   use blas77_types
@@ -16224,7 +16224,7 @@ subroutine ub_dpttrf(n,d,e,info)
   integer(blas77_int) :: info
 
   call dpttrf(n,d,e,info)
-end subroutine dpttrf
+end subroutine ub_dpttrf
 
 subroutine ub_dpttrs(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -16242,7 +16242,7 @@ subroutine ub_dpttrs(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call dpttrs(n,nrhs,d,e,b,ldb,info)
-end subroutine dpttrs
+end subroutine ub_dpttrs
 
 subroutine ub_dptts2(n,nrhs,d,e,b,ldb)
   use blas77_types
@@ -16259,7 +16259,7 @@ subroutine ub_dptts2(n,nrhs,d,e,b,ldb)
   real(blas77_f64) :: b(ldb,*)
 
   call dptts2(n,nrhs,d,e,b,ldb)
-end subroutine dptts2
+end subroutine ub_dptts2
 
 subroutine ub_dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
   use blas77_types
@@ -16285,7 +16285,7 @@ subroutine ub_dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   real(blas77_f64) :: work(*)
 
   call dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
-end subroutine dsb2st_kernels
+end subroutine ub_dsb2st_kernels
 
 subroutine ub_dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
   use blas77_types
@@ -16308,7 +16308,7 @@ subroutine ub_dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
-end subroutine dsbev_2stage
+end subroutine ub_dsbev_2stage
 
 subroutine ub_dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
   use blas77_types
@@ -16330,7 +16330,7 @@ subroutine ub_dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
-end subroutine dsbev
+end subroutine ub_dsbev
 
 subroutine ub_dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -16355,7 +16355,7 @@ subroutine ub_dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwo
   integer(blas77_int) :: info
 
   call dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dsbevd_2stage
+end subroutine ub_dsbevd_2stage
 
 subroutine ub_dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -16380,7 +16380,7 @@ subroutine ub_dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info
   integer(blas77_int) :: info
 
   call dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dsbevd
+end subroutine ub_dsbevd
 
 subroutine ub_dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -16414,7 +16414,7 @@ subroutine ub_dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,absto
   integer(blas77_int) :: info
 
   call dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine dsbevx_2stage
+end subroutine ub_dsbevx_2stage
 
 subroutine ub_dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -16447,7 +16447,7 @@ subroutine ub_dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z
   integer(blas77_int) :: info
 
   call dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine dsbevx
+end subroutine ub_dsbevx
 
 subroutine ub_dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
   use blas77_types
@@ -16471,7 +16471,7 @@ subroutine ub_dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
   integer(blas77_int) :: info
 
   call dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
-end subroutine dsbgst
+end subroutine ub_dsbgst
 
 subroutine ub_dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
   use blas77_types
@@ -16496,7 +16496,7 @@ subroutine ub_dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
-end subroutine dsbgv
+end subroutine ub_dsbgv
 
 subroutine ub_dsbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -16524,7 +16524,7 @@ subroutine ub_dsbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,
   integer(blas77_int) :: info
 
   call dsbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dsbgvd
+end subroutine ub_dsbgvd
 
 subroutine ub_dsbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -16560,7 +16560,7 @@ subroutine ub_dsbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,a
   integer(blas77_int) :: info
 
   call dsbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine dsbgvx
+end subroutine ub_dsbgvx
 
 subroutine ub_dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   use blas77_types
@@ -16583,7 +16583,7 @@ subroutine ub_dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
-end subroutine dsbtrd
+end subroutine ub_dsbtrd
 
 subroutine ub_dsfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   use blas77_types
@@ -16604,7 +16604,7 @@ subroutine ub_dsfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   real(blas77_f64) :: c(*)
 
   call dsfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
-end subroutine dsfrk
+end subroutine ub_dsfrk
 
 subroutine ub_dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info)
   use blas77_types
@@ -16628,7 +16628,7 @@ subroutine ub_dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info)
   integer(blas77_int) :: info
 
   call dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info)
-end subroutine dsgesv
+end subroutine ub_dsgesv
 
 subroutine ub_dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -16648,7 +16648,7 @@ subroutine ub_dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dspcon
+end subroutine ub_dspcon
 
 subroutine ub_dspev(jobz,uplo,n,ap,w,z,ldz,work,info)
   use blas77_types
@@ -16668,7 +16668,7 @@ subroutine ub_dspev(jobz,uplo,n,ap,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dspev(jobz,uplo,n,ap,w,z,ldz,work,info)
-end subroutine dspev
+end subroutine ub_dspev
 
 subroutine ub_dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -16691,7 +16691,7 @@ subroutine ub_dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dspevd
+end subroutine ub_dspevd
 
 subroutine ub_dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -16720,7 +16720,7 @@ subroutine ub_dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwor
   integer(blas77_int) :: info
 
   call dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine dspevx
+end subroutine ub_dspevx
 
 subroutine ub_dspgst(itype,uplo,n,ap,bp,info)
   use blas77_types
@@ -16737,7 +16737,7 @@ subroutine ub_dspgst(itype,uplo,n,ap,bp,info)
   integer(blas77_int) :: info
 
   call dspgst(itype,uplo,n,ap,bp,info)
-end subroutine dspgst
+end subroutine ub_dspgst
 
 subroutine ub_dspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
   use blas77_types
@@ -16759,7 +16759,7 @@ subroutine ub_dspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
-end subroutine dspgv
+end subroutine ub_dspgv
 
 subroutine ub_dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -16784,7 +16784,7 @@ subroutine ub_dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,inf
   integer(blas77_int) :: info
 
   call dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dspgvd
+end subroutine ub_dspgvd
 
 subroutine ub_dspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -16815,7 +16815,7 @@ subroutine ub_dspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,
   integer(blas77_int) :: info
 
   call dspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine dspgvx
+end subroutine ub_dspgvx
 
 subroutine ub_dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info)
   use blas77_types
@@ -16839,7 +16839,7 @@ subroutine ub_dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info)
   integer(blas77_int) :: info
 
   call dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info)
-end subroutine dsposv
+end subroutine ub_dsposv
 
 subroutine ub_dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -16865,7 +16865,7 @@ subroutine ub_dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,in
   integer(blas77_int) :: info
 
   call dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dsprfs
+end subroutine ub_dsprfs
 
 subroutine ub_dspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -16884,7 +16884,7 @@ subroutine ub_dspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine dspsv
+end subroutine ub_dspsv
 
 subroutine ub_dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -16912,7 +16912,7 @@ subroutine ub_dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine dspsvx
+end subroutine ub_dspsvx
 
 subroutine ub_dsptrd(uplo,n,ap,d,e,tau,info)
   use blas77_types
@@ -16930,7 +16930,7 @@ subroutine ub_dsptrd(uplo,n,ap,d,e,tau,info)
   integer(blas77_int) :: info
 
   call dsptrd(uplo,n,ap,d,e,tau,info)
-end subroutine dsptrd
+end subroutine ub_dsptrd
 
 subroutine ub_dsptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -16946,7 +16946,7 @@ subroutine ub_dsptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call dsptrf(uplo,n,ap,ipiv,info)
-end subroutine dsptrf
+end subroutine ub_dsptrf
 
 subroutine ub_dsptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -16963,7 +16963,7 @@ subroutine ub_dsptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call dsptri(uplo,n,ap,ipiv,work,info)
-end subroutine dsptri
+end subroutine ub_dsptri
 
 subroutine ub_dsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -16982,7 +16982,7 @@ subroutine ub_dsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine dsptrs
+end subroutine ub_dsptrs
 
 subroutine ub_dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info)
   use blas77_types
@@ -17011,7 +17011,7 @@ subroutine ub_dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,ispl
   integer(blas77_int) :: info
 
   call dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info)
-end subroutine dstebz
+end subroutine ub_dstebz
 
 subroutine ub_dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17033,7 +17033,7 @@ subroutine ub_dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dstedc
+end subroutine ub_dstedc
 
 subroutine ub_dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17064,7 +17064,7 @@ subroutine ub_dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine dstegr
+end subroutine ub_dstegr
 
 subroutine ub_dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -17088,7 +17088,7 @@ subroutine ub_dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   integer(blas77_int) :: info
 
   call dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
-end subroutine dstein
+end subroutine ub_dstein
 
 subroutine ub_dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17120,7 +17120,7 @@ subroutine ub_dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   integer(blas77_int) :: info
 
   call dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
-end subroutine dstemr
+end subroutine ub_dstemr
 
 subroutine ub_dsteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -17139,7 +17139,7 @@ subroutine ub_dsteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dsteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine dsteqr
+end subroutine ub_dsteqr
 
 subroutine ub_dsterf(n,d,e,info)
   use blas77_types
@@ -17154,7 +17154,7 @@ subroutine ub_dsterf(n,d,e,info)
   integer(blas77_int) :: info
 
   call dsterf(n,d,e,info)
-end subroutine dsterf
+end subroutine ub_dsterf
 
 subroutine ub_dstev(jobz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -17173,7 +17173,7 @@ subroutine ub_dstev(jobz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call dstev(jobz,n,d,e,z,ldz,work,info)
-end subroutine dstev
+end subroutine ub_dstev
 
 subroutine ub_dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17195,7 +17195,7 @@ subroutine ub_dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine dstevd
+end subroutine ub_dstevd
 
 subroutine ub_dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17226,7 +17226,7 @@ subroutine ub_dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine dstevr
+end subroutine ub_dstevr
 
 subroutine ub_dstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -17255,7 +17255,7 @@ subroutine ub_dstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,if
   integer(blas77_int) :: info
 
   call dstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine dstevx
+end subroutine ub_dstevx
 
 subroutine ub_dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -17277,7 +17277,7 @@ subroutine ub_dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dsycon_3
+end subroutine ub_dsycon_3
 
 subroutine ub_dsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -17298,7 +17298,7 @@ subroutine ub_dsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dsycon
+end subroutine ub_dsycon
 
 subroutine ub_dsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -17319,7 +17319,7 @@ subroutine ub_dsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
-end subroutine dsycon_rook
+end subroutine ub_dsycon_rook
 
 subroutine ub_dsyconv(uplo,way,n,a,lda,ipiv,e,info)
   use blas77_types
@@ -17338,7 +17338,7 @@ subroutine ub_dsyconv(uplo,way,n,a,lda,ipiv,e,info)
   integer(blas77_int) :: info
 
   call dsyconv(uplo,way,n,a,lda,ipiv,e,info)
-end subroutine dsyconv
+end subroutine ub_dsyconv
 
 subroutine ub_dsyconvf(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -17357,7 +17357,7 @@ subroutine ub_dsyconvf(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call dsyconvf(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine dsyconvf
+end subroutine ub_dsyconvf
 
 subroutine ub_dsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -17376,7 +17376,7 @@ subroutine ub_dsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call dsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine dsyconvf_rook
+end subroutine ub_dsyconvf_rook
 
 subroutine ub_dsyequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -17396,7 +17396,7 @@ subroutine ub_dsyequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call dsyequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine dsyequb
+end subroutine ub_dsyequb
 
 subroutine ub_dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
   use blas77_types
@@ -17416,7 +17416,7 @@ subroutine ub_dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
-end subroutine dsyev_2stage
+end subroutine ub_dsyev_2stage
 
 subroutine ub_dsyev(jobz,uplo,n,a,lda,w,work,lwork,info)
   use blas77_types
@@ -17436,7 +17436,7 @@ subroutine ub_dsyev(jobz,uplo,n,a,lda,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsyev(jobz,uplo,n,a,lda,w,work,lwork,info)
-end subroutine dsyev
+end subroutine ub_dsyev
 
 subroutine ub_dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17458,7 +17458,7 @@ subroutine ub_dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
-end subroutine dsyevd_2stage
+end subroutine ub_dsyevd_2stage
 
 subroutine ub_dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17480,7 +17480,7 @@ subroutine ub_dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
-end subroutine dsyevd
+end subroutine ub_dsyevd
 
 subroutine ub_dsyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17512,7 +17512,7 @@ subroutine ub_dsyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call dsyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine dsyevr_2stage
+end subroutine ub_dsyevr_2stage
 
 subroutine ub_dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17544,7 +17544,7 @@ subroutine ub_dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz
   integer(blas77_int) :: info
 
   call dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine dsyevr
+end subroutine ub_dsyevr
 
 subroutine ub_dsyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -17575,7 +17575,7 @@ subroutine ub_dsyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call dsyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine dsyevx_2stage
+end subroutine ub_dsyevx_2stage
 
 subroutine ub_dsyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -17606,7 +17606,7 @@ subroutine ub_dsyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,l
   integer(blas77_int) :: info
 
   call dsyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine dsyevx
+end subroutine ub_dsyevx
 
 subroutine ub_dsygs2(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -17625,7 +17625,7 @@ subroutine ub_dsygs2(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsygs2(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine dsygs2
+end subroutine ub_dsygs2
 
 subroutine ub_dsygst(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -17644,7 +17644,7 @@ subroutine ub_dsygst(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsygst(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine dsygst
+end subroutine ub_dsygst
 
 subroutine ub_dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   use blas77_types
@@ -17667,7 +17667,7 @@ subroutine ub_dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
-end subroutine dsygv_2stage
+end subroutine ub_dsygv_2stage
 
 subroutine ub_dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   use blas77_types
@@ -17690,7 +17690,7 @@ subroutine ub_dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
-end subroutine dsygv
+end subroutine ub_dsygv
 
 subroutine ub_dsygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -17715,7 +17715,7 @@ subroutine ub_dsygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,inf
   integer(blas77_int) :: info
 
   call dsygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info)
-end subroutine dsygvd
+end subroutine ub_dsygvd
 
 subroutine ub_dsygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -17749,7 +17749,7 @@ subroutine ub_dsygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,
   integer(blas77_int) :: info
 
   call dsygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine dsygvx
+end subroutine ub_dsygvx
 
 subroutine ub_dsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -17777,7 +17777,7 @@ subroutine ub_dsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,i
   integer(blas77_int) :: info
 
   call dsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dsyrfs
+end subroutine ub_dsyrfs
 
 subroutine ub_dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -17812,7 +17812,7 @@ subroutine ub_dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dsyrfsx
+end subroutine ub_dsyrfsx
 
 subroutine ub_dsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -17837,7 +17837,7 @@ subroutine ub_dsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call dsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine dsysv_aa_2stage
+end subroutine ub_dsysv_aa_2stage
 
 subroutine ub_dsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -17859,7 +17859,7 @@ subroutine ub_dsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine dsysv_aa
+end subroutine ub_dsysv_aa
 
 subroutine ub_dsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -17881,7 +17881,7 @@ subroutine ub_dsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine dsysv
+end subroutine ub_dsysv
 
 subroutine ub_dsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -17904,7 +17904,7 @@ subroutine ub_dsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine dsysv_rk
+end subroutine ub_dsysv_rk
 
 subroutine ub_dsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -17926,7 +17926,7 @@ subroutine ub_dsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine dsysv_rook
+end subroutine ub_dsysv_rook
 
 subroutine ub_dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info)
   use blas77_types
@@ -17957,7 +17957,7 @@ subroutine ub_dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info)
-end subroutine dsysvx
+end subroutine ub_dsysvx
 
 subroutine ub_dsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -17994,7 +17994,7 @@ subroutine ub_dsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call dsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine dsysvxx
+end subroutine ub_dsysvxx
 
 subroutine ub_dsytd2(uplo,n,a,lda,d,e,tau,info)
   use blas77_types
@@ -18013,7 +18013,7 @@ subroutine ub_dsytd2(uplo,n,a,lda,d,e,tau,info)
   integer(blas77_int) :: info
 
   call dsytd2(uplo,n,a,lda,d,e,tau,info)
-end subroutine dsytd2
+end subroutine ub_dsytd2
 
 subroutine ub_dsytf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -18030,7 +18030,7 @@ subroutine ub_dsytf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call dsytf2(uplo,n,a,lda,ipiv,info)
-end subroutine dsytf2
+end subroutine ub_dsytf2
 
 subroutine ub_dsytf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -18048,7 +18048,7 @@ subroutine ub_dsytf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call dsytf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine dsytf2_rk
+end subroutine ub_dsytf2_rk
 
 subroutine ub_dsytf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -18065,7 +18065,7 @@ subroutine ub_dsytf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call dsytf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine dsytf2_rook
+end subroutine ub_dsytf2_rook
 
 subroutine ub_dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   use blas77_types
@@ -18089,7 +18089,7 @@ subroutine ub_dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,in
   integer(blas77_int) :: info
 
   call dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
-end subroutine dsytrd_2stage
+end subroutine ub_dsytrd_2stage
 
 subroutine ub_dsytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   use blas77_types
@@ -18110,7 +18110,7 @@ subroutine ub_dsytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
-end subroutine dsytrd
+end subroutine ub_dsytrd
 
 subroutine ub_dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
   use blas77_types
@@ -18135,7 +18135,7 @@ subroutine ub_dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwo
   integer(blas77_int) :: info
 
   call dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
-end subroutine dsytrd_sb2st
+end subroutine ub_dsytrd_sb2st
 
 subroutine ub_dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   use blas77_types
@@ -18157,7 +18157,7 @@ subroutine ub_dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
-end subroutine dsytrd_sy2sb
+end subroutine ub_dsytrd_sy2sb
 
 subroutine ub_dsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -18179,7 +18179,7 @@ subroutine ub_dsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine dsytrf_aa_2stage
+end subroutine ub_dsytrf_aa_2stage
 
 subroutine ub_dsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -18198,7 +18198,7 @@ subroutine ub_dsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine dsytrf_aa
+end subroutine ub_dsytrf_aa
 
 subroutine ub_dsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -18217,7 +18217,7 @@ subroutine ub_dsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine dsytrf
+end subroutine ub_dsytrf
 
 subroutine ub_dsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -18237,7 +18237,7 @@ subroutine ub_dsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine dsytrf_rk
+end subroutine ub_dsytrf_rk
 
 subroutine ub_dsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -18256,7 +18256,7 @@ subroutine ub_dsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine dsytrf_rook
+end subroutine ub_dsytrf_rook
 
 subroutine ub_dsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -18275,7 +18275,7 @@ subroutine ub_dsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine dsytri2
+end subroutine ub_dsytri2
 
 subroutine ub_dsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -18294,7 +18294,7 @@ subroutine ub_dsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call dsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine dsytri2x
+end subroutine ub_dsytri2x
 
 subroutine ub_dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -18314,7 +18314,7 @@ subroutine ub_dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine dsytri_3
+end subroutine ub_dsytri_3
 
 subroutine ub_dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -18334,7 +18334,7 @@ subroutine ub_dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine dsytri_3x
+end subroutine ub_dsytri_3x
 
 subroutine ub_dsytri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -18352,7 +18352,7 @@ subroutine ub_dsytri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call dsytri(uplo,n,a,lda,ipiv,work,info)
-end subroutine dsytri
+end subroutine ub_dsytri
 
 subroutine ub_dsytri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -18370,7 +18370,7 @@ subroutine ub_dsytri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call dsytri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine dsytri_rook
+end subroutine ub_dsytri_rook
 
 subroutine ub_dsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -18391,7 +18391,7 @@ subroutine ub_dsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call dsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine dsytrs2
+end subroutine ub_dsytrs2
 
 subroutine ub_dsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -18412,7 +18412,7 @@ subroutine ub_dsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine dsytrs_3
+end subroutine ub_dsytrs_3
 
 subroutine ub_dsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -18435,7 +18435,7 @@ subroutine ub_dsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine dsytrs_aa_2stage
+end subroutine ub_dsytrs_aa_2stage
 
 subroutine ub_dsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -18457,7 +18457,7 @@ subroutine ub_dsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call dsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine dsytrs_aa
+end subroutine ub_dsytrs_aa
 
 subroutine ub_dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -18477,7 +18477,7 @@ subroutine ub_dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine dsytrs
+end subroutine ub_dsytrs
 
 subroutine ub_dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -18497,7 +18497,7 @@ subroutine ub_dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine dsytrs_rook
+end subroutine ub_dsytrs_rook
 
 subroutine ub_dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
   use blas77_types
@@ -18519,7 +18519,7 @@ subroutine ub_dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
-end subroutine dtbcon
+end subroutine ub_dtbcon
 
 subroutine ub_dtbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -18547,7 +18547,7 @@ subroutine ub_dtbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,wor
   integer(blas77_int) :: info
 
   call dtbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dtbrfs
+end subroutine ub_dtbrfs
 
 subroutine ub_dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -18569,7 +18569,7 @@ subroutine ub_dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine dtbtrs
+end subroutine ub_dtbtrs
 
 subroutine ub_dtfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   use blas77_types
@@ -18591,7 +18591,7 @@ subroutine ub_dtfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   real(blas77_f64) :: b(0:ldb-1,0:*)
 
   call dtfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
-end subroutine dtfsm
+end subroutine ub_dtfsm
 
 subroutine ub_dtftri(transr,uplo,diag,n,a,info)
   use blas77_types
@@ -18608,7 +18608,7 @@ subroutine ub_dtftri(transr,uplo,diag,n,a,info)
   integer(blas77_int) :: info
 
   call dtftri(transr,uplo,diag,n,a,info)
-end subroutine dtftri
+end subroutine ub_dtftri
 
 subroutine ub_dtfttp(transr,uplo,n,arf,ap,info)
   use blas77_types
@@ -18625,7 +18625,7 @@ subroutine ub_dtfttp(transr,uplo,n,arf,ap,info)
   integer(blas77_int) :: info
 
   call dtfttp(transr,uplo,n,arf,ap,info)
-end subroutine dtfttp
+end subroutine ub_dtfttp
 
 subroutine ub_dtfttr(transr,uplo,n,arf,a,lda,info)
   use blas77_types
@@ -18643,7 +18643,7 @@ subroutine ub_dtfttr(transr,uplo,n,arf,a,lda,info)
   integer(blas77_int) :: info
 
   call dtfttr(transr,uplo,n,arf,a,lda,info)
-end subroutine dtfttr
+end subroutine ub_dtfttr
 
 subroutine ub_dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info)
   use blas77_types
@@ -18670,7 +18670,7 @@ subroutine ub_dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
   integer(blas77_int) :: info
 
   call dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info)
-end subroutine dtgevc
+end subroutine ub_dtgevc
 
 subroutine ub_dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info)
   use blas77_types
@@ -18697,7 +18697,7 @@ subroutine ub_dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,
   integer(blas77_int) :: info
 
   call dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info)
-end subroutine dtgexc
+end subroutine ub_dtgexc
 
 subroutine ub_dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -18733,7 +18733,7 @@ subroutine ub_dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,
   integer(blas77_int) :: info
 
   call dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
-end subroutine dtgsen
+end subroutine ub_dtgsen
 
 subroutine ub_dtgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
   use blas77_types
@@ -18769,7 +18769,7 @@ subroutine ub_dtgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u
   integer(blas77_int) :: info
 
   call dtgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
-end subroutine dtgsja
+end subroutine ub_dtgsja
 
 subroutine ub_dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
   use blas77_types
@@ -18800,7 +18800,7 @@ subroutine ub_dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
   integer(blas77_int) :: info
 
   call dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
-end subroutine dtgsna
+end subroutine ub_dtgsna
 
 subroutine ub_dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
   use blas77_types
@@ -18833,7 +18833,7 @@ subroutine ub_dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,di
   integer(blas77_int) :: info
 
   call dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
-end subroutine dtgsyl
+end subroutine ub_dtgsyl
 
 subroutine ub_dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
   use blas77_types
@@ -18853,7 +18853,7 @@ subroutine ub_dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
-end subroutine dtpcon
+end subroutine ub_dtpcon
 
 subroutine ub_dtplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -18874,7 +18874,7 @@ subroutine ub_dtplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call dtplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine dtplqt2
+end subroutine ub_dtplqt2
 
 subroutine ub_dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -18897,7 +18897,7 @@ subroutine ub_dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine dtplqt
+end subroutine ub_dtplqt
 
 subroutine ub_dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -18925,7 +18925,7 @@ subroutine ub_dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine dtpmlqt
+end subroutine ub_dtpmlqt
 
 subroutine ub_dtpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -18953,7 +18953,7 @@ subroutine ub_dtpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call dtpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine dtpmqrt
+end subroutine ub_dtpmqrt
 
 subroutine ub_dtpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -18974,7 +18974,7 @@ subroutine ub_dtpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call dtpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine dtpqrt2
+end subroutine ub_dtpqrt2
 
 subroutine ub_dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -18997,7 +18997,7 @@ subroutine ub_dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine dtpqrt
+end subroutine ub_dtpqrt
 
 subroutine ub_dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -19023,7 +19023,7 @@ subroutine ub_dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: info
 
   call dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dtprfs
+end subroutine ub_dtprfs
 
 subroutine ub_dtptri(uplo,diag,n,ap,info)
   use blas77_types
@@ -19039,7 +19039,7 @@ subroutine ub_dtptri(uplo,diag,n,ap,info)
   integer(blas77_int) :: info
 
   call dtptri(uplo,diag,n,ap,info)
-end subroutine dtptri
+end subroutine ub_dtptri
 
 subroutine ub_dtptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -19059,7 +19059,7 @@ subroutine ub_dtptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call dtptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
-end subroutine dtptrs
+end subroutine ub_dtptrs
 
 subroutine ub_dtpttf(transr,uplo,n,ap,arf,info)
   use blas77_types
@@ -19076,7 +19076,7 @@ subroutine ub_dtpttf(transr,uplo,n,ap,arf,info)
   integer(blas77_int) :: info
 
   call dtpttf(transr,uplo,n,ap,arf,info)
-end subroutine dtpttf
+end subroutine ub_dtpttf
 
 subroutine ub_dtpttr(uplo,n,ap,a,lda,info)
   use blas77_types
@@ -19093,7 +19093,7 @@ subroutine ub_dtpttr(uplo,n,ap,a,lda,info)
   integer(blas77_int) :: info
 
   call dtpttr(uplo,n,ap,a,lda,info)
-end subroutine dtpttr
+end subroutine ub_dtpttr
 
 subroutine ub_dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
   use blas77_types
@@ -19114,7 +19114,7 @@ subroutine ub_dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
-end subroutine dtrcon
+end subroutine ub_dtrcon
 
 subroutine ub_dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info)
   use blas77_types
@@ -19140,7 +19140,7 @@ subroutine ub_dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
   integer(blas77_int) :: info
 
   call dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info)
-end subroutine dtrevc3
+end subroutine ub_dtrevc3
 
 subroutine ub_dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
   use blas77_types
@@ -19165,7 +19165,7 @@ subroutine ub_dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
   integer(blas77_int) :: info
 
   call dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
-end subroutine dtrevc
+end subroutine ub_dtrevc
 
 subroutine ub_dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
   use blas77_types
@@ -19186,7 +19186,7 @@ subroutine ub_dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
   integer(blas77_int) :: info
 
   call dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
-end subroutine dtrexc
+end subroutine ub_dtrexc
 
 subroutine ub_dtrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -19213,7 +19213,7 @@ subroutine ub_dtrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwo
   integer(blas77_int) :: info
 
   call dtrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine dtrrfs
+end subroutine ub_dtrrfs
 
 subroutine ub_dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -19242,7 +19242,7 @@ subroutine ub_dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwo
   integer(blas77_int) :: info
 
   call dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info)
-end subroutine dtrsen
+end subroutine ub_dtrsen
 
 subroutine ub_dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info)
   use blas77_types
@@ -19271,7 +19271,7 @@ subroutine ub_dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
   integer(blas77_int) :: info
 
   call dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info)
-end subroutine dtrsna
+end subroutine ub_dtrsna
 
 subroutine ub_dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info)
   use blas77_types
@@ -19299,7 +19299,7 @@ subroutine ub_dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,
   integer(blas77_int) :: info
 
   call dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info)
-end subroutine dtrsyl3
+end subroutine ub_dtrsyl3
 
 subroutine ub_dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   use blas77_types
@@ -19323,7 +19323,7 @@ subroutine ub_dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   integer(blas77_int) :: info
 
   call dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
-end subroutine dtrsyl
+end subroutine ub_dtrsyl
 
 subroutine ub_dtrti2(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -19340,7 +19340,7 @@ subroutine ub_dtrti2(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dtrti2(uplo,diag,n,a,lda,info)
-end subroutine dtrti2
+end subroutine ub_dtrti2
 
 subroutine ub_dtrtri(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -19357,7 +19357,7 @@ subroutine ub_dtrtri(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call dtrtri(uplo,diag,n,a,lda,info)
-end subroutine dtrtri
+end subroutine ub_dtrtri
 
 subroutine ub_dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -19378,7 +19378,7 @@ subroutine ub_dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
-end subroutine dtrtrs
+end subroutine ub_dtrtrs
 
 subroutine ub_dtrttf(transr,uplo,n,a,lda,arf,info)
   use blas77_types
@@ -19396,7 +19396,7 @@ subroutine ub_dtrttf(transr,uplo,n,a,lda,arf,info)
   integer(blas77_int) :: info
 
   call dtrttf(transr,uplo,n,a,lda,arf,info)
-end subroutine dtrttf
+end subroutine ub_dtrttf
 
 subroutine ub_dtrttp(uplo,n,a,lda,ap,info)
   use blas77_types
@@ -19413,7 +19413,7 @@ subroutine ub_dtrttp(uplo,n,a,lda,ap,info)
   integer(blas77_int) :: info
 
   call dtrttp(uplo,n,a,lda,ap,info)
-end subroutine dtrttp
+end subroutine ub_dtrttp
 
 subroutine ub_dtzrqf(m,n,a,lda,tau,info)
   use blas77_types
@@ -19430,7 +19430,7 @@ subroutine ub_dtzrqf(m,n,a,lda,tau,info)
   integer(blas77_int) :: info
 
   call dtzrqf(m,n,a,lda,tau,info)
-end subroutine dtzrqf
+end subroutine ub_dtzrqf
 
 subroutine ub_dtzrzf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -19449,7 +19449,7 @@ subroutine ub_dtzrzf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call dtzrzf(m,n,a,lda,tau,work,lwork,info)
-end subroutine dtzrzf
+end subroutine ub_dtzrzf
 
 function ub_iladiag(diag)
   use blas77_types
@@ -19462,7 +19462,7 @@ function ub_iladiag(diag)
   integer(blas77_int) :: ub_iladiag
 
   ub_iladiag = iladiag(diag)
-end function iladiag
+end function ub_iladiag
 
 function ub_ilaprec(prec)
   use blas77_types
@@ -19475,7 +19475,7 @@ function ub_ilaprec(prec)
   integer(blas77_int) :: ub_ilaprec
 
   ub_ilaprec = ilaprec(prec)
-end function ilaprec
+end function ub_ilaprec
 
 function ub_ilatrans(trans)
   use blas77_types
@@ -19488,7 +19488,7 @@ function ub_ilatrans(trans)
   integer(blas77_int) :: ub_ilatrans
 
   ub_ilatrans = ilatrans(trans)
-end function ilatrans
+end function ub_ilatrans
 
 function ub_ilauplo(uplo)
   use blas77_types
@@ -19501,7 +19501,7 @@ function ub_ilauplo(uplo)
   integer(blas77_int) :: ub_ilauplo
 
   ub_ilauplo = ilauplo(uplo)
-end function ilauplo
+end function ub_ilauplo
 
 subroutine ub_sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info)
   use blas77_types
@@ -19541,7 +19541,7 @@ subroutine ub_sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,
   integer(blas77_int) :: info
 
   call sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info)
-end subroutine sbbcsd
+end subroutine ub_sbbcsd
 
 subroutine ub_sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
   use blas77_types
@@ -19566,7 +19566,7 @@ subroutine ub_sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
   integer(blas77_int) :: info
 
   call sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info)
-end subroutine sbdsdc
+end subroutine ub_sbdsdc
 
 subroutine ub_sbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
   use blas77_types
@@ -19592,7 +19592,7 @@ subroutine ub_sbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info)
-end subroutine sbdsqr
+end subroutine ub_sbdsqr
 
 subroutine ub_sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
   use blas77_types
@@ -19620,7 +19620,7 @@ subroutine ub_sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,in
   integer(blas77_int) :: info
 
   call sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
-end subroutine sbdsvdx
+end subroutine ub_sbdsvdx
 
 subroutine ub_sdisna(job,m,n,d,sep,info)
   use blas77_types
@@ -19637,7 +19637,7 @@ subroutine ub_sdisna(job,m,n,d,sep,info)
   integer(blas77_int) :: info
 
   call sdisna(job,m,n,d,sep,info)
-end subroutine sdisna
+end subroutine ub_sdisna
 
 subroutine ub_sgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info)
   use blas77_types
@@ -19666,7 +19666,7 @@ subroutine ub_sgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,inf
   integer(blas77_int) :: info
 
   call sgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info)
-end subroutine sgbbrd
+end subroutine ub_sgbbrd
 
 subroutine ub_sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -19689,7 +19689,7 @@ subroutine ub_sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info)
-end subroutine sgbcon
+end subroutine ub_sgbcon
 
 subroutine ub_sgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -19712,7 +19712,7 @@ subroutine ub_sgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call sgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine sgbequ
+end subroutine ub_sgbequ
 
 subroutine ub_sgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -19735,7 +19735,7 @@ subroutine ub_sgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call sgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine sgbequb
+end subroutine ub_sgbequb
 
 subroutine ub_sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -19765,7 +19765,7 @@ subroutine ub_sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,
   integer(blas77_int) :: info
 
   call sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine sgbrfs
+end subroutine ub_sgbrfs
 
 subroutine ub_sgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -19803,7 +19803,7 @@ subroutine ub_sgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,
   integer(blas77_int) :: info
 
   call sgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sgbrfsx
+end subroutine ub_sgbrfsx
 
 subroutine ub_sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -19824,7 +19824,7 @@ subroutine ub_sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine sgbsv
+end subroutine ub_sgbsv
 
 subroutine ub_sgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -19859,7 +19859,7 @@ subroutine ub_sgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,
   integer(blas77_int) :: info
 
   call sgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sgbsvx
+end subroutine ub_sgbsvx
 
 subroutine ub_sgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -19899,7 +19899,7 @@ subroutine ub_sgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b
   integer(blas77_int) :: info
 
   call sgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sgbsvxx
+end subroutine ub_sgbsvxx
 
 subroutine ub_sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -19918,7 +19918,7 @@ subroutine ub_sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine sgbtf2
+end subroutine ub_sgbtf2
 
 subroutine ub_sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -19937,7 +19937,7 @@ subroutine ub_sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine sgbtrf
+end subroutine ub_sgbtrf
 
 subroutine ub_sgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -19959,7 +19959,7 @@ subroutine ub_sgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine sgbtrs
+end subroutine ub_sgbtrs
 
 subroutine ub_sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   use blas77_types
@@ -19980,7 +19980,7 @@ subroutine ub_sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
-end subroutine sgebak
+end subroutine ub_sgebak
 
 subroutine ub_sgebal(job,n,a,lda,ilo,ihi,scale,info)
   use blas77_types
@@ -19999,7 +19999,7 @@ subroutine ub_sgebal(job,n,a,lda,ilo,ihi,scale,info)
   integer(blas77_int) :: info
 
   call sgebal(job,n,a,lda,ilo,ihi,scale,info)
-end subroutine sgebal
+end subroutine ub_sgebal
 
 subroutine ub_sgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   use blas77_types
@@ -20020,7 +20020,7 @@ subroutine ub_sgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   integer(blas77_int) :: info
 
   call sgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
-end subroutine sgebd2
+end subroutine ub_sgebd2
 
 subroutine ub_sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   use blas77_types
@@ -20042,7 +20042,7 @@ subroutine ub_sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
-end subroutine sgebrd
+end subroutine ub_sgebrd
 
 subroutine ub_sgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -20062,7 +20062,7 @@ subroutine ub_sgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call sgecon(norm,n,a,lda,anorm,rcond,work,iwork,info)
-end subroutine sgecon
+end subroutine ub_sgecon
 
 subroutine ub_sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -20103,7 +20103,7 @@ subroutine ub_sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,
   integer(blas77_int),intent(out) :: info
 
   call sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info)
-end subroutine sgedmd
+end subroutine ub_sgedmd
 
 subroutine ub_sgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -20148,7 +20148,7 @@ subroutine ub_sgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy
   integer(blas77_int),intent(out) :: info
 
   call sgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info)
-end subroutine sgedmdq
+end subroutine ub_sgedmdq
 
 subroutine ub_sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -20169,7 +20169,7 @@ subroutine ub_sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine sgeequ
+end subroutine ub_sgeequ
 
 subroutine ub_sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -20190,7 +20190,7 @@ subroutine ub_sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine sgeequb
+end subroutine ub_sgeequb
 
 subroutine ub_sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
   use blas77_types
@@ -20216,7 +20216,7 @@ subroutine ub_sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwor
   integer(blas77_int) :: info
 
   call sgees(jobvs,sort,select,n,a,lda,sdim,wr,wi,vs,ldvs,work,lwork,bwork,info)
-end subroutine sgees
+end subroutine ub_sgees
 
 subroutine ub_sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -20247,7 +20247,7 @@ subroutine ub_sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,r
   integer(blas77_int) :: info
 
   call sgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine sgeesx
+end subroutine ub_sgeesx
 
 subroutine ub_sgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -20272,7 +20272,7 @@ subroutine ub_sgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine sgeev
+end subroutine ub_sgeev
 
 subroutine ub_sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info)
   use blas77_types
@@ -20306,7 +20306,7 @@ subroutine ub_sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,
   integer(blas77_int) :: info
 
   call sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info)
-end subroutine sgeevx
+end subroutine ub_sgeevx
 
 subroutine ub_sgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info)
   use blas77_types
@@ -20334,7 +20334,7 @@ subroutine ub_sgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr
   integer(blas77_int) :: info
 
   call sgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info)
-end subroutine sgegs
+end subroutine ub_sgegs
 
 subroutine ub_sgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -20362,7 +20362,7 @@ subroutine ub_sgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr
   integer(blas77_int) :: info
 
   call sgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine sgegv
+end subroutine ub_sgegv
 
 subroutine ub_sgehd2(n,ilo,ihi,a,lda,tau,work,info)
   use blas77_types
@@ -20381,7 +20381,7 @@ subroutine ub_sgehd2(n,ilo,ihi,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgehd2(n,ilo,ihi,a,lda,tau,work,info)
-end subroutine sgehd2
+end subroutine ub_sgehd2
 
 subroutine ub_sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -20401,7 +20401,7 @@ subroutine ub_sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine sgehrd
+end subroutine ub_sgehrd
 
 subroutine ub_sgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info)
   use blas77_types
@@ -20431,7 +20431,7 @@ subroutine ub_sgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,wor
   integer(blas77_int) :: info
 
   call sgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info)
-end subroutine sgejsv
+end subroutine ub_sgejsv
 
 subroutine ub_sgelq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -20449,7 +20449,7 @@ subroutine ub_sgelq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgelq2(m,n,a,lda,tau,work,info)
-end subroutine sgelq2
+end subroutine ub_sgelq2
 
 subroutine ub_sgelq(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -20469,7 +20469,7 @@ subroutine ub_sgelq(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelq(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine sgelq
+end subroutine ub_sgelq
 
 subroutine ub_sgelqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -20488,7 +20488,7 @@ subroutine ub_sgelqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine sgelqf
+end subroutine ub_sgelqf
 
 subroutine ub_sgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -20510,7 +20510,7 @@ subroutine ub_sgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine sgelqs
+end subroutine ub_sgelqs
 
 subroutine ub_sgelqt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -20528,7 +20528,7 @@ subroutine ub_sgelqt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call sgelqt3(m,n,a,lda,t,ldt,info)
-end subroutine sgelqt3
+end subroutine ub_sgelqt3
 
 subroutine ub_sgelqt(m,n,mb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -20548,7 +20548,7 @@ subroutine ub_sgelqt(m,n,mb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call sgelqt(m,n,mb,a,lda,t,ldt,work,info)
-end subroutine sgelqt
+end subroutine ub_sgelqt
 
 subroutine ub_sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -20570,7 +20570,7 @@ subroutine ub_sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine sgels
+end subroutine ub_sgels
 
 subroutine ub_sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
   use blas77_types
@@ -20595,7 +20595,7 @@ subroutine ub_sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
   integer(blas77_int) :: info
 
   call sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info)
-end subroutine sgelsd
+end subroutine ub_sgelsd
 
 subroutine ub_sgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
   use blas77_types
@@ -20619,7 +20619,7 @@ subroutine ub_sgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info)
-end subroutine sgelss
+end subroutine ub_sgelss
 
 subroutine ub_sgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -20641,7 +20641,7 @@ subroutine ub_sgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine sgelst
+end subroutine ub_sgelst
 
 subroutine ub_sgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
   use blas77_types
@@ -20664,7 +20664,7 @@ subroutine ub_sgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
   integer(blas77_int) :: info
 
   call sgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info)
-end subroutine sgelsx
+end subroutine ub_sgelsx
 
 subroutine ub_sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
   use blas77_types
@@ -20688,7 +20688,7 @@ subroutine ub_sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info)
-end subroutine sgelsy
+end subroutine ub_sgelsy
 
 subroutine ub_sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -20713,7 +20713,7 @@ subroutine ub_sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine sgemlq
+end subroutine ub_sgemlq
 
 subroutine ub_sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -20738,7 +20738,7 @@ subroutine ub_sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine sgemlqt
+end subroutine ub_sgemlqt
 
 subroutine ub_sgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -20763,7 +20763,7 @@ subroutine ub_sgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine sgemqr
+end subroutine ub_sgemqr
 
 subroutine ub_sgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -20788,7 +20788,7 @@ subroutine ub_sgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine sgemqrt
+end subroutine ub_sgemqrt
 
 subroutine ub_sgeql2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -20806,7 +20806,7 @@ subroutine ub_sgeql2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgeql2(m,n,a,lda,tau,work,info)
-end subroutine sgeql2
+end subroutine ub_sgeql2
 
 subroutine ub_sgeqlf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -20825,7 +20825,7 @@ subroutine ub_sgeqlf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqlf(m,n,a,lda,tau,work,lwork,info)
-end subroutine sgeqlf
+end subroutine ub_sgeqlf
 
 subroutine ub_sgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
   use blas77_types
@@ -20845,7 +20845,7 @@ subroutine ub_sgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info)
-end subroutine sgeqp3
+end subroutine ub_sgeqp3
 
 subroutine ub_sgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info)
   use blas77_types
@@ -20873,7 +20873,7 @@ subroutine ub_sgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrm
   integer(blas77_int) :: info
 
   call sgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info)
-end subroutine sgeqp3rk
+end subroutine ub_sgeqp3rk
 
 subroutine ub_sgeqpf(m,n,a,lda,jpvt,tau,work,info)
   use blas77_types
@@ -20892,7 +20892,7 @@ subroutine ub_sgeqpf(m,n,a,lda,jpvt,tau,work,info)
   integer(blas77_int) :: info
 
   call sgeqpf(m,n,a,lda,jpvt,tau,work,info)
-end subroutine sgeqpf
+end subroutine ub_sgeqpf
 
 subroutine ub_sgeqr2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -20910,7 +20910,7 @@ subroutine ub_sgeqr2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgeqr2(m,n,a,lda,tau,work,info)
-end subroutine sgeqr2
+end subroutine ub_sgeqr2
 
 subroutine ub_sgeqr2p(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -20928,7 +20928,7 @@ subroutine ub_sgeqr2p(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgeqr2p(m,n,a,lda,tau,work,info)
-end subroutine sgeqr2p
+end subroutine ub_sgeqr2p
 
 subroutine ub_sgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -20948,7 +20948,7 @@ subroutine ub_sgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqr(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine sgeqr
+end subroutine ub_sgeqr
 
 subroutine ub_sgeqrf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -20967,7 +20967,7 @@ subroutine ub_sgeqrf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqrf(m,n,a,lda,tau,work,lwork,info)
-end subroutine sgeqrf
+end subroutine ub_sgeqrf
 
 subroutine ub_sgeqrfp(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -20986,7 +20986,7 @@ subroutine ub_sgeqrfp(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqrfp(m,n,a,lda,tau,work,lwork,info)
-end subroutine sgeqrfp
+end subroutine ub_sgeqrfp
 
 subroutine ub_sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -21008,7 +21008,7 @@ subroutine ub_sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine sgeqrs
+end subroutine ub_sgeqrs
 
 subroutine ub_sgeqrt2(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -21026,7 +21026,7 @@ subroutine ub_sgeqrt2(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call sgeqrt2(m,n,a,lda,t,ldt,info)
-end subroutine sgeqrt2
+end subroutine ub_sgeqrt2
 
 subroutine ub_sgeqrt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -21044,7 +21044,7 @@ subroutine ub_sgeqrt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call sgeqrt3(m,n,a,lda,t,ldt,info)
-end subroutine sgeqrt3
+end subroutine ub_sgeqrt3
 
 subroutine ub_sgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -21064,7 +21064,7 @@ subroutine ub_sgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call sgeqrt(m,n,nb,a,lda,t,ldt,work,info)
-end subroutine sgeqrt
+end subroutine ub_sgeqrt
 
 subroutine ub_sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -21092,7 +21092,7 @@ subroutine ub_sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,
   integer(blas77_int) :: info
 
   call sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine sgerfs
+end subroutine ub_sgerfs
 
 subroutine ub_sgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -21128,7 +21128,7 @@ subroutine ub_sgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcon
   integer(blas77_int) :: info
 
   call sgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sgerfsx
+end subroutine ub_sgerfsx
 
 subroutine ub_sgerq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -21146,7 +21146,7 @@ subroutine ub_sgerq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sgerq2(m,n,a,lda,tau,work,info)
-end subroutine sgerq2
+end subroutine ub_sgerq2
 
 subroutine ub_sgerqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -21165,7 +21165,7 @@ subroutine ub_sgerqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgerqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine sgerqf
+end subroutine ub_sgerqf
 
 subroutine ub_sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   use blas77_types
@@ -21190,7 +21190,7 @@ subroutine ub_sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   integer(blas77_int) :: info
 
   call sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
-end subroutine sgesdd
+end subroutine ub_sgesdd
 
 subroutine ub_sgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -21209,7 +21209,7 @@ subroutine ub_sgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine sgesv
+end subroutine ub_sgesv
 
 subroutine ub_sgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
   use blas77_types
@@ -21234,7 +21234,7 @@ subroutine ub_sgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info)
-end subroutine sgesvd
+end subroutine ub_sgesvd
 
 subroutine ub_sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info)
   use blas77_types
@@ -21267,7 +21267,7 @@ subroutine ub_sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,i
   integer(blas77_int) :: info
 
   call sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info)
-end subroutine sgesvdq
+end subroutine ub_sgesvdq
 
 subroutine ub_sgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
   use blas77_types
@@ -21299,7 +21299,7 @@ subroutine ub_sgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,
   integer(blas77_int) :: info
 
   call sgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info)
-end subroutine sgesvdx
+end subroutine ub_sgesvdx
 
 subroutine ub_sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
   use blas77_types
@@ -21324,7 +21324,7 @@ subroutine ub_sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info)
-end subroutine sgesvj
+end subroutine ub_sgesvj
 
 subroutine ub_sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -21357,7 +21357,7 @@ subroutine ub_sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,
   integer(blas77_int) :: info
 
   call sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sgesvx
+end subroutine ub_sgesvx
 
 subroutine ub_sgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -21395,7 +21395,7 @@ subroutine ub_sgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx
   integer(blas77_int) :: info
 
   call sgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sgesvxx
+end subroutine ub_sgesvxx
 
 subroutine ub_sgetf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -21412,7 +21412,7 @@ subroutine ub_sgetf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call sgetf2(m,n,a,lda,ipiv,info)
-end subroutine sgetf2
+end subroutine ub_sgetf2
 
 subroutine ub_sgetrf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -21429,7 +21429,7 @@ subroutine ub_sgetrf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call sgetrf2(m,n,a,lda,ipiv,info)
-end subroutine sgetrf2
+end subroutine ub_sgetrf2
 
 subroutine ub_sgetrf(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -21446,7 +21446,7 @@ subroutine ub_sgetrf(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call sgetrf(m,n,a,lda,ipiv,info)
-end subroutine sgetrf
+end subroutine ub_sgetrf
 
 subroutine ub_sgetri(n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -21464,7 +21464,7 @@ subroutine ub_sgetri(n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgetri(n,a,lda,ipiv,work,lwork,info)
-end subroutine sgetri
+end subroutine ub_sgetri
 
 subroutine ub_sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -21484,7 +21484,7 @@ subroutine ub_sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine sgetrs
+end subroutine ub_sgetrs
 
 subroutine ub_sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -21506,7 +21506,7 @@ subroutine ub_sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine sgetsls
+end subroutine ub_sgetsls
 
 subroutine ub_sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -21529,7 +21529,7 @@ subroutine ub_sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
-end subroutine sgetsqrhrt
+end subroutine ub_sgetsqrhrt
 
 subroutine ub_sggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   use blas77_types
@@ -21551,7 +21551,7 @@ subroutine ub_sggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call sggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
-end subroutine sggbak
+end subroutine ub_sggbak
 
 subroutine ub_sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   use blas77_types
@@ -21574,7 +21574,7 @@ subroutine ub_sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   integer(blas77_int) :: info
 
   call sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
-end subroutine sggbal
+end subroutine ub_sggbal
 
 subroutine ub_sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
   use blas77_types
@@ -21606,7 +21606,7 @@ subroutine ub_sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,
   integer(blas77_int) :: info
 
   call sgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine sgges3
+end subroutine ub_sgges3
 
 subroutine ub_sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
   use blas77_types
@@ -21638,7 +21638,7 @@ subroutine ub_sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,b
   integer(blas77_int) :: info
 
   call sgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info)
-end subroutine sgges
+end subroutine ub_sgges
 
 subroutine ub_sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -21675,7 +21675,7 @@ subroutine ub_sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,a
   integer(blas77_int) :: info
 
   call sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info)
-end subroutine sggesx
+end subroutine ub_sggesx
 
 subroutine ub_sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -21703,7 +21703,7 @@ subroutine ub_sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldv
   integer(blas77_int) :: info
 
   call sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine sggev3
+end subroutine ub_sggev3
 
 subroutine ub_sggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
   use blas77_types
@@ -21731,7 +21731,7 @@ subroutine ub_sggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr
   integer(blas77_int) :: info
 
   call sggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info)
-end subroutine sggev
+end subroutine ub_sggev
 
 subroutine ub_sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
   use blas77_types
@@ -21771,7 +21771,7 @@ subroutine ub_sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,v
   integer(blas77_int) :: info
 
   call sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info)
-end subroutine sggevx
+end subroutine ub_sggevx
 
 subroutine ub_sggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   use blas77_types
@@ -21795,7 +21795,7 @@ subroutine ub_sggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   integer(blas77_int) :: info
 
   call sggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
-end subroutine sggglm
+end subroutine ub_sggglm
 
 subroutine ub_sgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -21822,7 +21822,7 @@ subroutine ub_sgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,in
   integer(blas77_int) :: info
 
   call sgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
-end subroutine sgghd3
+end subroutine ub_sgghd3
 
 subroutine ub_sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   use blas77_types
@@ -21847,7 +21847,7 @@ subroutine ub_sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   integer(blas77_int) :: info
 
   call sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
-end subroutine sgghrd
+end subroutine ub_sgghrd
 
 subroutine ub_sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   use blas77_types
@@ -21871,7 +21871,7 @@ subroutine ub_sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   integer(blas77_int) :: info
 
   call sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
-end subroutine sgglse
+end subroutine ub_sgglse
 
 subroutine ub_sggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -21894,7 +21894,7 @@ subroutine ub_sggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call sggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine sggqrf
+end subroutine ub_sggqrf
 
 subroutine ub_sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -21917,7 +21917,7 @@ subroutine ub_sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine sggrqf
+end subroutine ub_sggrqf
 
 subroutine ub_sggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info)
   use blas77_types
@@ -21952,7 +21952,7 @@ subroutine ub_sggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ld
   integer(blas77_int) :: info
 
   call sggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info)
-end subroutine sggsvd3
+end subroutine ub_sggsvd3
 
 subroutine ub_sggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info)
   use blas77_types
@@ -21986,7 +21986,7 @@ subroutine ub_sggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call sggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info)
-end subroutine sggsvd
+end subroutine ub_sggsvd
 
 subroutine ub_sggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info)
   use blas77_types
@@ -22022,7 +22022,7 @@ subroutine ub_sggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call sggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info)
-end subroutine sggsvp3
+end subroutine ub_sggsvp3
 
 subroutine ub_sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info)
   use blas77_types
@@ -22057,7 +22057,7 @@ subroutine ub_sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,
   integer(blas77_int) :: info
 
   call sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info)
-end subroutine sggsvp
+end subroutine ub_sggsvp
 
 subroutine ub_sgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -22085,7 +22085,7 @@ subroutine ub_sgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   integer(blas77_int) :: info
 
   call sgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine sgsvj0
+end subroutine ub_sgsvj0
 
 subroutine ub_sgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -22114,7 +22114,7 @@ subroutine ub_sgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,
   integer(blas77_int) :: info
 
   call sgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine sgsvj1
+end subroutine ub_sgsvj1
 
 subroutine ub_sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -22137,7 +22137,7 @@ subroutine ub_sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info)
-end subroutine sgtcon
+end subroutine ub_sgtcon
 
 subroutine ub_sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -22168,7 +22168,7 @@ subroutine ub_sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,b
   integer(blas77_int) :: info
 
   call sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine sgtrfs
+end subroutine ub_sgtrfs
 
 subroutine ub_sgtsv(n,nrhs,dl,d,du,b,ldb,info)
   use blas77_types
@@ -22187,7 +22187,7 @@ subroutine ub_sgtsv(n,nrhs,dl,d,du,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgtsv(n,nrhs,dl,d,du,b,ldb,info)
-end subroutine sgtsv
+end subroutine ub_sgtsv
 
 subroutine ub_sgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -22220,7 +22220,7 @@ subroutine ub_sgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call sgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sgtsvx
+end subroutine ub_sgtsvx
 
 subroutine ub_sgttrf(n,dl,d,du,du2,ipiv,info)
   use blas77_types
@@ -22238,7 +22238,7 @@ subroutine ub_sgttrf(n,dl,d,du,du2,ipiv,info)
   integer(blas77_int) :: info
 
   call sgttrf(n,dl,d,du,du2,ipiv,info)
-end subroutine sgttrf
+end subroutine ub_sgttrf
 
 subroutine ub_sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   use blas77_types
@@ -22260,7 +22260,7 @@ subroutine ub_sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
-end subroutine sgttrs
+end subroutine ub_sgttrs
 
 subroutine ub_sgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   use blas77_types
@@ -22281,7 +22281,7 @@ subroutine ub_sgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   real(blas77_f32) :: b(ldb,*)
 
   call sgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
-end subroutine sgtts2
+end subroutine ub_sgtts2
 
 subroutine ub_shgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -22312,7 +22312,7 @@ subroutine ub_shgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,
   integer(blas77_int) :: info
 
   call shgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info)
-end subroutine shgeqz
+end subroutine ub_shgeqz
 
 subroutine ub_shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info)
   use blas77_types
@@ -22342,7 +22342,7 @@ subroutine ub_shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m
   integer(blas77_int) :: info
 
   call shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info)
-end subroutine shsein
+end subroutine ub_shsein
 
 subroutine ub_shseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
   use blas77_types
@@ -22367,7 +22367,7 @@ subroutine ub_shseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call shseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info)
-end subroutine shseqr
+end subroutine ub_shseqr
 
 subroutine ub_sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   use blas77_types
@@ -22391,7 +22391,7 @@ subroutine ub_sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
-end subroutine sla_gbamv
+end subroutine ub_sla_gbamv
 
 function ub_sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -22417,7 +22417,7 @@ function ub_sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,i
   real(blas77_f32) :: ub_sla_gbrcond
 
   ub_sla_gbrcond = sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork)
-end function sla_gbrcond
+end function ub_sla_gbrcond
 
 subroutine ub_sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -22459,7 +22459,7 @@ subroutine ub_sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: info
 
   call sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine sla_gbrfsx_extended
+end subroutine ub_sla_gbrfsx_extended
 
 function ub_sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   use blas77_types
@@ -22479,7 +22479,7 @@ function ub_sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   real(blas77_f32) :: ub_sla_gbrpvgrw
 
   ub_sla_gbrpvgrw = sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
-end function sla_gbrpvgrw
+end function ub_sla_gbrpvgrw
 
 subroutine ub_sla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -22501,7 +22501,7 @@ subroutine ub_sla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine sla_geamv
+end subroutine ub_sla_geamv
 
 function ub_sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -22525,7 +22525,7 @@ function ub_sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   real(blas77_f32) :: ub_sla_gercond
 
   ub_sla_gercond = sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
-end function sla_gercond
+end function ub_sla_gercond
 
 subroutine ub_sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -22565,7 +22565,7 @@ subroutine ub_sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: info
 
   call sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine sla_gerfsx_extended
+end subroutine ub_sla_gerfsx_extended
 
 function ub_sla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   use blas77_types
@@ -22583,7 +22583,7 @@ function ub_sla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   real(blas77_f32) :: ub_sla_gerpvgrw
 
   ub_sla_gerpvgrw = sla_gerpvgrw(n,ncols,a,lda,af,ldaf)
-end function sla_gerpvgrw
+end function ub_sla_gerpvgrw
 
 subroutine ub_sla_lin_berr(n,nz,nrhs,res,ayb,berr)
   use blas77_types
@@ -22600,7 +22600,7 @@ subroutine ub_sla_lin_berr(n,nz,nrhs,res,ayb,berr)
   real(blas77_f32) :: berr(nrhs)
 
   call sla_lin_berr(n,nz,nrhs,res,ayb,berr)
-end subroutine sla_lin_berr
+end subroutine ub_sla_lin_berr
 
 function ub_sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
   use blas77_types
@@ -22623,7 +22623,7 @@ function ub_sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
   real(blas77_f32) :: ub_sla_porcond
 
   ub_sla_porcond = sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork)
-end function sla_porcond
+end function ub_sla_porcond
 
 subroutine ub_sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -22662,7 +22662,7 @@ subroutine ub_sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: info
 
   call sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine sla_porfsx_extended
+end subroutine ub_sla_porfsx_extended
 
 function ub_sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   use blas77_types
@@ -22681,7 +22681,7 @@ function ub_sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   real(blas77_f32) :: ub_sla_porpvgrw
 
   ub_sla_porpvgrw = sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
-end function sla_porpvgrw
+end function ub_sla_porpvgrw
 
 subroutine ub_sla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -22702,7 +22702,7 @@ subroutine ub_sla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine sla_syamv
+end subroutine ub_sla_syamv
 
 function ub_sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   use blas77_types
@@ -22726,7 +22726,7 @@ function ub_sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
   real(blas77_f32) :: ub_sla_syrcond
 
   ub_sla_syrcond = sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork)
-end function sla_syrcond
+end function ub_sla_syrcond
 
 subroutine ub_sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -22766,7 +22766,7 @@ subroutine ub_sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine sla_syrfsx_extended
+end subroutine ub_sla_syrfsx_extended
 
 function ub_sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -22787,7 +22787,7 @@ function ub_sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f32) :: ub_sla_syrpvgrw
 
   ub_sla_syrpvgrw = sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function sla_syrpvgrw
+end function ub_sla_syrpvgrw
 
 subroutine ub_sla_wwaddw(n,x,y,w)
   use blas77_types
@@ -22802,7 +22802,7 @@ subroutine ub_sla_wwaddw(n,x,y,w)
   real(blas77_f32) :: w(*)
 
   call sla_wwaddw(n,x,y,w)
-end subroutine sla_wwaddw
+end subroutine ub_sla_wwaddw
 
 subroutine ub_slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
   use blas77_types
@@ -22825,7 +22825,7 @@ subroutine ub_slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
   integer(blas77_int) :: info
 
   call slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info)
-end subroutine slaed0
+end subroutine ub_slaed0
 
 subroutine ub_slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
   use blas77_types
@@ -22846,7 +22846,7 @@ subroutine ub_slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
   integer(blas77_int) :: info
 
   call slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info)
-end subroutine slaed1
+end subroutine ub_slaed1
 
 subroutine ub_slaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info)
   use blas77_types
@@ -22874,7 +22874,7 @@ subroutine ub_slaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,co
   integer(blas77_int) :: info
 
   call slaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info)
-end subroutine slaed2
+end subroutine ub_slaed2
 
 subroutine ub_slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
   use blas77_types
@@ -22899,7 +22899,7 @@ subroutine ub_slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
   integer(blas77_int) :: info
 
   call slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info)
-end subroutine slaed3
+end subroutine ub_slaed3
 
 subroutine ub_slaed4(n,i,d,z,delta,rho,dlam,info)
   use blas77_types
@@ -22918,7 +22918,7 @@ subroutine ub_slaed4(n,i,d,z,delta,rho,dlam,info)
   integer(blas77_int) :: info
 
   call slaed4(n,i,d,z,delta,rho,dlam,info)
-end subroutine slaed4
+end subroutine ub_slaed4
 
 subroutine ub_slaed5(i,d,z,delta,rho,dlam)
   use blas77_types
@@ -22935,7 +22935,7 @@ subroutine ub_slaed5(i,d,z,delta,rho,dlam)
   real(blas77_f32) :: dlam
 
   call slaed5(i,d,z,delta,rho,dlam)
-end subroutine slaed5
+end subroutine ub_slaed5
 
 subroutine ub_slaed6(kniter,orgati,rho,d,z,finit,tau,info)
   use blas77_types
@@ -22954,7 +22954,7 @@ subroutine ub_slaed6(kniter,orgati,rho,d,z,finit,tau,info)
   integer(blas77_int) :: info
 
   call slaed6(kniter,orgati,rho,d,z,finit,tau,info)
-end subroutine slaed6
+end subroutine ub_slaed6
 
 subroutine ub_slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info)
   use blas77_types
@@ -22987,7 +22987,7 @@ subroutine ub_slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,
   integer(blas77_int) :: info
 
   call slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info)
-end subroutine slaed7
+end subroutine ub_slaed7
 
 subroutine ub_slaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info)
   use blas77_types
@@ -23020,7 +23020,7 @@ subroutine ub_slaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,
   integer(blas77_int) :: info
 
   call slaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info)
-end subroutine slaed8
+end subroutine ub_slaed8
 
 subroutine ub_slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
   use blas77_types
@@ -23044,7 +23044,7 @@ subroutine ub_slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
   integer(blas77_int) :: info
 
   call slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info)
-end subroutine slaed9
+end subroutine ub_slaed9
 
 subroutine ub_slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info)
   use blas77_types
@@ -23069,7 +23069,7 @@ subroutine ub_slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qp
   integer(blas77_int) :: info
 
   call slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info)
-end subroutine slaeda
+end subroutine ub_slaeda
 
 subroutine ub_slagtf(n,a,lambda,b,c,tol,d,in,info)
   use blas77_types
@@ -23089,7 +23089,7 @@ subroutine ub_slagtf(n,a,lambda,b,c,tol,d,in,info)
   integer(blas77_int) :: info
 
   call slagtf(n,a,lambda,b,c,tol,d,in,info)
-end subroutine slagtf
+end subroutine ub_slagtf
 
 subroutine ub_slals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info)
   use blas77_types
@@ -23124,7 +23124,7 @@ subroutine ub_slals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldg
   integer(blas77_int) :: info
 
   call slals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info)
-end subroutine slals0
+end subroutine ub_slals0
 
 subroutine ub_slalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info)
   use blas77_types
@@ -23161,7 +23161,7 @@ subroutine ub_slalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,p
   integer(blas77_int) :: info
 
   call slalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info)
-end subroutine slalsa
+end subroutine ub_slalsa
 
 subroutine ub_slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
   use blas77_types
@@ -23185,7 +23185,7 @@ subroutine ub_slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
   integer(blas77_int) :: info
 
   call slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info)
-end subroutine slalsd
+end subroutine ub_slalsd
 
 subroutine ub_slamrg(n1,n2,a,strd1,strd2,index)
   use blas77_types
@@ -23202,7 +23202,7 @@ subroutine ub_slamrg(n1,n2,a,strd1,strd2,index)
   integer(blas77_int) :: index(*)
 
   call slamrg(n1,n2,a,strd1,strd2,index)
-end subroutine slamrg
+end subroutine ub_slamrg
 
 subroutine ub_slamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -23229,7 +23229,7 @@ subroutine ub_slamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call slamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine slamswlq
+end subroutine ub_slamswlq
 
 subroutine ub_slamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -23256,7 +23256,7 @@ subroutine ub_slamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call slamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine slamtsqr
+end subroutine ub_slamtsqr
 
 function ub_slansf(norm,transr,uplo,n,a,work)
   use blas77_types
@@ -23274,7 +23274,7 @@ function ub_slansf(norm,transr,uplo,n,a,work)
   real(blas77_f32) :: ub_slansf
 
   ub_slansf = slansf(norm,transr,uplo,n,a,work)
-end function slansf
+end function ub_slansf
 
 subroutine ub_slaorhr_col_getrfnp2(m,n,a,lda,d,info)
   use blas77_types
@@ -23291,7 +23291,7 @@ subroutine ub_slaorhr_col_getrfnp2(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call slaorhr_col_getrfnp2(m,n,a,lda,d,info)
-end subroutine slaorhr_col_getrfnp2
+end subroutine ub_slaorhr_col_getrfnp2
 
 subroutine ub_slaorhr_col_getrfnp(m,n,a,lda,d,info)
   use blas77_types
@@ -23308,7 +23308,7 @@ subroutine ub_slaorhr_col_getrfnp(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call slaorhr_col_getrfnp(m,n,a,lda,d,info)
-end subroutine slaorhr_col_getrfnp
+end subroutine ub_slaorhr_col_getrfnp
 
 subroutine ub_slaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info)
   use blas77_types
@@ -23340,7 +23340,7 @@ subroutine ub_slaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,
   integer(blas77_int),intent(out) :: info
 
   call slaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info)
-end subroutine slaqz0
+end subroutine ub_slaqz0
 
 subroutine ub_slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
   use blas77_types
@@ -23361,7 +23361,7 @@ subroutine ub_slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
   real(blas77_f32),intent(out) :: v(*)
 
   call slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v)
-end subroutine slaqz1
+end subroutine ub_slaqz1
 
 subroutine ub_slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
   use blas77_types
@@ -23390,7 +23390,7 @@ subroutine ub_slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
   real(blas77_f32) :: z(ldz,*)
 
   call slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
-end subroutine slaqz2
+end subroutine ub_slaqz2
 
 subroutine ub_slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info)
   use blas77_types
@@ -23429,7 +23429,7 @@ subroutine ub_slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
   integer(blas77_int),intent(out) :: info
 
   call slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info)
-end subroutine slaqz3
+end subroutine ub_slaqz3
 
 subroutine ub_slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
   use blas77_types
@@ -23466,7 +23466,7 @@ subroutine ub_slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a
   integer(blas77_int),intent(out) :: info
 
   call slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
-end subroutine slaqz4
+end subroutine ub_slaqz4
 
 subroutine ub_slarfy(uplo,n,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -23485,7 +23485,7 @@ subroutine ub_slarfy(uplo,n,v,incv,tau,c,ldc,work)
   real(blas77_f32) :: work(*)
 
   call slarfy(uplo,n,v,incv,tau,c,ldc,work)
-end subroutine slarfy
+end subroutine ub_slarfy
 
 function ub_slarmm(anorm,bnorm,cnorm)
   use blas77_types
@@ -23500,7 +23500,7 @@ function ub_slarmm(anorm,bnorm,cnorm)
   real(blas77_f32) :: ub_slarmm
 
   ub_slarmm = slarmm(anorm,bnorm,cnorm)
-end function slarmm
+end function ub_slarmm
 
 subroutine ub_slarscl2(m,n,d,x,ldx)
   use blas77_types
@@ -23516,7 +23516,7 @@ subroutine ub_slarscl2(m,n,d,x,ldx)
   real(blas77_f32) :: x(ldx,*)
 
   call slarscl2(m,n,d,x,ldx)
-end subroutine slarscl2
+end subroutine ub_slarscl2
 
 subroutine ub_slartgs(x,y,sigma,cs,sn)
   use blas77_types
@@ -23532,7 +23532,7 @@ subroutine ub_slartgs(x,y,sigma,cs,sn)
   real(blas77_f32) :: sn
 
   call slartgs(x,y,sigma,cs,sn)
-end subroutine slartgs
+end subroutine ub_slartgs
 
 subroutine ub_slarz(side,m,n,l,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -23553,7 +23553,7 @@ subroutine ub_slarz(side,m,n,l,v,incv,tau,c,ldc,work)
   real(blas77_f32) :: work(*)
 
   call slarz(side,m,n,l,v,incv,tau,c,ldc,work)
-end subroutine slarz
+end subroutine ub_slarz
 
 subroutine ub_slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
   use blas77_types
@@ -23580,7 +23580,7 @@ subroutine ub_slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldw
   real(blas77_f32) :: work(ldwork,*)
 
   call slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
-end subroutine slarzb
+end subroutine ub_slarzb
 
 subroutine ub_slarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   use blas77_types
@@ -23600,7 +23600,7 @@ subroutine ub_slarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   real(blas77_f32) :: t(ldt,*)
 
   call slarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
-end subroutine slarzt
+end subroutine ub_slarzt
 
 subroutine ub_slascl2(m,n,d,x,ldx)
   use blas77_types
@@ -23616,7 +23616,7 @@ subroutine ub_slascl2(m,n,d,x,ldx)
   real(blas77_f32) :: x(ldx,*)
 
   call slascl2(m,n,d,x,ldx)
-end subroutine slascl2
+end subroutine ub_slascl2
 
 subroutine ub_slasq1(n,d,e,work,info)
   use blas77_types
@@ -23632,7 +23632,7 @@ subroutine ub_slasq1(n,d,e,work,info)
   integer(blas77_int) :: info
 
   call slasq1(n,d,e,work,info)
-end subroutine slasq1
+end subroutine ub_slasq1
 
 subroutine ub_slasq2(n,z,info)
   use blas77_types
@@ -23646,7 +23646,7 @@ subroutine ub_slasq2(n,z,info)
   integer(blas77_int) :: info
 
   call slasq2(n,z,info)
-end subroutine slasq2
+end subroutine ub_slasq2
 
 subroutine ub_slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau)
   use blas77_types
@@ -23677,7 +23677,7 @@ subroutine ub_slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype
   real(blas77_f32) :: tau
 
   call slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau)
-end subroutine slasq3
+end subroutine ub_slasq3
 
 subroutine ub_slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
   use blas77_types
@@ -23702,7 +23702,7 @@ subroutine ub_slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
   real(blas77_f32) :: g
 
   call slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g)
-end subroutine slasq4
+end subroutine ub_slasq4
 
 subroutine ub_slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
   use blas77_types
@@ -23727,7 +23727,7 @@ subroutine ub_slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps
   real(blas77_f32) :: eps
 
   call slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps)
-end subroutine slasq5
+end subroutine ub_slasq5
 
 subroutine ub_slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
   use blas77_types
@@ -23748,7 +23748,7 @@ subroutine ub_slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
   real(blas77_f32) :: dnm2
 
   call slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2)
-end subroutine slasq6
+end subroutine ub_slasq6
 
 subroutine ub_slasrt(id,n,d,info)
   use blas77_types
@@ -23763,7 +23763,7 @@ subroutine ub_slasrt(id,n,d,info)
   integer(blas77_int) :: info
 
   call slasrt(id,n,d,info)
-end subroutine slasrt
+end subroutine ub_slasrt
 
 subroutine ub_slaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -23785,7 +23785,7 @@ subroutine ub_slaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call slaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine slaswlq
+end subroutine ub_slaswlq
 
 subroutine ub_slasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -23806,7 +23806,7 @@ subroutine ub_slasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   real(blas77_f32) :: work(*)
 
   call slasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine slasyf_aa
+end subroutine ub_slasyf_aa
 
 subroutine ub_slasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -23827,7 +23827,7 @@ subroutine ub_slasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call slasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine slasyf
+end subroutine ub_slasyf
 
 subroutine ub_slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -23849,7 +23849,7 @@ subroutine ub_slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine slasyf_rk
+end subroutine ub_slasyf_rk
 
 subroutine ub_slasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -23870,7 +23870,7 @@ subroutine ub_slasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call slasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine slasyf_rook
+end subroutine ub_slasyf_rook
 
 subroutine ub_slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
   use blas77_types
@@ -23896,7 +23896,7 @@ subroutine ub_slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work
   integer(blas77_int) :: info
 
   call slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
-end subroutine slatrs3
+end subroutine ub_slatrs3
 
 subroutine ub_slatrz(m,n,l,a,lda,tau,work)
   use blas77_types
@@ -23914,7 +23914,7 @@ subroutine ub_slatrz(m,n,l,a,lda,tau,work)
   real(blas77_f32) :: work(*)
 
   call slatrz(m,n,l,a,lda,tau,work)
-end subroutine slatrz
+end subroutine ub_slatrz
 
 subroutine ub_slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -23936,7 +23936,7 @@ subroutine ub_slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine slatsqr
+end subroutine ub_slatsqr
 
 subroutine ub_slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   use blas77_types
@@ -23957,7 +23957,7 @@ subroutine ub_slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   real(blas77_f32) :: work(*)
 
   call slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
-end subroutine slatzm
+end subroutine ub_slatzm
 
 subroutine ub_sopgtr(uplo,n,ap,tau,q,ldq,work,info)
   use blas77_types
@@ -23976,7 +23976,7 @@ subroutine ub_sopgtr(uplo,n,ap,tau,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call sopgtr(uplo,n,ap,tau,q,ldq,work,info)
-end subroutine sopgtr
+end subroutine ub_sopgtr
 
 subroutine ub_sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   use blas77_types
@@ -23998,7 +23998,7 @@ subroutine ub_sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
-end subroutine sopmtr
+end subroutine ub_sopmtr
 
 subroutine ub_sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -24024,7 +24024,7 @@ subroutine ub_sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine sorbdb1
+end subroutine ub_sorbdb1
 
 subroutine ub_sorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -24050,7 +24050,7 @@ subroutine ub_sorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call sorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine sorbdb2
+end subroutine ub_sorbdb2
 
 subroutine ub_sorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -24076,7 +24076,7 @@ subroutine ub_sorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call sorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine sorbdb3
+end subroutine ub_sorbdb3
 
 subroutine ub_sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
   use blas77_types
@@ -24103,7 +24103,7 @@ subroutine ub_sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phan
   integer(blas77_int) :: info
 
   call sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
-end subroutine sorbdb4
+end subroutine ub_sorbdb4
 
 subroutine ub_sorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -24128,7 +24128,7 @@ subroutine ub_sorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine sorbdb5
+end subroutine ub_sorbdb5
 
 subroutine ub_sorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -24153,7 +24153,7 @@ subroutine ub_sorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine sorbdb6
+end subroutine ub_sorbdb6
 
 subroutine ub_sorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
   use blas77_types
@@ -24186,7 +24186,7 @@ subroutine ub_sorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,t
   integer(blas77_int) :: info
 
   call sorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
-end subroutine sorbdb
+end subroutine ub_sorbdb
 
 subroutine ub_sorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info)
   use blas77_types
@@ -24218,7 +24218,7 @@ subroutine ub_sorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,l
   integer(blas77_int) :: info
 
   call sorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info)
-end subroutine sorcsd2by1
+end subroutine ub_sorcsd2by1
 
 subroutine ub_sorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info)
   use blas77_types
@@ -24259,7 +24259,7 @@ subroutine ub_sorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,l
   integer(blas77_int) :: info
 
   call sorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info)
-end subroutine sorcsd
+end subroutine ub_sorcsd
 
 subroutine ub_sorg2l(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -24278,7 +24278,7 @@ subroutine ub_sorg2l(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sorg2l(m,n,k,a,lda,tau,work,info)
-end subroutine sorg2l
+end subroutine ub_sorg2l
 
 subroutine ub_sorg2r(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -24297,7 +24297,7 @@ subroutine ub_sorg2r(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sorg2r(m,n,k,a,lda,tau,work,info)
-end subroutine sorg2r
+end subroutine ub_sorg2r
 
 subroutine ub_sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24318,7 +24318,7 @@ subroutine ub_sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info)
-end subroutine sorgbr
+end subroutine ub_sorgbr
 
 subroutine ub_sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24338,7 +24338,7 @@ subroutine ub_sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine sorghr
+end subroutine ub_sorghr
 
 subroutine ub_sorgl2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -24357,7 +24357,7 @@ subroutine ub_sorgl2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sorgl2(m,n,k,a,lda,tau,work,info)
-end subroutine sorgl2
+end subroutine ub_sorgl2
 
 subroutine ub_sorglq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24377,7 +24377,7 @@ subroutine ub_sorglq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorglq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine sorglq
+end subroutine ub_sorglq
 
 subroutine ub_sorgql(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24397,7 +24397,7 @@ subroutine ub_sorgql(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgql(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine sorgql
+end subroutine ub_sorgql
 
 subroutine ub_sorgqr(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24417,7 +24417,7 @@ subroutine ub_sorgqr(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgqr(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine sorgqr
+end subroutine ub_sorgqr
 
 subroutine ub_sorgr2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -24436,7 +24436,7 @@ subroutine ub_sorgr2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call sorgr2(m,n,k,a,lda,tau,work,info)
-end subroutine sorgr2
+end subroutine ub_sorgr2
 
 subroutine ub_sorgrq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24456,7 +24456,7 @@ subroutine ub_sorgrq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgrq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine sorgrq
+end subroutine ub_sorgrq
 
 subroutine ub_sorgtr(uplo,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -24475,7 +24475,7 @@ subroutine ub_sorgtr(uplo,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgtr(uplo,n,a,lda,tau,work,lwork,info)
-end subroutine sorgtr
+end subroutine ub_sorgtr
 
 subroutine ub_sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -24497,7 +24497,7 @@ subroutine ub_sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine sorgtsqr
+end subroutine ub_sorgtsqr
 
 subroutine ub_sorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -24519,7 +24519,7 @@ subroutine ub_sorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine sorgtsqr_row
+end subroutine ub_sorgtsqr_row
 
 subroutine ub_sorhr_col(m,n,nb,a,lda,t,ldt,d,info)
   use blas77_types
@@ -24539,7 +24539,7 @@ subroutine ub_sorhr_col(m,n,nb,a,lda,t,ldt,d,info)
   integer(blas77_int) :: info
 
   call sorhr_col(m,n,nb,a,lda,t,ldt,d,info)
-end subroutine sorhr_col
+end subroutine ub_sorhr_col
 
 subroutine ub_sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   use blas77_types
@@ -24563,7 +24563,7 @@ subroutine ub_sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
-end subroutine sorm22
+end subroutine ub_sorm22
 
 subroutine ub_sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -24586,7 +24586,7 @@ subroutine ub_sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine sorm2l
+end subroutine ub_sorm2l
 
 subroutine ub_sorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -24609,7 +24609,7 @@ subroutine ub_sorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine sorm2r
+end subroutine ub_sorm2r
 
 subroutine ub_sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24634,7 +24634,7 @@ subroutine ub_sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormbr
+end subroutine ub_sormbr
 
 subroutine ub_sormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24659,7 +24659,7 @@ subroutine ub_sormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormhr
+end subroutine ub_sormhr
 
 subroutine ub_sorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -24682,7 +24682,7 @@ subroutine ub_sorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine sorml2
+end subroutine ub_sorml2
 
 subroutine ub_sormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24706,7 +24706,7 @@ subroutine ub_sormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormlq
+end subroutine ub_sormlq
 
 subroutine ub_sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24730,7 +24730,7 @@ subroutine ub_sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormql
+end subroutine ub_sormql
 
 subroutine ub_sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24754,7 +24754,7 @@ subroutine ub_sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormqr
+end subroutine ub_sormqr
 
 subroutine ub_sormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -24777,7 +24777,7 @@ subroutine ub_sormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine sormr2
+end subroutine ub_sormr2
 
 subroutine ub_sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -24801,7 +24801,7 @@ subroutine ub_sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
-end subroutine sormr3
+end subroutine ub_sormr3
 
 subroutine ub_sormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24825,7 +24825,7 @@ subroutine ub_sormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormrq
+end subroutine ub_sormrq
 
 subroutine ub_sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24850,7 +24850,7 @@ subroutine ub_sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormrz
+end subroutine ub_sormrz
 
 subroutine ub_sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -24874,7 +24874,7 @@ subroutine ub_sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine sormtr
+end subroutine ub_sormtr
 
 subroutine ub_spbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -24895,7 +24895,7 @@ subroutine ub_spbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call spbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info)
-end subroutine spbcon
+end subroutine ub_spbcon
 
 subroutine ub_spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   use blas77_types
@@ -24915,7 +24915,7 @@ subroutine ub_spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
-end subroutine spbequ
+end subroutine ub_spbequ
 
 subroutine ub_spbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -24943,7 +24943,7 @@ subroutine ub_spbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work
   integer(blas77_int) :: info
 
   call spbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine spbrfs
+end subroutine ub_spbrfs
 
 subroutine ub_spbstf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -24960,7 +24960,7 @@ subroutine ub_spbstf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call spbstf(uplo,n,kd,ab,ldab,info)
-end subroutine spbstf
+end subroutine ub_spbstf
 
 subroutine ub_spbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -24980,7 +24980,7 @@ subroutine ub_spbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call spbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine spbsv
+end subroutine ub_spbsv
 
 subroutine ub_spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -25012,7 +25012,7 @@ subroutine ub_spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine spbsvx
+end subroutine ub_spbsvx
 
 subroutine ub_spbtf2(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -25029,7 +25029,7 @@ subroutine ub_spbtf2(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call spbtf2(uplo,n,kd,ab,ldab,info)
-end subroutine spbtf2
+end subroutine ub_spbtf2
 
 subroutine ub_spbtrf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -25046,7 +25046,7 @@ subroutine ub_spbtrf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call spbtrf(uplo,n,kd,ab,ldab,info)
-end subroutine spbtrf
+end subroutine ub_spbtrf
 
 subroutine ub_spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -25066,7 +25066,7 @@ subroutine ub_spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine spbtrs
+end subroutine ub_spbtrs
 
 subroutine ub_spftrf(transr,uplo,n,a,info)
   use blas77_types
@@ -25082,7 +25082,7 @@ subroutine ub_spftrf(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call spftrf(transr,uplo,n,a,info)
-end subroutine spftrf
+end subroutine ub_spftrf
 
 subroutine ub_spftri(transr,uplo,n,a,info)
   use blas77_types
@@ -25098,7 +25098,7 @@ subroutine ub_spftri(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call spftri(transr,uplo,n,a,info)
-end subroutine spftri
+end subroutine ub_spftri
 
 subroutine ub_spftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   use blas77_types
@@ -25117,7 +25117,7 @@ subroutine ub_spftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   integer(blas77_int) :: info
 
   call spftrs(transr,uplo,n,nrhs,a,b,ldb,info)
-end subroutine spftrs
+end subroutine ub_spftrs
 
 subroutine ub_spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -25137,7 +25137,7 @@ subroutine ub_spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info)
-end subroutine spocon
+end subroutine ub_spocon
 
 subroutine ub_spoequ(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -25155,7 +25155,7 @@ subroutine ub_spoequ(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call spoequ(n,a,lda,s,scond,amax,info)
-end subroutine spoequ
+end subroutine ub_spoequ
 
 subroutine ub_spoequb(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -25173,7 +25173,7 @@ subroutine ub_spoequb(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call spoequb(n,a,lda,s,scond,amax,info)
-end subroutine spoequb
+end subroutine ub_spoequb
 
 subroutine ub_sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -25200,7 +25200,7 @@ subroutine ub_sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: info
 
   call sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine sporfs
+end subroutine ub_sporfs
 
 subroutine ub_sporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -25234,7 +25234,7 @@ subroutine ub_sporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n
   integer(blas77_int) :: info
 
   call sporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sporfsx
+end subroutine ub_sporfsx
 
 subroutine ub_sposv(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -25253,7 +25253,7 @@ subroutine ub_sposv(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call sposv(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine sposv
+end subroutine ub_sposv
 
 subroutine ub_sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -25284,7 +25284,7 @@ subroutine ub_sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,fe
   integer(blas77_int) :: info
 
   call sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sposvx
+end subroutine ub_sposvx
 
 subroutine ub_sposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -25320,7 +25320,7 @@ subroutine ub_sposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,r
   integer(blas77_int) :: info
 
   call sposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine sposvxx
+end subroutine ub_sposvxx
 
 subroutine ub_spotf2(uplo,n,a,lda,info)
   use blas77_types
@@ -25336,7 +25336,7 @@ subroutine ub_spotf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call spotf2(uplo,n,a,lda,info)
-end subroutine spotf2
+end subroutine ub_spotf2
 
 subroutine ub_spotrf2(uplo,n,a,lda,info)
   use blas77_types
@@ -25352,7 +25352,7 @@ subroutine ub_spotrf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call spotrf2(uplo,n,a,lda,info)
-end subroutine spotrf2
+end subroutine ub_spotrf2
 
 subroutine ub_spotrf(uplo,n,a,lda,info)
   use blas77_types
@@ -25368,7 +25368,7 @@ subroutine ub_spotrf(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call spotrf(uplo,n,a,lda,info)
-end subroutine spotrf
+end subroutine ub_spotrf
 
 subroutine ub_spotri(uplo,n,a,lda,info)
   use blas77_types
@@ -25384,7 +25384,7 @@ subroutine ub_spotri(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call spotri(uplo,n,a,lda,info)
-end subroutine spotri
+end subroutine ub_spotri
 
 subroutine ub_spotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -25403,7 +25403,7 @@ subroutine ub_spotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call spotrs(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine spotrs
+end subroutine ub_spotrs
 
 subroutine ub_sppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -25422,7 +25422,7 @@ subroutine ub_sppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call sppcon(uplo,n,ap,anorm,rcond,work,iwork,info)
-end subroutine sppcon
+end subroutine ub_sppcon
 
 subroutine ub_sppequ(uplo,n,ap,s,scond,amax,info)
   use blas77_types
@@ -25440,7 +25440,7 @@ subroutine ub_sppequ(uplo,n,ap,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call sppequ(uplo,n,ap,s,scond,amax,info)
-end subroutine sppequ
+end subroutine ub_sppequ
 
 subroutine ub_spprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -25465,7 +25465,7 @@ subroutine ub_spprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   integer(blas77_int) :: info
 
   call spprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine spprfs
+end subroutine ub_spprfs
 
 subroutine ub_sppsv(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -25483,7 +25483,7 @@ subroutine ub_sppsv(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call sppsv(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine sppsv
+end subroutine ub_sppsv
 
 subroutine ub_sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -25512,7 +25512,7 @@ subroutine ub_sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr
   integer(blas77_int) :: info
 
   call sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sppsvx
+end subroutine ub_sppsvx
 
 subroutine ub_spptrf(uplo,n,ap,info)
   use blas77_types
@@ -25527,7 +25527,7 @@ subroutine ub_spptrf(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call spptrf(uplo,n,ap,info)
-end subroutine spptrf
+end subroutine ub_spptrf
 
 subroutine ub_spptri(uplo,n,ap,info)
   use blas77_types
@@ -25542,7 +25542,7 @@ subroutine ub_spptri(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call spptri(uplo,n,ap,info)
-end subroutine spptri
+end subroutine ub_spptri
 
 subroutine ub_spptrs(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -25560,7 +25560,7 @@ subroutine ub_spptrs(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call spptrs(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine spptrs
+end subroutine ub_spptrs
 
 subroutine ub_spstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -25580,7 +25580,7 @@ subroutine ub_spstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call spstf2(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine spstf2
+end subroutine ub_spstf2
 
 subroutine ub_spstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -25600,7 +25600,7 @@ subroutine ub_spstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call spstrf(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine spstrf
+end subroutine ub_spstrf
 
 subroutine ub_sptcon(n,d,e,anorm,rcond,work,info)
   use blas77_types
@@ -25618,7 +25618,7 @@ subroutine ub_sptcon(n,d,e,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call sptcon(n,d,e,anorm,rcond,work,info)
-end subroutine sptcon
+end subroutine ub_sptcon
 
 subroutine ub_spteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -25637,7 +25637,7 @@ subroutine ub_spteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call spteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine spteqr
+end subroutine ub_spteqr
 
 subroutine ub_sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
   use blas77_types
@@ -25662,7 +25662,7 @@ subroutine ub_sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
   integer(blas77_int) :: info
 
   call sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info)
-end subroutine sptrfs
+end subroutine ub_sptrfs
 
 subroutine ub_sptsv(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -25680,7 +25680,7 @@ subroutine ub_sptsv(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call sptsv(n,nrhs,d,e,b,ldb,info)
-end subroutine sptsv
+end subroutine ub_sptsv
 
 subroutine ub_sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info)
   use blas77_types
@@ -25707,7 +25707,7 @@ subroutine ub_sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info
   integer(blas77_int) :: info
 
   call sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info)
-end subroutine sptsvx
+end subroutine ub_sptsvx
 
 subroutine ub_spttrf(n,d,e,info)
   use blas77_types
@@ -25722,7 +25722,7 @@ subroutine ub_spttrf(n,d,e,info)
   integer(blas77_int) :: info
 
   call spttrf(n,d,e,info)
-end subroutine spttrf
+end subroutine ub_spttrf
 
 subroutine ub_spttrs(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -25740,7 +25740,7 @@ subroutine ub_spttrs(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call spttrs(n,nrhs,d,e,b,ldb,info)
-end subroutine spttrs
+end subroutine ub_spttrs
 
 subroutine ub_sptts2(n,nrhs,d,e,b,ldb)
   use blas77_types
@@ -25757,7 +25757,7 @@ subroutine ub_sptts2(n,nrhs,d,e,b,ldb)
   real(blas77_f32) :: b(ldb,*)
 
   call sptts2(n,nrhs,d,e,b,ldb)
-end subroutine sptts2
+end subroutine ub_sptts2
 
 subroutine ub_ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
   use blas77_types
@@ -25783,7 +25783,7 @@ subroutine ub_ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   real(blas77_f32) :: work(*)
 
   call ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
-end subroutine ssb2st_kernels
+end subroutine ub_ssb2st_kernels
 
 subroutine ub_ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
   use blas77_types
@@ -25806,7 +25806,7 @@ subroutine ub_ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info)
-end subroutine ssbev_2stage
+end subroutine ub_ssbev_2stage
 
 subroutine ub_ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
   use blas77_types
@@ -25828,7 +25828,7 @@ subroutine ub_ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info)
-end subroutine ssbev
+end subroutine ub_ssbev
 
 subroutine ub_ssbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -25853,7 +25853,7 @@ subroutine ub_ssbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwo
   integer(blas77_int) :: info
 
   call ssbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine ssbevd_2stage
+end subroutine ub_ssbevd_2stage
 
 subroutine ub_ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -25878,7 +25878,7 @@ subroutine ub_ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info
   integer(blas77_int) :: info
 
   call ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine ssbevd
+end subroutine ub_ssbevd
 
 subroutine ub_ssbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -25912,7 +25912,7 @@ subroutine ub_ssbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,absto
   integer(blas77_int) :: info
 
   call ssbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine ssbevx_2stage
+end subroutine ub_ssbevx_2stage
 
 subroutine ub_ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -25945,7 +25945,7 @@ subroutine ub_ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z
   integer(blas77_int) :: info
 
   call ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine ssbevx
+end subroutine ub_ssbevx
 
 subroutine ub_ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
   use blas77_types
@@ -25969,7 +25969,7 @@ subroutine ub_ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
   integer(blas77_int) :: info
 
   call ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info)
-end subroutine ssbgst
+end subroutine ub_ssbgst
 
 subroutine ub_ssbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
   use blas77_types
@@ -25994,7 +25994,7 @@ subroutine ub_ssbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call ssbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info)
-end subroutine ssbgv
+end subroutine ub_ssbgv
 
 subroutine ub_ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26022,7 +26022,7 @@ subroutine ub_ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,
   integer(blas77_int) :: info
 
   call ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine ssbgvd
+end subroutine ub_ssbgvd
 
 subroutine ub_ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -26058,7 +26058,7 @@ subroutine ub_ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,a
   integer(blas77_int) :: info
 
   call ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine ssbgvx
+end subroutine ub_ssbgvx
 
 subroutine ub_ssbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   use blas77_types
@@ -26081,7 +26081,7 @@ subroutine ub_ssbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call ssbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
-end subroutine ssbtrd
+end subroutine ub_ssbtrd
 
 subroutine ub_ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   use blas77_types
@@ -26102,7 +26102,7 @@ subroutine ub_ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   real(blas77_f32) :: c(*)
 
   call ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
-end subroutine ssfrk
+end subroutine ub_ssfrk
 
 subroutine ub_sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -26122,7 +26122,7 @@ subroutine ub_sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info)
-end subroutine sspcon
+end subroutine ub_sspcon
 
 subroutine ub_sspev(jobz,uplo,n,ap,w,z,ldz,work,info)
   use blas77_types
@@ -26142,7 +26142,7 @@ subroutine ub_sspev(jobz,uplo,n,ap,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call sspev(jobz,uplo,n,ap,w,z,ldz,work,info)
-end subroutine sspev
+end subroutine ub_sspev
 
 subroutine ub_sspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26165,7 +26165,7 @@ subroutine ub_sspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call sspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine sspevd
+end subroutine ub_sspevd
 
 subroutine ub_sspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -26194,7 +26194,7 @@ subroutine ub_sspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwor
   integer(blas77_int) :: info
 
   call sspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine sspevx
+end subroutine ub_sspevx
 
 subroutine ub_sspgst(itype,uplo,n,ap,bp,info)
   use blas77_types
@@ -26211,7 +26211,7 @@ subroutine ub_sspgst(itype,uplo,n,ap,bp,info)
   integer(blas77_int) :: info
 
   call sspgst(itype,uplo,n,ap,bp,info)
-end subroutine sspgst
+end subroutine ub_sspgst
 
 subroutine ub_sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
   use blas77_types
@@ -26233,7 +26233,7 @@ subroutine ub_sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info)
-end subroutine sspgv
+end subroutine ub_sspgv
 
 subroutine ub_sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26258,7 +26258,7 @@ subroutine ub_sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,inf
   integer(blas77_int) :: info
 
   call sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine sspgvd
+end subroutine ub_sspgvd
 
 subroutine ub_sspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -26289,7 +26289,7 @@ subroutine ub_sspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,
   integer(blas77_int) :: info
 
   call sspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine sspgvx
+end subroutine ub_sspgvx
 
 subroutine ub_ssprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -26315,7 +26315,7 @@ subroutine ub_ssprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,in
   integer(blas77_int) :: info
 
   call ssprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine ssprfs
+end subroutine ub_ssprfs
 
 subroutine ub_sspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -26334,7 +26334,7 @@ subroutine ub_sspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call sspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine sspsv
+end subroutine ub_sspsv
 
 subroutine ub_sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
   use blas77_types
@@ -26362,7 +26362,7 @@ subroutine ub_sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info)
-end subroutine sspsvx
+end subroutine ub_sspsvx
 
 subroutine ub_ssptrd(uplo,n,ap,d,e,tau,info)
   use blas77_types
@@ -26380,7 +26380,7 @@ subroutine ub_ssptrd(uplo,n,ap,d,e,tau,info)
   integer(blas77_int) :: info
 
   call ssptrd(uplo,n,ap,d,e,tau,info)
-end subroutine ssptrd
+end subroutine ub_ssptrd
 
 subroutine ub_ssptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -26396,7 +26396,7 @@ subroutine ub_ssptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call ssptrf(uplo,n,ap,ipiv,info)
-end subroutine ssptrf
+end subroutine ub_ssptrf
 
 subroutine ub_ssptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -26413,7 +26413,7 @@ subroutine ub_ssptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call ssptri(uplo,n,ap,ipiv,work,info)
-end subroutine ssptri
+end subroutine ub_ssptri
 
 subroutine ub_ssptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -26432,7 +26432,7 @@ subroutine ub_ssptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine ssptrs
+end subroutine ub_ssptrs
 
 subroutine ub_sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info)
   use blas77_types
@@ -26461,7 +26461,7 @@ subroutine ub_sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,ispl
   integer(blas77_int) :: info
 
   call sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info)
-end subroutine sstebz
+end subroutine ub_sstebz
 
 subroutine ub_sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26483,7 +26483,7 @@ subroutine ub_sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine sstedc
+end subroutine ub_sstedc
 
 subroutine ub_sstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26514,7 +26514,7 @@ subroutine ub_sstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call sstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine sstegr
+end subroutine ub_sstegr
 
 subroutine ub_sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -26538,7 +26538,7 @@ subroutine ub_sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   integer(blas77_int) :: info
 
   call sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
-end subroutine sstein
+end subroutine ub_sstein
 
 subroutine ub_sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26570,7 +26570,7 @@ subroutine ub_sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   integer(blas77_int) :: info
 
   call sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
-end subroutine sstemr
+end subroutine ub_sstemr
 
 subroutine ub_ssteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -26589,7 +26589,7 @@ subroutine ub_ssteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call ssteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine ssteqr
+end subroutine ub_ssteqr
 
 subroutine ub_ssterf(n,d,e,info)
   use blas77_types
@@ -26604,7 +26604,7 @@ subroutine ub_ssterf(n,d,e,info)
   integer(blas77_int) :: info
 
   call ssterf(n,d,e,info)
-end subroutine ssterf
+end subroutine ub_ssterf
 
 subroutine ub_sstev(jobz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -26623,7 +26623,7 @@ subroutine ub_sstev(jobz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call sstev(jobz,n,d,e,z,ldz,work,info)
-end subroutine sstev
+end subroutine ub_sstev
 
 subroutine ub_sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26645,7 +26645,7 @@ subroutine ub_sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info)
-end subroutine sstevd
+end subroutine ub_sstevd
 
 subroutine ub_sstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26676,7 +26676,7 @@ subroutine ub_sstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call sstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine sstevr
+end subroutine ub_sstevr
 
 subroutine ub_sstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -26705,7 +26705,7 @@ subroutine ub_sstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,if
   integer(blas77_int) :: info
 
   call sstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info)
-end subroutine sstevx
+end subroutine ub_sstevx
 
 subroutine ub_ssycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -26727,7 +26727,7 @@ subroutine ub_ssycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call ssycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info)
-end subroutine ssycon_3
+end subroutine ub_ssycon_3
 
 subroutine ub_ssycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -26748,7 +26748,7 @@ subroutine ub_ssycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call ssycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
-end subroutine ssycon
+end subroutine ub_ssycon
 
 subroutine ub_ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   use blas77_types
@@ -26769,7 +26769,7 @@ subroutine ub_ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info)
-end subroutine ssycon_rook
+end subroutine ub_ssycon_rook
 
 subroutine ub_ssyconv(uplo,way,n,a,lda,ipiv,e,info)
   use blas77_types
@@ -26788,7 +26788,7 @@ subroutine ub_ssyconv(uplo,way,n,a,lda,ipiv,e,info)
   integer(blas77_int) :: info
 
   call ssyconv(uplo,way,n,a,lda,ipiv,e,info)
-end subroutine ssyconv
+end subroutine ub_ssyconv
 
 subroutine ub_ssyconvf(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -26807,7 +26807,7 @@ subroutine ub_ssyconvf(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call ssyconvf(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine ssyconvf
+end subroutine ub_ssyconvf
 
 subroutine ub_ssyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -26826,7 +26826,7 @@ subroutine ub_ssyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call ssyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine ssyconvf_rook
+end subroutine ub_ssyconvf_rook
 
 subroutine ub_ssyequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -26846,7 +26846,7 @@ subroutine ub_ssyequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call ssyequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine ssyequb
+end subroutine ub_ssyequb
 
 subroutine ub_ssyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
   use blas77_types
@@ -26866,7 +26866,7 @@ subroutine ub_ssyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info)
-end subroutine ssyev_2stage
+end subroutine ub_ssyev_2stage
 
 subroutine ub_ssyev(jobz,uplo,n,a,lda,w,work,lwork,info)
   use blas77_types
@@ -26886,7 +26886,7 @@ subroutine ub_ssyev(jobz,uplo,n,a,lda,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssyev(jobz,uplo,n,a,lda,w,work,lwork,info)
-end subroutine ssyev
+end subroutine ub_ssyev
 
 subroutine ub_ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26908,7 +26908,7 @@ subroutine ub_ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
-end subroutine ssyevd_2stage
+end subroutine ub_ssyevd_2stage
 
 subroutine ub_ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26930,7 +26930,7 @@ subroutine ub_ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
   integer(blas77_int) :: info
 
   call ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info)
-end subroutine ssyevd
+end subroutine ub_ssyevd
 
 subroutine ub_ssyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26962,7 +26962,7 @@ subroutine ub_ssyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call ssyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine ssyevr_2stage
+end subroutine ub_ssyevr_2stage
 
 subroutine ub_ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -26994,7 +26994,7 @@ subroutine ub_ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz
   integer(blas77_int) :: info
 
   call ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine ssyevr
+end subroutine ub_ssyevr
 
 subroutine ub_ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -27025,7 +27025,7 @@ subroutine ub_ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine ssyevx_2stage
+end subroutine ub_ssyevx_2stage
 
 subroutine ub_ssyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -27056,7 +27056,7 @@ subroutine ub_ssyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,l
   integer(blas77_int) :: info
 
   call ssyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine ssyevx
+end subroutine ub_ssyevx
 
 subroutine ub_ssygs2(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -27075,7 +27075,7 @@ subroutine ub_ssygs2(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssygs2(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine ssygs2
+end subroutine ub_ssygs2
 
 subroutine ub_ssygst(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -27094,7 +27094,7 @@ subroutine ub_ssygst(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssygst(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine ssygst
+end subroutine ub_ssygst
 
 subroutine ub_ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   use blas77_types
@@ -27117,7 +27117,7 @@ subroutine ub_ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
-end subroutine ssygv_2stage
+end subroutine ub_ssygv_2stage
 
 subroutine ub_ssygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   use blas77_types
@@ -27140,7 +27140,7 @@ subroutine ub_ssygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info)
-end subroutine ssygv
+end subroutine ub_ssygv
 
 subroutine ub_ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -27165,7 +27165,7 @@ subroutine ub_ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,inf
   integer(blas77_int) :: info
 
   call ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info)
-end subroutine ssygvd
+end subroutine ub_ssygvd
 
 subroutine ub_ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
   use blas77_types
@@ -27199,7 +27199,7 @@ subroutine ub_ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,
   integer(blas77_int) :: info
 
   call ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info)
-end subroutine ssygvx
+end subroutine ub_ssygvx
 
 subroutine ub_ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -27227,7 +27227,7 @@ subroutine ub_ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,i
   integer(blas77_int) :: info
 
   call ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine ssyrfs
+end subroutine ub_ssyrfs
 
 subroutine ub_ssyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -27262,7 +27262,7 @@ subroutine ub_ssyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call ssyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine ssyrfsx
+end subroutine ub_ssyrfsx
 
 subroutine ub_ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -27287,7 +27287,7 @@ subroutine ub_ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine ssysv_aa_2stage
+end subroutine ub_ssysv_aa_2stage
 
 subroutine ub_ssysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -27309,7 +27309,7 @@ subroutine ub_ssysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine ssysv_aa
+end subroutine ub_ssysv_aa
 
 subroutine ub_ssysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -27331,7 +27331,7 @@ subroutine ub_ssysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine ssysv
+end subroutine ub_ssysv
 
 subroutine ub_ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -27354,7 +27354,7 @@ subroutine ub_ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine ssysv_rk
+end subroutine ub_ssysv_rk
 
 subroutine ub_ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -27376,7 +27376,7 @@ subroutine ub_ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine ssysv_rook
+end subroutine ub_ssysv_rook
 
 subroutine ub_ssysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info)
   use blas77_types
@@ -27407,7 +27407,7 @@ subroutine ub_ssysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call ssysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info)
-end subroutine ssysvx
+end subroutine ub_ssysvx
 
 subroutine ub_ssysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
   use blas77_types
@@ -27444,7 +27444,7 @@ subroutine ub_ssysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call ssysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info)
-end subroutine ssysvxx
+end subroutine ub_ssysvxx
 
 subroutine ub_ssytd2(uplo,n,a,lda,d,e,tau,info)
   use blas77_types
@@ -27463,7 +27463,7 @@ subroutine ub_ssytd2(uplo,n,a,lda,d,e,tau,info)
   integer(blas77_int) :: info
 
   call ssytd2(uplo,n,a,lda,d,e,tau,info)
-end subroutine ssytd2
+end subroutine ub_ssytd2
 
 subroutine ub_ssytf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -27480,7 +27480,7 @@ subroutine ub_ssytf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call ssytf2(uplo,n,a,lda,ipiv,info)
-end subroutine ssytf2
+end subroutine ub_ssytf2
 
 subroutine ub_ssytf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -27498,7 +27498,7 @@ subroutine ub_ssytf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call ssytf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine ssytf2_rk
+end subroutine ub_ssytf2_rk
 
 subroutine ub_ssytf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -27515,7 +27515,7 @@ subroutine ub_ssytf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call ssytf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine ssytf2_rook
+end subroutine ub_ssytf2_rook
 
 subroutine ub_ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   use blas77_types
@@ -27539,7 +27539,7 @@ subroutine ub_ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,in
   integer(blas77_int) :: info
 
   call ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
-end subroutine ssytrd_2stage
+end subroutine ub_ssytrd_2stage
 
 subroutine ub_ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   use blas77_types
@@ -27560,7 +27560,7 @@ subroutine ub_ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
-end subroutine ssytrd
+end subroutine ub_ssytrd
 
 subroutine ub_ssytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
   use blas77_types
@@ -27585,7 +27585,7 @@ subroutine ub_ssytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwo
   integer(blas77_int) :: info
 
   call ssytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
-end subroutine ssytrd_sb2st
+end subroutine ub_ssytrd_sb2st
 
 subroutine ub_ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   use blas77_types
@@ -27607,7 +27607,7 @@ subroutine ub_ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
-end subroutine ssytrd_sy2sb
+end subroutine ub_ssytrd_sy2sb
 
 subroutine ub_ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -27629,7 +27629,7 @@ subroutine ub_ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine ssytrf_aa_2stage
+end subroutine ub_ssytrf_aa_2stage
 
 subroutine ub_ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -27648,7 +27648,7 @@ subroutine ub_ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine ssytrf_aa
+end subroutine ub_ssytrf_aa
 
 subroutine ub_ssytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -27667,7 +27667,7 @@ subroutine ub_ssytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine ssytrf
+end subroutine ub_ssytrf
 
 subroutine ub_ssytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -27687,7 +27687,7 @@ subroutine ub_ssytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine ssytrf_rk
+end subroutine ub_ssytrf_rk
 
 subroutine ub_ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -27706,7 +27706,7 @@ subroutine ub_ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine ssytrf_rook
+end subroutine ub_ssytrf_rook
 
 subroutine ub_ssytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -27725,7 +27725,7 @@ subroutine ub_ssytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine ssytri2
+end subroutine ub_ssytri2
 
 subroutine ub_ssytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -27744,7 +27744,7 @@ subroutine ub_ssytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call ssytri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine ssytri2x
+end subroutine ub_ssytri2x
 
 subroutine ub_ssytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -27764,7 +27764,7 @@ subroutine ub_ssytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine ssytri_3
+end subroutine ub_ssytri_3
 
 subroutine ub_ssytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -27784,7 +27784,7 @@ subroutine ub_ssytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call ssytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine ssytri_3x
+end subroutine ub_ssytri_3x
 
 subroutine ub_ssytri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -27802,7 +27802,7 @@ subroutine ub_ssytri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call ssytri(uplo,n,a,lda,ipiv,work,info)
-end subroutine ssytri
+end subroutine ub_ssytri
 
 subroutine ub_ssytri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -27820,7 +27820,7 @@ subroutine ub_ssytri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call ssytri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine ssytri_rook
+end subroutine ub_ssytri_rook
 
 subroutine ub_ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -27841,7 +27841,7 @@ subroutine ub_ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine ssytrs2
+end subroutine ub_ssytrs2
 
 subroutine ub_ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -27862,7 +27862,7 @@ subroutine ub_ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine ssytrs_3
+end subroutine ub_ssytrs_3
 
 subroutine ub_ssytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -27885,7 +27885,7 @@ subroutine ub_ssytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine ssytrs_aa_2stage
+end subroutine ub_ssytrs_aa_2stage
 
 subroutine ub_ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -27907,7 +27907,7 @@ subroutine ub_ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine ssytrs_aa
+end subroutine ub_ssytrs_aa
 
 subroutine ub_ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -27927,7 +27927,7 @@ subroutine ub_ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine ssytrs
+end subroutine ub_ssytrs
 
 subroutine ub_ssytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -27947,7 +27947,7 @@ subroutine ub_ssytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call ssytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine ssytrs_rook
+end subroutine ub_ssytrs_rook
 
 subroutine ub_stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
   use blas77_types
@@ -27969,7 +27969,7 @@ subroutine ub_stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info)
-end subroutine stbcon
+end subroutine ub_stbcon
 
 subroutine ub_stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -27997,7 +27997,7 @@ subroutine ub_stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,wor
   integer(blas77_int) :: info
 
   call stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine stbrfs
+end subroutine ub_stbrfs
 
 subroutine ub_stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -28019,7 +28019,7 @@ subroutine ub_stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine stbtrs
+end subroutine ub_stbtrs
 
 subroutine ub_stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   use blas77_types
@@ -28041,7 +28041,7 @@ subroutine ub_stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   real(blas77_f32) :: b(0:ldb-1,0:*)
 
   call stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
-end subroutine stfsm
+end subroutine ub_stfsm
 
 subroutine ub_stftri(transr,uplo,diag,n,a,info)
   use blas77_types
@@ -28058,7 +28058,7 @@ subroutine ub_stftri(transr,uplo,diag,n,a,info)
   integer(blas77_int) :: info
 
   call stftri(transr,uplo,diag,n,a,info)
-end subroutine stftri
+end subroutine ub_stftri
 
 subroutine ub_stfttp(transr,uplo,n,arf,ap,info)
   use blas77_types
@@ -28075,7 +28075,7 @@ subroutine ub_stfttp(transr,uplo,n,arf,ap,info)
   integer(blas77_int) :: info
 
   call stfttp(transr,uplo,n,arf,ap,info)
-end subroutine stfttp
+end subroutine ub_stfttp
 
 subroutine ub_stfttr(transr,uplo,n,arf,a,lda,info)
   use blas77_types
@@ -28093,7 +28093,7 @@ subroutine ub_stfttr(transr,uplo,n,arf,a,lda,info)
   integer(blas77_int) :: info
 
   call stfttr(transr,uplo,n,arf,a,lda,info)
-end subroutine stfttr
+end subroutine ub_stfttr
 
 subroutine ub_stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info)
   use blas77_types
@@ -28120,7 +28120,7 @@ subroutine ub_stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
   integer(blas77_int) :: info
 
   call stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info)
-end subroutine stgevc
+end subroutine ub_stgevc
 
 subroutine ub_stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info)
   use blas77_types
@@ -28147,7 +28147,7 @@ subroutine ub_stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,
   integer(blas77_int) :: info
 
   call stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info)
-end subroutine stgexc
+end subroutine ub_stgexc
 
 subroutine ub_stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -28183,7 +28183,7 @@ subroutine ub_stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,
   integer(blas77_int) :: info
 
   call stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
-end subroutine stgsen
+end subroutine ub_stgsen
 
 subroutine ub_stgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
   use blas77_types
@@ -28219,7 +28219,7 @@ subroutine ub_stgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u
   integer(blas77_int) :: info
 
   call stgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
-end subroutine stgsja
+end subroutine ub_stgsja
 
 subroutine ub_stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
   use blas77_types
@@ -28250,7 +28250,7 @@ subroutine ub_stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
   integer(blas77_int) :: info
 
   call stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
-end subroutine stgsna
+end subroutine ub_stgsna
 
 subroutine ub_stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
   use blas77_types
@@ -28283,7 +28283,7 @@ subroutine ub_stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,di
   integer(blas77_int) :: info
 
   call stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
-end subroutine stgsyl
+end subroutine ub_stgsyl
 
 subroutine ub_stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
   use blas77_types
@@ -28303,7 +28303,7 @@ subroutine ub_stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info)
-end subroutine stpcon
+end subroutine ub_stpcon
 
 subroutine ub_stplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -28324,7 +28324,7 @@ subroutine ub_stplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call stplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine stplqt2
+end subroutine ub_stplqt2
 
 subroutine ub_stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -28347,7 +28347,7 @@ subroutine ub_stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine stplqt
+end subroutine ub_stplqt
 
 subroutine ub_stpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -28375,7 +28375,7 @@ subroutine ub_stpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call stpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine stpmlqt
+end subroutine ub_stpmlqt
 
 subroutine ub_stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -28403,7 +28403,7 @@ subroutine ub_stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine stpmqrt
+end subroutine ub_stpmqrt
 
 subroutine ub_stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -28424,7 +28424,7 @@ subroutine ub_stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine stpqrt2
+end subroutine ub_stpqrt2
 
 subroutine ub_stpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -28447,7 +28447,7 @@ subroutine ub_stpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call stpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine stpqrt
+end subroutine ub_stpqrt
 
 subroutine ub_stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -28473,7 +28473,7 @@ subroutine ub_stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: info
 
   call stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine stprfs
+end subroutine ub_stprfs
 
 subroutine ub_stptri(uplo,diag,n,ap,info)
   use blas77_types
@@ -28489,7 +28489,7 @@ subroutine ub_stptri(uplo,diag,n,ap,info)
   integer(blas77_int) :: info
 
   call stptri(uplo,diag,n,ap,info)
-end subroutine stptri
+end subroutine ub_stptri
 
 subroutine ub_stptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -28509,7 +28509,7 @@ subroutine ub_stptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call stptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
-end subroutine stptrs
+end subroutine ub_stptrs
 
 subroutine ub_stpttf(transr,uplo,n,ap,arf,info)
   use blas77_types
@@ -28526,7 +28526,7 @@ subroutine ub_stpttf(transr,uplo,n,ap,arf,info)
   integer(blas77_int) :: info
 
   call stpttf(transr,uplo,n,ap,arf,info)
-end subroutine stpttf
+end subroutine ub_stpttf
 
 subroutine ub_stpttr(uplo,n,ap,a,lda,info)
   use blas77_types
@@ -28543,7 +28543,7 @@ subroutine ub_stpttr(uplo,n,ap,a,lda,info)
   integer(blas77_int) :: info
 
   call stpttr(uplo,n,ap,a,lda,info)
-end subroutine stpttr
+end subroutine ub_stpttr
 
 subroutine ub_strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
   use blas77_types
@@ -28564,7 +28564,7 @@ subroutine ub_strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
   integer(blas77_int) :: info
 
   call strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info)
-end subroutine strcon
+end subroutine ub_strcon
 
 subroutine ub_strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info)
   use blas77_types
@@ -28590,7 +28590,7 @@ subroutine ub_strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
   integer(blas77_int) :: info
 
   call strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info)
-end subroutine strevc3
+end subroutine ub_strevc3
 
 subroutine ub_strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
   use blas77_types
@@ -28615,7 +28615,7 @@ subroutine ub_strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
   integer(blas77_int) :: info
 
   call strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info)
-end subroutine strevc
+end subroutine ub_strevc
 
 subroutine ub_strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
   use blas77_types
@@ -28636,7 +28636,7 @@ subroutine ub_strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
   integer(blas77_int) :: info
 
   call strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info)
-end subroutine strexc
+end subroutine ub_strexc
 
 subroutine ub_strrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   use blas77_types
@@ -28663,7 +28663,7 @@ subroutine ub_strrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwo
   integer(blas77_int) :: info
 
   call strrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info)
-end subroutine strrfs
+end subroutine ub_strrfs
 
 subroutine ub_strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -28692,7 +28692,7 @@ subroutine ub_strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwo
   integer(blas77_int) :: info
 
   call strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info)
-end subroutine strsen
+end subroutine ub_strsen
 
 subroutine ub_strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info)
   use blas77_types
@@ -28721,7 +28721,7 @@ subroutine ub_strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
   integer(blas77_int) :: info
 
   call strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info)
-end subroutine strsna
+end subroutine ub_strsna
 
 subroutine ub_strsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info)
   use blas77_types
@@ -28749,7 +28749,7 @@ subroutine ub_strsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,
   integer(blas77_int) :: info
 
   call strsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info)
-end subroutine strsyl3
+end subroutine ub_strsyl3
 
 subroutine ub_strsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   use blas77_types
@@ -28773,7 +28773,7 @@ subroutine ub_strsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   integer(blas77_int) :: info
 
   call strsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
-end subroutine strsyl
+end subroutine ub_strsyl
 
 subroutine ub_strti2(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -28790,7 +28790,7 @@ subroutine ub_strti2(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call strti2(uplo,diag,n,a,lda,info)
-end subroutine strti2
+end subroutine ub_strti2
 
 subroutine ub_strtri(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -28807,7 +28807,7 @@ subroutine ub_strtri(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call strtri(uplo,diag,n,a,lda,info)
-end subroutine strtri
+end subroutine ub_strtri
 
 subroutine ub_strtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -28828,7 +28828,7 @@ subroutine ub_strtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call strtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
-end subroutine strtrs
+end subroutine ub_strtrs
 
 subroutine ub_strttf(transr,uplo,n,a,lda,arf,info)
   use blas77_types
@@ -28846,7 +28846,7 @@ subroutine ub_strttf(transr,uplo,n,a,lda,arf,info)
   integer(blas77_int) :: info
 
   call strttf(transr,uplo,n,a,lda,arf,info)
-end subroutine strttf
+end subroutine ub_strttf
 
 subroutine ub_strttp(uplo,n,a,lda,ap,info)
   use blas77_types
@@ -28863,7 +28863,7 @@ subroutine ub_strttp(uplo,n,a,lda,ap,info)
   integer(blas77_int) :: info
 
   call strttp(uplo,n,a,lda,ap,info)
-end subroutine strttp
+end subroutine ub_strttp
 
 subroutine ub_stzrqf(m,n,a,lda,tau,info)
   use blas77_types
@@ -28880,7 +28880,7 @@ subroutine ub_stzrqf(m,n,a,lda,tau,info)
   integer(blas77_int) :: info
 
   call stzrqf(m,n,a,lda,tau,info)
-end subroutine stzrqf
+end subroutine ub_stzrqf
 
 subroutine ub_stzrzf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -28899,7 +28899,7 @@ subroutine ub_stzrzf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call stzrzf(m,n,a,lda,tau,work,lwork,info)
-end subroutine stzrzf
+end subroutine ub_stzrzf
 
 subroutine ub_zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info)
   use blas77_types
@@ -28939,7 +28939,7 @@ subroutine ub_zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,
   integer(blas77_int) :: info
 
   call zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info)
-end subroutine zbbcsd
+end subroutine ub_zbbcsd
 
 subroutine ub_zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
   use blas77_types
@@ -28965,7 +28965,7 @@ subroutine ub_zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
   integer(blas77_int) :: info
 
   call zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info)
-end subroutine zbdsqr
+end subroutine ub_zbdsqr
 
 subroutine ub_zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info)
   use blas77_types
@@ -28990,7 +28990,7 @@ subroutine ub_zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info)
   integer(blas77_int) :: info
 
   call zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info)
-end subroutine zcgesv
+end subroutine ub_zcgesv
 
 subroutine ub_zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info)
   use blas77_types
@@ -29015,7 +29015,7 @@ subroutine ub_zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info)
   integer(blas77_int) :: info
 
   call zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info)
-end subroutine zcposv
+end subroutine ub_zcposv
 
 subroutine ub_zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info)
   use blas77_types
@@ -29045,7 +29045,7 @@ subroutine ub_zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwo
   integer(blas77_int) :: info
 
   call zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info)
-end subroutine zgbbrd
+end subroutine ub_zgbbrd
 
 subroutine ub_zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -29068,7 +29068,7 @@ subroutine ub_zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info)
-end subroutine zgbcon
+end subroutine ub_zgbcon
 
 subroutine ub_zgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -29091,7 +29091,7 @@ subroutine ub_zgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call zgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine zgbequ
+end subroutine ub_zgbequ
 
 subroutine ub_zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -29114,7 +29114,7 @@ subroutine ub_zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info)
-end subroutine zgbequb
+end subroutine ub_zgbequb
 
 subroutine ub_zgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -29144,7 +29144,7 @@ subroutine ub_zgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,
   integer(blas77_int) :: info
 
   call zgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zgbrfs
+end subroutine ub_zgbrfs
 
 subroutine ub_zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -29182,7 +29182,7 @@ subroutine ub_zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,
   integer(blas77_int) :: info
 
   call zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zgbrfsx
+end subroutine ub_zgbrfsx
 
 subroutine ub_zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -29203,7 +29203,7 @@ subroutine ub_zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine zgbsv
+end subroutine ub_zgbsv
 
 subroutine ub_zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -29238,7 +29238,7 @@ subroutine ub_zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,
   integer(blas77_int) :: info
 
   call zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zgbsvx
+end subroutine ub_zgbsvx
 
 subroutine ub_zgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -29278,7 +29278,7 @@ subroutine ub_zgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b
   integer(blas77_int) :: info
 
   call zgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zgbsvxx
+end subroutine ub_zgbsvxx
 
 subroutine ub_zgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -29297,7 +29297,7 @@ subroutine ub_zgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call zgbtf2(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine zgbtf2
+end subroutine ub_zgbtf2
 
 subroutine ub_zgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   use blas77_types
@@ -29316,7 +29316,7 @@ subroutine ub_zgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
   integer(blas77_int) :: info
 
   call zgbtrf(m,n,kl,ku,ab,ldab,ipiv,info)
-end subroutine zgbtrf
+end subroutine ub_zgbtrf
 
 subroutine ub_zgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   use blas77_types
@@ -29338,7 +29338,7 @@ subroutine ub_zgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info)
-end subroutine zgbtrs
+end subroutine ub_zgbtrs
 
 subroutine ub_zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   use blas77_types
@@ -29359,7 +29359,7 @@ subroutine ub_zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info)
-end subroutine zgebak
+end subroutine ub_zgebak
 
 subroutine ub_zgebal(job,n,a,lda,ilo,ihi,scale,info)
   use blas77_types
@@ -29378,7 +29378,7 @@ subroutine ub_zgebal(job,n,a,lda,ilo,ihi,scale,info)
   integer(blas77_int) :: info
 
   call zgebal(job,n,a,lda,ilo,ihi,scale,info)
-end subroutine zgebal
+end subroutine ub_zgebal
 
 subroutine ub_zgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   use blas77_types
@@ -29399,7 +29399,7 @@ subroutine ub_zgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
   integer(blas77_int) :: info
 
   call zgebd2(m,n,a,lda,d,e,tauq,taup,work,info)
-end subroutine zgebd2
+end subroutine ub_zgebd2
 
 subroutine ub_zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   use blas77_types
@@ -29421,7 +29421,7 @@ subroutine ub_zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info)
-end subroutine zgebrd
+end subroutine ub_zgebrd
 
 subroutine ub_zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -29441,7 +29441,7 @@ subroutine ub_zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info)
-end subroutine zgecon
+end subroutine ub_zgecon
 
 subroutine ub_zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -29483,7 +29483,7 @@ subroutine ub_zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,
   integer(blas77_int),intent(out) :: info
 
   call zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zgedmd
+end subroutine ub_zgedmd
 
 subroutine ub_zgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -29529,7 +29529,7 @@ subroutine ub_zgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy
   integer(blas77_int),intent(out) :: info
 
   call zgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info)
-end subroutine zgedmdq
+end subroutine ub_zgedmdq
 
 subroutine ub_zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -29550,7 +29550,7 @@ subroutine ub_zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine zgeequ
+end subroutine ub_zgeequ
 
 subroutine ub_zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   use blas77_types
@@ -29571,7 +29571,7 @@ subroutine ub_zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
   integer(blas77_int) :: info
 
   call zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info)
-end subroutine zgeequb
+end subroutine ub_zgeequb
 
 subroutine ub_zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -29597,7 +29597,7 @@ subroutine ub_zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bw
   integer(blas77_int) :: info
 
   call zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info)
-end subroutine zgees
+end subroutine ub_zgees
 
 subroutine ub_zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -29626,7 +29626,7 @@ subroutine ub_zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcond
   integer(blas77_int) :: info
 
   call zgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info)
-end subroutine zgeesx
+end subroutine ub_zgeesx
 
 subroutine ub_zgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -29651,7 +29651,7 @@ subroutine ub_zgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine zgeev
+end subroutine ub_zgeev
 
 subroutine ub_zgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info)
   use blas77_types
@@ -29684,7 +29684,7 @@ subroutine ub_zgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,
   integer(blas77_int) :: info
 
   call zgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info)
-end subroutine zgeevx
+end subroutine ub_zgeevx
 
 subroutine ub_zgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info)
   use blas77_types
@@ -29712,7 +29712,7 @@ subroutine ub_zgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,w
   integer(blas77_int) :: info
 
   call zgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info)
-end subroutine zgegs
+end subroutine ub_zgegs
 
 subroutine ub_zgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -29740,7 +29740,7 @@ subroutine ub_zgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lw
   integer(blas77_int) :: info
 
   call zgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine zgegv
+end subroutine ub_zgegv
 
 subroutine ub_zgehd2(n,ilo,ihi,a,lda,tau,work,info)
   use blas77_types
@@ -29759,7 +29759,7 @@ subroutine ub_zgehd2(n,ilo,ihi,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgehd2(n,ilo,ihi,a,lda,tau,work,info)
-end subroutine zgehd2
+end subroutine ub_zgehd2
 
 subroutine ub_zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -29779,7 +29779,7 @@ subroutine ub_zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine zgehrd
+end subroutine ub_zgehrd
 
 subroutine ub_zgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -29811,7 +29811,7 @@ subroutine ub_zgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwo
   integer(blas77_int) :: info
 
   call zgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info)
-end subroutine zgejsv
+end subroutine ub_zgejsv
 
 subroutine ub_zgelq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -29829,7 +29829,7 @@ subroutine ub_zgelq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgelq2(m,n,a,lda,tau,work,info)
-end subroutine zgelq2
+end subroutine ub_zgelq2
 
 subroutine ub_zgelq(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -29849,7 +29849,7 @@ subroutine ub_zgelq(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgelq(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine zgelq
+end subroutine ub_zgelq
 
 subroutine ub_zgelqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -29868,7 +29868,7 @@ subroutine ub_zgelqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgelqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine zgelqf
+end subroutine ub_zgelqf
 
 subroutine ub_zgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -29890,7 +29890,7 @@ subroutine ub_zgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine zgelqs
+end subroutine ub_zgelqs
 
 subroutine ub_zgelqt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -29908,7 +29908,7 @@ subroutine ub_zgelqt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call zgelqt3(m,n,a,lda,t,ldt,info)
-end subroutine zgelqt3
+end subroutine ub_zgelqt3
 
 subroutine ub_zgelqt(m,n,mb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -29928,7 +29928,7 @@ subroutine ub_zgelqt(m,n,mb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call zgelqt(m,n,mb,a,lda,t,ldt,work,info)
-end subroutine zgelqt
+end subroutine ub_zgelqt
 
 subroutine ub_zgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -29950,7 +29950,7 @@ subroutine ub_zgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine zgels
+end subroutine ub_zgels
 
 subroutine ub_zgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -29976,7 +29976,7 @@ subroutine ub_zgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,in
   integer(blas77_int) :: info
 
   call zgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
-end subroutine zgelsd
+end subroutine ub_zgelsd
 
 subroutine ub_zgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
   use blas77_types
@@ -30001,7 +30001,7 @@ subroutine ub_zgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info)
-end subroutine zgelss
+end subroutine ub_zgelss
 
 subroutine ub_zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -30023,7 +30023,7 @@ subroutine ub_zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine zgelst
+end subroutine ub_zgelst
 
 subroutine ub_zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
   use blas77_types
@@ -30047,7 +30047,7 @@ subroutine ub_zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
   integer(blas77_int) :: info
 
   call zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info)
-end subroutine zgelsx
+end subroutine ub_zgelsx
 
 subroutine ub_zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
   use blas77_types
@@ -30072,7 +30072,7 @@ subroutine ub_zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info)
-end subroutine zgelsy
+end subroutine ub_zgelsy
 
 subroutine ub_zgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -30097,7 +30097,7 @@ subroutine ub_zgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine zgemlq
+end subroutine ub_zgemlq
 
 subroutine ub_zgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -30122,7 +30122,7 @@ subroutine ub_zgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine zgemlqt
+end subroutine ub_zgemlqt
 
 subroutine ub_zgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   use blas77_types
@@ -30147,7 +30147,7 @@ subroutine ub_zgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info)
-end subroutine zgemqr
+end subroutine ub_zgemqr
 
 subroutine ub_zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   use blas77_types
@@ -30172,7 +30172,7 @@ subroutine ub_zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info)
-end subroutine zgemqrt
+end subroutine ub_zgemqrt
 
 subroutine ub_zgeql2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -30190,7 +30190,7 @@ subroutine ub_zgeql2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgeql2(m,n,a,lda,tau,work,info)
-end subroutine zgeql2
+end subroutine ub_zgeql2
 
 subroutine ub_zgeqlf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -30209,7 +30209,7 @@ subroutine ub_zgeqlf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgeqlf(m,n,a,lda,tau,work,lwork,info)
-end subroutine zgeqlf
+end subroutine ub_zgeqlf
 
 subroutine ub_zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
   use blas77_types
@@ -30230,7 +30230,7 @@ subroutine ub_zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info)
-end subroutine zgeqp3
+end subroutine ub_zgeqp3
 
 subroutine ub_zgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -30259,7 +30259,7 @@ subroutine ub_zgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrm
   integer(blas77_int) :: info
 
   call zgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info)
-end subroutine zgeqp3rk
+end subroutine ub_zgeqp3rk
 
 subroutine ub_zgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
   use blas77_types
@@ -30279,7 +30279,7 @@ subroutine ub_zgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
   integer(blas77_int) :: info
 
   call zgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info)
-end subroutine zgeqpf
+end subroutine ub_zgeqpf
 
 subroutine ub_zgeqr2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -30297,7 +30297,7 @@ subroutine ub_zgeqr2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgeqr2(m,n,a,lda,tau,work,info)
-end subroutine zgeqr2
+end subroutine ub_zgeqr2
 
 subroutine ub_zgeqr2p(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -30315,7 +30315,7 @@ subroutine ub_zgeqr2p(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgeqr2p(m,n,a,lda,tau,work,info)
-end subroutine zgeqr2p
+end subroutine ub_zgeqr2p
 
 subroutine ub_zgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   use blas77_types
@@ -30335,7 +30335,7 @@ subroutine ub_zgeqr(m,n,a,lda,t,tsize,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgeqr(m,n,a,lda,t,tsize,work,lwork,info)
-end subroutine zgeqr
+end subroutine ub_zgeqr
 
 subroutine ub_zgeqrf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -30354,7 +30354,7 @@ subroutine ub_zgeqrf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgeqrf(m,n,a,lda,tau,work,lwork,info)
-end subroutine zgeqrf
+end subroutine ub_zgeqrf
 
 subroutine ub_zgeqrfp(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -30373,7 +30373,7 @@ subroutine ub_zgeqrfp(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgeqrfp(m,n,a,lda,tau,work,lwork,info)
-end subroutine zgeqrfp
+end subroutine ub_zgeqrfp
 
 subroutine ub_zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   use blas77_types
@@ -30395,7 +30395,7 @@ subroutine ub_zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info)
-end subroutine zgeqrs
+end subroutine ub_zgeqrs
 
 subroutine ub_zgeqrt2(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -30413,7 +30413,7 @@ subroutine ub_zgeqrt2(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call zgeqrt2(m,n,a,lda,t,ldt,info)
-end subroutine zgeqrt2
+end subroutine ub_zgeqrt2
 
 subroutine ub_zgeqrt3(m,n,a,lda,t,ldt,info)
   use blas77_types
@@ -30431,7 +30431,7 @@ subroutine ub_zgeqrt3(m,n,a,lda,t,ldt,info)
   integer(blas77_int) :: info
 
   call zgeqrt3(m,n,a,lda,t,ldt,info)
-end subroutine zgeqrt3
+end subroutine ub_zgeqrt3
 
 subroutine ub_zgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   use blas77_types
@@ -30451,7 +30451,7 @@ subroutine ub_zgeqrt(m,n,nb,a,lda,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call zgeqrt(m,n,nb,a,lda,t,ldt,work,info)
-end subroutine zgeqrt
+end subroutine ub_zgeqrt
 
 subroutine ub_zgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -30479,7 +30479,7 @@ subroutine ub_zgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,
   integer(blas77_int) :: info
 
   call zgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zgerfs
+end subroutine ub_zgerfs
 
 subroutine ub_zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -30515,7 +30515,7 @@ subroutine ub_zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcon
   integer(blas77_int) :: info
 
   call zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zgerfsx
+end subroutine ub_zgerfsx
 
 subroutine ub_zgerq2(m,n,a,lda,tau,work,info)
   use blas77_types
@@ -30533,7 +30533,7 @@ subroutine ub_zgerq2(m,n,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zgerq2(m,n,a,lda,tau,work,info)
-end subroutine zgerq2
+end subroutine ub_zgerq2
 
 subroutine ub_zgerqf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -30552,7 +30552,7 @@ subroutine ub_zgerqf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgerqf(m,n,a,lda,tau,work,lwork,info)
-end subroutine zgerqf
+end subroutine ub_zgerqf
 
 subroutine ub_zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -30578,7 +30578,7 @@ subroutine ub_zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   integer(blas77_int) :: info
 
   call zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
-end subroutine zgesdd
+end subroutine ub_zgesdd
 
 subroutine ub_zgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -30597,7 +30597,7 @@ subroutine ub_zgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgesv(n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zgesv
+end subroutine ub_zgesv
 
 subroutine ub_zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
   use blas77_types
@@ -30623,7 +30623,7 @@ subroutine ub_zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info)
-end subroutine zgesvd
+end subroutine ub_zgesvd
 
 subroutine ub_zgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info)
   use blas77_types
@@ -30656,7 +30656,7 @@ subroutine ub_zgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,i
   integer(blas77_int) :: info
 
   call zgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info)
-end subroutine zgesvdq
+end subroutine ub_zgesvdq
 
 subroutine ub_zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -30689,7 +30689,7 @@ subroutine ub_zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,
   integer(blas77_int) :: info
 
   call zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info)
-end subroutine zgesvdx
+end subroutine ub_zgesvdx
 
 subroutine ub_zgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info)
   use blas77_types
@@ -30716,7 +30716,7 @@ subroutine ub_zgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrw
   integer(blas77_int) :: info
 
   call zgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info)
-end subroutine zgesvj
+end subroutine ub_zgesvj
 
 subroutine ub_zgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -30749,7 +30749,7 @@ subroutine ub_zgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,
   integer(blas77_int) :: info
 
   call zgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zgesvx
+end subroutine ub_zgesvx
 
 subroutine ub_zgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -30787,7 +30787,7 @@ subroutine ub_zgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx
   integer(blas77_int) :: info
 
   call zgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zgesvxx
+end subroutine ub_zgesvxx
 
 subroutine ub_zgetf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -30804,7 +30804,7 @@ subroutine ub_zgetf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zgetf2(m,n,a,lda,ipiv,info)
-end subroutine zgetf2
+end subroutine ub_zgetf2
 
 subroutine ub_zgetrf2(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -30821,7 +30821,7 @@ subroutine ub_zgetrf2(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zgetrf2(m,n,a,lda,ipiv,info)
-end subroutine zgetrf2
+end subroutine ub_zgetrf2
 
 subroutine ub_zgetrf(m,n,a,lda,ipiv,info)
   use blas77_types
@@ -30838,7 +30838,7 @@ subroutine ub_zgetrf(m,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zgetrf(m,n,a,lda,ipiv,info)
-end subroutine zgetrf
+end subroutine ub_zgetrf
 
 subroutine ub_zgetri(n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -30856,7 +30856,7 @@ subroutine ub_zgetri(n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgetri(n,a,lda,ipiv,work,lwork,info)
-end subroutine zgetri
+end subroutine ub_zgetri
 
 subroutine ub_zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -30876,7 +30876,7 @@ subroutine ub_zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zgetrs
+end subroutine ub_zgetrs
 
 subroutine ub_zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   use blas77_types
@@ -30898,7 +30898,7 @@ subroutine ub_zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info)
-end subroutine zgetsls
+end subroutine ub_zgetsls
 
 subroutine ub_zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -30921,7 +30921,7 @@ subroutine ub_zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info)
-end subroutine zgetsqrhrt
+end subroutine ub_zgetsqrhrt
 
 subroutine ub_zggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   use blas77_types
@@ -30943,7 +30943,7 @@ subroutine ub_zggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
   integer(blas77_int) :: info
 
   call zggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info)
-end subroutine zggbak
+end subroutine ub_zggbak
 
 subroutine ub_zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   use blas77_types
@@ -30966,7 +30966,7 @@ subroutine ub_zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
   integer(blas77_int) :: info
 
   call zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info)
-end subroutine zggbal
+end subroutine ub_zggbal
 
 subroutine ub_zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -30998,7 +30998,7 @@ subroutine ub_zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl
   integer(blas77_int) :: info
 
   call zgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine zgges3
+end subroutine ub_zgges3
 
 subroutine ub_zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
   use blas77_types
@@ -31030,7 +31030,7 @@ subroutine ub_zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,
   integer(blas77_int) :: info
 
   call zgges(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,bwork,info)
-end subroutine zgges
+end subroutine ub_zgges
 
 subroutine ub_zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
   use blas77_types
@@ -31067,7 +31067,7 @@ subroutine ub_zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,be
   integer(blas77_int) :: info
 
   call zggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alpha,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,rwork,iwork,liwork,bwork,info)
-end subroutine zggesx
+end subroutine ub_zggesx
 
 subroutine ub_zggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -31095,7 +31095,7 @@ subroutine ub_zggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,l
   integer(blas77_int) :: info
 
   call zggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine zggev3
+end subroutine ub_zggev3
 
 subroutine ub_zggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
   use blas77_types
@@ -31123,7 +31123,7 @@ subroutine ub_zggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lw
   integer(blas77_int) :: info
 
   call zggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info)
-end subroutine zggev
+end subroutine ub_zggev
 
 subroutine ub_zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
   use blas77_types
@@ -31163,7 +31163,7 @@ subroutine ub_zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,v
   integer(blas77_int) :: info
 
   call zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info)
-end subroutine zggevx
+end subroutine ub_zggevx
 
 subroutine ub_zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   use blas77_types
@@ -31187,7 +31187,7 @@ subroutine ub_zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
   integer(blas77_int) :: info
 
   call zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info)
-end subroutine zggglm
+end subroutine ub_zggglm
 
 subroutine ub_zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   use blas77_types
@@ -31214,7 +31214,7 @@ subroutine ub_zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,in
   integer(blas77_int) :: info
 
   call zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
-end subroutine zgghd3
+end subroutine ub_zgghd3
 
 subroutine ub_zgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   use blas77_types
@@ -31239,7 +31239,7 @@ subroutine ub_zgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
   integer(blas77_int) :: info
 
   call zgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info)
-end subroutine zgghrd
+end subroutine ub_zgghrd
 
 subroutine ub_zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   use blas77_types
@@ -31263,7 +31263,7 @@ subroutine ub_zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
   integer(blas77_int) :: info
 
   call zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info)
-end subroutine zgglse
+end subroutine ub_zgglse
 
 subroutine ub_zggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -31286,7 +31286,7 @@ subroutine ub_zggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call zggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine zggqrf
+end subroutine ub_zggqrf
 
 subroutine ub_zggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   use blas77_types
@@ -31309,7 +31309,7 @@ subroutine ub_zggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
   integer(blas77_int) :: info
 
   call zggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info)
-end subroutine zggrqf
+end subroutine ub_zggrqf
 
 subroutine ub_zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info)
   use blas77_types
@@ -31345,7 +31345,7 @@ subroutine ub_zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ld
   integer(blas77_int) :: info
 
   call zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info)
-end subroutine zggsvd3
+end subroutine ub_zggsvd3
 
 subroutine ub_zggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info)
   use blas77_types
@@ -31380,7 +31380,7 @@ subroutine ub_zggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call zggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info)
-end subroutine zggsvd
+end subroutine ub_zggsvd
 
 subroutine ub_zggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info)
   use blas77_types
@@ -31417,7 +31417,7 @@ subroutine ub_zggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv
   integer(blas77_int) :: info
 
   call zggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info)
-end subroutine zggsvp3
+end subroutine ub_zggsvp3
 
 subroutine ub_zggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info)
   use blas77_types
@@ -31453,7 +31453,7 @@ subroutine ub_zggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,
   integer(blas77_int) :: info
 
   call zggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info)
-end subroutine zggsvp
+end subroutine ub_zggsvp
 
 subroutine ub_zgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -31481,7 +31481,7 @@ subroutine ub_zgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   integer(blas77_int) :: info
 
   call zgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine zgsvj0
+end subroutine ub_zgsvj0
 
 subroutine ub_zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
   use blas77_types
@@ -31510,7 +31510,7 @@ subroutine ub_zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,
   integer(blas77_int) :: info
 
   call zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info)
-end subroutine zgsvj1
+end subroutine ub_zgsvj1
 
 subroutine ub_zgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -31532,7 +31532,7 @@ subroutine ub_zgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info)
-end subroutine zgtcon
+end subroutine ub_zgtcon
 
 subroutine ub_zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -31563,7 +31563,7 @@ subroutine ub_zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,b
   integer(blas77_int) :: info
 
   call zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zgtrfs
+end subroutine ub_zgtrfs
 
 subroutine ub_zgtsv(n,nrhs,dl,d,du,b,ldb,info)
   use blas77_types
@@ -31582,7 +31582,7 @@ subroutine ub_zgtsv(n,nrhs,dl,d,du,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgtsv(n,nrhs,dl,d,du,b,ldb,info)
-end subroutine zgtsv
+end subroutine ub_zgtsv
 
 subroutine ub_zgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -31615,7 +31615,7 @@ subroutine ub_zgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call zgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zgtsvx
+end subroutine ub_zgtsvx
 
 subroutine ub_zgttrf(n,dl,d,du,du2,ipiv,info)
   use blas77_types
@@ -31633,7 +31633,7 @@ subroutine ub_zgttrf(n,dl,d,du,du2,ipiv,info)
   integer(blas77_int) :: info
 
   call zgttrf(n,dl,d,du,du2,ipiv,info)
-end subroutine zgttrf
+end subroutine ub_zgttrf
 
 subroutine ub_zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   use blas77_types
@@ -31655,7 +31655,7 @@ subroutine ub_zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info)
-end subroutine zgttrs
+end subroutine ub_zgttrs
 
 subroutine ub_zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   use blas77_types
@@ -31676,7 +31676,7 @@ subroutine ub_zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
   complex(blas77_f64) :: b(ldb,*)
 
   call zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb)
-end subroutine zgtts2
+end subroutine ub_zgtts2
 
 subroutine ub_zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
   use blas77_types
@@ -31702,7 +31702,7 @@ subroutine ub_zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ld
   complex(blas77_f64) :: work(*)
 
   call zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work)
-end subroutine zhb2st_kernels
+end subroutine ub_zhb2st_kernels
 
 subroutine ub_zhbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
   use blas77_types
@@ -31726,7 +31726,7 @@ subroutine ub_zhbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zhbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info)
-end subroutine zhbev_2stage
+end subroutine ub_zhbev_2stage
 
 subroutine ub_zhbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -31749,7 +31749,7 @@ subroutine ub_zhbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call zhbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info)
-end subroutine zhbev
+end subroutine ub_zhbev
 
 subroutine ub_zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -31776,7 +31776,7 @@ subroutine ub_zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwo
   integer(blas77_int) :: info
 
   call zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhbevd_2stage
+end subroutine ub_zhbevd_2stage
 
 subroutine ub_zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -31803,7 +31803,7 @@ subroutine ub_zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwor
   integer(blas77_int) :: info
 
   call zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhbevd
+end subroutine ub_zhbevd
 
 subroutine ub_zhbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -31838,7 +31838,7 @@ subroutine ub_zhbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,absto
   integer(blas77_int) :: info
 
   call zhbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine zhbevx_2stage
+end subroutine ub_zhbevx_2stage
 
 subroutine ub_zhbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -31872,7 +31872,7 @@ subroutine ub_zhbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z
   integer(blas77_int) :: info
 
   call zhbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine zhbevx
+end subroutine ub_zhbevx
 
 subroutine ub_zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
   use blas77_types
@@ -31897,7 +31897,7 @@ subroutine ub_zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
   integer(blas77_int) :: info
 
   call zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info)
-end subroutine zhbgst
+end subroutine ub_zhbgst
 
 subroutine ub_zhbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -31923,7 +31923,7 @@ subroutine ub_zhbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call zhbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info)
-end subroutine zhbgv
+end subroutine ub_zhbgv
 
 subroutine ub_zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -31953,7 +31953,7 @@ subroutine ub_zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,
   integer(blas77_int) :: info
 
   call zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhbgvd
+end subroutine ub_zhbgvd
 
 subroutine ub_zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -31990,7 +31990,7 @@ subroutine ub_zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,a
   integer(blas77_int) :: info
 
   call zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine zhbgvx
+end subroutine ub_zhbgvx
 
 subroutine ub_zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   use blas77_types
@@ -32013,7 +32013,7 @@ subroutine ub_zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info)
-end subroutine zhbtrd
+end subroutine ub_zhbtrd
 
 subroutine ub_zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -32034,7 +32034,7 @@ subroutine ub_zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
-end subroutine zhecon_3
+end subroutine ub_zhecon_3
 
 subroutine ub_zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -32054,7 +32054,7 @@ subroutine ub_zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine zhecon
+end subroutine ub_zhecon
 
 subroutine ub_zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -32074,7 +32074,7 @@ subroutine ub_zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine zhecon_rook
+end subroutine ub_zhecon_rook
 
 subroutine ub_zheequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -32094,7 +32094,7 @@ subroutine ub_zheequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call zheequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine zheequb
+end subroutine ub_zheequb
 
 subroutine ub_zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   use blas77_types
@@ -32115,7 +32115,7 @@ subroutine ub_zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
-end subroutine zheev_2stage
+end subroutine ub_zheev_2stage
 
 subroutine ub_zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   use blas77_types
@@ -32136,7 +32136,7 @@ subroutine ub_zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info)
-end subroutine zheev
+end subroutine ub_zheev
 
 subroutine ub_zheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -32160,7 +32160,7 @@ subroutine ub_zheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,li
   integer(blas77_int) :: info
 
   call zheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zheevd_2stage
+end subroutine ub_zheevd_2stage
 
 subroutine ub_zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -32184,7 +32184,7 @@ subroutine ub_zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,in
   integer(blas77_int) :: info
 
   call zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zheevd
+end subroutine ub_zheevd
 
 subroutine ub_zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -32218,7 +32218,7 @@ subroutine ub_zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zheevr_2stage
+end subroutine ub_zheevr_2stage
 
 subroutine ub_zheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -32252,7 +32252,7 @@ subroutine ub_zheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz
   integer(blas77_int) :: info
 
   call zheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zheevr
+end subroutine ub_zheevr
 
 subroutine ub_zheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -32284,7 +32284,7 @@ subroutine ub_zheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz
   integer(blas77_int) :: info
 
   call zheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine zheevx_2stage
+end subroutine ub_zheevx_2stage
 
 subroutine ub_zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -32316,7 +32316,7 @@ subroutine ub_zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,l
   integer(blas77_int) :: info
 
   call zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine zheevx
+end subroutine ub_zheevx
 
 subroutine ub_zhegs2(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -32335,7 +32335,7 @@ subroutine ub_zhegs2(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhegs2(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine zhegs2
+end subroutine ub_zhegs2
 
 subroutine ub_zhegst(itype,uplo,n,a,lda,b,ldb,info)
   use blas77_types
@@ -32354,7 +32354,7 @@ subroutine ub_zhegst(itype,uplo,n,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhegst(itype,uplo,n,a,lda,b,ldb,info)
-end subroutine zhegst
+end subroutine ub_zhegst
 
 subroutine ub_zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   use blas77_types
@@ -32378,7 +32378,7 @@ subroutine ub_zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info
   integer(blas77_int) :: info
 
   call zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
-end subroutine zhegv_2stage
+end subroutine ub_zhegv_2stage
 
 subroutine ub_zhegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   use blas77_types
@@ -32402,7 +32402,7 @@ subroutine ub_zhegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
   integer(blas77_int) :: info
 
   call zhegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info)
-end subroutine zhegv
+end subroutine ub_zhegv
 
 subroutine ub_zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -32429,7 +32429,7 @@ subroutine ub_zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwo
   integer(blas77_int) :: info
 
   call zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhegvd
+end subroutine ub_zhegvd
 
 subroutine ub_zhegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
   use blas77_types
@@ -32464,7 +32464,7 @@ subroutine ub_zhegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,
   integer(blas77_int) :: info
 
   call zhegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info)
-end subroutine zhegvx
+end subroutine ub_zhegvx
 
 subroutine ub_zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -32492,7 +32492,7 @@ subroutine ub_zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,r
   integer(blas77_int) :: info
 
   call zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zherfs
+end subroutine ub_zherfs
 
 subroutine ub_zherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -32527,7 +32527,7 @@ subroutine ub_zherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call zherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zherfsx
+end subroutine ub_zherfsx
 
 subroutine ub_zhesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -32552,7 +32552,7 @@ subroutine ub_zhesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call zhesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine zhesv_aa_2stage
+end subroutine ub_zhesv_aa_2stage
 
 subroutine ub_zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -32574,7 +32574,7 @@ subroutine ub_zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zhesv_aa
+end subroutine ub_zhesv_aa
 
 subroutine ub_zhesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -32596,7 +32596,7 @@ subroutine ub_zhesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zhesv
+end subroutine ub_zhesv
 
 subroutine ub_zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -32619,7 +32619,7 @@ subroutine ub_zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine zhesv_rk
+end subroutine ub_zhesv_rk
 
 subroutine ub_zhesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -32641,7 +32641,7 @@ subroutine ub_zhesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zhesv_rook
+end subroutine ub_zhesv_rook
 
 subroutine ub_zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
   use blas77_types
@@ -32672,7 +32672,7 @@ subroutine ub_zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
-end subroutine zhesvx
+end subroutine ub_zhesvx
 
 subroutine ub_zhesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -32709,7 +32709,7 @@ subroutine ub_zhesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call zhesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zhesvxx
+end subroutine ub_zhesvxx
 
 subroutine ub_zhetd2(uplo,n,a,lda,d,e,tau,info)
   use blas77_types
@@ -32728,7 +32728,7 @@ subroutine ub_zhetd2(uplo,n,a,lda,d,e,tau,info)
   integer(blas77_int) :: info
 
   call zhetd2(uplo,n,a,lda,d,e,tau,info)
-end subroutine zhetd2
+end subroutine ub_zhetd2
 
 subroutine ub_zhetf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -32745,7 +32745,7 @@ subroutine ub_zhetf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zhetf2(uplo,n,a,lda,ipiv,info)
-end subroutine zhetf2
+end subroutine ub_zhetf2
 
 subroutine ub_zhetf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -32763,7 +32763,7 @@ subroutine ub_zhetf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call zhetf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine zhetf2_rk
+end subroutine ub_zhetf2_rk
 
 subroutine ub_zhetf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -32780,7 +32780,7 @@ subroutine ub_zhetf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zhetf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine zhetf2_rook
+end subroutine ub_zhetf2_rook
 
 subroutine ub_zhetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   use blas77_types
@@ -32804,7 +32804,7 @@ subroutine ub_zhetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,in
   integer(blas77_int) :: info
 
   call zhetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
-end subroutine zhetrd_2stage
+end subroutine ub_zhetrd_2stage
 
 subroutine ub_zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
   use blas77_types
@@ -32829,7 +32829,7 @@ subroutine ub_zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwo
   integer(blas77_int) :: info
 
   call zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info)
-end subroutine zhetrd_hb2st
+end subroutine ub_zhetrd_hb2st
 
 subroutine ub_zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   use blas77_types
@@ -32851,7 +32851,7 @@ subroutine ub_zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info)
-end subroutine zhetrd_he2hb
+end subroutine ub_zhetrd_he2hb
 
 subroutine ub_zhetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   use blas77_types
@@ -32872,7 +32872,7 @@ subroutine ub_zhetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrd(uplo,n,a,lda,d,e,tau,work,lwork,info)
-end subroutine zhetrd
+end subroutine ub_zhetrd
 
 subroutine ub_zhetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -32894,7 +32894,7 @@ subroutine ub_zhetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine zhetrf_aa_2stage
+end subroutine ub_zhetrf_aa_2stage
 
 subroutine ub_zhetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -32913,7 +32913,7 @@ subroutine ub_zhetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zhetrf_aa
+end subroutine ub_zhetrf_aa
 
 subroutine ub_zhetrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -32932,7 +32932,7 @@ subroutine ub_zhetrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zhetrf
+end subroutine ub_zhetrf
 
 subroutine ub_zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -32952,7 +32952,7 @@ subroutine ub_zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine zhetrf_rk
+end subroutine ub_zhetrf_rk
 
 subroutine ub_zhetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -32971,7 +32971,7 @@ subroutine ub_zhetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zhetrf_rook
+end subroutine ub_zhetrf_rook
 
 subroutine ub_zhetri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -32990,7 +32990,7 @@ subroutine ub_zhetri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zhetri2
+end subroutine ub_zhetri2
 
 subroutine ub_zhetri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -33009,7 +33009,7 @@ subroutine ub_zhetri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call zhetri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine zhetri2x
+end subroutine ub_zhetri2x
 
 subroutine ub_zhetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -33029,7 +33029,7 @@ subroutine ub_zhetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine zhetri_3
+end subroutine ub_zhetri_3
 
 subroutine ub_zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -33049,7 +33049,7 @@ subroutine ub_zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine zhetri_3x
+end subroutine ub_zhetri_3x
 
 subroutine ub_zhetri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -33067,7 +33067,7 @@ subroutine ub_zhetri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zhetri(uplo,n,a,lda,ipiv,work,info)
-end subroutine zhetri
+end subroutine ub_zhetri
 
 subroutine ub_zhetri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -33085,7 +33085,7 @@ subroutine ub_zhetri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zhetri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine zhetri_rook
+end subroutine ub_zhetri_rook
 
 subroutine ub_zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -33106,7 +33106,7 @@ subroutine ub_zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine zhetrs2
+end subroutine ub_zhetrs2
 
 subroutine ub_zhetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -33127,7 +33127,7 @@ subroutine ub_zhetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine zhetrs_3
+end subroutine ub_zhetrs_3
 
 subroutine ub_zhetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -33150,7 +33150,7 @@ subroutine ub_zhetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine zhetrs_aa_2stage
+end subroutine ub_zhetrs_aa_2stage
 
 subroutine ub_zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -33172,7 +33172,7 @@ subroutine ub_zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zhetrs_aa
+end subroutine ub_zhetrs_aa
 
 subroutine ub_zhetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -33192,7 +33192,7 @@ subroutine ub_zhetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zhetrs
+end subroutine ub_zhetrs
 
 subroutine ub_zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -33212,7 +33212,7 @@ subroutine ub_zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zhetrs_rook
+end subroutine ub_zhetrs_rook
 
 subroutine ub_zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   use blas77_types
@@ -33233,7 +33233,7 @@ subroutine ub_zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
   complex(blas77_f64) :: c(*)
 
   call zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c)
-end subroutine zhfrk
+end subroutine ub_zhfrk
 
 subroutine ub_zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info)
   use blas77_types
@@ -33264,7 +33264,7 @@ subroutine ub_zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ld
   integer(blas77_int) :: info
 
   call zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info)
-end subroutine zhgeqz
+end subroutine ub_zhgeqz
 
 subroutine ub_zhpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -33283,7 +33283,7 @@ subroutine ub_zhpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zhpcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
-end subroutine zhpcon
+end subroutine ub_zhpcon
 
 subroutine ub_zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -33304,7 +33304,7 @@ subroutine ub_zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info)
-end subroutine zhpev
+end subroutine ub_zhpev
 
 subroutine ub_zhpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -33329,7 +33329,7 @@ subroutine ub_zhpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork
   integer(blas77_int) :: info
 
   call zhpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhpevd
+end subroutine ub_zhpevd
 
 subroutine ub_zhpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -33359,7 +33359,7 @@ subroutine ub_zhpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwor
   integer(blas77_int) :: info
 
   call zhpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine zhpevx
+end subroutine ub_zhpevx
 
 subroutine ub_zhpgst(itype,uplo,n,ap,bp,info)
   use blas77_types
@@ -33376,7 +33376,7 @@ subroutine ub_zhpgst(itype,uplo,n,ap,bp,info)
   integer(blas77_int) :: info
 
   call zhpgst(itype,uplo,n,ap,bp,info)
-end subroutine zhpgst
+end subroutine ub_zhpgst
 
 subroutine ub_zhpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
   use blas77_types
@@ -33399,7 +33399,7 @@ subroutine ub_zhpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
   integer(blas77_int) :: info
 
   call zhpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info)
-end subroutine zhpgv
+end subroutine ub_zhpgv
 
 subroutine ub_zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -33426,7 +33426,7 @@ subroutine ub_zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwo
   integer(blas77_int) :: info
 
   call zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zhpgvd
+end subroutine ub_zhpgvd
 
 subroutine ub_zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
   use blas77_types
@@ -33458,7 +33458,7 @@ subroutine ub_zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,
   integer(blas77_int) :: info
 
   call zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info)
-end subroutine zhpgvx
+end subroutine ub_zhpgvx
 
 subroutine ub_zhprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -33484,7 +33484,7 @@ subroutine ub_zhprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,in
   integer(blas77_int) :: info
 
   call zhprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zhprfs
+end subroutine ub_zhprfs
 
 subroutine ub_zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -33503,7 +33503,7 @@ subroutine ub_zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine zhpsv
+end subroutine ub_zhpsv
 
 subroutine ub_zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -33531,7 +33531,7 @@ subroutine ub_zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zhpsvx
+end subroutine ub_zhpsvx
 
 subroutine ub_zhptrd(uplo,n,ap,d,e,tau,info)
   use blas77_types
@@ -33549,7 +33549,7 @@ subroutine ub_zhptrd(uplo,n,ap,d,e,tau,info)
   integer(blas77_int) :: info
 
   call zhptrd(uplo,n,ap,d,e,tau,info)
-end subroutine zhptrd
+end subroutine ub_zhptrd
 
 subroutine ub_zhptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -33565,7 +33565,7 @@ subroutine ub_zhptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call zhptrf(uplo,n,ap,ipiv,info)
-end subroutine zhptrf
+end subroutine ub_zhptrf
 
 subroutine ub_zhptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -33582,7 +33582,7 @@ subroutine ub_zhptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zhptri(uplo,n,ap,ipiv,work,info)
-end subroutine zhptri
+end subroutine ub_zhptri
 
 subroutine ub_zhptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -33601,7 +33601,7 @@ subroutine ub_zhptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zhptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine zhptrs
+end subroutine ub_zhptrs
 
 subroutine ub_zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info)
   use blas77_types
@@ -33631,7 +33631,7 @@ subroutine ub_zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,wor
   integer(blas77_int) :: info
 
   call zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info)
-end subroutine zhsein
+end subroutine ub_zhsein
 
 subroutine ub_zhseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
   use blas77_types
@@ -33655,7 +33655,7 @@ subroutine ub_zhseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
   integer(blas77_int) :: info
 
   call zhseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info)
-end subroutine zhseqr
+end subroutine ub_zhseqr
 
 subroutine ub_zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   use blas77_types
@@ -33679,7 +33679,7 @@ subroutine ub_zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy)
-end subroutine zla_gbamv
+end subroutine ub_zla_gbamv
 
 function ub_zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -33705,7 +33705,7 @@ function ub_zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,wor
   real(blas77_f64) :: ub_zla_gbrcond_c
 
   ub_zla_gbrcond_c = zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork)
-end function zla_gbrcond_c
+end function ub_zla_gbrcond_c
 
 function ub_zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork)
   use blas77_types
@@ -33730,7 +33730,7 @@ function ub_zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork
   real(blas77_f64) :: ub_zla_gbrcond_x
 
   ub_zla_gbrcond_x = zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork)
-end function zla_gbrcond_x
+end function ub_zla_gbrcond_x
 
 subroutine ub_zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -33772,7 +33772,7 @@ subroutine ub_zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,
   integer(blas77_int) :: info
 
   call zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine zla_gbrfsx_extended
+end subroutine ub_zla_gbrfsx_extended
 
 function ub_zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   use blas77_types
@@ -33792,7 +33792,7 @@ function ub_zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
   real(blas77_f64) :: ub_zla_gbrpvgrw
 
   ub_zla_gbrpvgrw = zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb)
-end function zla_gbrpvgrw
+end function ub_zla_gbrpvgrw
 
 subroutine ub_zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -33814,7 +33814,7 @@ subroutine ub_zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zla_geamv
+end subroutine ub_zla_geamv
 
 function ub_zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -33838,7 +33838,7 @@ function ub_zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f64) :: ub_zla_gercond_c
 
   ub_zla_gercond_c = zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function zla_gercond_c
+end function ub_zla_gercond_c
 
 function ub_zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -33861,7 +33861,7 @@ function ub_zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f64) :: ub_zla_gercond_x
 
   ub_zla_gercond_x = zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function zla_gercond_x
+end function ub_zla_gercond_x
 
 subroutine ub_zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -33901,7 +33901,7 @@ subroutine ub_zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv
   integer(blas77_int) :: info
 
   call zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine zla_gerfsx_extended
+end subroutine ub_zla_gerfsx_extended
 
 function ub_zla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   use blas77_types
@@ -33919,7 +33919,7 @@ function ub_zla_gerpvgrw(n,ncols,a,lda,af,ldaf)
   real(blas77_f64) :: ub_zla_gerpvgrw
 
   ub_zla_gerpvgrw = zla_gerpvgrw(n,ncols,a,lda,af,ldaf)
-end function zla_gerpvgrw
+end function ub_zla_gerpvgrw
 
 subroutine ub_zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -33940,7 +33940,7 @@ subroutine ub_zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zla_heamv
+end subroutine ub_zla_heamv
 
 function ub_zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -33964,7 +33964,7 @@ function ub_zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f64) :: ub_zla_hercond_c
 
   ub_zla_hercond_c = zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function zla_hercond_c
+end function ub_zla_hercond_c
 
 function ub_zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -33987,7 +33987,7 @@ function ub_zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f64) :: ub_zla_hercond_x
 
   ub_zla_hercond_x = zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function zla_hercond_x
+end function ub_zla_hercond_x
 
 subroutine ub_zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -34027,7 +34027,7 @@ subroutine ub_zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine zla_herfsx_extended
+end subroutine ub_zla_herfsx_extended
 
 function ub_zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -34048,7 +34048,7 @@ function ub_zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f64) :: ub_zla_herpvgrw
 
   ub_zla_herpvgrw = zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function zla_herpvgrw
+end function ub_zla_herpvgrw
 
 subroutine ub_zla_lin_berr(n,nz,nrhs,res,ayb,berr)
   use blas77_types
@@ -34065,7 +34065,7 @@ subroutine ub_zla_lin_berr(n,nz,nrhs,res,ayb,berr)
   real(blas77_f64) :: berr(nrhs)
 
   call zla_lin_berr(n,nz,nrhs,res,ayb,berr)
-end subroutine zla_lin_berr
+end subroutine ub_zla_lin_berr
 
 function ub_zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   use blas77_types
@@ -34088,7 +34088,7 @@ function ub_zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
   real(blas77_f64) :: ub_zla_porcond_c
 
   ub_zla_porcond_c = zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork)
-end function zla_porcond_c
+end function ub_zla_porcond_c
 
 function ub_zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
   use blas77_types
@@ -34110,7 +34110,7 @@ function ub_zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
   real(blas77_f64) :: ub_zla_porcond_x
 
   ub_zla_porcond_x = zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork)
-end function zla_porcond_x
+end function ub_zla_porcond_x
 
 subroutine ub_zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -34149,7 +34149,7 @@ subroutine ub_zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b
   integer(blas77_int) :: info
 
   call zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine zla_porfsx_extended
+end subroutine ub_zla_porfsx_extended
 
 function ub_zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   use blas77_types
@@ -34168,7 +34168,7 @@ function ub_zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
   real(blas77_f64) :: ub_zla_porpvgrw
 
   ub_zla_porpvgrw = zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work)
-end function zla_porpvgrw
+end function ub_zla_porpvgrw
 
 subroutine ub_zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -34189,7 +34189,7 @@ subroutine ub_zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zla_syamv
+end subroutine ub_zla_syamv
 
 function ub_zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   use blas77_types
@@ -34213,7 +34213,7 @@ function ub_zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
   real(blas77_f64) :: ub_zla_syrcond_c
 
   ub_zla_syrcond_c = zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork)
-end function zla_syrcond_c
+end function ub_zla_syrcond_c
 
 function ub_zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   use blas77_types
@@ -34236,7 +34236,7 @@ function ub_zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
   real(blas77_f64) :: ub_zla_syrcond_x
 
   ub_zla_syrcond_x = zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork)
-end function zla_syrcond_x
+end function ub_zla_syrcond_x
 
 subroutine ub_zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
   use blas77_types
@@ -34276,7 +34276,7 @@ subroutine ub_zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,coleq
   integer(blas77_int) :: info
 
   call zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info)
-end subroutine zla_syrfsx_extended
+end subroutine ub_zla_syrfsx_extended
 
 function ub_zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   use blas77_types
@@ -34297,7 +34297,7 @@ function ub_zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
   real(blas77_f64) :: ub_zla_syrpvgrw
 
   ub_zla_syrpvgrw = zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work)
-end function zla_syrpvgrw
+end function ub_zla_syrpvgrw
 
 subroutine ub_zla_wwaddw(n,x,y,w)
   use blas77_types
@@ -34312,7 +34312,7 @@ subroutine ub_zla_wwaddw(n,x,y,w)
   complex(blas77_f64) :: w(*)
 
   call zla_wwaddw(n,x,y,w)
-end subroutine zla_wwaddw
+end subroutine ub_zla_wwaddw
 
 subroutine ub_zlaed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
   use blas77_types
@@ -34334,7 +34334,7 @@ subroutine ub_zlaed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
   integer(blas77_int) :: info
 
   call zlaed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info)
-end subroutine zlaed0
+end subroutine ub_zlaed0
 
 subroutine ub_zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info)
   use blas77_types
@@ -34367,7 +34367,7 @@ subroutine ub_zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,
   integer(blas77_int) :: info
 
   call zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info)
-end subroutine zlaed7
+end subroutine ub_zlaed7
 
 subroutine ub_zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info)
   use blas77_types
@@ -34399,7 +34399,7 @@ subroutine ub_zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,
   integer(blas77_int) :: info
 
   call zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info)
-end subroutine zlaed8
+end subroutine ub_zlaed8
 
 subroutine ub_zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -34420,7 +34420,7 @@ subroutine ub_zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   complex(blas77_f64) :: work(*)
 
   call zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine zlahef_aa
+end subroutine ub_zlahef_aa
 
 subroutine ub_zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -34441,7 +34441,7 @@ subroutine ub_zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine zlahef
+end subroutine ub_zlahef
 
 subroutine ub_zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -34463,7 +34463,7 @@ subroutine ub_zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine zlahef_rk
+end subroutine ub_zlahef_rk
 
 subroutine ub_zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -34484,7 +34484,7 @@ subroutine ub_zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine zlahef_rook
+end subroutine ub_zlahef_rook
 
 subroutine ub_zlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info)
   use blas77_types
@@ -34519,7 +34519,7 @@ subroutine ub_zlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldg
   integer(blas77_int) :: info
 
   call zlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info)
-end subroutine zlals0
+end subroutine ub_zlals0
 
 subroutine ub_zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info)
   use blas77_types
@@ -34556,7 +34556,7 @@ subroutine ub_zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,p
   integer(blas77_int) :: info
 
   call zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info)
-end subroutine zlalsa
+end subroutine ub_zlalsa
 
 subroutine ub_zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
   use blas77_types
@@ -34581,7 +34581,7 @@ subroutine ub_zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,in
   integer(blas77_int) :: info
 
   call zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
-end subroutine zlalsd
+end subroutine ub_zlalsd
 
 subroutine ub_zlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -34608,7 +34608,7 @@ subroutine ub_zlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine zlamswlq
+end subroutine ub_zlamswlq
 
 subroutine ub_zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   use blas77_types
@@ -34635,7 +34635,7 @@ subroutine ub_zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info)
-end subroutine zlamtsqr
+end subroutine ub_zlamtsqr
 
 function ub_zlanhf(norm,transr,uplo,n,a,work)
   use blas77_types
@@ -34653,7 +34653,7 @@ function ub_zlanhf(norm,transr,uplo,n,a,work)
   real(blas77_f64) :: ub_zlanhf
 
   ub_zlanhf = zlanhf(norm,transr,uplo,n,a,work)
-end function zlanhf
+end function ub_zlanhf
 
 subroutine ub_zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info)
   use blas77_types
@@ -34685,7 +34685,7 @@ subroutine ub_zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,
   integer(blas77_int),intent(out) :: info
 
   call zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info)
-end subroutine zlaqz0
+end subroutine ub_zlaqz0
 
 subroutine ub_zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
   use blas77_types
@@ -34714,7 +34714,7 @@ subroutine ub_zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz
   complex(blas77_f64) :: z(ldz,*)
 
   call zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz)
-end subroutine zlaqz1
+end subroutine ub_zlaqz1
 
 subroutine ub_zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info)
   use blas77_types
@@ -34753,7 +34753,7 @@ subroutine ub_zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,
   integer(blas77_int),intent(out) :: info
 
   call zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info)
-end subroutine zlaqz2
+end subroutine ub_zlaqz2
 
 subroutine ub_zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
   use blas77_types
@@ -34789,7 +34789,7 @@ subroutine ub_zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta
   integer(blas77_int),intent(out) :: info
 
   call zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info)
-end subroutine zlaqz3
+end subroutine ub_zlaqz3
 
 subroutine ub_zlarfy(uplo,n,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -34808,7 +34808,7 @@ subroutine ub_zlarfy(uplo,n,v,incv,tau,c,ldc,work)
   complex(blas77_f64) :: work(*)
 
   call zlarfy(uplo,n,v,incv,tau,c,ldc,work)
-end subroutine zlarfy
+end subroutine ub_zlarfy
 
 subroutine ub_zlarscl2(m,n,d,x,ldx)
   use blas77_types
@@ -34824,7 +34824,7 @@ subroutine ub_zlarscl2(m,n,d,x,ldx)
   complex(blas77_f64) :: x(ldx,*)
 
   call zlarscl2(m,n,d,x,ldx)
-end subroutine zlarscl2
+end subroutine ub_zlarscl2
 
 subroutine ub_zlarz(side,m,n,l,v,incv,tau,c,ldc,work)
   use blas77_types
@@ -34845,7 +34845,7 @@ subroutine ub_zlarz(side,m,n,l,v,incv,tau,c,ldc,work)
   complex(blas77_f64) :: work(*)
 
   call zlarz(side,m,n,l,v,incv,tau,c,ldc,work)
-end subroutine zlarz
+end subroutine ub_zlarz
 
 subroutine ub_zlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
   use blas77_types
@@ -34872,7 +34872,7 @@ subroutine ub_zlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldw
   complex(blas77_f64) :: work(ldwork,*)
 
   call zlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork)
-end subroutine zlarzb
+end subroutine ub_zlarzb
 
 subroutine ub_zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   use blas77_types
@@ -34892,7 +34892,7 @@ subroutine ub_zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
   complex(blas77_f64) :: t(ldt,*)
 
   call zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt)
-end subroutine zlarzt
+end subroutine ub_zlarzt
 
 subroutine ub_zlascl2(m,n,d,x,ldx)
   use blas77_types
@@ -34908,7 +34908,7 @@ subroutine ub_zlascl2(m,n,d,x,ldx)
   complex(blas77_f64) :: x(ldx,*)
 
   call zlascl2(m,n,d,x,ldx)
-end subroutine zlascl2
+end subroutine ub_zlascl2
 
 subroutine ub_zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -34930,7 +34930,7 @@ subroutine ub_zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine zlaswlq
+end subroutine ub_zlaswlq
 
 subroutine ub_zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   use blas77_types
@@ -34951,7 +34951,7 @@ subroutine ub_zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
   complex(blas77_f64) :: work(*)
 
   call zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work)
-end subroutine zlasyf_aa
+end subroutine ub_zlasyf_aa
 
 subroutine ub_zlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -34972,7 +34972,7 @@ subroutine ub_zlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine zlasyf
+end subroutine ub_zlasyf
 
 subroutine ub_zlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   use blas77_types
@@ -34994,7 +34994,7 @@ subroutine ub_zlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info)
-end subroutine zlasyf_rk
+end subroutine ub_zlasyf_rk
 
 subroutine ub_zlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   use blas77_types
@@ -35015,7 +35015,7 @@ subroutine ub_zlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
   integer(blas77_int) :: info
 
   call zlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info)
-end subroutine zlasyf_rook
+end subroutine ub_zlasyf_rook
 
 subroutine ub_zlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
   use blas77_types
@@ -35041,7 +35041,7 @@ subroutine ub_zlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work
   integer(blas77_int) :: info
 
   call zlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info)
-end subroutine zlatrs3
+end subroutine ub_zlatrs3
 
 subroutine ub_zlatrz(m,n,l,a,lda,tau,work)
   use blas77_types
@@ -35059,7 +35059,7 @@ subroutine ub_zlatrz(m,n,l,a,lda,tau,work)
   complex(blas77_f64) :: work(*)
 
   call zlatrz(m,n,l,a,lda,tau,work)
-end subroutine zlatrz
+end subroutine ub_zlatrz
 
 subroutine ub_zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -35081,7 +35081,7 @@ subroutine ub_zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine zlatsqr
+end subroutine ub_zlatsqr
 
 subroutine ub_zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   use blas77_types
@@ -35102,7 +35102,7 @@ subroutine ub_zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
   complex(blas77_f64) :: work(*)
 
   call zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work)
-end subroutine zlatzm
+end subroutine ub_zlatzm
 
 subroutine ub_zlaunhr_col_getrfnp2(m,n,a,lda,d,info)
   use blas77_types
@@ -35119,7 +35119,7 @@ subroutine ub_zlaunhr_col_getrfnp2(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call zlaunhr_col_getrfnp2(m,n,a,lda,d,info)
-end subroutine zlaunhr_col_getrfnp2
+end subroutine ub_zlaunhr_col_getrfnp2
 
 subroutine ub_zlaunhr_col_getrfnp(m,n,a,lda,d,info)
   use blas77_types
@@ -35136,7 +35136,7 @@ subroutine ub_zlaunhr_col_getrfnp(m,n,a,lda,d,info)
   integer(blas77_int) :: info
 
   call zlaunhr_col_getrfnp(m,n,a,lda,d,info)
-end subroutine zlaunhr_col_getrfnp
+end subroutine ub_zlaunhr_col_getrfnp
 
 subroutine ub_zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -35157,7 +35157,7 @@ subroutine ub_zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info)
-end subroutine zpbcon
+end subroutine ub_zpbcon
 
 subroutine ub_zpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   use blas77_types
@@ -35177,7 +35177,7 @@ subroutine ub_zpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call zpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info)
-end subroutine zpbequ
+end subroutine ub_zpbequ
 
 subroutine ub_zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35205,7 +35205,7 @@ subroutine ub_zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work
   integer(blas77_int) :: info
 
   call zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zpbrfs
+end subroutine ub_zpbrfs
 
 subroutine ub_zpbstf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -35222,7 +35222,7 @@ subroutine ub_zpbstf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call zpbstf(uplo,n,kd,ab,ldab,info)
-end subroutine zpbstf
+end subroutine ub_zpbstf
 
 subroutine ub_zpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -35242,7 +35242,7 @@ subroutine ub_zpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine zpbsv
+end subroutine ub_zpbsv
 
 subroutine ub_zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35274,7 +35274,7 @@ subroutine ub_zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,r
   integer(blas77_int) :: info
 
   call zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zpbsvx
+end subroutine ub_zpbsvx
 
 subroutine ub_zpbtf2(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -35291,7 +35291,7 @@ subroutine ub_zpbtf2(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call zpbtf2(uplo,n,kd,ab,ldab,info)
-end subroutine zpbtf2
+end subroutine ub_zpbtf2
 
 subroutine ub_zpbtrf(uplo,n,kd,ab,ldab,info)
   use blas77_types
@@ -35308,7 +35308,7 @@ subroutine ub_zpbtrf(uplo,n,kd,ab,ldab,info)
   integer(blas77_int) :: info
 
   call zpbtrf(uplo,n,kd,ab,ldab,info)
-end subroutine zpbtrf
+end subroutine ub_zpbtrf
 
 subroutine ub_zpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -35328,7 +35328,7 @@ subroutine ub_zpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine zpbtrs
+end subroutine ub_zpbtrs
 
 subroutine ub_zpftrf(transr,uplo,n,a,info)
   use blas77_types
@@ -35344,7 +35344,7 @@ subroutine ub_zpftrf(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call zpftrf(transr,uplo,n,a,info)
-end subroutine zpftrf
+end subroutine ub_zpftrf
 
 subroutine ub_zpftri(transr,uplo,n,a,info)
   use blas77_types
@@ -35360,7 +35360,7 @@ subroutine ub_zpftri(transr,uplo,n,a,info)
   integer(blas77_int) :: info
 
   call zpftri(transr,uplo,n,a,info)
-end subroutine zpftri
+end subroutine ub_zpftri
 
 subroutine ub_zpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   use blas77_types
@@ -35379,7 +35379,7 @@ subroutine ub_zpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpftrs(transr,uplo,n,nrhs,a,b,ldb,info)
-end subroutine zpftrs
+end subroutine ub_zpftrs
 
 subroutine ub_zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -35399,7 +35399,7 @@ subroutine ub_zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info)
-end subroutine zpocon
+end subroutine ub_zpocon
 
 subroutine ub_zpoequ(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -35417,7 +35417,7 @@ subroutine ub_zpoequ(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call zpoequ(n,a,lda,s,scond,amax,info)
-end subroutine zpoequ
+end subroutine ub_zpoequ
 
 subroutine ub_zpoequb(n,a,lda,s,scond,amax,info)
   use blas77_types
@@ -35435,7 +35435,7 @@ subroutine ub_zpoequb(n,a,lda,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call zpoequb(n,a,lda,s,scond,amax,info)
-end subroutine zpoequb
+end subroutine ub_zpoequb
 
 subroutine ub_zporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35462,7 +35462,7 @@ subroutine ub_zporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,
   integer(blas77_int) :: info
 
   call zporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zporfs
+end subroutine ub_zporfs
 
 subroutine ub_zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -35496,7 +35496,7 @@ subroutine ub_zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n
   integer(blas77_int) :: info
 
   call zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zporfsx
+end subroutine ub_zporfsx
 
 subroutine ub_zposv(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -35515,7 +35515,7 @@ subroutine ub_zposv(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call zposv(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine zposv
+end subroutine ub_zposv
 
 subroutine ub_zposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35546,7 +35546,7 @@ subroutine ub_zposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,fe
   integer(blas77_int) :: info
 
   call zposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zposvx
+end subroutine ub_zposvx
 
 subroutine ub_zposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -35582,7 +35582,7 @@ subroutine ub_zposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,r
   integer(blas77_int) :: info
 
   call zposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zposvxx
+end subroutine ub_zposvxx
 
 subroutine ub_zpotf2(uplo,n,a,lda,info)
   use blas77_types
@@ -35598,7 +35598,7 @@ subroutine ub_zpotf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call zpotf2(uplo,n,a,lda,info)
-end subroutine zpotf2
+end subroutine ub_zpotf2
 
 subroutine ub_zpotrf2(uplo,n,a,lda,info)
   use blas77_types
@@ -35614,7 +35614,7 @@ subroutine ub_zpotrf2(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call zpotrf2(uplo,n,a,lda,info)
-end subroutine zpotrf2
+end subroutine ub_zpotrf2
 
 subroutine ub_zpotrf(uplo,n,a,lda,info)
   use blas77_types
@@ -35630,7 +35630,7 @@ subroutine ub_zpotrf(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call zpotrf(uplo,n,a,lda,info)
-end subroutine zpotrf
+end subroutine ub_zpotrf
 
 subroutine ub_zpotri(uplo,n,a,lda,info)
   use blas77_types
@@ -35646,7 +35646,7 @@ subroutine ub_zpotri(uplo,n,a,lda,info)
   integer(blas77_int) :: info
 
   call zpotri(uplo,n,a,lda,info)
-end subroutine zpotri
+end subroutine ub_zpotri
 
 subroutine ub_zpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -35665,7 +35665,7 @@ subroutine ub_zpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpotrs(uplo,n,nrhs,a,lda,b,ldb,info)
-end subroutine zpotrs
+end subroutine ub_zpotrs
 
 subroutine ub_zppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
   use blas77_types
@@ -35684,7 +35684,7 @@ subroutine ub_zppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call zppcon(uplo,n,ap,anorm,rcond,work,rwork,info)
-end subroutine zppcon
+end subroutine ub_zppcon
 
 subroutine ub_zppequ(uplo,n,ap,s,scond,amax,info)
   use blas77_types
@@ -35702,7 +35702,7 @@ subroutine ub_zppequ(uplo,n,ap,s,scond,amax,info)
   integer(blas77_int) :: info
 
   call zppequ(uplo,n,ap,s,scond,amax,info)
-end subroutine zppequ
+end subroutine ub_zppequ
 
 subroutine ub_zpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35727,7 +35727,7 @@ subroutine ub_zpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   integer(blas77_int) :: info
 
   call zpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zpprfs
+end subroutine ub_zpprfs
 
 subroutine ub_zppsv(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -35745,7 +35745,7 @@ subroutine ub_zppsv(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call zppsv(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine zppsv
+end subroutine ub_zppsv
 
 subroutine ub_zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35774,7 +35774,7 @@ subroutine ub_zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr
   integer(blas77_int) :: info
 
   call zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zppsvx
+end subroutine ub_zppsvx
 
 subroutine ub_zpptrf(uplo,n,ap,info)
   use blas77_types
@@ -35789,7 +35789,7 @@ subroutine ub_zpptrf(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call zpptrf(uplo,n,ap,info)
-end subroutine zpptrf
+end subroutine ub_zpptrf
 
 subroutine ub_zpptri(uplo,n,ap,info)
   use blas77_types
@@ -35804,7 +35804,7 @@ subroutine ub_zpptri(uplo,n,ap,info)
   integer(blas77_int) :: info
 
   call zpptri(uplo,n,ap,info)
-end subroutine zpptri
+end subroutine ub_zpptri
 
 subroutine ub_zpptrs(uplo,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -35822,7 +35822,7 @@ subroutine ub_zpptrs(uplo,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpptrs(uplo,n,nrhs,ap,b,ldb,info)
-end subroutine zpptrs
+end subroutine ub_zpptrs
 
 subroutine ub_zpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -35842,7 +35842,7 @@ subroutine ub_zpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call zpstf2(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine zpstf2
+end subroutine ub_zpstf2
 
 subroutine ub_zpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   use blas77_types
@@ -35862,7 +35862,7 @@ subroutine ub_zpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
   integer(blas77_int) :: info
 
   call zpstrf(uplo,n,a,lda,piv,rank,tol,work,info)
-end subroutine zpstrf
+end subroutine ub_zpstrf
 
 subroutine ub_zptcon(n,d,e,anorm,rcond,rwork,info)
   use blas77_types
@@ -35880,7 +35880,7 @@ subroutine ub_zptcon(n,d,e,anorm,rcond,rwork,info)
   integer(blas77_int) :: info
 
   call zptcon(n,d,e,anorm,rcond,rwork,info)
-end subroutine zptcon
+end subroutine ub_zptcon
 
 subroutine ub_zpteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -35899,7 +35899,7 @@ subroutine ub_zpteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call zpteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine zpteqr
+end subroutine ub_zpteqr
 
 subroutine ub_zptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35926,7 +35926,7 @@ subroutine ub_zptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info
   integer(blas77_int) :: info
 
   call zptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zptrfs
+end subroutine ub_zptrfs
 
 subroutine ub_zptsv(n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -35944,7 +35944,7 @@ subroutine ub_zptsv(n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call zptsv(n,nrhs,d,e,b,ldb,info)
-end subroutine zptsv
+end subroutine ub_zptsv
 
 subroutine ub_zptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -35972,7 +35972,7 @@ subroutine ub_zptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwor
   integer(blas77_int) :: info
 
   call zptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zptsvx
+end subroutine ub_zptsvx
 
 subroutine ub_zpttrf(n,d,e,info)
   use blas77_types
@@ -35987,7 +35987,7 @@ subroutine ub_zpttrf(n,d,e,info)
   integer(blas77_int) :: info
 
   call zpttrf(n,d,e,info)
-end subroutine zpttrf
+end subroutine ub_zpttrf
 
 subroutine ub_zpttrs(uplo,n,nrhs,d,e,b,ldb,info)
   use blas77_types
@@ -36006,7 +36006,7 @@ subroutine ub_zpttrs(uplo,n,nrhs,d,e,b,ldb,info)
   integer(blas77_int) :: info
 
   call zpttrs(uplo,n,nrhs,d,e,b,ldb,info)
-end subroutine zpttrs
+end subroutine ub_zpttrs
 
 subroutine ub_zptts2(iuplo,n,nrhs,d,e,b,ldb)
   use blas77_types
@@ -36024,7 +36024,7 @@ subroutine ub_zptts2(iuplo,n,nrhs,d,e,b,ldb)
   complex(blas77_f64) :: b(ldb,*)
 
   call zptts2(iuplo,n,nrhs,d,e,b,ldb)
-end subroutine zptts2
+end subroutine ub_zptts2
 
 subroutine ub_zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -36043,7 +36043,7 @@ subroutine ub_zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info)
-end subroutine zspcon
+end subroutine ub_zspcon
 
 subroutine ub_zsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -36069,7 +36069,7 @@ subroutine ub_zsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,in
   integer(blas77_int) :: info
 
   call zsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zsprfs
+end subroutine ub_zsprfs
 
 subroutine ub_zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -36088,7 +36088,7 @@ subroutine ub_zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine zspsv
+end subroutine ub_zspsv
 
 subroutine ub_zspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
   use blas77_types
@@ -36116,7 +36116,7 @@ subroutine ub_zspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: info
 
   call zspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info)
-end subroutine zspsvx
+end subroutine ub_zspsvx
 
 subroutine ub_zsptrf(uplo,n,ap,ipiv,info)
   use blas77_types
@@ -36132,7 +36132,7 @@ subroutine ub_zsptrf(uplo,n,ap,ipiv,info)
   integer(blas77_int) :: info
 
   call zsptrf(uplo,n,ap,ipiv,info)
-end subroutine zsptrf
+end subroutine ub_zsptrf
 
 subroutine ub_zsptri(uplo,n,ap,ipiv,work,info)
   use blas77_types
@@ -36149,7 +36149,7 @@ subroutine ub_zsptri(uplo,n,ap,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zsptri(uplo,n,ap,ipiv,work,info)
-end subroutine zsptri
+end subroutine ub_zsptri
 
 subroutine ub_zsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   use blas77_types
@@ -36168,7 +36168,7 @@ subroutine ub_zsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info)
-end subroutine zsptrs
+end subroutine ub_zsptrs
 
 subroutine ub_zstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
   use blas77_types
@@ -36192,7 +36192,7 @@ subroutine ub_zstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info
   integer(blas77_int) :: info
 
   call zstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info)
-end subroutine zstedc
+end subroutine ub_zstedc
 
 subroutine ub_zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -36223,7 +36223,7 @@ subroutine ub_zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,l
   integer(blas77_int) :: info
 
   call zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info)
-end subroutine zstegr
+end subroutine ub_zstegr
 
 subroutine ub_zstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   use blas77_types
@@ -36247,7 +36247,7 @@ subroutine ub_zstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
   integer(blas77_int) :: info
 
   call zstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info)
-end subroutine zstein
+end subroutine ub_zstein
 
 subroutine ub_zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -36279,7 +36279,7 @@ subroutine ub_zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,wo
   integer(blas77_int) :: info
 
   call zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info)
-end subroutine zstemr
+end subroutine ub_zstemr
 
 subroutine ub_zsteqr(compz,n,d,e,z,ldz,work,info)
   use blas77_types
@@ -36298,7 +36298,7 @@ subroutine ub_zsteqr(compz,n,d,e,z,ldz,work,info)
   integer(blas77_int) :: info
 
   call zsteqr(compz,n,d,e,z,ldz,work,info)
-end subroutine zsteqr
+end subroutine ub_zsteqr
 
 subroutine ub_zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -36319,7 +36319,7 @@ subroutine ub_zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info)
-end subroutine zsycon_3
+end subroutine ub_zsycon_3
 
 subroutine ub_zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -36339,7 +36339,7 @@ subroutine ub_zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine zsycon
+end subroutine ub_zsycon
 
 subroutine ub_zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   use blas77_types
@@ -36359,7 +36359,7 @@ subroutine ub_zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
   integer(blas77_int) :: info
 
   call zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info)
-end subroutine zsycon_rook
+end subroutine ub_zsycon_rook
 
 subroutine ub_zsyconv(uplo,way,n,a,lda,ipiv,e,info)
   use blas77_types
@@ -36378,7 +36378,7 @@ subroutine ub_zsyconv(uplo,way,n,a,lda,ipiv,e,info)
   integer(blas77_int) :: info
 
   call zsyconv(uplo,way,n,a,lda,ipiv,e,info)
-end subroutine zsyconv
+end subroutine ub_zsyconv
 
 subroutine ub_zsyconvf(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -36397,7 +36397,7 @@ subroutine ub_zsyconvf(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call zsyconvf(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine zsyconvf
+end subroutine ub_zsyconvf
 
 subroutine ub_zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -36416,7 +36416,7 @@ subroutine ub_zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info)
-end subroutine zsyconvf_rook
+end subroutine ub_zsyconvf_rook
 
 subroutine ub_zsyequb(uplo,n,a,lda,s,scond,amax,work,info)
   use blas77_types
@@ -36436,7 +36436,7 @@ subroutine ub_zsyequb(uplo,n,a,lda,s,scond,amax,work,info)
   integer(blas77_int) :: info
 
   call zsyequb(uplo,n,a,lda,s,scond,amax,work,info)
-end subroutine zsyequb
+end subroutine ub_zsyequb
 
 subroutine ub_zsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -36464,7 +36464,7 @@ subroutine ub_zsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,r
   integer(blas77_int) :: info
 
   call zsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine zsyrfs
+end subroutine ub_zsyrfs
 
 subroutine ub_zsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -36499,7 +36499,7 @@ subroutine ub_zsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: info
 
   call zsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zsyrfsx
+end subroutine ub_zsyrfsx
 
 subroutine ub_zsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
   use blas77_types
@@ -36524,7 +36524,7 @@ subroutine ub_zsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwo
   integer(blas77_int) :: info
 
   call zsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info)
-end subroutine zsysv_aa_2stage
+end subroutine ub_zsysv_aa_2stage
 
 subroutine ub_zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -36546,7 +36546,7 @@ subroutine ub_zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zsysv_aa
+end subroutine ub_zsysv_aa
 
 subroutine ub_zsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -36568,7 +36568,7 @@ subroutine ub_zsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zsysv
+end subroutine ub_zsysv
 
 subroutine ub_zsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -36591,7 +36591,7 @@ subroutine ub_zsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info)
-end subroutine zsysv_rk
+end subroutine ub_zsysv_rk
 
 subroutine ub_zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -36613,7 +36613,7 @@ subroutine ub_zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zsysv_rook
+end subroutine ub_zsysv_rook
 
 subroutine ub_zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
   use blas77_types
@@ -36644,7 +36644,7 @@ subroutine ub_zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: info
 
   call zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info)
-end subroutine zsysvx
+end subroutine ub_zsysvx
 
 subroutine ub_zsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
   use blas77_types
@@ -36681,7 +36681,7 @@ subroutine ub_zsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rc
   integer(blas77_int) :: info
 
   call zsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info)
-end subroutine zsysvxx
+end subroutine ub_zsysvxx
 
 subroutine ub_zsytf2(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -36698,7 +36698,7 @@ subroutine ub_zsytf2(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zsytf2(uplo,n,a,lda,ipiv,info)
-end subroutine zsytf2
+end subroutine ub_zsytf2
 
 subroutine ub_zsytf2_rk(uplo,n,a,lda,e,ipiv,info)
   use blas77_types
@@ -36716,7 +36716,7 @@ subroutine ub_zsytf2_rk(uplo,n,a,lda,e,ipiv,info)
   integer(blas77_int) :: info
 
   call zsytf2_rk(uplo,n,a,lda,e,ipiv,info)
-end subroutine zsytf2_rk
+end subroutine ub_zsytf2_rk
 
 subroutine ub_zsytf2_rook(uplo,n,a,lda,ipiv,info)
   use blas77_types
@@ -36733,7 +36733,7 @@ subroutine ub_zsytf2_rook(uplo,n,a,lda,ipiv,info)
   integer(blas77_int) :: info
 
   call zsytf2_rook(uplo,n,a,lda,ipiv,info)
-end subroutine zsytf2_rook
+end subroutine ub_zsytf2_rook
 
 subroutine ub_zsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   use blas77_types
@@ -36755,7 +36755,7 @@ subroutine ub_zsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info)
-end subroutine zsytrf_aa_2stage
+end subroutine ub_zsytrf_aa_2stage
 
 subroutine ub_zsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -36774,7 +36774,7 @@ subroutine ub_zsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zsytrf_aa
+end subroutine ub_zsytrf_aa
 
 subroutine ub_zsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -36793,7 +36793,7 @@ subroutine ub_zsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrf(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zsytrf
+end subroutine ub_zsytrf
 
 subroutine ub_zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -36813,7 +36813,7 @@ subroutine ub_zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine zsytrf_rk
+end subroutine ub_zsytrf_rk
 
 subroutine ub_zsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -36832,7 +36832,7 @@ subroutine ub_zsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zsytrf_rook
+end subroutine ub_zsytrf_rook
 
 subroutine ub_zsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   use blas77_types
@@ -36851,7 +36851,7 @@ subroutine ub_zsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytri2(uplo,n,a,lda,ipiv,work,lwork,info)
-end subroutine zsytri2
+end subroutine ub_zsytri2
 
 subroutine ub_zsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   use blas77_types
@@ -36870,7 +36870,7 @@ subroutine ub_zsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call zsytri2x(uplo,n,a,lda,ipiv,work,nb,info)
-end subroutine zsytri2x
+end subroutine ub_zsytri2x
 
 subroutine ub_zsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   use blas77_types
@@ -36890,7 +36890,7 @@ subroutine ub_zsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info)
-end subroutine zsytri_3
+end subroutine ub_zsytri_3
 
 subroutine ub_zsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   use blas77_types
@@ -36910,7 +36910,7 @@ subroutine ub_zsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
   integer(blas77_int) :: info
 
   call zsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info)
-end subroutine zsytri_3x
+end subroutine ub_zsytri_3x
 
 subroutine ub_zsytri(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -36928,7 +36928,7 @@ subroutine ub_zsytri(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zsytri(uplo,n,a,lda,ipiv,work,info)
-end subroutine zsytri
+end subroutine ub_zsytri
 
 subroutine ub_zsytri_rook(uplo,n,a,lda,ipiv,work,info)
   use blas77_types
@@ -36946,7 +36946,7 @@ subroutine ub_zsytri_rook(uplo,n,a,lda,ipiv,work,info)
   integer(blas77_int) :: info
 
   call zsytri_rook(uplo,n,a,lda,ipiv,work,info)
-end subroutine zsytri_rook
+end subroutine ub_zsytri_rook
 
 subroutine ub_zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   use blas77_types
@@ -36967,7 +36967,7 @@ subroutine ub_zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info)
-end subroutine zsytrs2
+end subroutine ub_zsytrs2
 
 subroutine ub_zsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   use blas77_types
@@ -36988,7 +36988,7 @@ subroutine ub_zsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info)
-end subroutine zsytrs_3
+end subroutine ub_zsytrs_3
 
 subroutine ub_zsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   use blas77_types
@@ -37011,7 +37011,7 @@ subroutine ub_zsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
   integer(blas77_int) :: info
 
   call zsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info)
-end subroutine zsytrs_aa_2stage
+end subroutine ub_zsytrs_aa_2stage
 
 subroutine ub_zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   use blas77_types
@@ -37033,7 +37033,7 @@ subroutine ub_zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
   integer(blas77_int) :: info
 
   call zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info)
-end subroutine zsytrs_aa
+end subroutine ub_zsytrs_aa
 
 subroutine ub_zsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -37053,7 +37053,7 @@ subroutine ub_zsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zsytrs
+end subroutine ub_zsytrs
 
 subroutine ub_zsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   use blas77_types
@@ -37073,7 +37073,7 @@ subroutine ub_zsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
   integer(blas77_int) :: info
 
   call zsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info)
-end subroutine zsytrs_rook
+end subroutine ub_zsytrs_rook
 
 subroutine ub_ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
   use blas77_types
@@ -37095,7 +37095,7 @@ subroutine ub_ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info)
-end subroutine ztbcon
+end subroutine ub_ztbcon
 
 subroutine ub_ztbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -37123,7 +37123,7 @@ subroutine ub_ztbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,wor
   integer(blas77_int) :: info
 
   call ztbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ztbrfs
+end subroutine ub_ztbrfs
 
 subroutine ub_ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   use blas77_types
@@ -37145,7 +37145,7 @@ subroutine ub_ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
   integer(blas77_int) :: info
 
   call ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info)
-end subroutine ztbtrs
+end subroutine ub_ztbtrs
 
 subroutine ub_ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   use blas77_types
@@ -37167,7 +37167,7 @@ subroutine ub_ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
   complex(blas77_f64) :: b(0:ldb-1,0:*)
 
   call ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb)
-end subroutine ztfsm
+end subroutine ub_ztfsm
 
 subroutine ub_ztftri(transr,uplo,diag,n,a,info)
   use blas77_types
@@ -37184,7 +37184,7 @@ subroutine ub_ztftri(transr,uplo,diag,n,a,info)
   integer(blas77_int) :: info
 
   call ztftri(transr,uplo,diag,n,a,info)
-end subroutine ztftri
+end subroutine ub_ztftri
 
 subroutine ub_ztfttp(transr,uplo,n,arf,ap,info)
   use blas77_types
@@ -37201,7 +37201,7 @@ subroutine ub_ztfttp(transr,uplo,n,arf,ap,info)
   integer(blas77_int) :: info
 
   call ztfttp(transr,uplo,n,arf,ap,info)
-end subroutine ztfttp
+end subroutine ub_ztfttp
 
 subroutine ub_ztfttr(transr,uplo,n,arf,a,lda,info)
   use blas77_types
@@ -37219,7 +37219,7 @@ subroutine ub_ztfttr(transr,uplo,n,arf,a,lda,info)
   integer(blas77_int) :: info
 
   call ztfttr(transr,uplo,n,arf,a,lda,info)
-end subroutine ztfttr
+end subroutine ub_ztfttr
 
 subroutine ub_ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
   use blas77_types
@@ -37247,7 +37247,7 @@ subroutine ub_ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,
   integer(blas77_int) :: info
 
   call ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
-end subroutine ztgevc
+end subroutine ub_ztgevc
 
 subroutine ub_ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
   use blas77_types
@@ -37272,7 +37272,7 @@ subroutine ub_ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
   integer(blas77_int) :: info
 
   call ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info)
-end subroutine ztgexc
+end subroutine ub_ztgexc
 
 subroutine ub_ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
   use blas77_types
@@ -37307,7 +37307,7 @@ subroutine ub_ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ld
   integer(blas77_int) :: info
 
   call ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info)
-end subroutine ztgsen
+end subroutine ub_ztgsen
 
 subroutine ub_ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
   use blas77_types
@@ -37343,7 +37343,7 @@ subroutine ub_ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u
   integer(blas77_int) :: info
 
   call ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info)
-end subroutine ztgsja
+end subroutine ub_ztgsja
 
 subroutine ub_ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
   use blas77_types
@@ -37374,7 +37374,7 @@ subroutine ub_ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,
   integer(blas77_int) :: info
 
   call ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info)
-end subroutine ztgsna
+end subroutine ub_ztgsna
 
 subroutine ub_ztgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
   use blas77_types
@@ -37407,7 +37407,7 @@ subroutine ub_ztgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,di
   integer(blas77_int) :: info
 
   call ztgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info)
-end subroutine ztgsyl
+end subroutine ub_ztgsyl
 
 subroutine ub_ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
   use blas77_types
@@ -37427,7 +37427,7 @@ subroutine ub_ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info)
-end subroutine ztpcon
+end subroutine ub_ztpcon
 
 subroutine ub_ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -37448,7 +37448,7 @@ subroutine ub_ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine ztplqt2
+end subroutine ub_ztplqt2
 
 subroutine ub_ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -37471,7 +37471,7 @@ subroutine ub_ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine ztplqt
+end subroutine ub_ztplqt
 
 subroutine ub_ztpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -37499,7 +37499,7 @@ subroutine ub_ztpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call ztpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine ztpmlqt
+end subroutine ub_ztpmlqt
 
 subroutine ub_ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   use blas77_types
@@ -37527,7 +37527,7 @@ subroutine ub_ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
   integer(blas77_int) :: info
 
   call ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info)
-end subroutine ztpmqrt
+end subroutine ub_ztpmqrt
 
 subroutine ub_ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   use blas77_types
@@ -37548,7 +37548,7 @@ subroutine ub_ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
   integer(blas77_int) :: info
 
   call ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info)
-end subroutine ztpqrt2
+end subroutine ub_ztpqrt2
 
 subroutine ub_ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   use blas77_types
@@ -37571,7 +37571,7 @@ subroutine ub_ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
   integer(blas77_int) :: info
 
   call ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info)
-end subroutine ztpqrt
+end subroutine ub_ztpqrt
 
 subroutine ub_ztprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -37597,7 +37597,7 @@ subroutine ub_ztprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,
   integer(blas77_int) :: info
 
   call ztprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ztprfs
+end subroutine ub_ztprfs
 
 subroutine ub_ztptri(uplo,diag,n,ap,info)
   use blas77_types
@@ -37613,7 +37613,7 @@ subroutine ub_ztptri(uplo,diag,n,ap,info)
   integer(blas77_int) :: info
 
   call ztptri(uplo,diag,n,ap,info)
-end subroutine ztptri
+end subroutine ub_ztptri
 
 subroutine ub_ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   use blas77_types
@@ -37633,7 +37633,7 @@ subroutine ub_ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
   integer(blas77_int) :: info
 
   call ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info)
-end subroutine ztptrs
+end subroutine ub_ztptrs
 
 subroutine ub_ztpttf(transr,uplo,n,ap,arf,info)
   use blas77_types
@@ -37650,7 +37650,7 @@ subroutine ub_ztpttf(transr,uplo,n,ap,arf,info)
   integer(blas77_int) :: info
 
   call ztpttf(transr,uplo,n,ap,arf,info)
-end subroutine ztpttf
+end subroutine ub_ztpttf
 
 subroutine ub_ztpttr(uplo,n,ap,a,lda,info)
   use blas77_types
@@ -37667,7 +37667,7 @@ subroutine ub_ztpttr(uplo,n,ap,a,lda,info)
   integer(blas77_int) :: info
 
   call ztpttr(uplo,n,ap,a,lda,info)
-end subroutine ztpttr
+end subroutine ub_ztpttr
 
 subroutine ub_ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
   use blas77_types
@@ -37688,7 +37688,7 @@ subroutine ub_ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
   integer(blas77_int) :: info
 
   call ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info)
-end subroutine ztrcon
+end subroutine ub_ztrcon
 
 subroutine ub_ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info)
   use blas77_types
@@ -37716,7 +37716,7 @@ subroutine ub_ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork
   integer(blas77_int) :: info
 
   call ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info)
-end subroutine ztrevc3
+end subroutine ub_ztrevc3
 
 subroutine ub_ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
   use blas77_types
@@ -37742,7 +37742,7 @@ subroutine ub_ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,
   integer(blas77_int) :: info
 
   call ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info)
-end subroutine ztrevc
+end subroutine ub_ztrevc
 
 subroutine ub_ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
   use blas77_types
@@ -37762,7 +37762,7 @@ subroutine ub_ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
   integer(blas77_int) :: info
 
   call ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info)
-end subroutine ztrexc
+end subroutine ub_ztrexc
 
 subroutine ub_ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   use blas77_types
@@ -37789,7 +37789,7 @@ subroutine ub_ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwo
   integer(blas77_int) :: info
 
   call ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info)
-end subroutine ztrrfs
+end subroutine ub_ztrrfs
 
 subroutine ub_ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
   use blas77_types
@@ -37815,7 +37815,7 @@ subroutine ub_ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
   integer(blas77_int) :: info
 
   call ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info)
-end subroutine ztrsen
+end subroutine ub_ztrsen
 
 subroutine ub_ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info)
   use blas77_types
@@ -37844,7 +37844,7 @@ subroutine ub_ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,l
   integer(blas77_int) :: info
 
   call ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info)
-end subroutine ztrsna
+end subroutine ub_ztrsna
 
 subroutine ub_ztrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info)
   use blas77_types
@@ -37870,7 +37870,7 @@ subroutine ub_ztrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork
   integer(blas77_int) :: info
 
   call ztrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info)
-end subroutine ztrsyl3
+end subroutine ub_ztrsyl3
 
 subroutine ub_ztrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   use blas77_types
@@ -37894,7 +37894,7 @@ subroutine ub_ztrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
   integer(blas77_int) :: info
 
   call ztrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info)
-end subroutine ztrsyl
+end subroutine ub_ztrsyl
 
 subroutine ub_ztrti2(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -37911,7 +37911,7 @@ subroutine ub_ztrti2(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call ztrti2(uplo,diag,n,a,lda,info)
-end subroutine ztrti2
+end subroutine ub_ztrti2
 
 subroutine ub_ztrtri(uplo,diag,n,a,lda,info)
   use blas77_types
@@ -37928,7 +37928,7 @@ subroutine ub_ztrtri(uplo,diag,n,a,lda,info)
   integer(blas77_int) :: info
 
   call ztrtri(uplo,diag,n,a,lda,info)
-end subroutine ztrtri
+end subroutine ub_ztrtri
 
 subroutine ub_ztrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   use blas77_types
@@ -37949,7 +37949,7 @@ subroutine ub_ztrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
   integer(blas77_int) :: info
 
   call ztrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info)
-end subroutine ztrtrs
+end subroutine ub_ztrtrs
 
 subroutine ub_ztrttf(transr,uplo,n,a,lda,arf,info)
   use blas77_types
@@ -37967,7 +37967,7 @@ subroutine ub_ztrttf(transr,uplo,n,a,lda,arf,info)
   integer(blas77_int) :: info
 
   call ztrttf(transr,uplo,n,a,lda,arf,info)
-end subroutine ztrttf
+end subroutine ub_ztrttf
 
 subroutine ub_ztrttp(uplo,n,a,lda,ap,info)
   use blas77_types
@@ -37984,7 +37984,7 @@ subroutine ub_ztrttp(uplo,n,a,lda,ap,info)
   integer(blas77_int) :: info
 
   call ztrttp(uplo,n,a,lda,ap,info)
-end subroutine ztrttp
+end subroutine ub_ztrttp
 
 subroutine ub_ztzrqf(m,n,a,lda,tau,info)
   use blas77_types
@@ -38001,7 +38001,7 @@ subroutine ub_ztzrqf(m,n,a,lda,tau,info)
   integer(blas77_int) :: info
 
   call ztzrqf(m,n,a,lda,tau,info)
-end subroutine ztzrqf
+end subroutine ub_ztzrqf
 
 subroutine ub_ztzrzf(m,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38020,7 +38020,7 @@ subroutine ub_ztzrzf(m,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call ztzrzf(m,n,a,lda,tau,work,lwork,info)
-end subroutine ztzrzf
+end subroutine ub_ztzrzf
 
 subroutine ub_zunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -38046,7 +38046,7 @@ subroutine ub_zunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call zunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine zunbdb1
+end subroutine ub_zunbdb1
 
 subroutine ub_zunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -38072,7 +38072,7 @@ subroutine ub_zunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call zunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine zunbdb2
+end subroutine ub_zunbdb2
 
 subroutine ub_zunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
   use blas77_types
@@ -38098,7 +38098,7 @@ subroutine ub_zunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work
   integer(blas77_int) :: info
 
   call zunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info)
-end subroutine zunbdb3
+end subroutine ub_zunbdb3
 
 subroutine ub_zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
   use blas77_types
@@ -38125,7 +38125,7 @@ subroutine ub_zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phan
   integer(blas77_int) :: info
 
   call zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info)
-end subroutine zunbdb4
+end subroutine ub_zunbdb4
 
 subroutine ub_zunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -38150,7 +38150,7 @@ subroutine ub_zunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine zunbdb5
+end subroutine ub_zunbdb5
 
 subroutine ub_zunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   use blas77_types
@@ -38175,7 +38175,7 @@ subroutine ub_zunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info)
-end subroutine zunbdb6
+end subroutine ub_zunbdb6
 
 subroutine ub_zunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
   use blas77_types
@@ -38208,7 +38208,7 @@ subroutine ub_zunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,t
   integer(blas77_int) :: info
 
   call zunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info)
-end subroutine zunbdb
+end subroutine ub_zunbdb
 
 subroutine ub_zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -38242,7 +38242,7 @@ subroutine ub_zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,l
   integer(blas77_int) :: info
 
   call zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info)
-end subroutine zuncsd2by1
+end subroutine ub_zuncsd2by1
 
 subroutine ub_zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info)
   use blas77_types
@@ -38285,7 +38285,7 @@ subroutine ub_zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,l
   integer(blas77_int) :: info
 
   call zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info)
-end subroutine zuncsd
+end subroutine ub_zuncsd
 
 subroutine ub_zung2l(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -38304,7 +38304,7 @@ subroutine ub_zung2l(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zung2l(m,n,k,a,lda,tau,work,info)
-end subroutine zung2l
+end subroutine ub_zung2l
 
 subroutine ub_zung2r(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -38323,7 +38323,7 @@ subroutine ub_zung2r(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zung2r(m,n,k,a,lda,tau,work,info)
-end subroutine zung2r
+end subroutine ub_zung2r
 
 subroutine ub_zungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38344,7 +38344,7 @@ subroutine ub_zungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungbr(vect,m,n,k,a,lda,tau,work,lwork,info)
-end subroutine zungbr
+end subroutine ub_zungbr
 
 subroutine ub_zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38364,7 +38364,7 @@ subroutine ub_zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info)
-end subroutine zunghr
+end subroutine ub_zunghr
 
 subroutine ub_zungl2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -38383,7 +38383,7 @@ subroutine ub_zungl2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zungl2(m,n,k,a,lda,tau,work,info)
-end subroutine zungl2
+end subroutine ub_zungl2
 
 subroutine ub_zunglq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38403,7 +38403,7 @@ subroutine ub_zunglq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunglq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine zunglq
+end subroutine ub_zunglq
 
 subroutine ub_zungql(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38423,7 +38423,7 @@ subroutine ub_zungql(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungql(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine zungql
+end subroutine ub_zungql
 
 subroutine ub_zungqr(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38443,7 +38443,7 @@ subroutine ub_zungqr(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungqr(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine zungqr
+end subroutine ub_zungqr
 
 subroutine ub_zungr2(m,n,k,a,lda,tau,work,info)
   use blas77_types
@@ -38462,7 +38462,7 @@ subroutine ub_zungr2(m,n,k,a,lda,tau,work,info)
   integer(blas77_int) :: info
 
   call zungr2(m,n,k,a,lda,tau,work,info)
-end subroutine zungr2
+end subroutine ub_zungr2
 
 subroutine ub_zungrq(m,n,k,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38482,7 +38482,7 @@ subroutine ub_zungrq(m,n,k,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungrq(m,n,k,a,lda,tau,work,lwork,info)
-end subroutine zungrq
+end subroutine ub_zungrq
 
 subroutine ub_zungtr(uplo,n,a,lda,tau,work,lwork,info)
   use blas77_types
@@ -38501,7 +38501,7 @@ subroutine ub_zungtr(uplo,n,a,lda,tau,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungtr(uplo,n,a,lda,tau,work,lwork,info)
-end subroutine zungtr
+end subroutine ub_zungtr
 
 subroutine ub_zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -38523,7 +38523,7 @@ subroutine ub_zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine zungtsqr
+end subroutine ub_zungtsqr
 
 subroutine ub_zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   use blas77_types
@@ -38545,7 +38545,7 @@ subroutine ub_zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
   integer(blas77_int) :: info
 
   call zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info)
-end subroutine zungtsqr_row
+end subroutine ub_zungtsqr_row
 
 subroutine ub_zunhr_col(m,n,nb,a,lda,t,ldt,d,info)
   use blas77_types
@@ -38565,7 +38565,7 @@ subroutine ub_zunhr_col(m,n,nb,a,lda,t,ldt,d,info)
   integer(blas77_int) :: info
 
   call zunhr_col(m,n,nb,a,lda,t,ldt,d,info)
-end subroutine zunhr_col
+end subroutine ub_zunhr_col
 
 subroutine ub_zunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   use blas77_types
@@ -38589,7 +38589,7 @@ subroutine ub_zunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info)
-end subroutine zunm22
+end subroutine ub_zunm22
 
 subroutine ub_zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -38612,7 +38612,7 @@ subroutine ub_zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine zunm2l
+end subroutine ub_zunm2l
 
 subroutine ub_zunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -38635,7 +38635,7 @@ subroutine ub_zunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine zunm2r
+end subroutine ub_zunm2r
 
 subroutine ub_zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38660,7 +38660,7 @@ subroutine ub_zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmbr
+end subroutine ub_zunmbr
 
 subroutine ub_zunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38685,7 +38685,7 @@ subroutine ub_zunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmhr
+end subroutine ub_zunmhr
 
 subroutine ub_zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -38708,7 +38708,7 @@ subroutine ub_zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine zunml2
+end subroutine ub_zunml2
 
 subroutine ub_zunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38732,7 +38732,7 @@ subroutine ub_zunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmlq
+end subroutine ub_zunmlq
 
 subroutine ub_zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38756,7 +38756,7 @@ subroutine ub_zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmql
+end subroutine ub_zunmql
 
 subroutine ub_zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38780,7 +38780,7 @@ subroutine ub_zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmqr
+end subroutine ub_zunmqr
 
 subroutine ub_zunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -38803,7 +38803,7 @@ subroutine ub_zunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info)
-end subroutine zunmr2
+end subroutine ub_zunmr2
 
 subroutine ub_zunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   use blas77_types
@@ -38827,7 +38827,7 @@ subroutine ub_zunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info)
-end subroutine zunmr3
+end subroutine ub_zunmr3
 
 subroutine ub_zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38851,7 +38851,7 @@ subroutine ub_zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmrq
+end subroutine ub_zunmrq
 
 subroutine ub_zunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38876,7 +38876,7 @@ subroutine ub_zunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmrz
+end subroutine ub_zunmrz
 
 subroutine ub_zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   use blas77_types
@@ -38900,7 +38900,7 @@ subroutine ub_zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
   integer(blas77_int) :: info
 
   call zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info)
-end subroutine zunmtr
+end subroutine ub_zunmtr
 
 subroutine ub_zupgtr(uplo,n,ap,tau,q,ldq,work,info)
   use blas77_types
@@ -38919,7 +38919,7 @@ subroutine ub_zupgtr(uplo,n,ap,tau,q,ldq,work,info)
   integer(blas77_int) :: info
 
   call zupgtr(uplo,n,ap,tau,q,ldq,work,info)
-end subroutine zupgtr
+end subroutine ub_zupgtr
 
 subroutine ub_zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   use blas77_types
@@ -38941,4 +38941,4 @@ subroutine ub_zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
   integer(blas77_int) :: info
 
   call zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info)
-end subroutine zupmtr
+end subroutine ub_zupmtr

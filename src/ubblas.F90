@@ -16,7 +16,7 @@ subroutine ub_caxpby(n,ca,cx,incx,cb,cy,incy)
   integer(blas77_int) :: incy
 
   call caxpby(n,ca,cx,incx,cb,cy,incy)
-end subroutine caxpby
+end subroutine ub_caxpby
 
 subroutine ub_caxpy(n,ca,cx,incx,cy,incy)
   use blas77_types
@@ -33,7 +33,7 @@ subroutine ub_caxpy(n,ca,cx,incx,cy,incy)
   integer(blas77_int) :: incy
 
   call caxpy(n,ca,cx,incx,cy,incy)
-end subroutine caxpy
+end subroutine ub_caxpy
 
 subroutine ub_ccopy(n,cx,incx,cy,incy)
   use blas77_types
@@ -49,7 +49,7 @@ subroutine ub_ccopy(n,cx,incx,cy,incy)
   integer(blas77_int) :: incy
 
   call ccopy(n,cx,incx,cy,incy)
-end subroutine ccopy
+end subroutine ub_ccopy
 
 function ub_cdotc(n,cx,incx,cy,incy)
   use blas77_types
@@ -64,7 +64,7 @@ function ub_cdotc(n,cx,incx,cy,incy)
   complex(blas77_f32) :: ub_cdotc
 
   ub_cdotc = cdotc(n,cx,incx,cy,incy)
-end function cdotc
+end function ub_cdotc
 
 function ub_cdotu(n,cx,incx,cy,incy)
   use blas77_types
@@ -79,7 +79,7 @@ function ub_cdotu(n,cx,incx,cy,incy)
   complex(blas77_f32) :: ub_cdotu
 
   ub_cdotu = cdotu(n,cx,incx,cy,incy)
-end function cdotu
+end function ub_cdotu
 
 subroutine ub_cgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -103,7 +103,7 @@ subroutine ub_cgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine cgbmv
+end subroutine ub_cgbmv
 
 subroutine ub_cgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -127,7 +127,7 @@ subroutine ub_cgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call cgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine cgemm
+end subroutine ub_cgemm
 
 subroutine ub_cgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -151,7 +151,7 @@ subroutine ub_cgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call cgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine cgemmtr
+end subroutine ub_cgemmtr
 
 subroutine ub_cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -173,7 +173,7 @@ subroutine ub_cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine cgemv
+end subroutine ub_cgemv
 
 subroutine ub_cgerc(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -193,7 +193,7 @@ subroutine ub_cgerc(m,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f32) :: a(lda,*)
 
   call cgerc(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine cgerc
+end subroutine ub_cgerc
 
 subroutine ub_cgeru(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -213,7 +213,7 @@ subroutine ub_cgeru(m,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f32) :: a(lda,*)
 
   call cgeru(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine cgeru
+end subroutine ub_cgeru
 
 subroutine ub_chbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -235,7 +235,7 @@ subroutine ub_chbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call chbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine chbmv
+end subroutine ub_chbmv
 
 subroutine ub_chemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -258,7 +258,7 @@ subroutine ub_chemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call chemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine chemm
+end subroutine ub_chemm
 
 subroutine ub_chemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -279,7 +279,7 @@ subroutine ub_chemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call chemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine chemv
+end subroutine ub_chemv
 
 subroutine ub_cher2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -299,7 +299,7 @@ subroutine ub_cher2(uplo,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f32) :: a(lda,*)
 
   call cher2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine cher2
+end subroutine ub_cher2
 
 subroutine ub_cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -322,7 +322,7 @@ subroutine ub_cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine cher2k
+end subroutine ub_cher2k
 
 subroutine ub_cher(uplo,n,alpha,x,incx,a,lda)
   use blas77_types
@@ -340,7 +340,7 @@ subroutine ub_cher(uplo,n,alpha,x,incx,a,lda)
   complex(blas77_f32) :: a(lda,*)
 
   call cher(uplo,n,alpha,x,incx,a,lda)
-end subroutine cher
+end subroutine ub_cher
 
 subroutine ub_cherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -361,7 +361,7 @@ subroutine ub_cherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call cherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine cherk
+end subroutine ub_cherk
 
 subroutine ub_chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   use blas77_types
@@ -381,7 +381,7 @@ subroutine ub_chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
-end subroutine chpmv
+end subroutine ub_chpmv
 
 subroutine ub_chpr2(uplo,n,alpha,x,incx,y,incy,ap)
   use blas77_types
@@ -400,7 +400,7 @@ subroutine ub_chpr2(uplo,n,alpha,x,incx,y,incy,ap)
   complex(blas77_f32) :: ap(*)
 
   call chpr2(uplo,n,alpha,x,incx,y,incy,ap)
-end subroutine chpr2
+end subroutine ub_chpr2
 
 subroutine ub_chpr(uplo,n,alpha,x,incx,ap)
   use blas77_types
@@ -417,7 +417,7 @@ subroutine ub_chpr(uplo,n,alpha,x,incx,ap)
   complex(blas77_f32) :: ap(*)
 
   call chpr(uplo,n,alpha,x,incx,ap)
-end subroutine chpr
+end subroutine ub_chpr
 
 subroutine ub_crotg(a,b,c,s)
   use blas77_types
@@ -432,7 +432,7 @@ subroutine ub_crotg(a,b,c,s)
   complex(blas77_f32) :: s
 
   call crotg(a,b,c,s)
-end subroutine crotg
+end subroutine ub_crotg
 
 subroutine ub_cscal(n,ca,cx,incx)
   use blas77_types
@@ -447,7 +447,7 @@ subroutine ub_cscal(n,ca,cx,incx)
   integer(blas77_int) :: incx
 
   call cscal(n,ca,cx,incx)
-end subroutine cscal
+end subroutine ub_cscal
 
 subroutine ub_csrot(n,cx,incx,cy,incy,c,s)
   use blas77_types
@@ -465,7 +465,7 @@ subroutine ub_csrot(n,cx,incx,cy,incy,c,s)
   real(blas77_f32) :: s
 
   call csrot(n,cx,incx,cy,incy,c,s)
-end subroutine csrot
+end subroutine ub_csrot
 
 subroutine ub_csscal(n,sa,cx,incx)
   use blas77_types
@@ -480,7 +480,7 @@ subroutine ub_csscal(n,sa,cx,incx)
   integer(blas77_int) :: incx
 
   call csscal(n,sa,cx,incx)
-end subroutine csscal
+end subroutine ub_csscal
 
 subroutine ub_cswap(n,cx,incx,cy,incy)
   use blas77_types
@@ -496,7 +496,7 @@ subroutine ub_cswap(n,cx,incx,cy,incy)
   integer(blas77_int) :: incy
 
   call cswap(n,cx,incx,cy,incy)
-end subroutine cswap
+end subroutine ub_cswap
 
 subroutine ub_csymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -519,7 +519,7 @@ subroutine ub_csymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call csymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine csymm
+end subroutine ub_csymm
 
 subroutine ub_csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -542,7 +542,7 @@ subroutine ub_csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine csyr2k
+end subroutine ub_csyr2k
 
 subroutine ub_csyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -563,7 +563,7 @@ subroutine ub_csyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   complex(blas77_f32) :: c(ldc,*)
 
   call csyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine csyrk
+end subroutine ub_csyrk
 
 subroutine ub_ctbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -583,7 +583,7 @@ subroutine ub_ctbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ctbmv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine ctbmv
+end subroutine ub_ctbmv
 
 subroutine ub_ctbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -603,7 +603,7 @@ subroutine ub_ctbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ctbsv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine ctbsv
+end subroutine ub_ctbsv
 
 subroutine ub_ctpmv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -621,7 +621,7 @@ subroutine ub_ctpmv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call ctpmv(uplo,trans,diag,n,ap,x,incx)
-end subroutine ctpmv
+end subroutine ub_ctpmv
 
 subroutine ub_ctpsv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -639,7 +639,7 @@ subroutine ub_ctpsv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call ctpsv(uplo,trans,diag,n,ap,x,incx)
-end subroutine ctpsv
+end subroutine ub_ctpsv
 
 subroutine ub_ctrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -661,7 +661,7 @@ subroutine ub_ctrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   complex(blas77_f32) :: b(ldb,*)
 
   call ctrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine ctrmm
+end subroutine ub_ctrmm
 
 subroutine ub_ctrmv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -680,7 +680,7 @@ subroutine ub_ctrmv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ctrmv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine ctrmv
+end subroutine ub_ctrmv
 
 subroutine ub_ctrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -702,7 +702,7 @@ subroutine ub_ctrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   complex(blas77_f32) :: b(ldb,*)
 
   call ctrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine ctrsm
+end subroutine ub_ctrsm
 
 subroutine ub_ctrsv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -721,7 +721,7 @@ subroutine ub_ctrsv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ctrsv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine ctrsv
+end subroutine ub_ctrsv
 
 function ub_dasum(n,dx,incx)
   use blas77_types
@@ -736,7 +736,7 @@ function ub_dasum(n,dx,incx)
   real(blas77_f64) :: ub_dasum
 
   ub_dasum = dasum(n,dx,incx)
-end function dasum
+end function ub_dasum
 
 subroutine ub_daxpby(n,da,dx,incx,db,dy,incy)
   use blas77_types
@@ -754,7 +754,7 @@ subroutine ub_daxpby(n,da,dx,incx,db,dy,incy)
   integer(blas77_int) :: incy
 
   call daxpby(n,da,dx,incx,db,dy,incy)
-end subroutine daxpby
+end subroutine ub_daxpby
 
 subroutine ub_daxpy(n,da,dx,incx,dy,incy)
   use blas77_types
@@ -771,7 +771,7 @@ subroutine ub_daxpy(n,da,dx,incx,dy,incy)
   integer(blas77_int) :: incy
 
   call daxpy(n,da,dx,incx,dy,incy)
-end subroutine daxpy
+end subroutine ub_daxpy
 
 function ub_dcabs1(z)
   use blas77_types
@@ -784,7 +784,7 @@ function ub_dcabs1(z)
   real(blas77_f64) :: ub_dcabs1
 
   ub_dcabs1 = dcabs1(z)
-end function dcabs1
+end function ub_dcabs1
 
 subroutine ub_dcopy(n,dx,incx,dy,incy)
   use blas77_types
@@ -800,7 +800,7 @@ subroutine ub_dcopy(n,dx,incx,dy,incy)
   integer(blas77_int) :: incy
 
   call dcopy(n,dx,incx,dy,incy)
-end subroutine dcopy
+end subroutine ub_dcopy
 
 function ub_ddot(n,dx,incx,dy,incy)
   use blas77_types
@@ -817,7 +817,7 @@ function ub_ddot(n,dx,incx,dy,incy)
   real(blas77_f64) :: ub_ddot
 
   ub_ddot = ddot(n,dx,incx,dy,incy)
-end function ddot
+end function ub_ddot
 
 subroutine ub_dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -841,7 +841,7 @@ subroutine ub_dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dgbmv
+end subroutine ub_dgbmv
 
 subroutine ub_dgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -865,7 +865,7 @@ subroutine ub_dgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dgemm
+end subroutine ub_dgemm
 
 subroutine ub_dgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -889,7 +889,7 @@ subroutine ub_dgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dgemmtr
+end subroutine ub_dgemmtr
 
 subroutine ub_dgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -911,7 +911,7 @@ subroutine ub_dgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dgemv
+end subroutine ub_dgemv
 
 subroutine ub_dger(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -931,7 +931,7 @@ subroutine ub_dger(m,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f64) :: a(lda,*)
 
   call dger(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine dger
+end subroutine ub_dger
 
 function ub_dnrm2(n,x,incx)
   use blas77_types
@@ -946,7 +946,7 @@ function ub_dnrm2(n,x,incx)
   real(blas77_f64) :: ub_dnrm2
 
   ub_dnrm2 = dnrm2(n,x,incx)
-end function dnrm2
+end function ub_dnrm2
 
 subroutine ub_drot(n,dx,incx,dy,incy,c,s)
   use blas77_types
@@ -964,7 +964,7 @@ subroutine ub_drot(n,dx,incx,dy,incy,c,s)
   real(blas77_f64) :: s
 
   call drot(n,dx,incx,dy,incy,c,s)
-end subroutine drot
+end subroutine ub_drot
 
 subroutine ub_drotg(a,b,c,s)
   use blas77_types
@@ -979,7 +979,7 @@ subroutine ub_drotg(a,b,c,s)
   real(blas77_f64) :: s
 
   call drotg(a,b,c,s)
-end subroutine drotg
+end subroutine ub_drotg
 
 subroutine ub_drotm(n,dx,incx,dy,incy,dparam)
   use blas77_types
@@ -996,7 +996,7 @@ subroutine ub_drotm(n,dx,incx,dy,incy,dparam)
   real(blas77_f64) :: dparam(5)
 
   call drotm(n,dx,incx,dy,incy,dparam)
-end subroutine drotm
+end subroutine ub_drotm
 
 subroutine ub_drotmg(dd1,dd2,dx1,dy1,dparam)
   use blas77_types
@@ -1012,7 +1012,7 @@ subroutine ub_drotmg(dd1,dd2,dx1,dy1,dparam)
   real(blas77_f64) :: dparam(5)
 
   call drotmg(dd1,dd2,dx1,dy1,dparam)
-end subroutine drotmg
+end subroutine ub_drotmg
 
 subroutine ub_dsbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1034,7 +1034,7 @@ subroutine ub_dsbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dsbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dsbmv
+end subroutine ub_dsbmv
 
 subroutine ub_dscal(n,da,dx,incx)
   use blas77_types
@@ -1049,7 +1049,7 @@ subroutine ub_dscal(n,da,dx,incx)
   integer(blas77_int) :: incx
 
   call dscal(n,da,dx,incx)
-end subroutine dscal
+end subroutine ub_dscal
 
 function ub_dsdot(n,sx,incx,sy,incy)
   use blas77_types
@@ -1066,7 +1066,7 @@ function ub_dsdot(n,sx,incx,sy,incy)
   real(blas77_f64) :: ub_dsdot
 
   ub_dsdot = dsdot(n,sx,incx,sy,incy)
-end function dsdot
+end function ub_dsdot
 
 subroutine ub_dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1089,7 +1089,7 @@ subroutine ub_dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dskewsymm
+end subroutine ub_dskewsymm
 
 subroutine ub_dskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1110,7 +1110,7 @@ subroutine ub_dskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dskewsymv
+end subroutine ub_dskewsymv
 
 subroutine ub_dskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -1130,7 +1130,7 @@ subroutine ub_dskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f64) :: a(lda,*)
 
   call dskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine dskewsyr2
+end subroutine ub_dskewsyr2
 
 subroutine ub_dskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1153,7 +1153,7 @@ subroutine ub_dskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dskewsyr2k
+end subroutine ub_dskewsyr2k
 
 subroutine ub_dspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   use blas77_types
@@ -1173,7 +1173,7 @@ subroutine ub_dspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
-end subroutine dspmv
+end subroutine ub_dspmv
 
 subroutine ub_dspr2(uplo,n,alpha,x,incx,y,incy,ap)
   use blas77_types
@@ -1192,7 +1192,7 @@ subroutine ub_dspr2(uplo,n,alpha,x,incx,y,incy,ap)
   real(blas77_f64) :: ap(*)
 
   call dspr2(uplo,n,alpha,x,incx,y,incy,ap)
-end subroutine dspr2
+end subroutine ub_dspr2
 
 subroutine ub_dspr(uplo,n,alpha,x,incx,ap)
   use blas77_types
@@ -1209,7 +1209,7 @@ subroutine ub_dspr(uplo,n,alpha,x,incx,ap)
   real(blas77_f64) :: ap(*)
 
   call dspr(uplo,n,alpha,x,incx,ap)
-end subroutine dspr
+end subroutine ub_dspr
 
 subroutine ub_dswap(n,dx,incx,dy,incy)
   use blas77_types
@@ -1225,7 +1225,7 @@ subroutine ub_dswap(n,dx,incx,dy,incy)
   integer(blas77_int) :: incy
 
   call dswap(n,dx,incx,dy,incy)
-end subroutine dswap
+end subroutine ub_dswap
 
 subroutine ub_dsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1248,7 +1248,7 @@ subroutine ub_dsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dsymm
+end subroutine ub_dsymm
 
 subroutine ub_dsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1269,7 +1269,7 @@ subroutine ub_dsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call dsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine dsymv
+end subroutine ub_dsymv
 
 subroutine ub_dsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -1289,7 +1289,7 @@ subroutine ub_dsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f64) :: a(lda,*)
 
   call dsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine dsyr2
+end subroutine ub_dsyr2
 
 subroutine ub_dsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1312,7 +1312,7 @@ subroutine ub_dsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine dsyr2k
+end subroutine ub_dsyr2k
 
 subroutine ub_dsyr(uplo,n,alpha,x,incx,a,lda)
   use blas77_types
@@ -1330,7 +1330,7 @@ subroutine ub_dsyr(uplo,n,alpha,x,incx,a,lda)
   real(blas77_f64) :: a(lda,*)
 
   call dsyr(uplo,n,alpha,x,incx,a,lda)
-end subroutine dsyr
+end subroutine ub_dsyr
 
 subroutine ub_dsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -1351,7 +1351,7 @@ subroutine ub_dsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   real(blas77_f64) :: c(ldc,*)
 
   call dsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine dsyrk
+end subroutine ub_dsyrk
 
 subroutine ub_dtbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -1371,7 +1371,7 @@ subroutine ub_dtbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call dtbmv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine dtbmv
+end subroutine ub_dtbmv
 
 subroutine ub_dtbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -1391,7 +1391,7 @@ subroutine ub_dtbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call dtbsv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine dtbsv
+end subroutine ub_dtbsv
 
 subroutine ub_dtpmv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -1409,7 +1409,7 @@ subroutine ub_dtpmv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call dtpmv(uplo,trans,diag,n,ap,x,incx)
-end subroutine dtpmv
+end subroutine ub_dtpmv
 
 subroutine ub_dtpsv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -1427,7 +1427,7 @@ subroutine ub_dtpsv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call dtpsv(uplo,trans,diag,n,ap,x,incx)
-end subroutine dtpsv
+end subroutine ub_dtpsv
 
 subroutine ub_dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -1449,7 +1449,7 @@ subroutine ub_dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   real(blas77_f64) :: b(ldb,*)
 
   call dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine dtrmm
+end subroutine ub_dtrmm
 
 subroutine ub_dtrmv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -1468,7 +1468,7 @@ subroutine ub_dtrmv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call dtrmv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine dtrmv
+end subroutine ub_dtrmv
 
 subroutine ub_dtrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -1490,7 +1490,7 @@ subroutine ub_dtrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   real(blas77_f64) :: b(ldb,*)
 
   call dtrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine dtrsm
+end subroutine ub_dtrsm
 
 subroutine ub_dtrsv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -1509,7 +1509,7 @@ subroutine ub_dtrsv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call dtrsv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine dtrsv
+end subroutine ub_dtrsv
 
 function ub_dzasum(n,zx,incx)
   use blas77_types
@@ -1524,7 +1524,7 @@ function ub_dzasum(n,zx,incx)
   real(blas77_f64) :: ub_dzasum
 
   ub_dzasum = dzasum(n,zx,incx)
-end function dzasum
+end function ub_dzasum
 
 function ub_dznrm2(n,x,incx)
   use blas77_types
@@ -1539,7 +1539,7 @@ function ub_dznrm2(n,x,incx)
   real(blas77_f64) :: ub_dznrm2
 
   ub_dznrm2 = dznrm2(n,x,incx)
-end function dznrm2
+end function ub_dznrm2
 
 function ub_icamax(n,cx,incx)
   use blas77_types
@@ -1554,7 +1554,7 @@ function ub_icamax(n,cx,incx)
   integer(blas77_int) :: ub_icamax
 
   ub_icamax = icamax(n,cx,incx)
-end function icamax
+end function ub_icamax
 
 function ub_idamax(n,dx,incx)
   use blas77_types
@@ -1569,7 +1569,7 @@ function ub_idamax(n,dx,incx)
   integer(blas77_int) :: ub_idamax
 
   ub_idamax = idamax(n,dx,incx)
-end function idamax
+end function ub_idamax
 
 function ub_isamax(n,sx,incx)
   use blas77_types
@@ -1584,7 +1584,7 @@ function ub_isamax(n,sx,incx)
   integer(blas77_int) :: ub_isamax
 
   ub_isamax = isamax(n,sx,incx)
-end function isamax
+end function ub_isamax
 
 function ub_izamax(n,zx,incx)
   use blas77_types
@@ -1599,7 +1599,7 @@ function ub_izamax(n,zx,incx)
   integer(blas77_int) :: ub_izamax
 
   ub_izamax = izamax(n,zx,incx)
-end function izamax
+end function ub_izamax
 
 function ub_lsame(ca,cb)
   use blas77_types
@@ -1613,7 +1613,7 @@ function ub_lsame(ca,cb)
   logical(blas77_int) :: ub_lsame
 
   ub_lsame = lsame(ca,cb)
-end function lsame
+end function ub_lsame
 
 function ub_sasum(n,sx,incx)
   use blas77_types
@@ -1628,7 +1628,7 @@ function ub_sasum(n,sx,incx)
   real(blas77_f32) :: ub_sasum
 
   ub_sasum = sasum(n,sx,incx)
-end function sasum
+end function ub_sasum
 
 subroutine ub_saxpby(n,sa,sx,incx,sb,sy,incy)
   use blas77_types
@@ -1646,7 +1646,7 @@ subroutine ub_saxpby(n,sa,sx,incx,sb,sy,incy)
   integer(blas77_int) :: incy
 
   call saxpby(n,sa,sx,incx,sb,sy,incy)
-end subroutine saxpby
+end subroutine ub_saxpby
 
 subroutine ub_saxpy(n,sa,sx,incx,sy,incy)
   use blas77_types
@@ -1663,7 +1663,7 @@ subroutine ub_saxpy(n,sa,sx,incx,sy,incy)
   integer(blas77_int) :: incy
 
   call saxpy(n,sa,sx,incx,sy,incy)
-end subroutine saxpy
+end subroutine ub_saxpy
 
 function ub_scabs1(z)
   use blas77_types
@@ -1676,7 +1676,7 @@ function ub_scabs1(z)
   real(blas77_f32) :: ub_scabs1
 
   ub_scabs1 = scabs1(z)
-end function scabs1
+end function ub_scabs1
 
 function ub_scasum(n,cx,incx)
   use blas77_types
@@ -1691,7 +1691,7 @@ function ub_scasum(n,cx,incx)
   real(blas77_f32) :: ub_scasum
 
   ub_scasum = scasum(n,cx,incx)
-end function scasum
+end function ub_scasum
 
 function ub_scnrm2(n,x,incx)
   use blas77_types
@@ -1706,7 +1706,7 @@ function ub_scnrm2(n,x,incx)
   real(blas77_f32) :: ub_scnrm2
 
   ub_scnrm2 = scnrm2(n,x,incx)
-end function scnrm2
+end function ub_scnrm2
 
 subroutine ub_scopy(n,sx,incx,sy,incy)
   use blas77_types
@@ -1722,7 +1722,7 @@ subroutine ub_scopy(n,sx,incx,sy,incy)
   integer(blas77_int) :: incy
 
   call scopy(n,sx,incx,sy,incy)
-end subroutine scopy
+end subroutine ub_scopy
 
 function ub_sdot(n,sx,incx,sy,incy)
   use blas77_types
@@ -1739,7 +1739,7 @@ function ub_sdot(n,sx,incx,sy,incy)
   real(blas77_f32) :: ub_sdot
 
   ub_sdot = sdot(n,sx,incx,sy,incy)
-end function sdot
+end function ub_sdot
 
 function ub_sdsdot(n,sb,sx,incx,sy,incy)
   use blas77_types
@@ -1757,7 +1757,7 @@ function ub_sdsdot(n,sb,sx,incx,sy,incy)
   real(blas77_f32) :: ub_sdsdot
 
   ub_sdsdot = sdsdot(n,sb,sx,incx,sy,incy)
-end function sdsdot
+end function ub_sdsdot
 
 subroutine ub_sgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1781,7 +1781,7 @@ subroutine ub_sgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine sgbmv
+end subroutine ub_sgbmv
 
 subroutine ub_sgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1805,7 +1805,7 @@ subroutine ub_sgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call sgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine sgemm
+end subroutine ub_sgemm
 
 subroutine ub_sgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -1829,7 +1829,7 @@ subroutine ub_sgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call sgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine sgemmtr
+end subroutine ub_sgemmtr
 
 subroutine ub_sgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1851,7 +1851,7 @@ subroutine ub_sgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine sgemv
+end subroutine ub_sgemv
 
 subroutine ub_sger(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -1871,7 +1871,7 @@ subroutine ub_sger(m,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f32) :: a(lda,*)
 
   call sger(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine sger
+end subroutine ub_sger
 
 function ub_snrm2(n,x,incx)
   use blas77_types
@@ -1886,7 +1886,7 @@ function ub_snrm2(n,x,incx)
   real(blas77_f32) :: ub_snrm2
 
   ub_snrm2 = snrm2(n,x,incx)
-end function snrm2
+end function ub_snrm2
 
 subroutine ub_srot(n,sx,incx,sy,incy,c,s)
   use blas77_types
@@ -1904,7 +1904,7 @@ subroutine ub_srot(n,sx,incx,sy,incy,c,s)
   real(blas77_f32) :: s
 
   call srot(n,sx,incx,sy,incy,c,s)
-end subroutine srot
+end subroutine ub_srot
 
 subroutine ub_srotg(a,b,c,s)
   use blas77_types
@@ -1919,7 +1919,7 @@ subroutine ub_srotg(a,b,c,s)
   real(blas77_f32) :: s
 
   call srotg(a,b,c,s)
-end subroutine srotg
+end subroutine ub_srotg
 
 subroutine ub_srotm(n,sx,incx,sy,incy,sparam)
   use blas77_types
@@ -1936,7 +1936,7 @@ subroutine ub_srotm(n,sx,incx,sy,incy,sparam)
   real(blas77_f32) :: sparam(5)
 
   call srotm(n,sx,incx,sy,incy,sparam)
-end subroutine srotm
+end subroutine ub_srotm
 
 subroutine ub_srotmg(sd1,sd2,sx1,sy1,sparam)
   use blas77_types
@@ -1952,7 +1952,7 @@ subroutine ub_srotmg(sd1,sd2,sx1,sy1,sparam)
   real(blas77_f32) :: sparam(5)
 
   call srotmg(sd1,sd2,sx1,sy1,sparam)
-end subroutine srotmg
+end subroutine ub_srotmg
 
 subroutine ub_ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -1974,7 +1974,7 @@ subroutine ub_ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine ssbmv
+end subroutine ub_ssbmv
 
 subroutine ub_sscal(n,sa,sx,incx)
   use blas77_types
@@ -1989,7 +1989,7 @@ subroutine ub_sscal(n,sa,sx,incx)
   integer(blas77_int) :: incx
 
   call sscal(n,sa,sx,incx)
-end subroutine sscal
+end subroutine ub_sscal
 
 subroutine ub_sskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2012,7 +2012,7 @@ subroutine ub_sskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call sskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine sskewsymm
+end subroutine ub_sskewsymm
 
 subroutine ub_sskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2033,7 +2033,7 @@ subroutine ub_sskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine sskewsymv
+end subroutine ub_sskewsymv
 
 subroutine ub_sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -2053,7 +2053,7 @@ subroutine ub_sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f32) :: a(lda,*)
 
   call sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine sskewsyr2
+end subroutine ub_sskewsyr2
 
 subroutine ub_sskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2076,7 +2076,7 @@ subroutine ub_sskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call sskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine sskewsyr2k
+end subroutine ub_sskewsyr2k
 
 subroutine ub_sspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   use blas77_types
@@ -2096,7 +2096,7 @@ subroutine ub_sspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call sspmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
-end subroutine sspmv
+end subroutine ub_sspmv
 
 subroutine ub_sspr2(uplo,n,alpha,x,incx,y,incy,ap)
   use blas77_types
@@ -2115,7 +2115,7 @@ subroutine ub_sspr2(uplo,n,alpha,x,incx,y,incy,ap)
   real(blas77_f32) :: ap(*)
 
   call sspr2(uplo,n,alpha,x,incx,y,incy,ap)
-end subroutine sspr2
+end subroutine ub_sspr2
 
 subroutine ub_sspr(uplo,n,alpha,x,incx,ap)
   use blas77_types
@@ -2132,7 +2132,7 @@ subroutine ub_sspr(uplo,n,alpha,x,incx,ap)
   real(blas77_f32) :: ap(*)
 
   call sspr(uplo,n,alpha,x,incx,ap)
-end subroutine sspr
+end subroutine ub_sspr
 
 subroutine ub_sswap(n,sx,incx,sy,incy)
   use blas77_types
@@ -2148,7 +2148,7 @@ subroutine ub_sswap(n,sx,incx,sy,incy)
   integer(blas77_int) :: incy
 
   call sswap(n,sx,incx,sy,incy)
-end subroutine sswap
+end subroutine ub_sswap
 
 subroutine ub_ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2171,7 +2171,7 @@ subroutine ub_ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine ssymm
+end subroutine ub_ssymm
 
 subroutine ub_ssymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2192,7 +2192,7 @@ subroutine ub_ssymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call ssymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine ssymv
+end subroutine ub_ssymv
 
 subroutine ub_ssyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -2212,7 +2212,7 @@ subroutine ub_ssyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
   real(blas77_f32) :: a(lda,*)
 
   call ssyr2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine ssyr2
+end subroutine ub_ssyr2
 
 subroutine ub_ssyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2235,7 +2235,7 @@ subroutine ub_ssyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call ssyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine ssyr2k
+end subroutine ub_ssyr2k
 
 subroutine ub_ssyr(uplo,n,alpha,x,incx,a,lda)
   use blas77_types
@@ -2253,7 +2253,7 @@ subroutine ub_ssyr(uplo,n,alpha,x,incx,a,lda)
   real(blas77_f32) :: a(lda,*)
 
   call ssyr(uplo,n,alpha,x,incx,a,lda)
-end subroutine ssyr
+end subroutine ub_ssyr
 
 subroutine ub_ssyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -2274,7 +2274,7 @@ subroutine ub_ssyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   real(blas77_f32) :: c(ldc,*)
 
   call ssyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine ssyrk
+end subroutine ub_ssyrk
 
 subroutine ub_stbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -2294,7 +2294,7 @@ subroutine ub_stbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call stbmv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine stbmv
+end subroutine ub_stbmv
 
 subroutine ub_stbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -2314,7 +2314,7 @@ subroutine ub_stbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call stbsv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine stbsv
+end subroutine ub_stbsv
 
 subroutine ub_stpmv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -2332,7 +2332,7 @@ subroutine ub_stpmv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call stpmv(uplo,trans,diag,n,ap,x,incx)
-end subroutine stpmv
+end subroutine ub_stpmv
 
 subroutine ub_stpsv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -2350,7 +2350,7 @@ subroutine ub_stpsv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call stpsv(uplo,trans,diag,n,ap,x,incx)
-end subroutine stpsv
+end subroutine ub_stpsv
 
 subroutine ub_strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -2372,7 +2372,7 @@ subroutine ub_strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   real(blas77_f32) :: b(ldb,*)
 
   call strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine strmm
+end subroutine ub_strmm
 
 subroutine ub_strmv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -2391,7 +2391,7 @@ subroutine ub_strmv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call strmv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine strmv
+end subroutine ub_strmv
 
 subroutine ub_strsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -2413,7 +2413,7 @@ subroutine ub_strsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   real(blas77_f32) :: b(ldb,*)
 
   call strsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine strsm
+end subroutine ub_strsm
 
 subroutine ub_strsv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -2432,7 +2432,7 @@ subroutine ub_strsv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call strsv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine strsv
+end subroutine ub_strsv
 
 subroutine ub_xerbla_array(srname_array,srname_len,info)
   use blas77_types
@@ -2446,7 +2446,7 @@ subroutine ub_xerbla_array(srname_array,srname_len,info)
   integer(blas77_int) :: info
 
   call xerbla_array(srname_array,srname_len,info)
-end subroutine xerbla_array
+end subroutine ub_xerbla_array
 
 subroutine ub_xerbla(srname,info)
   use blas77_types
@@ -2459,7 +2459,7 @@ subroutine ub_xerbla(srname,info)
   integer(blas77_int) :: info
 
   call xerbla(srname,info)
-end subroutine xerbla
+end subroutine ub_xerbla
 
 subroutine ub_zaxpby(n,za,zx,incx,zb,zy,incy)
   use blas77_types
@@ -2477,7 +2477,7 @@ subroutine ub_zaxpby(n,za,zx,incx,zb,zy,incy)
   integer(blas77_int) :: incy
 
   call zaxpby(n,za,zx,incx,zb,zy,incy)
-end subroutine zaxpby
+end subroutine ub_zaxpby
 
 subroutine ub_zaxpy(n,za,zx,incx,zy,incy)
   use blas77_types
@@ -2494,7 +2494,7 @@ subroutine ub_zaxpy(n,za,zx,incx,zy,incy)
   integer(blas77_int) :: incy
 
   call zaxpy(n,za,zx,incx,zy,incy)
-end subroutine zaxpy
+end subroutine ub_zaxpy
 
 subroutine ub_zcopy(n,zx,incx,zy,incy)
   use blas77_types
@@ -2510,7 +2510,7 @@ subroutine ub_zcopy(n,zx,incx,zy,incy)
   integer(blas77_int) :: incy
 
   call zcopy(n,zx,incx,zy,incy)
-end subroutine zcopy
+end subroutine ub_zcopy
 
 function ub_zdotc(n,zx,incx,zy,incy)
   use blas77_types
@@ -2525,7 +2525,7 @@ function ub_zdotc(n,zx,incx,zy,incy)
   complex(blas77_f64) :: ub_zdotc
 
   ub_zdotc = zdotc(n,zx,incx,zy,incy)
-end function zdotc
+end function ub_zdotc
 
 function ub_zdotu(n,zx,incx,zy,incy)
   use blas77_types
@@ -2540,7 +2540,7 @@ function ub_zdotu(n,zx,incx,zy,incy)
   complex(blas77_f64) :: ub_zdotu
 
   ub_zdotu = zdotu(n,zx,incx,zy,incy)
-end function zdotu
+end function ub_zdotu
 
 subroutine ub_zdrot(n,zx,incx,zy,incy,c,s)
   use blas77_types
@@ -2558,7 +2558,7 @@ subroutine ub_zdrot(n,zx,incx,zy,incy,c,s)
   real(blas77_f64) :: s
 
   call zdrot(n,zx,incx,zy,incy,c,s)
-end subroutine zdrot
+end subroutine ub_zdrot
 
 subroutine ub_zdscal(n,da,zx,incx)
   use blas77_types
@@ -2573,7 +2573,7 @@ subroutine ub_zdscal(n,da,zx,incx)
   integer(blas77_int) :: incx
 
   call zdscal(n,da,zx,incx)
-end subroutine zdscal
+end subroutine ub_zdscal
 
 subroutine ub_zgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2597,7 +2597,7 @@ subroutine ub_zgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zgbmv
+end subroutine ub_zgbmv
 
 subroutine ub_zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2621,7 +2621,7 @@ subroutine ub_zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zgemm
+end subroutine ub_zgemm
 
 subroutine ub_zgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2645,7 +2645,7 @@ subroutine ub_zgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zgemmtr
+end subroutine ub_zgemmtr
 
 subroutine ub_zgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2667,7 +2667,7 @@ subroutine ub_zgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zgemv
+end subroutine ub_zgemv
 
 subroutine ub_zgerc(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -2687,7 +2687,7 @@ subroutine ub_zgerc(m,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f64) :: a(lda,*)
 
   call zgerc(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine zgerc
+end subroutine ub_zgerc
 
 subroutine ub_zgeru(m,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -2707,7 +2707,7 @@ subroutine ub_zgeru(m,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f64) :: a(lda,*)
 
   call zgeru(m,n,alpha,x,incx,y,incy,a,lda)
-end subroutine zgeru
+end subroutine ub_zgeru
 
 subroutine ub_zhbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2729,7 +2729,7 @@ subroutine ub_zhbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zhbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zhbmv
+end subroutine ub_zhbmv
 
 subroutine ub_zhemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2752,7 +2752,7 @@ subroutine ub_zhemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zhemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zhemm
+end subroutine ub_zhemm
 
 subroutine ub_zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   use blas77_types
@@ -2773,7 +2773,7 @@ subroutine ub_zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy)
-end subroutine zhemv
+end subroutine ub_zhemv
 
 subroutine ub_zher2(uplo,n,alpha,x,incx,y,incy,a,lda)
   use blas77_types
@@ -2793,7 +2793,7 @@ subroutine ub_zher2(uplo,n,alpha,x,incx,y,incy,a,lda)
   complex(blas77_f64) :: a(lda,*)
 
   call zher2(uplo,n,alpha,x,incx,y,incy,a,lda)
-end subroutine zher2
+end subroutine ub_zher2
 
 subroutine ub_zher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2816,7 +2816,7 @@ subroutine ub_zher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zher2k
+end subroutine ub_zher2k
 
 subroutine ub_zher(uplo,n,alpha,x,incx,a,lda)
   use blas77_types
@@ -2834,7 +2834,7 @@ subroutine ub_zher(uplo,n,alpha,x,incx,a,lda)
   complex(blas77_f64) :: a(lda,*)
 
   call zher(uplo,n,alpha,x,incx,a,lda)
-end subroutine zher
+end subroutine ub_zher
 
 subroutine ub_zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -2855,7 +2855,7 @@ subroutine ub_zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine zherk
+end subroutine ub_zherk
 
 subroutine ub_zhpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   use blas77_types
@@ -2875,7 +2875,7 @@ subroutine ub_zhpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
   integer(blas77_int) :: incy
 
   call zhpmv(uplo,n,alpha,ap,x,incx,beta,y,incy)
-end subroutine zhpmv
+end subroutine ub_zhpmv
 
 subroutine ub_zhpr2(uplo,n,alpha,x,incx,y,incy,ap)
   use blas77_types
@@ -2894,7 +2894,7 @@ subroutine ub_zhpr2(uplo,n,alpha,x,incx,y,incy,ap)
   complex(blas77_f64) :: ap(*)
 
   call zhpr2(uplo,n,alpha,x,incx,y,incy,ap)
-end subroutine zhpr2
+end subroutine ub_zhpr2
 
 subroutine ub_zhpr(uplo,n,alpha,x,incx,ap)
   use blas77_types
@@ -2911,7 +2911,7 @@ subroutine ub_zhpr(uplo,n,alpha,x,incx,ap)
   complex(blas77_f64) :: ap(*)
 
   call zhpr(uplo,n,alpha,x,incx,ap)
-end subroutine zhpr
+end subroutine ub_zhpr
 
 subroutine ub_zrotg(a,b,c,s)
   use blas77_types
@@ -2926,7 +2926,7 @@ subroutine ub_zrotg(a,b,c,s)
   complex(blas77_f64) :: s
 
   call zrotg(a,b,c,s)
-end subroutine zrotg
+end subroutine ub_zrotg
 
 subroutine ub_zscal(n,za,zx,incx)
   use blas77_types
@@ -2941,7 +2941,7 @@ subroutine ub_zscal(n,za,zx,incx)
   integer(blas77_int) :: incx
 
   call zscal(n,za,zx,incx)
-end subroutine zscal
+end subroutine ub_zscal
 
 subroutine ub_zswap(n,zx,incx,zy,incy)
   use blas77_types
@@ -2957,7 +2957,7 @@ subroutine ub_zswap(n,zx,incx,zy,incy)
   integer(blas77_int) :: incy
 
   call zswap(n,zx,incx,zy,incy)
-end subroutine zswap
+end subroutine ub_zswap
 
 subroutine ub_zsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -2980,7 +2980,7 @@ subroutine ub_zsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zsymm
+end subroutine ub_zsymm
 
 subroutine ub_zsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   use blas77_types
@@ -3003,7 +3003,7 @@ subroutine ub_zsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc)
-end subroutine zsyr2k
+end subroutine ub_zsyr2k
 
 subroutine ub_zsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   use blas77_types
@@ -3024,7 +3024,7 @@ subroutine ub_zsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
   complex(blas77_f64) :: c(ldc,*)
 
   call zsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc)
-end subroutine zsyrk
+end subroutine ub_zsyrk
 
 subroutine ub_ztbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -3044,7 +3044,7 @@ subroutine ub_ztbmv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ztbmv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine ztbmv
+end subroutine ub_ztbmv
 
 subroutine ub_ztbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   use blas77_types
@@ -3064,7 +3064,7 @@ subroutine ub_ztbsv(uplo,trans,diag,n,k,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ztbsv(uplo,trans,diag,n,k,a,lda,x,incx)
-end subroutine ztbsv
+end subroutine ub_ztbsv
 
 subroutine ub_ztpmv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -3082,7 +3082,7 @@ subroutine ub_ztpmv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call ztpmv(uplo,trans,diag,n,ap,x,incx)
-end subroutine ztpmv
+end subroutine ub_ztpmv
 
 subroutine ub_ztpsv(uplo,trans,diag,n,ap,x,incx)
   use blas77_types
@@ -3100,7 +3100,7 @@ subroutine ub_ztpsv(uplo,trans,diag,n,ap,x,incx)
   integer(blas77_int) :: incx
 
   call ztpsv(uplo,trans,diag,n,ap,x,incx)
-end subroutine ztpsv
+end subroutine ub_ztpsv
 
 subroutine ub_ztrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -3122,7 +3122,7 @@ subroutine ub_ztrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   complex(blas77_f64) :: b(ldb,*)
 
   call ztrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine ztrmm
+end subroutine ub_ztrmm
 
 subroutine ub_ztrmv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -3141,7 +3141,7 @@ subroutine ub_ztrmv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ztrmv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine ztrmv
+end subroutine ub_ztrmv
 
 subroutine ub_ztrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   use blas77_types
@@ -3163,7 +3163,7 @@ subroutine ub_ztrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
   complex(blas77_f64) :: b(ldb,*)
 
   call ztrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb)
-end subroutine ztrsm
+end subroutine ub_ztrsm
 
 subroutine ub_ztrsv(uplo,trans,diag,n,a,lda,x,incx)
   use blas77_types
@@ -3182,4 +3182,4 @@ subroutine ub_ztrsv(uplo,trans,diag,n,a,lda,x,incx)
   integer(blas77_int) :: incx
 
   call ztrsv(uplo,trans,diag,n,a,lda,x,incx)
-end subroutine ztrsv
+end subroutine ub_ztrsv

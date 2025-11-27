@@ -109,7 +109,7 @@ def process_wrapper(code: str, library_name: str) -> str:
         call_args = args[1:-1]
         out.append(f"  ub_{name} = {name}({call_args})")
 
-    out.append(f"end {kind} {name}")
+    out.append(f"end {kind} ub_{name}")
 
     return "\n".join(out) + "\n"
 
