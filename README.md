@@ -11,3 +11,11 @@ Generation consists from several stages:
 2. Using API, generate corresponding blas77 and lapack77 modules.
 3. Using API, generate corresponding ubblas and ublapack wrappers.
 4. Apply patches for special cases.
+
+# Known issues
+
+1. LAPACK auxiliary routines are missing
+2. LAPACK routines with EXTERNAL procedures are omitted
+3. ubwrappers are not yet available
+4. Only CMake build is available
+5. Limited set of compilers is supported
