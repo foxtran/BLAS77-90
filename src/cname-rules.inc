@@ -11,3 +11,7 @@
 #else
 #  define CNAME(bindname)
 #endif
+
+#ifdef BLAS77_LINKER_TEST
+#  define CNAME(bindname) bind(C, name="BLAS77Interface$bindname")
+#endif
