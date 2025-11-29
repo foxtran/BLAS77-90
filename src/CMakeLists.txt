@@ -8,4 +8,11 @@ if(BLAS77Interface_ENABLE_LAPACK)
   list(APPEND SOURCES "${dir}/lapack77.F90")
 endif()
 
+if(BLAS77Interface_LINKER_TEST)
+  list(APPEND SOURCES "${dir}/BLAS77_blas.F90")
+  if(BLAS77Interface_ENABLE_LAPACK)
+    list(APPEND SOURCES "${dir}/BLAS77_lapack.F90")
+  endif()
+endif()
+
 set(SOURCES ${SOURCES} PARENT_SCOPE)

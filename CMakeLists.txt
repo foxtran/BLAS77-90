@@ -6,16 +6,18 @@ project(BLAS77Interface
   LANGUAGES Fortran)
 
 
-option(BLAS77Interface_ENABLE_LAPACK      "Enable LAPACK interfaces"                 ON)
-option(BLAS77Interface_BLA_SIZEOF_INTEGER "BLAS integer size in bytes (4 or 8)"      4)
-option(BLAS77Interface_UB_WRAPPER         "Enable wrappers of BLAS/LAPACK"           OFF)
+option(BLAS77Interface_ENABLE_LAPACK      "Enable LAPACK interfaces"                                 ON)
+option(BLAS77Interface_BLA_SIZEOF_INTEGER "BLAS integer size in bytes (4 or 8)"                      4)
+option(BLAS77Interface_LINKER_TEST        "Raise link-time error on BLAS/LAPACK use without modules" OFF)
 
 
 set(BLA_INTEGER_SIZE ${BLAS77Interface_BLA_SIZEOF_INTEGER})
 
-find_package(BLAS REQUIRED)
-if(BLAS77Interface_ENABLE_LAPACK)
-  find_package(LAPACK REQUIRED)
+if(NOT BLAS77Interface_LINKER_TEST)
+  find_package(BLAS REQUIRED)
+  if(BLAS77Interface_ENABLE_LAPACK)
+    find_package(LAPACK REQUIRED)
+  endif()
 endif()
 
 
@@ -34,14 +36,19 @@ if(NOT TARGET BLAS77Interface)
                                                    Fortran_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/BLAS77Interface/Fortran/
   )
   target_include_directories(BLAS77Interface PUBLIC ${CMAKE_BINARY_DIR}/BLAS77Interface/Fortran/)
-  target_link_libraries(BLAS77Interface PUBLIC BLAS::BLAS)
-  if(BLAS77Interface_ENABLE_LAPACK)
-    target_compile_definitions(BLAS77Interface PRIVATE BLAS77_ENABLE_LAPACK)
-    target_link_libraries(BLAS77Interface PUBLIC LAPACK::LAPACK)
+  if(NOT BLAS77Interface_LINKER_TEST)
+    target_link_libraries(BLAS77Interface PUBLIC BLAS::BLAS)
+    if(BLAS77Interface_ENABLE_LAPACK)
+      target_compile_definitions(BLAS77Interface PRIVATE BLAS77_ENABLE_LAPACK)
+      target_link_libraries(BLAS77Interface PUBLIC LAPACK::LAPACK)
+    endif()
   endif()
 
 
   # vendor specific flags
+  if(BLAS77Interface_LINKER_TEST)
+    target_compile_definitions(BLAS77Interface PRIVATE BLAS77_LINKER_TEST)
+  endif()
   if("${BLAS77Interface_VENDOR}" STREQUAL "Apple")
     target_compile_definitions(BLAS77Interface PRIVATE ACCELERATE_NEW_LAPACK)
   endif()
