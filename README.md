@@ -1,18 +1,19 @@
 # BLAS77Interface
 
-Fortran 90 modules and wrappers for BLAS &amp; LAPACK routines.
+provides modern Fortran 90 modules and wrappers for BLAS and LAPACK routines.
 
-The idea is to get all interfaces for BLAS/LAPACK routines into Fortran modules for:
-1. safely usage
-2. possible masking of BLAS/LAPACK symbols
+The goal is to expose all BLAS/LAPACK interfaces through type-safe Fortran modules, enabling:
+- Safer and more convenient usage of BLAS/LAPACK.
+- Optional masking or renaming of BLAS/LAPACK symbols.
 
-Library provides one main module `blas77lapack77` with all known BLAS+LAPACK routines and `blas77` and `lapack77` modules for BLAS and LAPACK routines, respectively.
+The library offers one combined module, `blas77lapack77`, containing all routines, as well as separate `blas77` and `lapack77` modules for BLAS-only and LAPACK-only interfaces.
+
 
 # Usage
 
-Currently, library can be used only with [CMake build system](https://cmake.org), or manually.
+The library currently supports building via the [CMake build system](https://cmake.org) or by manual integration.
 
-To use `BLAS77Interface` in your project, you have to fetch library:
+Fetching the library with CMake:
 ```cmake
 include(FetchContent)
 FetchContent_Declare(BLAS77Interface
@@ -21,26 +22,29 @@ FetchContent_Declare(BLAS77Interface
 FetchContent_MakeAvailable(BLAS77Interface)
 ```
 
-After this, you can link the library with your Fortran application:
+Then link it to your Fortran target:
 ```cmake
 target_link_libraries(<TARGET> PUBLIC BLAS77Interface)
 ```
 
-Useful flags that changes behaviour of library:
+Set these variables before calling `FetchContent_MakeAvailable()`:
 - `BLAS77Interface_ENABLE_LAPACK` enables LAPACK interfaces (default: ON)
 - `BLAS77Interface_BLA_SIZEOF_INTEGER` changes default BLAS integer size in bytes (default: 4)
 
 The variables should be set before fetching.
 
+
 # Source code generation
 
-BLAS77Interface uses [Reference LAPACK](https://github.com/Reference-LAPACK/lapack) for generation its code. Latest commit is used.
+BLAS77Interface uses
+The BLAS77Interface generator uses the latest commit of [Reference LAPACK](https://github.com/Reference-LAPACK/lapack) to extract routine signatures and generate Fortran modules.
 
 Generation consists from several stages:
 1. Extracting API of non-auxiliary functions of BLAS and LAPACK.
 2. Using API, generate corresponding blas77 and lapack77 modules.
 3. Using API, generate corresponding ubblas and ublapack wrappers.
 4. Apply patches for special cases.
+
 
 # Known issues
 
