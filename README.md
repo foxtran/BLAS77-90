@@ -46,6 +46,5 @@ Generation consists from several stages:
 
 1. LAPACK auxiliary routines are missing
 2. LAPACK routines with EXTERNAL procedures are omitted
-3. ubwrappers are not yet available
 4. Only CMake build is available
 5. Limited set of compilers is supported
