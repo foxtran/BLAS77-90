@@ -51,7 +51,6 @@ Generation steps:
 
 # Known issues
 
-1. LAPACK auxiliary routines are missing.
-2. LAPACK routines with `EXTERNAL` procedures are omitted.
-3. Only the CMake build is provided.
-4. Only a limited set of Fortran compilers is supported.
+1. LAPACK routines with `EXTERNAL` procedures are omitted.
+2. Only the CMake build is provided.
+3. Only a limited set of Fortran compilers is supported.
