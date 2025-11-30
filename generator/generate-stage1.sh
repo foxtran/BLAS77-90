@@ -40,11 +40,7 @@ flang -fdefault-integer-8 -fsyntax-only la_xisnan.F90 -module-dir .
 
 for fdname in *.f *.f90 *.F *.F90 DEPRECATED/*.f;
 do
-  if [ "${fdname}" == "la_xisnan.F90" ]; then
-    continue
-  fi
-
-  if [ $(grep -c "LAPACK auxiliary" $fdname) -ne 0 ]; then
+  if [[ "${fdname}" == "la_xisnan.F90" || "${fdname}" == "la_constants.f90" ]]; then
     continue
   fi
 
