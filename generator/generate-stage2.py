@@ -32,10 +32,16 @@ def apply_interface_transforms(text: str) -> str:
     header = lines[0].strip()
     m = re.match(r"^(subroutine|function)\s+([A-Za-z0-9_]+)\s*(\([^)]*\))", header, re.I)
     name = m.group(2)
-    lines = [
-        line.replace("::", ", intent(inout) :: ") if "intent" not in line and name not in line else line
-        for line in lines
-    ]
+    if "function" in header:
+        lines = [
+            line.replace("::", ", intent(in) :: ") if "intent" not in line and name not in line else line
+            for line in lines
+        ]
+    else:
+        lines = [
+            line.replace("::", ", intent(inout) :: ") if "intent" not in line else line
+            for line in lines
+        ]
     text = "\n".join(lines)
 
     return text
