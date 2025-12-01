@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "Build interface"
+
+on:
+    push:
+        branches:
+            - "**"
+        paths:
+            - ".github/workflows/**"
+            - "example/**"
+            - "generator/**"
+            - "src/**"
+            - "CMakeLists.txt"
+
+    pull_request:
+        branches:
+            - "**"
+        paths:
+            - ".github/workflows/**"
+            - "example/**"
+            - "generator/**"
+            - "src/**"
+            - "CMakeLists.txt"
+
+defaults:
+    run:
+        shell: pwsh
+
+jobs:
+    build-interface:
+        name: "Build interface"
+
+        strategy:
+            matrix:
+                system:
+                    - ubuntu-latest
+                    - macos-latest
+
+                toolchain:
+                    - { compiler: gcc, version: 'latest' }
+                    - { compiler: intel, version: '2025.0' }
+                    - { compiler: intel-classic, version: '2021.10' }
+                    - { compiler: nvidia-hpc, version: '25.1' }
+
+                exclude:
+                    - system: windows-latest
+                      toolchain: { compiler: nvidia-hpc }
+
+                    - system: ubuntu-latest
+                      toolchain: { compiler: nvidia-hpc }
+
+                    - system: macos-latest
+                      toolchain: { compiler: intel }
+                    - system: macos-latest
+                      toolchain: { compiler: intel-classic }
+                    - system: macos-latest
+                      toolchain: { compiler: nvidia-hpc }
+
+            fail-fast: false
+
+        runs-on: ${{ matrix.system }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+
+            - name: Setup OpenBLAS (Ubuntu)
+              if: ${{ runner.os == 'Linux' }}
+              run: |
+                  sudo apt update
+                  sudo apt install -y `
+                      libopenblas-dev
+
+            - name: Setup OpenBLAS (macOS)
+              if: ${{ runner.os == 'macOS' }}
+              run: |
+                  brew update
+                  brew install `
+                      openblas
+
+            - name: Setup Fortran
+              uses: fortran-lang/setup-fortran@v1
+              id: setup-fortran
+              with:
+                  compiler: ${{ matrix.toolchain.compiler }}
+                  version: ${{ matrix.toolchain.version }}
+
+            - name: Configure project
+              run: |
+                  cmake `
+                      -S . `
+                      -B build `
+
+            - name: Build project
+              run: |
+                  cmake `
+                      --build build
