@@ -67,6 +67,8 @@ if(NOT TARGET BLAS77Interface)
     target_compile_options(BLAS77Interface PRIVATE $<$<COMPILE_LANGUAGE:Fortran>:-Mpreprocess>)
   elseif("${CMAKE_Fortran_COMPILER_ID}" MATCHES "Cray")
     target_compile_options(BLAS77Interface PRIVATE $<$<COMPILE_LANGUAGE:Fortran>:-eF>) # Enable preprocessor
+  elseif("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "SunPro")
+    target_compile_options(BLAS77Interface PRIVATE $<$<COMPILE_LANGUAGE:Fortran>:-xpp=cpp>)
   else()
     message(FATAL_ERROR "${CMAKE_Fortran_COMPILER_ID} compiler is not supported yet!")
   endif()
