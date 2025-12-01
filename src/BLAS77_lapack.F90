@@ -1,4 +1,5 @@
 #include "cname-rules.inc"
+#include "error_stop-rules.inc"
 
 subroutine cbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info) bind(C, name="BLAS77Interface$cbbcsd")
   use blas77_types
@@ -34,7 +35,7 @@ subroutine cbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cbbcsd
 
 subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) bind(C, name="BLAS77Interface$cbdsqr")
@@ -57,7 +58,7 @@ subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) bind(C
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cbdsqr
 
 subroutine cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) bind(C, name="BLAS77Interface$cgbbrd")
@@ -84,7 +85,7 @@ subroutine cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbbrd
 
 subroutine cgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$cgbcon")
@@ -104,7 +105,7 @@ subroutine cgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info) bind(C,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbcon
 
 subroutine cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$cgbequ")
@@ -124,7 +125,7 @@ subroutine cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="B
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbequ
 
 subroutine cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$cgbequb")
@@ -144,7 +145,7 @@ subroutine cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbequb
 
 subroutine cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgbrfs")
@@ -171,7 +172,7 @@ subroutine cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,ber
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbrfs
 
 subroutine cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cgbrfsx")
@@ -206,7 +207,7 @@ subroutine cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,l
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbrfsx
 
 subroutine cgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cgbsv")
@@ -224,7 +225,7 @@ subroutine cgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Inter
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbsv
 
 subroutine cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgbsvx")
@@ -256,7 +257,7 @@ subroutine cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbsvx
 
 subroutine cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cgbsvxx")
@@ -293,7 +294,7 @@ subroutine cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ld
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbsvxx
 
 subroutine cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$cgbtf2")
@@ -309,7 +310,7 @@ subroutine cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$cgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbtf2
 
 subroutine cgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$cgbtrf")
@@ -325,7 +326,7 @@ subroutine cgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$cgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbtrf
 
 subroutine cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cgbtrs")
@@ -344,7 +345,7 @@ subroutine cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgbtrs
 
 subroutine cgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Interface$cgebak")
@@ -362,7 +363,7 @@ subroutine cgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Int
   complex(blas77_f32) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgebak
 
 subroutine cgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$cgebal")
@@ -378,7 +379,7 @@ subroutine cgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$
   real(blas77_f32) :: scale(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgebal
 
 subroutine cgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interface$cgebd2")
@@ -396,7 +397,7 @@ subroutine cgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interfa
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgebd2
 
 subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77Interface$cgebrd")
@@ -415,7 +416,7 @@ subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgebrd
 
 subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$cgecon")
@@ -432,7 +433,7 @@ subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgecon
 
 subroutine cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cgedmd")
@@ -471,7 +472,7 @@ subroutine cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,l
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgedmd
 
 subroutine cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cgedmdq")
@@ -514,7 +515,7 @@ subroutine cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nr
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgedmdq
 
 subroutine cgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$cgeequ")
@@ -532,7 +533,7 @@ subroutine cgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeequ
 
 subroutine cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$cgeequb")
@@ -550,7 +551,7 @@ subroutine cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77In
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeequb
 
 
@@ -574,7 +575,7 @@ subroutine cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bi
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeev
 
 subroutine cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgeevx")
@@ -604,7 +605,7 @@ subroutine cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,sca
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeevx
 
 subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgegs")
@@ -629,7 +630,7 @@ subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgegs
 
 subroutine cgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgegv")
@@ -654,7 +655,7 @@ subroutine cgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgegv
 
 subroutine cgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgehd2")
@@ -670,7 +671,7 @@ subroutine cgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgehd2
 
 subroutine cgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgehrd")
@@ -687,7 +688,7 @@ subroutine cgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgehrd
 
 subroutine cgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$cgejsv")
@@ -716,7 +717,7 @@ subroutine cgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgejsv
 
 subroutine cgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgelq2")
@@ -731,7 +732,7 @@ subroutine cgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgelq2"
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelq2
 
 subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$cgelq")
@@ -748,7 +749,7 @@ subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelq
 
 subroutine cgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgelqf")
@@ -764,7 +765,7 @@ subroutine cgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$c
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelqf
 
 subroutine cgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$cgelqs")
@@ -783,7 +784,7 @@ subroutine cgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelqs
 
 subroutine cgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgelqt3")
@@ -798,7 +799,7 @@ subroutine cgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgelqt3")
   complex(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelqt3
 
 subroutine cgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$cgelqt")
@@ -815,7 +816,7 @@ subroutine cgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$cg
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelqt
 
 subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$cgels")
@@ -834,7 +835,7 @@ subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgels
 
 subroutine cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$cgelsd")
@@ -857,7 +858,7 @@ subroutine cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelsd
 
 subroutine cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgelss")
@@ -879,7 +880,7 @@ subroutine cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info) bind(
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelss
 
 subroutine cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$cgelst")
@@ -898,7 +899,7 @@ subroutine cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelst
 
 subroutine cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) bind(C, name="BLAS77Interface$cgelsx")
@@ -919,7 +920,7 @@ subroutine cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) bind(C, 
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelsx
 
 subroutine cgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgelsy")
@@ -941,7 +942,7 @@ subroutine cgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) bi
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgelsy
 
 subroutine cgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cgemlq")
@@ -963,7 +964,7 @@ subroutine cgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgemlq
 
 subroutine cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$cgemlqt")
@@ -985,7 +986,7 @@ subroutine cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgemlqt
 
 subroutine cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cgemqr")
@@ -1007,7 +1008,7 @@ subroutine cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgemqr
 
 subroutine cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$cgemqrt")
@@ -1029,7 +1030,7 @@ subroutine cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgemqrt
 
 subroutine cgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeql2")
@@ -1044,7 +1045,7 @@ subroutine cgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeql2"
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeql2
 
 subroutine cgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgeqlf")
@@ -1060,7 +1061,7 @@ subroutine cgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$c
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqlf
 
 subroutine cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgeqp3")
@@ -1078,7 +1079,7 @@ subroutine cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) bind(C, name="BLAS77
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqp3
 
 subroutine cgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$cgeqp3rk")
@@ -1104,7 +1105,7 @@ subroutine cgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,j
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqp3rk
 
 subroutine cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) bind(C, name="BLAS77Interface$cgeqpf")
@@ -1121,7 +1122,7 @@ subroutine cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) bind(C, name="BLAS77Interf
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqpf
 
 subroutine cgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeqr2")
@@ -1136,7 +1137,7 @@ subroutine cgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeqr2"
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqr2
 
 subroutine cgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeqr2p")
@@ -1151,7 +1152,7 @@ subroutine cgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgeqr2
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqr2p
 
 subroutine cgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$cgeqr")
@@ -1168,7 +1169,7 @@ subroutine cgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqr
 
 subroutine cgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgeqrf")
@@ -1184,7 +1185,7 @@ subroutine cgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$c
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrf
 
 subroutine cgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgeqrfp")
@@ -1200,7 +1201,7 @@ subroutine cgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrfp
 
 subroutine cgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$cgeqrs")
@@ -1219,7 +1220,7 @@ subroutine cgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrs
 
 subroutine cgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgeqrt2")
@@ -1234,7 +1235,7 @@ subroutine cgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgeqrt2")
   complex(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrt2
 
 subroutine cgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgeqrt3")
@@ -1249,7 +1250,7 @@ subroutine cgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$cgeqrt3")
   complex(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrt3
 
 subroutine cgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$cgeqrt")
@@ -1266,7 +1267,7 @@ subroutine cgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$cg
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgeqrt
 
 subroutine cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgerfs")
@@ -1291,7 +1292,7 @@ subroutine cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwo
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgerfs
 
 subroutine cgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cgerfsx")
@@ -1324,7 +1325,7 @@ subroutine cgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,b
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgerfsx
 
 subroutine cgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgerq2")
@@ -1339,7 +1340,7 @@ subroutine cgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cgerq2"
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgerq2
 
 subroutine cgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cgerqf")
@@ -1355,7 +1356,7 @@ subroutine cgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$c
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgerqf
 
 subroutine cgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$cgesc2")
@@ -1370,7 +1371,7 @@ subroutine cgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$cge
   integer(blas77_int) :: jpiv(*)
   real(blas77_f32) :: scale
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesc2
 
 subroutine cgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$cgesdd")
@@ -1393,7 +1394,7 @@ subroutine cgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bi
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesdd
 
 subroutine cgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cgesv")
@@ -1409,7 +1410,7 @@ subroutine cgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cge
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesv
 
 subroutine cgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cgesvd")
@@ -1432,7 +1433,7 @@ subroutine cgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) bi
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvd
 
 subroutine cgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$cgesvdq")
@@ -1462,7 +1463,7 @@ subroutine cgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwor
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvdq
 
 subroutine cgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$cgesvdx")
@@ -1492,7 +1493,7 @@ subroutine cgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvdx
 
 subroutine cgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$cgesvj")
@@ -1516,7 +1517,7 @@ subroutine cgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork
   real(blas77_f32) :: rwork(lrwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvj
 
 subroutine cgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgesvx")
@@ -1546,7 +1547,7 @@ subroutine cgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rco
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvx
 
 subroutine cgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cgesvxx")
@@ -1581,7 +1582,7 @@ subroutine cgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rc
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgesvxx
 
 subroutine cgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$cgetc2")
@@ -1595,7 +1596,7 @@ subroutine cgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$cgetc2")
   integer(blas77_int) :: jpiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetc2
 
 subroutine cgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetf2")
@@ -1609,7 +1610,7 @@ subroutine cgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetf2
 
 subroutine cgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetrf2")
@@ -1623,7 +1624,7 @@ subroutine cgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetrf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetrf2
 
 subroutine cgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetrf")
@@ -1637,7 +1638,7 @@ subroutine cgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$cgetrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetrf
 
 subroutine cgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$cgetri")
@@ -1652,7 +1653,7 @@ subroutine cgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$cg
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetri
 
 subroutine cgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cgetrs")
@@ -1669,7 +1670,7 @@ subroutine cgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interf
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetrs
 
 subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$cgetsls")
@@ -1688,7 +1689,7 @@ subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetsls
 
 subroutine cgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$cgetsqrhrt")
@@ -1708,7 +1709,7 @@ subroutine cgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgetsqrhrt
 
 subroutine cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="BLAS77Interface$cggbak")
@@ -1727,7 +1728,7 @@ subroutine cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="B
   complex(blas77_f32) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggbak
 
 subroutine cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, name="BLAS77Interface$cggbal")
@@ -1747,7 +1748,7 @@ subroutine cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, nam
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggbal
 
 
@@ -1775,7 +1776,7 @@ subroutine cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwor
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggev3
 
 subroutine cggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cggev")
@@ -1800,7 +1801,7 @@ subroutine cggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggev
 
 subroutine cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info) bind(C, name="BLAS77Interface$cggevx")
@@ -1837,7 +1838,7 @@ subroutine cggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,l
   logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggevx
 
 subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77Interface$cggglm")
@@ -1858,7 +1859,7 @@ subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggglm
 
 subroutine cgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$cgghd3")
@@ -1882,7 +1883,7 @@ subroutine cgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgghd3
 
 subroutine cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, name="BLAS77Interface$cgghrd")
@@ -1904,7 +1905,7 @@ subroutine cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, na
   complex(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgghrd
 
 subroutine cgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77Interface$cgglse")
@@ -1925,7 +1926,7 @@ subroutine cgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgglse
 
 subroutine cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$cggqrf")
@@ -1945,7 +1946,7 @@ subroutine cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggqrf
 
 subroutine cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$cggrqf")
@@ -1965,7 +1966,7 @@ subroutine cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggrqf
 
 subroutine cggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$cggsvd3")
@@ -1998,7 +1999,7 @@ subroutine cggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggsvd3
 
 subroutine cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info) bind(C, name="BLAS77Interface$cggsvd")
@@ -2030,7 +2031,7 @@ subroutine cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggsvd
 
 subroutine cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info) bind(C, name="BLAS77Interface$cggsvp3")
@@ -2064,7 +2065,7 @@ subroutine cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggsvp3
 
 subroutine cggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info) bind(C, name="BLAS77Interface$cggsvp")
@@ -2097,7 +2098,7 @@ subroutine cggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,l
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cggsvp
 
 subroutine cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$cgsvj0")
@@ -2122,7 +2123,7 @@ subroutine cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,
   complex(blas77_f32) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgsvj0
 
 subroutine cgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$cgsvj1")
@@ -2148,7 +2149,7 @@ subroutine cgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   complex(blas77_f32) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgsvj1
 
 subroutine cgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$cgtcon")
@@ -2167,7 +2168,7 @@ subroutine cgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info) bind(C, name="B
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgtcon
 
 subroutine cgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgtrfs")
@@ -2195,7 +2196,7 @@ subroutine cgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgtrfs
 
 subroutine cgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$cgtsv")
@@ -2211,7 +2212,7 @@ subroutine cgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$cgtsv"
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgtsv
 
 subroutine cgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cgtsvx")
@@ -2241,7 +2242,7 @@ subroutine cgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcon
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgtsvx
 
 subroutine cgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$cgttrf")
@@ -2256,7 +2257,7 @@ subroutine cgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$cgttrf"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgttrf
 
 subroutine cgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cgttrs")
@@ -2275,7 +2276,7 @@ subroutine cgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgttrs
 
 subroutine cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Interface$cgtts2")
@@ -2293,7 +2294,7 @@ subroutine cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Inte
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cgtts2
 
 subroutine chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) bind(C, name="BLAS77Interface$chb2st_kernels")
@@ -2316,7 +2317,7 @@ subroutine chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,
   integer(blas77_int) :: ldvt
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chb2st_kernels
 
 subroutine chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) bind(C, name="BLAS77Interface$chbev_2stage")
@@ -2337,7 +2338,7 @@ subroutine chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) bi
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbev_2stage
 
 subroutine chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$chbev")
@@ -2357,7 +2358,7 @@ subroutine chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) bind(C, name="B
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbev
 
 subroutine chbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chbevd_2stage")
@@ -2381,7 +2382,7 @@ subroutine chbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbevd_2stage
 
 subroutine chbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chbevd")
@@ -2405,7 +2406,7 @@ subroutine chbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,l
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbevd
 
 subroutine chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chbevx_2stage")
@@ -2437,7 +2438,7 @@ subroutine chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbevx_2stage
 
 subroutine chbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chbevx")
@@ -2468,7 +2469,7 @@ subroutine chbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ld
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbevx
 
 subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) bind(C, name="BLAS77Interface$chbgst")
@@ -2490,7 +2491,7 @@ subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) bind(
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbgst
 
 subroutine chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$chbgv")
@@ -2513,7 +2514,7 @@ subroutine chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) bind
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbgv
 
 subroutine chbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chbgvd")
@@ -2540,7 +2541,7 @@ subroutine chbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrw
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbgvd
 
 subroutine chbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chbgvx")
@@ -2574,7 +2575,7 @@ subroutine chbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abst
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbgvx
 
 subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS77Interface$chbtrd")
@@ -2594,7 +2595,7 @@ subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chbtrd
 
 subroutine checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$checon_3")
@@ -2612,7 +2613,7 @@ subroutine checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLA
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine checon_3
 
 subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$checon")
@@ -2629,7 +2630,7 @@ subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine checon
 
 subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$checon_rook")
@@ -2646,7 +2647,7 @@ subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BL
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine checon_rook
 
 subroutine cheequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$cheequb")
@@ -2663,7 +2664,7 @@ subroutine cheequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheequb
 
 subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cheev_2stage")
@@ -2681,7 +2682,7 @@ subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name=
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheev_2stage
 
 subroutine cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$cheev")
@@ -2699,7 +2700,7 @@ subroutine cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheev
 
 subroutine cheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cheevd_2stage")
@@ -2720,7 +2721,7 @@ subroutine cheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevd_2stage
 
 subroutine cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cheevd")
@@ -2741,7 +2742,7 @@ subroutine cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevd
 
 subroutine cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cheevr_2stage")
@@ -2772,7 +2773,7 @@ subroutine cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,is
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevr_2stage
 
 subroutine cheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cheevr")
@@ -2803,7 +2804,7 @@ subroutine cheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,wo
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevr
 
 subroutine cheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$cheevx_2stage")
@@ -2832,7 +2833,7 @@ subroutine cheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,wo
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevx_2stage
 
 subroutine cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$cheevx")
@@ -2861,7 +2862,7 @@ subroutine cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheevx
 
 subroutine chegs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$chegs2")
@@ -2877,7 +2878,7 @@ subroutine chegs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegs2
 
 subroutine chegst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$chegst")
@@ -2893,7 +2894,7 @@ subroutine chegst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegst
 
 subroutine chegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$chegv_2stage")
@@ -2914,7 +2915,7 @@ subroutine chegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) b
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegv_2stage
 
 subroutine chegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$chegv")
@@ -2935,7 +2936,7 @@ subroutine chegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, 
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegv
 
 subroutine chegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chegvd")
@@ -2959,7 +2960,7 @@ subroutine chegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegvd
 
 subroutine chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chegvx")
@@ -2991,7 +2992,7 @@ subroutine chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,l
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chegvx
 
 subroutine cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cherfs")
@@ -3016,7 +3017,7 @@ subroutine cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwor
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cherfs
 
 subroutine cherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cherfsx")
@@ -3048,7 +3049,7 @@ subroutine cherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cherfsx
 
 subroutine chesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chesv_aa_2stage")
@@ -3070,7 +3071,7 @@ subroutine chesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesv_aa_2stage
 
 subroutine chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chesv_aa")
@@ -3089,7 +3090,7 @@ subroutine chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesv_aa
 
 subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chesv")
@@ -3108,7 +3109,7 @@ subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesv
 
 subroutine chesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chesv_rk")
@@ -3128,7 +3129,7 @@ subroutine chesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesv_rk
 
 subroutine chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chesv_rook")
@@ -3147,7 +3148,7 @@ subroutine chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesv_rook
 
 subroutine chesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$chesvx")
@@ -3175,7 +3176,7 @@ subroutine chesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesvx
 
 subroutine chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$chesvxx")
@@ -3209,7 +3210,7 @@ subroutine chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chesvxx
 
 subroutine cheswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$cheswapr")
@@ -3223,7 +3224,7 @@ subroutine cheswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$cheswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cheswapr
 
 subroutine chetd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$chetd2")
@@ -3239,7 +3240,7 @@ subroutine chetd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$chetd
   complex(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetd2
 
 subroutine chetf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$chetf2")
@@ -3253,7 +3254,7 @@ subroutine chetf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$chetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetf2
 
 subroutine chetf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$chetf2_rk")
@@ -3268,7 +3269,7 @@ subroutine chetf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$che
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetf2_rk
 
 subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$chetf2_rook")
@@ -3282,7 +3283,7 @@ subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$che
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetf2_rook
 
 subroutine chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) bind(C, name="BLAS77Interface$chetrd_2stage")
@@ -3303,7 +3304,7 @@ subroutine chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrd_2stage
 
 subroutine chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) bind(C, name="BLAS77Interface$chetrd_hb2st")
@@ -3325,7 +3326,7 @@ subroutine chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrd_hb2st
 
 subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, name="BLAS77Interface$chetrd_he2hb")
@@ -3344,7 +3345,7 @@ subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrd_he2hb
 
 subroutine chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Interface$chetrd")
@@ -3362,7 +3363,7 @@ subroutine chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrd
 
 subroutine chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$chetrf_aa_2stage")
@@ -3381,7 +3382,7 @@ subroutine chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrf_aa_2stage
 
 subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetrf_aa")
@@ -3397,7 +3398,7 @@ subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrf_aa
 
 subroutine chetrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetrf")
@@ -3413,7 +3414,7 @@ subroutine chetrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrf
 
 subroutine chetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetrf_rk")
@@ -3430,7 +3431,7 @@ subroutine chetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrf_rk
 
 subroutine chetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetrf_rook")
@@ -3446,7 +3447,7 @@ subroutine chetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrf_rook
 
 subroutine chetri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetri2")
@@ -3462,7 +3463,7 @@ subroutine chetri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri2
 
 subroutine chetri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$chetri2x")
@@ -3478,7 +3479,7 @@ subroutine chetri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri2x
 
 subroutine chetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$chetri_3")
@@ -3495,7 +3496,7 @@ subroutine chetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri_3
 
 subroutine chetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$chetri_3x")
@@ -3512,7 +3513,7 @@ subroutine chetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   complex(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri_3x
 
 subroutine chetri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$chetri")
@@ -3527,7 +3528,7 @@ subroutine chetri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$che
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri
 
 subroutine chetri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$chetri_rook")
@@ -3542,7 +3543,7 @@ subroutine chetri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetri_rook
 
 subroutine chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$chetrs2")
@@ -3560,7 +3561,7 @@ subroutine chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs2
 
 subroutine chetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$chetrs_3")
@@ -3578,7 +3579,7 @@ subroutine chetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs_3
 
 subroutine chetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$chetrs_aa_2stage")
@@ -3598,7 +3599,7 @@ subroutine chetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs_aa_2stage
 
 subroutine chetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$chetrs_aa")
@@ -3617,7 +3618,7 @@ subroutine chetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs_aa
 
 subroutine chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$chetrs")
@@ -3634,7 +3635,7 @@ subroutine chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs
 
 subroutine chetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$chetrs_rook")
@@ -3651,7 +3652,7 @@ subroutine chetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chetrs_rook
 
 subroutine chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77Interface$chfrk")
@@ -3669,7 +3670,7 @@ subroutine chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77I
   real(blas77_f32) :: beta
   complex(blas77_f32) :: c(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chfrk
 
 subroutine chgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) bind(C, name="BLAS77Interface$chgeqz")
@@ -3697,7 +3698,7 @@ subroutine chgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,w
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chgeqz
 
 function chla_transtype(trans) bind(C, name="BLAS77Interface$chla_transtype")
@@ -3707,7 +3708,7 @@ function chla_transtype(trans) bind(C, name="BLAS77Interface$chla_transtype")
   integer(blas77_int) :: trans
   character(len=1) :: chla_transtype
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function chla_transtype
 
 subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$chpcon")
@@ -3723,7 +3724,7 @@ subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpcon
 
 subroutine chpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$chpev")
@@ -3741,7 +3742,7 @@ subroutine chpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpev
 
 subroutine chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chpevd")
@@ -3763,7 +3764,7 @@ subroutine chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,in
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpevd
 
 subroutine chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chpevx")
@@ -3790,7 +3791,7 @@ subroutine chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,i
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpevx
 
 subroutine chpgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$chpgst")
@@ -3804,7 +3805,7 @@ subroutine chpgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$chpgst"
   complex(blas77_f32) :: bp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpgst
 
 subroutine chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$chpgv")
@@ -3824,7 +3825,7 @@ subroutine chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) bind(C, name="
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpgv
 
 subroutine chpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$chpgvd")
@@ -3848,7 +3849,7 @@ subroutine chpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpgvd
 
 subroutine chpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$chpgvx")
@@ -3877,7 +3878,7 @@ subroutine chpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,wor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpgvx
 
 subroutine chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$chprfs")
@@ -3900,7 +3901,7 @@ subroutine chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chprfs
 
 subroutine chpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$chpsv")
@@ -3916,7 +3917,7 @@ subroutine chpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpsv
 
 subroutine chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$chpsvx")
@@ -3941,7 +3942,7 @@ subroutine chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chpsvx
 
 subroutine chptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$chptrd")
@@ -3956,7 +3957,7 @@ subroutine chptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$chptrd")
   complex(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chptrd
 
 subroutine chptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$chptrf")
@@ -3969,7 +3970,7 @@ subroutine chptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$chptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chptrf
 
 subroutine chptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$chptri")
@@ -3983,7 +3984,7 @@ subroutine chptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$chptri
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chptri
 
 subroutine chptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$chptrs")
@@ -3999,7 +4000,7 @@ subroutine chptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chptrs
 
 subroutine chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info) bind(C, name="BLAS77Interface$chsein")
@@ -4026,7 +4027,7 @@ subroutine chsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,r
   integer(blas77_int) :: ifailr(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chsein
 
 subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$chseqr")
@@ -4047,7 +4048,7 @@ subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine chseqr
 
 subroutine cla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$cla_gbamv")
@@ -4068,7 +4069,7 @@ subroutine cla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, n
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_gbamv
 
 function cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$cla_gbrcond_c")
@@ -4091,7 +4092,7 @@ function cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,r
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_gbrcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gbrcond_c
 
 function cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$cla_gbrcond_x")
@@ -4113,7 +4114,7 @@ function cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) b
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_gbrcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gbrcond_x
 
 subroutine cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$cla_gbrfsx_extended")
@@ -4152,7 +4153,7 @@ subroutine cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,lda
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_gbrfsx_extended
 
 function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Interface$cla_gbrpvgrw")
@@ -4169,7 +4170,7 @@ function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   complex(blas77_f32) :: afb(ldafb,*)
   real(blas77_f32) :: cla_gbrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gbrpvgrw
 
 subroutine cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$cla_geamv")
@@ -4188,7 +4189,7 @@ subroutine cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLA
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_geamv
 
 function cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$cla_gercond_c")
@@ -4209,7 +4210,7 @@ function cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_gercond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gercond_c
 
 function cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$cla_gercond_x")
@@ -4229,7 +4230,7 @@ function cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, nam
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_gercond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gercond_x
 
 subroutine cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$cla_gerfsx_extended")
@@ -4266,7 +4267,7 @@ subroutine cla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,co
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_gerfsx_extended
 
 function cla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$cla_gerpvgrw")
@@ -4281,7 +4282,7 @@ function cla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$cla_g
   complex(blas77_f32) :: af(ldaf,*)
   real(blas77_f32) :: cla_gerpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_gerpvgrw
 
 subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$cla_heamv")
@@ -4299,7 +4300,7 @@ subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_heamv
 
 function cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$cla_hercond_c")
@@ -4320,7 +4321,7 @@ function cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_hercond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_hercond_c
 
 function cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$cla_hercond_x")
@@ -4340,7 +4341,7 @@ function cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_hercond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_hercond_x
 
 subroutine cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$cla_herfsx_extended")
@@ -4377,7 +4378,7 @@ subroutine cla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_herfsx_extended
 
 function cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$cla_herpvgrw")
@@ -4395,7 +4396,7 @@ function cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: cla_herpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_herpvgrw
 
 subroutine cla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$cla_lin_berr")
@@ -4409,7 +4410,7 @@ subroutine cla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$cl
   real(blas77_f32) :: ayb(n,nrhs)
   real(blas77_f32) :: berr(nrhs)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_lin_berr
 
 function cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$cla_porcond_c")
@@ -4429,7 +4430,7 @@ function cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, na
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_porcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_porcond_c
 
 function cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLAS77Interface$cla_porcond_x")
@@ -4448,7 +4449,7 @@ function cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLA
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_porcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_porcond_x
 
 subroutine cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$cla_porfsx_extended")
@@ -4484,7 +4485,7 @@ subroutine cla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ld
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_porfsx_extended
 
 function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interface$cla_porpvgrw")
@@ -4500,7 +4501,7 @@ function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: cla_porpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_porpvgrw
 
 subroutine cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$cla_syamv")
@@ -4518,7 +4519,7 @@ subroutine cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_syamv
 
 function cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$cla_syrcond_c")
@@ -4539,7 +4540,7 @@ function cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_syrcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_syrcond_c
 
 function cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$cla_syrcond_x")
@@ -4559,7 +4560,7 @@ function cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   real(blas77_f32) :: rwork(*)
   real(blas77_f32) :: cla_syrcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_syrcond_x
 
 subroutine cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$cla_syrfsx_extended")
@@ -4596,7 +4597,7 @@ subroutine cla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_syrfsx_extended
 
 function cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$cla_syrpvgrw")
@@ -4614,7 +4615,7 @@ function cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: cla_syrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cla_syrpvgrw
 
 subroutine cla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$cla_wwaddw")
@@ -4626,7 +4627,7 @@ subroutine cla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$cla_wwaddw")
   complex(blas77_f32) :: y(*)
   complex(blas77_f32) :: w(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cla_wwaddw
 
 subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77Interface$clabrd")
@@ -4647,7 +4648,7 @@ subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77In
   integer(blas77_int) :: ldy
   complex(blas77_f32) :: y(ldy,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clabrd
 
 subroutine clacgv(n,x,incx) bind(C, name="BLAS77Interface$clacgv")
@@ -4658,7 +4659,7 @@ subroutine clacgv(n,x,incx) bind(C, name="BLAS77Interface$clacgv")
   complex(blas77_f32) :: x(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacgv
 
 subroutine clacn2(n,v,x,est,kase,isave) bind(C, name="BLAS77Interface$clacn2")
@@ -4672,7 +4673,7 @@ subroutine clacn2(n,v,x,est,kase,isave) bind(C, name="BLAS77Interface$clacn2")
   integer(blas77_int) :: kase
   integer(blas77_int) :: isave(3)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacn2
 
 subroutine clacon(n,v,x,est,kase) bind(C, name="BLAS77Interface$clacon")
@@ -4685,7 +4686,7 @@ subroutine clacon(n,v,x,est,kase) bind(C, name="BLAS77Interface$clacon")
   real(blas77_f32) :: est
   integer(blas77_int) :: kase
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacon
 
 subroutine clacp2(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$clacp2")
@@ -4700,7 +4701,7 @@ subroutine clacp2(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$clacp2")
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacp2
 
 subroutine clacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$clacpy")
@@ -4715,7 +4716,7 @@ subroutine clacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$clacpy")
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacpy
 
 subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$clacrm")
@@ -4732,7 +4733,7 @@ subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$cla
   complex(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: rwork(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacrm
 
 subroutine clacrt(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$clacrt")
@@ -4747,7 +4748,7 @@ subroutine clacrt(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$clacrt")
   complex(blas77_f32) :: c
   complex(blas77_f32) :: s
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clacrt
 
 function cladiv(x,y) bind(C, name="BLAS77Interface$cladiv")
@@ -4758,7 +4759,7 @@ function cladiv(x,y) bind(C, name="BLAS77Interface$cladiv")
   complex(blas77_f32) :: y
   complex(blas77_f32) :: cladiv
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function cladiv
 
 subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) bind(C, name="BLAS77Interface$claed0")
@@ -4777,7 +4778,7 @@ subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claed0
 
 subroutine claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) bind(C, name="BLAS77Interface$claed7")
@@ -4807,7 +4808,7 @@ subroutine claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qpt
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claed7
 
 subroutine claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) bind(C, name="BLAS77Interface$claed8")
@@ -4836,7 +4837,7 @@ subroutine claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,ind
   real(blas77_f32) :: givnum(2,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claed8
 
 subroutine claein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) bind(C, name="BLAS77Interface$claein")
@@ -4857,7 +4858,7 @@ subroutine claein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) bind(C
   real(blas77_f32) :: smlnum
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claein
 
 subroutine claesy(a,b,c,rt1,rt2,evscal,cs1,sn1) bind(C, name="BLAS77Interface$claesy")
@@ -4873,7 +4874,7 @@ subroutine claesy(a,b,c,rt1,rt2,evscal,cs1,sn1) bind(C, name="BLAS77Interface$cl
   complex(blas77_f32) :: cs1
   complex(blas77_f32) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claesy
 
 subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$claev2")
@@ -4888,7 +4889,7 @@ subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$claev2")
   real(blas77_f32) :: cs1
   complex(blas77_f32) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claev2
 
 subroutine clag2z(m,n,sa,ldsa,a,lda,info) bind(C, name="BLAS77Interface$clag2z")
@@ -4903,7 +4904,7 @@ subroutine clag2z(m,n,sa,ldsa,a,lda,info) bind(C, name="BLAS77Interface$clag2z")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clag2z
 
 subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name="BLAS77Interface$clags2")
@@ -4924,7 +4925,7 @@ subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name=
   real(blas77_f32) :: csq
   complex(blas77_f32) :: snq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clags2
 
 subroutine clagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLAS77Interface$clagtm")
@@ -4944,7 +4945,7 @@ subroutine clagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLA
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clagtm
 
 subroutine clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$clahef_aa")
@@ -4962,7 +4963,7 @@ subroutine clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   complex(blas77_f32) :: h(ldh,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahef_aa
 
 subroutine clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clahef")
@@ -4980,7 +4981,7 @@ subroutine clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahef
 
 subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clahef_rk")
@@ -4999,7 +5000,7 @@ subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahef_rk
 
 subroutine clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clahef_rook")
@@ -5017,7 +5018,7 @@ subroutine clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahef_rook
 
 subroutine clahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) bind(C, name="BLAS77Interface$clahqr")
@@ -5038,7 +5039,7 @@ subroutine clahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) bind(C, na
   complex(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahqr
 
 subroutine clahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$clahr2")
@@ -5056,7 +5057,7 @@ subroutine clahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$cl
   integer(blas77_int) :: ldy
   complex(blas77_f32) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahr2
 
 subroutine clahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$clahrd")
@@ -5074,7 +5075,7 @@ subroutine clahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$cl
   integer(blas77_int) :: ldy
   complex(blas77_f32) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clahrd
 
 subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface$claic1")
@@ -5091,7 +5092,7 @@ subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface
   complex(blas77_f32) :: s
   complex(blas77_f32) :: c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claic1
 
 subroutine clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info) bind(C, name="BLAS77Interface$clals0")
@@ -5123,7 +5124,7 @@ subroutine clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clals0
 
 subroutine clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info) bind(C, name="BLAS77Interface$clalsa")
@@ -5157,7 +5158,7 @@ subroutine clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,pole
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clalsa
 
 subroutine clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) bind(C, name="BLAS77Interface$clalsd")
@@ -5179,7 +5180,7 @@ subroutine clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clalsd
 
 subroutine clamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$clamswlq")
@@ -5203,7 +5204,7 @@ subroutine clamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clamswlq
 
 subroutine clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$clamtsqr")
@@ -5227,7 +5228,7 @@ subroutine clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clamtsqr
 
 function clangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$clangb")
@@ -5243,7 +5244,7 @@ function clangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$clangb"
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clangb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clangb
 
 function clange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$clange")
@@ -5258,7 +5259,7 @@ function clange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$clange")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clange
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clange
 
 function clangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$clangt")
@@ -5272,7 +5273,7 @@ function clangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$clangt")
   complex(blas77_f32) :: du(*)
   real(blas77_f32) :: clangt
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clangt
 
 function clanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clanhb")
@@ -5288,7 +5289,7 @@ function clanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clanhb
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clanhb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanhb
 
 function clanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clanhe")
@@ -5303,7 +5304,7 @@ function clanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clanhe")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clanhe
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanhe
 
 function clanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$clanhf")
@@ -5318,7 +5319,7 @@ function clanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$clanhf"
   real(blas77_f32) :: work(0:*)
   real(blas77_f32) :: clanhf
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanhf
 
 function clanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clanhp")
@@ -5332,7 +5333,7 @@ function clanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clanhp")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clanhp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanhp
 
 function clanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$clanhs")
@@ -5346,7 +5347,7 @@ function clanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$clanhs")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clanhs
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanhs
 
 function clanht(norm,n,d,e) bind(C, name="BLAS77Interface$clanht")
@@ -5359,7 +5360,7 @@ function clanht(norm,n,d,e) bind(C, name="BLAS77Interface$clanht")
   complex(blas77_f32) :: e(*)
   real(blas77_f32) :: clanht
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clanht
 
 function clansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clansb")
@@ -5375,7 +5376,7 @@ function clansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clansb
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clansb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clansb
 
 function clansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clansp")
@@ -5389,7 +5390,7 @@ function clansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clansp")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clansp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clansp
 
 function clansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clansy")
@@ -5404,7 +5405,7 @@ function clansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clansy")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clansy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clansy
 
 function clantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clantb")
@@ -5421,7 +5422,7 @@ function clantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$c
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clantb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clantb
 
 function clantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$clantp")
@@ -5436,7 +5437,7 @@ function clantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$clantp")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clantp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clantp
 
 function clantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$clantr")
@@ -5453,7 +5454,7 @@ function clantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$cla
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: clantr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function clantr
 
 subroutine clapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$clapll")
@@ -5467,7 +5468,7 @@ subroutine clapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$clapll")
   integer(blas77_int) :: incy
   real(blas77_f32) :: ssmin
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clapll
 
 subroutine clapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$clapmr")
@@ -5481,7 +5482,7 @@ subroutine clapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$clapmr")
   complex(blas77_f32) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clapmr
 
 subroutine clapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$clapmt")
@@ -5495,7 +5496,7 @@ subroutine clapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$clapmt")
   complex(blas77_f32) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clapmt
 
 subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$claqgb")
@@ -5515,7 +5516,7 @@ subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqgb
 
 subroutine claqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$claqge")
@@ -5533,7 +5534,7 @@ subroutine claqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77In
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqge
 
 subroutine claqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqhb")
@@ -5550,7 +5551,7 @@ subroutine claqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqhb
 
 subroutine claqhe(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqhe")
@@ -5566,7 +5567,7 @@ subroutine claqhe(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqhe
 
 subroutine claqhp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqhp")
@@ -5581,7 +5582,7 @@ subroutine claqhp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$cl
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqhp
 
 subroutine claqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77Interface$claqp2")
@@ -5599,7 +5600,7 @@ subroutine claqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77In
   real(blas77_f32) :: vn2(*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqp2
 
 subroutine claqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) bind(C, name="BLAS77Interface$claqp2rk")
@@ -5627,7 +5628,7 @@ subroutine claqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,max
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqp2rk
 
 subroutine claqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) bind(C, name="BLAS77Interface$claqp3rk")
@@ -5659,7 +5660,7 @@ subroutine claqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqp3rk
 
 subroutine claqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, name="BLAS77Interface$claqps")
@@ -5681,7 +5682,7 @@ subroutine claqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, na
   integer(blas77_int) :: ldf
   complex(blas77_f32) :: f(ldf,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqps
 
 subroutine claqr0(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$claqr0")
@@ -5704,7 +5705,7 @@ subroutine claqr0(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr0
 
 subroutine claqr1(n,h,ldh,s1,s2,v) bind(C, name="BLAS77Interface$claqr1")
@@ -5718,7 +5719,7 @@ subroutine claqr1(n,h,ldh,s1,s2,v) bind(C, name="BLAS77Interface$claqr1")
   complex(blas77_f32) :: s2
   complex(blas77_f32) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr1
 
 subroutine claqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$claqr2")
@@ -5751,7 +5752,7 @@ subroutine claqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ld
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr2
 
 subroutine claqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$claqr3")
@@ -5784,7 +5785,7 @@ subroutine claqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ld
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr3
 
 subroutine claqr4(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$claqr4")
@@ -5807,7 +5808,7 @@ subroutine claqr4(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr4
 
 subroutine claqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,s,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) bind(C, name="BLAS77Interface$claqr5")
@@ -5839,7 +5840,7 @@ subroutine claqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,s,h,ldh,iloz,ihiz,z,ldz,
   integer(blas77_int) :: ldwh
   complex(blas77_f32) :: wh(ldwh,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqr5
 
 subroutine claqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqsb")
@@ -5856,7 +5857,7 @@ subroutine claqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqsb
 
 subroutine claqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqsp")
@@ -5871,7 +5872,7 @@ subroutine claqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$cl
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqsp
 
 subroutine claqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$claqsy")
@@ -5887,7 +5888,7 @@ subroutine claqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqsy
 
 subroutine claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) bind(C, name="BLAS77Interface$claqz0")
@@ -5916,7 +5917,7 @@ subroutine claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqz0
 
 subroutine claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) bind(C, name="BLAS77Interface$claqz1")
@@ -5942,7 +5943,7 @@ subroutine claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zs
   integer(blas77_int),intent(in) :: ldz
   complex(blas77_f32) :: z(ldz,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqz1
 
 subroutine claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info) bind(C, name="BLAS77Interface$claqz2")
@@ -5978,7 +5979,7 @@ subroutine claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alp
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqz2
 
 subroutine claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) bind(C, name="BLAS77Interface$claqz3")
@@ -6011,7 +6012,7 @@ subroutine claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,
   integer(blas77_int),intent(in) :: lwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claqz3
 
 subroutine clar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) bind(C, name="BLAS77Interface$clar1v")
@@ -6040,7 +6041,7 @@ subroutine clar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mi
   real(blas77_f32) :: rqcorr
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clar1v
 
 subroutine clar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$clar2v")
@@ -6056,7 +6057,7 @@ subroutine clar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$clar2v")
   complex(blas77_f32) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clar2v
 
 subroutine clarcm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$clarcm")
@@ -6073,7 +6074,7 @@ subroutine clarcm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$cla
   complex(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: rwork(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarcm
 
 subroutine clarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarf1f")
@@ -6090,7 +6091,7 @@ subroutine clarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarf1f
 
 subroutine clarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarf1l")
@@ -6107,7 +6108,7 @@ subroutine clarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarf1l
 
 subroutine clarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarf")
@@ -6124,7 +6125,7 @@ subroutine clarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarf
 
 subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$clarfb_gett")
@@ -6144,7 +6145,7 @@ subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="
   integer(blas77_int) :: ldwork
   complex(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfb_gett
 
 subroutine clarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$clarfb")
@@ -6167,7 +6168,7 @@ subroutine clarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) 
   integer(blas77_int) :: ldwork
   complex(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfb
 
 subroutine clarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$clarfg")
@@ -6180,7 +6181,7 @@ subroutine clarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$clarfg")
   integer(blas77_int) :: incx
   complex(blas77_f32) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfg
 
 subroutine clarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$clarfgp")
@@ -6193,7 +6194,7 @@ subroutine clarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$clarfgp")
   integer(blas77_int) :: incx
   complex(blas77_f32) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfgp
 
 subroutine clarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$clarft_lvl2")
@@ -6210,7 +6211,7 @@ subroutine clarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77In
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarft_lvl2
 
 subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$clarft")
@@ -6227,7 +6228,7 @@ subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarft
 
 subroutine clarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarfx")
@@ -6243,7 +6244,7 @@ subroutine clarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarf
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfx
 
 subroutine clarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarfy")
@@ -6259,7 +6260,7 @@ subroutine clarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$cl
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarfy
 
 subroutine clargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$clargv")
@@ -6274,7 +6275,7 @@ subroutine clargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$clargv")
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clargv
 
 subroutine clarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$clarnv")
@@ -6286,7 +6287,7 @@ subroutine clarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$clarnv")
   integer(blas77_int) :: n
   complex(blas77_f32) :: x(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarnv
 
 subroutine clarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) bind(C, name="BLAS77Interface$clarrv")
@@ -6319,7 +6320,7 @@ subroutine clarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarrv
 
 subroutine clarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$clarscl2")
@@ -6332,7 +6333,7 @@ subroutine clarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$clarscl2")
   integer(blas77_int) :: ldx
   complex(blas77_f32) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarscl2
 
 subroutine clartg(f,g,c,s,r) bind(C, name="BLAS77Interface$clartg")
@@ -6345,7 +6346,7 @@ subroutine clartg(f,g,c,s,r) bind(C, name="BLAS77Interface$clartg")
   complex(blas77_f32) :: s
   complex(blas77_f32) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clartg
 
 subroutine clartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$clartv")
@@ -6361,7 +6362,7 @@ subroutine clartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$clartv
   complex(blas77_f32) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clartv
 
 subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$clarz")
@@ -6379,7 +6380,7 @@ subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f32) :: c(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarz
 
 subroutine clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$clarzb")
@@ -6403,7 +6404,7 @@ subroutine clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork
   integer(blas77_int) :: ldwork
   complex(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarzb
 
 subroutine clarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$clarzt")
@@ -6420,7 +6421,7 @@ subroutine clarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   complex(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clarzt
 
 subroutine clascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$clascl2")
@@ -6433,7 +6434,7 @@ subroutine clascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$clascl2")
   integer(blas77_int) :: ldx
   complex(blas77_f32) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clascl2
 
 subroutine clascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Interface$clascl")
@@ -6451,7 +6452,7 @@ subroutine clascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Inter
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clascl
 
 subroutine claset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$claset")
@@ -6466,7 +6467,7 @@ subroutine claset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$clase
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claset
 
 subroutine clasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$clasr")
@@ -6483,7 +6484,7 @@ subroutine clasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clasr
 
 subroutine classq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$classq")
@@ -6496,7 +6497,7 @@ subroutine classq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$classq")
   real(blas77_f32) :: scale
   real(blas77_f32) :: sumsq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine classq
 
 subroutine claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$claswlq")
@@ -6515,7 +6516,7 @@ subroutine claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claswlq
 
 subroutine claswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$claswp")
@@ -6530,7 +6531,7 @@ subroutine claswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$claswp"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claswp
 
 subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$clasyf_aa")
@@ -6548,7 +6549,7 @@ subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   complex(blas77_f32) :: h(ldh,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clasyf_aa
 
 subroutine clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clasyf")
@@ -6566,7 +6567,7 @@ subroutine clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clasyf
 
 subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clasyf_rk")
@@ -6585,7 +6586,7 @@ subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clasyf_rk
 
 subroutine clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$clasyf_rook")
@@ -6603,7 +6604,7 @@ subroutine clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clasyf_rook
 
 subroutine clatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C, name="BLAS77Interface$clatbs")
@@ -6623,7 +6624,7 @@ subroutine clatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatbs
 
 subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77Interface$clatdf")
@@ -6640,7 +6641,7 @@ subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77I
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: jpiv(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatdf
 
 subroutine clatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="BLAS77Interface$clatps")
@@ -6658,7 +6659,7 @@ subroutine clatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatps
 
 subroutine clatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$clatrd")
@@ -6675,7 +6676,7 @@ subroutine clatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$cla
   integer(blas77_int) :: ldw
   complex(blas77_f32) :: w(ldw,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatrd
 
 subroutine clatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) bind(C, name="BLAS77Interface$clatrs3")
@@ -6698,7 +6699,7 @@ subroutine clatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatrs3
 
 subroutine clatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, name="BLAS77Interface$clatrs")
@@ -6717,7 +6718,7 @@ subroutine clatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, nam
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatrs
 
 subroutine clatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$clatrz")
@@ -6732,7 +6733,7 @@ subroutine clatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$clatrz")
   complex(blas77_f32) :: tau(*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatrz
 
 subroutine clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$clatsqr")
@@ -6751,7 +6752,7 @@ subroutine clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatsqr
 
 subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interface$clatzm")
@@ -6769,7 +6770,7 @@ subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interf
   complex(blas77_f32) :: c2(ldc,*)
   complex(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clatzm
 
 subroutine claunhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$claunhr_col_getrfnp2")
@@ -6783,7 +6784,7 @@ subroutine claunhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$
   complex(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claunhr_col_getrfnp2
 
 subroutine claunhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$claunhr_col_getrfnp")
@@ -6797,7 +6798,7 @@ subroutine claunhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine claunhr_col_getrfnp
 
 subroutine clauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$clauu2")
@@ -6810,7 +6811,7 @@ subroutine clauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$clauu2")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clauu2
 
 subroutine clauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$clauum")
@@ -6823,7 +6824,7 @@ subroutine clauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$clauum")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine clauum
 
 subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$cpbcon")
@@ -6841,7 +6842,7 @@ subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) bind(C, name="B
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbcon
 
 subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Interface$cpbequ")
@@ -6858,7 +6859,7 @@ subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbequ
 
 subroutine cpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cpbrfs")
@@ -6883,7 +6884,7 @@ subroutine cpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rw
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbrfs
 
 subroutine cpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbstf")
@@ -6897,7 +6898,7 @@ subroutine cpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbstf")
   complex(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbstf
 
 subroutine cpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$cpbsv")
@@ -6914,7 +6915,7 @@ subroutine cpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbsv
 
 subroutine cpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cpbsvx")
@@ -6943,7 +6944,7 @@ subroutine cpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcon
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbsvx
 
 subroutine cpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbtf2")
@@ -6957,7 +6958,7 @@ subroutine cpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbtf2")
   complex(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbtf2
 
 subroutine cpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbtrf")
@@ -6971,7 +6972,7 @@ subroutine cpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$cpbtrf")
   complex(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbtrf
 
 subroutine cpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$cpbtrs")
@@ -6988,7 +6989,7 @@ subroutine cpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpbtrs
 
 subroutine cpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$cpftrf")
@@ -7001,7 +7002,7 @@ subroutine cpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$cpftrf")
   complex(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpftrf
 
 subroutine cpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$cpftri")
@@ -7014,7 +7015,7 @@ subroutine cpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$cpftri")
   complex(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpftri
 
 subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface$cpftrs")
@@ -7030,7 +7031,7 @@ subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpftrs
 
 subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$cpocon")
@@ -7047,7 +7048,7 @@ subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpocon
 
 subroutine cpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$cpoequ")
@@ -7062,7 +7063,7 @@ subroutine cpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$cpoeq
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpoequ
 
 subroutine cpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$cpoequb")
@@ -7077,7 +7078,7 @@ subroutine cpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$cpoe
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpoequb
 
 subroutine cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cporfs")
@@ -7101,7 +7102,7 @@ subroutine cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,inf
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cporfs
 
 subroutine cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cporfsx")
@@ -7132,7 +7133,7 @@ subroutine cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_er
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cporfsx
 
 subroutine cposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$cposv")
@@ -7148,7 +7149,7 @@ subroutine cposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$cpo
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cposv
 
 subroutine cposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cposvx")
@@ -7176,7 +7177,7 @@ subroutine cposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cposvx
 
 subroutine cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$cposvxx")
@@ -7209,7 +7210,7 @@ subroutine cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvg
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cposvxx
 
 subroutine cpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotf2")
@@ -7222,7 +7223,7 @@ subroutine cpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotf2")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpotf2
 
 subroutine cpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotrf2")
@@ -7235,7 +7236,7 @@ subroutine cpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotrf2")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpotrf2
 
 subroutine cpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotrf")
@@ -7248,7 +7249,7 @@ subroutine cpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotrf")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpotrf
 
 subroutine cpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotri")
@@ -7261,7 +7262,7 @@ subroutine cpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$cpotri")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpotri
 
 subroutine cpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$cpotrs")
@@ -7277,7 +7278,7 @@ subroutine cpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$cp
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpotrs
 
 subroutine cppcon(uplo,n,ap,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$cppcon")
@@ -7293,7 +7294,7 @@ subroutine cppcon(uplo,n,ap,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cppcon
 
 subroutine cppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$cppequ")
@@ -7308,7 +7309,7 @@ subroutine cppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$cpp
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cppequ
 
 subroutine cpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cpprfs")
@@ -7330,7 +7331,7 @@ subroutine cpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpprfs
 
 subroutine cppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$cppsv")
@@ -7345,7 +7346,7 @@ subroutine cppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$cppsv"
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cppsv
 
 subroutine cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cppsvx")
@@ -7371,7 +7372,7 @@ subroutine cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,wo
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cppsvx
 
 subroutine cpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$cpptrf")
@@ -7383,7 +7384,7 @@ subroutine cpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$cpptrf")
   complex(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpptrf
 
 subroutine cpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$cpptri")
@@ -7395,7 +7396,7 @@ subroutine cpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$cpptri")
   complex(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpptri
 
 subroutine cpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$cpptrs")
@@ -7410,7 +7411,7 @@ subroutine cpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$cpptr
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpptrs
 
 subroutine cpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$cpstf2")
@@ -7427,7 +7428,7 @@ subroutine cpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpstf2
 
 subroutine cpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$cpstrf")
@@ -7444,7 +7445,7 @@ subroutine cpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpstrf
 
 subroutine cptcon(n,d,e,anorm,rcond,rwork,info) bind(C, name="BLAS77Interface$cptcon")
@@ -7459,7 +7460,7 @@ subroutine cptcon(n,d,e,anorm,rcond,rwork,info) bind(C, name="BLAS77Interface$cp
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cptcon
 
 subroutine cpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$cpteqr")
@@ -7475,7 +7476,7 @@ subroutine cpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$cpt
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpteqr
 
 subroutine cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cptrfs")
@@ -7499,7 +7500,7 @@ subroutine cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) b
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cptrfs
 
 subroutine cptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$cptsv")
@@ -7514,7 +7515,7 @@ subroutine cptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$cptsv")
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cptsv
 
 subroutine cptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cptsvx")
@@ -7539,7 +7540,7 @@ subroutine cptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,i
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cptsvx
 
 subroutine cpttrf(n,d,e,info) bind(C, name="BLAS77Interface$cpttrf")
@@ -7551,7 +7552,7 @@ subroutine cpttrf(n,d,e,info) bind(C, name="BLAS77Interface$cpttrf")
   complex(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpttrf
 
 subroutine cpttrs(uplo,n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$cpttrs")
@@ -7567,7 +7568,7 @@ subroutine cpttrs(uplo,n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$cptt
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cpttrs
 
 subroutine cptts2(iuplo,n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$cptts2")
@@ -7582,7 +7583,7 @@ subroutine cptts2(iuplo,n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$cptts2")
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cptts2
 
 subroutine crot(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$crot")
@@ -7597,7 +7598,7 @@ subroutine crot(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$crot")
   real(blas77_f32) :: c
   complex(blas77_f32) :: s
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine crot
 
 subroutine crscl(n,a,x,incx) bind(C, name="BLAS77Interface$crscl")
@@ -7609,7 +7610,7 @@ subroutine crscl(n,a,x,incx) bind(C, name="BLAS77Interface$crscl")
   complex(blas77_f32) :: x(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine crscl
 
 subroutine cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$cspcon")
@@ -7625,7 +7626,7 @@ subroutine cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cspcon
 
 subroutine cspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$cspmv")
@@ -7642,7 +7643,7 @@ subroutine cspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) bind(C, name="BLAS77Interfa
   complex(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cspmv
 
 subroutine cspr(uplo,n,alpha,x,incx,ap) bind(C, name="BLAS77Interface$cspr")
@@ -7656,7 +7657,7 @@ subroutine cspr(uplo,n,alpha,x,incx,ap) bind(C, name="BLAS77Interface$cspr")
   integer(blas77_int) :: incx
   complex(blas77_f32) :: ap(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cspr
 
 subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$csprfs")
@@ -7679,7 +7680,7 @@ subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csprfs
 
 subroutine cspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$cspsv")
@@ -7695,7 +7696,7 @@ subroutine cspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cspsv
 
 subroutine cspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$cspsvx")
@@ -7720,7 +7721,7 @@ subroutine cspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cspsvx
 
 subroutine csptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$csptrf")
@@ -7733,7 +7734,7 @@ subroutine csptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$csptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csptrf
 
 subroutine csptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$csptri")
@@ -7747,7 +7748,7 @@ subroutine csptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$csptri
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csptri
 
 subroutine csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$csptrs")
@@ -7763,7 +7764,7 @@ subroutine csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csptrs
 
 subroutine csrscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$csrscl")
@@ -7775,7 +7776,7 @@ subroutine csrscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$csrscl")
   complex(blas77_f32) :: sx(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csrscl
 
 subroutine cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cstedc")
@@ -7796,7 +7797,7 @@ subroutine cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) b
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cstedc
 
 subroutine cstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cstegr")
@@ -7824,7 +7825,7 @@ subroutine cstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cstegr
 
 subroutine cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$cstein")
@@ -7845,7 +7846,7 @@ subroutine cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, n
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cstein
 
 subroutine cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$cstemr")
@@ -7874,7 +7875,7 @@ subroutine cstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cstemr
 
 subroutine csteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$csteqr")
@@ -7890,7 +7891,7 @@ subroutine csteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$cst
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csteqr
 
 subroutine csycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$csycon_3")
@@ -7908,7 +7909,7 @@ subroutine csycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLA
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csycon_3
 
 subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$csycon")
@@ -7925,7 +7926,7 @@ subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csycon
 
 subroutine csycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$csycon_rook")
@@ -7942,7 +7943,7 @@ subroutine csycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BL
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csycon_rook
 
 subroutine csyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$csyconv")
@@ -7958,7 +7959,7 @@ subroutine csyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyconv
 
 subroutine csyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$csyconvf")
@@ -7974,7 +7975,7 @@ subroutine csyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyconvf
 
 subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$csyconvf_rook")
@@ -7990,7 +7991,7 @@ subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyconvf_rook
 
 subroutine csyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$csyequb")
@@ -8007,7 +8008,7 @@ subroutine csyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyequb
 
 subroutine csymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$csymv")
@@ -8025,7 +8026,7 @@ subroutine csymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csymv
 
 subroutine csyr(uplo,n,alpha,x,incx,a,lda) bind(C, name="BLAS77Interface$csyr")
@@ -8040,7 +8041,7 @@ subroutine csyr(uplo,n,alpha,x,incx,a,lda) bind(C, name="BLAS77Interface$csyr")
   integer(blas77_int) :: lda
   complex(blas77_f32) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyr
 
 subroutine csyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$csyrfs")
@@ -8065,7 +8066,7 @@ subroutine csyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwor
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyrfs
 
 subroutine csyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$csyrfsx")
@@ -8097,7 +8098,7 @@ subroutine csyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyrfsx
 
 subroutine csysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csysv_aa_2stage")
@@ -8119,7 +8120,7 @@ subroutine csysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysv_aa_2stage
 
 subroutine csysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csysv_aa")
@@ -8138,7 +8139,7 @@ subroutine csysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysv_aa
 
 subroutine csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csysv")
@@ -8157,7 +8158,7 @@ subroutine csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysv
 
 subroutine csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csysv_rk")
@@ -8177,7 +8178,7 @@ subroutine csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysv_rk
 
 subroutine csysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csysv_rook")
@@ -8196,7 +8197,7 @@ subroutine csysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysv_rook
 
 subroutine csysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$csysvx")
@@ -8224,7 +8225,7 @@ subroutine csysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysvx
 
 subroutine csysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$csysvxx")
@@ -8258,7 +8259,7 @@ subroutine csysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csysvxx
 
 subroutine csyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$csyswapr")
@@ -8272,7 +8273,7 @@ subroutine csyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$csyswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csyswapr
 
 subroutine csytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$csytf2")
@@ -8286,7 +8287,7 @@ subroutine csytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$csytf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytf2
 
 subroutine csytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$csytf2_rk")
@@ -8301,7 +8302,7 @@ subroutine csytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$csy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytf2_rk
 
 subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$csytf2_rook")
@@ -8315,7 +8316,7 @@ subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$csy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytf2_rook
 
 subroutine csytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$csytrf_aa_2stage")
@@ -8334,7 +8335,7 @@ subroutine csytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrf_aa_2stage
 
 subroutine csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytrf_aa")
@@ -8350,7 +8351,7 @@ subroutine csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrf_aa
 
 subroutine csytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytrf")
@@ -8366,7 +8367,7 @@ subroutine csytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrf
 
 subroutine csytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytrf_rk")
@@ -8383,7 +8384,7 @@ subroutine csytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrf_rk
 
 subroutine csytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytrf_rook")
@@ -8399,7 +8400,7 @@ subroutine csytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrf_rook
 
 subroutine csytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytri2")
@@ -8415,7 +8416,7 @@ subroutine csytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri2
 
 subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$csytri2x")
@@ -8431,7 +8432,7 @@ subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri2x
 
 subroutine csytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$csytri_3")
@@ -8448,7 +8449,7 @@ subroutine csytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri_3
 
 subroutine csytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$csytri_3x")
@@ -8465,7 +8466,7 @@ subroutine csytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   complex(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri_3x
 
 subroutine csytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$csytri")
@@ -8480,7 +8481,7 @@ subroutine csytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$csy
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri
 
 subroutine csytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$csytri_rook")
@@ -8495,7 +8496,7 @@ subroutine csytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytri_rook
 
 subroutine csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$csytrs2")
@@ -8513,7 +8514,7 @@ subroutine csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs2
 
 subroutine csytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$csytrs_3")
@@ -8531,7 +8532,7 @@ subroutine csytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs_3
 
 subroutine csytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$csytrs_aa_2stage")
@@ -8551,7 +8552,7 @@ subroutine csytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs_aa_2stage
 
 subroutine csytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$csytrs_aa")
@@ -8570,7 +8571,7 @@ subroutine csytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs_aa
 
 subroutine csytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$csytrs")
@@ -8587,7 +8588,7 @@ subroutine csytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs
 
 subroutine csytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$csytrs_rook")
@@ -8604,7 +8605,7 @@ subroutine csytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine csytrs_rook
 
 subroutine ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ctbcon")
@@ -8623,7 +8624,7 @@ subroutine ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) bind(C, nam
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctbcon
 
 subroutine ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ctbrfs")
@@ -8648,7 +8649,7 @@ subroutine ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,r
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctbrfs
 
 subroutine ctbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$ctbtrs")
@@ -8667,7 +8668,7 @@ subroutine ctbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BL
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctbtrs
 
 subroutine ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BLAS77Interface$ctfsm")
@@ -8686,7 +8687,7 @@ subroutine ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BL
   integer(blas77_int) :: ldb
   complex(blas77_f32) :: b(0:ldb-1,0:*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctfsm
 
 subroutine ctftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$ctftri")
@@ -8700,7 +8701,7 @@ subroutine ctftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$ctftr
   complex(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctftri
 
 subroutine ctfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$ctfttp")
@@ -8714,7 +8715,7 @@ subroutine ctfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$ctftt
   complex(blas77_f32) :: ap(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctfttp
 
 subroutine ctfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$ctfttr")
@@ -8729,7 +8730,7 @@ subroutine ctfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$ct
   complex(blas77_f32) :: a(0:lda-1,0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctfttr
 
 subroutine ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) bind(C, name="BLAS77Interface$ctgevc")
@@ -8754,7 +8755,7 @@ subroutine ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwo
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgevc
 
 subroutine ctgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) bind(C, name="BLAS77Interface$ctgex2")
@@ -8775,7 +8776,7 @@ subroutine ctgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) bind(C, name="B
   integer(blas77_int) :: j1
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgex2
 
 subroutine ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info) bind(C, name="BLAS77Interface$ctgexc")
@@ -8797,7 +8798,7 @@ subroutine ctgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info) bind(C, 
   integer(blas77_int) :: ilst
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgexc
 
 subroutine ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ctgsen")
@@ -8829,7 +8830,7 @@ subroutine ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgsen
 
 subroutine ctgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) bind(C, name="BLAS77Interface$ctgsja")
@@ -8862,7 +8863,7 @@ subroutine ctgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ld
   integer(blas77_int) :: ncycle
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgsja
 
 subroutine ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) bind(C, name="BLAS77Interface$ctgsna")
@@ -8890,7 +8891,7 @@ subroutine ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgsna
 
 subroutine ctgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) bind(C, name="BLAS77Interface$ctgsy2")
@@ -8918,7 +8919,7 @@ subroutine ctgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum
   real(blas77_f32) :: rdscal
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgsy2
 
 subroutine ctgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) bind(C, name="BLAS77Interface$ctgsyl")
@@ -8948,7 +8949,7 @@ subroutine ctgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,w
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctgsyl
 
 subroutine ctpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ctpcon")
@@ -8965,7 +8966,7 @@ subroutine ctpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info) bind(C, name="BLAS7
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpcon
 
 subroutine ctplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$ctplqt2")
@@ -8983,7 +8984,7 @@ subroutine ctplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctplqt2
 
 subroutine ctplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$ctplqt")
@@ -9003,7 +9004,7 @@ subroutine ctplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctplqt
 
 subroutine ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$ctpmlqt")
@@ -9028,7 +9029,7 @@ subroutine ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpmlqt
 
 subroutine ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$ctpmqrt")
@@ -9053,7 +9054,7 @@ subroutine ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpmqrt
 
 subroutine ctpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$ctpqrt2")
@@ -9071,7 +9072,7 @@ subroutine ctpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpqrt2
 
 subroutine ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$ctpqrt")
@@ -9091,7 +9092,7 @@ subroutine ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpqrt
 
 subroutine ctprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$ctprfb")
@@ -9117,7 +9118,7 @@ subroutine ctprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,
   integer(blas77_int) :: ldwork
   complex(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctprfb
 
 subroutine ctprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ctprfs")
@@ -9140,7 +9141,7 @@ subroutine ctprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,inf
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctprfs
 
 subroutine ctptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$ctptri")
@@ -9153,7 +9154,7 @@ subroutine ctptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$ctptri")
   complex(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctptri
 
 subroutine ctptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$ctptrs")
@@ -9170,7 +9171,7 @@ subroutine ctptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Inte
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctptrs
 
 subroutine ctpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$ctpttf")
@@ -9184,7 +9185,7 @@ subroutine ctpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$ctptt
   complex(blas77_f32) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpttf
 
 subroutine ctpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$ctpttr")
@@ -9198,7 +9199,7 @@ subroutine ctpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$ctpttr")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctpttr
 
 subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ctrcon")
@@ -9216,7 +9217,7 @@ subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) bind(C, name="BL
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrcon
 
 subroutine ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$ctrevc3")
@@ -9241,7 +9242,7 @@ subroutine ctrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rw
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrevc3
 
 subroutine ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) bind(C, name="BLAS77Interface$ctrevc")
@@ -9264,7 +9265,7 @@ subroutine ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,inf
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrevc
 
 subroutine ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) bind(C, name="BLAS77Interface$ctrexc")
@@ -9281,7 +9282,7 @@ subroutine ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: ilst
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrexc
 
 subroutine ctrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ctrrfs")
@@ -9305,7 +9306,7 @@ subroutine ctrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrrfs
 
 subroutine ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) bind(C, name="BLAS77Interface$ctrsen")
@@ -9328,7 +9329,7 @@ subroutine ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrsen
 
 subroutine ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) bind(C, name="BLAS77Interface$ctrsna")
@@ -9354,7 +9355,7 @@ subroutine ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
   real(blas77_f32) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrsna
 
 subroutine ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info) bind(C, name="BLAS77Interface$ctrsyl3")
@@ -9377,7 +9378,7 @@ subroutine ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,in
   real(blas77_f32) :: swork(ldswork,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrsyl3
 
 subroutine ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, name="BLAS77Interface$ctrsyl")
@@ -9398,7 +9399,7 @@ subroutine ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, nam
   real(blas77_f32) :: scale
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrsyl
 
 subroutine ctrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ctrti2")
@@ -9412,7 +9413,7 @@ subroutine ctrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ctrti2")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrti2
 
 subroutine ctrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ctrtri")
@@ -9426,7 +9427,7 @@ subroutine ctrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ctrtri")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrtri
 
 subroutine ctrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$ctrtrs")
@@ -9444,7 +9445,7 @@ subroutine ctrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77I
   complex(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrtrs
 
 subroutine ctrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$ctrttf")
@@ -9459,7 +9460,7 @@ subroutine ctrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$ct
   complex(blas77_f32) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrttf
 
 subroutine ctrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$ctrttp")
@@ -9473,7 +9474,7 @@ subroutine ctrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$ctrttp")
   complex(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctrttp
 
 subroutine ctzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$ctzrqf")
@@ -9487,7 +9488,7 @@ subroutine ctzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$ctzrqf")
   complex(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctzrqf
 
 subroutine ctzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$ctzrzf")
@@ -9503,7 +9504,7 @@ subroutine ctzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$c
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ctzrzf
 
 subroutine cunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb1")
@@ -9526,7 +9527,7 @@ subroutine cunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb1
 
 subroutine cunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb2")
@@ -9549,7 +9550,7 @@ subroutine cunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb2
 
 subroutine cunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb3")
@@ -9572,7 +9573,7 @@ subroutine cunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb3
 
 subroutine cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb4")
@@ -9596,7 +9597,7 @@ subroutine cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb4
 
 subroutine cunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb5")
@@ -9618,7 +9619,7 @@ subroutine cunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb5
 
 subroutine cunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb6")
@@ -9640,7 +9641,7 @@ subroutine cunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb6
 
 subroutine cunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info) bind(C, name="BLAS77Interface$cunbdb")
@@ -9670,7 +9671,7 @@ subroutine cunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,thet
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunbdb
 
 subroutine cuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$cuncsd2by1")
@@ -9701,7 +9702,7 @@ subroutine cuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cuncsd2by1
 
 subroutine cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$cuncsd")
@@ -9741,7 +9742,7 @@ subroutine cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cuncsd
 
 subroutine cung2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cung2l")
@@ -9757,7 +9758,7 @@ subroutine cung2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cung2
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cung2l
 
 subroutine cung2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cung2r")
@@ -9773,7 +9774,7 @@ subroutine cung2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cung2
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cung2r
 
 subroutine cungbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cungbr")
@@ -9791,7 +9792,7 @@ subroutine cungbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungbr
 
 subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cunghr")
@@ -9808,7 +9809,7 @@ subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunghr
 
 subroutine cungl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cungl2")
@@ -9824,7 +9825,7 @@ subroutine cungl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cungl
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungl2
 
 subroutine cunglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cunglq")
@@ -9841,7 +9842,7 @@ subroutine cunglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunglq
 
 subroutine cungql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cungql")
@@ -9858,7 +9859,7 @@ subroutine cungql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungql
 
 subroutine cungqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cungqr")
@@ -9875,7 +9876,7 @@ subroutine cungqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungqr
 
 subroutine cungr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cungr2")
@@ -9891,7 +9892,7 @@ subroutine cungr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$cungr
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungr2
 
 subroutine cungrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cungrq")
@@ -9908,7 +9909,7 @@ subroutine cungrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungrq
 
 subroutine cungtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$cungtr")
@@ -9924,7 +9925,7 @@ subroutine cungtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungtr
 
 subroutine cungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$cungtsqr")
@@ -9943,7 +9944,7 @@ subroutine cungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungtsqr
 
 subroutine cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$cungtsqr_row")
@@ -9962,7 +9963,7 @@ subroutine cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cungtsqr_row
 
 subroutine cunhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$cunhr_col")
@@ -9979,7 +9980,7 @@ subroutine cunhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$cu
   complex(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunhr_col
 
 subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunm22")
@@ -10000,7 +10001,7 @@ subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunm22
 
 subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cunm2l")
@@ -10020,7 +10021,7 @@ subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunm2l
 
 subroutine cunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cunm2r")
@@ -10040,7 +10041,7 @@ subroutine cunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunm2r
 
 subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmbr")
@@ -10062,7 +10063,7 @@ subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmbr
 
 subroutine cunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmhr")
@@ -10084,7 +10085,7 @@ subroutine cunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmhr
 
 subroutine cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cunml2")
@@ -10104,7 +10105,7 @@ subroutine cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunml2
 
 subroutine cunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmlq")
@@ -10125,7 +10126,7 @@ subroutine cunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmlq
 
 subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmql")
@@ -10146,7 +10147,7 @@ subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmql
 
 subroutine cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmqr")
@@ -10167,7 +10168,7 @@ subroutine cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmqr
 
 subroutine cunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cunmr2")
@@ -10187,7 +10188,7 @@ subroutine cunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmr2
 
 subroutine cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cunmr3")
@@ -10208,7 +10209,7 @@ subroutine cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BL
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmr3
 
 subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmrq")
@@ -10229,7 +10230,7 @@ subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmrq
 
 subroutine cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmrz")
@@ -10251,7 +10252,7 @@ subroutine cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, na
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmrz
 
 subroutine cunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$cunmtr")
@@ -10272,7 +10273,7 @@ subroutine cunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, n
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cunmtr
 
 subroutine cupgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$cupgtr")
@@ -10288,7 +10289,7 @@ subroutine cupgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$c
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cupgtr
 
 subroutine cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$cupmtr")
@@ -10307,7 +10308,7 @@ subroutine cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine cupmtr
 
 subroutine dbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info) bind(C, name="BLAS77Interface$dbbcsd")
@@ -10344,7 +10345,7 @@ subroutine dbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dbbcsd
 
 subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) bind(C, name="BLAS77Interface$dbdsdc")
@@ -10366,7 +10367,7 @@ subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dbdsdc
 
 subroutine dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C, name="BLAS77Interface$dbdsqr")
@@ -10389,7 +10390,7 @@ subroutine dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C,
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dbdsqr
 
 subroutine dbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) bind(C, name="BLAS77Interface$dbdsvdx")
@@ -10414,7 +10415,7 @@ subroutine dbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dbdsvdx
 
 subroutine ddisna(job,m,n,d,sep,info) bind(C, name="BLAS77Interface$ddisna")
@@ -10428,7 +10429,7 @@ subroutine ddisna(job,m,n,d,sep,info) bind(C, name="BLAS77Interface$ddisna")
   real(blas77_f64) :: sep(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ddisna
 
 subroutine dgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info) bind(C, name="BLAS77Interface$dgbbrd")
@@ -10454,7 +10455,7 @@ subroutine dgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info) 
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbbrd
 
 subroutine dgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dgbcon")
@@ -10474,7 +10475,7 @@ subroutine dgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) bind(C,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbcon
 
 subroutine dgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$dgbequ")
@@ -10494,7 +10495,7 @@ subroutine dgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="B
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbequ
 
 subroutine dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$dgbequb")
@@ -10514,7 +10515,7 @@ subroutine dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbequb
 
 subroutine dgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgbrfs")
@@ -10541,7 +10542,7 @@ subroutine dgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,ber
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbrfs
 
 subroutine dgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dgbrfsx")
@@ -10576,7 +10577,7 @@ subroutine dgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbrfsx
 
 subroutine dgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dgbsv")
@@ -10594,7 +10595,7 @@ subroutine dgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbsv
 
 subroutine dgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgbsvx")
@@ -10626,7 +10627,7 @@ subroutine dgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbsvx
 
 subroutine dgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dgbsvxx")
@@ -10663,7 +10664,7 @@ subroutine dgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ld
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbsvxx
 
 subroutine dgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$dgbtf2")
@@ -10679,7 +10680,7 @@ subroutine dgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$dgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbtf2
 
 subroutine dgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$dgbtrf")
@@ -10695,7 +10696,7 @@ subroutine dgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$dgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbtrf
 
 subroutine dgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dgbtrs")
@@ -10714,7 +10715,7 @@ subroutine dgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgbtrs
 
 subroutine dgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Interface$dgebak")
@@ -10732,7 +10733,7 @@ subroutine dgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgebak
 
 subroutine dgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$dgebal")
@@ -10748,7 +10749,7 @@ subroutine dgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$
   real(blas77_f64) :: scale(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgebal
 
 subroutine dgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interface$dgebd2")
@@ -10766,7 +10767,7 @@ subroutine dgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgebd2
 
 subroutine dgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77Interface$dgebrd")
@@ -10785,7 +10786,7 @@ subroutine dgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgebrd
 
 subroutine dgecon(norm,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dgecon")
@@ -10802,7 +10803,7 @@ subroutine dgecon(norm,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgecon
 
 subroutine dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dgedmd")
@@ -10840,7 +10841,7 @@ subroutine dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,ime
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgedmd
 
 subroutine dgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dgedmdq")
@@ -10882,7 +10883,7 @@ subroutine dgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nr
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgedmdq
 
 subroutine dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$dgeequ")
@@ -10900,7 +10901,7 @@ subroutine dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeequ
 
 subroutine dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$dgeequb")
@@ -10918,7 +10919,7 @@ subroutine dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77In
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeequb
 
 
@@ -10942,7 +10943,7 @@ subroutine dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeev
 
 subroutine dgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgeevx")
@@ -10973,7 +10974,7 @@ subroutine dgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeevx
 
 subroutine dgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info) bind(C, name="BLAS77Interface$dgegs")
@@ -10998,7 +10999,7 @@ subroutine dgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ld
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgegs
 
 subroutine dgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) bind(C, name="BLAS77Interface$dgegv")
@@ -11023,7 +11024,7 @@ subroutine dgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,wo
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgegv
 
 subroutine dgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgehd2")
@@ -11039,7 +11040,7 @@ subroutine dgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgehd2
 
 subroutine dgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgehrd")
@@ -11056,7 +11057,7 @@ subroutine dgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgehrd
 
 subroutine dgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgejsv")
@@ -11083,7 +11084,7 @@ subroutine dgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgejsv
 
 subroutine dgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgelq2")
@@ -11098,7 +11099,7 @@ subroutine dgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgelq2"
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelq2
 
 subroutine dgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$dgelq")
@@ -11115,7 +11116,7 @@ subroutine dgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelq
 
 subroutine dgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgelqf")
@@ -11131,7 +11132,7 @@ subroutine dgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$d
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelqf
 
 subroutine dgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dgelqs")
@@ -11150,7 +11151,7 @@ subroutine dgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelqs
 
 subroutine dgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgelqt3")
@@ -11165,7 +11166,7 @@ subroutine dgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgelqt3")
   real(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelqt3
 
 subroutine dgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$dgelqt")
@@ -11182,7 +11183,7 @@ subroutine dgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$dg
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelqt
 
 subroutine dgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dgels")
@@ -11201,7 +11202,7 @@ subroutine dgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgels
 
 subroutine dgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgelsd")
@@ -11223,7 +11224,7 @@ subroutine dgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info) bind(
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelsd
 
 subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) bind(C, name="BLAS77Interface$dgelss")
@@ -11244,7 +11245,7 @@ subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelss
 
 subroutine dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dgelst")
@@ -11263,7 +11264,7 @@ subroutine dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelst
 
 subroutine dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) bind(C, name="BLAS77Interface$dgelsx")
@@ -11283,7 +11284,7 @@ subroutine dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) bind(C, name="
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelsx
 
 subroutine dgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) bind(C, name="BLAS77Interface$dgelsy")
@@ -11304,7 +11305,7 @@ subroutine dgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgelsy
 
 subroutine dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dgemlq")
@@ -11326,7 +11327,7 @@ subroutine dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgemlq
 
 subroutine dgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$dgemlqt")
@@ -11348,7 +11349,7 @@ subroutine dgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgemlqt
 
 subroutine dgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dgemqr")
@@ -11370,7 +11371,7 @@ subroutine dgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgemqr
 
 subroutine dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$dgemqrt")
@@ -11392,7 +11393,7 @@ subroutine dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgemqrt
 
 subroutine dgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeql2")
@@ -11407,7 +11408,7 @@ subroutine dgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeql2"
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeql2
 
 subroutine dgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgeqlf")
@@ -11423,7 +11424,7 @@ subroutine dgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$d
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqlf
 
 subroutine dgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgeqp3")
@@ -11440,7 +11441,7 @@ subroutine dgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqp3
 
 subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgeqp3rk")
@@ -11465,7 +11466,7 @@ subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,j
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqp3rk
 
 subroutine dgeqpf(m,n,a,lda,jpvt,tau,work,info) bind(C, name="BLAS77Interface$dgeqpf")
@@ -11481,7 +11482,7 @@ subroutine dgeqpf(m,n,a,lda,jpvt,tau,work,info) bind(C, name="BLAS77Interface$dg
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqpf
 
 subroutine dgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeqr2")
@@ -11496,7 +11497,7 @@ subroutine dgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeqr2"
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqr2
 
 subroutine dgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeqr2p")
@@ -11511,7 +11512,7 @@ subroutine dgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgeqr2
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqr2p
 
 subroutine dgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$dgeqr")
@@ -11528,7 +11529,7 @@ subroutine dgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqr
 
 subroutine dgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgeqrf")
@@ -11544,7 +11545,7 @@ subroutine dgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$d
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrf
 
 subroutine dgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgeqrfp")
@@ -11560,7 +11561,7 @@ subroutine dgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrfp
 
 subroutine dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dgeqrs")
@@ -11579,7 +11580,7 @@ subroutine dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrs
 
 subroutine dgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgeqrt2")
@@ -11594,7 +11595,7 @@ subroutine dgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgeqrt2")
   real(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrt2
 
 subroutine dgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgeqrt3")
@@ -11609,7 +11610,7 @@ subroutine dgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$dgeqrt3")
   real(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrt3
 
 subroutine dgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$dgeqrt")
@@ -11626,7 +11627,7 @@ subroutine dgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$dg
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgeqrt
 
 subroutine dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgerfs")
@@ -11651,7 +11652,7 @@ subroutine dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgerfs
 
 subroutine dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dgerfsx")
@@ -11684,7 +11685,7 @@ subroutine dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgerfsx
 
 subroutine dgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgerq2")
@@ -11699,7 +11700,7 @@ subroutine dgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dgerq2"
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgerq2
 
 subroutine dgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dgerqf")
@@ -11715,7 +11716,7 @@ subroutine dgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$d
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgerqf
 
 subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$dgesc2")
@@ -11730,7 +11731,7 @@ subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$dge
   integer(blas77_int) :: jpiv(*)
   real(blas77_f64) :: scale
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesc2
 
 subroutine dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgesdd")
@@ -11752,7 +11753,7 @@ subroutine dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, 
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesdd
 
 subroutine dgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dgesv")
@@ -11768,7 +11769,7 @@ subroutine dgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dge
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesv
 
 subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) bind(C, name="BLAS77Interface$dgesvd")
@@ -11790,7 +11791,7 @@ subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvd
 
 subroutine dgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$dgesvdq")
@@ -11820,7 +11821,7 @@ subroutine dgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwor
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvdq
 
 subroutine dgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dgesvdx")
@@ -11849,7 +11850,7 @@ subroutine dgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvdx
 
 subroutine dgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) bind(C, name="BLAS77Interface$dgesvj")
@@ -11871,7 +11872,7 @@ subroutine dgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) bind(C,
   real(blas77_f64) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvj
 
 subroutine dgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgesvx")
@@ -11901,7 +11902,7 @@ subroutine dgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rco
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvx
 
 subroutine dgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dgesvxx")
@@ -11936,7 +11937,7 @@ subroutine dgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rc
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgesvxx
 
 subroutine dgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$dgetc2")
@@ -11950,7 +11951,7 @@ subroutine dgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$dgetc2")
   integer(blas77_int) :: jpiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetc2
 
 subroutine dgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetf2")
@@ -11964,7 +11965,7 @@ subroutine dgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetf2
 
 subroutine dgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetrf2")
@@ -11978,7 +11979,7 @@ subroutine dgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetrf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetrf2
 
 subroutine dgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetrf")
@@ -11992,7 +11993,7 @@ subroutine dgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dgetrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetrf
 
 subroutine dgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dgetri")
@@ -12007,7 +12008,7 @@ subroutine dgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dg
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetri
 
 subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dgetrs")
@@ -12024,7 +12025,7 @@ subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interf
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetrs
 
 subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dgetsls")
@@ -12043,7 +12044,7 @@ subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetsls
 
 subroutine dgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$dgetsqrhrt")
@@ -12063,7 +12064,7 @@ subroutine dgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgetsqrhrt
 
 subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="BLAS77Interface$dggbak")
@@ -12082,7 +12083,7 @@ subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="B
   real(blas77_f64) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggbak
 
 subroutine dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, name="BLAS77Interface$dggbal")
@@ -12102,7 +12103,7 @@ subroutine dggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, nam
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggbal
 
 
@@ -12130,7 +12131,7 @@ subroutine dggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,w
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggev3
 
 subroutine dggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) bind(C, name="BLAS77Interface$dggev")
@@ -12155,7 +12156,7 @@ subroutine dggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,wo
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggev
 
 subroutine dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info) bind(C, name="BLAS77Interface$dggevx")
@@ -12192,7 +12193,7 @@ subroutine dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,l
   logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggevx
 
 subroutine dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77Interface$dggglm")
@@ -12213,7 +12214,7 @@ subroutine dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggglm
 
 subroutine dgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dgghd3")
@@ -12237,7 +12238,7 @@ subroutine dgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgghd3
 
 subroutine dgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, name="BLAS77Interface$dgghrd")
@@ -12259,7 +12260,7 @@ subroutine dgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, na
   real(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgghrd
 
 subroutine dgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77Interface$dgglse")
@@ -12280,7 +12281,7 @@ subroutine dgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgglse
 
 subroutine dggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$dggqrf")
@@ -12300,7 +12301,7 @@ subroutine dggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggqrf
 
 subroutine dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$dggrqf")
@@ -12320,7 +12321,7 @@ subroutine dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggrqf
 
 subroutine dggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dggsvd3")
@@ -12352,7 +12353,7 @@ subroutine dggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggsvd3
 
 subroutine dggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info) bind(C, name="BLAS77Interface$dggsvd")
@@ -12383,7 +12384,7 @@ subroutine dggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggsvd
 
 subroutine dggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info) bind(C, name="BLAS77Interface$dggsvp3")
@@ -12416,7 +12417,7 @@ subroutine dggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggsvp3
 
 subroutine dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) bind(C, name="BLAS77Interface$dggsvp")
@@ -12448,7 +12449,7 @@ subroutine dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,l
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dggsvp
 
 subroutine dgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$dgsvj0")
@@ -12473,7 +12474,7 @@ subroutine dgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,
   real(blas77_f64) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgsvj0
 
 subroutine dgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$dgsvj1")
@@ -12499,7 +12500,7 @@ subroutine dgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   real(blas77_f64) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgsvj1
 
 subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dgtcon")
@@ -12519,7 +12520,7 @@ subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgtcon
 
 subroutine dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgtrfs")
@@ -12547,7 +12548,7 @@ subroutine dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgtrfs
 
 subroutine dgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$dgtsv")
@@ -12563,7 +12564,7 @@ subroutine dgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$dgtsv"
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgtsv
 
 subroutine dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dgtsvx")
@@ -12593,7 +12594,7 @@ subroutine dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcon
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgtsvx
 
 subroutine dgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$dgttrf")
@@ -12608,7 +12609,7 @@ subroutine dgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$dgttrf"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgttrf
 
 subroutine dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dgttrs")
@@ -12627,7 +12628,7 @@ subroutine dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgttrs
 
 subroutine dgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Interface$dgtts2")
@@ -12645,7 +12646,7 @@ subroutine dgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Inte
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dgtts2
 
 subroutine dhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dhgeqz")
@@ -12673,7 +12674,7 @@ subroutine dhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dhgeqz
 
 subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) bind(C, name="BLAS77Interface$dhsein")
@@ -12700,7 +12701,7 @@ subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,wo
   integer(blas77_int) :: ifailr(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dhsein
 
 subroutine dhseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dhseqr")
@@ -12722,7 +12723,7 @@ subroutine dhseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dhseqr
 
 function disnan(din) bind(C, name="BLAS77Interface$disnan")
@@ -12732,7 +12733,7 @@ function disnan(din) bind(C, name="BLAS77Interface$disnan")
   real(blas77_f64),intent(in) :: din
   logical(blas77_int) :: disnan
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function disnan
 
 subroutine dla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$dla_gbamv")
@@ -12753,7 +12754,7 @@ subroutine dla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, n
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_gbamv
 
 function dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$dla_gbrcond")
@@ -12776,7 +12777,7 @@ function dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwor
   integer(blas77_int) :: iwork(*)
   real(blas77_f64) :: dla_gbrcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_gbrcond
 
 subroutine dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$dla_gbrfsx_extended")
@@ -12815,7 +12816,7 @@ subroutine dla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,lda
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_gbrfsx_extended
 
 function dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Interface$dla_gbrpvgrw")
@@ -12832,7 +12833,7 @@ function dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   real(blas77_f64) :: afb(ldafb,*)
   real(blas77_f64) :: dla_gbrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_gbrpvgrw
 
 subroutine dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$dla_geamv")
@@ -12851,7 +12852,7 @@ subroutine dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLA
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_geamv
 
 function dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$dla_gercond")
@@ -12872,7 +12873,7 @@ function dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C,
   integer(blas77_int) :: iwork(*)
   real(blas77_f64) :: dla_gercond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_gercond
 
 subroutine dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$dla_gerfsx_extended")
@@ -12909,7 +12910,7 @@ subroutine dla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,co
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_gerfsx_extended
 
 function dla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$dla_gerpvgrw")
@@ -12924,7 +12925,7 @@ function dla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$dla_g
   real(blas77_f64) :: af(ldaf,*)
   real(blas77_f64) :: dla_gerpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_gerpvgrw
 
 subroutine dla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$dla_lin_berr")
@@ -12938,7 +12939,7 @@ subroutine dla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$dl
   real(blas77_f64) :: ayb(n,nrhs)
   real(blas77_f64) :: berr(nrhs)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_lin_berr
 
 function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$dla_porcond")
@@ -12958,7 +12959,7 @@ function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name=
   integer(blas77_int) :: iwork(*)
   real(blas77_f64) :: dla_porcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_porcond
 
 subroutine dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$dla_porfsx_extended")
@@ -12994,7 +12995,7 @@ subroutine dla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ld
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_porfsx_extended
 
 function dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interface$dla_porpvgrw")
@@ -13010,7 +13011,7 @@ function dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dla_porpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_porpvgrw
 
 subroutine dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$dla_syamv")
@@ -13028,7 +13029,7 @@ subroutine dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_syamv
 
 function dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$dla_syrcond")
@@ -13049,7 +13050,7 @@ function dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, 
   integer(blas77_int) :: iwork(*)
   real(blas77_f64) :: dla_syrcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_syrcond
 
 subroutine dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$dla_syrfsx_extended")
@@ -13086,7 +13087,7 @@ subroutine dla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_syrfsx_extended
 
 function dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$dla_syrpvgrw")
@@ -13104,7 +13105,7 @@ function dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dla_syrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dla_syrpvgrw
 
 subroutine dla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$dla_wwaddw")
@@ -13116,7 +13117,7 @@ subroutine dla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$dla_wwaddw")
   real(blas77_f64) :: y(*)
   real(blas77_f64) :: w(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dla_wwaddw
 
 subroutine dlabad(small,large) bind(C, name="BLAS77Interface$dlabad")
@@ -13126,7 +13127,7 @@ subroutine dlabad(small,large) bind(C, name="BLAS77Interface$dlabad")
   real(blas77_f64) :: small
   real(blas77_f64) :: large
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlabad
 
 subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77Interface$dlabrd")
@@ -13147,7 +13148,7 @@ subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77In
   integer(blas77_int) :: ldy
   real(blas77_f64) :: y(ldy,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlabrd
 
 subroutine dlacn2(n,v,x,isgn,est,kase,isave) bind(C, name="BLAS77Interface$dlacn2")
@@ -13162,7 +13163,7 @@ subroutine dlacn2(n,v,x,isgn,est,kase,isave) bind(C, name="BLAS77Interface$dlacn
   integer(blas77_int) :: kase
   integer(blas77_int) :: isave(3)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlacn2
 
 subroutine dlacon(n,v,x,isgn,est,kase) bind(C, name="BLAS77Interface$dlacon")
@@ -13176,7 +13177,7 @@ subroutine dlacon(n,v,x,isgn,est,kase) bind(C, name="BLAS77Interface$dlacon")
   real(blas77_f64) :: est
   integer(blas77_int) :: kase
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlacon
 
 subroutine dlacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$dlacpy")
@@ -13191,7 +13192,7 @@ subroutine dlacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$dlacpy")
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlacpy
 
 subroutine dladiv(a,b,c,d,p,q) bind(C, name="BLAS77Interface$dladiv")
@@ -13205,7 +13206,7 @@ subroutine dladiv(a,b,c,d,p,q) bind(C, name="BLAS77Interface$dladiv")
   real(blas77_f64) :: p
   real(blas77_f64) :: q
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dladiv
 
 subroutine dlae2(a,b,c,rt1,rt2) bind(C, name="BLAS77Interface$dlae2")
@@ -13218,7 +13219,7 @@ subroutine dlae2(a,b,c,rt1,rt2) bind(C, name="BLAS77Interface$dlae2")
   real(blas77_f64) :: rt1
   real(blas77_f64) :: rt2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlae2
 
 subroutine dlaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) bind(C, name="BLAS77Interface$dlaebz")
@@ -13246,7 +13247,7 @@ subroutine dlaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaebz
 
 subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) bind(C, name="BLAS77Interface$dlaed0")
@@ -13266,7 +13267,7 @@ subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed0
 
 subroutine dlaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) bind(C, name="BLAS77Interface$dlaed1")
@@ -13284,7 +13285,7 @@ subroutine dlaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) bind(C, name="BLAS
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed1
 
 subroutine dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info) bind(C, name="BLAS77Interface$dlaed2")
@@ -13309,7 +13310,7 @@ subroutine dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,colty
   integer(blas77_int) :: coltyp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed2
 
 subroutine dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) bind(C, name="BLAS77Interface$dlaed3")
@@ -13331,7 +13332,7 @@ subroutine dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) bind(C, name
   real(blas77_f64) :: s(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed3
 
 subroutine dlaed4(n,i,d,z,delta,rho,dlam,info) bind(C, name="BLAS77Interface$dlaed4")
@@ -13347,7 +13348,7 @@ subroutine dlaed4(n,i,d,z,delta,rho,dlam,info) bind(C, name="BLAS77Interface$dla
   real(blas77_f64) :: dlam
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed4
 
 subroutine dlaed5(i,d,z,delta,rho,dlam) bind(C, name="BLAS77Interface$dlaed5")
@@ -13361,7 +13362,7 @@ subroutine dlaed5(i,d,z,delta,rho,dlam) bind(C, name="BLAS77Interface$dlaed5")
   real(blas77_f64) :: rho
   real(blas77_f64) :: dlam
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed5
 
 subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau,info) bind(C, name="BLAS77Interface$dlaed6")
@@ -13377,7 +13378,7 @@ subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau,info) bind(C, name="BLAS77Inte
   real(blas77_f64) :: tau
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed6
 
 subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) bind(C, name="BLAS77Interface$dlaed7")
@@ -13407,7 +13408,7 @@ subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qst
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed7
 
 subroutine dlaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info) bind(C, name="BLAS77Interface$dlaed8")
@@ -13437,7 +13438,7 @@ subroutine dlaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,p
   integer(blas77_int) :: indx(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed8
 
 subroutine dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) bind(C, name="BLAS77Interface$dlaed9")
@@ -13458,7 +13459,7 @@ subroutine dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) bind(C, nam
   real(blas77_f64) :: s(lds,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaed9
 
 subroutine dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) bind(C, name="BLAS77Interface$dlaeda")
@@ -13480,7 +13481,7 @@ subroutine dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,
   real(blas77_f64) :: ztemp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaeda
 
 subroutine dlaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignum,info) bind(C, name="BLAS77Interface$dlaein")
@@ -13504,7 +13505,7 @@ subroutine dlaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignu
   real(blas77_f64) :: bignum
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaein
 
 subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$dlaev2")
@@ -13519,7 +13520,7 @@ subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$dlaev2")
   real(blas77_f64) :: cs1
   real(blas77_f64) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaev2
 
 subroutine dlaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) bind(C, name="BLAS77Interface$dlaexc")
@@ -13538,7 +13539,7 @@ subroutine dlaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) bind(C, name="BLAS77In
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaexc
 
 subroutine dlag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) bind(C, name="BLAS77Interface$dlag2")
@@ -13556,7 +13557,7 @@ subroutine dlag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) bind(C, name="BLAS
   real(blas77_f64) :: wr2
   real(blas77_f64) :: wi
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlag2
 
 subroutine dlag2s(m,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$dlag2s")
@@ -13571,7 +13572,7 @@ subroutine dlag2s(m,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$dlag2s")
   real(blas77_f32) :: sa(ldsa,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlag2s
 
 subroutine dlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name="BLAS77Interface$dlags2")
@@ -13592,7 +13593,7 @@ subroutine dlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name=
   real(blas77_f64) :: csq
   real(blas77_f64) :: snq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlags2
 
 subroutine dlagtf(n,a,lambda,b,c,tol,d,in,info) bind(C, name="BLAS77Interface$dlagtf")
@@ -13609,7 +13610,7 @@ subroutine dlagtf(n,a,lambda,b,c,tol,d,in,info) bind(C, name="BLAS77Interface$dl
   integer(blas77_int) :: in(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlagtf
 
 subroutine dlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLAS77Interface$dlagtm")
@@ -13629,7 +13630,7 @@ subroutine dlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLA
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlagtm
 
 subroutine dlagts(job,n,a,b,c,d,in,y,tol,info) bind(C, name="BLAS77Interface$dlagts")
@@ -13647,7 +13648,7 @@ subroutine dlagts(job,n,a,b,c,d,in,y,tol,info) bind(C, name="BLAS77Interface$dla
   real(blas77_f64) :: tol
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlagts
 
 subroutine dlagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) bind(C, name="BLAS77Interface$dlagv2")
@@ -13666,7 +13667,7 @@ subroutine dlagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) bind(C, name="
   real(blas77_f64) :: csr
   real(blas77_f64) :: snr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlagv2
 
 subroutine dlahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) bind(C, name="BLAS77Interface$dlahqr")
@@ -13688,7 +13689,7 @@ subroutine dlahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) bind(C
   real(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlahqr
 
 subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$dlahr2")
@@ -13706,7 +13707,7 @@ subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$dl
   integer(blas77_int) :: ldy
   real(blas77_f64) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlahr2
 
 subroutine dlahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$dlahrd")
@@ -13724,7 +13725,7 @@ subroutine dlahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$dl
   integer(blas77_int) :: ldy
   real(blas77_f64) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlahrd
 
 subroutine dlaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface$dlaic1")
@@ -13741,7 +13742,7 @@ subroutine dlaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface
   real(blas77_f64) :: s
   real(blas77_f64) :: c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaic1
 
 function dlaisnan(din1,din2) bind(C, name="BLAS77Interface$dlaisnan")
@@ -13752,7 +13753,7 @@ function dlaisnan(din1,din2) bind(C, name="BLAS77Interface$dlaisnan")
   real(blas77_f64),intent(in) :: din2
   logical(blas77_int) :: dlaisnan
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlaisnan
 
 subroutine dlaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) bind(C, name="BLAS77Interface$dlaln2")
@@ -13778,7 +13779,7 @@ subroutine dlaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm
   real(blas77_f64) :: xnorm
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaln2
 
 subroutine dlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info) bind(C, name="BLAS77Interface$dlals0")
@@ -13810,7 +13811,7 @@ subroutine dlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlals0
 
 subroutine dlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) bind(C, name="BLAS77Interface$dlalsa")
@@ -13844,7 +13845,7 @@ subroutine dlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,pole
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlalsa
 
 subroutine dlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info) bind(C, name="BLAS77Interface$dlalsd")
@@ -13865,7 +13866,7 @@ subroutine dlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info) bind(
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlalsd
 
 subroutine dlamrg(n1,n2,a,dtrd1,dtrd2,index) bind(C, name="BLAS77Interface$dlamrg")
@@ -13879,7 +13880,7 @@ subroutine dlamrg(n1,n2,a,dtrd1,dtrd2,index) bind(C, name="BLAS77Interface$dlamr
   integer(blas77_int) :: dtrd2
   integer(blas77_int) :: index(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlamrg
 
 subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dlamswlq")
@@ -13903,7 +13904,7 @@ subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlamswlq
 
 subroutine dlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dlamtsqr")
@@ -13927,7 +13928,7 @@ subroutine dlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlamtsqr
 
 function dlaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$dlaneg")
@@ -13942,7 +13943,7 @@ function dlaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$dlaneg")
   integer(blas77_int) :: r
   integer(blas77_int) :: dlaneg
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlaneg
 
 function dlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$dlangb")
@@ -13958,7 +13959,7 @@ function dlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$dlangb"
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlangb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlangb
 
 function dlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$dlange")
@@ -13973,7 +13974,7 @@ function dlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$dlange")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlange
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlange
 
 function dlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$dlangt")
@@ -13987,7 +13988,7 @@ function dlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$dlangt")
   real(blas77_f64) :: du(*)
   real(blas77_f64) :: dlangt
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlangt
 
 function dlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$dlanhs")
@@ -14001,7 +14002,7 @@ function dlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$dlanhs")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlanhs
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlanhs
 
 function dlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$dlansb")
@@ -14017,7 +14018,7 @@ function dlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$dlansb
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlansb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlansb
 
 function dlansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$dlansf")
@@ -14032,7 +14033,7 @@ function dlansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$dlansf"
   real(blas77_f64) :: work(0:*)
   real(blas77_f64) :: dlansf
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlansf
 
 function dlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$dlansp")
@@ -14046,7 +14047,7 @@ function dlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$dlansp")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlansp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlansp
 
 function dlanst(norm,n,d,e) bind(C, name="BLAS77Interface$dlanst")
@@ -14059,7 +14060,7 @@ function dlanst(norm,n,d,e) bind(C, name="BLAS77Interface$dlanst")
   real(blas77_f64) :: e(*)
   real(blas77_f64) :: dlanst
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlanst
 
 function dlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$dlansy")
@@ -14074,7 +14075,7 @@ function dlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$dlansy")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlansy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlansy
 
 function dlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$dlantb")
@@ -14091,7 +14092,7 @@ function dlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlantb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlantb
 
 function dlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$dlantp")
@@ -14106,7 +14107,7 @@ function dlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$dlantp")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlantp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlantp
 
 function dlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$dlantr")
@@ -14123,7 +14124,7 @@ function dlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$dla
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: dlantr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlantr
 
 subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) bind(C, name="BLAS77Interface$dlanv2")
@@ -14141,7 +14142,7 @@ subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: cs
   real(blas77_f64) :: sn
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlanv2
 
 subroutine dlaorhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$dlaorhr_col_getrfnp2")
@@ -14155,7 +14156,7 @@ subroutine dlaorhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$
   real(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaorhr_col_getrfnp2
 
 subroutine dlaorhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$dlaorhr_col_getrfnp")
@@ -14169,7 +14170,7 @@ subroutine dlaorhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaorhr_col_getrfnp
 
 subroutine dlapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$dlapll")
@@ -14183,7 +14184,7 @@ subroutine dlapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$dlapll")
   integer(blas77_int) :: incy
   real(blas77_f64) :: ssmin
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlapll
 
 subroutine dlapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$dlapmr")
@@ -14197,7 +14198,7 @@ subroutine dlapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$dlapmr")
   real(blas77_f64) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlapmr
 
 subroutine dlapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$dlapmt")
@@ -14211,7 +14212,7 @@ subroutine dlapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$dlapmt")
   real(blas77_f64) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlapmt
 
 function dlapy2(x,y) bind(C, name="BLAS77Interface$dlapy2")
@@ -14222,7 +14223,7 @@ function dlapy2(x,y) bind(C, name="BLAS77Interface$dlapy2")
   real(blas77_f64) :: y
   real(blas77_f64) :: dlapy2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlapy2
 
 function dlapy3(x,y,z) bind(C, name="BLAS77Interface$dlapy3")
@@ -14234,7 +14235,7 @@ function dlapy3(x,y,z) bind(C, name="BLAS77Interface$dlapy3")
   real(blas77_f64) :: z
   real(blas77_f64) :: dlapy3
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlapy3
 
 subroutine dlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$dlaqgb")
@@ -14254,7 +14255,7 @@ subroutine dlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqgb
 
 subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$dlaqge")
@@ -14272,7 +14273,7 @@ subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77In
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqge
 
 subroutine dlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77Interface$dlaqp2")
@@ -14290,7 +14291,7 @@ subroutine dlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77In
   real(blas77_f64) :: vn2(*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqp2
 
 subroutine dlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) bind(C, name="BLAS77Interface$dlaqp2rk")
@@ -14318,7 +14319,7 @@ subroutine dlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,max
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqp2rk
 
 subroutine dlaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) bind(C, name="BLAS77Interface$dlaqp3rk")
@@ -14350,7 +14351,7 @@ subroutine dlaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqp3rk
 
 subroutine dlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, name="BLAS77Interface$dlaqps")
@@ -14372,7 +14373,7 @@ subroutine dlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, na
   integer(blas77_int) :: ldf
   real(blas77_f64) :: f(ldf,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqps
 
 subroutine dlaqr0(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dlaqr0")
@@ -14396,7 +14397,7 @@ subroutine dlaqr0(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,i
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr0
 
 subroutine dlaqr1(n,h,ldh,sr1,si1,sr2,si2,v) bind(C, name="BLAS77Interface$dlaqr1")
@@ -14412,7 +14413,7 @@ subroutine dlaqr1(n,h,ldh,sr1,si1,sr2,si2,v) bind(C, name="BLAS77Interface$dlaqr
   real(blas77_f64) :: si2
   real(blas77_f64) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr1
 
 subroutine dlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$dlaqr2")
@@ -14446,7 +14447,7 @@ subroutine dlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr2
 
 subroutine dlaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$dlaqr3")
@@ -14480,7 +14481,7 @@ subroutine dlaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr3
 
 subroutine dlaqr4(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dlaqr4")
@@ -14504,7 +14505,7 @@ subroutine dlaqr4(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,i
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr4
 
 subroutine dlaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) bind(C, name="BLAS77Interface$dlaqr5")
@@ -14537,7 +14538,7 @@ subroutine dlaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,
   integer(blas77_int) :: ldwh
   real(blas77_f64) :: wh(ldwh,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqr5
 
 subroutine dlaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$dlaqsb")
@@ -14554,7 +14555,7 @@ subroutine dlaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqsb
 
 subroutine dlaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$dlaqsp")
@@ -14569,7 +14570,7 @@ subroutine dlaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$dl
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqsp
 
 subroutine dlaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$dlaqsy")
@@ -14585,7 +14586,7 @@ subroutine dlaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqsy
 
 subroutine dlaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) bind(C, name="BLAS77Interface$dlaqtr")
@@ -14604,7 +14605,7 @@ subroutine dlaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) bind(C, name="BLAS7
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqtr
 
 subroutine dlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info) bind(C, name="BLAS77Interface$dlaqz0")
@@ -14633,7 +14634,7 @@ subroutine dlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,l
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqz0
 
 subroutine dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) bind(C, name="BLAS77Interface$dlaqz1")
@@ -14651,7 +14652,7 @@ subroutine dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) bind(C, name="BLAS77Inte
   real(blas77_f64),intent(in) :: beta2
   real(blas77_f64),intent(out) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqz1
 
 subroutine dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) bind(C, name="BLAS77Interface$dlaqz2")
@@ -14677,7 +14678,7 @@ subroutine dlaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zs
   integer(blas77_int),intent(in) :: ldz
   real(blas77_f64) :: z(ldz,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqz2
 
 subroutine dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info) bind(C, name="BLAS77Interface$dlaqz3")
@@ -14713,7 +14714,7 @@ subroutine dlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alp
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqz3
 
 subroutine dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) bind(C, name="BLAS77Interface$dlaqz4")
@@ -14747,7 +14748,7 @@ subroutine dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,ld
   integer(blas77_int),intent(in) :: lwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaqz4
 
 subroutine dlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) bind(C, name="BLAS77Interface$dlar1v")
@@ -14776,7 +14777,7 @@ subroutine dlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mi
   real(blas77_f64) :: rqcorr
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlar1v
 
 subroutine dlar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$dlar2v")
@@ -14792,7 +14793,7 @@ subroutine dlar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$dlar2v")
   real(blas77_f64) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlar2v
 
 subroutine dlarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarf1f")
@@ -14809,7 +14810,7 @@ subroutine dlarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarf1f
 
 subroutine dlarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarf1l")
@@ -14826,7 +14827,7 @@ subroutine dlarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarf1l
 
 subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarf")
@@ -14843,7 +14844,7 @@ subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarf
 
 subroutine dlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$dlarfb_gett")
@@ -14863,7 +14864,7 @@ subroutine dlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="
   integer(blas77_int) :: ldwork
   real(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfb_gett
 
 subroutine dlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$dlarfb")
@@ -14886,7 +14887,7 @@ subroutine dlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) 
   integer(blas77_int) :: ldwork
   real(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfb
 
 subroutine dlarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$dlarfg")
@@ -14899,7 +14900,7 @@ subroutine dlarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$dlarfg")
   integer(blas77_int) :: incx
   real(blas77_f64) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfg
 
 subroutine dlarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$dlarfgp")
@@ -14912,7 +14913,7 @@ subroutine dlarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$dlarfgp")
   integer(blas77_int) :: incx
   real(blas77_f64) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfgp
 
 subroutine dlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$dlarft_lvl2")
@@ -14929,7 +14930,7 @@ subroutine dlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77In
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarft_lvl2
 
 subroutine dlarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$dlarft")
@@ -14946,7 +14947,7 @@ subroutine dlarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarft
 
 subroutine dlarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarfx")
@@ -14962,7 +14963,7 @@ subroutine dlarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarf
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfx
 
 subroutine dlarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarfy")
@@ -14978,7 +14979,7 @@ subroutine dlarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dl
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarfy
 
 subroutine dlargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$dlargv")
@@ -14993,7 +14994,7 @@ subroutine dlargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$dlargv")
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlargv
 
 function dlarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$dlarmm")
@@ -15005,7 +15006,7 @@ function dlarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$dlarmm")
   real(blas77_f64) :: cnorm
   real(blas77_f64) :: dlarmm
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dlarmm
 
 subroutine dlarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$dlarnv")
@@ -15017,7 +15018,7 @@ subroutine dlarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$dlarnv")
   integer(blas77_int) :: n
   real(blas77_f64) :: x(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarnv
 
 subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) bind(C, name="BLAS77Interface$dlarra")
@@ -15034,7 +15035,7 @@ subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) bind(C, name="BLAS77I
   integer(blas77_int) :: isplit(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarra
 
 subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) bind(C, name="BLAS77Interface$dlarrb")
@@ -15059,7 +15060,7 @@ subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork
   integer(blas77_int) :: twist
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrb
 
 subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) bind(C, name="BLAS77Interface$dlarrc")
@@ -15078,7 +15079,7 @@ subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) bind(C, name="B
   integer(blas77_int) :: rcnt
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrc
 
 subroutine dlarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork,info) bind(C, name="BLAS77Interface$dlarrd")
@@ -15111,7 +15112,7 @@ subroutine dlarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isp
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrd
 
 subroutine dlarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) bind(C, name="BLAS77Interface$dlarre")
@@ -15144,7 +15145,7 @@ subroutine dlarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarre
 
 subroutine dlarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,sigma,dplus,lplus,work,info) bind(C, name="BLAS77Interface$dlarrf")
@@ -15170,7 +15171,7 @@ subroutine dlarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrf
 
 subroutine dlarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdiam,info) bind(C, name="BLAS77Interface$dlarrj")
@@ -15192,7 +15193,7 @@ subroutine dlarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdia
   real(blas77_f64) :: spdiam
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrj
 
 subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) bind(C, name="BLAS77Interface$dlarrk")
@@ -15211,7 +15212,7 @@ subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) bind(C, name="BLAS7
   real(blas77_f64) :: werr
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrk
 
 subroutine dlarrr(n,d,e,info) bind(C, name="BLAS77Interface$dlarrr")
@@ -15223,7 +15224,7 @@ subroutine dlarrr(n,d,e,info) bind(C, name="BLAS77Interface$dlarrr")
   real(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrr
 
 subroutine dlarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) bind(C, name="BLAS77Interface$dlarrv")
@@ -15256,7 +15257,7 @@ subroutine dlarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarrv
 
 subroutine dlarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$dlarscl2")
@@ -15269,7 +15270,7 @@ subroutine dlarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$dlarscl2")
   integer(blas77_int) :: ldx
   real(blas77_f64) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarscl2
 
 subroutine dlartg(f,g,c,s,r) bind(C, name="BLAS77Interface$dlartg")
@@ -15282,7 +15283,7 @@ subroutine dlartg(f,g,c,s,r) bind(C, name="BLAS77Interface$dlartg")
   real(blas77_f64) :: s
   real(blas77_f64) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlartg
 
 subroutine dlartgp(f,g,cs,sn,r) bind(C, name="BLAS77Interface$dlartgp")
@@ -15295,7 +15296,7 @@ subroutine dlartgp(f,g,cs,sn,r) bind(C, name="BLAS77Interface$dlartgp")
   real(blas77_f64) :: sn
   real(blas77_f64) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlartgp
 
 subroutine dlartgs(x,y,sigma,cs,sn) bind(C, name="BLAS77Interface$dlartgs")
@@ -15308,7 +15309,7 @@ subroutine dlartgs(x,y,sigma,cs,sn) bind(C, name="BLAS77Interface$dlartgs")
   real(blas77_f64) :: cs
   real(blas77_f64) :: sn
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlartgs
 
 subroutine dlartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$dlartv")
@@ -15324,7 +15325,7 @@ subroutine dlartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$dlartv
   real(blas77_f64) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlartv
 
 subroutine dlaruv(iseed,n,x) bind(C, name="BLAS77Interface$dlaruv")
@@ -15335,7 +15336,7 @@ subroutine dlaruv(iseed,n,x) bind(C, name="BLAS77Interface$dlaruv")
   integer(blas77_int) :: n
   real(blas77_f64) :: x(n)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaruv
 
 subroutine dlarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$dlarz")
@@ -15353,7 +15354,7 @@ subroutine dlarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarz
 
 subroutine dlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$dlarzb")
@@ -15377,7 +15378,7 @@ subroutine dlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork
   integer(blas77_int) :: ldwork
   real(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarzb
 
 subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$dlarzt")
@@ -15394,7 +15395,7 @@ subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   real(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlarzt
 
 subroutine dlas2(f,g,h,ssmin,ssmax) bind(C, name="BLAS77Interface$dlas2")
@@ -15407,7 +15408,7 @@ subroutine dlas2(f,g,h,ssmin,ssmax) bind(C, name="BLAS77Interface$dlas2")
   real(blas77_f64) :: ssmin
   real(blas77_f64) :: ssmax
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlas2
 
 subroutine dlascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$dlascl2")
@@ -15420,7 +15421,7 @@ subroutine dlascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$dlascl2")
   integer(blas77_int) :: ldx
   real(blas77_f64) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlascl2
 
 subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Interface$dlascl")
@@ -15438,7 +15439,7 @@ subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlascl
 
 subroutine dlasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) bind(C, name="BLAS77Interface$dlasd0")
@@ -15458,7 +15459,7 @@ subroutine dlasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) bind(C, name=
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd0
 
 subroutine dlasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) bind(C, name="BLAS77Interface$dlasd1")
@@ -15480,7 +15481,7 @@ subroutine dlasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) bi
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd1
 
 subroutine dlasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) bind(C, name="BLAS77Interface$dlasd2")
@@ -15511,7 +15512,7 @@ subroutine dlasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,l
   integer(blas77_int) :: coltyp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd2
 
 subroutine dlasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) bind(C, name="BLAS77Interface$dlasd3")
@@ -15539,7 +15540,7 @@ subroutine dlasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,id
   real(blas77_f64) :: z(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd3
 
 subroutine dlasd4(n,i,d,z,delta,rho,sigma,work,info) bind(C, name="BLAS77Interface$dlasd4")
@@ -15556,7 +15557,7 @@ subroutine dlasd4(n,i,d,z,delta,rho,sigma,work,info) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd4
 
 subroutine dlasd5(i,d,z,delta,rho,dsigma,work) bind(C, name="BLAS77Interface$dlasd5")
@@ -15571,7 +15572,7 @@ subroutine dlasd5(i,d,z,delta,rho,dsigma,work) bind(C, name="BLAS77Interface$dla
   real(blas77_f64) :: dsigma
   real(blas77_f64) :: work(2)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd5
 
 subroutine dlasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,iwork,info) bind(C, name="BLAS77Interface$dlasd6")
@@ -15605,7 +15606,7 @@ subroutine dlasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd6
 
 subroutine dlasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s,info) bind(C, name="BLAS77Interface$dlasd7")
@@ -15640,7 +15641,7 @@ subroutine dlasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx
   real(blas77_f64) :: s
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd7
 
 subroutine dlasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) bind(C, name="BLAS77Interface$dlasd8")
@@ -15660,7 +15661,7 @@ subroutine dlasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) bind(C, 
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasd8
 
 subroutine dlasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) bind(C, name="BLAS77Interface$dlasda")
@@ -15692,7 +15693,7 @@ subroutine dlasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,g
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasda
 
 subroutine dlasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C, name="BLAS77Interface$dlasdq")
@@ -15716,7 +15717,7 @@ subroutine dlasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bi
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasdq
 
 subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) bind(C, name="BLAS77Interface$dlasdt")
@@ -15731,7 +15732,7 @@ subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) bind(C, name="BLAS77Interface
   integer(blas77_int) :: ndimr(*)
   integer(blas77_int) :: msub
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasdt
 
 subroutine dlaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$dlaset")
@@ -15746,7 +15747,7 @@ subroutine dlaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$dlase
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaset
 
 subroutine dlasq1(n,d,e,work,info) bind(C, name="BLAS77Interface$dlasq1")
@@ -15759,7 +15760,7 @@ subroutine dlasq1(n,d,e,work,info) bind(C, name="BLAS77Interface$dlasq1")
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq1
 
 subroutine dlasq2(n,z,info) bind(C, name="BLAS77Interface$dlasq2")
@@ -15770,7 +15771,7 @@ subroutine dlasq2(n,z,info) bind(C, name="BLAS77Interface$dlasq2")
   real(blas77_f64) :: z(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq2
 
 subroutine dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau) bind(C, name="BLAS77Interface$dlasq3")
@@ -15798,7 +15799,7 @@ subroutine dlasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dm
   real(blas77_f64) :: g
   real(blas77_f64) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq3
 
 subroutine dlasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) bind(C, name="BLAS77Interface$dlasq4")
@@ -15820,7 +15821,7 @@ subroutine dlasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) bind(
   integer(blas77_int) :: ttype
   real(blas77_f64) :: g
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq4
 
 subroutine dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps) bind(C, name="BLAS77Interface$dlasq5")
@@ -15842,7 +15843,7 @@ subroutine dlasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps) b
   logical(blas77_int) :: ieee
   real(blas77_f64) :: eps
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq5
 
 subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) bind(C, name="BLAS77Interface$dlasq6")
@@ -15860,7 +15861,7 @@ subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) bind(C, name="BLAS77
   real(blas77_f64) :: dnm1
   real(blas77_f64) :: dnm2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasq6
 
 subroutine dlasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$dlasr")
@@ -15877,7 +15878,7 @@ subroutine dlasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lda
   real(blas77_f64) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasr
 
 subroutine dlasrt(id,n,d,info) bind(C, name="BLAS77Interface$dlasrt")
@@ -15889,7 +15890,7 @@ subroutine dlasrt(id,n,d,info) bind(C, name="BLAS77Interface$dlasrt")
   real(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasrt
 
 subroutine dlassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$dlassq")
@@ -15902,7 +15903,7 @@ subroutine dlassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$dlassq")
   real(blas77_f64) :: scale
   real(blas77_f64) :: sumsq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlassq
 
 subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) bind(C, name="BLAS77Interface$dlasv2")
@@ -15919,7 +15920,7 @@ subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: snl
   real(blas77_f64) :: csl
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasv2
 
 subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$dlaswlq")
@@ -15938,7 +15939,7 @@ subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaswlq
 
 subroutine dlaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$dlaswp")
@@ -15953,7 +15954,7 @@ subroutine dlaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$dlaswp"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlaswp
 
 subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) bind(C, name="BLAS77Interface$dlasy2")
@@ -15977,7 +15978,7 @@ subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xno
   real(blas77_f64) :: xnorm
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasy2
 
 subroutine dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$dlasyf_aa")
@@ -15995,7 +15996,7 @@ subroutine dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   real(blas77_f64) :: h(ldh,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasyf_aa
 
 subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$dlasyf")
@@ -16013,7 +16014,7 @@ subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   real(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasyf
 
 subroutine dlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$dlasyf_rk")
@@ -16032,7 +16033,7 @@ subroutine dlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   real(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasyf_rk
 
 subroutine dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$dlasyf_rook")
@@ -16050,7 +16051,7 @@ subroutine dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   real(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlasyf_rook
 
 subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$dlat2s")
@@ -16065,7 +16066,7 @@ subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$dlat2
   real(blas77_f32) :: sa(ldsa,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlat2s
 
 subroutine dlatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C, name="BLAS77Interface$dlatbs")
@@ -16085,7 +16086,7 @@ subroutine dlatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatbs
 
 subroutine dlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77Interface$dlatdf")
@@ -16102,7 +16103,7 @@ subroutine dlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77I
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: jpiv(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatdf
 
 subroutine dlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="BLAS77Interface$dlatps")
@@ -16120,7 +16121,7 @@ subroutine dlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatps
 
 subroutine dlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$dlatrd")
@@ -16137,7 +16138,7 @@ subroutine dlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$dla
   integer(blas77_int) :: ldw
   real(blas77_f64) :: w(ldw,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatrd
 
 subroutine dlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) bind(C, name="BLAS77Interface$dlatrs3")
@@ -16160,7 +16161,7 @@ subroutine dlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatrs3
 
 subroutine dlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, name="BLAS77Interface$dlatrs")
@@ -16179,7 +16180,7 @@ subroutine dlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, nam
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatrs
 
 subroutine dlatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$dlatrz")
@@ -16194,7 +16195,7 @@ subroutine dlatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$dlatrz")
   real(blas77_f64) :: tau(*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatrz
 
 subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$dlatsqr")
@@ -16213,7 +16214,7 @@ subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatsqr
 
 subroutine dlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interface$dlatzm")
@@ -16231,7 +16232,7 @@ subroutine dlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interf
   real(blas77_f64) :: c2(ldc,*)
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlatzm
 
 subroutine dlauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dlauu2")
@@ -16244,7 +16245,7 @@ subroutine dlauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dlauu2")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlauu2
 
 subroutine dlauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dlauum")
@@ -16257,7 +16258,7 @@ subroutine dlauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dlauum")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dlauum
 
 subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$dopgtr")
@@ -16273,7 +16274,7 @@ subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dopgtr
 
 subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dopmtr")
@@ -16292,7 +16293,7 @@ subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dopmtr
 
 subroutine dorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb1")
@@ -16315,7 +16316,7 @@ subroutine dorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb1
 
 subroutine dorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb2")
@@ -16338,7 +16339,7 @@ subroutine dorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb2
 
 subroutine dorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb3")
@@ -16361,7 +16362,7 @@ subroutine dorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb3
 
 subroutine dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb4")
@@ -16385,7 +16386,7 @@ subroutine dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb4
 
 subroutine dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb5")
@@ -16407,7 +16408,7 @@ subroutine dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb5
 
 subroutine dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb6")
@@ -16429,7 +16430,7 @@ subroutine dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb6
 
 subroutine dorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info) bind(C, name="BLAS77Interface$dorbdb")
@@ -16459,7 +16460,7 @@ subroutine dorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,thet
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorbdb
 
 subroutine dorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dorcsd2by1")
@@ -16488,7 +16489,7 @@ subroutine dorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorcsd2by1
 
 subroutine dorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dorcsd")
@@ -16526,7 +16527,7 @@ subroutine dorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorcsd
 
 subroutine dorg2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorg2l")
@@ -16542,7 +16543,7 @@ subroutine dorg2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorg2
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorg2l
 
 subroutine dorg2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorg2r")
@@ -16558,7 +16559,7 @@ subroutine dorg2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorg2
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorg2r
 
 subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorgbr")
@@ -16576,7 +16577,7 @@ subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgbr
 
 subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorghr")
@@ -16593,7 +16594,7 @@ subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorghr
 
 subroutine dorgl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorgl2")
@@ -16609,7 +16610,7 @@ subroutine dorgl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorgl
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgl2
 
 subroutine dorglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorglq")
@@ -16626,7 +16627,7 @@ subroutine dorglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorglq
 
 subroutine dorgql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorgql")
@@ -16643,7 +16644,7 @@ subroutine dorgql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgql
 
 subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorgqr")
@@ -16660,7 +16661,7 @@ subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgqr
 
 subroutine dorgr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorgr2")
@@ -16676,7 +16677,7 @@ subroutine dorgr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$dorgr
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgr2
 
 subroutine dorgrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorgrq")
@@ -16693,7 +16694,7 @@ subroutine dorgrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgrq
 
 subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dorgtr")
@@ -16709,7 +16710,7 @@ subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgtr
 
 subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$dorgtsqr")
@@ -16728,7 +16729,7 @@ subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgtsqr
 
 subroutine dorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$dorgtsqr_row")
@@ -16747,7 +16748,7 @@ subroutine dorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorgtsqr_row
 
 subroutine dorhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$dorhr_col")
@@ -16764,7 +16765,7 @@ subroutine dorhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$do
   real(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorhr_col
 
 subroutine dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dorm22")
@@ -16785,7 +16786,7 @@ subroutine dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorm22
 
 subroutine dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dorm2l")
@@ -16805,7 +16806,7 @@ subroutine dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorm2l
 
 subroutine dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dorm2r")
@@ -16825,7 +16826,7 @@ subroutine dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorm2r
 
 subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormbr")
@@ -16847,7 +16848,7 @@ subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormbr
 
 subroutine dormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormhr")
@@ -16869,7 +16870,7 @@ subroutine dormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormhr
 
 subroutine dorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dorml2")
@@ -16889,7 +16890,7 @@ subroutine dorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dorml2
 
 subroutine dormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormlq")
@@ -16910,7 +16911,7 @@ subroutine dormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormlq
 
 subroutine dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormql")
@@ -16931,7 +16932,7 @@ subroutine dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormql
 
 subroutine dormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormqr")
@@ -16952,7 +16953,7 @@ subroutine dormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormqr
 
 subroutine dormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dormr2")
@@ -16972,7 +16973,7 @@ subroutine dormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormr2
 
 subroutine dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$dormr3")
@@ -16993,7 +16994,7 @@ subroutine dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BL
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormr3
 
 subroutine dormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormrq")
@@ -17014,7 +17015,7 @@ subroutine dormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormrq
 
 subroutine dormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormrz")
@@ -17036,7 +17037,7 @@ subroutine dormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, na
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormrz
 
 subroutine dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$dormtr")
@@ -17057,7 +17058,7 @@ subroutine dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, n
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dormtr
 
 subroutine dpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dpbcon")
@@ -17075,7 +17076,7 @@ subroutine dpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbcon
 
 subroutine dpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Interface$dpbequ")
@@ -17092,7 +17093,7 @@ subroutine dpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbequ
 
 subroutine dpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dpbrfs")
@@ -17117,7 +17118,7 @@ subroutine dpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iw
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbrfs
 
 subroutine dpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbstf")
@@ -17131,7 +17132,7 @@ subroutine dpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbstf")
   real(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbstf
 
 subroutine dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$dpbsv")
@@ -17148,7 +17149,7 @@ subroutine dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfac
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbsv
 
 subroutine dpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dpbsvx")
@@ -17177,7 +17178,7 @@ subroutine dpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcon
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbsvx
 
 subroutine dpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbtf2")
@@ -17191,7 +17192,7 @@ subroutine dpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbtf2")
   real(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbtf2
 
 subroutine dpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbtrf")
@@ -17205,7 +17206,7 @@ subroutine dpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$dpbtrf")
   real(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbtrf
 
 subroutine dpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$dpbtrs")
@@ -17222,7 +17223,7 @@ subroutine dpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpbtrs
 
 subroutine dpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$dpftrf")
@@ -17235,7 +17236,7 @@ subroutine dpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$dpftrf")
   real(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpftrf
 
 subroutine dpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$dpftri")
@@ -17248,7 +17249,7 @@ subroutine dpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$dpftri")
   real(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpftri
 
 subroutine dpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface$dpftrs")
@@ -17264,7 +17265,7 @@ subroutine dpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpftrs
 
 subroutine dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dpocon")
@@ -17281,7 +17282,7 @@ subroutine dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpocon
 
 subroutine dpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$dpoequ")
@@ -17296,7 +17297,7 @@ subroutine dpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$dpoeq
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpoequ
 
 subroutine dpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$dpoequb")
@@ -17311,7 +17312,7 @@ subroutine dpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$dpoe
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpoequb
 
 subroutine dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dporfs")
@@ -17335,7 +17336,7 @@ subroutine dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,inf
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dporfs
 
 subroutine dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dporfsx")
@@ -17366,7 +17367,7 @@ subroutine dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_er
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dporfsx
 
 subroutine dposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dposv")
@@ -17382,7 +17383,7 @@ subroutine dposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dpo
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dposv
 
 subroutine dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dposvx")
@@ -17410,7 +17411,7 @@ subroutine dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dposvx
 
 subroutine dposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dposvxx")
@@ -17443,7 +17444,7 @@ subroutine dposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvg
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dposvxx
 
 subroutine dpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotf2")
@@ -17456,7 +17457,7 @@ subroutine dpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotf2")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpotf2
 
 subroutine dpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotrf2")
@@ -17469,7 +17470,7 @@ subroutine dpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotrf2")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpotrf2
 
 subroutine dpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotrf")
@@ -17482,7 +17483,7 @@ subroutine dpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotrf")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpotrf
 
 subroutine dpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotri")
@@ -17495,7 +17496,7 @@ subroutine dpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$dpotri")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpotri
 
 subroutine dpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dpotrs")
@@ -17511,7 +17512,7 @@ subroutine dpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dp
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpotrs
 
 subroutine dppcon(uplo,n,ap,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dppcon")
@@ -17527,7 +17528,7 @@ subroutine dppcon(uplo,n,ap,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dppcon
 
 subroutine dppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$dppequ")
@@ -17542,7 +17543,7 @@ subroutine dppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$dpp
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dppequ
 
 subroutine dpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dpprfs")
@@ -17564,7 +17565,7 @@ subroutine dpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpprfs
 
 subroutine dppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$dppsv")
@@ -17579,7 +17580,7 @@ subroutine dppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$dppsv"
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dppsv
 
 subroutine dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dppsvx")
@@ -17605,7 +17606,7 @@ subroutine dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dppsvx
 
 subroutine dpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$dpptrf")
@@ -17617,7 +17618,7 @@ subroutine dpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$dpptrf")
   real(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpptrf
 
 subroutine dpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$dpptri")
@@ -17629,7 +17630,7 @@ subroutine dpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$dpptri")
   real(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpptri
 
 subroutine dpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$dpptrs")
@@ -17644,7 +17645,7 @@ subroutine dpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$dpptr
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpptrs
 
 subroutine dpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$dpstf2")
@@ -17661,7 +17662,7 @@ subroutine dpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpstf2
 
 subroutine dpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$dpstrf")
@@ -17678,7 +17679,7 @@ subroutine dpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpstrf
 
 subroutine dptcon(n,d,e,anorm,rcond,work,info) bind(C, name="BLAS77Interface$dptcon")
@@ -17693,7 +17694,7 @@ subroutine dptcon(n,d,e,anorm,rcond,work,info) bind(C, name="BLAS77Interface$dpt
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dptcon
 
 subroutine dpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dpteqr")
@@ -17709,7 +17710,7 @@ subroutine dpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dpt
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpteqr
 
 subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) bind(C, name="BLAS77Interface$dptrfs")
@@ -17731,7 +17732,7 @@ subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) bind(C, name
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dptrfs
 
 subroutine dptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$dptsv")
@@ -17746,7 +17747,7 @@ subroutine dptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$dptsv")
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dptsv
 
 subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) bind(C, name="BLAS77Interface$dptsvx")
@@ -17770,7 +17771,7 @@ subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) b
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dptsvx
 
 subroutine dpttrf(n,d,e,info) bind(C, name="BLAS77Interface$dpttrf")
@@ -17782,7 +17783,7 @@ subroutine dpttrf(n,d,e,info) bind(C, name="BLAS77Interface$dpttrf")
   real(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpttrf
 
 subroutine dpttrs(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$dpttrs")
@@ -17797,7 +17798,7 @@ subroutine dpttrs(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$dpttrs")
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dpttrs
 
 subroutine dptts2(n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$dptts2")
@@ -17811,7 +17812,7 @@ subroutine dptts2(n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$dptts2")
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dptts2
 
 subroutine drscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$drscl")
@@ -17823,7 +17824,7 @@ subroutine drscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$drscl")
   real(blas77_f64) :: sx(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine drscl
 
 subroutine dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) bind(C, name="BLAS77Interface$dsb2st_kernels")
@@ -17846,7 +17847,7 @@ subroutine dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,
   integer(blas77_int) :: ldvt
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsb2st_kernels
 
 subroutine dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$dsbev_2stage")
@@ -17866,7 +17867,7 @@ subroutine dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbev_2stage
 
 subroutine dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) bind(C, name="BLAS77Interface$dsbev")
@@ -17885,7 +17886,7 @@ subroutine dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbev
 
 subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsbevd_2stage")
@@ -17907,7 +17908,7 @@ subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbevd_2stage
 
 subroutine dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsbevd")
@@ -17929,7 +17930,7 @@ subroutine dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) b
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbevd
 
 subroutine dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$dsbevx_2stage")
@@ -17960,7 +17961,7 @@ subroutine dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbevx_2stage
 
 subroutine dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dsbevx")
@@ -17990,7 +17991,7 @@ subroutine dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ld
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbevx
 
 subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) bind(C, name="BLAS77Interface$dsbgst")
@@ -18011,7 +18012,7 @@ subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) bind(C, nam
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbgst
 
 subroutine dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info) bind(C, name="BLAS77Interface$dsbgv")
@@ -18033,7 +18034,7 @@ subroutine dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info) bind(C, na
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbgv
 
 subroutine dsbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsbgvd")
@@ -18058,7 +18059,7 @@ subroutine dsbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liw
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbgvd
 
 subroutine dsbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dsbgvx")
@@ -18091,7 +18092,7 @@ subroutine dsbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abst
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbgvx
 
 subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS77Interface$dsbtrd")
@@ -18111,7 +18112,7 @@ subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsbtrd
 
 subroutine dsfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77Interface$dsfrk")
@@ -18129,7 +18130,7 @@ subroutine dsfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77I
   real(blas77_f64) :: beta
   real(blas77_f64) :: c(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsfrk
 
 subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info) bind(C, name="BLAS77Interface$dsgesv")
@@ -18150,7 +18151,7 @@ subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info) bind(C, na
   integer(blas77_int) :: iter
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsgesv
 
 subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dspcon")
@@ -18167,7 +18168,7 @@ subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspcon
 
 subroutine dspev(jobz,uplo,n,ap,w,z,ldz,work,info) bind(C, name="BLAS77Interface$dspev")
@@ -18184,7 +18185,7 @@ subroutine dspev(jobz,uplo,n,ap,w,z,ldz,work,info) bind(C, name="BLAS77Interface
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspev
 
 subroutine dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dspevd")
@@ -18204,7 +18205,7 @@ subroutine dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, n
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspevd
 
 subroutine dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dspevx")
@@ -18230,7 +18231,7 @@ subroutine dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,i
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspevx
 
 subroutine dspgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$dspgst")
@@ -18244,7 +18245,7 @@ subroutine dspgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$dspgst"
   real(blas77_f64) :: bp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspgst
 
 subroutine dspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) bind(C, name="BLAS77Interface$dspgv")
@@ -18263,7 +18264,7 @@ subroutine dspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) bind(C, name="BLAS77
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspgv
 
 subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dspgvd")
@@ -18285,7 +18286,7 @@ subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) 
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspgvd
 
 subroutine dspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dspgvx")
@@ -18313,7 +18314,7 @@ subroutine dspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,wor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspgvx
 
 subroutine dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info) bind(C, name="BLAS77Interface$dsposv")
@@ -18334,7 +18335,7 @@ subroutine dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info) bind(C, na
   integer(blas77_int) :: iter
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsposv
 
 subroutine dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dsprfs")
@@ -18357,7 +18358,7 @@ subroutine dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsprfs
 
 subroutine dspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dspsv")
@@ -18373,7 +18374,7 @@ subroutine dspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspsv
 
 subroutine dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dspsvx")
@@ -18398,7 +18399,7 @@ subroutine dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dspsvx
 
 subroutine dsptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$dsptrd")
@@ -18413,7 +18414,7 @@ subroutine dsptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$dsptrd")
   real(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsptrd
 
 subroutine dsptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$dsptrf")
@@ -18426,7 +18427,7 @@ subroutine dsptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$dsptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsptrf
 
 subroutine dsptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$dsptri")
@@ -18440,7 +18441,7 @@ subroutine dsptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$dsptri
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsptri
 
 subroutine dsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dsptrs")
@@ -18456,7 +18457,7 @@ subroutine dsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsptrs
 
 subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) bind(C, name="BLAS77Interface$dstebz")
@@ -18482,7 +18483,7 @@ subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstebz
 
 subroutine dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dstedc")
@@ -18501,7 +18502,7 @@ subroutine dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstedc
 
 subroutine dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dstegr")
@@ -18529,7 +18530,7 @@ subroutine dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstegr
 
 subroutine dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dstein")
@@ -18550,7 +18551,7 @@ subroutine dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, n
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstein
 
 subroutine dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dstemr")
@@ -18579,7 +18580,7 @@ subroutine dstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstemr
 
 subroutine dsteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dsteqr")
@@ -18595,7 +18596,7 @@ subroutine dsteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dst
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsteqr
 
 subroutine dsterf(n,d,e,info) bind(C, name="BLAS77Interface$dsterf")
@@ -18607,7 +18608,7 @@ subroutine dsterf(n,d,e,info) bind(C, name="BLAS77Interface$dsterf")
   real(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsterf
 
 subroutine dstev(jobz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dstev")
@@ -18623,7 +18624,7 @@ subroutine dstev(jobz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$dstev
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstev
 
 subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dstevd")
@@ -18642,7 +18643,7 @@ subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="B
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstevd
 
 subroutine dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dstevr")
@@ -18670,7 +18671,7 @@ subroutine dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstevr
 
 subroutine dstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$dstevx")
@@ -18696,7 +18697,7 @@ subroutine dstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dstevx
 
 subroutine dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dsycon_3")
@@ -18715,7 +18716,7 @@ subroutine dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) bind(C, nam
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsycon_3
 
 subroutine dsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dsycon")
@@ -18733,7 +18734,7 @@ subroutine dsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsycon
 
 subroutine dsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dsycon_rook")
@@ -18751,7 +18752,7 @@ subroutine dsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, na
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsycon_rook
 
 subroutine dsyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$dsyconv")
@@ -18767,7 +18768,7 @@ subroutine dsyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyconv
 
 subroutine dsyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$dsyconvf")
@@ -18783,7 +18784,7 @@ subroutine dsyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyconvf
 
 subroutine dsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$dsyconvf_rook")
@@ -18799,7 +18800,7 @@ subroutine dsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyconvf_rook
 
 subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$dsyequb")
@@ -18816,7 +18817,7 @@ subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyequb
 
 subroutine dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interface$dsyev_2stage")
@@ -18833,7 +18834,7 @@ subroutine dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyev_2stage
 
 subroutine dsyev(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interface$dsyev")
@@ -18850,7 +18851,7 @@ subroutine dsyev(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyev
 
 subroutine dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsyevd_2stage")
@@ -18869,7 +18870,7 @@ subroutine dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevd_2stage
 
 subroutine dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsyevd")
@@ -18888,7 +18889,7 @@ subroutine dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevd
 
 subroutine dsyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsyevr_2stage")
@@ -18917,7 +18918,7 @@ subroutine dsyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,is
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevr_2stage
 
 subroutine dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsyevr")
@@ -18946,7 +18947,7 @@ subroutine dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,wo
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevr
 
 subroutine dsyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$dsyevx_2stage")
@@ -18974,7 +18975,7 @@ subroutine dsyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,wo
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevx_2stage
 
 subroutine dsyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$dsyevx")
@@ -19002,7 +19003,7 @@ subroutine dsyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyevx
 
 subroutine dsygs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dsygs2")
@@ -19018,7 +19019,7 @@ subroutine dsygs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygs2
 
 subroutine dsygst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dsygst")
@@ -19034,7 +19035,7 @@ subroutine dsygst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygst
 
 subroutine dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="BLAS77Interface$dsygv_2stage")
@@ -19054,7 +19055,7 @@ subroutine dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygv_2stage
 
 subroutine dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="BLAS77Interface$dsygv")
@@ -19074,7 +19075,7 @@ subroutine dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygv
 
 subroutine dsygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dsygvd")
@@ -19096,7 +19097,7 @@ subroutine dsygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) 
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygvd
 
 subroutine dsygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$dsygvx")
@@ -19127,7 +19128,7 @@ subroutine dsygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,l
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsygvx
 
 subroutine dsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dsyrfs")
@@ -19152,7 +19153,7 @@ subroutine dsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyrfs
 
 subroutine dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dsyrfsx")
@@ -19184,7 +19185,7 @@ subroutine dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyrfsx
 
 subroutine dsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsysv_aa_2stage")
@@ -19206,7 +19207,7 @@ subroutine dsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysv_aa_2stage
 
 subroutine dsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsysv_aa")
@@ -19225,7 +19226,7 @@ subroutine dsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysv_aa
 
 subroutine dsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsysv")
@@ -19244,7 +19245,7 @@ subroutine dsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysv
 
 subroutine dsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsysv_rk")
@@ -19264,7 +19265,7 @@ subroutine dsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysv_rk
 
 subroutine dsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsysv_rook")
@@ -19283,7 +19284,7 @@ subroutine dsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysv_rook
 
 subroutine dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dsysvx")
@@ -19311,7 +19312,7 @@ subroutine dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysvx
 
 subroutine dsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$dsysvxx")
@@ -19345,7 +19346,7 @@ subroutine dsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsysvxx
 
 subroutine dsyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$dsyswapr")
@@ -19359,7 +19360,7 @@ subroutine dsyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$dsyswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsyswapr
 
 subroutine dsytd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$dsytd2")
@@ -19375,7 +19376,7 @@ subroutine dsytd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$dsytd
   real(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytd2
 
 subroutine dsytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dsytf2")
@@ -19389,7 +19390,7 @@ subroutine dsytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dsytf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytf2
 
 subroutine dsytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$dsytf2_rk")
@@ -19404,7 +19405,7 @@ subroutine dsytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$dsy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytf2_rk
 
 subroutine dsytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dsytf2_rook")
@@ -19418,7 +19419,7 @@ subroutine dsytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$dsy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytf2_rook
 
 subroutine dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) bind(C, name="BLAS77Interface$dsytrd_2stage")
@@ -19439,7 +19440,7 @@ subroutine dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrd_2stage
 
 subroutine dsytrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Interface$dsytrd")
@@ -19457,7 +19458,7 @@ subroutine dsytrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrd
 
 subroutine dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) bind(C, name="BLAS77Interface$dsytrd_sb2st")
@@ -19479,7 +19480,7 @@ subroutine dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrd_sb2st
 
 subroutine dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, name="BLAS77Interface$dsytrd_sy2sb")
@@ -19498,7 +19499,7 @@ subroutine dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrd_sy2sb
 
 subroutine dsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$dsytrf_aa_2stage")
@@ -19517,7 +19518,7 @@ subroutine dsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrf_aa_2stage
 
 subroutine dsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytrf_aa")
@@ -19533,7 +19534,7 @@ subroutine dsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrf_aa
 
 subroutine dsytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytrf")
@@ -19549,7 +19550,7 @@ subroutine dsytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrf
 
 subroutine dsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytrf_rk")
@@ -19566,7 +19567,7 @@ subroutine dsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrf_rk
 
 subroutine dsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytrf_rook")
@@ -19582,7 +19583,7 @@ subroutine dsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrf_rook
 
 subroutine dsytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytri2")
@@ -19598,7 +19599,7 @@ subroutine dsytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri2
 
 subroutine dsytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$dsytri2x")
@@ -19614,7 +19615,7 @@ subroutine dsytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   real(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri2x
 
 subroutine dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$dsytri_3")
@@ -19631,7 +19632,7 @@ subroutine dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri_3
 
 subroutine dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$dsytri_3x")
@@ -19648,7 +19649,7 @@ subroutine dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri_3x
 
 subroutine dsytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$dsytri")
@@ -19663,7 +19664,7 @@ subroutine dsytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$dsy
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri
 
 subroutine dsytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$dsytri_rook")
@@ -19678,7 +19679,7 @@ subroutine dsytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytri_rook
 
 subroutine dsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$dsytrs2")
@@ -19696,7 +19697,7 @@ subroutine dsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs2
 
 subroutine dsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dsytrs_3")
@@ -19714,7 +19715,7 @@ subroutine dsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs_3
 
 subroutine dsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$dsytrs_aa_2stage")
@@ -19734,7 +19735,7 @@ subroutine dsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs_aa_2stage
 
 subroutine dsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$dsytrs_aa")
@@ -19753,7 +19754,7 @@ subroutine dsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs_aa
 
 subroutine dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dsytrs")
@@ -19770,7 +19771,7 @@ subroutine dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs
 
 subroutine dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$dsytrs_rook")
@@ -19787,7 +19788,7 @@ subroutine dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dsytrs_rook
 
 subroutine dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dtbcon")
@@ -19806,7 +19807,7 @@ subroutine dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) bind(C, nam
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtbcon
 
 subroutine dtbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dtbrfs")
@@ -19831,7 +19832,7 @@ subroutine dtbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,i
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtbrfs
 
 subroutine dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$dtbtrs")
@@ -19850,7 +19851,7 @@ subroutine dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BL
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtbtrs
 
 subroutine dtfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BLAS77Interface$dtfsm")
@@ -19869,7 +19870,7 @@ subroutine dtfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BL
   integer(blas77_int) :: ldb
   real(blas77_f64) :: b(0:ldb-1,0:*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtfsm
 
 subroutine dtftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$dtftri")
@@ -19883,7 +19884,7 @@ subroutine dtftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$dtftr
   real(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtftri
 
 subroutine dtfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$dtfttp")
@@ -19897,7 +19898,7 @@ subroutine dtfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$dtftt
   real(blas77_f64) :: ap(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtfttp
 
 subroutine dtfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$dtfttr")
@@ -19912,7 +19913,7 @@ subroutine dtfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$dt
   real(blas77_f64) :: a(0:lda-1,0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtfttr
 
 subroutine dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info) bind(C, name="BLAS77Interface$dtgevc")
@@ -19936,7 +19937,7 @@ subroutine dtgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,inf
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgevc
 
 subroutine dtgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,n1,n2,work,lwork,info) bind(C, name="BLAS77Interface$dtgex2")
@@ -19961,7 +19962,7 @@ subroutine dtgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,n1,n2,work,lwork,info
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgex2
 
 subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) bind(C, name="BLAS77Interface$dtgexc")
@@ -19985,7 +19986,7 @@ subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,inf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgexc
 
 subroutine dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dtgsen")
@@ -20018,7 +20019,7 @@ subroutine dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgsen
 
 subroutine dtgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) bind(C, name="BLAS77Interface$dtgsja")
@@ -20051,7 +20052,7 @@ subroutine dtgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ld
   integer(blas77_int) :: ncycle
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgsja
 
 subroutine dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dtgsna")
@@ -20079,7 +20080,7 @@ subroutine dtgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgsna
 
 subroutine dtgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,iwork,pq,info) bind(C, name="BLAS77Interface$dtgsy2")
@@ -20109,7 +20110,7 @@ subroutine dtgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum
   integer(blas77_int) :: pq
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgsy2
 
 subroutine dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) bind(C, name="BLAS77Interface$dtgsyl")
@@ -20139,7 +20140,7 @@ subroutine dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,w
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtgsyl
 
 subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dtpcon")
@@ -20156,7 +20157,7 @@ subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpcon
 
 subroutine dtplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$dtplqt2")
@@ -20174,7 +20175,7 @@ subroutine dtplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtplqt2
 
 subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$dtplqt")
@@ -20194,7 +20195,7 @@ subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtplqt
 
 subroutine dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$dtpmlqt")
@@ -20219,7 +20220,7 @@ subroutine dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpmlqt
 
 subroutine dtpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$dtpmqrt")
@@ -20244,7 +20245,7 @@ subroutine dtpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpmqrt
 
 subroutine dtpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$dtpqrt2")
@@ -20262,7 +20263,7 @@ subroutine dtpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$d
   real(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpqrt2
 
 subroutine dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$dtpqrt")
@@ -20282,7 +20283,7 @@ subroutine dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpqrt
 
 subroutine dtprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$dtprfb")
@@ -20308,7 +20309,7 @@ subroutine dtprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,
   integer(blas77_int) :: ldwork
   real(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtprfb
 
 subroutine dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dtprfs")
@@ -20331,7 +20332,7 @@ subroutine dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,inf
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtprfs
 
 subroutine dtptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$dtptri")
@@ -20344,7 +20345,7 @@ subroutine dtptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$dtptri")
   real(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtptri
 
 subroutine dtptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$dtptrs")
@@ -20361,7 +20362,7 @@ subroutine dtptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Inte
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtptrs
 
 subroutine dtpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$dtpttf")
@@ -20375,7 +20376,7 @@ subroutine dtpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$dtptt
   real(blas77_f64) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpttf
 
 subroutine dtpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$dtpttr")
@@ -20389,7 +20390,7 @@ subroutine dtpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$dtpttr")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtpttr
 
 subroutine dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) bind(C, name="BLAS77Interface$dtrcon")
@@ -20407,7 +20408,7 @@ subroutine dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) bind(C, name="BL
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrcon
 
 subroutine dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info) bind(C, name="BLAS77Interface$dtrevc3")
@@ -20430,7 +20431,7 @@ subroutine dtrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,in
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrevc3
 
 subroutine dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) bind(C, name="BLAS77Interface$dtrevc")
@@ -20452,7 +20453,7 @@ subroutine dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) bin
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrevc
 
 subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) bind(C, name="BLAS77Interface$dtrexc")
@@ -20470,7 +20471,7 @@ subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrexc
 
 subroutine dtrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$dtrrfs")
@@ -20494,7 +20495,7 @@ subroutine dtrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrrfs
 
 subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$dtrsen")
@@ -20520,7 +20521,7 @@ subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrsen
 
 subroutine dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info) bind(C, name="BLAS77Interface$dtrsna")
@@ -20546,7 +20547,7 @@ subroutine dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrsna
 
 subroutine dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info) bind(C, name="BLAS77Interface$dtrsyl3")
@@ -20571,7 +20572,7 @@ subroutine dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swo
   real(blas77_f64) :: swork(ldswork,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrsyl3
 
 subroutine dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, name="BLAS77Interface$dtrsyl")
@@ -20592,7 +20593,7 @@ subroutine dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, nam
   real(blas77_f64) :: scale
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrsyl
 
 subroutine dtrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$dtrti2")
@@ -20606,7 +20607,7 @@ subroutine dtrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$dtrti2")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrti2
 
 subroutine dtrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$dtrtri")
@@ -20620,7 +20621,7 @@ subroutine dtrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$dtrtri")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrtri
 
 subroutine dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$dtrtrs")
@@ -20638,7 +20639,7 @@ subroutine dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77I
   real(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrtrs
 
 subroutine dtrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$dtrttf")
@@ -20653,7 +20654,7 @@ subroutine dtrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$dt
   real(blas77_f64) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrttf
 
 subroutine dtrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$dtrttp")
@@ -20667,7 +20668,7 @@ subroutine dtrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$dtrttp")
   real(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtrttp
 
 subroutine dtzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$dtzrqf")
@@ -20681,7 +20682,7 @@ subroutine dtzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$dtzrqf")
   real(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtzrqf
 
 subroutine dtzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$dtzrzf")
@@ -20697,7 +20698,7 @@ subroutine dtzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$d
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine dtzrzf
 
 function dzsum1(n,cx,incx) bind(C, name="BLAS77Interface$dzsum1")
@@ -20709,7 +20710,7 @@ function dzsum1(n,cx,incx) bind(C, name="BLAS77Interface$dzsum1")
   integer(blas77_int) :: incx
   real(blas77_f64) :: dzsum1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function dzsum1
 
 function icmax1(n,cx,incx) bind(C, name="BLAS77Interface$icmax1")
@@ -20721,7 +20722,7 @@ function icmax1(n,cx,incx) bind(C, name="BLAS77Interface$icmax1")
   integer(blas77_int) :: incx
   integer(blas77_int) :: icmax1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function icmax1
 
 function ieeeck(ispec,zero,one) bind(C, name="BLAS77Interface$ieeeck")
@@ -20733,7 +20734,7 @@ function ieeeck(ispec,zero,one) bind(C, name="BLAS77Interface$ieeeck")
   real(blas77_f32) :: one
   integer(blas77_int) :: ieeeck
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ieeeck
 
 function ilaclc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclc")
@@ -20746,7 +20747,7 @@ function ilaclc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclc")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ilaclc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaclc
 
 function ilaclr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclr")
@@ -20759,7 +20760,7 @@ function ilaclr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclr")
   complex(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ilaclr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaclr
 
 function iladiag(diag) bind(C, name="BLAS77Interface$iladiag")
@@ -20769,7 +20770,7 @@ function iladiag(diag) bind(C, name="BLAS77Interface$iladiag")
   character(len=1) :: diag
   integer(blas77_int) :: iladiag
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function iladiag
 
 function iladlc(m,n,a,lda) bind(C, name="BLAS77Interface$iladlc")
@@ -20782,7 +20783,7 @@ function iladlc(m,n,a,lda) bind(C, name="BLAS77Interface$iladlc")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: iladlc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function iladlc
 
 function iladlr(m,n,a,lda) bind(C, name="BLAS77Interface$iladlr")
@@ -20795,7 +20796,7 @@ function iladlr(m,n,a,lda) bind(C, name="BLAS77Interface$iladlr")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: iladlr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function iladlr
 
 function ilaenv2stage(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface$ilaenv2stage")
@@ -20811,7 +20812,7 @@ function ilaenv2stage(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface
   integer(blas77_int) :: n4
   integer(blas77_int) :: ilaenv2stage
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaenv2stage
 
 function ilaenv(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface$ilaenv")
@@ -20827,7 +20828,7 @@ function ilaenv(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface$ilaen
   integer(blas77_int) :: n4
   integer(blas77_int) :: ilaenv
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaenv
 
 function ilaprec(prec) bind(C, name="BLAS77Interface$ilaprec")
@@ -20837,7 +20838,7 @@ function ilaprec(prec) bind(C, name="BLAS77Interface$ilaprec")
   character(len=1) :: prec
   integer(blas77_int) :: ilaprec
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaprec
 
 function ilaslc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslc")
@@ -20850,7 +20851,7 @@ function ilaslc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslc")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ilaslc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaslc
 
 function ilaslr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslr")
@@ -20863,7 +20864,7 @@ function ilaslr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslr")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: ilaslr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilaslr
 
 function ilatrans(trans) bind(C, name="BLAS77Interface$ilatrans")
@@ -20873,7 +20874,7 @@ function ilatrans(trans) bind(C, name="BLAS77Interface$ilatrans")
   character(len=1) :: trans
   integer(blas77_int) :: ilatrans
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilatrans
 
 function ilauplo(uplo) bind(C, name="BLAS77Interface$ilauplo")
@@ -20883,7 +20884,7 @@ function ilauplo(uplo) bind(C, name="BLAS77Interface$ilauplo")
   character(len=1) :: uplo
   integer(blas77_int) :: ilauplo
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilauplo
 
 function ilazlc(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlc")
@@ -20896,7 +20897,7 @@ function ilazlc(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlc")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: ilazlc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilazlc
 
 function ilazlr(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlr")
@@ -20909,7 +20910,7 @@ function ilazlr(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlr")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: ilazlr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function ilazlr
 
 function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) bind(C, name="BLAS77Interface$iparam2stage")
@@ -20925,7 +20926,7 @@ function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) bind(C, name="BLAS77Interf
   integer(blas77_int) :: nxi
   integer(blas77_int) :: iparam2stage
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function iparam2stage
 
 function iparmq(ispec,name,opts,n,ilo,ihi,lwork) bind(C, name="BLAS77Interface$iparmq")
@@ -20941,7 +20942,7 @@ function iparmq(ispec,name,opts,n,ilo,ihi,lwork) bind(C, name="BLAS77Interface$i
   integer(blas77_int) :: lwork
   integer(blas77_int) :: iparmq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function iparmq
 
 function izmax1(n,zx,incx) bind(C, name="BLAS77Interface$izmax1")
@@ -20953,7 +20954,7 @@ function izmax1(n,zx,incx) bind(C, name="BLAS77Interface$izmax1")
   integer(blas77_int) :: incx
   integer(blas77_int) :: izmax1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function izmax1
 
 function lsamen(n,ca,cb) bind(C, name="BLAS77Interface$lsamen")
@@ -20965,7 +20966,7 @@ function lsamen(n,ca,cb) bind(C, name="BLAS77Interface$lsamen")
   character(len=*) :: cb
   logical(blas77_int) :: lsamen
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function lsamen
 
 subroutine sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info) bind(C, name="BLAS77Interface$sbbcsd")
@@ -21002,7 +21003,7 @@ subroutine sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sbbcsd
 
 subroutine sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) bind(C, name="BLAS77Interface$sbdsdc")
@@ -21024,7 +21025,7 @@ subroutine sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sbdsdc
 
 subroutine sbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C, name="BLAS77Interface$sbdsqr")
@@ -21047,7 +21048,7 @@ subroutine sbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C,
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sbdsqr
 
 subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) bind(C, name="BLAS77Interface$sbdsvdx")
@@ -21072,7 +21073,7 @@ subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sbdsvdx
 
 function scsum1(n,cx,incx) bind(C, name="BLAS77Interface$scsum1")
@@ -21084,7 +21085,7 @@ function scsum1(n,cx,incx) bind(C, name="BLAS77Interface$scsum1")
   integer(blas77_int) :: incx
   real(blas77_f32) :: scsum1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function scsum1
 
 subroutine sdisna(job,m,n,d,sep,info) bind(C, name="BLAS77Interface$sdisna")
@@ -21098,7 +21099,7 @@ subroutine sdisna(job,m,n,d,sep,info) bind(C, name="BLAS77Interface$sdisna")
   real(blas77_f32) :: sep(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sdisna
 
 subroutine sgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info) bind(C, name="BLAS77Interface$sgbbrd")
@@ -21124,7 +21125,7 @@ subroutine sgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,info) 
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbbrd
 
 subroutine sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$sgbcon")
@@ -21144,7 +21145,7 @@ subroutine sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) bind(C,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbcon
 
 subroutine sgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$sgbequ")
@@ -21164,7 +21165,7 @@ subroutine sgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="B
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbequ
 
 subroutine sgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$sgbequb")
@@ -21184,7 +21185,7 @@ subroutine sgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbequb
 
 subroutine sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgbrfs")
@@ -21211,7 +21212,7 @@ subroutine sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,ber
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbrfs
 
 subroutine sgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sgbrfsx")
@@ -21246,7 +21247,7 @@ subroutine sgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbrfsx
 
 subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sgbsv")
@@ -21264,7 +21265,7 @@ subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbsv
 
 subroutine sgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgbsvx")
@@ -21296,7 +21297,7 @@ subroutine sgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbsvx
 
 subroutine sgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sgbsvxx")
@@ -21333,7 +21334,7 @@ subroutine sgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ld
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbsvxx
 
 subroutine sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$sgbtf2")
@@ -21349,7 +21350,7 @@ subroutine sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$sgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbtf2
 
 subroutine sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$sgbtrf")
@@ -21365,7 +21366,7 @@ subroutine sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$sgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbtrf
 
 subroutine sgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sgbtrs")
@@ -21384,7 +21385,7 @@ subroutine sgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgbtrs
 
 subroutine sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Interface$sgebak")
@@ -21402,7 +21403,7 @@ subroutine sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgebak
 
 subroutine sgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$sgebal")
@@ -21418,7 +21419,7 @@ subroutine sgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$
   real(blas77_f32) :: scale(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgebal
 
 subroutine sgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interface$sgebd2")
@@ -21436,7 +21437,7 @@ subroutine sgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgebd2
 
 subroutine sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77Interface$sgebrd")
@@ -21455,7 +21456,7 @@ subroutine sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgebrd
 
 subroutine sgecon(norm,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$sgecon")
@@ -21472,7 +21473,7 @@ subroutine sgecon(norm,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgecon
 
 subroutine sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sgedmd")
@@ -21510,7 +21511,7 @@ subroutine sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,ime
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgedmd
 
 subroutine sgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,v,ldv,s,lds,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sgedmdq")
@@ -21552,7 +21553,7 @@ subroutine sgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nr
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgedmdq
 
 subroutine sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$sgeequ")
@@ -21570,7 +21571,7 @@ subroutine sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeequ
 
 subroutine sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$sgeequb")
@@ -21588,7 +21589,7 @@ subroutine sgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77In
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeequb
 
 
@@ -21612,7 +21613,7 @@ subroutine sgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeev
 
 subroutine sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgeevx")
@@ -21643,7 +21644,7 @@ subroutine sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeevx
 
 subroutine sgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,info) bind(C, name="BLAS77Interface$sgegs")
@@ -21668,7 +21669,7 @@ subroutine sgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alphar,alphai,beta,vsl,ldvsl,vsr,ld
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgegs
 
 subroutine sgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) bind(C, name="BLAS77Interface$sgegv")
@@ -21693,7 +21694,7 @@ subroutine sgegv(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,wo
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgegv
 
 subroutine sgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgehd2")
@@ -21709,7 +21710,7 @@ subroutine sgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgehd2
 
 subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgehrd")
@@ -21726,7 +21727,7 @@ subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgehrd
 
 subroutine sgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgejsv")
@@ -21753,7 +21754,7 @@ subroutine sgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,work,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgejsv
 
 subroutine sgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgelq2")
@@ -21768,7 +21769,7 @@ subroutine sgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgelq2"
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelq2
 
 subroutine sgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$sgelq")
@@ -21785,7 +21786,7 @@ subroutine sgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelq
 
 subroutine sgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgelqf")
@@ -21801,7 +21802,7 @@ subroutine sgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelqf
 
 subroutine sgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$sgelqs")
@@ -21820,7 +21821,7 @@ subroutine sgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelqs
 
 subroutine sgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgelqt3")
@@ -21835,7 +21836,7 @@ subroutine sgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgelqt3")
   real(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelqt3
 
 subroutine sgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$sgelqt")
@@ -21852,7 +21853,7 @@ subroutine sgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$sg
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelqt
 
 subroutine sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$sgels")
@@ -21871,7 +21872,7 @@ subroutine sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgels
 
 subroutine sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgelsd")
@@ -21893,7 +21894,7 @@ subroutine sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info) bind(
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelsd
 
 subroutine sgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) bind(C, name="BLAS77Interface$sgelss")
@@ -21914,7 +21915,7 @@ subroutine sgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelss
 
 subroutine sgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$sgelst")
@@ -21933,7 +21934,7 @@ subroutine sgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelst
 
 subroutine sgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) bind(C, name="BLAS77Interface$sgelsx")
@@ -21953,7 +21954,7 @@ subroutine sgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) bind(C, name="
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelsx
 
 subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) bind(C, name="BLAS77Interface$sgelsy")
@@ -21974,7 +21975,7 @@ subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgelsy
 
 subroutine sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sgemlq")
@@ -21996,7 +21997,7 @@ subroutine sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgemlq
 
 subroutine sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$sgemlqt")
@@ -22018,7 +22019,7 @@ subroutine sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgemlqt
 
 subroutine sgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sgemqr")
@@ -22040,7 +22041,7 @@ subroutine sgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgemqr
 
 subroutine sgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$sgemqrt")
@@ -22062,7 +22063,7 @@ subroutine sgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgemqrt
 
 subroutine sgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeql2")
@@ -22077,7 +22078,7 @@ subroutine sgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeql2"
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeql2
 
 subroutine sgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgeqlf")
@@ -22093,7 +22094,7 @@ subroutine sgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqlf
 
 subroutine sgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgeqp3")
@@ -22110,7 +22111,7 @@ subroutine sgeqp3(m,n,a,lda,jpvt,tau,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqp3
 
 subroutine sgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgeqp3rk")
@@ -22135,7 +22136,7 @@ subroutine sgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,j
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqp3rk
 
 subroutine sgeqpf(m,n,a,lda,jpvt,tau,work,info) bind(C, name="BLAS77Interface$sgeqpf")
@@ -22151,7 +22152,7 @@ subroutine sgeqpf(m,n,a,lda,jpvt,tau,work,info) bind(C, name="BLAS77Interface$sg
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqpf
 
 subroutine sgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeqr2")
@@ -22166,7 +22167,7 @@ subroutine sgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeqr2"
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqr2
 
 subroutine sgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeqr2p")
@@ -22181,7 +22182,7 @@ subroutine sgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgeqr2
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqr2p
 
 subroutine sgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$sgeqr")
@@ -22198,7 +22199,7 @@ subroutine sgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqr
 
 subroutine sgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgeqrf")
@@ -22214,7 +22215,7 @@ subroutine sgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrf
 
 subroutine sgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgeqrfp")
@@ -22230,7 +22231,7 @@ subroutine sgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrfp
 
 subroutine sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$sgeqrs")
@@ -22249,7 +22250,7 @@ subroutine sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrs
 
 subroutine sgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgeqrt2")
@@ -22264,7 +22265,7 @@ subroutine sgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgeqrt2")
   real(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrt2
 
 subroutine sgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgeqrt3")
@@ -22279,7 +22280,7 @@ subroutine sgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$sgeqrt3")
   real(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrt3
 
 subroutine sgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$sgeqrt")
@@ -22296,7 +22297,7 @@ subroutine sgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$sg
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgeqrt
 
 subroutine sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgerfs")
@@ -22321,7 +22322,7 @@ subroutine sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgerfs
 
 subroutine sgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sgerfsx")
@@ -22354,7 +22355,7 @@ subroutine sgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,b
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgerfsx
 
 subroutine sgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgerq2")
@@ -22369,7 +22370,7 @@ subroutine sgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sgerq2"
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgerq2
 
 subroutine sgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sgerqf")
@@ -22385,7 +22386,7 @@ subroutine sgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgerqf
 
 subroutine sgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$sgesc2")
@@ -22400,7 +22401,7 @@ subroutine sgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$sge
   integer(blas77_int) :: jpiv(*)
   real(blas77_f32) :: scale
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesc2
 
 subroutine sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgesdd")
@@ -22422,7 +22423,7 @@ subroutine sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, 
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesdd
 
 subroutine sgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sgesv")
@@ -22438,7 +22439,7 @@ subroutine sgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sge
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesv
 
 subroutine sgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) bind(C, name="BLAS77Interface$sgesvd")
@@ -22460,7 +22461,7 @@ subroutine sgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvd
 
 subroutine sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$sgesvdq")
@@ -22490,7 +22491,7 @@ subroutine sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwor
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvdq
 
 subroutine sgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sgesvdx")
@@ -22519,7 +22520,7 @@ subroutine sgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvdx
 
 subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) bind(C, name="BLAS77Interface$sgesvj")
@@ -22541,7 +22542,7 @@ subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) bind(C,
   real(blas77_f32) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvj
 
 subroutine sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgesvx")
@@ -22571,7 +22572,7 @@ subroutine sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rco
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvx
 
 subroutine sgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sgesvxx")
@@ -22606,7 +22607,7 @@ subroutine sgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rc
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgesvxx
 
 subroutine sgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$sgetc2")
@@ -22620,7 +22621,7 @@ subroutine sgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$sgetc2")
   integer(blas77_int) :: jpiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetc2
 
 subroutine sgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetf2")
@@ -22634,7 +22635,7 @@ subroutine sgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetf2
 
 subroutine sgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetrf2")
@@ -22648,7 +22649,7 @@ subroutine sgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetrf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetrf2
 
 subroutine sgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetrf")
@@ -22662,7 +22663,7 @@ subroutine sgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$sgetrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetrf
 
 subroutine sgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$sgetri")
@@ -22677,7 +22678,7 @@ subroutine sgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$sg
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetri
 
 subroutine sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sgetrs")
@@ -22694,7 +22695,7 @@ subroutine sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interf
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetrs
 
 subroutine sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$sgetsls")
@@ -22713,7 +22714,7 @@ subroutine sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetsls
 
 subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$sgetsqrhrt")
@@ -22733,7 +22734,7 @@ subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgetsqrhrt
 
 subroutine sggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="BLAS77Interface$sggbak")
@@ -22752,7 +22753,7 @@ subroutine sggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="B
   real(blas77_f32) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggbak
 
 subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, name="BLAS77Interface$sggbal")
@@ -22772,7 +22773,7 @@ subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, nam
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggbal
 
 
@@ -22800,7 +22801,7 @@ subroutine sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,w
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggev3
 
 subroutine sggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) bind(C, name="BLAS77Interface$sggev")
@@ -22825,7 +22826,7 @@ subroutine sggev(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,wo
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggev
 
 subroutine sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info) bind(C, name="BLAS77Interface$sggevx")
@@ -22862,7 +22863,7 @@ subroutine sggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,l
   logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggevx
 
 subroutine sggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77Interface$sggglm")
@@ -22883,7 +22884,7 @@ subroutine sggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggglm
 
 subroutine sgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$sgghd3")
@@ -22907,7 +22908,7 @@ subroutine sgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgghd3
 
 subroutine sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, name="BLAS77Interface$sgghrd")
@@ -22929,7 +22930,7 @@ subroutine sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, na
   real(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgghrd
 
 subroutine sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77Interface$sgglse")
@@ -22950,7 +22951,7 @@ subroutine sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgglse
 
 subroutine sggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$sggqrf")
@@ -22970,7 +22971,7 @@ subroutine sggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggqrf
 
 subroutine sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$sggrqf")
@@ -22990,7 +22991,7 @@ subroutine sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggrqf
 
 subroutine sggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sggsvd3")
@@ -23022,7 +23023,7 @@ subroutine sggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggsvd3
 
 subroutine sggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,iwork,info) bind(C, name="BLAS77Interface$sggsvd")
@@ -23053,7 +23054,7 @@ subroutine sggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggsvd
 
 subroutine sggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,lwork,info) bind(C, name="BLAS77Interface$sggsvp3")
@@ -23086,7 +23087,7 @@ subroutine sggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggsvp3
 
 subroutine sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) bind(C, name="BLAS77Interface$sggsvp")
@@ -23118,7 +23119,7 @@ subroutine sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,l
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sggsvp
 
 subroutine sgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$sgsvj0")
@@ -23143,7 +23144,7 @@ subroutine sgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,
   real(blas77_f32) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgsvj0
 
 subroutine sgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$sgsvj1")
@@ -23169,7 +23170,7 @@ subroutine sgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   real(blas77_f32) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgsvj1
 
 subroutine sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$sgtcon")
@@ -23189,7 +23190,7 @@ subroutine sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgtcon
 
 subroutine sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgtrfs")
@@ -23217,7 +23218,7 @@ subroutine sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgtrfs
 
 subroutine sgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$sgtsv")
@@ -23233,7 +23234,7 @@ subroutine sgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$sgtsv"
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgtsv
 
 subroutine sgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sgtsvx")
@@ -23263,7 +23264,7 @@ subroutine sgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcon
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgtsvx
 
 subroutine sgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$sgttrf")
@@ -23278,7 +23279,7 @@ subroutine sgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$sgttrf"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgttrf
 
 subroutine sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sgttrs")
@@ -23297,7 +23298,7 @@ subroutine sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgttrs
 
 subroutine sgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Interface$sgtts2")
@@ -23315,7 +23316,7 @@ subroutine sgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Inte
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sgtts2
 
 subroutine shgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$shgeqz")
@@ -23343,7 +23344,7 @@ subroutine shgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alphar,alphai,beta,q,ldq
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine shgeqz
 
 subroutine shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) bind(C, name="BLAS77Interface$shsein")
@@ -23370,7 +23371,7 @@ subroutine shsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,wo
   integer(blas77_int) :: ifailr(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine shsein
 
 subroutine shseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$shseqr")
@@ -23392,7 +23393,7 @@ subroutine shseqr(job,compz,n,ilo,ihi,h,ldh,wr,wi,z,ldz,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine shseqr
 
 function sisnan(sin) bind(C, name="BLAS77Interface$sisnan")
@@ -23402,7 +23403,7 @@ function sisnan(sin) bind(C, name="BLAS77Interface$sisnan")
   real(blas77_f32),intent(in) :: sin
   logical(blas77_int) :: sisnan
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sisnan
 
 subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$sla_gbamv")
@@ -23423,7 +23424,7 @@ subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, n
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_gbamv
 
 function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$sla_gbrcond")
@@ -23446,7 +23447,7 @@ function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwor
   integer(blas77_int) :: iwork(*)
   real(blas77_f32) :: sla_gbrcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_gbrcond
 
 subroutine sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$sla_gbrfsx_extended")
@@ -23485,7 +23486,7 @@ subroutine sla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,lda
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_gbrfsx_extended
 
 function sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Interface$sla_gbrpvgrw")
@@ -23502,7 +23503,7 @@ function sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   real(blas77_f32) :: afb(ldafb,*)
   real(blas77_f32) :: sla_gbrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_gbrpvgrw
 
 subroutine sla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$sla_geamv")
@@ -23521,7 +23522,7 @@ subroutine sla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLA
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_geamv
 
 function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$sla_gercond")
@@ -23542,7 +23543,7 @@ function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C,
   integer(blas77_int) :: iwork(*)
   real(blas77_f32) :: sla_gercond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_gercond
 
 subroutine sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$sla_gerfsx_extended")
@@ -23579,7 +23580,7 @@ subroutine sla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,co
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_gerfsx_extended
 
 function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$sla_gerpvgrw")
@@ -23594,7 +23595,7 @@ function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$sla_g
   real(blas77_f32) :: af(ldaf,*)
   real(blas77_f32) :: sla_gerpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_gerpvgrw
 
 subroutine sla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$sla_lin_berr")
@@ -23608,7 +23609,7 @@ subroutine sla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$sl
   real(blas77_f32) :: ayb(n,nrhs)
   real(blas77_f32) :: berr(nrhs)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_lin_berr
 
 function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$sla_porcond")
@@ -23628,7 +23629,7 @@ function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name=
   integer(blas77_int) :: iwork(*)
   real(blas77_f32) :: sla_porcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_porcond
 
 subroutine sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$sla_porfsx_extended")
@@ -23664,7 +23665,7 @@ subroutine sla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ld
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_porfsx_extended
 
 function sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interface$sla_porpvgrw")
@@ -23680,7 +23681,7 @@ function sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: sla_porpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_porpvgrw
 
 subroutine sla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$sla_syamv")
@@ -23698,7 +23699,7 @@ subroutine sla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f32) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_syamv
 
 function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, name="BLAS77Interface$sla_syrcond")
@@ -23719,7 +23720,7 @@ function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, 
   integer(blas77_int) :: iwork(*)
   real(blas77_f32) :: sla_syrcond
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_syrcond
 
 subroutine sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$sla_syrfsx_extended")
@@ -23756,7 +23757,7 @@ subroutine sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_syrfsx_extended
 
 function sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$sla_syrpvgrw")
@@ -23774,7 +23775,7 @@ function sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: sla_syrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function sla_syrpvgrw
 
 subroutine sla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$sla_wwaddw")
@@ -23786,7 +23787,7 @@ subroutine sla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$sla_wwaddw")
   real(blas77_f32) :: y(*)
   real(blas77_f32) :: w(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sla_wwaddw
 
 subroutine slabad(small,large) bind(C, name="BLAS77Interface$slabad")
@@ -23796,7 +23797,7 @@ subroutine slabad(small,large) bind(C, name="BLAS77Interface$slabad")
   real(blas77_f32) :: small
   real(blas77_f32) :: large
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slabad
 
 subroutine slabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77Interface$slabrd")
@@ -23817,7 +23818,7 @@ subroutine slabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77In
   integer(blas77_int) :: ldy
   real(blas77_f32) :: y(ldy,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slabrd
 
 subroutine slacn2(n,v,x,isgn,est,kase,isave) bind(C, name="BLAS77Interface$slacn2")
@@ -23832,7 +23833,7 @@ subroutine slacn2(n,v,x,isgn,est,kase,isave) bind(C, name="BLAS77Interface$slacn
   integer(blas77_int) :: kase
   integer(blas77_int) :: isave(3)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slacn2
 
 subroutine slacon(n,v,x,isgn,est,kase) bind(C, name="BLAS77Interface$slacon")
@@ -23846,7 +23847,7 @@ subroutine slacon(n,v,x,isgn,est,kase) bind(C, name="BLAS77Interface$slacon")
   real(blas77_f32) :: est
   integer(blas77_int) :: kase
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slacon
 
 subroutine slacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$slacpy")
@@ -23861,7 +23862,7 @@ subroutine slacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$slacpy")
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slacpy
 
 subroutine sladiv(a,b,c,d,p,q) bind(C, name="BLAS77Interface$sladiv")
@@ -23875,7 +23876,7 @@ subroutine sladiv(a,b,c,d,p,q) bind(C, name="BLAS77Interface$sladiv")
   real(blas77_f32) :: p
   real(blas77_f32) :: q
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sladiv
 
 subroutine slae2(a,b,c,rt1,rt2) bind(C, name="BLAS77Interface$slae2")
@@ -23888,7 +23889,7 @@ subroutine slae2(a,b,c,rt1,rt2) bind(C, name="BLAS77Interface$slae2")
   real(blas77_f32) :: rt1
   real(blas77_f32) :: rt2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slae2
 
 subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) bind(C, name="BLAS77Interface$slaebz")
@@ -23916,7 +23917,7 @@ subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaebz
 
 subroutine slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) bind(C, name="BLAS77Interface$slaed0")
@@ -23936,7 +23937,7 @@ subroutine slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) bind(C, n
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed0
 
 subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) bind(C, name="BLAS77Interface$slaed1")
@@ -23954,7 +23955,7 @@ subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) bind(C, name="BLAS
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed1
 
 subroutine slaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info) bind(C, name="BLAS77Interface$slaed2")
@@ -23979,7 +23980,7 @@ subroutine slaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,colty
   integer(blas77_int) :: coltyp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed2
 
 subroutine slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) bind(C, name="BLAS77Interface$slaed3")
@@ -24001,7 +24002,7 @@ subroutine slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) bind(C, name
   real(blas77_f32) :: s(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed3
 
 subroutine slaed4(n,i,d,z,delta,rho,dlam,info) bind(C, name="BLAS77Interface$slaed4")
@@ -24017,7 +24018,7 @@ subroutine slaed4(n,i,d,z,delta,rho,dlam,info) bind(C, name="BLAS77Interface$sla
   real(blas77_f32) :: dlam
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed4
 
 subroutine slaed5(i,d,z,delta,rho,dlam) bind(C, name="BLAS77Interface$slaed5")
@@ -24031,7 +24032,7 @@ subroutine slaed5(i,d,z,delta,rho,dlam) bind(C, name="BLAS77Interface$slaed5")
   real(blas77_f32) :: rho
   real(blas77_f32) :: dlam
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed5
 
 subroutine slaed6(kniter,orgati,rho,d,z,finit,tau,info) bind(C, name="BLAS77Interface$slaed6")
@@ -24047,7 +24048,7 @@ subroutine slaed6(kniter,orgati,rho,d,z,finit,tau,info) bind(C, name="BLAS77Inte
   real(blas77_f32) :: tau
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed6
 
 subroutine slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) bind(C, name="BLAS77Interface$slaed7")
@@ -24077,7 +24078,7 @@ subroutine slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qst
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed7
 
 subroutine slaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,perm,givptr,givcol,givnum,indxp,indx,info) bind(C, name="BLAS77Interface$slaed8")
@@ -24107,7 +24108,7 @@ subroutine slaed8(icompq,k,n,qsiz,d,q,ldq,indxq,rho,cutpnt,z,dlambda,q2,ldq2,w,p
   integer(blas77_int) :: indx(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed8
 
 subroutine slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) bind(C, name="BLAS77Interface$slaed9")
@@ -24128,7 +24129,7 @@ subroutine slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) bind(C, nam
   real(blas77_f32) :: s(lds,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaed9
 
 subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) bind(C, name="BLAS77Interface$slaeda")
@@ -24150,7 +24151,7 @@ subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,
   real(blas77_f32) :: ztemp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaeda
 
 subroutine slaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignum,info) bind(C, name="BLAS77Interface$slaein")
@@ -24174,7 +24175,7 @@ subroutine slaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignu
   real(blas77_f32) :: bignum
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaein
 
 subroutine slaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$slaev2")
@@ -24189,7 +24190,7 @@ subroutine slaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$slaev2")
   real(blas77_f32) :: cs1
   real(blas77_f32) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaev2
 
 subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) bind(C, name="BLAS77Interface$slaexc")
@@ -24208,7 +24209,7 @@ subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) bind(C, name="BLAS77In
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaexc
 
 subroutine slag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) bind(C, name="BLAS77Interface$slag2")
@@ -24226,7 +24227,7 @@ subroutine slag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) bind(C, name="BLAS
   real(blas77_f32) :: wr2
   real(blas77_f32) :: wi
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slag2
 
 subroutine slag2d(m,n,sa,ldsa,a,lda,info) bind(C, name="BLAS77Interface$slag2d")
@@ -24241,7 +24242,7 @@ subroutine slag2d(m,n,sa,ldsa,a,lda,info) bind(C, name="BLAS77Interface$slag2d")
   real(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slag2d
 
 subroutine slags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name="BLAS77Interface$slags2")
@@ -24262,7 +24263,7 @@ subroutine slags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name=
   real(blas77_f32) :: csq
   real(blas77_f32) :: snq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slags2
 
 subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) bind(C, name="BLAS77Interface$slagtf")
@@ -24279,7 +24280,7 @@ subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) bind(C, name="BLAS77Interface$sl
   integer(blas77_int) :: in(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slagtf
 
 subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLAS77Interface$slagtm")
@@ -24299,7 +24300,7 @@ subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLA
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slagtm
 
 subroutine slagts(job,n,a,b,c,d,in,y,tol,info) bind(C, name="BLAS77Interface$slagts")
@@ -24317,7 +24318,7 @@ subroutine slagts(job,n,a,b,c,d,in,y,tol,info) bind(C, name="BLAS77Interface$sla
   real(blas77_f32) :: tol
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slagts
 
 subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) bind(C, name="BLAS77Interface$slagv2")
@@ -24336,7 +24337,7 @@ subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) bind(C, name="
   real(blas77_f32) :: csr
   real(blas77_f32) :: snr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slagv2
 
 subroutine slahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) bind(C, name="BLAS77Interface$slahqr")
@@ -24358,7 +24359,7 @@ subroutine slahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) bind(C
   real(blas77_f32) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slahqr
 
 subroutine slahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$slahr2")
@@ -24376,7 +24377,7 @@ subroutine slahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$sl
   integer(blas77_int) :: ldy
   real(blas77_f32) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slahr2
 
 subroutine slahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$slahrd")
@@ -24394,7 +24395,7 @@ subroutine slahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$sl
   integer(blas77_int) :: ldy
   real(blas77_f32) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slahrd
 
 subroutine slaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface$slaic1")
@@ -24411,7 +24412,7 @@ subroutine slaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface
   real(blas77_f32) :: s
   real(blas77_f32) :: c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaic1
 
 function slaisnan(sin1,sin2) bind(C, name="BLAS77Interface$slaisnan")
@@ -24422,7 +24423,7 @@ function slaisnan(sin1,sin2) bind(C, name="BLAS77Interface$slaisnan")
   real(blas77_f32),intent(in) :: sin2
   logical(blas77_int) :: slaisnan
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slaisnan
 
 subroutine slaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) bind(C, name="BLAS77Interface$slaln2")
@@ -24448,7 +24449,7 @@ subroutine slaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm
   real(blas77_f32) :: xnorm
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaln2
 
 subroutine slals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,info) bind(C, name="BLAS77Interface$slals0")
@@ -24480,7 +24481,7 @@ subroutine slals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slals0
 
 subroutine slalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) bind(C, name="BLAS77Interface$slalsa")
@@ -24514,7 +24515,7 @@ subroutine slalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,pole
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slalsa
 
 subroutine slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info) bind(C, name="BLAS77Interface$slalsd")
@@ -24535,7 +24536,7 @@ subroutine slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info) bind(
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slalsd
 
 subroutine slamrg(n1,n2,a,strd1,strd2,index) bind(C, name="BLAS77Interface$slamrg")
@@ -24549,7 +24550,7 @@ subroutine slamrg(n1,n2,a,strd1,strd2,index) bind(C, name="BLAS77Interface$slamr
   integer(blas77_int) :: strd2
   integer(blas77_int) :: index(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slamrg
 
 subroutine slamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$slamswlq")
@@ -24573,7 +24574,7 @@ subroutine slamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slamswlq
 
 subroutine slamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$slamtsqr")
@@ -24597,7 +24598,7 @@ subroutine slamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slamtsqr
 
 function slaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$slaneg")
@@ -24612,7 +24613,7 @@ function slaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$slaneg")
   integer(blas77_int) :: r
   integer(blas77_int) :: slaneg
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slaneg
 
 function slangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$slangb")
@@ -24628,7 +24629,7 @@ function slangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$slangb"
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slangb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slangb
 
 function slange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$slange")
@@ -24643,7 +24644,7 @@ function slange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$slange")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slange
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slange
 
 function slangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$slangt")
@@ -24657,7 +24658,7 @@ function slangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$slangt")
   real(blas77_f32) :: du(*)
   real(blas77_f32) :: slangt
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slangt
 
 function slanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$slanhs")
@@ -24671,7 +24672,7 @@ function slanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$slanhs")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slanhs
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slanhs
 
 function slansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$slansb")
@@ -24687,7 +24688,7 @@ function slansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$slansb
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slansb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slansb
 
 function slansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$slansf")
@@ -24702,7 +24703,7 @@ function slansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$slansf"
   real(blas77_f32) :: work(0:*)
   real(blas77_f32) :: slansf
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slansf
 
 function slansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$slansp")
@@ -24716,7 +24717,7 @@ function slansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$slansp")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slansp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slansp
 
 function slanst(norm,n,d,e) bind(C, name="BLAS77Interface$slanst")
@@ -24729,7 +24730,7 @@ function slanst(norm,n,d,e) bind(C, name="BLAS77Interface$slanst")
   real(blas77_f32) :: e(*)
   real(blas77_f32) :: slanst
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slanst
 
 function slansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$slansy")
@@ -24744,7 +24745,7 @@ function slansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$slansy")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slansy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slansy
 
 function slantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$slantb")
@@ -24761,7 +24762,7 @@ function slantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slantb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slantb
 
 function slantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$slantp")
@@ -24776,7 +24777,7 @@ function slantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$slantp")
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slantp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slantp
 
 function slantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$slantr")
@@ -24793,7 +24794,7 @@ function slantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$sla
   real(blas77_f32) :: work(*)
   real(blas77_f32) :: slantr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slantr
 
 subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) bind(C, name="BLAS77Interface$slanv2")
@@ -24811,7 +24812,7 @@ subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: cs
   real(blas77_f32) :: sn
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slanv2
 
 subroutine slaorhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$slaorhr_col_getrfnp2")
@@ -24825,7 +24826,7 @@ subroutine slaorhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$
   real(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaorhr_col_getrfnp2
 
 subroutine slaorhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$slaorhr_col_getrfnp")
@@ -24839,7 +24840,7 @@ subroutine slaorhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaorhr_col_getrfnp
 
 subroutine slapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$slapll")
@@ -24853,7 +24854,7 @@ subroutine slapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$slapll")
   integer(blas77_int) :: incy
   real(blas77_f32) :: ssmin
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slapll
 
 subroutine slapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$slapmr")
@@ -24867,7 +24868,7 @@ subroutine slapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$slapmr")
   real(blas77_f32) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slapmr
 
 subroutine slapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$slapmt")
@@ -24881,7 +24882,7 @@ subroutine slapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$slapmt")
   real(blas77_f32) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slapmt
 
 function slapy2(x,y) bind(C, name="BLAS77Interface$slapy2")
@@ -24892,7 +24893,7 @@ function slapy2(x,y) bind(C, name="BLAS77Interface$slapy2")
   real(blas77_f32) :: y
   real(blas77_f32) :: slapy2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slapy2
 
 function slapy3(x,y,z) bind(C, name="BLAS77Interface$slapy3")
@@ -24904,7 +24905,7 @@ function slapy3(x,y,z) bind(C, name="BLAS77Interface$slapy3")
   real(blas77_f32) :: z
   real(blas77_f32) :: slapy3
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slapy3
 
 subroutine slaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$slaqgb")
@@ -24924,7 +24925,7 @@ subroutine slaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqgb
 
 subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$slaqge")
@@ -24942,7 +24943,7 @@ subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77In
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqge
 
 subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77Interface$slaqp2")
@@ -24960,7 +24961,7 @@ subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77In
   real(blas77_f32) :: vn2(*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqp2
 
 subroutine slaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) bind(C, name="BLAS77Interface$slaqp2rk")
@@ -24988,7 +24989,7 @@ subroutine slaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,max
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqp2rk
 
 subroutine slaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) bind(C, name="BLAS77Interface$slaqp3rk")
@@ -25020,7 +25021,7 @@ subroutine slaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqp3rk
 
 subroutine slaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, name="BLAS77Interface$slaqps")
@@ -25042,7 +25043,7 @@ subroutine slaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, na
   integer(blas77_int) :: ldf
   real(blas77_f32) :: f(ldf,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqps
 
 subroutine slaqr0(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$slaqr0")
@@ -25066,7 +25067,7 @@ subroutine slaqr0(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,i
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr0
 
 subroutine slaqr1(n,h,ldh,sr1,si1,sr2,si2,v) bind(C, name="BLAS77Interface$slaqr1")
@@ -25082,7 +25083,7 @@ subroutine slaqr1(n,h,ldh,sr1,si1,sr2,si2,v) bind(C, name="BLAS77Interface$slaqr
   real(blas77_f32) :: si2
   real(blas77_f32) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr1
 
 subroutine slaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$slaqr2")
@@ -25116,7 +25117,7 @@ subroutine slaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr2
 
 subroutine slaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$slaqr3")
@@ -25150,7 +25151,7 @@ subroutine slaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sr,si,v
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr3
 
 subroutine slaqr4(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$slaqr4")
@@ -25174,7 +25175,7 @@ subroutine slaqr4(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,work,lwork,i
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr4
 
 subroutine slaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) bind(C, name="BLAS77Interface$slaqr5")
@@ -25207,7 +25208,7 @@ subroutine slaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,
   integer(blas77_int) :: ldwh
   real(blas77_f32) :: wh(ldwh,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqr5
 
 subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$slaqsb")
@@ -25224,7 +25225,7 @@ subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqsb
 
 subroutine slaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$slaqsp")
@@ -25239,7 +25240,7 @@ subroutine slaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$sl
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqsp
 
 subroutine slaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$slaqsy")
@@ -25255,7 +25256,7 @@ subroutine slaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f32) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqsy
 
 subroutine slaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) bind(C, name="BLAS77Interface$slaqtr")
@@ -25274,7 +25275,7 @@ subroutine slaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) bind(C, name="BLAS7
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqtr
 
 subroutine slaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,work,lwork,rec,info) bind(C, name="BLAS77Interface$slaqz0")
@@ -25303,7 +25304,7 @@ subroutine slaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alphar,alphai,beta,q,l
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqz0
 
 subroutine slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) bind(C, name="BLAS77Interface$slaqz1")
@@ -25321,7 +25322,7 @@ subroutine slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) bind(C, name="BLAS77Inte
   real(blas77_f32),intent(in) :: beta2
   real(blas77_f32),intent(out) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqz1
 
 subroutine slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) bind(C, name="BLAS77Interface$slaqz2")
@@ -25347,7 +25348,7 @@ subroutine slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zs
   integer(blas77_int),intent(in) :: ldz
   real(blas77_f32) :: z(ldz,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqz2
 
 subroutine slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alphar,alphai,beta,qc,ldqc,zc,ldzc,work,lwork,rec,info) bind(C, name="BLAS77Interface$slaqz3")
@@ -25383,7 +25384,7 @@ subroutine slaqz3(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alp
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqz3
 
 subroutine slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) bind(C, name="BLAS77Interface$slaqz4")
@@ -25417,7 +25418,7 @@ subroutine slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,ld
   integer(blas77_int),intent(in) :: lwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaqz4
 
 subroutine slar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) bind(C, name="BLAS77Interface$slar1v")
@@ -25446,7 +25447,7 @@ subroutine slar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mi
   real(blas77_f32) :: rqcorr
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slar1v
 
 subroutine slar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$slar2v")
@@ -25462,7 +25463,7 @@ subroutine slar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$slar2v")
   real(blas77_f32) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slar2v
 
 subroutine slarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarf1f")
@@ -25479,7 +25480,7 @@ subroutine slarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarf1f
 
 subroutine slarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarf1l")
@@ -25496,7 +25497,7 @@ subroutine slarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarf1l
 
 subroutine slarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarf")
@@ -25513,7 +25514,7 @@ subroutine slarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarf
 
 subroutine slarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$slarfb_gett")
@@ -25533,7 +25534,7 @@ subroutine slarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="
   integer(blas77_int) :: ldwork
   real(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfb_gett
 
 subroutine slarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$slarfb")
@@ -25556,7 +25557,7 @@ subroutine slarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) 
   integer(blas77_int) :: ldwork
   real(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfb
 
 subroutine slarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$slarfg")
@@ -25569,7 +25570,7 @@ subroutine slarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$slarfg")
   integer(blas77_int) :: incx
   real(blas77_f32) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfg
 
 subroutine slarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$slarfgp")
@@ -25582,7 +25583,7 @@ subroutine slarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$slarfgp")
   integer(blas77_int) :: incx
   real(blas77_f32) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfgp
 
 subroutine slarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$slarft_lvl2")
@@ -25599,7 +25600,7 @@ subroutine slarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77In
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarft_lvl2
 
 subroutine slarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$slarft")
@@ -25616,7 +25617,7 @@ subroutine slarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarft
 
 subroutine slarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarfx")
@@ -25632,7 +25633,7 @@ subroutine slarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarf
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfx
 
 subroutine slarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarfy")
@@ -25648,7 +25649,7 @@ subroutine slarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$sl
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarfy
 
 subroutine slargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$slargv")
@@ -25663,7 +25664,7 @@ subroutine slargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$slargv")
   real(blas77_f32) :: c(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slargv
 
 function slarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$slarmm")
@@ -25675,7 +25676,7 @@ function slarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$slarmm")
   real(blas77_f32) :: cnorm
   real(blas77_f32) :: slarmm
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function slarmm
 
 subroutine slarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$slarnv")
@@ -25687,7 +25688,7 @@ subroutine slarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$slarnv")
   integer(blas77_int) :: n
   real(blas77_f32) :: x(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarnv
 
 subroutine slarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) bind(C, name="BLAS77Interface$slarra")
@@ -25704,7 +25705,7 @@ subroutine slarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) bind(C, name="BLAS77I
   integer(blas77_int) :: isplit(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarra
 
 subroutine slarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) bind(C, name="BLAS77Interface$slarrb")
@@ -25729,7 +25730,7 @@ subroutine slarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork
   integer(blas77_int) :: twist
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrb
 
 subroutine slarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) bind(C, name="BLAS77Interface$slarrc")
@@ -25748,7 +25749,7 @@ subroutine slarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) bind(C, name="B
   integer(blas77_int) :: rcnt
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrc
 
 subroutine slarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork,info) bind(C, name="BLAS77Interface$slarrd")
@@ -25781,7 +25782,7 @@ subroutine slarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isp
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrd
 
 subroutine slarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) bind(C, name="BLAS77Interface$slarre")
@@ -25814,7 +25815,7 @@ subroutine slarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarre
 
 subroutine slarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,sigma,dplus,lplus,work,info) bind(C, name="BLAS77Interface$slarrf")
@@ -25840,7 +25841,7 @@ subroutine slarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrf
 
 subroutine slarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdiam,info) bind(C, name="BLAS77Interface$slarrj")
@@ -25862,7 +25863,7 @@ subroutine slarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdia
   real(blas77_f32) :: spdiam
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrj
 
 subroutine slarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) bind(C, name="BLAS77Interface$slarrk")
@@ -25881,7 +25882,7 @@ subroutine slarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) bind(C, name="BLAS7
   real(blas77_f32) :: werr
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrk
 
 subroutine slarrr(n,d,e,info) bind(C, name="BLAS77Interface$slarrr")
@@ -25893,7 +25894,7 @@ subroutine slarrr(n,d,e,info) bind(C, name="BLAS77Interface$slarrr")
   real(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrr
 
 subroutine slarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) bind(C, name="BLAS77Interface$slarrv")
@@ -25926,7 +25927,7 @@ subroutine slarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarrv
 
 subroutine slarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$slarscl2")
@@ -25939,7 +25940,7 @@ subroutine slarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$slarscl2")
   integer(blas77_int) :: ldx
   real(blas77_f32) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarscl2
 
 subroutine slartg(f,g,c,s,r) bind(C, name="BLAS77Interface$slartg")
@@ -25952,7 +25953,7 @@ subroutine slartg(f,g,c,s,r) bind(C, name="BLAS77Interface$slartg")
   real(blas77_f32) :: s
   real(blas77_f32) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slartg
 
 subroutine slartgp(f,g,cs,sn,r) bind(C, name="BLAS77Interface$slartgp")
@@ -25965,7 +25966,7 @@ subroutine slartgp(f,g,cs,sn,r) bind(C, name="BLAS77Interface$slartgp")
   real(blas77_f32) :: sn
   real(blas77_f32) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slartgp
 
 subroutine slartgs(x,y,sigma,cs,sn) bind(C, name="BLAS77Interface$slartgs")
@@ -25978,7 +25979,7 @@ subroutine slartgs(x,y,sigma,cs,sn) bind(C, name="BLAS77Interface$slartgs")
   real(blas77_f32) :: cs
   real(blas77_f32) :: sn
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slartgs
 
 subroutine slartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$slartv")
@@ -25994,7 +25995,7 @@ subroutine slartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$slartv
   real(blas77_f32) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slartv
 
 subroutine slaruv(iseed,n,x) bind(C, name="BLAS77Interface$slaruv")
@@ -26005,7 +26006,7 @@ subroutine slaruv(iseed,n,x) bind(C, name="BLAS77Interface$slaruv")
   integer(blas77_int) :: n
   real(blas77_f32) :: x(n)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaruv
 
 subroutine slarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$slarz")
@@ -26023,7 +26024,7 @@ subroutine slarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   real(blas77_f32) :: c(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarz
 
 subroutine slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$slarzb")
@@ -26047,7 +26048,7 @@ subroutine slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork
   integer(blas77_int) :: ldwork
   real(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarzb
 
 subroutine slarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$slarzt")
@@ -26064,7 +26065,7 @@ subroutine slarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   real(blas77_f32) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slarzt
 
 subroutine slas2(f,g,h,ssmin,ssmax) bind(C, name="BLAS77Interface$slas2")
@@ -26077,7 +26078,7 @@ subroutine slas2(f,g,h,ssmin,ssmax) bind(C, name="BLAS77Interface$slas2")
   real(blas77_f32) :: ssmin
   real(blas77_f32) :: ssmax
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slas2
 
 subroutine slascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$slascl2")
@@ -26090,7 +26091,7 @@ subroutine slascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$slascl2")
   integer(blas77_int) :: ldx
   real(blas77_f32) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slascl2
 
 subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Interface$slascl")
@@ -26108,7 +26109,7 @@ subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slascl
 
 subroutine slasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) bind(C, name="BLAS77Interface$slasd0")
@@ -26128,7 +26129,7 @@ subroutine slasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) bind(C, name=
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd0
 
 subroutine slasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) bind(C, name="BLAS77Interface$slasd1")
@@ -26150,7 +26151,7 @@ subroutine slasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) bi
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd1
 
 subroutine slasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) bind(C, name="BLAS77Interface$slasd2")
@@ -26181,7 +26182,7 @@ subroutine slasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,l
   integer(blas77_int) :: coltyp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd2
 
 subroutine slasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) bind(C, name="BLAS77Interface$slasd3")
@@ -26209,7 +26210,7 @@ subroutine slasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,id
   real(blas77_f32) :: z(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd3
 
 subroutine slasd4(n,i,d,z,delta,rho,sigma,work,info) bind(C, name="BLAS77Interface$slasd4")
@@ -26226,7 +26227,7 @@ subroutine slasd4(n,i,d,z,delta,rho,sigma,work,info) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd4
 
 subroutine slasd5(i,d,z,delta,rho,dsigma,work) bind(C, name="BLAS77Interface$slasd5")
@@ -26241,7 +26242,7 @@ subroutine slasd5(i,d,z,delta,rho,dsigma,work) bind(C, name="BLAS77Interface$sla
   real(blas77_f32) :: dsigma
   real(blas77_f32) :: work(2)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd5
 
 subroutine slasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,iwork,info) bind(C, name="BLAS77Interface$slasd6")
@@ -26275,7 +26276,7 @@ subroutine slasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,l
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd6
 
 subroutine slasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s,info) bind(C, name="BLAS77Interface$slasd7")
@@ -26310,7 +26311,7 @@ subroutine slasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx
   real(blas77_f32) :: s
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd7
 
 subroutine slasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) bind(C, name="BLAS77Interface$slasd8")
@@ -26330,7 +26331,7 @@ subroutine slasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) bind(C, 
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasd8
 
 subroutine slasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) bind(C, name="BLAS77Interface$slasda")
@@ -26362,7 +26363,7 @@ subroutine slasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,g
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasda
 
 subroutine slasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bind(C, name="BLAS77Interface$slasdq")
@@ -26386,7 +26387,7 @@ subroutine slasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) bi
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasdq
 
 subroutine slasdt(n,lvl,nd,inode,ndiml,ndimr,msub) bind(C, name="BLAS77Interface$slasdt")
@@ -26401,7 +26402,7 @@ subroutine slasdt(n,lvl,nd,inode,ndiml,ndimr,msub) bind(C, name="BLAS77Interface
   integer(blas77_int) :: ndimr(*)
   integer(blas77_int) :: msub
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasdt
 
 subroutine slaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$slaset")
@@ -26416,7 +26417,7 @@ subroutine slaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$slase
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaset
 
 subroutine slasq1(n,d,e,work,info) bind(C, name="BLAS77Interface$slasq1")
@@ -26429,7 +26430,7 @@ subroutine slasq1(n,d,e,work,info) bind(C, name="BLAS77Interface$slasq1")
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq1
 
 subroutine slasq2(n,z,info) bind(C, name="BLAS77Interface$slasq2")
@@ -26440,7 +26441,7 @@ subroutine slasq2(n,z,info) bind(C, name="BLAS77Interface$slasq2")
   real(blas77_f32) :: z(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq2
 
 subroutine slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau) bind(C, name="BLAS77Interface$slasq3")
@@ -26468,7 +26469,7 @@ subroutine slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dm
   real(blas77_f32) :: g
   real(blas77_f32) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq3
 
 subroutine slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) bind(C, name="BLAS77Interface$slasq4")
@@ -26490,7 +26491,7 @@ subroutine slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) bind(
   integer(blas77_int) :: ttype
   real(blas77_f32) :: g
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq4
 
 subroutine slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps) bind(C, name="BLAS77Interface$slasq5")
@@ -26512,7 +26513,7 @@ subroutine slasq5(i0,n0,z,pp,tau,sigma,dmin,dmin1,dmin2,dn,dnm1,dnm2,ieee,eps) b
   logical(blas77_int) :: ieee
   real(blas77_f32) :: eps
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq5
 
 subroutine slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) bind(C, name="BLAS77Interface$slasq6")
@@ -26530,7 +26531,7 @@ subroutine slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) bind(C, name="BLAS77
   real(blas77_f32) :: dnm1
   real(blas77_f32) :: dnm2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasq6
 
 subroutine slasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$slasr")
@@ -26547,7 +26548,7 @@ subroutine slasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lda
   real(blas77_f32) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasr
 
 subroutine slasrt(id,n,d,info) bind(C, name="BLAS77Interface$slasrt")
@@ -26559,7 +26560,7 @@ subroutine slasrt(id,n,d,info) bind(C, name="BLAS77Interface$slasrt")
   real(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasrt
 
 subroutine slassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$slassq")
@@ -26572,7 +26573,7 @@ subroutine slassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$slassq")
   real(blas77_f32) :: scale
   real(blas77_f32) :: sumsq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slassq
 
 subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) bind(C, name="BLAS77Interface$slasv2")
@@ -26589,7 +26590,7 @@ subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: snl
   real(blas77_f32) :: csl
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasv2
 
 subroutine slaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$slaswlq")
@@ -26608,7 +26609,7 @@ subroutine slaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaswlq
 
 subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$slaswp")
@@ -26623,7 +26624,7 @@ subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$slaswp"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slaswp
 
 subroutine slasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) bind(C, name="BLAS77Interface$slasy2")
@@ -26647,7 +26648,7 @@ subroutine slasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xno
   real(blas77_f32) :: xnorm
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasy2
 
 subroutine slasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$slasyf_aa")
@@ -26665,7 +26666,7 @@ subroutine slasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   real(blas77_f32) :: h(ldh,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasyf_aa
 
 subroutine slasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$slasyf")
@@ -26683,7 +26684,7 @@ subroutine slasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   real(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasyf
 
 subroutine slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$slasyf_rk")
@@ -26702,7 +26703,7 @@ subroutine slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   real(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasyf_rk
 
 subroutine slasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$slasyf_rook")
@@ -26720,7 +26721,7 @@ subroutine slasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   real(blas77_f32) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slasyf_rook
 
 subroutine slatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C, name="BLAS77Interface$slatbs")
@@ -26740,7 +26741,7 @@ subroutine slatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatbs
 
 subroutine slatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77Interface$slatdf")
@@ -26757,7 +26758,7 @@ subroutine slatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77I
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: jpiv(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatdf
 
 subroutine slatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="BLAS77Interface$slatps")
@@ -26775,7 +26776,7 @@ subroutine slatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatps
 
 subroutine slatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$slatrd")
@@ -26792,7 +26793,7 @@ subroutine slatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$sla
   integer(blas77_int) :: ldw
   real(blas77_f32) :: w(ldw,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatrd
 
 subroutine slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) bind(C, name="BLAS77Interface$slatrs3")
@@ -26815,7 +26816,7 @@ subroutine slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatrs3
 
 subroutine slatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, name="BLAS77Interface$slatrs")
@@ -26834,7 +26835,7 @@ subroutine slatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, nam
   real(blas77_f32) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatrs
 
 subroutine slatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$slatrz")
@@ -26849,7 +26850,7 @@ subroutine slatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$slatrz")
   real(blas77_f32) :: tau(*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatrz
 
 subroutine slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$slatsqr")
@@ -26868,7 +26869,7 @@ subroutine slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatsqr
 
 subroutine slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interface$slatzm")
@@ -26886,7 +26887,7 @@ subroutine slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interf
   real(blas77_f32) :: c2(ldc,*)
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slatzm
 
 subroutine slauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$slauu2")
@@ -26899,7 +26900,7 @@ subroutine slauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$slauu2")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slauu2
 
 subroutine slauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$slauum")
@@ -26912,7 +26913,7 @@ subroutine slauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$slauum")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine slauum
 
 subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$sopgtr")
@@ -26928,7 +26929,7 @@ subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sopgtr
 
 subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sopmtr")
@@ -26947,7 +26948,7 @@ subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sopmtr
 
 subroutine sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb1")
@@ -26970,7 +26971,7 @@ subroutine sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb1
 
 subroutine sorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb2")
@@ -26993,7 +26994,7 @@ subroutine sorbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb2
 
 subroutine sorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb3")
@@ -27016,7 +27017,7 @@ subroutine sorbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb3
 
 subroutine sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb4")
@@ -27040,7 +27041,7 @@ subroutine sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb4
 
 subroutine sorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb5")
@@ -27062,7 +27063,7 @@ subroutine sorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb5
 
 subroutine sorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb6")
@@ -27084,7 +27085,7 @@ subroutine sorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb6
 
 subroutine sorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info) bind(C, name="BLAS77Interface$sorbdb")
@@ -27114,7 +27115,7 @@ subroutine sorbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,thet
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorbdb
 
 subroutine sorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sorcsd2by1")
@@ -27143,7 +27144,7 @@ subroutine sorcsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorcsd2by1
 
 subroutine sorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,iwork,info) bind(C, name="BLAS77Interface$sorcsd")
@@ -27181,7 +27182,7 @@ subroutine sorcsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorcsd
 
 subroutine sorg2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorg2l")
@@ -27197,7 +27198,7 @@ subroutine sorg2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorg2
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorg2l
 
 subroutine sorg2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorg2r")
@@ -27213,7 +27214,7 @@ subroutine sorg2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorg2
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorg2r
 
 subroutine sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorgbr")
@@ -27231,7 +27232,7 @@ subroutine sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgbr
 
 subroutine sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorghr")
@@ -27248,7 +27249,7 @@ subroutine sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorghr
 
 subroutine sorgl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorgl2")
@@ -27264,7 +27265,7 @@ subroutine sorgl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorgl
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgl2
 
 subroutine sorglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorglq")
@@ -27281,7 +27282,7 @@ subroutine sorglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorglq
 
 subroutine sorgql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorgql")
@@ -27298,7 +27299,7 @@ subroutine sorgql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgql
 
 subroutine sorgqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorgqr")
@@ -27315,7 +27316,7 @@ subroutine sorgqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgqr
 
 subroutine sorgr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorgr2")
@@ -27331,7 +27332,7 @@ subroutine sorgr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$sorgr
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgr2
 
 subroutine sorgrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorgrq")
@@ -27348,7 +27349,7 @@ subroutine sorgrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgrq
 
 subroutine sorgtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$sorgtr")
@@ -27364,7 +27365,7 @@ subroutine sorgtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgtr
 
 subroutine sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$sorgtsqr")
@@ -27383,7 +27384,7 @@ subroutine sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgtsqr
 
 subroutine sorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$sorgtsqr_row")
@@ -27402,7 +27403,7 @@ subroutine sorgtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorgtsqr_row
 
 subroutine sorhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$sorhr_col")
@@ -27419,7 +27420,7 @@ subroutine sorhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$so
   real(blas77_f32) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorhr_col
 
 subroutine sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sorm22")
@@ -27440,7 +27441,7 @@ subroutine sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorm22
 
 subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sorm2l")
@@ -27460,7 +27461,7 @@ subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorm2l
 
 subroutine sorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sorm2r")
@@ -27480,7 +27481,7 @@ subroutine sorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorm2r
 
 subroutine sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormbr")
@@ -27502,7 +27503,7 @@ subroutine sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormbr
 
 subroutine sormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormhr")
@@ -27524,7 +27525,7 @@ subroutine sormhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormhr
 
 subroutine sorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sorml2")
@@ -27544,7 +27545,7 @@ subroutine sorml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sorml2
 
 subroutine sormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormlq")
@@ -27565,7 +27566,7 @@ subroutine sormlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormlq
 
 subroutine sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormql")
@@ -27586,7 +27587,7 @@ subroutine sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormql
 
 subroutine sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormqr")
@@ -27607,7 +27608,7 @@ subroutine sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormqr
 
 subroutine sormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sormr2")
@@ -27627,7 +27628,7 @@ subroutine sormr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormr2
 
 subroutine sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$sormr3")
@@ -27648,7 +27649,7 @@ subroutine sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BL
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormr3
 
 subroutine sormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormrq")
@@ -27669,7 +27670,7 @@ subroutine sormrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormrq
 
 subroutine sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormrz")
@@ -27691,7 +27692,7 @@ subroutine sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, na
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormrz
 
 subroutine sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$sormtr")
@@ -27712,7 +27713,7 @@ subroutine sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, n
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sormtr
 
 subroutine spbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$spbcon")
@@ -27730,7 +27731,7 @@ subroutine spbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbcon
 
 subroutine spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Interface$spbequ")
@@ -27747,7 +27748,7 @@ subroutine spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbequ
 
 subroutine spbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$spbrfs")
@@ -27772,7 +27773,7 @@ subroutine spbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,iw
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbrfs
 
 subroutine spbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbstf")
@@ -27786,7 +27787,7 @@ subroutine spbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbstf")
   real(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbstf
 
 subroutine spbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$spbsv")
@@ -27803,7 +27804,7 @@ subroutine spbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfac
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbsv
 
 subroutine spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$spbsvx")
@@ -27832,7 +27833,7 @@ subroutine spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcon
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbsvx
 
 subroutine spbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbtf2")
@@ -27846,7 +27847,7 @@ subroutine spbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbtf2")
   real(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbtf2
 
 subroutine spbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbtrf")
@@ -27860,7 +27861,7 @@ subroutine spbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$spbtrf")
   real(blas77_f32) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbtrf
 
 subroutine spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$spbtrs")
@@ -27877,7 +27878,7 @@ subroutine spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spbtrs
 
 subroutine spftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$spftrf")
@@ -27890,7 +27891,7 @@ subroutine spftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$spftrf")
   real(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spftrf
 
 subroutine spftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$spftri")
@@ -27903,7 +27904,7 @@ subroutine spftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$spftri")
   real(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spftri
 
 subroutine spftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface$spftrs")
@@ -27919,7 +27920,7 @@ subroutine spftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spftrs
 
 subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$spocon")
@@ -27936,7 +27937,7 @@ subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spocon
 
 subroutine spoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$spoequ")
@@ -27951,7 +27952,7 @@ subroutine spoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$spoeq
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spoequ
 
 subroutine spoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$spoequb")
@@ -27966,7 +27967,7 @@ subroutine spoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$spoe
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spoequb
 
 subroutine sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sporfs")
@@ -27990,7 +27991,7 @@ subroutine sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,inf
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sporfs
 
 subroutine sporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sporfsx")
@@ -28021,7 +28022,7 @@ subroutine sporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_er
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sporfsx
 
 subroutine sposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$sposv")
@@ -28037,7 +28038,7 @@ subroutine sposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$spo
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sposv
 
 subroutine sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sposvx")
@@ -28065,7 +28066,7 @@ subroutine sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sposvx
 
 subroutine sposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$sposvxx")
@@ -28098,7 +28099,7 @@ subroutine sposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvg
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sposvxx
 
 subroutine spotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotf2")
@@ -28111,7 +28112,7 @@ subroutine spotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotf2")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spotf2
 
 subroutine spotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotrf2")
@@ -28124,7 +28125,7 @@ subroutine spotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotrf2")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spotrf2
 
 subroutine spotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotrf")
@@ -28137,7 +28138,7 @@ subroutine spotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotrf")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spotrf
 
 subroutine spotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotri")
@@ -28150,7 +28151,7 @@ subroutine spotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$spotri")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spotri
 
 subroutine spotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$spotrs")
@@ -28166,7 +28167,7 @@ subroutine spotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$sp
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spotrs
 
 subroutine sppcon(uplo,n,ap,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$sppcon")
@@ -28182,7 +28183,7 @@ subroutine sppcon(uplo,n,ap,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sppcon
 
 subroutine sppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$sppequ")
@@ -28197,7 +28198,7 @@ subroutine sppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$spp
   real(blas77_f32) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sppequ
 
 subroutine spprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$spprfs")
@@ -28219,7 +28220,7 @@ subroutine spprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spprfs
 
 subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$sppsv")
@@ -28234,7 +28235,7 @@ subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$sppsv"
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sppsv
 
 subroutine sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sppsvx")
@@ -28260,7 +28261,7 @@ subroutine sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,wo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sppsvx
 
 subroutine spptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$spptrf")
@@ -28272,7 +28273,7 @@ subroutine spptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$spptrf")
   real(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spptrf
 
 subroutine spptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$spptri")
@@ -28284,7 +28285,7 @@ subroutine spptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$spptri")
   real(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spptri
 
 subroutine spptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$spptrs")
@@ -28299,7 +28300,7 @@ subroutine spptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$spptr
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spptrs
 
 subroutine spstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$spstf2")
@@ -28316,7 +28317,7 @@ subroutine spstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spstf2
 
 subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$spstrf")
@@ -28333,7 +28334,7 @@ subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spstrf
 
 subroutine sptcon(n,d,e,anorm,rcond,work,info) bind(C, name="BLAS77Interface$sptcon")
@@ -28348,7 +28349,7 @@ subroutine sptcon(n,d,e,anorm,rcond,work,info) bind(C, name="BLAS77Interface$spt
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sptcon
 
 subroutine spteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$spteqr")
@@ -28364,7 +28365,7 @@ subroutine spteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$spt
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spteqr
 
 subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) bind(C, name="BLAS77Interface$sptrfs")
@@ -28386,7 +28387,7 @@ subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) bind(C, name
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sptrfs
 
 subroutine sptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$sptsv")
@@ -28401,7 +28402,7 @@ subroutine sptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$sptsv")
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sptsv
 
 subroutine sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) bind(C, name="BLAS77Interface$sptsvx")
@@ -28425,7 +28426,7 @@ subroutine sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) b
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sptsvx
 
 subroutine spttrf(n,d,e,info) bind(C, name="BLAS77Interface$spttrf")
@@ -28437,7 +28438,7 @@ subroutine spttrf(n,d,e,info) bind(C, name="BLAS77Interface$spttrf")
   real(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spttrf
 
 subroutine spttrs(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$spttrs")
@@ -28452,7 +28453,7 @@ subroutine spttrs(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$spttrs")
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine spttrs
 
 subroutine sptts2(n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$sptts2")
@@ -28466,7 +28467,7 @@ subroutine sptts2(n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$sptts2")
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sptts2
 
 subroutine srscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$srscl")
@@ -28478,7 +28479,7 @@ subroutine srscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$srscl")
   real(blas77_f32) :: sx(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine srscl
 
 subroutine ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) bind(C, name="BLAS77Interface$ssb2st_kernels")
@@ -28501,7 +28502,7 @@ subroutine ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,
   integer(blas77_int) :: ldvt
   real(blas77_f32) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssb2st_kernels
 
 subroutine ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$ssbev_2stage")
@@ -28521,7 +28522,7 @@ subroutine ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbev_2stage
 
 subroutine ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) bind(C, name="BLAS77Interface$ssbev")
@@ -28540,7 +28541,7 @@ subroutine ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbev
 
 subroutine ssbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssbevd_2stage")
@@ -28562,7 +28563,7 @@ subroutine ssbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbevd_2stage
 
 subroutine ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssbevd")
@@ -28584,7 +28585,7 @@ subroutine ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) b
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbevd
 
 subroutine ssbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$ssbevx_2stage")
@@ -28615,7 +28616,7 @@ subroutine ssbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbevx_2stage
 
 subroutine ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$ssbevx")
@@ -28645,7 +28646,7 @@ subroutine ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ld
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbevx
 
 subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) bind(C, name="BLAS77Interface$ssbgst")
@@ -28666,7 +28667,7 @@ subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) bind(C, nam
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbgst
 
 subroutine ssbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info) bind(C, name="BLAS77Interface$ssbgv")
@@ -28688,7 +28689,7 @@ subroutine ssbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info) bind(C, na
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbgv
 
 subroutine ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssbgvd")
@@ -28713,7 +28714,7 @@ subroutine ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liw
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbgvd
 
 subroutine ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$ssbgvx")
@@ -28746,7 +28747,7 @@ subroutine ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abst
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbgvx
 
 subroutine ssbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS77Interface$ssbtrd")
@@ -28766,7 +28767,7 @@ subroutine ssbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssbtrd
 
 subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77Interface$ssfrk")
@@ -28784,7 +28785,7 @@ subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77I
   real(blas77_f32) :: beta
   real(blas77_f32) :: c(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssfrk
 
 subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$sspcon")
@@ -28801,7 +28802,7 @@ subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspcon
 
 subroutine sspev(jobz,uplo,n,ap,w,z,ldz,work,info) bind(C, name="BLAS77Interface$sspev")
@@ -28818,7 +28819,7 @@ subroutine sspev(jobz,uplo,n,ap,w,z,ldz,work,info) bind(C, name="BLAS77Interface
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspev
 
 subroutine sspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sspevd")
@@ -28838,7 +28839,7 @@ subroutine sspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, n
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspevd
 
 subroutine sspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$sspevx")
@@ -28864,7 +28865,7 @@ subroutine sspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,i
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspevx
 
 subroutine sspgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$sspgst")
@@ -28878,7 +28879,7 @@ subroutine sspgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$sspgst"
   real(blas77_f32) :: bp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspgst
 
 subroutine sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) bind(C, name="BLAS77Interface$sspgv")
@@ -28897,7 +28898,7 @@ subroutine sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) bind(C, name="BLAS77
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspgv
 
 subroutine sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sspgvd")
@@ -28919,7 +28920,7 @@ subroutine sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) 
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspgvd
 
 subroutine sspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$sspgvx")
@@ -28947,7 +28948,7 @@ subroutine sspgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,wor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspgvx
 
 subroutine ssprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$ssprfs")
@@ -28970,7 +28971,7 @@ subroutine ssprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssprfs
 
 subroutine sspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$sspsv")
@@ -28986,7 +28987,7 @@ subroutine sspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspsv
 
 subroutine sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$sspsvx")
@@ -29011,7 +29012,7 @@ subroutine sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sspsvx
 
 subroutine ssptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$ssptrd")
@@ -29026,7 +29027,7 @@ subroutine ssptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$ssptrd")
   real(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssptrd
 
 subroutine ssptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$ssptrf")
@@ -29039,7 +29040,7 @@ subroutine ssptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$ssptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssptrf
 
 subroutine ssptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$ssptri")
@@ -29053,7 +29054,7 @@ subroutine ssptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$ssptri
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssptri
 
 subroutine ssptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$ssptrs")
@@ -29069,7 +29070,7 @@ subroutine ssptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssptrs
 
 subroutine sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) bind(C, name="BLAS77Interface$sstebz")
@@ -29095,7 +29096,7 @@ subroutine sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstebz
 
 subroutine sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sstedc")
@@ -29114,7 +29115,7 @@ subroutine sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstedc
 
 subroutine sstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sstegr")
@@ -29142,7 +29143,7 @@ subroutine sstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstegr
 
 subroutine sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$sstein")
@@ -29163,7 +29164,7 @@ subroutine sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, n
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstein
 
 subroutine sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sstemr")
@@ -29192,7 +29193,7 @@ subroutine sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstemr
 
 subroutine ssteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$ssteqr")
@@ -29208,7 +29209,7 @@ subroutine ssteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$sst
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssteqr
 
 subroutine ssterf(n,d,e,info) bind(C, name="BLAS77Interface$ssterf")
@@ -29220,7 +29221,7 @@ subroutine ssterf(n,d,e,info) bind(C, name="BLAS77Interface$ssterf")
   real(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssterf
 
 subroutine sstev(jobz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$sstev")
@@ -29236,7 +29237,7 @@ subroutine sstev(jobz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$sstev
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstev
 
 subroutine sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sstevd")
@@ -29255,7 +29256,7 @@ subroutine sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) bind(C, name="B
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstevd
 
 subroutine sstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$sstevr")
@@ -29283,7 +29284,7 @@ subroutine sstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstevr
 
 subroutine sstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$sstevx")
@@ -29309,7 +29310,7 @@ subroutine sstevx(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine sstevx
 
 subroutine ssycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$ssycon_3")
@@ -29328,7 +29329,7 @@ subroutine ssycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) bind(C, nam
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssycon_3
 
 subroutine ssycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$ssycon")
@@ -29346,7 +29347,7 @@ subroutine ssycon(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssycon
 
 subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, name="BLAS77Interface$ssycon_rook")
@@ -29364,7 +29365,7 @@ subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) bind(C, na
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssycon_rook
 
 subroutine ssyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$ssyconv")
@@ -29380,7 +29381,7 @@ subroutine ssyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyconv
 
 subroutine ssyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$ssyconvf")
@@ -29396,7 +29397,7 @@ subroutine ssyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyconvf
 
 subroutine ssyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$ssyconvf_rook")
@@ -29412,7 +29413,7 @@ subroutine ssyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyconvf_rook
 
 subroutine ssyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$ssyequb")
@@ -29429,7 +29430,7 @@ subroutine ssyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyequb
 
 subroutine ssyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interface$ssyev_2stage")
@@ -29446,7 +29447,7 @@ subroutine ssyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyev_2stage
 
 subroutine ssyev(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interface$ssyev")
@@ -29463,7 +29464,7 @@ subroutine ssyev(jobz,uplo,n,a,lda,w,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyev
 
 subroutine ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssyevd_2stage")
@@ -29482,7 +29483,7 @@ subroutine ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevd_2stage
 
 subroutine ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssyevd")
@@ -29501,7 +29502,7 @@ subroutine ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) bind(C, name
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevd
 
 subroutine ssyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssyevr_2stage")
@@ -29530,7 +29531,7 @@ subroutine ssyevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,is
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevr_2stage
 
 subroutine ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssyevr")
@@ -29559,7 +29560,7 @@ subroutine ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,wo
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevr
 
 subroutine ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$ssyevx_2stage")
@@ -29587,7 +29588,7 @@ subroutine ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,wo
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevx_2stage
 
 subroutine ssyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$ssyevx")
@@ -29615,7 +29616,7 @@ subroutine ssyevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyevx
 
 subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$ssygs2")
@@ -29631,7 +29632,7 @@ subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygs2
 
 subroutine ssygst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$ssygst")
@@ -29647,7 +29648,7 @@ subroutine ssygst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygst
 
 subroutine ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="BLAS77Interface$ssygv_2stage")
@@ -29667,7 +29668,7 @@ subroutine ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygv_2stage
 
 subroutine ssygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="BLAS77Interface$ssygv")
@@ -29687,7 +29688,7 @@ subroutine ssygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygv
 
 subroutine ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ssygvd")
@@ -29709,7 +29710,7 @@ subroutine ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) 
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygvd
 
 subroutine ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) bind(C, name="BLAS77Interface$ssygvx")
@@ -29740,7 +29741,7 @@ subroutine ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,l
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssygvx
 
 subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$ssyrfs")
@@ -29765,7 +29766,7 @@ subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyrfs
 
 subroutine ssyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$ssyrfsx")
@@ -29797,7 +29798,7 @@ subroutine ssyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyrfsx
 
 subroutine ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssysv_aa_2stage")
@@ -29819,7 +29820,7 @@ subroutine ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysv_aa_2stage
 
 subroutine ssysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssysv_aa")
@@ -29838,7 +29839,7 @@ subroutine ssysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysv_aa
 
 subroutine ssysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssysv")
@@ -29857,7 +29858,7 @@ subroutine ssysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysv
 
 subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssysv_rk")
@@ -29877,7 +29878,7 @@ subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysv_rk
 
 subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssysv_rook")
@@ -29896,7 +29897,7 @@ subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysv_rook
 
 subroutine ssysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info) bind(C, name="BLAS77Interface$ssysvx")
@@ -29924,7 +29925,7 @@ subroutine ssysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysvx
 
 subroutine ssysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) bind(C, name="BLAS77Interface$ssysvxx")
@@ -29958,7 +29959,7 @@ subroutine ssysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssysvxx
 
 subroutine ssyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$ssyswapr")
@@ -29972,7 +29973,7 @@ subroutine ssyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$ssyswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssyswapr
 
 subroutine ssytd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$ssytd2")
@@ -29988,7 +29989,7 @@ subroutine ssytd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$ssytd
   real(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytd2
 
 subroutine ssytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$ssytf2")
@@ -30002,7 +30003,7 @@ subroutine ssytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$ssytf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytf2
 
 subroutine ssytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$ssytf2_rk")
@@ -30017,7 +30018,7 @@ subroutine ssytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$ssy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytf2_rk
 
 subroutine ssytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$ssytf2_rook")
@@ -30031,7 +30032,7 @@ subroutine ssytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$ssy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytf2_rook
 
 subroutine ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) bind(C, name="BLAS77Interface$ssytrd_2stage")
@@ -30052,7 +30053,7 @@ subroutine ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrd_2stage
 
 subroutine ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Interface$ssytrd")
@@ -30070,7 +30071,7 @@ subroutine ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrd
 
 subroutine ssytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) bind(C, name="BLAS77Interface$ssytrd_sb2st")
@@ -30092,7 +30093,7 @@ subroutine ssytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrd_sb2st
 
 subroutine ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, name="BLAS77Interface$ssytrd_sy2sb")
@@ -30111,7 +30112,7 @@ subroutine ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrd_sy2sb
 
 subroutine ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$ssytrf_aa_2stage")
@@ -30130,7 +30131,7 @@ subroutine ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrf_aa_2stage
 
 subroutine ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytrf_aa")
@@ -30146,7 +30147,7 @@ subroutine ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrf_aa
 
 subroutine ssytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytrf")
@@ -30162,7 +30163,7 @@ subroutine ssytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrf
 
 subroutine ssytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytrf_rk")
@@ -30179,7 +30180,7 @@ subroutine ssytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrf_rk
 
 subroutine ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytrf_rook")
@@ -30195,7 +30196,7 @@ subroutine ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrf_rook
 
 subroutine ssytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytri2")
@@ -30211,7 +30212,7 @@ subroutine ssytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri2
 
 subroutine ssytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$ssytri2x")
@@ -30227,7 +30228,7 @@ subroutine ssytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   real(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri2x
 
 subroutine ssytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$ssytri_3")
@@ -30244,7 +30245,7 @@ subroutine ssytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri_3
 
 subroutine ssytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$ssytri_3x")
@@ -30261,7 +30262,7 @@ subroutine ssytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   real(blas77_f32) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri_3x
 
 subroutine ssytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$ssytri")
@@ -30276,7 +30277,7 @@ subroutine ssytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$ssy
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri
 
 subroutine ssytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$ssytri_rook")
@@ -30291,7 +30292,7 @@ subroutine ssytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytri_rook
 
 subroutine ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$ssytrs2")
@@ -30309,7 +30310,7 @@ subroutine ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs2
 
 subroutine ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$ssytrs_3")
@@ -30327,7 +30328,7 @@ subroutine ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs_3
 
 subroutine ssytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$ssytrs_aa_2stage")
@@ -30347,7 +30348,7 @@ subroutine ssytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs_aa_2stage
 
 subroutine ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$ssytrs_aa")
@@ -30366,7 +30367,7 @@ subroutine ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs_aa
 
 subroutine ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$ssytrs")
@@ -30383,7 +30384,7 @@ subroutine ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs
 
 subroutine ssytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$ssytrs_rook")
@@ -30400,7 +30401,7 @@ subroutine ssytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ssytrs_rook
 
 subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) bind(C, name="BLAS77Interface$stbcon")
@@ -30419,7 +30420,7 @@ subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) bind(C, nam
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stbcon
 
 subroutine stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$stbrfs")
@@ -30444,7 +30445,7 @@ subroutine stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,i
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stbrfs
 
 subroutine stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$stbtrs")
@@ -30463,7 +30464,7 @@ subroutine stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BL
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stbtrs
 
 subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BLAS77Interface$stfsm")
@@ -30482,7 +30483,7 @@ subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BL
   integer(blas77_int) :: ldb
   real(blas77_f32) :: b(0:ldb-1,0:*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stfsm
 
 subroutine stftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$stftri")
@@ -30496,7 +30497,7 @@ subroutine stftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$stftr
   real(blas77_f32) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stftri
 
 subroutine stfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$stfttp")
@@ -30510,7 +30511,7 @@ subroutine stfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$stftt
   real(blas77_f32) :: ap(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stfttp
 
 subroutine stfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$stfttr")
@@ -30525,7 +30526,7 @@ subroutine stfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$st
   real(blas77_f32) :: a(0:lda-1,0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stfttr
 
 subroutine stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info) bind(C, name="BLAS77Interface$stgevc")
@@ -30549,7 +30550,7 @@ subroutine stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,inf
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgevc
 
 subroutine stgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,n1,n2,work,lwork,info) bind(C, name="BLAS77Interface$stgex2")
@@ -30574,7 +30575,7 @@ subroutine stgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,n1,n2,work,lwork,info
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgex2
 
 subroutine stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) bind(C, name="BLAS77Interface$stgexc")
@@ -30598,7 +30599,7 @@ subroutine stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,inf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgexc
 
 subroutine stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$stgsen")
@@ -30631,7 +30632,7 @@ subroutine stgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta,q,ldq
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgsen
 
 subroutine stgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) bind(C, name="BLAS77Interface$stgsja")
@@ -30664,7 +30665,7 @@ subroutine stgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ld
   integer(blas77_int) :: ncycle
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgsja
 
 subroutine stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) bind(C, name="BLAS77Interface$stgsna")
@@ -30692,7 +30693,7 @@ subroutine stgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgsna
 
 subroutine stgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,iwork,pq,info) bind(C, name="BLAS77Interface$stgsy2")
@@ -30722,7 +30723,7 @@ subroutine stgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum
   integer(blas77_int) :: pq
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgsy2
 
 subroutine stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) bind(C, name="BLAS77Interface$stgsyl")
@@ -30752,7 +30753,7 @@ subroutine stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,w
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stgsyl
 
 subroutine stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) bind(C, name="BLAS77Interface$stpcon")
@@ -30769,7 +30770,7 @@ subroutine stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpcon
 
 subroutine stplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$stplqt2")
@@ -30787,7 +30788,7 @@ subroutine stplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stplqt2
 
 subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$stplqt")
@@ -30807,7 +30808,7 @@ subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stplqt
 
 subroutine stpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$stpmlqt")
@@ -30832,7 +30833,7 @@ subroutine stpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpmlqt
 
 subroutine stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$stpmqrt")
@@ -30857,7 +30858,7 @@ subroutine stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpmqrt
 
 subroutine stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$stpqrt2")
@@ -30875,7 +30876,7 @@ subroutine stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$s
   real(blas77_f32) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpqrt2
 
 subroutine stpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$stpqrt")
@@ -30895,7 +30896,7 @@ subroutine stpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpqrt
 
 subroutine stprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$stprfb")
@@ -30921,7 +30922,7 @@ subroutine stprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,
   integer(blas77_int) :: ldwork
   real(blas77_f32) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stprfb
 
 subroutine stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$stprfs")
@@ -30944,7 +30945,7 @@ subroutine stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,inf
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stprfs
 
 subroutine stptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$stptri")
@@ -30957,7 +30958,7 @@ subroutine stptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$stptri")
   real(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stptri
 
 subroutine stptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$stptrs")
@@ -30974,7 +30975,7 @@ subroutine stptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Inte
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stptrs
 
 subroutine stpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$stpttf")
@@ -30988,7 +30989,7 @@ subroutine stpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$stptt
   real(blas77_f32) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpttf
 
 subroutine stpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$stpttr")
@@ -31002,7 +31003,7 @@ subroutine stpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$stpttr")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stpttr
 
 subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) bind(C, name="BLAS77Interface$strcon")
@@ -31020,7 +31021,7 @@ subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) bind(C, name="BL
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strcon
 
 subroutine strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info) bind(C, name="BLAS77Interface$strevc3")
@@ -31043,7 +31044,7 @@ subroutine strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,in
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strevc3
 
 subroutine strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) bind(C, name="BLAS77Interface$strevc")
@@ -31065,7 +31066,7 @@ subroutine strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) bin
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strevc
 
 subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) bind(C, name="BLAS77Interface$strexc")
@@ -31083,7 +31084,7 @@ subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) bind(C, name="BLAS77I
   real(blas77_f32) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strexc
 
 subroutine strrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,info) bind(C, name="BLAS77Interface$strrfs")
@@ -31107,7 +31108,7 @@ subroutine strrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,iwork,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strrfs
 
 subroutine strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$strsen")
@@ -31133,7 +31134,7 @@ subroutine strsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strsen
 
 subroutine strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info) bind(C, name="BLAS77Interface$strsna")
@@ -31159,7 +31160,7 @@ subroutine strsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strsna
 
 subroutine strsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info) bind(C, name="BLAS77Interface$strsyl3")
@@ -31184,7 +31185,7 @@ subroutine strsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swo
   real(blas77_f32) :: swork(ldswork,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strsyl3
 
 subroutine strsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, name="BLAS77Interface$strsyl")
@@ -31205,7 +31206,7 @@ subroutine strsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, nam
   real(blas77_f32) :: scale
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strsyl
 
 subroutine strti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$strti2")
@@ -31219,7 +31220,7 @@ subroutine strti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$strti2")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strti2
 
 subroutine strtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$strtri")
@@ -31233,7 +31234,7 @@ subroutine strtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$strtri")
   real(blas77_f32) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strtri
 
 subroutine strtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$strtrs")
@@ -31251,7 +31252,7 @@ subroutine strtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77I
   real(blas77_f32) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strtrs
 
 subroutine strttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$strttf")
@@ -31266,7 +31267,7 @@ subroutine strttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$st
   real(blas77_f32) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strttf
 
 subroutine strttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$strttp")
@@ -31280,7 +31281,7 @@ subroutine strttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$strttp")
   real(blas77_f32) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine strttp
 
 subroutine stzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$stzrqf")
@@ -31294,7 +31295,7 @@ subroutine stzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$stzrqf")
   real(blas77_f32) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stzrqf
 
 subroutine stzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$stzrzf")
@@ -31310,7 +31311,7 @@ subroutine stzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine stzrzf
 
 subroutine xerbla_array(srname_array,srname_len,info) bind(C, name="BLAS77Interface$xerbla_array")
@@ -31321,7 +31322,7 @@ subroutine xerbla_array(srname_array,srname_len,info) bind(C, name="BLAS77Interf
   character(len=1) :: srname_array(srname_len)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine xerbla_array
 
 subroutine xerbla(srname,info) bind(C, name="BLAS77Interface$xerbla")
@@ -31331,7 +31332,7 @@ subroutine xerbla(srname,info) bind(C, name="BLAS77Interface$xerbla")
   character(len=*) :: srname
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine xerbla
 
 subroutine zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info) bind(C, name="BLAS77Interface$zbbcsd")
@@ -31368,7 +31369,7 @@ subroutine zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zbbcsd
 
 subroutine zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) bind(C, name="BLAS77Interface$zbdsqr")
@@ -31391,7 +31392,7 @@ subroutine zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) bind(C
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zbdsqr
 
 subroutine zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info) bind(C, name="BLAS77Interface$zcgesv")
@@ -31413,7 +31414,7 @@ subroutine zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info) bind
   integer(blas77_int) :: iter
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zcgesv
 
 subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) bind(C, name="BLAS77Interface$zcposv")
@@ -31435,7 +31436,7 @@ subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) bind
   integer(blas77_int) :: iter
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zcposv
 
 subroutine zdrscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$zdrscl")
@@ -31447,7 +31448,7 @@ subroutine zdrscl(n,sa,sx,incx) bind(C, name="BLAS77Interface$zdrscl")
   complex(blas77_f64) :: sx(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zdrscl
 
 subroutine zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) bind(C, name="BLAS77Interface$zgbbrd")
@@ -31474,7 +31475,7 @@ subroutine zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbbrd
 
 subroutine zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$zgbcon")
@@ -31494,7 +31495,7 @@ subroutine zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info) bind(C,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbcon
 
 subroutine zgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$zgbequ")
@@ -31514,7 +31515,7 @@ subroutine zgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="B
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbequ
 
 subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$zgbequb")
@@ -31534,7 +31535,7 @@ subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) bind(C, name="
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbequb
 
 subroutine zgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgbrfs")
@@ -31561,7 +31562,7 @@ subroutine zgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,ber
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbrfs
 
 subroutine zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zgbrfsx")
@@ -31596,7 +31597,7 @@ subroutine zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,l
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbrfsx
 
 subroutine zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zgbsv")
@@ -31614,7 +31615,7 @@ subroutine zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Inter
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbsv
 
 subroutine zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgbsvx")
@@ -31646,7 +31647,7 @@ subroutine zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbsvx
 
 subroutine zgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zgbsvxx")
@@ -31683,7 +31684,7 @@ subroutine zgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ld
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbsvxx
 
 subroutine zgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$zgbtf2")
@@ -31699,7 +31700,7 @@ subroutine zgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$zgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbtf2
 
 subroutine zgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$zgbtrf")
@@ -31715,7 +31716,7 @@ subroutine zgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) bind(C, name="BLAS77Interface$zgb
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbtrf
 
 subroutine zgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zgbtrs")
@@ -31734,7 +31735,7 @@ subroutine zgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) bind(C, name="BLAS
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgbtrs
 
 subroutine zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Interface$zgebak")
@@ -31752,7 +31753,7 @@ subroutine zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) bind(C, name="BLAS77Int
   complex(blas77_f64) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgebak
 
 subroutine zgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$zgebal")
@@ -31768,7 +31769,7 @@ subroutine zgebal(job,n,a,lda,ilo,ihi,scale,info) bind(C, name="BLAS77Interface$
   real(blas77_f64) :: scale(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgebal
 
 subroutine zgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interface$zgebd2")
@@ -31786,7 +31787,7 @@ subroutine zgebd2(m,n,a,lda,d,e,tauq,taup,work,info) bind(C, name="BLAS77Interfa
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgebd2
 
 subroutine zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77Interface$zgebrd")
@@ -31805,7 +31806,7 @@ subroutine zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgebrd
 
 subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$zgecon")
@@ -31822,7 +31823,7 @@ subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgecon
 
 subroutine zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zgedmd")
@@ -31861,7 +31862,7 @@ subroutine zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,l
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgedmd
 
 subroutine zgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zgedmdq")
@@ -31904,7 +31905,7 @@ subroutine zgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nr
   integer(blas77_int),intent(in) :: liwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgedmdq
 
 subroutine zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$zgeequ")
@@ -31922,7 +31923,7 @@ subroutine zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeequ
 
 subroutine zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77Interface$zgeequb")
@@ -31940,7 +31941,7 @@ subroutine zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) bind(C, name="BLAS77In
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeequb
 
 
@@ -31964,7 +31965,7 @@ subroutine zgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bi
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeev
 
 subroutine zgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgeevx")
@@ -31994,7 +31995,7 @@ subroutine zgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,sca
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeevx
 
 subroutine zgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgegs")
@@ -32019,7 +32020,7 @@ subroutine zgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgegs
 
 subroutine zgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgegv")
@@ -32044,7 +32045,7 @@ subroutine zgegv(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgegv
 
 subroutine zgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgehd2")
@@ -32060,7 +32061,7 @@ subroutine zgehd2(n,ilo,ihi,a,lda,tau,work,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgehd2
 
 subroutine zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgehrd")
@@ -32077,7 +32078,7 @@ subroutine zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgehrd
 
 subroutine zgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$zgejsv")
@@ -32106,7 +32107,7 @@ subroutine zgejsv(joba,jobu,jobv,jobr,jobt,jobp,m,n,a,lda,sva,u,ldu,v,ldv,cwork,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgejsv
 
 subroutine zgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgelq2")
@@ -32121,7 +32122,7 @@ subroutine zgelq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgelq2"
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelq2
 
 subroutine zgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$zgelq")
@@ -32138,7 +32139,7 @@ subroutine zgelq(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelq
 
 subroutine zgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgelqf")
@@ -32154,7 +32155,7 @@ subroutine zgelqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$z
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelqf
 
 subroutine zgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zgelqs")
@@ -32173,7 +32174,7 @@ subroutine zgelqs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelqs
 
 subroutine zgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgelqt3")
@@ -32188,7 +32189,7 @@ subroutine zgelqt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgelqt3")
   complex(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelqt3
 
 subroutine zgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$zgelqt")
@@ -32205,7 +32206,7 @@ subroutine zgelqt(m,n,mb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$zg
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelqt
 
 subroutine zgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zgels")
@@ -32224,7 +32225,7 @@ subroutine zgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS7
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgels
 
 subroutine zgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$zgelsd")
@@ -32247,7 +32248,7 @@ subroutine zgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelsd
 
 subroutine zgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgelss")
@@ -32269,7 +32270,7 @@ subroutine zgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info) bind(
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelss
 
 subroutine zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zgelst")
@@ -32288,7 +32289,7 @@ subroutine zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelst
 
 subroutine zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) bind(C, name="BLAS77Interface$zgelsx")
@@ -32309,7 +32310,7 @@ subroutine zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) bind(C, 
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelsx
 
 subroutine zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgelsy")
@@ -32331,7 +32332,7 @@ subroutine zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) bi
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgelsy
 
 subroutine zgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zgemlq")
@@ -32353,7 +32354,7 @@ subroutine zgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgemlq
 
 subroutine zgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$zgemlqt")
@@ -32375,7 +32376,7 @@ subroutine zgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgemlqt
 
 subroutine zgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zgemqr")
@@ -32397,7 +32398,7 @@ subroutine zgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) bind(C, 
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgemqr
 
 subroutine zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name="BLAS77Interface$zgemqrt")
@@ -32419,7 +32420,7 @@ subroutine zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) bind(C, name
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgemqrt
 
 subroutine zgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeql2")
@@ -32434,7 +32435,7 @@ subroutine zgeql2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeql2"
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeql2
 
 subroutine zgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgeqlf")
@@ -32450,7 +32451,7 @@ subroutine zgeqlf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$z
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqlf
 
 subroutine zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgeqp3")
@@ -32468,7 +32469,7 @@ subroutine zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) bind(C, name="BLAS77
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqp3
 
 subroutine zgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$zgeqp3rk")
@@ -32494,7 +32495,7 @@ subroutine zgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,j
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqp3rk
 
 subroutine zgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) bind(C, name="BLAS77Interface$zgeqpf")
@@ -32511,7 +32512,7 @@ subroutine zgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) bind(C, name="BLAS77Interf
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqpf
 
 subroutine zgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeqr2")
@@ -32526,7 +32527,7 @@ subroutine zgeqr2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeqr2"
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqr2
 
 subroutine zgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeqr2p")
@@ -32541,7 +32542,7 @@ subroutine zgeqr2p(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgeqr2
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqr2p
 
 subroutine zgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interface$zgeqr")
@@ -32558,7 +32559,7 @@ subroutine zgeqr(m,n,a,lda,t,tsize,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqr
 
 subroutine zgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgeqrf")
@@ -32574,7 +32575,7 @@ subroutine zgeqrf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$z
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrf
 
 subroutine zgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgeqrfp")
@@ -32590,7 +32591,7 @@ subroutine zgeqrfp(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrfp
 
 subroutine zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zgeqrs")
@@ -32609,7 +32610,7 @@ subroutine zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) bind(C, name="BLAS77
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrs
 
 subroutine zgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgeqrt2")
@@ -32624,7 +32625,7 @@ subroutine zgeqrt2(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgeqrt2")
   complex(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrt2
 
 subroutine zgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgeqrt3")
@@ -32639,7 +32640,7 @@ subroutine zgeqrt3(m,n,a,lda,t,ldt,info) bind(C, name="BLAS77Interface$zgeqrt3")
   complex(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrt3
 
 subroutine zgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$zgeqrt")
@@ -32656,7 +32657,7 @@ subroutine zgeqrt(m,n,nb,a,lda,t,ldt,work,info) bind(C, name="BLAS77Interface$zg
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgeqrt
 
 subroutine zgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgerfs")
@@ -32681,7 +32682,7 @@ subroutine zgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwo
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgerfs
 
 subroutine zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zgerfsx")
@@ -32714,7 +32715,7 @@ subroutine zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,b
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgerfsx
 
 subroutine zgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgerq2")
@@ -32729,7 +32730,7 @@ subroutine zgerq2(m,n,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zgerq2"
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgerq2
 
 subroutine zgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zgerqf")
@@ -32745,7 +32746,7 @@ subroutine zgerqf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$z
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgerqf
 
 subroutine zgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$zgesc2")
@@ -32760,7 +32761,7 @@ subroutine zgesc2(n,a,lda,rhs,ipiv,jpiv,scale) bind(C, name="BLAS77Interface$zge
   integer(blas77_int) :: jpiv(*)
   real(blas77_f64) :: scale
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesc2
 
 subroutine zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$zgesdd")
@@ -32783,7 +32784,7 @@ subroutine zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bi
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesdd
 
 subroutine zgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zgesv")
@@ -32799,7 +32800,7 @@ subroutine zgesv(n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zge
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesv
 
 subroutine zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zgesvd")
@@ -32822,7 +32823,7 @@ subroutine zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) bi
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvd
 
 subroutine zgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,cwork,lcwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$zgesvdq")
@@ -32852,7 +32853,7 @@ subroutine zgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwor
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvdq
 
 subroutine zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$zgesvdx")
@@ -32882,7 +32883,7 @@ subroutine zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvdx
 
 subroutine zgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$zgesvj")
@@ -32906,7 +32907,7 @@ subroutine zgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,cwork,lwork,rwork,lrwork
   real(blas77_f64) :: rwork(lrwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvj
 
 subroutine zgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgesvx")
@@ -32936,7 +32937,7 @@ subroutine zgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rco
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvx
 
 subroutine zgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zgesvxx")
@@ -32971,7 +32972,7 @@ subroutine zgesvxx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rc
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgesvxx
 
 subroutine zgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$zgetc2")
@@ -32985,7 +32986,7 @@ subroutine zgetc2(n,a,lda,ipiv,jpiv,info) bind(C, name="BLAS77Interface$zgetc2")
   integer(blas77_int) :: jpiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetc2
 
 subroutine zgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetf2")
@@ -32999,7 +33000,7 @@ subroutine zgetf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetf2
 
 subroutine zgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetrf2")
@@ -33013,7 +33014,7 @@ subroutine zgetrf2(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetrf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetrf2
 
 subroutine zgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetrf")
@@ -33027,7 +33028,7 @@ subroutine zgetrf(m,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zgetrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetrf
 
 subroutine zgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zgetri")
@@ -33042,7 +33043,7 @@ subroutine zgetri(n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zg
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetri
 
 subroutine zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zgetrs")
@@ -33059,7 +33060,7 @@ subroutine zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interf
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetrs
 
 subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zgetsls")
@@ -33078,7 +33079,7 @@ subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetsls
 
 subroutine zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$zgetsqrhrt")
@@ -33098,7 +33099,7 @@ subroutine zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgetsqrhrt
 
 subroutine zggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="BLAS77Interface$zggbak")
@@ -33117,7 +33118,7 @@ subroutine zggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) bind(C, name="B
   complex(blas77_f64) :: v(ldv,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggbak
 
 subroutine zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, name="BLAS77Interface$zggbal")
@@ -33137,7 +33138,7 @@ subroutine zggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) bind(C, nam
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggbal
 
 
@@ -33165,7 +33166,7 @@ subroutine zggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwor
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggev3
 
 subroutine zggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zggev")
@@ -33190,7 +33191,7 @@ subroutine zggev(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggev
 
 subroutine zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info) bind(C, name="BLAS77Interface$zggevx")
@@ -33227,7 +33228,7 @@ subroutine zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,l
   logical(blas77_int) :: bwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggevx
 
 subroutine zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77Interface$zggglm")
@@ -33248,7 +33249,7 @@ subroutine zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggglm
 
 subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$zgghd3")
@@ -33272,7 +33273,7 @@ subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgghd3
 
 subroutine zgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, name="BLAS77Interface$zgghrd")
@@ -33294,7 +33295,7 @@ subroutine zgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) bind(C, na
   complex(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgghrd
 
 subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77Interface$zgglse")
@@ -33315,7 +33316,7 @@ subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgglse
 
 subroutine zggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$zggqrf")
@@ -33335,7 +33336,7 @@ subroutine zggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggqrf
 
 subroutine zggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLAS77Interface$zggrqf")
@@ -33355,7 +33356,7 @@ subroutine zggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggrqf
 
 subroutine zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info) bind(C, name="BLAS77Interface$zggsvd3")
@@ -33388,7 +33389,7 @@ subroutine zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggsvd3
 
 subroutine zggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info) bind(C, name="BLAS77Interface$zggsvd")
@@ -33420,7 +33421,7 @@ subroutine zggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggsvd
 
 subroutine zggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info) bind(C, name="BLAS77Interface$zggsvp3")
@@ -33454,7 +33455,7 @@ subroutine zggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggsvp3
 
 subroutine zggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,info) bind(C, name="BLAS77Interface$zggsvp")
@@ -33487,7 +33488,7 @@ subroutine zggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,l
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zggsvp
 
 subroutine zgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$zgsvj0")
@@ -33512,7 +33513,7 @@ subroutine zgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,
   complex(blas77_f64) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgsvj0
 
 subroutine zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) bind(C, name="BLAS77Interface$zgsvj1")
@@ -33538,7 +33539,7 @@ subroutine zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwo
   complex(blas77_f64) :: work(lwork)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgsvj1
 
 subroutine zgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zgtcon")
@@ -33557,7 +33558,7 @@ subroutine zgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,info) bind(C, name="B
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgtcon
 
 subroutine zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgtrfs")
@@ -33585,7 +33586,7 @@ subroutine zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgtrfs
 
 subroutine zgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$zgtsv")
@@ -33601,7 +33602,7 @@ subroutine zgtsv(n,nrhs,dl,d,du,b,ldb,info) bind(C, name="BLAS77Interface$zgtsv"
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgtsv
 
 subroutine zgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zgtsvx")
@@ -33631,7 +33632,7 @@ subroutine zgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcon
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgtsvx
 
 subroutine zgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$zgttrf")
@@ -33646,7 +33647,7 @@ subroutine zgttrf(n,dl,d,du,du2,ipiv,info) bind(C, name="BLAS77Interface$zgttrf"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgttrf
 
 subroutine zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zgttrs")
@@ -33665,7 +33666,7 @@ subroutine zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) bind(C, name="BLAS77
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgttrs
 
 subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Interface$zgtts2")
@@ -33683,7 +33684,7 @@ subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) bind(C, name="BLAS77Inte
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zgtts2
 
 subroutine zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) bind(C, name="BLAS77Interface$zhb2st_kernels")
@@ -33706,7 +33707,7 @@ subroutine zhb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,
   integer(blas77_int) :: ldvt
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhb2st_kernels
 
 subroutine zhbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zhbev_2stage")
@@ -33727,7 +33728,7 @@ subroutine zhbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) bi
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbev_2stage
 
 subroutine zhbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$zhbev")
@@ -33747,7 +33748,7 @@ subroutine zhbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) bind(C, name="B
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbev
 
 subroutine zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhbevd_2stage")
@@ -33771,7 +33772,7 @@ subroutine zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbevd_2stage
 
 subroutine zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhbevd")
@@ -33795,7 +33796,7 @@ subroutine zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,l
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbevd
 
 subroutine zhbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhbevx_2stage")
@@ -33827,7 +33828,7 @@ subroutine zhbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbevx_2stage
 
 subroutine zhbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhbevx")
@@ -33858,7 +33859,7 @@ subroutine zhbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ld
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbevx
 
 subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) bind(C, name="BLAS77Interface$zhbgst")
@@ -33880,7 +33881,7 @@ subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) bind(
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbgst
 
 subroutine zhbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$zhbgv")
@@ -33903,7 +33904,7 @@ subroutine zhbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) bind
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbgv
 
 subroutine zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhbgvd")
@@ -33930,7 +33931,7 @@ subroutine zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrw
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbgvd
 
 subroutine zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhbgvx")
@@ -33964,7 +33965,7 @@ subroutine zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abst
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbgvx
 
 subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS77Interface$zhbtrd")
@@ -33984,7 +33985,7 @@ subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhbtrd
 
 subroutine zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zhecon_3")
@@ -34002,7 +34003,7 @@ subroutine zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLA
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhecon_3
 
 subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zhecon")
@@ -34019,7 +34020,7 @@ subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhecon
 
 subroutine zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zhecon_rook")
@@ -34036,7 +34037,7 @@ subroutine zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BL
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhecon_rook
 
 subroutine zheequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$zheequb")
@@ -34053,7 +34054,7 @@ subroutine zheequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheequb
 
 subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zheev_2stage")
@@ -34071,7 +34072,7 @@ subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name=
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheev_2stage
 
 subroutine zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zheev")
@@ -34089,7 +34090,7 @@ subroutine zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) bind(C, name="BLAS77
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheev
 
 subroutine zheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zheevd_2stage")
@@ -34110,7 +34111,7 @@ subroutine zheevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevd_2stage
 
 subroutine zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zheevd")
@@ -34131,7 +34132,7 @@ subroutine zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info)
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevd
 
 subroutine zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zheevr_2stage")
@@ -34162,7 +34163,7 @@ subroutine zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,is
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevr_2stage
 
 subroutine zheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zheevr")
@@ -34193,7 +34194,7 @@ subroutine zheevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,wo
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevr
 
 subroutine zheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zheevx_2stage")
@@ -34222,7 +34223,7 @@ subroutine zheevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,wo
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevx_2stage
 
 subroutine zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zheevx")
@@ -34251,7 +34252,7 @@ subroutine zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheevx
 
 subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zhegs2")
@@ -34267,7 +34268,7 @@ subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegs2
 
 subroutine zhegst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zhegst")
@@ -34283,7 +34284,7 @@ subroutine zhegst(itype,uplo,n,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegst
 
 subroutine zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zhegv_2stage")
@@ -34304,7 +34305,7 @@ subroutine zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) b
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegv_2stage
 
 subroutine zhegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zhegv")
@@ -34325,7 +34326,7 @@ subroutine zhegv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) bind(C, 
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegv
 
 subroutine zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhegvd")
@@ -34349,7 +34350,7 @@ subroutine zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegvd
 
 subroutine zhegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhegvx")
@@ -34381,7 +34382,7 @@ subroutine zhegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,l
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhegvx
 
 subroutine zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zherfs")
@@ -34406,7 +34407,7 @@ subroutine zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwor
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zherfs
 
 subroutine zherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zherfsx")
@@ -34438,7 +34439,7 @@ subroutine zherfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zherfsx
 
 subroutine zhesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhesv_aa_2stage")
@@ -34460,7 +34461,7 @@ subroutine zhesv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesv_aa_2stage
 
 subroutine zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhesv_aa")
@@ -34479,7 +34480,7 @@ subroutine zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesv_aa
 
 subroutine zhesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhesv")
@@ -34498,7 +34499,7 @@ subroutine zhesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesv
 
 subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhesv_rk")
@@ -34518,7 +34519,7 @@ subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesv_rk
 
 subroutine zhesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhesv_rook")
@@ -34537,7 +34538,7 @@ subroutine zhesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesv_rook
 
 subroutine zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zhesvx")
@@ -34565,7 +34566,7 @@ subroutine zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesvx
 
 subroutine zhesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zhesvxx")
@@ -34599,7 +34600,7 @@ subroutine zhesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhesvxx
 
 subroutine zheswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$zheswapr")
@@ -34613,7 +34614,7 @@ subroutine zheswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$zheswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zheswapr
 
 subroutine zhetd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$zhetd2")
@@ -34629,7 +34630,7 @@ subroutine zhetd2(uplo,n,a,lda,d,e,tau,info) bind(C, name="BLAS77Interface$zhetd
   complex(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetd2
 
 subroutine zhetf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zhetf2")
@@ -34643,7 +34644,7 @@ subroutine zhetf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zhetf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetf2
 
 subroutine zhetf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zhetf2_rk")
@@ -34658,7 +34659,7 @@ subroutine zhetf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zhe
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetf2_rk
 
 subroutine zhetf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zhetf2_rook")
@@ -34672,7 +34673,7 @@ subroutine zhetf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zhe
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetf2_rook
 
 subroutine zhetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) bind(C, name="BLAS77Interface$zhetrd_2stage")
@@ -34693,7 +34694,7 @@ subroutine zhetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrd_2stage
 
 subroutine zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) bind(C, name="BLAS77Interface$zhetrd_hb2st")
@@ -34715,7 +34716,7 @@ subroutine zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrd_hb2st
 
 subroutine zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, name="BLAS77Interface$zhetrd_he2hb")
@@ -34734,7 +34735,7 @@ subroutine zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrd_he2hb
 
 subroutine zhetrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Interface$zhetrd")
@@ -34752,7 +34753,7 @@ subroutine zhetrd(uplo,n,a,lda,d,e,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrd
 
 subroutine zhetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$zhetrf_aa_2stage")
@@ -34771,7 +34772,7 @@ subroutine zhetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrf_aa_2stage
 
 subroutine zhetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetrf_aa")
@@ -34787,7 +34788,7 @@ subroutine zhetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrf_aa
 
 subroutine zhetrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetrf")
@@ -34803,7 +34804,7 @@ subroutine zhetrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrf
 
 subroutine zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetrf_rk")
@@ -34820,7 +34821,7 @@ subroutine zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrf_rk
 
 subroutine zhetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetrf_rook")
@@ -34836,7 +34837,7 @@ subroutine zhetrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrf_rook
 
 subroutine zhetri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetri2")
@@ -34852,7 +34853,7 @@ subroutine zhetri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri2
 
 subroutine zhetri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$zhetri2x")
@@ -34868,7 +34869,7 @@ subroutine zhetri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri2x
 
 subroutine zhetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zhetri_3")
@@ -34885,7 +34886,7 @@ subroutine zhetri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri_3
 
 subroutine zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$zhetri_3x")
@@ -34902,7 +34903,7 @@ subroutine zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   complex(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri_3x
 
 subroutine zhetri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zhetri")
@@ -34917,7 +34918,7 @@ subroutine zhetri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zhe
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri
 
 subroutine zhetri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zhetri_rook")
@@ -34932,7 +34933,7 @@ subroutine zhetri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetri_rook
 
 subroutine zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$zhetrs2")
@@ -34950,7 +34951,7 @@ subroutine zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs2
 
 subroutine zhetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zhetrs_3")
@@ -34968,7 +34969,7 @@ subroutine zhetrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs_3
 
 subroutine zhetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$zhetrs_aa_2stage")
@@ -34988,7 +34989,7 @@ subroutine zhetrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs_aa_2stage
 
 subroutine zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zhetrs_aa")
@@ -35007,7 +35008,7 @@ subroutine zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs_aa
 
 subroutine zhetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zhetrs")
@@ -35024,7 +35025,7 @@ subroutine zhetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs
 
 subroutine zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zhetrs_rook")
@@ -35041,7 +35042,7 @@ subroutine zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhetrs_rook
 
 subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77Interface$zhfrk")
@@ -35059,7 +35060,7 @@ subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) bind(C, name="BLAS77I
   real(blas77_f64) :: beta
   complex(blas77_f64) :: c(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhfrk
 
 subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zhgeqz")
@@ -35087,7 +35088,7 @@ subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,w
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhgeqz
 
 subroutine zhpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zhpcon")
@@ -35103,7 +35104,7 @@ subroutine zhpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpcon
 
 subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$zhpev")
@@ -35121,7 +35122,7 @@ subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpev
 
 subroutine zhpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhpevd")
@@ -35143,7 +35144,7 @@ subroutine zhpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,in
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpevd
 
 subroutine zhpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhpevx")
@@ -35170,7 +35171,7 @@ subroutine zhpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,i
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpevx
 
 subroutine zhpgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$zhpgst")
@@ -35184,7 +35185,7 @@ subroutine zhpgst(itype,uplo,n,ap,bp,info) bind(C, name="BLAS77Interface$zhpgst"
   complex(blas77_f64) :: bp(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpgst
 
 subroutine zhpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) bind(C, name="BLAS77Interface$zhpgv")
@@ -35204,7 +35205,7 @@ subroutine zhpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) bind(C, name="
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpgv
 
 subroutine zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zhpgvd")
@@ -35228,7 +35229,7 @@ subroutine zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpgvd
 
 subroutine zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) bind(C, name="BLAS77Interface$zhpgvx")
@@ -35257,7 +35258,7 @@ subroutine zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,wor
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpgvx
 
 subroutine zhprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zhprfs")
@@ -35280,7 +35281,7 @@ subroutine zhprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhprfs
 
 subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zhpsv")
@@ -35296,7 +35297,7 @@ subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpsv
 
 subroutine zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zhpsvx")
@@ -35321,7 +35322,7 @@ subroutine zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhpsvx
 
 subroutine zhptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$zhptrd")
@@ -35336,7 +35337,7 @@ subroutine zhptrd(uplo,n,ap,d,e,tau,info) bind(C, name="BLAS77Interface$zhptrd")
   complex(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhptrd
 
 subroutine zhptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$zhptrf")
@@ -35349,7 +35350,7 @@ subroutine zhptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$zhptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhptrf
 
 subroutine zhptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$zhptri")
@@ -35363,7 +35364,7 @@ subroutine zhptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$zhptri
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhptri
 
 subroutine zhptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zhptrs")
@@ -35379,7 +35380,7 @@ subroutine zhptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhptrs
 
 subroutine zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info) bind(C, name="BLAS77Interface$zhsein")
@@ -35406,7 +35407,7 @@ subroutine zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,r
   integer(blas77_int) :: ifailr(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhsein
 
 subroutine zhseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$zhseqr")
@@ -35427,7 +35428,7 @@ subroutine zhseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) bind(C, nam
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zhseqr
 
 subroutine zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zla_gbamv")
@@ -35448,7 +35449,7 @@ subroutine zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) bind(C, n
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_gbamv
 
 function zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$zla_gbrcond_c")
@@ -35471,7 +35472,7 @@ function zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,r
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_gbrcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gbrcond_c
 
 function zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$zla_gbrcond_x")
@@ -35493,7 +35494,7 @@ function zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) b
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_gbrcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gbrcond_x
 
 subroutine zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$zla_gbrfsx_extended")
@@ -35532,7 +35533,7 @@ subroutine zla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,lda
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_gbrfsx_extended
 
 function zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Interface$zla_gbrpvgrw")
@@ -35549,7 +35550,7 @@ function zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   complex(blas77_f64) :: afb(ldafb,*)
   real(blas77_f64) :: zla_gbrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gbrpvgrw
 
 subroutine zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zla_geamv")
@@ -35568,7 +35569,7 @@ subroutine zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLA
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_geamv
 
 function zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$zla_gercond_c")
@@ -35589,7 +35590,7 @@ function zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_gercond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gercond_c
 
 function zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$zla_gercond_x")
@@ -35609,7 +35610,7 @@ function zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, nam
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_gercond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gercond_x
 
 subroutine zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$zla_gerfsx_extended")
@@ -35646,7 +35647,7 @@ subroutine zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,co
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_gerfsx_extended
 
 function zla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$zla_gerpvgrw")
@@ -35661,7 +35662,7 @@ function zla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$zla_g
   complex(blas77_f64) :: af(ldaf,*)
   real(blas77_f64) :: zla_gerpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_gerpvgrw
 
 subroutine zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zla_heamv")
@@ -35679,7 +35680,7 @@ subroutine zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_heamv
 
 function zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$zla_hercond_c")
@@ -35700,7 +35701,7 @@ function zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_hercond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_hercond_c
 
 function zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$zla_hercond_x")
@@ -35720,7 +35721,7 @@ function zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_hercond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_hercond_x
 
 subroutine zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$zla_herfsx_extended")
@@ -35757,7 +35758,7 @@ subroutine zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_herfsx_extended
 
 function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$zla_herpvgrw")
@@ -35775,7 +35776,7 @@ function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zla_herpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_herpvgrw
 
 subroutine zla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$zla_lin_berr")
@@ -35789,7 +35790,7 @@ subroutine zla_lin_berr(n,nz,nrhs,res,ayb,berr) bind(C, name="BLAS77Interface$zl
   real(blas77_f64) :: ayb(n,nrhs)
   real(blas77_f64) :: berr(nrhs)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_lin_berr
 
 function zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$zla_porcond_c")
@@ -35809,7 +35810,7 @@ function zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, na
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_porcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_porcond_c
 
 function zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLAS77Interface$zla_porcond_x")
@@ -35828,7 +35829,7 @@ function zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLA
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_porcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_porcond_x
 
 subroutine zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$zla_porfsx_extended")
@@ -35864,7 +35865,7 @@ subroutine zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ,c,b,ld
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_porfsx_extended
 
 function zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interface$zla_porpvgrw")
@@ -35880,7 +35881,7 @@ function zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zla_porpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_porpvgrw
 
 subroutine zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zla_syamv")
@@ -35898,7 +35899,7 @@ subroutine zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77
   real(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_syamv
 
 function zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(C, name="BLAS77Interface$zla_syrcond_c")
@@ -35919,7 +35920,7 @@ function zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_syrcond_c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_syrcond_c
 
 function zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name="BLAS77Interface$zla_syrcond_x")
@@ -35939,7 +35940,7 @@ function zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   real(blas77_f64) :: rwork(*)
   real(blas77_f64) :: zla_syrcond_x
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_syrcond_x
 
 subroutine zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) bind(C, name="BLAS77Interface$zla_syrfsx_extended")
@@ -35976,7 +35977,7 @@ subroutine zla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c
   logical(blas77_int) :: ignore_cwise
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_syrfsx_extended
 
 function zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77Interface$zla_syrpvgrw")
@@ -35994,7 +35995,7 @@ function zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zla_syrpvgrw
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zla_syrpvgrw
 
 subroutine zla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$zla_wwaddw")
@@ -36006,7 +36007,7 @@ subroutine zla_wwaddw(n,x,y,w) bind(C, name="BLAS77Interface$zla_wwaddw")
   complex(blas77_f64) :: y(*)
   complex(blas77_f64) :: w(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zla_wwaddw
 
 subroutine zlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77Interface$zlabrd")
@@ -36027,7 +36028,7 @@ subroutine zlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) bind(C, name="BLAS77In
   integer(blas77_int) :: ldy
   complex(blas77_f64) :: y(ldy,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlabrd
 
 subroutine zlacgv(n,x,incx) bind(C, name="BLAS77Interface$zlacgv")
@@ -36038,7 +36039,7 @@ subroutine zlacgv(n,x,incx) bind(C, name="BLAS77Interface$zlacgv")
   complex(blas77_f64) :: x(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacgv
 
 subroutine zlacn2(n,v,x,est,kase,isave) bind(C, name="BLAS77Interface$zlacn2")
@@ -36052,7 +36053,7 @@ subroutine zlacn2(n,v,x,est,kase,isave) bind(C, name="BLAS77Interface$zlacn2")
   integer(blas77_int) :: kase
   integer(blas77_int) :: isave(3)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacn2
 
 subroutine zlacon(n,v,x,est,kase) bind(C, name="BLAS77Interface$zlacon")
@@ -36065,7 +36066,7 @@ subroutine zlacon(n,v,x,est,kase) bind(C, name="BLAS77Interface$zlacon")
   real(blas77_f64) :: est
   integer(blas77_int) :: kase
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacon
 
 subroutine zlacp2(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$zlacp2")
@@ -36080,7 +36081,7 @@ subroutine zlacp2(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$zlacp2")
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacp2
 
 subroutine zlacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$zlacpy")
@@ -36095,7 +36096,7 @@ subroutine zlacpy(uplo,m,n,a,lda,b,ldb) bind(C, name="BLAS77Interface$zlacpy")
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacpy
 
 subroutine zlacrm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$zlacrm")
@@ -36112,7 +36113,7 @@ subroutine zlacrm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$zla
   complex(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: rwork(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacrm
 
 subroutine zlacrt(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$zlacrt")
@@ -36127,7 +36128,7 @@ subroutine zlacrt(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$zlacrt")
   complex(blas77_f64) :: c
   complex(blas77_f64) :: s
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlacrt
 
 function zladiv(x,y) bind(C, name="BLAS77Interface$zladiv")
@@ -36138,7 +36139,7 @@ function zladiv(x,y) bind(C, name="BLAS77Interface$zladiv")
   complex(blas77_f64) :: y
   complex(blas77_f64) :: zladiv
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zladiv
 
 subroutine zlaed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) bind(C, name="BLAS77Interface$zlaed0")
@@ -36157,7 +36158,7 @@ subroutine zlaed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) bind(C, name="B
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaed0
 
 subroutine zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) bind(C, name="BLAS77Interface$zlaed7")
@@ -36187,7 +36188,7 @@ subroutine zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qpt
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaed7
 
 subroutine zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) bind(C, name="BLAS77Interface$zlaed8")
@@ -36216,7 +36217,7 @@ subroutine zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,ind
   real(blas77_f64) :: givnum(2,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaed8
 
 subroutine zlaein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) bind(C, name="BLAS77Interface$zlaein")
@@ -36237,7 +36238,7 @@ subroutine zlaein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) bind(C
   real(blas77_f64) :: smlnum
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaein
 
 subroutine zlaesy(a,b,c,rt1,rt2,evscal,cs1,sn1) bind(C, name="BLAS77Interface$zlaesy")
@@ -36253,7 +36254,7 @@ subroutine zlaesy(a,b,c,rt1,rt2,evscal,cs1,sn1) bind(C, name="BLAS77Interface$zl
   complex(blas77_f64) :: cs1
   complex(blas77_f64) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaesy
 
 subroutine zlaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$zlaev2")
@@ -36268,7 +36269,7 @@ subroutine zlaev2(a,b,c,rt1,rt2,cs1,sn1) bind(C, name="BLAS77Interface$zlaev2")
   real(blas77_f64) :: cs1
   complex(blas77_f64) :: sn1
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaev2
 
 subroutine zlag2c(m,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$zlag2c")
@@ -36283,7 +36284,7 @@ subroutine zlag2c(m,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$zlag2c")
   complex(blas77_f32) :: sa(ldsa,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlag2c
 
 subroutine zlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name="BLAS77Interface$zlags2")
@@ -36304,7 +36305,7 @@ subroutine zlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) bind(C, name=
   real(blas77_f64) :: csq
   complex(blas77_f64) :: snq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlags2
 
 subroutine zlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLAS77Interface$zlagtm")
@@ -36324,7 +36325,7 @@ subroutine zlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) bind(C, name="BLA
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlagtm
 
 subroutine zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$zlahef_aa")
@@ -36342,7 +36343,7 @@ subroutine zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   complex(blas77_f64) :: h(ldh,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahef_aa
 
 subroutine zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlahef")
@@ -36360,7 +36361,7 @@ subroutine zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahef
 
 subroutine zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlahef_rk")
@@ -36379,7 +36380,7 @@ subroutine zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahef_rk
 
 subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlahef_rook")
@@ -36397,7 +36398,7 @@ subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahef_rook
 
 subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) bind(C, name="BLAS77Interface$zlahqr")
@@ -36418,7 +36419,7 @@ subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) bind(C, na
   complex(blas77_f64) :: z(ldz,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahqr
 
 subroutine zlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$zlahr2")
@@ -36436,7 +36437,7 @@ subroutine zlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$zl
   integer(blas77_int) :: ldy
   complex(blas77_f64) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahr2
 
 subroutine zlahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$zlahrd")
@@ -36454,7 +36455,7 @@ subroutine zlahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) bind(C, name="BLAS77Interface$zl
   integer(blas77_int) :: ldy
   complex(blas77_f64) :: y(ldy,nb)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlahrd
 
 subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface$zlaic1")
@@ -36471,7 +36472,7 @@ subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) bind(C, name="BLAS77Interface
   complex(blas77_f64) :: s
   complex(blas77_f64) :: c
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaic1
 
 subroutine zlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info) bind(C, name="BLAS77Interface$zlals0")
@@ -36503,7 +36504,7 @@ subroutine zlals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlals0
 
 subroutine zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info) bind(C, name="BLAS77Interface$zlalsa")
@@ -36537,7 +36538,7 @@ subroutine zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,pole
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlalsa
 
 subroutine zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) bind(C, name="BLAS77Interface$zlalsd")
@@ -36559,7 +36560,7 @@ subroutine zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info)
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlalsd
 
 subroutine zlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zlamswlq")
@@ -36583,7 +36584,7 @@ subroutine zlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlamswlq
 
 subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zlamtsqr")
@@ -36607,7 +36608,7 @@ subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlamtsqr
 
 function zlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$zlangb")
@@ -36623,7 +36624,7 @@ function zlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$zlangb"
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlangb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlangb
 
 function zlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$zlange")
@@ -36638,7 +36639,7 @@ function zlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$zlange")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlange
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlange
 
 function zlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$zlangt")
@@ -36652,7 +36653,7 @@ function zlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$zlangt")
   complex(blas77_f64) :: du(*)
   real(blas77_f64) :: zlangt
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlangt
 
 function zlanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlanhb")
@@ -36668,7 +36669,7 @@ function zlanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlanhb
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlanhb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanhb
 
 function zlanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhe")
@@ -36683,7 +36684,7 @@ function zlanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhe")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlanhe
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanhe
 
 function zlanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$zlanhf")
@@ -36698,7 +36699,7 @@ function zlanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$zlanhf"
   real(blas77_f64) :: work(0:*)
   real(blas77_f64) :: zlanhf
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanhf
 
 function zlanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlanhp")
@@ -36712,7 +36713,7 @@ function zlanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlanhp")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlanhp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanhp
 
 function zlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhs")
@@ -36726,7 +36727,7 @@ function zlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhs")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlanhs
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanhs
 
 function zlanht(norm,n,d,e) bind(C, name="BLAS77Interface$zlanht")
@@ -36739,7 +36740,7 @@ function zlanht(norm,n,d,e) bind(C, name="BLAS77Interface$zlanht")
   complex(blas77_f64) :: e(*)
   real(blas77_f64) :: zlanht
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlanht
 
 function zlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlansb")
@@ -36755,7 +36756,7 @@ function zlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlansb
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlansb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlansb
 
 function zlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlansp")
@@ -36769,7 +36770,7 @@ function zlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlansp")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlansp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlansp
 
 function zlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlansy")
@@ -36784,7 +36785,7 @@ function zlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlansy")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlansy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlansy
 
 function zlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlantb")
@@ -36801,7 +36802,7 @@ function zlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$z
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlantb
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlantb
 
 function zlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$zlantp")
@@ -36816,7 +36817,7 @@ function zlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$zlantp")
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlantp
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlantp
 
 function zlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$zlantr")
@@ -36833,7 +36834,7 @@ function zlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$zla
   real(blas77_f64) :: work(*)
   real(blas77_f64) :: zlantr
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end function zlantr
 
 subroutine zlapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$zlapll")
@@ -36847,7 +36848,7 @@ subroutine zlapll(n,x,incx,y,incy,ssmin) bind(C, name="BLAS77Interface$zlapll")
   integer(blas77_int) :: incy
   real(blas77_f64) :: ssmin
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlapll
 
 subroutine zlapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$zlapmr")
@@ -36861,7 +36862,7 @@ subroutine zlapmr(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$zlapmr")
   complex(blas77_f64) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlapmr
 
 subroutine zlapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$zlapmt")
@@ -36875,7 +36876,7 @@ subroutine zlapmt(forwrd,m,n,x,ldx,k) bind(C, name="BLAS77Interface$zlapmt")
   complex(blas77_f64) :: x(ldx,*)
   integer(blas77_int) :: k(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlapmt
 
 subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$zlaqgb")
@@ -36895,7 +36896,7 @@ subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) bind(C, name="
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqgb
 
 subroutine zlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77Interface$zlaqge")
@@ -36913,7 +36914,7 @@ subroutine zlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) bind(C, name="BLAS77In
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqge
 
 subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqhb")
@@ -36930,7 +36931,7 @@ subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqhb
 
 subroutine zlaqhe(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqhe")
@@ -36946,7 +36947,7 @@ subroutine zlaqhe(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqhe
 
 subroutine zlaqhp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqhp")
@@ -36961,7 +36962,7 @@ subroutine zlaqhp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$zl
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqhp
 
 subroutine zlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77Interface$zlaqp2")
@@ -36979,7 +36980,7 @@ subroutine zlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) bind(C, name="BLAS77In
   real(blas77_f64) :: vn2(*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqp2
 
 subroutine zlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) bind(C, name="BLAS77Interface$zlaqp2rk")
@@ -37007,7 +37008,7 @@ subroutine zlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,max
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqp2rk
 
 subroutine zlaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) bind(C, name="BLAS77Interface$zlaqp3rk")
@@ -37039,7 +37040,7 @@ subroutine zlaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqp3rk
 
 subroutine zlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, name="BLAS77Interface$zlaqps")
@@ -37061,7 +37062,7 @@ subroutine zlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) bind(C, na
   integer(blas77_int) :: ldf
   complex(blas77_f64) :: f(ldf,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqps
 
 subroutine zlaqr0(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$zlaqr0")
@@ -37084,7 +37085,7 @@ subroutine zlaqr0(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr0
 
 subroutine zlaqr1(n,h,ldh,s1,s2,v) bind(C, name="BLAS77Interface$zlaqr1")
@@ -37098,7 +37099,7 @@ subroutine zlaqr1(n,h,ldh,s1,s2,v) bind(C, name="BLAS77Interface$zlaqr1")
   complex(blas77_f64) :: s2
   complex(blas77_f64) :: v(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr1
 
 subroutine zlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$zlaqr2")
@@ -37131,7 +37132,7 @@ subroutine zlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ld
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr2
 
 subroutine zlaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) bind(C, name="BLAS77Interface$zlaqr3")
@@ -37164,7 +37165,7 @@ subroutine zlaqr3(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ld
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: lwork
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr3
 
 subroutine zlaqr4(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info) bind(C, name="BLAS77Interface$zlaqr4")
@@ -37187,7 +37188,7 @@ subroutine zlaqr4(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,work,lwork,info)
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr4
 
 subroutine zlaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,s,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) bind(C, name="BLAS77Interface$zlaqr5")
@@ -37219,7 +37220,7 @@ subroutine zlaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,s,h,ldh,iloz,ihiz,z,ldz,
   integer(blas77_int) :: ldwh
   complex(blas77_f64) :: wh(ldwh,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqr5
 
 subroutine zlaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqsb")
@@ -37236,7 +37237,7 @@ subroutine zlaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) bind(C, name="BLAS77Inte
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqsb
 
 subroutine zlaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqsp")
@@ -37251,7 +37252,7 @@ subroutine zlaqsp(uplo,n,ap,s,scond,amax,equed) bind(C, name="BLAS77Interface$zl
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqsp
 
 subroutine zlaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface$zlaqsy")
@@ -37267,7 +37268,7 @@ subroutine zlaqsy(uplo,n,a,lda,s,scond,amax,equed) bind(C, name="BLAS77Interface
   real(blas77_f64) :: amax
   character(len=1) :: equed
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqsy
 
 subroutine zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) bind(C, name="BLAS77Interface$zlaqz0")
@@ -37296,7 +37297,7 @@ subroutine zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqz0
 
 subroutine zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) bind(C, name="BLAS77Interface$zlaqz1")
@@ -37322,7 +37323,7 @@ subroutine zlaqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zs
   integer(blas77_int),intent(in) :: ldz
   complex(blas77_f64) :: z(ldz,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqz1
 
 subroutine zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info) bind(C, name="BLAS77Interface$zlaqz2")
@@ -37358,7 +37359,7 @@ subroutine zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alp
   integer(blas77_int),intent(in) :: rec
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqz2
 
 subroutine zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) bind(C, name="BLAS77Interface$zlaqz3")
@@ -37391,7 +37392,7 @@ subroutine zlaqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,
   integer(blas77_int),intent(in) :: lwork
   integer(blas77_int),intent(out) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaqz3
 
 subroutine zlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) bind(C, name="BLAS77Interface$zlar1v")
@@ -37420,7 +37421,7 @@ subroutine zlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mi
   real(blas77_f64) :: rqcorr
   real(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlar1v
 
 subroutine zlar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$zlar2v")
@@ -37436,7 +37437,7 @@ subroutine zlar2v(n,x,y,z,incx,c,s,incc) bind(C, name="BLAS77Interface$zlar2v")
   complex(blas77_f64) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlar2v
 
 subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$zlarcm")
@@ -37453,7 +37454,7 @@ subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) bind(C, name="BLAS77Interface$zla
   complex(blas77_f64) :: c(ldc,*)
   real(blas77_f64) :: rwork(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarcm
 
 subroutine zlarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarf1f")
@@ -37470,7 +37471,7 @@ subroutine zlarf1f(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarf1f
 
 subroutine zlarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarf1l")
@@ -37487,7 +37488,7 @@ subroutine zlarf1l(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarf1l
 
 subroutine zlarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarf")
@@ -37504,7 +37505,7 @@ subroutine zlarf(side,m,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarf
 
 subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$zlarfb_gett")
@@ -37524,7 +37525,7 @@ subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="
   integer(blas77_int) :: ldwork
   complex(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfb_gett
 
 subroutine zlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$zlarfb")
@@ -37547,7 +37548,7 @@ subroutine zlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) 
   integer(blas77_int) :: ldwork
   complex(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfb
 
 subroutine zlarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$zlarfg")
@@ -37560,7 +37561,7 @@ subroutine zlarfg(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$zlarfg")
   integer(blas77_int) :: incx
   complex(blas77_f64) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfg
 
 subroutine zlarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$zlarfgp")
@@ -37573,7 +37574,7 @@ subroutine zlarfgp(n,alpha,x,incx,tau) bind(C, name="BLAS77Interface$zlarfgp")
   integer(blas77_int) :: incx
   complex(blas77_f64) :: tau
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfgp
 
 subroutine zlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$zlarft_lvl2")
@@ -37590,7 +37591,7 @@ subroutine zlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77In
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarft_lvl2
 
 subroutine zlarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$zlarft")
@@ -37607,7 +37608,7 @@ subroutine zlarft(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarft
 
 subroutine zlarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarfx")
@@ -37623,7 +37624,7 @@ subroutine zlarfx(side,m,n,v,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarf
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfx
 
 subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarfy")
@@ -37639,7 +37640,7 @@ subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zl
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarfy
 
 subroutine zlargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$zlargv")
@@ -37654,7 +37655,7 @@ subroutine zlargv(n,x,incx,y,incy,c,incc) bind(C, name="BLAS77Interface$zlargv")
   real(blas77_f64) :: c(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlargv
 
 subroutine zlarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$zlarnv")
@@ -37666,7 +37667,7 @@ subroutine zlarnv(idist,iseed,n,x) bind(C, name="BLAS77Interface$zlarnv")
   integer(blas77_int) :: n
   complex(blas77_f64) :: x(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarnv
 
 subroutine zlarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) bind(C, name="BLAS77Interface$zlarrv")
@@ -37699,7 +37700,7 @@ subroutine zlarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarrv
 
 subroutine zlarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$zlarscl2")
@@ -37712,7 +37713,7 @@ subroutine zlarscl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$zlarscl2")
   integer(blas77_int) :: ldx
   complex(blas77_f64) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarscl2
 
 subroutine zlartg(f,g,c,s,r) bind(C, name="BLAS77Interface$zlartg")
@@ -37725,7 +37726,7 @@ subroutine zlartg(f,g,c,s,r) bind(C, name="BLAS77Interface$zlartg")
   complex(blas77_f64) :: s
   complex(blas77_f64) :: r
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlartg
 
 subroutine zlartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$zlartv")
@@ -37741,7 +37742,7 @@ subroutine zlartv(n,x,incx,y,incy,c,s,incc) bind(C, name="BLAS77Interface$zlartv
   complex(blas77_f64) :: s(*)
   integer(blas77_int) :: incc
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlartv
 
 subroutine zlarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface$zlarz")
@@ -37759,7 +37760,7 @@ subroutine zlarz(side,m,n,l,v,incv,tau,c,ldc,work) bind(C, name="BLAS77Interface
   complex(blas77_f64) :: c(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarz
 
 subroutine zlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) bind(C, name="BLAS77Interface$zlarzb")
@@ -37783,7 +37784,7 @@ subroutine zlarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork
   integer(blas77_int) :: ldwork
   complex(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarzb
 
 subroutine zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interface$zlarzt")
@@ -37800,7 +37801,7 @@ subroutine zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: ldt
   complex(blas77_f64) :: t(ldt,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlarzt
 
 subroutine zlascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$zlascl2")
@@ -37813,7 +37814,7 @@ subroutine zlascl2(m,n,d,x,ldx) bind(C, name="BLAS77Interface$zlascl2")
   integer(blas77_int) :: ldx
   complex(blas77_f64) :: x(ldx,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlascl2
 
 subroutine zlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Interface$zlascl")
@@ -37831,7 +37832,7 @@ subroutine zlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) bind(C, name="BLAS77Inter
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlascl
 
 subroutine zlaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$zlaset")
@@ -37846,7 +37847,7 @@ subroutine zlaset(uplo,m,n,alpha,beta,a,lda) bind(C, name="BLAS77Interface$zlase
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaset
 
 subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$zlasr")
@@ -37863,7 +37864,7 @@ subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlasr
 
 subroutine zlassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$zlassq")
@@ -37876,7 +37877,7 @@ subroutine zlassq(n,x,incx,scale,sumsq) bind(C, name="BLAS77Interface$zlassq")
   real(blas77_f64) :: scale
   real(blas77_f64) :: sumsq
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlassq
 
 subroutine zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$zlaswlq")
@@ -37895,7 +37896,7 @@ subroutine zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaswlq
 
 subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$zlaswp")
@@ -37910,7 +37911,7 @@ subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) bind(C, name="BLAS77Interface$zlaswp"
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaswp
 
 subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Interface$zlasyf_aa")
@@ -37928,7 +37929,7 @@ subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) bind(C, name="BLAS77Int
   complex(blas77_f64) :: h(ldh,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlasyf_aa
 
 subroutine zlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlasyf")
@@ -37946,7 +37947,7 @@ subroutine zlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interf
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlasyf
 
 subroutine zlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlasyf_rk")
@@ -37965,7 +37966,7 @@ subroutine zlasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlasyf_rk
 
 subroutine zlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77Interface$zlasyf_rook")
@@ -37983,7 +37984,7 @@ subroutine zlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: w(ldw,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlasyf_rook
 
 subroutine zlat2c(uplo,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$zlat2c")
@@ -37998,7 +37999,7 @@ subroutine zlat2c(uplo,n,a,lda,sa,ldsa,info) bind(C, name="BLAS77Interface$zlat2
   complex(blas77_f32) :: sa(ldsa,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlat2c
 
 subroutine zlatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C, name="BLAS77Interface$zlatbs")
@@ -38018,7 +38019,7 @@ subroutine zlatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) bind(C
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatbs
 
 subroutine zlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77Interface$zlatdf")
@@ -38035,7 +38036,7 @@ subroutine zlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) bind(C, name="BLAS77I
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: jpiv(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatdf
 
 subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="BLAS77Interface$zlatps")
@@ -38053,7 +38054,7 @@ subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) bind(C, name="
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatps
 
 subroutine zlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$zlatrd")
@@ -38070,7 +38071,7 @@ subroutine zlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) bind(C, name="BLAS77Interface$zla
   integer(blas77_int) :: ldw
   complex(blas77_f64) :: w(ldw,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatrd
 
 subroutine zlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) bind(C, name="BLAS77Interface$zlatrs3")
@@ -38093,7 +38094,7 @@ subroutine zlatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatrs3
 
 subroutine zlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, name="BLAS77Interface$zlatrs")
@@ -38112,7 +38113,7 @@ subroutine zlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) bind(C, nam
   real(blas77_f64) :: cnorm(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatrs
 
 subroutine zlatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$zlatrz")
@@ -38127,7 +38128,7 @@ subroutine zlatrz(m,n,l,a,lda,tau,work) bind(C, name="BLAS77Interface$zlatrz")
   complex(blas77_f64) :: tau(*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatrz
 
 subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$zlatsqr")
@@ -38146,7 +38147,7 @@ subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatsqr
 
 subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interface$zlatzm")
@@ -38164,7 +38165,7 @@ subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) bind(C, name="BLAS77Interf
   complex(blas77_f64) :: c2(ldc,*)
   complex(blas77_f64) :: work(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlatzm
 
 subroutine zlaunhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$zlaunhr_col_getrfnp2")
@@ -38178,7 +38179,7 @@ subroutine zlaunhr_col_getrfnp2(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$
   complex(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaunhr_col_getrfnp2
 
 subroutine zlaunhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$zlaunhr_col_getrfnp")
@@ -38192,7 +38193,7 @@ subroutine zlaunhr_col_getrfnp(m,n,a,lda,d,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlaunhr_col_getrfnp
 
 subroutine zlauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zlauu2")
@@ -38205,7 +38206,7 @@ subroutine zlauu2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zlauu2")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlauu2
 
 subroutine zlauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zlauum")
@@ -38218,7 +38219,7 @@ subroutine zlauum(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zlauum")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zlauum
 
 subroutine zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$zpbcon")
@@ -38236,7 +38237,7 @@ subroutine zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) bind(C, name="B
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbcon
 
 subroutine zpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Interface$zpbequ")
@@ -38253,7 +38254,7 @@ subroutine zpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbequ
 
 subroutine zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zpbrfs")
@@ -38278,7 +38279,7 @@ subroutine zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rw
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbrfs
 
 subroutine zpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbstf")
@@ -38292,7 +38293,7 @@ subroutine zpbstf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbstf")
   complex(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbstf
 
 subroutine zpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$zpbsv")
@@ -38309,7 +38310,7 @@ subroutine zpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbsv
 
 subroutine zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zpbsvx")
@@ -38338,7 +38339,7 @@ subroutine zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcon
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbsvx
 
 subroutine zpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbtf2")
@@ -38352,7 +38353,7 @@ subroutine zpbtf2(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbtf2")
   complex(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbtf2
 
 subroutine zpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbtrf")
@@ -38366,7 +38367,7 @@ subroutine zpbtrf(uplo,n,kd,ab,ldab,info) bind(C, name="BLAS77Interface$zpbtrf")
   complex(blas77_f64) :: ab(ldab,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbtrf
 
 subroutine zpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$zpbtrs")
@@ -38383,7 +38384,7 @@ subroutine zpbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpbtrs
 
 subroutine zpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$zpftrf")
@@ -38396,7 +38397,7 @@ subroutine zpftrf(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$zpftrf")
   complex(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpftrf
 
 subroutine zpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$zpftri")
@@ -38409,7 +38410,7 @@ subroutine zpftri(transr,uplo,n,a,info) bind(C, name="BLAS77Interface$zpftri")
   complex(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpftri
 
 subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface$zpftrs")
@@ -38425,7 +38426,7 @@ subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) bind(C, name="BLAS77Interface
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpftrs
 
 subroutine zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$zpocon")
@@ -38442,7 +38443,7 @@ subroutine zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) bind(C, name="BLAS77
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpocon
 
 subroutine zpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$zpoequ")
@@ -38457,7 +38458,7 @@ subroutine zpoequ(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$zpoeq
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpoequ
 
 subroutine zpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$zpoequb")
@@ -38472,7 +38473,7 @@ subroutine zpoequb(n,a,lda,s,scond,amax,info) bind(C, name="BLAS77Interface$zpoe
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpoequb
 
 subroutine zporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zporfs")
@@ -38496,7 +38497,7 @@ subroutine zporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,inf
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zporfs
 
 subroutine zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zporfsx")
@@ -38527,7 +38528,7 @@ subroutine zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_er
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zporfsx
 
 subroutine zposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zposv")
@@ -38543,7 +38544,7 @@ subroutine zposv(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zpo
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zposv
 
 subroutine zposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zposvx")
@@ -38571,7 +38572,7 @@ subroutine zposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zposvx
 
 subroutine zposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zposvxx")
@@ -38604,7 +38605,7 @@ subroutine zposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvg
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zposvxx
 
 subroutine zpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotf2")
@@ -38617,7 +38618,7 @@ subroutine zpotf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotf2")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpotf2
 
 subroutine zpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotrf2")
@@ -38630,7 +38631,7 @@ subroutine zpotrf2(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotrf2")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpotrf2
 
 subroutine zpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotrf")
@@ -38643,7 +38644,7 @@ subroutine zpotrf(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotrf")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpotrf
 
 subroutine zpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotri")
@@ -38656,7 +38657,7 @@ subroutine zpotri(uplo,n,a,lda,info) bind(C, name="BLAS77Interface$zpotri")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpotri
 
 subroutine zpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zpotrs")
@@ -38672,7 +38673,7 @@ subroutine zpotrs(uplo,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$zp
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpotrs
 
 subroutine zppcon(uplo,n,ap,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Interface$zppcon")
@@ -38688,7 +38689,7 @@ subroutine zppcon(uplo,n,ap,anorm,rcond,work,rwork,info) bind(C, name="BLAS77Int
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zppcon
 
 subroutine zppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$zppequ")
@@ -38703,7 +38704,7 @@ subroutine zppequ(uplo,n,ap,s,scond,amax,info) bind(C, name="BLAS77Interface$zpp
   real(blas77_f64) :: amax
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zppequ
 
 subroutine zpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zpprfs")
@@ -38725,7 +38726,7 @@ subroutine zpprfs(uplo,n,nrhs,ap,afp,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpprfs
 
 subroutine zppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$zppsv")
@@ -38740,7 +38741,7 @@ subroutine zppsv(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$zppsv"
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zppsv
 
 subroutine zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zppsvx")
@@ -38766,7 +38767,7 @@ subroutine zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,wo
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zppsvx
 
 subroutine zpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$zpptrf")
@@ -38778,7 +38779,7 @@ subroutine zpptrf(uplo,n,ap,info) bind(C, name="BLAS77Interface$zpptrf")
   complex(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpptrf
 
 subroutine zpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$zpptri")
@@ -38790,7 +38791,7 @@ subroutine zpptri(uplo,n,ap,info) bind(C, name="BLAS77Interface$zpptri")
   complex(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpptri
 
 subroutine zpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$zpptrs")
@@ -38805,7 +38806,7 @@ subroutine zpptrs(uplo,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$zpptr
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpptrs
 
 subroutine zpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$zpstf2")
@@ -38822,7 +38823,7 @@ subroutine zpstf2(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpstf2
 
 subroutine zpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Interface$zpstrf")
@@ -38839,7 +38840,7 @@ subroutine zpstrf(uplo,n,a,lda,piv,rank,tol,work,info) bind(C, name="BLAS77Inter
   real(blas77_f64) :: work(2*n)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpstrf
 
 subroutine zptcon(n,d,e,anorm,rcond,rwork,info) bind(C, name="BLAS77Interface$zptcon")
@@ -38854,7 +38855,7 @@ subroutine zptcon(n,d,e,anorm,rcond,rwork,info) bind(C, name="BLAS77Interface$zp
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zptcon
 
 subroutine zpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$zpteqr")
@@ -38870,7 +38871,7 @@ subroutine zpteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$zpt
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpteqr
 
 subroutine zptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zptrfs")
@@ -38894,7 +38895,7 @@ subroutine zptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) b
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zptrfs
 
 subroutine zptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$zptsv")
@@ -38909,7 +38910,7 @@ subroutine zptsv(n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$zptsv")
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zptsv
 
 subroutine zptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zptsvx")
@@ -38934,7 +38935,7 @@ subroutine zptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,i
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zptsvx
 
 subroutine zpttrf(n,d,e,info) bind(C, name="BLAS77Interface$zpttrf")
@@ -38946,7 +38947,7 @@ subroutine zpttrf(n,d,e,info) bind(C, name="BLAS77Interface$zpttrf")
   complex(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpttrf
 
 subroutine zpttrs(uplo,n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$zpttrs")
@@ -38962,7 +38963,7 @@ subroutine zpttrs(uplo,n,nrhs,d,e,b,ldb,info) bind(C, name="BLAS77Interface$zptt
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zpttrs
 
 subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$zptts2")
@@ -38977,7 +38978,7 @@ subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) bind(C, name="BLAS77Interface$zptts2")
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(ldb,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zptts2
 
 subroutine zrot(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$zrot")
@@ -38992,7 +38993,7 @@ subroutine zrot(n,cx,incx,cy,incy,c,s) bind(C, name="BLAS77Interface$zrot")
   real(blas77_f64) :: c
   complex(blas77_f64) :: s
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zrot
 
 subroutine zrscl(n,a,x,incx) bind(C, name="BLAS77Interface$zrscl")
@@ -39004,7 +39005,7 @@ subroutine zrscl(n,a,x,incx) bind(C, name="BLAS77Interface$zrscl")
   complex(blas77_f64) :: x(*)
   integer(blas77_int) :: incx
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zrscl
 
 subroutine zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zspcon")
@@ -39020,7 +39021,7 @@ subroutine zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zspcon
 
 subroutine zspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zspmv")
@@ -39037,7 +39038,7 @@ subroutine zspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) bind(C, name="BLAS77Interfa
   complex(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zspmv
 
 subroutine zspr(uplo,n,alpha,x,incx,ap) bind(C, name="BLAS77Interface$zspr")
@@ -39051,7 +39052,7 @@ subroutine zspr(uplo,n,alpha,x,incx,ap) bind(C, name="BLAS77Interface$zspr")
   integer(blas77_int) :: incx
   complex(blas77_f64) :: ap(*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zspr
 
 subroutine zsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zsprfs")
@@ -39074,7 +39075,7 @@ subroutine zsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info)
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsprfs
 
 subroutine zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zspsv")
@@ -39090,7 +39091,7 @@ subroutine zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zspsv
 
 subroutine zspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zspsvx")
@@ -39115,7 +39116,7 @@ subroutine zspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zspsvx
 
 subroutine zsptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$zsptrf")
@@ -39128,7 +39129,7 @@ subroutine zsptrf(uplo,n,ap,ipiv,info) bind(C, name="BLAS77Interface$zsptrf")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsptrf
 
 subroutine zsptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$zsptri")
@@ -39142,7 +39143,7 @@ subroutine zsptri(uplo,n,ap,ipiv,work,info) bind(C, name="BLAS77Interface$zsptri
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsptri
 
 subroutine zsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zsptrs")
@@ -39158,7 +39159,7 @@ subroutine zsptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsptrs
 
 subroutine zstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zstedc")
@@ -39179,7 +39180,7 @@ subroutine zstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) b
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zstedc
 
 subroutine zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zstegr")
@@ -39207,7 +39208,7 @@ subroutine zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwor
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zstegr
 
 subroutine zstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, name="BLAS77Interface$zstein")
@@ -39228,7 +39229,7 @@ subroutine zstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) bind(C, n
   integer(blas77_int) :: ifail(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zstein
 
 subroutine zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$zstemr")
@@ -39257,7 +39258,7 @@ subroutine zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zstemr
 
 subroutine zsteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$zsteqr")
@@ -39273,7 +39274,7 @@ subroutine zsteqr(compz,n,d,e,z,ldz,work,info) bind(C, name="BLAS77Interface$zst
   real(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsteqr
 
 subroutine zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zsycon_3")
@@ -39291,7 +39292,7 @@ subroutine zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) bind(C, name="BLA
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsycon_3
 
 subroutine zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zsycon")
@@ -39308,7 +39309,7 @@ subroutine zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsycon
 
 subroutine zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BLAS77Interface$zsycon_rook")
@@ -39325,7 +39326,7 @@ subroutine zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) bind(C, name="BL
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsycon_rook
 
 subroutine zsyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$zsyconv")
@@ -39341,7 +39342,7 @@ subroutine zsyconv(uplo,way,n,a,lda,ipiv,e,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: e(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyconv
 
 subroutine zsyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zsyconvf")
@@ -39357,7 +39358,7 @@ subroutine zsyconvf(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyconvf
 
 subroutine zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zsyconvf_rook")
@@ -39373,7 +39374,7 @@ subroutine zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyconvf_rook
 
 subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Interface$zsyequb")
@@ -39390,7 +39391,7 @@ subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyequb
 
 subroutine zsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Interface$zsymv")
@@ -39408,7 +39409,7 @@ subroutine zsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: y(*)
   integer(blas77_int) :: incy
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsymv
 
 subroutine zsyr(uplo,n,alpha,x,incx,a,lda) bind(C, name="BLAS77Interface$zsyr")
@@ -39423,7 +39424,7 @@ subroutine zsyr(uplo,n,alpha,x,incx,a,lda) bind(C, name="BLAS77Interface$zsyr")
   integer(blas77_int) :: lda
   complex(blas77_f64) :: a(lda,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyr
 
 subroutine zsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$zsyrfs")
@@ -39448,7 +39449,7 @@ subroutine zsyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwor
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyrfs
 
 subroutine zsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zsyrfsx")
@@ -39480,7 +39481,7 @@ subroutine zsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyrfsx
 
 subroutine zsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsysv_aa_2stage")
@@ -39502,7 +39503,7 @@ subroutine zsysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysv_aa_2stage
 
 subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsysv_aa")
@@ -39521,7 +39522,7 @@ subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysv_aa
 
 subroutine zsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsysv")
@@ -39540,7 +39541,7 @@ subroutine zsysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysv
 
 subroutine zsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsysv_rk")
@@ -39560,7 +39561,7 @@ subroutine zsysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysv_rk
 
 subroutine zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsysv_rook")
@@ -39579,7 +39580,7 @@ subroutine zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysv_rook
 
 subroutine zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) bind(C, name="BLAS77Interface$zsysvx")
@@ -39607,7 +39608,7 @@ subroutine zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,ber
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysvx
 
 subroutine zsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) bind(C, name="BLAS77Interface$zsysvxx")
@@ -39641,7 +39642,7 @@ subroutine zsysvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsysvxx
 
 subroutine zsyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$zsyswapr")
@@ -39655,7 +39656,7 @@ subroutine zsyswapr(uplo,n,a,lda,i1,i2) bind(C, name="BLAS77Interface$zsyswapr")
   integer(blas77_int) :: i1
   integer(blas77_int) :: i2
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsyswapr
 
 subroutine zsytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zsytf2")
@@ -39669,7 +39670,7 @@ subroutine zsytf2(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zsytf2")
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytf2
 
 subroutine zsytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zsytf2_rk")
@@ -39684,7 +39685,7 @@ subroutine zsytf2_rk(uplo,n,a,lda,e,ipiv,info) bind(C, name="BLAS77Interface$zsy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytf2_rk
 
 subroutine zsytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zsytf2_rook")
@@ -39698,7 +39699,7 @@ subroutine zsytf2_rook(uplo,n,a,lda,ipiv,info) bind(C, name="BLAS77Interface$zsy
   integer(blas77_int) :: ipiv(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytf2_rook
 
 subroutine zsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind(C, name="BLAS77Interface$zsytrf_aa_2stage")
@@ -39717,7 +39718,7 @@ subroutine zsytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrf_aa_2stage
 
 subroutine zsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytrf_aa")
@@ -39733,7 +39734,7 @@ subroutine zsytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrf_aa
 
 subroutine zsytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytrf")
@@ -39749,7 +39750,7 @@ subroutine zsytrf(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interfa
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrf
 
 subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytrf_rk")
@@ -39766,7 +39767,7 @@ subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrf_rk
 
 subroutine zsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytrf_rook")
@@ -39782,7 +39783,7 @@ subroutine zsytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77In
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrf_rook
 
 subroutine zsytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytri2")
@@ -39798,7 +39799,7 @@ subroutine zsytri2(uplo,n,a,lda,ipiv,work,lwork,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri2
 
 subroutine zsytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interface$zsytri2x")
@@ -39814,7 +39815,7 @@ subroutine zsytri2x(uplo,n,a,lda,ipiv,work,nb,info) bind(C, name="BLAS77Interfac
   complex(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri2x
 
 subroutine zsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Interface$zsytri_3")
@@ -39831,7 +39832,7 @@ subroutine zsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) bind(C, name="BLAS77Int
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri_3
 
 subroutine zsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Interface$zsytri_3x")
@@ -39848,7 +39849,7 @@ subroutine zsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) bind(C, name="BLAS77Inter
   complex(blas77_f64) :: work(n+nb+1,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri_3x
 
 subroutine zsytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zsytri")
@@ -39863,7 +39864,7 @@ subroutine zsytri(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zsy
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri
 
 subroutine zsytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interface$zsytri_rook")
@@ -39878,7 +39879,7 @@ subroutine zsytri_rook(uplo,n,a,lda,ipiv,work,info) bind(C, name="BLAS77Interfac
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytri_rook
 
 subroutine zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77Interface$zsytrs2")
@@ -39896,7 +39897,7 @@ subroutine zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs2
 
 subroutine zsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zsytrs_3")
@@ -39914,7 +39915,7 @@ subroutine zsytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) bind(C, name="BLAS77Int
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs_3
 
 subroutine zsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind(C, name="BLAS77Interface$zsytrs_aa_2stage")
@@ -39934,7 +39935,7 @@ subroutine zsytrs_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,info) bind
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs_aa_2stage
 
 subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name="BLAS77Interface$zsytrs_aa")
@@ -39953,7 +39954,7 @@ subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) bind(C, name=
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs_aa
 
 subroutine zsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zsytrs")
@@ -39970,7 +39971,7 @@ subroutine zsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interfa
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs
 
 subroutine zsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77Interface$zsytrs_rook")
@@ -39987,7 +39988,7 @@ subroutine zsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) bind(C, name="BLAS77In
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zsytrs_rook
 
 subroutine ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ztbcon")
@@ -40006,7 +40007,7 @@ subroutine ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) bind(C, nam
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztbcon
 
 subroutine ztbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ztbrfs")
@@ -40031,7 +40032,7 @@ subroutine ztbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,r
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztbrfs
 
 subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BLAS77Interface$ztbtrs")
@@ -40050,7 +40051,7 @@ subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) bind(C, name="BL
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztbtrs
 
 subroutine ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BLAS77Interface$ztfsm")
@@ -40069,7 +40070,7 @@ subroutine ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) bind(C, name="BL
   integer(blas77_int) :: ldb
   complex(blas77_f64) :: b(0:ldb-1,0:*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztfsm
 
 subroutine ztftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$ztftri")
@@ -40083,7 +40084,7 @@ subroutine ztftri(transr,uplo,diag,n,a,info) bind(C, name="BLAS77Interface$ztftr
   complex(blas77_f64) :: a(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztftri
 
 subroutine ztfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$ztfttp")
@@ -40097,7 +40098,7 @@ subroutine ztfttp(transr,uplo,n,arf,ap,info) bind(C, name="BLAS77Interface$ztftt
   complex(blas77_f64) :: ap(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztfttp
 
 subroutine ztfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$ztfttr")
@@ -40112,7 +40113,7 @@ subroutine ztfttr(transr,uplo,n,arf,a,lda,info) bind(C, name="BLAS77Interface$zt
   complex(blas77_f64) :: a(0:lda-1,0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztfttr
 
 subroutine ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) bind(C, name="BLAS77Interface$ztgevc")
@@ -40137,7 +40138,7 @@ subroutine ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwo
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgevc
 
 subroutine ztgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) bind(C, name="BLAS77Interface$ztgex2")
@@ -40158,7 +40159,7 @@ subroutine ztgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) bind(C, name="B
   integer(blas77_int) :: j1
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgex2
 
 subroutine ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info) bind(C, name="BLAS77Interface$ztgexc")
@@ -40180,7 +40181,7 @@ subroutine ztgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,info) bind(C, 
   integer(blas77_int) :: ilst
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgexc
 
 subroutine ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) bind(C, name="BLAS77Interface$ztgsen")
@@ -40212,7 +40213,7 @@ subroutine ztgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m
   integer(blas77_int) :: liwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgsen
 
 subroutine ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) bind(C, name="BLAS77Interface$ztgsja")
@@ -40245,7 +40246,7 @@ subroutine ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ld
   integer(blas77_int) :: ncycle
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgsja
 
 subroutine ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) bind(C, name="BLAS77Interface$ztgsna")
@@ -40273,7 +40274,7 @@ subroutine ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,wor
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgsna
 
 subroutine ztgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) bind(C, name="BLAS77Interface$ztgsy2")
@@ -40301,7 +40302,7 @@ subroutine ztgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum
   real(blas77_f64) :: rdscal
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgsy2
 
 subroutine ztgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) bind(C, name="BLAS77Interface$ztgsyl")
@@ -40331,7 +40332,7 @@ subroutine ztgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,w
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztgsyl
 
 subroutine ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ztpcon")
@@ -40348,7 +40349,7 @@ subroutine ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info) bind(C, name="BLAS7
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpcon
 
 subroutine ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$ztplqt2")
@@ -40366,7 +40367,7 @@ subroutine ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztplqt2
 
 subroutine ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$ztplqt")
@@ -40386,7 +40387,7 @@ subroutine ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztplqt
 
 subroutine ztpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$ztpmlqt")
@@ -40411,7 +40412,7 @@ subroutine ztpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpmlqt
 
 subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind(C, name="BLAS77Interface$ztpmqrt")
@@ -40436,7 +40437,7 @@ subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) bind
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpmqrt
 
 subroutine ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$ztpqrt2")
@@ -40454,7 +40455,7 @@ subroutine ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: t(ldt,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpqrt2
 
 subroutine ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Interface$ztpqrt")
@@ -40474,7 +40475,7 @@ subroutine ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpqrt
 
 subroutine ztprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) bind(C, name="BLAS77Interface$ztprfb")
@@ -40500,7 +40501,7 @@ subroutine ztprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,
   integer(blas77_int) :: ldwork
   complex(blas77_f64) :: work(ldwork,*)
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztprfb
 
 subroutine ztprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ztprfs")
@@ -40523,7 +40524,7 @@ subroutine ztprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,rwork,inf
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztprfs
 
 subroutine ztptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$ztptri")
@@ -40536,7 +40537,7 @@ subroutine ztptri(uplo,diag,n,ap,info) bind(C, name="BLAS77Interface$ztptri")
   complex(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztptri
 
 subroutine ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Interface$ztptrs")
@@ -40553,7 +40554,7 @@ subroutine ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) bind(C, name="BLAS77Inte
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztptrs
 
 subroutine ztpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$ztpttf")
@@ -40567,7 +40568,7 @@ subroutine ztpttf(transr,uplo,n,ap,arf,info) bind(C, name="BLAS77Interface$ztptt
   complex(blas77_f64) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpttf
 
 subroutine ztpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$ztpttr")
@@ -40581,7 +40582,7 @@ subroutine ztpttr(uplo,n,ap,a,lda,info) bind(C, name="BLAS77Interface$ztpttr")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztpttr
 
 subroutine ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) bind(C, name="BLAS77Interface$ztrcon")
@@ -40599,7 +40600,7 @@ subroutine ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) bind(C, name="BL
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrcon
 
 subroutine ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info) bind(C, name="BLAS77Interface$ztrevc3")
@@ -40624,7 +40625,7 @@ subroutine ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rw
   integer(blas77_int) :: lrwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrevc3
 
 subroutine ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) bind(C, name="BLAS77Interface$ztrevc")
@@ -40647,7 +40648,7 @@ subroutine ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,inf
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrevc
 
 subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) bind(C, name="BLAS77Interface$ztrexc")
@@ -40664,7 +40665,7 @@ subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) bind(C, name="BLAS77Interf
   integer(blas77_int) :: ilst
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrexc
 
 subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) bind(C, name="BLAS77Interface$ztrrfs")
@@ -40688,7 +40689,7 @@ subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrrfs
 
 subroutine ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) bind(C, name="BLAS77Interface$ztrsen")
@@ -40711,7 +40712,7 @@ subroutine ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) bind
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrsen
 
 subroutine ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) bind(C, name="BLAS77Interface$ztrsna")
@@ -40737,7 +40738,7 @@ subroutine ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwo
   real(blas77_f64) :: rwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrsna
 
 subroutine ztrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info) bind(C, name="BLAS77Interface$ztrsyl3")
@@ -40760,7 +40761,7 @@ subroutine ztrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,in
   real(blas77_f64) :: swork(ldswork,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrsyl3
 
 subroutine ztrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, name="BLAS77Interface$ztrsyl")
@@ -40781,7 +40782,7 @@ subroutine ztrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) bind(C, nam
   real(blas77_f64) :: scale
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrsyl
 
 subroutine ztrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ztrti2")
@@ -40795,7 +40796,7 @@ subroutine ztrti2(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ztrti2")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrti2
 
 subroutine ztrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ztrtri")
@@ -40809,7 +40810,7 @@ subroutine ztrtri(uplo,diag,n,a,lda,info) bind(C, name="BLAS77Interface$ztrtri")
   complex(blas77_f64) :: a(lda,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrtri
 
 subroutine ztrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77Interface$ztrtrs")
@@ -40827,7 +40828,7 @@ subroutine ztrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) bind(C, name="BLAS77I
   complex(blas77_f64) :: b(ldb,*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrtrs
 
 subroutine ztrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$ztrttf")
@@ -40842,7 +40843,7 @@ subroutine ztrttf(transr,uplo,n,a,lda,arf,info) bind(C, name="BLAS77Interface$zt
   complex(blas77_f64) :: arf(0:*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrttf
 
 subroutine ztrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$ztrttp")
@@ -40856,7 +40857,7 @@ subroutine ztrttp(uplo,n,a,lda,ap,info) bind(C, name="BLAS77Interface$ztrttp")
   complex(blas77_f64) :: ap(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztrttp
 
 subroutine ztzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$ztzrqf")
@@ -40870,7 +40871,7 @@ subroutine ztzrqf(m,n,a,lda,tau,info) bind(C, name="BLAS77Interface$ztzrqf")
   complex(blas77_f64) :: tau(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztzrqf
 
 subroutine ztzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$ztzrzf")
@@ -40886,7 +40887,7 @@ subroutine ztzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$z
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine ztzrzf
 
 subroutine zunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb1")
@@ -40909,7 +40910,7 @@ subroutine zunbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb1
 
 subroutine zunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb2")
@@ -40932,7 +40933,7 @@ subroutine zunbdb2(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb2
 
 subroutine zunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb3")
@@ -40955,7 +40956,7 @@ subroutine zunbdb3(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lw
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb3
 
 subroutine zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb4")
@@ -40979,7 +40980,7 @@ subroutine zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb4
 
 subroutine zunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb5")
@@ -41001,7 +41002,7 @@ subroutine zunbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb5
 
 subroutine zunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb6")
@@ -41023,7 +41024,7 @@ subroutine zunbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) bi
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb6
 
 subroutine zunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,phi,taup1,taup2,tauq1,tauq2,work,lwork,info) bind(C, name="BLAS77Interface$zunbdb")
@@ -41053,7 +41054,7 @@ subroutine zunbdb(trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,thet
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunbdb
 
 subroutine zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$zuncsd2by1")
@@ -41084,7 +41085,7 @@ subroutine zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta,u1,ldu1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zuncsd2by1
 
 subroutine zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info) bind(C, name="BLAS77Interface$zuncsd")
@@ -41124,7 +41125,7 @@ subroutine zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx1
   integer(blas77_int) :: iwork(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zuncsd
 
 subroutine zung2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zung2l")
@@ -41140,7 +41141,7 @@ subroutine zung2l(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zung2
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zung2l
 
 subroutine zung2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zung2r")
@@ -41156,7 +41157,7 @@ subroutine zung2r(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zung2
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zung2r
 
 subroutine zungbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zungbr")
@@ -41174,7 +41175,7 @@ subroutine zungbr(vect,m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inte
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungbr
 
 subroutine zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zunghr")
@@ -41191,7 +41192,7 @@ subroutine zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Inter
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunghr
 
 subroutine zungl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zungl2")
@@ -41207,7 +41208,7 @@ subroutine zungl2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zungl
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungl2
 
 subroutine zunglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zunglq")
@@ -41224,7 +41225,7 @@ subroutine zunglq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunglq
 
 subroutine zungql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zungql")
@@ -41241,7 +41242,7 @@ subroutine zungql(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungql
 
 subroutine zungqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zungqr")
@@ -41258,7 +41259,7 @@ subroutine zungqr(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungqr
 
 subroutine zungr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zungr2")
@@ -41274,7 +41275,7 @@ subroutine zungr2(m,n,k,a,lda,tau,work,info) bind(C, name="BLAS77Interface$zungr
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungr2
 
 subroutine zungrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zungrq")
@@ -41291,7 +41292,7 @@ subroutine zungrq(m,n,k,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungrq
 
 subroutine zungtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$zungtr")
@@ -41307,7 +41308,7 @@ subroutine zungtr(uplo,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interfac
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungtr
 
 subroutine zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$zungtsqr")
@@ -41326,7 +41327,7 @@ subroutine zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77I
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungtsqr
 
 subroutine zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLAS77Interface$zungtsqr_row")
@@ -41345,7 +41346,7 @@ subroutine zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) bind(C, name="BLA
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zungtsqr_row
 
 subroutine zunhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$zunhr_col")
@@ -41362,7 +41363,7 @@ subroutine zunhr_col(m,n,nb,a,lda,t,ldt,d,info) bind(C, name="BLAS77Interface$zu
   complex(blas77_f64) :: d(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunhr_col
 
 subroutine zunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunm22")
@@ -41383,7 +41384,7 @@ subroutine zunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunm22
 
 subroutine zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zunm2l")
@@ -41403,7 +41404,7 @@ subroutine zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunm2l
 
 subroutine zunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zunm2r")
@@ -41423,7 +41424,7 @@ subroutine zunm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunm2r
 
 subroutine zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmbr")
@@ -41445,7 +41446,7 @@ subroutine zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C,
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmbr
 
 subroutine zunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmhr")
@@ -41467,7 +41468,7 @@ subroutine zunmhr(side,trans,m,n,ilo,ihi,a,lda,tau,c,ldc,work,lwork,info) bind(C
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmhr
 
 subroutine zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zunml2")
@@ -41487,7 +41488,7 @@ subroutine zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunml2
 
 subroutine zunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmlq")
@@ -41508,7 +41509,7 @@ subroutine zunmlq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmlq
 
 subroutine zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmql")
@@ -41529,7 +41530,7 @@ subroutine zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmql
 
 subroutine zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmqr")
@@ -41550,7 +41551,7 @@ subroutine zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmqr
 
 subroutine zunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zunmr2")
@@ -41570,7 +41571,7 @@ subroutine zunmr2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmr2
 
 subroutine zunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zunmr3")
@@ -41591,7 +41592,7 @@ subroutine zunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) bind(C, name="BL
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmr3
 
 subroutine zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmrq")
@@ -41612,7 +41613,7 @@ subroutine zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) bind(C, name
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmrq
 
 subroutine zunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmrz")
@@ -41634,7 +41635,7 @@ subroutine zunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) bind(C, na
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmrz
 
 subroutine zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, name="BLAS77Interface$zunmtr")
@@ -41655,7 +41656,7 @@ subroutine zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) bind(C, n
   integer(blas77_int) :: lwork
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zunmtr
 
 subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$zupgtr")
@@ -41671,7 +41672,7 @@ subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) bind(C, name="BLAS77Interface$z
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zupgtr
 
 subroutine zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS77Interface$zupmtr")
@@ -41690,5 +41691,5 @@ subroutine zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) bind(C, name="BLAS
   complex(blas77_f64) :: work(*)
   integer(blas77_int) :: info
 
-  error stop "This is an interface tester!"
+  error_stop "This is an interface tester!"
 end subroutine zupmtr
