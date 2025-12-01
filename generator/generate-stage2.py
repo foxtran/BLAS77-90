@@ -42,9 +42,9 @@ def process_include(text: str) -> str:
     text = pattern.sub(r"\1 \2\3 CNAME(\2)\nimport", text)
 
     if rec:
-        return "recursive " + text
+        return "pure recursive " + text
 
-    return text
+    return "pure " + text
 
 
 def process_dummy(code: str, library_name: str) -> str:
