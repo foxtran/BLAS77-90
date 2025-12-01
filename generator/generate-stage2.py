@@ -132,6 +132,12 @@ def process_library(library_name: str, interface_dir: Path, src_dir: Path):
         "",
     ]
 
+    dummy_header_lines = [
+        '#include "cname-rules.inc"',
+        "",
+        "",
+    ]
+
     module_body = []
     dummy_body = []
     for fname in sorted((interface_dir / library_name).glob("*.mod")):
@@ -140,7 +146,7 @@ def process_library(library_name: str, interface_dir: Path, src_dir: Path):
         dummy_body.append(subroutine)
 
     module_text = "\n".join(module_header_lines) + "\n".join(module_body) + "\n".join(module_footer_lines)
-    dummy_text = '#include "cname-rules.inc"\n\n' + "\n".join(dummy_body)
+    dummy_text = "\n".join(dummy_header_lines) + "\n".join(dummy_body)
 
     out_path = src_dir / (library_name + "77.F90")
     with out_path.open("w", encoding="utf-8") as f:
