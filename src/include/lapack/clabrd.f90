@@ -1,4 +1,4 @@
-subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(clabrd)
+pure subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(clabrd)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

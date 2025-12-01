@@ -1,4 +1,4 @@
-subroutine spftrf(transr,uplo,n,a,info) CNAME(spftrf)
+pure subroutine spftrf(transr,uplo,n,a,info) CNAME(spftrf)
 import
 character(len=1)::transr
 character(len=1)::uplo

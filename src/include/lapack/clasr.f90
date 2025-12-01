@@ -1,4 +1,4 @@
-subroutine clasr(side,pivot,direct,m,n,c,s,a,lda) CNAME(clasr)
+pure subroutine clasr(side,pivot,direct,m,n,c,s,a,lda) CNAME(clasr)
 import
 character(len=1)::side
 character(len=1)::pivot

@@ -1,4 +1,4 @@
-subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) CNAME(sppsv)
+pure subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) CNAME(sppsv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

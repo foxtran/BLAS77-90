@@ -1,4 +1,4 @@
-subroutine dgeqrt(m,n,nb,a,lda,t,ldt,work,info) CNAME(dgeqrt)
+pure subroutine dgeqrt(m,n,nb,a,lda,t,ldt,work,info) CNAME(dgeqrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

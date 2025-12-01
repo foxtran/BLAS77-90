@@ -1,4 +1,4 @@
-subroutine ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(ssbgvx)
+pure subroutine ssbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(ssbgvx)
 import
 character(len=1)::jobz
 character(len=1)::range

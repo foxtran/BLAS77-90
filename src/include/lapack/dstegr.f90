@@ -1,4 +1,4 @@
-subroutine dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dstegr)
+pure subroutine dstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dstegr)
 import
 character(len=1)::jobz
 character(len=1)::range

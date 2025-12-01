@@ -1,4 +1,4 @@
-subroutine sgtsv(n,nrhs,dl,d,du,b,ldb,info) CNAME(sgtsv)
+pure subroutine sgtsv(n,nrhs,dl,d,du,b,ldb,info) CNAME(sgtsv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

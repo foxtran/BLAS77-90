@@ -1,4 +1,4 @@
-subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(clarz)
+pure subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(clarz)
 import
 character(len=1)::side
 integer(blas77_int)::m

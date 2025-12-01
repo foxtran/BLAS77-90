@@ -1,4 +1,4 @@
-subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(dlaqge)
+pure subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(dlaqge)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

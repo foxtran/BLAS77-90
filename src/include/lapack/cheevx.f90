@@ -1,4 +1,4 @@
-subroutine cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(cheevx)
+pure subroutine cheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(cheevx)
 import
 character(len=1)::jobz
 character(len=1)::range

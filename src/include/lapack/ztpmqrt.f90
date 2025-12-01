@@ -1,4 +1,4 @@
-subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(ztpmqrt)
+pure subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(ztpmqrt)
 import
 character(len=1)::side
 character(len=1)::trans

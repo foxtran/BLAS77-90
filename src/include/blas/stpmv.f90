@@ -1,4 +1,4 @@
-subroutine stpmv(uplo,trans,diag,n,ap,x,incx) CNAME(stpmv)
+pure subroutine stpmv(uplo,trans,diag,n,ap,x,incx) CNAME(stpmv)
 import
 character(len=1)::uplo
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) CNAME(dtrsen)
+pure subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) CNAME(dtrsen)
 import
 character(len=1)::job
 character(len=1)::compq

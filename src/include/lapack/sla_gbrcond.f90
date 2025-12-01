@@ -1,4 +1,4 @@
-function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) CNAME(sla_gbrcond)
+pure function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) CNAME(sla_gbrcond)
 import
 character(len=1)::trans
 integer(blas77_int)::n

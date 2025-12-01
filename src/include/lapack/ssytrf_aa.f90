@@ -1,4 +1,4 @@
-subroutine ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(ssytrf_aa)
+pure subroutine ssytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(ssytrf_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

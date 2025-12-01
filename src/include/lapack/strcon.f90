@@ -1,4 +1,4 @@
-subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) CNAME(strcon)
+pure subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) CNAME(strcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

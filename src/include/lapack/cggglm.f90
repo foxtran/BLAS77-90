@@ -1,4 +1,4 @@
-subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) CNAME(cggglm)
+pure subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) CNAME(cggglm)
 import
 integer(blas77_int)::n
 integer(blas77_int)::m

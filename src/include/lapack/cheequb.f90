@@ -1,4 +1,4 @@
-subroutine cheequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(cheequb)
+pure subroutine cheequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(cheequb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

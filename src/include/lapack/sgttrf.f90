@@ -1,4 +1,4 @@
-subroutine sgttrf(n,dl,d,du,du2,ipiv,info) CNAME(sgttrf)
+pure subroutine sgttrf(n,dl,d,du,du2,ipiv,info) CNAME(sgttrf)
 import
 integer(blas77_int)::n
 real(blas77_f32)::dl(*)

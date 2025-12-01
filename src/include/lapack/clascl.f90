@@ -1,4 +1,4 @@
-subroutine clascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) CNAME(clascl)
+pure subroutine clascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) CNAME(clascl)
 import
 character(len=1)::type
 integer(blas77_int)::kl

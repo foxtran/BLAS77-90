@@ -1,4 +1,4 @@
-subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) CNAME(zlaqgb)
+pure subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) CNAME(zlaqgb)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) CNAME(zhpev)
+pure subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) CNAME(zhpev)
 import
 character(len=1)::jobz
 character(len=1)::uplo

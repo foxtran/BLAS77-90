@@ -1,4 +1,4 @@
-subroutine zpptri(uplo,n,ap,info) CNAME(zpptri)
+pure subroutine zpptri(uplo,n,ap,info) CNAME(zpptri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

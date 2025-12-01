@@ -1,4 +1,4 @@
-subroutine ssyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(ssyequb)
+pure subroutine ssyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(ssyequb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

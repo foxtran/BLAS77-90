@@ -1,4 +1,4 @@
-subroutine cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cgbrfsx)
+pure subroutine cgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cgbrfsx)
 import
 character(len=1)::trans
 character(len=1)::equed

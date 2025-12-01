@@ -1,4 +1,4 @@
-subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) CNAME(zhgeqz)
+pure subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) CNAME(zhgeqz)
 import
 character(len=1)::job
 character(len=1)::compq

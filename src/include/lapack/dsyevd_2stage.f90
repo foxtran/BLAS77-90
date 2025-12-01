@@ -1,4 +1,4 @@
-subroutine dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) CNAME(dsyevd_2stage)
+pure subroutine dsyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) CNAME(dsyevd_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine dpptrs(uplo,n,nrhs,ap,b,ldb,info) CNAME(dpptrs)
+pure subroutine dpptrs(uplo,n,nrhs,ap,b,ldb,info) CNAME(dpptrs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

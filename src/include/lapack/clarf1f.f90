@@ -1,4 +1,4 @@
-subroutine clarf1f(side,m,n,v,incv,tau,c,ldc,work) CNAME(clarf1f)
+pure subroutine clarf1f(side,m,n,v,incv,tau,c,ldc,work) CNAME(clarf1f)
 import
 character(len=1)::side
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-function zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) CNAME(zla_gercond_c)
+pure function zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) CNAME(zla_gercond_c)
 import
 character(len=1)::trans
 integer(blas77_int)::n

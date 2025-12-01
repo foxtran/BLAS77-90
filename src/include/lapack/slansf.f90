@@ -1,4 +1,4 @@
-function slansf(norm,transr,uplo,n,a,work) CNAME(slansf)
+pure function slansf(norm,transr,uplo,n,a,work) CNAME(slansf)
 import
 character(len=1)::norm
 character(len=1)::transr

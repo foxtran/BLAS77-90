@@ -1,4 +1,4 @@
-subroutine zpbtf2(uplo,n,kd,ab,ldab,info) CNAME(zpbtf2)
+pure subroutine zpbtf2(uplo,n,kd,ab,ldab,info) CNAME(zpbtf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

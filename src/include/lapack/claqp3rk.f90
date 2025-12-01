@@ -1,4 +1,4 @@
-subroutine claqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) CNAME(claqp3rk)
+pure subroutine claqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda,done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) CNAME(claqp3rk)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

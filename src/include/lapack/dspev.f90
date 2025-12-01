@@ -1,4 +1,4 @@
-subroutine dspev(jobz,uplo,n,ap,w,z,ldz,work,info) CNAME(dspev)
+pure subroutine dspev(jobz,uplo,n,ap,w,z,ldz,work,info) CNAME(dspev)
 import
 character(len=1)::jobz
 character(len=1)::uplo

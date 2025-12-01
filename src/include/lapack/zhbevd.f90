@@ -1,4 +1,4 @@
-subroutine zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbevd)
+pure subroutine zhbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbevd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

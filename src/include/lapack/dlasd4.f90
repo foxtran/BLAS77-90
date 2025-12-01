@@ -1,4 +1,4 @@
-subroutine dlasd4(n,i,d,z,delta,rho,sigma,work,info) CNAME(dlasd4)
+pure subroutine dlasd4(n,i,d,z,delta,rho,sigma,work,info) CNAME(dlasd4)
 import
 integer(blas77_int)::n
 integer(blas77_int)::i

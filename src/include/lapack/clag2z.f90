@@ -1,4 +1,4 @@
-subroutine clag2z(m,n,sa,ldsa,a,lda,info) CNAME(clag2z)
+pure subroutine clag2z(m,n,sa,ldsa,a,lda,info) CNAME(clag2z)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

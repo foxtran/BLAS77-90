@@ -1,4 +1,4 @@
-subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(slaqge)
+pure subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(slaqge)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) CNAME(dlanv2)
+pure subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) CNAME(dlanv2)
 import
 real(blas77_f64)::a
 real(blas77_f64)::b

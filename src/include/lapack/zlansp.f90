@@ -1,4 +1,4 @@
-function zlansp(norm,uplo,n,ap,work) CNAME(zlansp)
+pure function zlansp(norm,uplo,n,ap,work) CNAME(zlansp)
 import
 character(len=1)::norm
 character(len=1)::uplo

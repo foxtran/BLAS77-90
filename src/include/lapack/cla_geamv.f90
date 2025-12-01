@@ -1,4 +1,4 @@
-subroutine cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_geamv)
+pure subroutine cla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_geamv)
 import
 integer(blas77_int)::trans
 integer(blas77_int)::m

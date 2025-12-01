@@ -1,4 +1,4 @@
-subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) CNAME(sgetsqrhrt)
+pure subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) CNAME(sgetsqrhrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

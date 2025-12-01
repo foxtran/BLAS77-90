@@ -1,4 +1,4 @@
-subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) CNAME(zgtts2)
+pure subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) CNAME(zgtts2)
 import
 integer(blas77_int)::itrans
 integer(blas77_int)::n

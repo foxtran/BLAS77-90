@@ -1,4 +1,4 @@
-subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmrq)
+pure subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmrq)
 import
 character(len=1)::side
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgqr)
+pure subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

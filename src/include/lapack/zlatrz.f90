@@ -1,4 +1,4 @@
-subroutine zlatrz(m,n,l,a,lda,tau,work) CNAME(zlatrz)
+pure subroutine zlatrz(m,n,l,a,lda,tau,work) CNAME(zlatrz)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

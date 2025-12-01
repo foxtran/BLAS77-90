@@ -1,4 +1,4 @@
-subroutine zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) CNAME(zgeqp3)
+pure subroutine zgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) CNAME(zgeqp3)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

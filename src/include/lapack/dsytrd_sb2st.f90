@@ -1,4 +1,4 @@
-subroutine dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) CNAME(dsytrd_sb2st)
+pure subroutine dsytrd_sb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) CNAME(dsytrd_sb2st)
 import
 character(len=1)::stage1
 character(len=1)::vect

@@ -1,4 +1,4 @@
-subroutine clauu2(uplo,n,a,lda,info) CNAME(clauu2)
+pure subroutine clauu2(uplo,n,a,lda,info) CNAME(clauu2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

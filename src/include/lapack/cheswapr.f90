@@ -1,4 +1,4 @@
-subroutine cheswapr(uplo,n,a,lda,i1,i2) CNAME(cheswapr)
+pure subroutine cheswapr(uplo,n,a,lda,i1,i2) CNAME(cheswapr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

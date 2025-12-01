@@ -1,4 +1,4 @@
-subroutine dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info) CNAME(dggevx)
+pure subroutine dggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,iwork,bwork,info) CNAME(dggevx)
 import
 character(len=1)::balanc
 character(len=1)::jobvl

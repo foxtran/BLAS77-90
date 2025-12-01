@@ -1,4 +1,4 @@
-subroutine zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zheevr_2stage)
+pure subroutine zheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zheevr_2stage)
 import
 character(len=1)::jobz
 character(len=1)::range

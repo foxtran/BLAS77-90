@@ -1,4 +1,4 @@
-subroutine csytrf(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(csytrf)
+pure subroutine csytrf(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(csytrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) CNAME(clalsd)
+pure subroutine clalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) CNAME(clalsd)
 import
 character(len=1)::uplo
 integer(blas77_int)::smlsiz

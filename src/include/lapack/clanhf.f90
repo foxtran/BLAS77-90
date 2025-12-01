@@ -1,4 +1,4 @@
-function clanhf(norm,transr,uplo,n,a,work) CNAME(clanhf)
+pure function clanhf(norm,transr,uplo,n,a,work) CNAME(clanhf)
 import
 character(len=1)::norm
 character(len=1)::transr

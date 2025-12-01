@@ -1,4 +1,4 @@
-function sasum(n,sx,incx) CNAME(sasum)
+pure function sasum(n,sx,incx) CNAME(sasum)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

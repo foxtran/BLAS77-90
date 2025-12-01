@@ -1,4 +1,4 @@
-subroutine cunhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(cunhr_col)
+pure subroutine cunhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(cunhr_col)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

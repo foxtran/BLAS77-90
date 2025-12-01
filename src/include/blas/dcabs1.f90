@@ -1,4 +1,4 @@
-function dcabs1(z) CNAME(dcabs1)
+pure function dcabs1(z) CNAME(dcabs1)
 import
 complex(blas77_f64)::z
 real(blas77_f64)::dcabs1

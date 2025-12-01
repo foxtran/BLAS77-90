@@ -1,4 +1,4 @@
-subroutine dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) CNAME(dgerfsx)
+pure subroutine dgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) CNAME(dgerfsx)
 import
 character(len=1)::trans
 character(len=1)::equed

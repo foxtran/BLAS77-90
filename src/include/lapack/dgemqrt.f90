@@ -1,4 +1,4 @@
-subroutine dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) CNAME(dgemqrt)
+pure subroutine dgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) CNAME(dgemqrt)
 import
 character(len=1)::side
 character(len=1)::trans

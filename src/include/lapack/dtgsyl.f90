@@ -1,4 +1,4 @@
-subroutine dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) CNAME(dtgsyl)
+pure subroutine dtgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) CNAME(dtgsyl)
 import
 character(len=1)::trans
 integer(blas77_int)::ijob

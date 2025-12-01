@@ -1,4 +1,4 @@
-subroutine zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(zheevx)
+pure subroutine zheevx(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(zheevx)
 import
 character(len=1)::jobz
 character(len=1)::range

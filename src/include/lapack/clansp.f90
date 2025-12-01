@@ -1,4 +1,4 @@
-function clansp(norm,uplo,n,ap,work) CNAME(clansp)
+pure function clansp(norm,uplo,n,ap,work) CNAME(clansp)
 import
 character(len=1)::norm
 character(len=1)::uplo

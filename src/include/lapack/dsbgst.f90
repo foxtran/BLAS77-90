@@ -1,4 +1,4 @@
-subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) CNAME(dsbgst)
+pure subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) CNAME(dsbgst)
 import
 character(len=1)::vect
 character(len=1)::uplo

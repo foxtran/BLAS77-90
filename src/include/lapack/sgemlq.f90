@@ -1,4 +1,4 @@
-subroutine sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) CNAME(sgemlq)
+pure subroutine sgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) CNAME(sgemlq)
 import
 character(len=1)::side
 character(len=1)::trans

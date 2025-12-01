@@ -1,4 +1,4 @@
-subroutine csptrf(uplo,n,ap,ipiv,info) CNAME(csptrf)
+pure subroutine csptrf(uplo,n,ap,ipiv,info) CNAME(csptrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

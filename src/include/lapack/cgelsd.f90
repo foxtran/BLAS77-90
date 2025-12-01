@@ -1,4 +1,4 @@
-subroutine cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info) CNAME(cgelsd)
+pure subroutine cgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,iwork,info) CNAME(cgelsd)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

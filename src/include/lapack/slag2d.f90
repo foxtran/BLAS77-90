@@ -1,4 +1,4 @@
-subroutine slag2d(m,n,sa,ldsa,a,lda,info) CNAME(slag2d)
+pure subroutine slag2d(m,n,sa,ldsa,a,lda,info) CNAME(slag2d)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

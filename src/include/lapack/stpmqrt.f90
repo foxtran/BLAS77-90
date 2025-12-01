@@ -1,4 +1,4 @@
-subroutine stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(stpmqrt)
+pure subroutine stpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(stpmqrt)
 import
 character(len=1)::side
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine slacn2(n,v,x,isgn,est,kase,isave) CNAME(slacn2)
+pure subroutine slacn2(n,v,x,isgn,est,kase,isave) CNAME(slacn2)
 import
 integer(blas77_int)::n
 real(blas77_f32)::v(*)

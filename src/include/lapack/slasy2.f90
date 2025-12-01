@@ -1,4 +1,4 @@
-subroutine slasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) CNAME(slasy2)
+pure subroutine slasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) CNAME(slasy2)
 import
 logical(blas77_int)::ltranl
 logical(blas77_int)::ltranr

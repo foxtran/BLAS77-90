@@ -1,4 +1,4 @@
-subroutine ssyr2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(ssyr2)
+pure subroutine ssyr2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(ssyr2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

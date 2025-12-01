@@ -1,4 +1,4 @@
-subroutine dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormql)
+pure subroutine dormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormql)
 import
 character(len=1)::side
 character(len=1)::trans

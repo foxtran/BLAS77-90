@@ -1,4 +1,4 @@
-subroutine sgehd2(n,ilo,ihi,a,lda,tau,work,info) CNAME(sgehd2)
+pure subroutine sgehd2(n,ilo,ihi,a,lda,tau,work,info) CNAME(sgehd2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ilo

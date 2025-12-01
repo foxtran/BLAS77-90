@@ -1,4 +1,4 @@
-subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(clacrm)
+pure subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(clacrm)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

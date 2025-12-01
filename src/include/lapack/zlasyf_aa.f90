@@ -1,4 +1,4 @@
-subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(zlasyf_aa)
+pure subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(zlasyf_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::j1

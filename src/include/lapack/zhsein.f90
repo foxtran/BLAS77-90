@@ -1,4 +1,4 @@
-subroutine zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info) CNAME(zhsein)
+pure subroutine zhsein(side,eigsrc,initv,select,n,h,ldh,w,vl,ldvl,vr,ldvr,mm,m,work,rwork,ifaill,ifailr,info) CNAME(zhsein)
 import
 character(len=1)::side
 character(len=1)::eigsrc

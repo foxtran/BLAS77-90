@@ -1,4 +1,4 @@
-function zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) CNAME(zla_syrpvgrw)
+pure function zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) CNAME(zla_syrpvgrw)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

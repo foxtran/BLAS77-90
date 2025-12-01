@@ -1,4 +1,4 @@
-subroutine dsygs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(dsygs2)
+pure subroutine dsygs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(dsygs2)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

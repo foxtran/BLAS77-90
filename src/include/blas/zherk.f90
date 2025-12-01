@@ -1,4 +1,4 @@
-subroutine zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(zherk)
+pure subroutine zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(zherk)
 import
 character(len=1)::uplo
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) CNAME(slaexc)
+pure subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) CNAME(slaexc)
 import
 logical(blas77_int)::wantq
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dlarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(dlarz)
+pure subroutine dlarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(dlarz)
 import
 character(len=1)::side
 integer(blas77_int)::m

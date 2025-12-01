@@ -1,4 +1,4 @@
-subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlatsqr)
+pure subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlatsqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

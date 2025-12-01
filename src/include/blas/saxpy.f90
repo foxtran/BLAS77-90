@@ -1,4 +1,4 @@
-subroutine saxpy(n,sa,sx,incx,sy,incy) CNAME(saxpy)
+pure subroutine saxpy(n,sa,sx,incx,sy,incy) CNAME(saxpy)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sa

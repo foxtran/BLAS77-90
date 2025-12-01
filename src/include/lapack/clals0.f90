@@ -1,4 +1,4 @@
-subroutine clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info) CNAME(clals0)
+pure subroutine clals0(icompq,nl,nr,sqre,nrhs,b,ldb,bx,ldbx,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,rwork,info) CNAME(clals0)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::nl

@@ -1,4 +1,4 @@
-subroutine zswap(n,zx,incx,zy,incy) CNAME(zswap)
+pure subroutine zswap(n,zx,incx,zy,incy) CNAME(zswap)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

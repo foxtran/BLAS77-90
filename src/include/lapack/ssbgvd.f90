@@ -1,4 +1,4 @@
-subroutine ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(ssbgvd)
+pure subroutine ssbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(ssbgvd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

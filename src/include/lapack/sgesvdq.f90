@@ -1,4 +1,4 @@
-subroutine sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info) CNAME(sgesvdq)
+pure subroutine sgesvdq(joba,jobp,jobr,jobu,jobv,m,n,a,lda,s,u,ldu,v,ldv,numrank,iwork,liwork,work,lwork,rwork,lrwork,info) CNAME(sgesvdq)
 import
 character(len=1)::joba
 character(len=1)::jobp

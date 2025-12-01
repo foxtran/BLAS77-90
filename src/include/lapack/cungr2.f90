@@ -1,4 +1,4 @@
-subroutine cungr2(m,n,k,a,lda,tau,work,info) CNAME(cungr2)
+pure subroutine cungr2(m,n,k,a,lda,tau,work,info) CNAME(cungr2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

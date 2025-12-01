@@ -1,4 +1,4 @@
-subroutine zlarscl2(m,n,d,x,ldx) CNAME(zlarscl2)
+pure subroutine zlarscl2(m,n,d,x,ldx) CNAME(zlarscl2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

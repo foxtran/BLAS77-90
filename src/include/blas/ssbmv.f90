@@ -1,4 +1,4 @@
-subroutine ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) CNAME(ssbmv)
+pure subroutine ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) CNAME(ssbmv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

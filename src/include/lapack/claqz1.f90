@@ -1,4 +1,4 @@
-subroutine claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) CNAME(claqz1)
+pure subroutine claqz1(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) CNAME(claqz1)
 import
 logical(blas77_int),intent(in)::ilq
 logical(blas77_int),intent(in)::ilz

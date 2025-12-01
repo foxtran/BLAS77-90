@@ -1,4 +1,4 @@
-subroutine cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cgbsvxx)
+pure subroutine cgbsvxx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cgbsvxx)
 import
 character(len=1)::fact
 character(len=1)::trans

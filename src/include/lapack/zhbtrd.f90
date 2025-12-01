@@ -1,4 +1,4 @@
-subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(zhbtrd)
+pure subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(zhbtrd)
 import
 character(len=1)::vect
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) CNAME(sgbtrf)
+pure subroutine sgbtrf(m,n,kl,ku,ab,ldab,ipiv,info) CNAME(sgbtrf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

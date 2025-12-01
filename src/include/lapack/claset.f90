@@ -1,4 +1,4 @@
-subroutine claset(uplo,m,n,alpha,beta,a,lda) CNAME(claset)
+pure subroutine claset(uplo,m,n,alpha,beta,a,lda) CNAME(claset)
 import
 character(len=1)::uplo
 integer(blas77_int)::m

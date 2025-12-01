@@ -1,4 +1,4 @@
-subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) CNAME(chpcon)
+pure subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) CNAME(chpcon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

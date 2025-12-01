@@ -1,4 +1,4 @@
-subroutine zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhegvd)
+pure subroutine zhegvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhegvd)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

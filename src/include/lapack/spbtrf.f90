@@ -1,4 +1,4 @@
-subroutine spbtrf(uplo,n,kd,ab,ldab,info) CNAME(spbtrf)
+pure subroutine spbtrf(uplo,n,kd,ab,ldab,info) CNAME(spbtrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

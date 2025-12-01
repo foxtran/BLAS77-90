@@ -1,4 +1,4 @@
-subroutine dlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(dlarfb)
+pure subroutine dlarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(dlarfb)
 import
 character(len=1)::side
 character(len=1)::trans

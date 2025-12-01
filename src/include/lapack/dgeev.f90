@@ -1,4 +1,4 @@
-subroutine dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) CNAME(dgeev)
+pure subroutine dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) CNAME(dgeev)
 import
 character(len=1)::jobvl
 character(len=1)::jobvr

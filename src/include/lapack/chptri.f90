@@ -1,4 +1,4 @@
-subroutine chptri(uplo,n,ap,ipiv,work,info) CNAME(chptri)
+pure subroutine chptri(uplo,n,ap,ipiv,work,info) CNAME(chptri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zgesc2(n,a,lda,rhs,ipiv,jpiv,scale) CNAME(zgesc2)
+pure subroutine zgesc2(n,a,lda,rhs,ipiv,jpiv,scale) CNAME(zgesc2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

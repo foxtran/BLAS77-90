@@ -1,4 +1,4 @@
-subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(spstrf)
+pure subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(spstrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

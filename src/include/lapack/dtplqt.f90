@@ -1,4 +1,4 @@
-subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(dtplqt)
+pure subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(dtplqt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

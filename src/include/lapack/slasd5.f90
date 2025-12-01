@@ -1,4 +1,4 @@
-subroutine slasd5(i,d,z,delta,rho,dsigma,work) CNAME(slasd5)
+pure subroutine slasd5(i,d,z,delta,rho,dsigma,work) CNAME(slasd5)
 import
 integer(blas77_int)::i
 real(blas77_f32)::d(2)

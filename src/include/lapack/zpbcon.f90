@@ -1,4 +1,4 @@
-subroutine zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) CNAME(zpbcon)
+pure subroutine zpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) CNAME(zpbcon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbevd_2stage)
+pure subroutine zhbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbevd_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

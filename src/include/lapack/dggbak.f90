@@ -1,4 +1,4 @@
-subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) CNAME(dggbak)
+pure subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) CNAME(dggbak)
 import
 character(len=1)::job
 character(len=1)::side

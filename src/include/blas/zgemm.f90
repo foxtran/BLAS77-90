@@ -1,4 +1,4 @@
-subroutine zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(zgemm)
+pure subroutine zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(zgemm)
 import
 character(len=1)::transa
 character(len=1)::transb

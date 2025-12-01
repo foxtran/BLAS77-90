@@ -1,4 +1,4 @@
-recursive subroutine claunhr_col_getrfnp2(m,n,a,lda,d,info) CNAME(claunhr_col_getrfnp2)
+pure subroutine claunhr_col_getrfnp2(m,n,a,lda,d,info) CNAME(claunhr_col_getrfnp2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

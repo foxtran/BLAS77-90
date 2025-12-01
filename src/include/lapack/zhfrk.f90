@@ -1,4 +1,4 @@
-subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(zhfrk)
+pure subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(zhfrk)
 import
 character(len=1)::transr
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-function slaisnan(sin1,sin2) CNAME(slaisnan)
+pure function slaisnan(sin1,sin2) CNAME(slaisnan)
 import
 real(blas77_f32),intent(in)::sin1
 real(blas77_f32),intent(in)::sin2

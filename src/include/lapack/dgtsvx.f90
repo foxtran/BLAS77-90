@@ -1,4 +1,4 @@
-subroutine dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dgtsvx)
+pure subroutine dgtsvx(fact,trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dgtsvx)
 import
 character(len=1)::fact
 character(len=1)::trans

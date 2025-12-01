@@ -1,4 +1,4 @@
-subroutine claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) CNAME(claed7)
+pure subroutine claed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) CNAME(claed7)
 import
 integer(blas77_int)::n
 integer(blas77_int)::cutpnt

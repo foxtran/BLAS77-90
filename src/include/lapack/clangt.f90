@@ -1,4 +1,4 @@
-function clangt(norm,n,dl,d,du) CNAME(clangt)
+pure function clangt(norm,n,dl,d,du) CNAME(clangt)
 import
 character(len=1)::norm
 integer(blas77_int)::n

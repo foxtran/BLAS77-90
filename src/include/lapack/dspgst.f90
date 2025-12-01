@@ -1,4 +1,4 @@
-subroutine dspgst(itype,uplo,n,ap,bp,info) CNAME(dspgst)
+pure subroutine dspgst(itype,uplo,n,ap,bp,info) CNAME(dspgst)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

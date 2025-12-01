@@ -1,4 +1,4 @@
-subroutine zsyconvf(uplo,way,n,a,lda,e,ipiv,info) CNAME(zsyconvf)
+pure subroutine zsyconvf(uplo,way,n,a,lda,e,ipiv,info) CNAME(zsyconvf)
 import
 character(len=1)::uplo
 character(len=1)::way

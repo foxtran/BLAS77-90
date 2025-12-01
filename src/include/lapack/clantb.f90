@@ -1,4 +1,4 @@
-function clantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(clantb)
+pure function clantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(clantb)
 import
 character(len=1)::norm
 character(len=1)::uplo

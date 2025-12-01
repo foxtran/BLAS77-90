@@ -1,4 +1,4 @@
-subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(zsyequb)
+pure subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(zsyequb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

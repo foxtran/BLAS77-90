@@ -1,4 +1,4 @@
-subroutine sladiv(a,b,c,d,p,q) CNAME(sladiv)
+pure subroutine sladiv(a,b,c,d,p,q) CNAME(sladiv)
 import
 real(blas77_f32)::a
 real(blas77_f32)::b

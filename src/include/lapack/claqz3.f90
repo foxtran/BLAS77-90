@@ -1,4 +1,4 @@
-subroutine claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) CNAME(claqz3)
+pure subroutine claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha,beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) CNAME(claqz3)
 import
 logical(blas77_int),intent(in)::ilschur
 logical(blas77_int),intent(in)::ilq

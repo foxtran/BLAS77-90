@@ -1,4 +1,4 @@
-subroutine chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) CNAME(chpgv)
+pure subroutine chpgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,rwork,info) CNAME(chpgv)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

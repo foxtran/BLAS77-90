@@ -1,4 +1,4 @@
-subroutine zgetrf(m,n,a,lda,ipiv,info) CNAME(zgetrf)
+pure subroutine zgetrf(m,n,a,lda,ipiv,info) CNAME(zgetrf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(chbevx_2stage)
+pure subroutine chbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(chbevx_2stage)
 import
 character(len=1)::jobz
 character(len=1)::range

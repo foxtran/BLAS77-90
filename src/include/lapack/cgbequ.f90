@@ -1,4 +1,4 @@
-subroutine cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) CNAME(cgbequ)
+pure subroutine cgbequ(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) CNAME(cgbequ)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

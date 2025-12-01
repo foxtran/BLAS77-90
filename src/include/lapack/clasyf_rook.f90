@@ -1,4 +1,4 @@
-subroutine clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(clasyf_rook)
+pure subroutine clasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(clasyf_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

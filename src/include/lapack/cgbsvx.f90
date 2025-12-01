@@ -1,4 +1,4 @@
-subroutine cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(cgbsvx)
+pure subroutine cgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(cgbsvx)
 import
 character(len=1)::fact
 character(len=1)::trans

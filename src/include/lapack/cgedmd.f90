@@ -1,4 +1,4 @@
-subroutine cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) CNAME(cgedmd)
+pure subroutine cgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) CNAME(cgedmd)
 import
 character(len=1),intent(in)::jobs
 character(len=1),intent(in)::jobz

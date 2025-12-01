@@ -1,4 +1,4 @@
-subroutine dlasrt(id,n,d,info) CNAME(dlasrt)
+pure subroutine dlasrt(id,n,d,info) CNAME(dlasrt)
 import
 character(len=1)::id
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) CNAME(sorbdb1)
+pure subroutine sorbdb1(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,work,lwork,info) CNAME(sorbdb1)
 import
 integer(blas77_int)::m
 integer(blas77_int)::p

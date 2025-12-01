@@ -1,4 +1,4 @@
-subroutine dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dsyevr)
+pure subroutine dsyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dsyevr)
 import
 character(len=1)::jobz
 character(len=1)::range

@@ -1,4 +1,4 @@
-subroutine dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(dsytrs)
+pure subroutine dsytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(dsytrs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(zpftrs)
+pure subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(zpftrs)
 import
 character(len=1)::transr
 character(len=1)::uplo

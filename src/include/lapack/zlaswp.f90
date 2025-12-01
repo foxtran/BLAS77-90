@@ -1,4 +1,4 @@
-subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(zlaswp)
+pure subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(zlaswp)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

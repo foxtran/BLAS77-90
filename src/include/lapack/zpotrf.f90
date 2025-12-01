@@ -1,4 +1,4 @@
-subroutine zpotrf(uplo,n,a,lda,info) CNAME(zpotrf)
+pure subroutine zpotrf(uplo,n,a,lda,info) CNAME(zpotrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

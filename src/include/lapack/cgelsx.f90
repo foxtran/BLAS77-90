@@ -1,4 +1,4 @@
-subroutine cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) CNAME(cgelsx)
+pure subroutine cgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) CNAME(cgelsx)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

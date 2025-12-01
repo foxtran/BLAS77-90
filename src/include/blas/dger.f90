@@ -1,4 +1,4 @@
-subroutine dger(m,n,alpha,x,incx,y,incy,a,lda) CNAME(dger)
+pure subroutine dger(m,n,alpha,x,incx,y,incy,a,lda) CNAME(dger)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

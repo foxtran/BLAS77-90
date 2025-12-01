@@ -1,4 +1,4 @@
-subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(csycon)
+pure subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(csycon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

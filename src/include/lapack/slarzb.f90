@@ -1,4 +1,4 @@
-subroutine slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(slarzb)
+pure subroutine slarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(slarzb)
 import
 character(len=1)::side
 character(len=1)::trans

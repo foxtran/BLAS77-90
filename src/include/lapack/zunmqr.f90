@@ -1,4 +1,4 @@
-subroutine zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmqr)
+pure subroutine zunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmqr)
 import
 character(len=1)::side
 character(len=1)::trans

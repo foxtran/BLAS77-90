@@ -1,4 +1,4 @@
-subroutine chetf2_rk(uplo,n,a,lda,e,ipiv,info) CNAME(chetf2_rk)
+pure subroutine chetf2_rk(uplo,n,a,lda,e,ipiv,info) CNAME(chetf2_rk)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

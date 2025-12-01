@@ -1,4 +1,4 @@
-subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(zhpsv)
+pure subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(zhpsv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

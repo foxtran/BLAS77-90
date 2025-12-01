@@ -1,4 +1,4 @@
-subroutine zpoequ(n,a,lda,s,scond,amax,info) CNAME(zpoequ)
+pure subroutine zpoequ(n,a,lda,s,scond,amax,info) CNAME(zpoequ)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

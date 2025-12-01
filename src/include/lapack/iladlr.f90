@@ -1,4 +1,4 @@
-function iladlr(m,n,a,lda) CNAME(iladlr)
+pure function iladlr(m,n,a,lda) CNAME(iladlr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

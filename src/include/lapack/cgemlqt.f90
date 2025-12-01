@@ -1,4 +1,4 @@
-subroutine cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) CNAME(cgemlqt)
+pure subroutine cgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) CNAME(cgemlqt)
 import
 character(len=1)::side
 character(len=1)::trans

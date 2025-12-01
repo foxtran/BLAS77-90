@@ -1,4 +1,4 @@
-subroutine dlaed5(i,d,z,delta,rho,dlam) CNAME(dlaed5)
+pure subroutine dlaed5(i,d,z,delta,rho,dlam) CNAME(dlaed5)
 import
 integer(blas77_int)::i
 real(blas77_f64)::d(2)

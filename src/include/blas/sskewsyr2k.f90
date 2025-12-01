@@ -1,4 +1,4 @@
-subroutine sskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(sskewsyr2k)
+pure subroutine sskewsyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(sskewsyr2k)
 import
 character(len=1)::uplo
 character(len=1)::trans

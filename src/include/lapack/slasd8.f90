@@ -1,4 +1,4 @@
-subroutine slasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) CNAME(slasd8)
+pure subroutine slasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) CNAME(slasd8)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::k

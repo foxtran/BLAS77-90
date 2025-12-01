@@ -1,4 +1,4 @@
-subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) CNAME(dlasdt)
+pure subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) CNAME(dlasdt)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lvl

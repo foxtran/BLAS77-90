@@ -1,4 +1,4 @@
-subroutine sskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(sskewsymv)
+pure subroutine sskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(sskewsymv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

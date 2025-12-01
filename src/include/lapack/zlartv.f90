@@ -1,4 +1,4 @@
-subroutine zlartv(n,x,incx,y,incy,c,s,incc) CNAME(zlartv)
+pure subroutine zlartv(n,x,incx,y,incy,c,s,incc) CNAME(zlartv)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::x(*)

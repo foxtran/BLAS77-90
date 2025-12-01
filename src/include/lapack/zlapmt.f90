@@ -1,4 +1,4 @@
-subroutine zlapmt(forwrd,m,n,x,ldx,k) CNAME(zlapmt)
+pure subroutine zlapmt(forwrd,m,n,x,ldx,k) CNAME(zlapmt)
 import
 logical(blas77_int)::forwrd
 integer(blas77_int)::m

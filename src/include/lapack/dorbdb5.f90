@@ -1,4 +1,4 @@
-subroutine dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) CNAME(dorbdb5)
+pure subroutine dorbdb5(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) CNAME(dorbdb5)
 import
 integer(blas77_int)::m1
 integer(blas77_int)::m2

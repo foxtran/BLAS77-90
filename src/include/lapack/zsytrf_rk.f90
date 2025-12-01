@@ -1,4 +1,4 @@
-subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) CNAME(zsytrf_rk)
+pure subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) CNAME(zsytrf_rk)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

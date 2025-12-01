@@ -1,4 +1,4 @@
-subroutine sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) CNAME(sormr3)
+pure subroutine sormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) CNAME(sormr3)
 import
 character(len=1)::side
 character(len=1)::trans

@@ -1,4 +1,4 @@
-function dlansf(norm,transr,uplo,n,a,work) CNAME(dlansf)
+pure function dlansf(norm,transr,uplo,n,a,work) CNAME(dlansf)
 import
 character(len=1)::norm
 character(len=1)::transr

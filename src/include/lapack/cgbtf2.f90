@@ -1,4 +1,4 @@
-subroutine cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) CNAME(cgbtf2)
+pure subroutine cgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) CNAME(cgbtf2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

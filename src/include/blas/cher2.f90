@@ -1,4 +1,4 @@
-subroutine cher2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(cher2)
+pure subroutine cher2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(cher2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

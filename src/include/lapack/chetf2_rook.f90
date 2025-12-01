@@ -1,4 +1,4 @@
-subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) CNAME(chetf2_rook)
+pure subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) CNAME(chetf2_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

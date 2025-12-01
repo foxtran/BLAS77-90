@@ -1,4 +1,4 @@
-subroutine chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) CNAME(chetrd_2stage)
+pure subroutine chetrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) CNAME(chetrd_2stage)
 import
 character(len=1)::vect
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) CNAME(ztplqt2)
+pure subroutine ztplqt2(m,n,l,a,lda,b,ldb,t,ldt,info) CNAME(ztplqt2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

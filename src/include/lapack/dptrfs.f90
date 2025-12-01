@@ -1,4 +1,4 @@
-subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) CNAME(dptrfs)
+pure subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) CNAME(dptrfs)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

@@ -1,4 +1,4 @@
-function cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) CNAME(cla_gbrcond_x)
+pure function cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) CNAME(cla_gbrcond_x)
 import
 character(len=1)::trans
 integer(blas77_int)::n

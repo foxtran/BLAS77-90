@@ -1,4 +1,4 @@
-subroutine cungbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(cungbr)
+pure subroutine cungbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(cungbr)
 import
 character(len=1)::vect
 integer(blas77_int)::m

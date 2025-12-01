@@ -1,4 +1,4 @@
-subroutine dtptri(uplo,diag,n,ap,info) CNAME(dtptri)
+pure subroutine dtptri(uplo,diag,n,ap,info) CNAME(dtptri)
 import
 character(len=1)::uplo
 character(len=1)::diag

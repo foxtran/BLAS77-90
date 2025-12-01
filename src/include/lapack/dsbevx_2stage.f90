@@ -1,4 +1,4 @@
-subroutine dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(dsbevx_2stage)
+pure subroutine dsbevx_2stage(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(dsbevx_2stage)
 import
 character(len=1)::jobz
 character(len=1)::range

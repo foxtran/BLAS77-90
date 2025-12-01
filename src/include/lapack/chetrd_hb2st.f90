@@ -1,4 +1,4 @@
-subroutine chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) CNAME(chetrd_hb2st)
+pure subroutine chetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) CNAME(chetrd_hb2st)
 import
 character(len=1)::stage1
 character(len=1)::vect

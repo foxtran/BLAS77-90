@@ -1,4 +1,4 @@
-subroutine cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info) CNAME(cgeevx)
+pure subroutine cgeevx(balanc,jobvl,jobvr,sense,n,a,lda,w,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,rwork,info) CNAME(cgeevx)
 import
 character(len=1)::balanc
 character(len=1)::jobvl

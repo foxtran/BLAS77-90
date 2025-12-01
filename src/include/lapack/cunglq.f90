@@ -1,4 +1,4 @@
-subroutine cunglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(cunglq)
+pure subroutine cunglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(cunglq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

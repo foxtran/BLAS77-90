@@ -1,4 +1,4 @@
-subroutine zhptrd(uplo,n,ap,d,e,tau,info) CNAME(zhptrd)
+pure subroutine zhptrd(uplo,n,ap,d,e,tau,info) CNAME(zhptrd)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(cgetsls)
+pure subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(cgetsls)
 import
 character(len=1)::trans
 integer(blas77_int)::m

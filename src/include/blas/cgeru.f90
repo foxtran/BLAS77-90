@@ -1,4 +1,4 @@
-subroutine cgeru(m,n,alpha,x,incx,y,incy,a,lda) CNAME(cgeru)
+pure subroutine cgeru(m,n,alpha,x,incx,y,incy,a,lda) CNAME(cgeru)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

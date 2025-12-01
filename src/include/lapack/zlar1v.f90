@@ -1,4 +1,4 @@
-subroutine zlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) CNAME(zlar1v)
+pure subroutine zlar1v(n,b1,bn,lambda,d,l,ld,lld,pivmin,gaptol,z,wantnc,negcnt,ztz,mingma,r,isuppz,nrminv,resid,rqcorr,work) CNAME(zlar1v)
 import
 integer(blas77_int)::n
 integer(blas77_int)::b1

@@ -1,4 +1,4 @@
-subroutine sspr2(uplo,n,alpha,x,incx,y,incy,ap) CNAME(sspr2)
+pure subroutine sspr2(uplo,n,alpha,x,incx,y,incy,ap) CNAME(sspr2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

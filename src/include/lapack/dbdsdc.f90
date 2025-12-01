@@ -1,4 +1,4 @@
-subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) CNAME(dbdsdc)
+pure subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) CNAME(dbdsdc)
 import
 character(len=1)::uplo
 character(len=1)::compq

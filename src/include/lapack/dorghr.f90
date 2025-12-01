@@ -1,4 +1,4 @@
-subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(dorghr)
+pure subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(dorghr)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ilo

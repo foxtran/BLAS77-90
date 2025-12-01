@@ -1,4 +1,4 @@
-subroutine cpptri(uplo,n,ap,info) CNAME(cpptri)
+pure subroutine cpptri(uplo,n,ap,info) CNAME(cpptri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

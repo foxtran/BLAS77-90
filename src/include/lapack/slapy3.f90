@@ -1,4 +1,4 @@
-function slapy3(x,y,z) CNAME(slapy3)
+pure function slapy3(x,y,z) CNAME(slapy3)
 import
 real(blas77_f32)::x
 real(blas77_f32)::y

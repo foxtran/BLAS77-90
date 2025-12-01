@@ -1,4 +1,4 @@
-subroutine slartg(f,g,c,s,r) CNAME(slartg)
+pure subroutine slartg(f,g,c,s,r) CNAME(slartg)
 import
 real(blas77_f32)::f
 real(blas77_f32)::g

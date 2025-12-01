@@ -1,4 +1,4 @@
-subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(slaswp)
+pure subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(slaswp)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

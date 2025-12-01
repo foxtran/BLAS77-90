@@ -1,4 +1,4 @@
-subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) CNAME(dlaed0)
+pure subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) CNAME(dlaed0)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::qsiz

@@ -1,4 +1,4 @@
-subroutine chegst(itype,uplo,n,a,lda,b,ldb,info) CNAME(chegst)
+pure subroutine chegst(itype,uplo,n,a,lda,b,ldb,info) CNAME(chegst)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

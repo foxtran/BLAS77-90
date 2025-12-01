@@ -1,4 +1,4 @@
-subroutine ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) CNAME(ztbcon)
+pure subroutine ztbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) CNAME(ztbcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

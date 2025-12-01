@@ -1,4 +1,4 @@
-subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) CNAME(ssbgst)
+pure subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) CNAME(ssbgst)
 import
 character(len=1)::vect
 character(len=1)::uplo

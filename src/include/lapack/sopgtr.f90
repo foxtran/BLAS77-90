@@ -1,4 +1,4 @@
-subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(sopgtr)
+pure subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(sopgtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dladiv(a,b,c,d,p,q) CNAME(dladiv)
+pure subroutine dladiv(a,b,c,d,p,q) CNAME(dladiv)
 import
 real(blas77_f64)::a
 real(blas77_f64)::b

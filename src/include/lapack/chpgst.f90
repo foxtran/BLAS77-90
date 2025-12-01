@@ -1,4 +1,4 @@
-subroutine chpgst(itype,uplo,n,ap,bp,info) CNAME(chpgst)
+pure subroutine chpgst(itype,uplo,n,ap,bp,info) CNAME(chpgst)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

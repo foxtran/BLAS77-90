@@ -1,4 +1,4 @@
-subroutine zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) CNAME(zhbgvx)
+pure subroutine zhbgvx(jobz,range,uplo,n,ka,kb,ab,ldab,bb,ldbb,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) CNAME(zhbgvx)
 import
 character(len=1)::jobz
 character(len=1)::range

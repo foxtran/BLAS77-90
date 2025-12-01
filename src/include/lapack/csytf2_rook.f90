@@ -1,4 +1,4 @@
-subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) CNAME(csytf2_rook)
+pure subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) CNAME(csytf2_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

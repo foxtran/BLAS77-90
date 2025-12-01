@@ -1,4 +1,4 @@
-recursive subroutine cgelqt3(m,n,a,lda,t,ldt,info) CNAME(cgelqt3)
+pure subroutine cgelqt3(m,n,a,lda,t,ldt,info) CNAME(cgelqt3)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) CNAME(slaed1)
+pure subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) CNAME(slaed1)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

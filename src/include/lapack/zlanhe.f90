@@ -1,4 +1,4 @@
-function zlanhe(norm,uplo,n,a,lda,work) CNAME(zlanhe)
+pure function zlanhe(norm,uplo,n,a,lda,work) CNAME(zlanhe)
 import
 character(len=1)::norm
 character(len=1)::uplo

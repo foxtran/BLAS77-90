@@ -1,4 +1,4 @@
-subroutine sdisna(job,m,n,d,sep,info) CNAME(sdisna)
+pure subroutine sdisna(job,m,n,d,sep,info) CNAME(sdisna)
 import
 character(len=1)::job
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-subroutine ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(ssbevd)
+pure subroutine ssbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(ssbevd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

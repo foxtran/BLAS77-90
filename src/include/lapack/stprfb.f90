@@ -1,4 +1,4 @@
-subroutine stprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(stprfb)
+pure subroutine stprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(stprfb)
 import
 character(len=1)::side
 character(len=1)::trans

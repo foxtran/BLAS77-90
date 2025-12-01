@@ -1,4 +1,4 @@
-subroutine dlasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) CNAME(dlasd1)
+pure subroutine dlasd1(nl,nr,sqre,d,alpha,beta,u,ldu,vt,ldvt,idxq,iwork,work,info) CNAME(dlasd1)
 import
 integer(blas77_int)::nl
 integer(blas77_int)::nr

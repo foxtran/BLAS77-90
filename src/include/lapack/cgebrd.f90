@@ -1,4 +1,4 @@
-subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) CNAME(cgebrd)
+pure subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) CNAME(cgebrd)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

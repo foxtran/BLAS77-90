@@ -1,4 +1,4 @@
-subroutine zlat2c(uplo,n,a,lda,sa,ldsa,info) CNAME(zlat2c)
+pure subroutine zlat2c(uplo,n,a,lda,sa,ldsa,info) CNAME(zlat2c)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

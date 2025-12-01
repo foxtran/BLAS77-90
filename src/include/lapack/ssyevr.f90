@@ -1,4 +1,4 @@
-subroutine ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(ssyevr)
+pure subroutine ssyevr(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(ssyevr)
 import
 character(len=1)::jobz
 character(len=1)::range

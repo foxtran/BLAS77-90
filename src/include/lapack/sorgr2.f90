@@ -1,4 +1,4 @@
-subroutine sorgr2(m,n,k,a,lda,tau,work,info) CNAME(sorgr2)
+pure subroutine sorgr2(m,n,k,a,lda,tau,work,info) CNAME(sorgr2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

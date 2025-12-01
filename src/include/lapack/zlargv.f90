@@ -1,4 +1,4 @@
-subroutine zlargv(n,x,incx,y,incy,c,incc) CNAME(zlargv)
+pure subroutine zlargv(n,x,incx,y,incy,c,incc) CNAME(zlargv)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::x(*)

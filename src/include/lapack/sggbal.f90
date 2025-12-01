@@ -1,4 +1,4 @@
-subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) CNAME(sggbal)
+pure subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) CNAME(sggbal)
 import
 character(len=1)::job
 integer(blas77_int)::n

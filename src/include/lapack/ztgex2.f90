@@ -1,4 +1,4 @@
-subroutine ztgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) CNAME(ztgex2)
+pure subroutine ztgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) CNAME(ztgex2)
 import
 logical(blas77_int)::wantq
 logical(blas77_int)::wantz

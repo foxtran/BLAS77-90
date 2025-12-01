@@ -1,4 +1,4 @@
-subroutine chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(chegvx)
+pure subroutine chegvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,rwork,iwork,ifail,info) CNAME(chegvx)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

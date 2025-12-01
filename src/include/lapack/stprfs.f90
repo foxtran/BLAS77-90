@@ -1,4 +1,4 @@
-subroutine stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(stprfs)
+pure subroutine stprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(stprfs)
 import
 character(len=1)::uplo
 character(len=1)::trans

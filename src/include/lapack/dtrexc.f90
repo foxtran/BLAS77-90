@@ -1,4 +1,4 @@
-subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) CNAME(dtrexc)
+pure subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) CNAME(dtrexc)
 import
 character(len=1)::compq
 integer(blas77_int)::n

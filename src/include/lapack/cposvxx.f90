@@ -1,4 +1,4 @@
-subroutine cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cposvxx)
+pure subroutine cposvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cposvxx)
 import
 character(len=1)::fact
 character(len=1)::uplo

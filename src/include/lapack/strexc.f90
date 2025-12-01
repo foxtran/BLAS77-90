@@ -1,4 +1,4 @@
-subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) CNAME(strexc)
+pure subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) CNAME(strexc)
 import
 character(len=1)::compq
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) CNAME(slaqtr)
+pure subroutine slaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) CNAME(slaqtr)
 import
 logical(blas77_int)::ltran
 logical(blas77_int)::lreal

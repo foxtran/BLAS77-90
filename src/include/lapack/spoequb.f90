@@ -1,4 +1,4 @@
-subroutine spoequb(n,a,lda,s,scond,amax,info) CNAME(spoequb)
+pure subroutine spoequb(n,a,lda,s,scond,amax,info) CNAME(spoequb)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

@@ -1,4 +1,4 @@
-subroutine cgeqrfp(m,n,a,lda,tau,work,lwork,info) CNAME(cgeqrfp)
+pure subroutine cgeqrfp(m,n,a,lda,tau,work,lwork,info) CNAME(cgeqrfp)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

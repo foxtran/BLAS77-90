@@ -1,4 +1,4 @@
-subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) CNAME(sptrfs)
+pure subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) CNAME(sptrfs)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

@@ -1,4 +1,4 @@
-subroutine clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(clahef_aa)
+pure subroutine clahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(clahef_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::j1

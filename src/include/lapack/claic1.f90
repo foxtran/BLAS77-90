@@ -1,4 +1,4 @@
-subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(claic1)
+pure subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(claic1)
 import
 integer(blas77_int)::job
 integer(blas77_int)::j

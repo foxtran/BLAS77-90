@@ -1,4 +1,4 @@
-subroutine ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) CNAME(ssytrs_3)
+pure subroutine ssytrs_3(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,info) CNAME(ssytrs_3)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

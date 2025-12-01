@@ -1,4 +1,4 @@
-subroutine slaorhr_col_getrfnp(m,n,a,lda,d,info) CNAME(slaorhr_col_getrfnp)
+pure subroutine slaorhr_col_getrfnp(m,n,a,lda,d,info) CNAME(slaorhr_col_getrfnp)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

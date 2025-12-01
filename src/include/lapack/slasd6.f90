@@ -1,4 +1,4 @@
-subroutine slasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,iwork,info) CNAME(slasd6)
+pure subroutine slasd6(icompq,nl,nr,sqre,d,vf,vl,alpha,beta,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,poles,difl,difr,z,k,c,s,work,iwork,info) CNAME(slasd6)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::nl

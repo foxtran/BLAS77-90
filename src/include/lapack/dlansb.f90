@@ -1,4 +1,4 @@
-function dlansb(norm,uplo,n,k,ab,ldab,work) CNAME(dlansb)
+pure function dlansb(norm,uplo,n,k,ab,ldab,work) CNAME(dlansb)
 import
 character(len=1)::norm
 character(len=1)::uplo

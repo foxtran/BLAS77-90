@@ -1,4 +1,4 @@
-subroutine spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(spbsvx)
+pure subroutine spbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(spbsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

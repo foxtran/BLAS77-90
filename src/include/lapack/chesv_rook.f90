@@ -1,4 +1,4 @@
-subroutine chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(chesv_rook)
+pure subroutine chesv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(chesv_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

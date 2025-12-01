@@ -1,4 +1,4 @@
-function cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) CNAME(cla_hercond_c)
+pure function cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) CNAME(cla_hercond_c)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

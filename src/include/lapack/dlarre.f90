@@ -1,4 +1,4 @@
-subroutine dlarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) CNAME(dlarre)
+pure subroutine dlarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) CNAME(dlarre)
 import
 character(len=1)::range
 integer(blas77_int)::n

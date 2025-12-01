@@ -1,4 +1,4 @@
-subroutine sgeqpf(m,n,a,lda,jpvt,tau,work,info) CNAME(sgeqpf)
+pure subroutine sgeqpf(m,n,a,lda,jpvt,tau,work,info) CNAME(sgeqpf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

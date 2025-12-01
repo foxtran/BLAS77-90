@@ -1,4 +1,4 @@
-function cdotc(n,cx,incx,cy,incy) CNAME(cdotc)
+pure function cdotc(n,cx,incx,cy,incy) CNAME(cdotc)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::cx(*)

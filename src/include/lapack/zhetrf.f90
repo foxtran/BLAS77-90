@@ -1,4 +1,4 @@
-subroutine zhetrf(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(zhetrf)
+pure subroutine zhetrf(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(zhetrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

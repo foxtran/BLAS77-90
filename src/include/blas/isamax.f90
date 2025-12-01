@@ -1,4 +1,4 @@
-function isamax(n,sx,incx) CNAME(isamax)
+pure function isamax(n,sx,incx) CNAME(isamax)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

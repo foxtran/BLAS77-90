@@ -1,4 +1,4 @@
-subroutine chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(chetrs2)
+pure subroutine chetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(chetrs2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

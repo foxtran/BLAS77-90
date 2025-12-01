@@ -1,4 +1,4 @@
-subroutine claswp(n,a,lda,k1,k2,ipiv,incx) CNAME(claswp)
+pure subroutine claswp(n,a,lda,k1,k2,ipiv,incx) CNAME(claswp)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

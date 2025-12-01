@@ -1,4 +1,4 @@
-subroutine chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(chpsvx)
+pure subroutine chpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(chpsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

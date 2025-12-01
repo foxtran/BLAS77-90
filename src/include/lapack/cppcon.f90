@@ -1,4 +1,4 @@
-subroutine cppcon(uplo,n,ap,anorm,rcond,work,rwork,info) CNAME(cppcon)
+pure subroutine cppcon(uplo,n,ap,anorm,rcond,work,rwork,info) CNAME(cppcon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) CNAME(zlaqhb)
+pure subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) CNAME(zlaqhb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

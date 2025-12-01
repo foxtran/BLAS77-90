@@ -1,4 +1,4 @@
-subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) CNAME(cgegs)
+pure subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) CNAME(cgegs)
 import
 character(len=1)::jobvsl
 character(len=1)::jobvsr

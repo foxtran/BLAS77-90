@@ -1,4 +1,4 @@
-subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(zlaic1)
+pure subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(zlaic1)
 import
 integer(blas77_int)::job
 integer(blas77_int)::j

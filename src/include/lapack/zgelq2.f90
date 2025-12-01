@@ -1,4 +1,4 @@
-subroutine zgelq2(m,n,a,lda,tau,work,info) CNAME(zgelq2)
+pure subroutine zgelq2(m,n,a,lda,tau,work,info) CNAME(zgelq2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

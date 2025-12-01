@@ -1,4 +1,4 @@
-subroutine dlarfgp(n,alpha,x,incx,tau) CNAME(dlarfgp)
+pure subroutine dlarfgp(n,alpha,x,incx,tau) CNAME(dlarfgp)
 import
 integer(blas77_int)::n
 real(blas77_f64)::alpha

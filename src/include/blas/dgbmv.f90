@@ -1,4 +1,4 @@
-subroutine dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) CNAME(dgbmv)
+pure subroutine dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) CNAME(dgbmv)
 import
 character(len=1)::trans
 integer(blas77_int)::m

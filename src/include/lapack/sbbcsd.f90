@@ -1,4 +1,4 @@
-subroutine sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info) CNAME(sbbcsd)
+pure subroutine sbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,work,lwork,info) CNAME(sbbcsd)
 import
 character(len=1)::jobu1
 character(len=1)::jobu2

@@ -1,4 +1,4 @@
-function zladiv(x,y) CNAME(zladiv)
+pure function zladiv(x,y) CNAME(zladiv)
 import
 complex(blas77_f64)::x
 complex(blas77_f64)::y

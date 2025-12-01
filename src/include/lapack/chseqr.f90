@@ -1,4 +1,4 @@
-subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) CNAME(chseqr)
+pure subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) CNAME(chseqr)
 import
 character(len=1)::job
 character(len=1)::compz

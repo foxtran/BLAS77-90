@@ -1,4 +1,4 @@
-subroutine csrscl(n,sa,sx,incx) CNAME(csrscl)
+pure subroutine csrscl(n,sa,sx,incx) CNAME(csrscl)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sa

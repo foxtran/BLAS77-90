@@ -1,4 +1,4 @@
-subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) CNAME(dgesc2)
+pure subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) CNAME(dgesc2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

@@ -1,4 +1,4 @@
-subroutine zlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(zlahr2)
+pure subroutine zlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(zlahr2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::k

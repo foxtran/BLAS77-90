@@ -1,4 +1,4 @@
-subroutine spttrf(n,d,e,info) CNAME(spttrf)
+pure subroutine spttrf(n,d,e,info) CNAME(spttrf)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

@@ -1,4 +1,4 @@
-subroutine dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) CNAME(dgelsx)
+pure subroutine dgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,info) CNAME(dgelsx)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

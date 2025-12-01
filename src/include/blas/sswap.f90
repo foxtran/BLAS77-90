@@ -1,4 +1,4 @@
-subroutine sswap(n,sx,incx,sy,incy) CNAME(sswap)
+pure subroutine sswap(n,sx,incx,sy,incy) CNAME(sswap)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

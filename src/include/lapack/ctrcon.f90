@@ -1,4 +1,4 @@
-subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) CNAME(ctrcon)
+pure subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) CNAME(ctrcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

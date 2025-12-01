@@ -1,4 +1,4 @@
-subroutine zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(zlarzt)
+pure subroutine zlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(zlarzt)
 import
 character(len=1)::direct
 character(len=1)::storev

@@ -1,4 +1,4 @@
-subroutine clahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) CNAME(clahqr)
+pure subroutine clahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) CNAME(clahqr)
 import
 logical(blas77_int)::wantt
 logical(blas77_int)::wantz

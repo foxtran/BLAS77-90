@@ -1,4 +1,4 @@
-subroutine srotmg(sd1,sd2,sx1,sy1,sparam) CNAME(srotmg)
+pure subroutine srotmg(sd1,sd2,sx1,sy1,sparam) CNAME(srotmg)
 import
 real(blas77_f32)::sd1
 real(blas77_f32)::sd2

@@ -1,4 +1,4 @@
-subroutine dgelq2(m,n,a,lda,tau,work,info) CNAME(dgelq2)
+pure subroutine dgelq2(m,n,a,lda,tau,work,info) CNAME(dgelq2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine clartg(f,g,c,s,r) CNAME(clartg)
+pure subroutine clartg(f,g,c,s,r) CNAME(clartg)
 import
 complex(blas77_f32)::f
 complex(blas77_f32)::g

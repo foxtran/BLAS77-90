@@ -1,4 +1,4 @@
-subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) CNAME(claqgb)
+pure subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) CNAME(claqgb)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

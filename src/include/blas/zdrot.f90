@@ -1,4 +1,4 @@
-subroutine zdrot(n,zx,incx,zy,incy,c,s) CNAME(zdrot)
+pure subroutine zdrot(n,zx,incx,zy,incy,c,s) CNAME(zdrot)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

@@ -1,4 +1,4 @@
-subroutine cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cgemv)
+pure subroutine cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cgemv)
 import
 character(len=1)::trans
 integer(blas77_int)::m

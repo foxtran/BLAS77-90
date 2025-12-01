@@ -1,4 +1,4 @@
-subroutine zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) CNAME(zpocon)
+pure subroutine zpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) CNAME(zpocon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

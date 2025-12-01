@@ -1,4 +1,4 @@
-subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) CNAME(zgbequb)
+pure subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) CNAME(zgbequb)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) CNAME(slaln2)
+pure subroutine slaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) CNAME(slaln2)
 import
 logical(blas77_int)::ltrans
 integer(blas77_int)::na

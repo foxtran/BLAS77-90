@@ -1,4 +1,4 @@
-subroutine dlacon(n,v,x,isgn,est,kase) CNAME(dlacon)
+pure subroutine dlacon(n,v,x,isgn,est,kase) CNAME(dlacon)
 import
 integer(blas77_int)::n
 real(blas77_f64)::v(*)

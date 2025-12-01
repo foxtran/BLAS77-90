@@ -1,4 +1,4 @@
-subroutine clar2v(n,x,y,z,incx,c,s,incc) CNAME(clar2v)
+pure subroutine clar2v(n,x,y,z,incx,c,s,incc) CNAME(clar2v)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

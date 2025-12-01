@@ -1,4 +1,4 @@
-subroutine zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) CNAME(zgesvdx)
+pure subroutine zgesvdx(jobu,jobvt,range,m,n,a,lda,vl,vu,il,iu,ns,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) CNAME(zgesvdx)
 import
 character(len=1)::jobu
 character(len=1)::jobvt

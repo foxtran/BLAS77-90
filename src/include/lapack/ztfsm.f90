@@ -1,4 +1,4 @@
-subroutine ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) CNAME(ztfsm)
+pure subroutine ztfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) CNAME(ztfsm)
 import
 character(len=1)::transr
 character(len=1)::side

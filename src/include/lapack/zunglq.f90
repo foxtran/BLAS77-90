@@ -1,4 +1,4 @@
-subroutine zunglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(zunglq)
+pure subroutine zunglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(zunglq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

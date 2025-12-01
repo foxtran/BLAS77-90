@@ -1,4 +1,4 @@
-subroutine clapll(n,x,incx,y,incy,ssmin) CNAME(clapll)
+pure subroutine clapll(n,x,incx,y,incy,ssmin) CNAME(clapll)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

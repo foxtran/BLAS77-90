@@ -1,4 +1,4 @@
-subroutine dlaed4(n,i,d,z,delta,rho,dlam,info) CNAME(dlaed4)
+pure subroutine dlaed4(n,i,d,z,delta,rho,dlam,info) CNAME(dlaed4)
 import
 integer(blas77_int)::n
 integer(blas77_int)::i

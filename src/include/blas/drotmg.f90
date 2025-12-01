@@ -1,4 +1,4 @@
-subroutine drotmg(dd1,dd2,dx1,dy1,dparam) CNAME(drotmg)
+pure subroutine drotmg(dd1,dd2,dx1,dy1,dparam) CNAME(drotmg)
 import
 real(blas77_f64)::dd1
 real(blas77_f64)::dd2

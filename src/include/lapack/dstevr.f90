@@ -1,4 +1,4 @@
-subroutine dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dstevr)
+pure subroutine dstevr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(dstevr)
 import
 character(len=1)::jobz
 character(len=1)::range

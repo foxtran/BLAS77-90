@@ -1,4 +1,4 @@
-subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(claev2)
+pure subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(claev2)
 import
 complex(blas77_f32)::a
 complex(blas77_f32)::b

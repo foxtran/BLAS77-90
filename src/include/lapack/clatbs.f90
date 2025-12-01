@@ -1,4 +1,4 @@
-subroutine clatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) CNAME(clatbs)
+pure subroutine clatbs(uplo,trans,diag,normin,n,kd,ab,ldab,x,scale,cnorm,info) CNAME(clatbs)
 import
 character(len=1)::uplo
 character(len=1)::trans

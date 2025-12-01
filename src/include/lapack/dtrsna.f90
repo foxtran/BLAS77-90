@@ -1,4 +1,4 @@
-subroutine dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info) CNAME(dtrsna)
+pure subroutine dtrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,iwork,info) CNAME(dtrsna)
 import
 character(len=1)::job
 character(len=1)::howmny

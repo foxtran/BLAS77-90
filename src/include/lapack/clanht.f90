@@ -1,4 +1,4 @@
-function clanht(norm,n,d,e) CNAME(clanht)
+pure function clanht(norm,n,d,e) CNAME(clanht)
 import
 character(len=1)::norm
 integer(blas77_int)::n

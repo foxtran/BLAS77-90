@@ -1,4 +1,4 @@
-subroutine cungrq(m,n,k,a,lda,tau,work,lwork,info) CNAME(cungrq)
+pure subroutine cungrq(m,n,k,a,lda,tau,work,lwork,info) CNAME(cungrq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

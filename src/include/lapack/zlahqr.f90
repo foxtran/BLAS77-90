@@ -1,4 +1,4 @@
-subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) CNAME(zlahqr)
+pure subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) CNAME(zlahqr)
 import
 logical(blas77_int)::wantt
 logical(blas77_int)::wantz

@@ -1,4 +1,4 @@
-subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau,info) CNAME(dlaed6)
+pure subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau,info) CNAME(dlaed6)
 import
 integer(blas77_int)::kniter
 logical(blas77_int)::orgati

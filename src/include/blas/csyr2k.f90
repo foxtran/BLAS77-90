@@ -1,4 +1,4 @@
-subroutine csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(csyr2k)
+pure subroutine csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(csyr2k)
 import
 character(len=1)::uplo
 character(len=1)::trans

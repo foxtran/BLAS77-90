@@ -1,4 +1,4 @@
-subroutine cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(cher2k)
+pure subroutine cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(cher2k)
 import
 character(len=1)::uplo
 character(len=1)::trans

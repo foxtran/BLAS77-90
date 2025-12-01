@@ -1,4 +1,4 @@
-subroutine slarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(slarfb)
+pure subroutine slarfb(side,trans,direct,storev,m,n,k,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(slarfb)
 import
 character(len=1)::side
 character(len=1)::trans

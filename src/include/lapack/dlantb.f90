@@ -1,4 +1,4 @@
-function dlantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(dlantb)
+pure function dlantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(dlantb)
 import
 character(len=1)::norm
 character(len=1)::uplo

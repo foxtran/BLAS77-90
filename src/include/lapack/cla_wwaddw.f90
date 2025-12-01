@@ -1,4 +1,4 @@
-subroutine cla_wwaddw(n,x,y,w) CNAME(cla_wwaddw)
+pure subroutine cla_wwaddw(n,x,y,w) CNAME(cla_wwaddw)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

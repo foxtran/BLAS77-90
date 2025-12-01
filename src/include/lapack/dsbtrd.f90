@@ -1,4 +1,4 @@
-subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(dsbtrd)
+pure subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(dsbtrd)
 import
 character(len=1)::vect
 character(len=1)::uplo

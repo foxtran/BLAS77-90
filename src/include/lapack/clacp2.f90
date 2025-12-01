@@ -1,4 +1,4 @@
-subroutine clacp2(uplo,m,n,a,lda,b,ldb) CNAME(clacp2)
+pure subroutine clacp2(uplo,m,n,a,lda,b,ldb) CNAME(clacp2)
 import
 character(len=1)::uplo
 integer(blas77_int)::m

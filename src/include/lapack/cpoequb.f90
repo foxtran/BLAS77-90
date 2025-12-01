@@ -1,4 +1,4 @@
-subroutine cpoequb(n,a,lda,s,scond,amax,info) CNAME(cpoequb)
+pure subroutine cpoequb(n,a,lda,s,scond,amax,info) CNAME(cpoequb)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

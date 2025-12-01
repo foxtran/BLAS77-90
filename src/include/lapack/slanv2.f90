@@ -1,4 +1,4 @@
-subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) CNAME(slanv2)
+pure subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) CNAME(slanv2)
 import
 real(blas77_f32)::a
 real(blas77_f32)::b

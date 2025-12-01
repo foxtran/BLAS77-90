@@ -1,4 +1,4 @@
-subroutine sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sgesvx)
+pure subroutine sgesvx(fact,trans,n,nrhs,a,lda,af,ldaf,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sgesvx)
 import
 character(len=1)::fact
 character(len=1)::trans

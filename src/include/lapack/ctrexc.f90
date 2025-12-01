@@ -1,4 +1,4 @@
-subroutine ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) CNAME(ctrexc)
+pure subroutine ctrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) CNAME(ctrexc)
 import
 character(len=1)::compq
 integer(blas77_int)::n

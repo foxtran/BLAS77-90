@@ -1,4 +1,4 @@
-subroutine ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ctgevc)
+pure subroutine ctgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ctgevc)
 import
 character(len=1)::side
 character(len=1)::howmny

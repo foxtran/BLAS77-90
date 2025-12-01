@@ -1,4 +1,4 @@
-subroutine sgetrf(m,n,a,lda,ipiv,info) CNAME(sgetrf)
+pure subroutine sgetrf(m,n,a,lda,ipiv,info) CNAME(sgetrf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

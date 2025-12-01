@@ -1,4 +1,4 @@
-subroutine zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) CNAME(zhecon_3)
+pure subroutine zhecon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) CNAME(zhecon_3)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

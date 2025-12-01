@@ -1,4 +1,4 @@
-subroutine zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) CNAME(zhetri_3x)
+pure subroutine zhetri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) CNAME(zhetri_3x)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) CNAME(dlaed7)
+pure subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) CNAME(dlaed7)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::n

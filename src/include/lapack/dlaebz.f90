@@ -1,4 +1,4 @@
-subroutine dlaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) CNAME(dlaebz)
+pure subroutine dlaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) CNAME(dlaebz)
 import
 integer(blas77_int)::ijob
 integer(blas77_int)::nitmax

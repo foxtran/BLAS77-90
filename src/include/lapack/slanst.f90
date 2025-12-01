@@ -1,4 +1,4 @@
-function slanst(norm,n,d,e) CNAME(slanst)
+pure function slanst(norm,n,d,e) CNAME(slanst)
 import
 character(len=1)::norm
 integer(blas77_int)::n

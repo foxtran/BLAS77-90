@@ -1,4 +1,4 @@
-subroutine zla_lin_berr(n,nz,nrhs,res,ayb,berr) CNAME(zla_lin_berr)
+pure subroutine zla_lin_berr(n,nz,nrhs,res,ayb,berr) CNAME(zla_lin_berr)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nz

@@ -1,4 +1,4 @@
-subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlaswlq)
+pure subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlaswlq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

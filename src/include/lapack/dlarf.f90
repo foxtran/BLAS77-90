@@ -1,4 +1,4 @@
-subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) CNAME(dlarf)
+pure subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) CNAME(dlarf)
 import
 character(len=1)::side
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) CNAME(spocon)
+pure subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) CNAME(spocon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

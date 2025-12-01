@@ -1,4 +1,4 @@
-subroutine clarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(clarft_lvl2)
+pure subroutine clarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(clarft_lvl2)
 import
 character(len=1)::direct
 character(len=1)::storev

@@ -1,4 +1,4 @@
-subroutine zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) CNAME(zgebak)
+pure subroutine zgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) CNAME(zgebak)
 import
 character(len=1)::job
 character(len=1)::side

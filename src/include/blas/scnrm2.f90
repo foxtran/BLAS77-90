@@ -1,4 +1,4 @@
-function scnrm2(n,x,incx) CNAME(scnrm2)
+pure function scnrm2(n,x,incx) CNAME(scnrm2)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

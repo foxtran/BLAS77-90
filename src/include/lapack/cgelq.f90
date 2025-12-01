@@ -1,4 +1,4 @@
-subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) CNAME(cgelq)
+pure subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) CNAME(cgelq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

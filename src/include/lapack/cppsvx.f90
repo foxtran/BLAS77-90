@@ -1,4 +1,4 @@
-subroutine cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(cppsvx)
+pure subroutine cppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(cppsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

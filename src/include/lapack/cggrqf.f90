@@ -1,4 +1,4 @@
-subroutine cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) CNAME(cggrqf)
+pure subroutine cggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) CNAME(cggrqf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::p

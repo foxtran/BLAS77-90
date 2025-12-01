@@ -1,4 +1,4 @@
-subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) CNAME(sgesvj)
+pure subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) CNAME(sgesvj)
 import
 character(len=1)::joba
 character(len=1)::jobu

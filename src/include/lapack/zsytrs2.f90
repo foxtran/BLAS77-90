@@ -1,4 +1,4 @@
-subroutine zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(zsytrs2)
+pure subroutine zsytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(zsytrs2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

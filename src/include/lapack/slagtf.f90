@@ -1,4 +1,4 @@
-subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) CNAME(slagtf)
+pure subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) CNAME(slagtf)
 import
 integer(blas77_int)::n
 real(blas77_f32)::a(*)

@@ -1,4 +1,4 @@
-function clanhe(norm,uplo,n,a,lda,work) CNAME(clanhe)
+pure function clanhe(norm,uplo,n,a,lda,work) CNAME(clanhe)
 import
 character(len=1)::norm
 character(len=1)::uplo

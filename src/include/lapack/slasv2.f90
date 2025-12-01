@@ -1,4 +1,4 @@
-subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) CNAME(slasv2)
+pure subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) CNAME(slasv2)
 import
 real(blas77_f32)::f
 real(blas77_f32)::g

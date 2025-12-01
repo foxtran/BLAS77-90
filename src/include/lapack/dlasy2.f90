@@ -1,4 +1,4 @@
-subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) CNAME(dlasy2)
+pure subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) CNAME(dlasy2)
 import
 logical(blas77_int)::ltranl
 logical(blas77_int)::ltranr

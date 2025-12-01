@@ -1,4 +1,4 @@
-subroutine dgerqf(m,n,a,lda,tau,work,lwork,info) CNAME(dgerqf)
+pure subroutine dgerqf(m,n,a,lda,tau,work,lwork,info) CNAME(dgerqf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

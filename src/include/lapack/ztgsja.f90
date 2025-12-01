@@ -1,4 +1,4 @@
-subroutine ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) CNAME(ztgsja)
+pure subroutine ztgsja(jobu,jobv,jobq,m,p,n,k,l,a,lda,b,ldb,tola,tolb,alpha,beta,u,ldu,v,ldv,q,ldq,work,ncycle,info) CNAME(ztgsja)
 import
 character(len=1)::jobu
 character(len=1)::jobv

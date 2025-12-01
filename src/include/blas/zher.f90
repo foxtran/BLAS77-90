@@ -1,4 +1,4 @@
-subroutine zher(uplo,n,alpha,x,incx,a,lda) CNAME(zher)
+pure subroutine zher(uplo,n,alpha,x,incx,a,lda) CNAME(zher)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

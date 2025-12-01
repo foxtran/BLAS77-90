@@ -1,4 +1,4 @@
-subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(sgehrd)
+pure subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(sgehrd)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ilo

@@ -1,4 +1,4 @@
-subroutine dgebal(job,n,a,lda,ilo,ihi,scale,info) CNAME(dgebal)
+pure subroutine dgebal(job,n,a,lda,ilo,ihi,scale,info) CNAME(dgebal)
 import
 character(len=1)::job
 integer(blas77_int)::n

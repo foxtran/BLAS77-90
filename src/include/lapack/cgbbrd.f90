@@ -1,4 +1,4 @@
-subroutine cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) CNAME(cgbbrd)
+pure subroutine cgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) CNAME(cgbbrd)
 import
 character(len=1)::vect
 integer(blas77_int)::m

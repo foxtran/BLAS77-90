@@ -1,4 +1,4 @@
-subroutine slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(slatsqr)
+pure subroutine slatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(slatsqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

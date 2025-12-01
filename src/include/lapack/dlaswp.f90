@@ -1,4 +1,4 @@
-subroutine dlaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(dlaswp)
+pure subroutine dlaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(dlaswp)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

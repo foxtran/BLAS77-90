@@ -1,4 +1,4 @@
-subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(sorm2l)
+pure subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(sorm2l)
 import
 character(len=1)::side
 character(len=1)::trans

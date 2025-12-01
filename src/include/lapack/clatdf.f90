@@ -1,4 +1,4 @@
-subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) CNAME(clatdf)
+pure subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) CNAME(clatdf)
 import
 integer(blas77_int)::ijob
 integer(blas77_int)::n

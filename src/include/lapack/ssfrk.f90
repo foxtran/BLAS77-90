@@ -1,4 +1,4 @@
-subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(ssfrk)
+pure subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(ssfrk)
 import
 character(len=1)::transr
 character(len=1)::uplo

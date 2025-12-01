@@ -1,4 +1,4 @@
-subroutine dgeqlf(m,n,a,lda,tau,work,lwork,info) CNAME(dgeqlf)
+pure subroutine dgeqlf(m,n,a,lda,tau,work,lwork,info) CNAME(dgeqlf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

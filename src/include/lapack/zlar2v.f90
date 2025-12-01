@@ -1,4 +1,4 @@
-subroutine zlar2v(n,x,y,z,incx,c,s,incc) CNAME(zlar2v)
+pure subroutine zlar2v(n,x,y,z,incx,c,s,incc) CNAME(zlar2v)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::x(*)

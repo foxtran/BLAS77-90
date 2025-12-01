@@ -1,4 +1,4 @@
-subroutine slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) CNAME(slaed7)
+pure subroutine slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) CNAME(slaed7)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::n

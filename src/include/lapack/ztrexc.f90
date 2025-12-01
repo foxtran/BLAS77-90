@@ -1,4 +1,4 @@
-subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) CNAME(ztrexc)
+pure subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) CNAME(ztrexc)
 import
 character(len=1)::compq
 integer(blas77_int)::n

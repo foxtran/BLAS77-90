@@ -1,4 +1,4 @@
-subroutine zlacn2(n,v,x,est,kase,isave) CNAME(zlacn2)
+pure subroutine zlacn2(n,v,x,est,kase,isave) CNAME(zlacn2)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::v(*)

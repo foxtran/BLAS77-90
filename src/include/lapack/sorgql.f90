@@ -1,4 +1,4 @@
-subroutine sorgql(m,n,k,a,lda,tau,work,lwork,info) CNAME(sorgql)
+pure subroutine sorgql(m,n,k,a,lda,tau,work,lwork,info) CNAME(sorgql)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

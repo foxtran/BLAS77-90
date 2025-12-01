@@ -1,4 +1,4 @@
-function dla_gerpvgrw(n,ncols,a,lda,af,ldaf) CNAME(dla_gerpvgrw)
+pure function dla_gerpvgrw(n,ncols,a,lda,af,ldaf) CNAME(dla_gerpvgrw)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ncols

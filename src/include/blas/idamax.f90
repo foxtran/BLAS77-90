@@ -1,4 +1,4 @@
-function idamax(n,dx,incx) CNAME(idamax)
+pure function idamax(n,dx,incx) CNAME(idamax)
 import
 integer(blas77_int)::n
 real(blas77_f64)::dx(*)

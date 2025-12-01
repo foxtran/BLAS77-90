@@ -1,4 +1,4 @@
-subroutine cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cherfs)
+pure subroutine cherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cherfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info) CNAME(cggsvd)
+pure subroutine cggsvd(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,rwork,iwork,info) CNAME(cggsvd)
 import
 character(len=1)::jobu
 character(len=1)::jobv

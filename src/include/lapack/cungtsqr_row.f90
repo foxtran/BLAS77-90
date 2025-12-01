@@ -1,4 +1,4 @@
-subroutine cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(cungtsqr_row)
+pure subroutine cungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(cungtsqr_row)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

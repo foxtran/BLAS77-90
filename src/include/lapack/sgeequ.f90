@@ -1,4 +1,4 @@
-subroutine sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(sgeequ)
+pure subroutine sgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(sgeequ)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

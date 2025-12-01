@@ -1,4 +1,4 @@
-function dzsum1(n,cx,incx) CNAME(dzsum1)
+pure function dzsum1(n,cx,incx) CNAME(dzsum1)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::cx(*)

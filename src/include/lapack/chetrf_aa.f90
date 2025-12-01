@@ -1,4 +1,4 @@
-subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(chetrf_aa)
+pure subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(chetrf_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

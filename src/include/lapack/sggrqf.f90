@@ -1,4 +1,4 @@
-subroutine sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) CNAME(sggrqf)
+pure subroutine sggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) CNAME(sggrqf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::p

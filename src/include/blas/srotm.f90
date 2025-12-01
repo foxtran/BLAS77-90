@@ -1,4 +1,4 @@
-subroutine srotm(n,sx,incx,sy,incy,sparam) CNAME(srotm)
+pure subroutine srotm(n,sx,incx,sy,incy,sparam) CNAME(srotm)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

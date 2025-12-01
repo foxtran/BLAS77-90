@@ -1,4 +1,4 @@
-subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon)
+pure subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

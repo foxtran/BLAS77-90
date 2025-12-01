@@ -1,4 +1,4 @@
-subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) CNAME(zhbgst)
+pure subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) CNAME(zhbgst)
 import
 character(len=1)::vect
 character(len=1)::uplo

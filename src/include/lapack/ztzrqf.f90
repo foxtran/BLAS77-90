@@ -1,4 +1,4 @@
-subroutine ztzrqf(m,n,a,lda,tau,info) CNAME(ztzrqf)
+pure subroutine ztzrqf(m,n,a,lda,tau,info) CNAME(ztzrqf)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) CNAME(zhegv_2stage)
+pure subroutine zhegv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,rwork,info) CNAME(zhegv_2stage)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

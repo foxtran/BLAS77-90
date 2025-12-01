@@ -1,4 +1,4 @@
-subroutine dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dtprfs)
+pure subroutine dtprfs(uplo,trans,diag,n,nrhs,ap,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dtprfs)
 import
 character(len=1)::uplo
 character(len=1)::trans

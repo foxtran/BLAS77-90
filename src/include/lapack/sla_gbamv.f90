@@ -1,4 +1,4 @@
-subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) CNAME(sla_gbamv)
+pure subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) CNAME(sla_gbamv)
 import
 integer(blas77_int)::trans
 integer(blas77_int)::m

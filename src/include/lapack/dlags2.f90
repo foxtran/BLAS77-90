@@ -1,4 +1,4 @@
-subroutine dlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) CNAME(dlags2)
+pure subroutine dlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) CNAME(dlags2)
 import
 logical(blas77_int)::upper
 real(blas77_f64)::a1

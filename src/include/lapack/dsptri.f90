@@ -1,4 +1,4 @@
-subroutine dsptri(uplo,n,ap,ipiv,work,info) CNAME(dsptri)
+pure subroutine dsptri(uplo,n,ap,ipiv,work,info) CNAME(dsptri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

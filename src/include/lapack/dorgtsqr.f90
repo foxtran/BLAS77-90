@@ -1,4 +1,4 @@
-subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dorgtsqr)
+pure subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dorgtsqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

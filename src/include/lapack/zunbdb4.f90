@@ -1,4 +1,4 @@
-subroutine zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) CNAME(zunbdb4)
+pure subroutine zunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) CNAME(zunbdb4)
 import
 integer(blas77_int)::m
 integer(blas77_int)::p

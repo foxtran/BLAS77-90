@@ -1,4 +1,4 @@
-subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) CNAME(dlat2s)
+pure subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) CNAME(dlat2s)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

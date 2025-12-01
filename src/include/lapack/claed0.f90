@@ -1,4 +1,4 @@
-subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) CNAME(claed0)
+pure subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) CNAME(claed0)
 import
 integer(blas77_int)::qsiz
 integer(blas77_int)::n

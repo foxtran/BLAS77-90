@@ -1,4 +1,4 @@
-subroutine zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) CNAME(zlaed7)
+pure subroutine zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) CNAME(zlaed7)
 import
 integer(blas77_int)::n
 integer(blas77_int)::cutpnt

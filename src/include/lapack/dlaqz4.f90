@@ -1,4 +1,4 @@
-subroutine dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) CNAME(dlaqz4)
+pure subroutine dlaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si,ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) CNAME(dlaqz4)
 import
 logical(blas77_int),intent(in)::ilschur
 logical(blas77_int),intent(in)::ilq

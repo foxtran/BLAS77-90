@@ -1,4 +1,4 @@
-subroutine dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) CNAME(dsygv)
+pure subroutine dsygv(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) CNAME(dsygv)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

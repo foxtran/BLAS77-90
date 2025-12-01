@@ -1,4 +1,4 @@
-subroutine ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) CNAME(ssb2st_kernels)
+pure subroutine ssb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) CNAME(ssb2st_kernels)
 import
 character(len=1)::uplo
 logical(blas77_int)::wantz

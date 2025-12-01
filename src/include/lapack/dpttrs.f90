@@ -1,4 +1,4 @@
-subroutine dpttrs(n,nrhs,d,e,b,ldb,info) CNAME(dpttrs)
+pure subroutine dpttrs(n,nrhs,d,e,b,ldb,info) CNAME(dpttrs)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

@@ -1,4 +1,4 @@
-subroutine dorg2l(m,n,k,a,lda,tau,work,info) CNAME(dorg2l)
+pure subroutine dorg2l(m,n,k,a,lda,tau,work,info) CNAME(dorg2l)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

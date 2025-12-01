@@ -1,4 +1,4 @@
-subroutine dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info) CNAME(dsysvx)
+pure subroutine dsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,iwork,info) CNAME(dsysvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(cpftrs)
+pure subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(cpftrs)
 import
 character(len=1)::transr
 character(len=1)::uplo

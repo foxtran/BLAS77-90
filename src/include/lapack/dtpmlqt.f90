@@ -1,4 +1,4 @@
-subroutine dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(dtpmlqt)
+pure subroutine dtpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(dtpmlqt)
 import
 character(len=1)::side
 character(len=1)::trans

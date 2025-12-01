@@ -1,4 +1,4 @@
-subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) CNAME(chbgst)
+pure subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) CNAME(chbgst)
 import
 character(len=1)::vect
 character(len=1)::uplo

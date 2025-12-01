@@ -1,4 +1,4 @@
-subroutine cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info) CNAME(cgeesx)
+pure subroutine cgeesx(jobvs,sort,select,sense,n,a,lda,sdim,w,vs,ldvs,rconde,rcondv,work,lwork,rwork,bwork,info) CNAME(cgeesx)
 import
 character(len=1)::jobvs
 character(len=1)::sort

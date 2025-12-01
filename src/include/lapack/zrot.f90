@@ -1,4 +1,4 @@
-subroutine zrot(n,cx,incx,cy,incy,c,s) CNAME(zrot)
+pure subroutine zrot(n,cx,incx,cy,incy,c,s) CNAME(zrot)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::cx(*)

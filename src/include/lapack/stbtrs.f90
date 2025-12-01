@@ -1,4 +1,4 @@
-subroutine stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(stbtrs)
+pure subroutine stbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(stbtrs)
 import
 character(len=1)::uplo
 character(len=1)::trans

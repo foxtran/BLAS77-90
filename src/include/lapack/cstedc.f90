@@ -1,4 +1,4 @@
-subroutine cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(cstedc)
+pure subroutine cstedc(compz,n,d,e,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(cstedc)
 import
 character(len=1)::compz
 integer(blas77_int)::n

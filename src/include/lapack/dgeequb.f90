@@ -1,4 +1,4 @@
-subroutine dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(dgeequb)
+pure subroutine dgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(dgeequb)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dtbsv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(dtbsv)
+pure subroutine dtbsv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(dtbsv)
 import
 character(len=1)::uplo
 character(len=1)::trans

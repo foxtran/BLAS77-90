@@ -1,4 +1,4 @@
-function ddot(n,dx,incx,dy,incy) CNAME(ddot)
+pure function ddot(n,dx,incx,dy,incy) CNAME(ddot)
 import
 integer(blas77_int)::n
 real(blas77_f64)::dx(*)

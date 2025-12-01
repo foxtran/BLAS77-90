@@ -1,4 +1,4 @@
-subroutine zlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) CNAME(zlaqp2rk)
+pure subroutine zlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) CNAME(zlaqp2rk)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

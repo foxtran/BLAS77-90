@@ -1,4 +1,4 @@
-subroutine sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) CNAME(sstein)
+pure subroutine sstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) CNAME(sstein)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

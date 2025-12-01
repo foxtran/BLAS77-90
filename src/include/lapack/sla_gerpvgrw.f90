@@ -1,4 +1,4 @@
-function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) CNAME(sla_gerpvgrw)
+pure function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) CNAME(sla_gerpvgrw)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ncols

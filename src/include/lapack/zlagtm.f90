@@ -1,4 +1,4 @@
-subroutine zlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) CNAME(zlagtm)
+pure subroutine zlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) CNAME(zlagtm)
 import
 character(len=1)::trans
 integer(blas77_int)::n

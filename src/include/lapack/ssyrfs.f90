@@ -1,4 +1,4 @@
-subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(ssyrfs)
+pure subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(ssyrfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

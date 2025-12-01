@@ -1,4 +1,4 @@
-subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) CNAME(dlarra)
+pure subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) CNAME(dlarra)
 import
 integer(blas77_int)::n
 real(blas77_f64)::d(*)

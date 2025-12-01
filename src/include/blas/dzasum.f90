@@ -1,4 +1,4 @@
-function dzasum(n,zx,incx) CNAME(dzasum)
+pure function dzasum(n,zx,incx) CNAME(dzasum)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

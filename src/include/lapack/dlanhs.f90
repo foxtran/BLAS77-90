@@ -1,4 +1,4 @@
-function dlanhs(norm,n,a,lda,work) CNAME(dlanhs)
+pure function dlanhs(norm,n,a,lda,work) CNAME(dlanhs)
 import
 character(len=1)::norm
 integer(blas77_int)::n

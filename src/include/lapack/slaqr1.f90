@@ -1,4 +1,4 @@
-subroutine slaqr1(n,h,ldh,sr1,si1,sr2,si2,v) CNAME(slaqr1)
+pure subroutine slaqr1(n,h,ldh,sr1,si1,sr2,si2,v) CNAME(slaqr1)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ldh

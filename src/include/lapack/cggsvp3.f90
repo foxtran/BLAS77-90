@@ -1,4 +1,4 @@
-subroutine cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info) CNAME(cggsvp3)
+pure subroutine cggsvp3(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,rwork,tau,work,lwork,info) CNAME(cggsvp3)
 import
 character(len=1)::jobu
 character(len=1)::jobv

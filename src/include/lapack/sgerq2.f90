@@ -1,4 +1,4 @@
-subroutine sgerq2(m,n,a,lda,tau,work,info) CNAME(sgerq2)
+pure subroutine sgerq2(m,n,a,lda,tau,work,info) CNAME(sgerq2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

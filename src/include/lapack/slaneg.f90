@@ -1,4 +1,4 @@
-function slaneg(n,d,lld,sigma,pivmin,r) CNAME(slaneg)
+pure function slaneg(n,d,lld,sigma,pivmin,r) CNAME(slaneg)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

@@ -1,4 +1,4 @@
-subroutine sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(sspgvd)
+pure subroutine sspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(sspgvd)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

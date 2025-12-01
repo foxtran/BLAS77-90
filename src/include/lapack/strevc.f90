@@ -1,4 +1,4 @@
-subroutine strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) CNAME(strevc)
+pure subroutine strevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) CNAME(strevc)
 import
 character(len=1)::side
 character(len=1)::howmny

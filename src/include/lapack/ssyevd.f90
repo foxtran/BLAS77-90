@@ -1,4 +1,4 @@
-subroutine ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) CNAME(ssyevd)
+pure subroutine ssyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) CNAME(ssyevd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

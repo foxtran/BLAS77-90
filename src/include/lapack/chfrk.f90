@@ -1,4 +1,4 @@
-subroutine chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(chfrk)
+pure subroutine chfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) CNAME(chfrk)
 import
 character(len=1)::transr
 character(len=1)::uplo

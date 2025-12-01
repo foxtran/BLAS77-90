@@ -1,4 +1,4 @@
-subroutine cposv(uplo,n,nrhs,a,lda,b,ldb,info) CNAME(cposv)
+pure subroutine cposv(uplo,n,nrhs,a,lda,b,ldb,info) CNAME(cposv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

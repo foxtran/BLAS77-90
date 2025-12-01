@@ -1,4 +1,4 @@
-subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(dlaev2)
+pure subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(dlaev2)
 import
 real(blas77_f64)::a
 real(blas77_f64)::b

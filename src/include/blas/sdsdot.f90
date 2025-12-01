@@ -1,4 +1,4 @@
-function sdsdot(n,sb,sx,incx,sy,incy) CNAME(sdsdot)
+pure function sdsdot(n,sb,sx,incx,sy,incy) CNAME(sdsdot)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sb

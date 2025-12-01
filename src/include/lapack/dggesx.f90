@@ -1,4 +1,4 @@
-subroutine dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) CNAME(dggesx)
+pure subroutine dggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) CNAME(dggesx)
 import
 character(len=1)::jobvsl
 character(len=1)::jobvsr

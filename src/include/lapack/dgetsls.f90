@@ -1,4 +1,4 @@
-subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(dgetsls)
+pure subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(dgetsls)
 import
 character(len=1)::trans
 integer(blas77_int)::m

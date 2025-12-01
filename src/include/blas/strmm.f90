@@ -1,4 +1,4 @@
-subroutine strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(strmm)
+pure subroutine strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(strmm)
 import
 character(len=1)::side
 character(len=1)::uplo

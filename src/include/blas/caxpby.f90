@@ -1,4 +1,4 @@
-subroutine caxpby(n,ca,cx,incx,cb,cy,incy) CNAME(caxpby)
+pure subroutine caxpby(n,ca,cx,incx,cb,cy,incy) CNAME(caxpby)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::ca

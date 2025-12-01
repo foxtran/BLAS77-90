@@ -1,4 +1,4 @@
-subroutine crotg(a,b,c,s) CNAME(crotg)
+pure subroutine crotg(a,b,c,s) CNAME(crotg)
 import
 complex(blas77_f32)::a
 complex(blas77_f32)::b

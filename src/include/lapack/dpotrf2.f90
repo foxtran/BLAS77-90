@@ -1,4 +1,4 @@
-recursive subroutine dpotrf2(uplo,n,a,lda,info) CNAME(dpotrf2)
+pure subroutine dpotrf2(uplo,n,a,lda,info) CNAME(dpotrf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

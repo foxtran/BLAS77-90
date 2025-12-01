@@ -1,4 +1,4 @@
-subroutine cpstf2(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(cpstf2)
+pure subroutine cpstf2(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(cpstf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

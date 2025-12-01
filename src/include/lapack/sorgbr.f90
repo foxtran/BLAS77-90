@@ -1,4 +1,4 @@
-subroutine sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(sorgbr)
+pure subroutine sorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(sorgbr)
 import
 character(len=1)::vect
 integer(blas77_int)::m

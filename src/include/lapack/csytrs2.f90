@@ -1,4 +1,4 @@
-subroutine csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(csytrs2)
+pure subroutine csytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(csytrs2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dlauum(uplo,n,a,lda,info) CNAME(dlauum)
+pure subroutine dlauum(uplo,n,a,lda,info) CNAME(dlauum)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

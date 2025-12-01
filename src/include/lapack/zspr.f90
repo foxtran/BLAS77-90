@@ -1,4 +1,4 @@
-subroutine zspr(uplo,n,alpha,x,incx,ap) CNAME(zspr)
+pure subroutine zspr(uplo,n,alpha,x,incx,ap) CNAME(zspr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

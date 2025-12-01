@@ -1,4 +1,4 @@
-subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(dopmtr)
+pure subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(dopmtr)
 import
 character(len=1)::side
 character(len=1)::uplo

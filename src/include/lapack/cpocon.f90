@@ -1,4 +1,4 @@
-subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) CNAME(cpocon)
+pure subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) CNAME(cpocon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

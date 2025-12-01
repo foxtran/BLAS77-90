@@ -1,4 +1,4 @@
-subroutine scopy(n,sx,incx,sy,incy) CNAME(scopy)
+pure subroutine scopy(n,sx,incx,sy,incy) CNAME(scopy)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

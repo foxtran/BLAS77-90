@@ -1,4 +1,4 @@
-subroutine ssytd2(uplo,n,a,lda,d,e,tau,info) CNAME(ssytd2)
+pure subroutine ssytd2(uplo,n,a,lda,d,e,tau,info) CNAME(ssytd2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

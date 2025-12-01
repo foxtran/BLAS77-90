@@ -1,4 +1,4 @@
-function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) CNAME(zla_herpvgrw)
+pure function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) CNAME(zla_herpvgrw)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

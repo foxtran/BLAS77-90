@@ -1,4 +1,4 @@
-subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(clarfb_gett)
+pure subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(clarfb_gett)
 import
 character(len=1)::ident
 integer(blas77_int)::m

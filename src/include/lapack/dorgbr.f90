@@ -1,4 +1,4 @@
-subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgbr)
+pure subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgbr)
 import
 character(len=1)::vect
 integer(blas77_int)::m

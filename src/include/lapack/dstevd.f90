@@ -1,4 +1,4 @@
-subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) CNAME(dstevd)
+pure subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) CNAME(dstevd)
 import
 character(len=1)::jobz
 integer(blas77_int)::n

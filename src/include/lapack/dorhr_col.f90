@@ -1,4 +1,4 @@
-subroutine dorhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(dorhr_col)
+pure subroutine dorhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(dorhr_col)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

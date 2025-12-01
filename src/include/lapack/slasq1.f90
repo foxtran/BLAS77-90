@@ -1,4 +1,4 @@
-subroutine slasq1(n,d,e,work,info) CNAME(slasq1)
+pure subroutine slasq1(n,d,e,work,info) CNAME(slasq1)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

@@ -1,4 +1,4 @@
-subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(zheev_2stage)
+pure subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(zheev_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

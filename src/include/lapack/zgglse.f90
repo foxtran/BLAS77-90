@@ -1,4 +1,4 @@
-subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) CNAME(zgglse)
+pure subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) CNAME(zgglse)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

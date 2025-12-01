@@ -1,4 +1,4 @@
-subroutine zungtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(zungtr)
+pure subroutine zungtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(zungtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

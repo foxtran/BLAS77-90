@@ -1,4 +1,4 @@
-subroutine strtri(uplo,diag,n,a,lda,info) CNAME(strtri)
+pure subroutine strtri(uplo,diag,n,a,lda,info) CNAME(strtri)
 import
 character(len=1)::uplo
 character(len=1)::diag

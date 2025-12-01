@@ -1,4 +1,4 @@
-function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) CNAME(sla_porcond)
+pure function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) CNAME(sla_porcond)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

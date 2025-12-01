@@ -1,4 +1,4 @@
-subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dspgvd)
+pure subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dspgvd)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

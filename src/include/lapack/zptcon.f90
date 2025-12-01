@@ -1,4 +1,4 @@
-subroutine zptcon(n,d,e,anorm,rcond,rwork,info) CNAME(zptcon)
+pure subroutine zptcon(n,d,e,anorm,rcond,rwork,info) CNAME(zptcon)
 import
 integer(blas77_int)::n
 real(blas77_f64)::d(*)

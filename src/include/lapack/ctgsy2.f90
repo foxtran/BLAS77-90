@@ -1,4 +1,4 @@
-subroutine ctgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) CNAME(ctgsy2)
+pure subroutine ctgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) CNAME(ctgsy2)
 import
 character(len=1)::trans
 integer(blas77_int)::ijob

@@ -1,4 +1,4 @@
-subroutine dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) CNAME(dgesdd)
+pure subroutine dgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) CNAME(dgesdd)
 import
 character(len=1)::jobz
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-function slantp(norm,uplo,diag,n,ap,work) CNAME(slantp)
+pure function slantp(norm,uplo,diag,n,ap,work) CNAME(slantp)
 import
 character(len=1)::norm
 character(len=1)::uplo

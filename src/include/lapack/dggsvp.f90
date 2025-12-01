@@ -1,4 +1,4 @@
-subroutine dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) CNAME(dggsvp)
+pure subroutine dggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) CNAME(dggsvp)
 import
 character(len=1)::jobu
 character(len=1)::jobv

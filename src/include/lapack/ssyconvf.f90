@@ -1,4 +1,4 @@
-subroutine ssyconvf(uplo,way,n,a,lda,e,ipiv,info) CNAME(ssyconvf)
+pure subroutine ssyconvf(uplo,way,n,a,lda,e,ipiv,info) CNAME(ssyconvf)
 import
 character(len=1)::uplo
 character(len=1)::way

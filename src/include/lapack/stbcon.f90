@@ -1,4 +1,4 @@
-subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) CNAME(stbcon)
+pure subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) CNAME(stbcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

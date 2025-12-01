@@ -1,4 +1,4 @@
-function zdotu(n,zx,incx,zy,incy) CNAME(zdotu)
+pure function zdotu(n,zx,incx,zy,incy) CNAME(zdotu)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

@@ -1,4 +1,4 @@
-subroutine zscal(n,za,zx,incx) CNAME(zscal)
+pure subroutine zscal(n,za,zx,incx) CNAME(zscal)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::za

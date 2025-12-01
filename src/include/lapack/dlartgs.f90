@@ -1,4 +1,4 @@
-subroutine dlartgs(x,y,sigma,cs,sn) CNAME(dlartgs)
+pure subroutine dlartgs(x,y,sigma,cs,sn) CNAME(dlartgs)
 import
 real(blas77_f64)::x
 real(blas77_f64)::y

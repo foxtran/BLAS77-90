@@ -1,4 +1,4 @@
-subroutine dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dspsvx)
+pure subroutine dspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dspsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

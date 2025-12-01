@@ -1,4 +1,4 @@
-subroutine slarnv(idist,iseed,n,x) CNAME(slarnv)
+pure subroutine slarnv(idist,iseed,n,x) CNAME(slarnv)
 import
 integer(blas77_int)::idist
 integer(blas77_int)::iseed(4)

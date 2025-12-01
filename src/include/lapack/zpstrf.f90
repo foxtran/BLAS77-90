@@ -1,4 +1,4 @@
-subroutine zpstrf(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(zpstrf)
+pure subroutine zpstrf(uplo,n,a,lda,piv,rank,tol,work,info) CNAME(zpstrf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

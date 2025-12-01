@@ -1,4 +1,4 @@
-function zlanhb(norm,uplo,n,k,ab,ldab,work) CNAME(zlanhb)
+pure function zlanhb(norm,uplo,n,k,ab,ldab,work) CNAME(zlanhb)
 import
 character(len=1)::norm
 character(len=1)::uplo

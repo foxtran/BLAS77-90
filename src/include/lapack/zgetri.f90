@@ -1,4 +1,4 @@
-subroutine zgetri(n,a,lda,ipiv,work,lwork,info) CNAME(zgetri)
+pure subroutine zgetri(n,a,lda,ipiv,work,lwork,info) CNAME(zgetri)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

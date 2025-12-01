@@ -1,4 +1,4 @@
-subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) CNAME(zlarfy)
+pure subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) CNAME(zlarfy)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

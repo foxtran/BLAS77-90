@@ -1,4 +1,4 @@
-subroutine cgetri(n,a,lda,ipiv,work,lwork,info) CNAME(cgetri)
+pure subroutine cgetri(n,a,lda,ipiv,work,lwork,info) CNAME(cgetri)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

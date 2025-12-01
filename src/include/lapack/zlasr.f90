@@ -1,4 +1,4 @@
-subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) CNAME(zlasr)
+pure subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) CNAME(zlasr)
 import
 character(len=1)::side
 character(len=1)::pivot

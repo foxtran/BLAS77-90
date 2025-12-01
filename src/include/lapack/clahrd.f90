@@ -1,4 +1,4 @@
-subroutine clahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(clahrd)
+pure subroutine clahrd(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(clahrd)
 import
 integer(blas77_int)::n
 integer(blas77_int)::k

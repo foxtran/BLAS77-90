@@ -1,4 +1,4 @@
-subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) CNAME(sgelsy)
+pure subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) CNAME(sgelsy)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

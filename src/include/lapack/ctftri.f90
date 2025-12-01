@@ -1,4 +1,4 @@
-subroutine ctftri(transr,uplo,diag,n,a,info) CNAME(ctftri)
+pure subroutine ctftri(transr,uplo,diag,n,a,info) CNAME(ctftri)
 import
 character(len=1)::transr
 character(len=1)::uplo

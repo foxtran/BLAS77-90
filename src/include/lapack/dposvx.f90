@@ -1,4 +1,4 @@
-subroutine dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dposvx)
+pure subroutine dposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dposvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) CNAME(iparam2stage)
+pure function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) CNAME(iparam2stage)
 import
 integer(blas77_int)::ispec
 character(len=*)::name

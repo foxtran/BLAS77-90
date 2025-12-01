@@ -1,4 +1,4 @@
-subroutine cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cporfs)
+pure subroutine cporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cporfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

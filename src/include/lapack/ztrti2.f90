@@ -1,4 +1,4 @@
-subroutine ztrti2(uplo,diag,n,a,lda,info) CNAME(ztrti2)
+pure subroutine ztrti2(uplo,diag,n,a,lda,info) CNAME(ztrti2)
 import
 character(len=1)::uplo
 character(len=1)::diag

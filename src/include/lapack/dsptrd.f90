@@ -1,4 +1,4 @@
-subroutine dsptrd(uplo,n,ap,d,e,tau,info) CNAME(dsptrd)
+pure subroutine dsptrd(uplo,n,ap,d,e,tau,info) CNAME(dsptrd)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(chesv)
+pure subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(chesv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

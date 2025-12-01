@@ -1,4 +1,4 @@
-subroutine dsbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) CNAME(dsbmv)
+pure subroutine dsbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) CNAME(dsbmv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

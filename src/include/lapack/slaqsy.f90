@@ -1,4 +1,4 @@
-subroutine slaqsy(uplo,n,a,lda,s,scond,amax,equed) CNAME(slaqsy)
+pure subroutine slaqsy(uplo,n,a,lda,s,scond,amax,equed) CNAME(slaqsy)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

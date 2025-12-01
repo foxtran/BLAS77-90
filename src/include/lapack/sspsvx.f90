@@ -1,4 +1,4 @@
-subroutine sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sspsvx)
+pure subroutine sspsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sspsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) CNAME(stgexc)
+pure subroutine stgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) CNAME(stgexc)
 import
 logical(blas77_int)::wantq
 logical(blas77_int)::wantz

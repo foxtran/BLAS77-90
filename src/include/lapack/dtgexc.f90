@@ -1,4 +1,4 @@
-subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) CNAME(dtgexc)
+pure subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) CNAME(dtgexc)
 import
 logical(blas77_int)::wantq
 logical(blas77_int)::wantz

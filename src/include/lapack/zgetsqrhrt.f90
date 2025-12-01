@@ -1,4 +1,4 @@
-subroutine zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) CNAME(zgetsqrhrt)
+pure subroutine zgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) CNAME(zgetsqrhrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

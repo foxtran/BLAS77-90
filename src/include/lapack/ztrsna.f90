@@ -1,4 +1,4 @@
-subroutine ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) CNAME(ztrsna)
+pure subroutine ztrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) CNAME(ztrsna)
 import
 character(len=1)::job
 character(len=1)::howmny

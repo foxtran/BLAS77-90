@@ -1,4 +1,4 @@
-recursive subroutine zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) CNAME(zlaqz0)
+pure subroutine zlaqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) CNAME(zlaqz0)
 import
 character(len=1),intent(in)::wants
 character(len=1),intent(in)::wantq

@@ -1,4 +1,4 @@
-subroutine zlacon(n,v,x,est,kase) CNAME(zlacon)
+pure subroutine zlacon(n,v,x,est,kase) CNAME(zlacon)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::v(n)

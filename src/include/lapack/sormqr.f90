@@ -1,4 +1,4 @@
-subroutine sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(sormqr)
+pure subroutine sormqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(sormqr)
 import
 character(len=1)::side
 character(len=1)::trans

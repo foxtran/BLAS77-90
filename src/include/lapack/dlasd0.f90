@@ -1,4 +1,4 @@
-subroutine dlasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) CNAME(dlasd0)
+pure subroutine dlasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) CNAME(dlasd0)
 import
 integer(blas77_int)::n
 integer(blas77_int)::sqre

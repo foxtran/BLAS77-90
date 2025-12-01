@@ -1,4 +1,4 @@
-subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsysv_aa)
+pure subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsysv_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

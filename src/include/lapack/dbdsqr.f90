@@ -1,4 +1,4 @@
-subroutine dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) CNAME(dbdsqr)
+pure subroutine dbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) CNAME(dbdsqr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

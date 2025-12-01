@@ -1,4 +1,4 @@
-subroutine ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) CNAME(ctrsen)
+pure subroutine ctrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) CNAME(ctrsen)
 import
 character(len=1)::job
 character(len=1)::compq

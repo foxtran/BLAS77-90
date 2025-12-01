@@ -1,4 +1,4 @@
-subroutine zptsv(n,nrhs,d,e,b,ldb,info) CNAME(zptsv)
+pure subroutine zptsv(n,nrhs,d,e,b,ldb,info) CNAME(zptsv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

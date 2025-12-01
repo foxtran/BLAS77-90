@@ -1,4 +1,4 @@
-subroutine zlarf1l(side,m,n,v,incv,tau,c,ldc,work) CNAME(zlarf1l)
+pure subroutine zlarf1l(side,m,n,v,incv,tau,c,ldc,work) CNAME(zlarf1l)
 import
 character(len=1)::side
 integer(blas77_int)::m

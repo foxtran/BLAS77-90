@@ -1,4 +1,4 @@
-subroutine zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) CNAME(zhpgvx)
+pure subroutine zhpgvx(itype,jobz,range,uplo,n,ap,bp,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) CNAME(zhpgvx)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

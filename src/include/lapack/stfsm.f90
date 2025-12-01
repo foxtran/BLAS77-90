@@ -1,4 +1,4 @@
-subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) CNAME(stfsm)
+pure subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) CNAME(stfsm)
 import
 character(len=1)::transr
 character(len=1)::side

@@ -1,4 +1,4 @@
-function clantr(norm,uplo,diag,m,n,a,lda,work) CNAME(clantr)
+pure function clantr(norm,uplo,diag,m,n,a,lda,work) CNAME(clantr)
 import
 character(len=1)::norm
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cporfsx)
+pure subroutine cporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(cporfsx)
 import
 character(len=1)::uplo
 character(len=1)::equed

@@ -1,4 +1,4 @@
-subroutine ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info) CNAME(ctrsyl3)
+pure subroutine ctrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,swork,ldswork,info) CNAME(ctrsyl3)
 import
 character(len=1)::trana
 character(len=1)::tranb

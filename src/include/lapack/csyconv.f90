@@ -1,4 +1,4 @@
-subroutine csyconv(uplo,way,n,a,lda,ipiv,e,info) CNAME(csyconv)
+pure subroutine csyconv(uplo,way,n,a,lda,ipiv,e,info) CNAME(csyconv)
 import
 character(len=1)::uplo
 character(len=1)::way

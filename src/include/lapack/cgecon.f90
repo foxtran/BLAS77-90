@@ -1,4 +1,4 @@
-subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) CNAME(cgecon)
+pure subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) CNAME(cgecon)
 import
 character(len=1)::norm
 integer(blas77_int)::n

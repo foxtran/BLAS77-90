@@ -1,4 +1,4 @@
-subroutine sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) CNAME(sgbcon)
+pure subroutine sgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,iwork,info) CNAME(sgbcon)
 import
 character(len=1)::norm
 integer(blas77_int)::n

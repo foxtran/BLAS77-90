@@ -1,4 +1,4 @@
-subroutine slasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) CNAME(slasdq)
+pure subroutine slasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) CNAME(slasdq)
 import
 character(len=1)::uplo
 integer(blas77_int)::sqre

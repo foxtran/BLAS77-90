@@ -1,4 +1,4 @@
-subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) CNAME(dlascl)
+pure subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) CNAME(dlascl)
 import
 character(len=1)::type
 integer(blas77_int)::kl

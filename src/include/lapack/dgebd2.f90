@@ -1,4 +1,4 @@
-subroutine dgebd2(m,n,a,lda,d,e,tauq,taup,work,info) CNAME(dgebd2)
+pure subroutine dgebd2(m,n,a,lda,d,e,tauq,taup,work,info) CNAME(dgebd2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

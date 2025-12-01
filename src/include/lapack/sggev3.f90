@@ -1,4 +1,4 @@
-subroutine sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) CNAME(sggev3)
+pure subroutine sggev3(jobvl,jobvr,n,a,lda,b,ldb,alphar,alphai,beta,vl,ldvl,vr,ldvr,work,lwork,info) CNAME(sggev3)
 import
 character(len=1)::jobvl
 character(len=1)::jobvr

@@ -1,4 +1,4 @@
-subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) CNAME(cunm22)
+pure subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) CNAME(cunm22)
 import
 character(len=1)::side
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine zhetf2_rook(uplo,n,a,lda,ipiv,info) CNAME(zhetf2_rook)
+pure subroutine zhetf2_rook(uplo,n,a,lda,ipiv,info) CNAME(zhetf2_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

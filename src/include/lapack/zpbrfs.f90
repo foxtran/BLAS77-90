@@ -1,4 +1,4 @@
-subroutine zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zpbrfs)
+pure subroutine zpbrfs(uplo,n,kd,nrhs,ab,ldab,afb,ldafb,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zpbrfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

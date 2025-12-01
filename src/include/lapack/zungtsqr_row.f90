@@ -1,4 +1,4 @@
-subroutine zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(zungtsqr_row)
+pure subroutine zungtsqr_row(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(zungtsqr_row)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

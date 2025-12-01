@@ -1,4 +1,4 @@
-function clange(norm,m,n,a,lda,work) CNAME(clange)
+pure function clange(norm,m,n,a,lda,work) CNAME(clange)
 import
 character(len=1)::norm
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-subroutine clacon(n,v,x,est,kase) CNAME(clacon)
+pure subroutine clacon(n,v,x,est,kase) CNAME(clacon)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::v(n)

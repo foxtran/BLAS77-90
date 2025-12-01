@@ -1,4 +1,4 @@
-subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(zlatsqr)
+pure subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(zlatsqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

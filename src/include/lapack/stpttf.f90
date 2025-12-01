@@ -1,4 +1,4 @@
-subroutine stpttf(transr,uplo,n,ap,arf,info) CNAME(stpttf)
+pure subroutine stpttf(transr,uplo,n,ap,arf,info) CNAME(stpttf)
 import
 character(len=1)::transr
 character(len=1)::uplo

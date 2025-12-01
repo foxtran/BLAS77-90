@@ -1,4 +1,4 @@
-subroutine zlartg(f,g,c,s,r) CNAME(zlartg)
+pure subroutine zlartg(f,g,c,s,r) CNAME(zlartg)
 import
 complex(blas77_f64)::f
 complex(blas77_f64)::g

@@ -1,4 +1,4 @@
-subroutine cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cgerfs)
+pure subroutine cgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cgerfs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

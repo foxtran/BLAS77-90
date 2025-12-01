@@ -1,4 +1,4 @@
-subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) CNAME(zgghd3)
+pure subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) CNAME(zgghd3)
 import
 character(len=1)::compq
 character(len=1)::compz

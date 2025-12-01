@@ -1,4 +1,4 @@
-subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) CNAME(dlarrk)
+pure subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) CNAME(dlarrk)
 import
 integer(blas77_int)::n
 integer(blas77_int)::iw

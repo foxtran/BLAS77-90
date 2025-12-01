@@ -1,4 +1,4 @@
-subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(cunghr)
+pure subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(cunghr)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ilo

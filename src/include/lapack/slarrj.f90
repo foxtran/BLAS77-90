@@ -1,4 +1,4 @@
-subroutine slarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdiam,info) CNAME(slarrj)
+pure subroutine slarrj(n,d,e2,ifirst,ilast,rtol,offset,w,werr,work,iwork,pivmin,spdiam,info) CNAME(slarrj)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

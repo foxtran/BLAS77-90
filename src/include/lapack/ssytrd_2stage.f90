@@ -1,4 +1,4 @@
-subroutine ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) CNAME(ssytrd_2stage)
+pure subroutine ssytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) CNAME(ssytrd_2stage)
 import
 character(len=1)::vect
 character(len=1)::uplo

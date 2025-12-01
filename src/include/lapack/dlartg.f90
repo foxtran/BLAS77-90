@@ -1,4 +1,4 @@
-subroutine dlartg(f,g,c,s,r) CNAME(dlartg)
+pure subroutine dlartg(f,g,c,s,r) CNAME(dlartg)
 import
 real(blas77_f64)::f
 real(blas77_f64)::g

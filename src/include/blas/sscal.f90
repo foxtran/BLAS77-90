@@ -1,4 +1,4 @@
-subroutine sscal(n,sa,sx,incx) CNAME(sscal)
+pure subroutine sscal(n,sa,sx,incx) CNAME(sscal)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sa

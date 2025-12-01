@@ -1,4 +1,4 @@
-subroutine dlaruv(iseed,n,x) CNAME(dlaruv)
+pure subroutine dlaruv(iseed,n,x) CNAME(dlaruv)
 import
 integer(blas77_int)::iseed(4)
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(slarz)
+pure subroutine slarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(slarz)
 import
 character(len=1)::side
 integer(blas77_int)::m

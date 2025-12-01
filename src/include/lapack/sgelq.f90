@@ -1,4 +1,4 @@
-subroutine sgelq(m,n,a,lda,t,tsize,work,lwork,info) CNAME(sgelq)
+pure subroutine sgelq(m,n,a,lda,t,tsize,work,lwork,info) CNAME(sgelq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

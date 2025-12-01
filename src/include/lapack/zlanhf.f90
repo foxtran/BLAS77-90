@@ -1,4 +1,4 @@
-function zlanhf(norm,transr,uplo,n,a,work) CNAME(zlanhf)
+pure function zlanhf(norm,transr,uplo,n,a,work) CNAME(zlanhf)
 import
 character(len=1)::norm
 character(len=1)::transr

@@ -1,4 +1,4 @@
-subroutine zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(zheev)
+pure subroutine zheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(zheev)
 import
 character(len=1)::jobz
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) CNAME(dlaed9)
+pure subroutine dlaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) CNAME(dlaed9)
 import
 integer(blas77_int)::k
 integer(blas77_int)::kstart

@@ -1,4 +1,4 @@
-subroutine chegs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(chegs2)
+pure subroutine chegs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(chegs2)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

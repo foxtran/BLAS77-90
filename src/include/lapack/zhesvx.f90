@@ -1,4 +1,4 @@
-subroutine zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) CNAME(zhesvx)
+pure subroutine zhesvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) CNAME(zhesvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

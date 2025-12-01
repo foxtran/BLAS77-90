@@ -1,4 +1,4 @@
-function cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) CNAME(cla_porcond_x)
+pure function cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) CNAME(cla_porcond_x)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

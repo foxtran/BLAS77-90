@@ -1,4 +1,4 @@
-subroutine cungtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(cungtr)
+pure subroutine cungtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(cungtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zgeqr(m,n,a,lda,t,tsize,work,lwork,info) CNAME(zgeqr)
+pure subroutine zgeqr(m,n,a,lda,t,tsize,work,lwork,info) CNAME(zgeqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

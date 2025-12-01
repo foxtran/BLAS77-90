@@ -1,4 +1,4 @@
-subroutine zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(zunm2l)
+pure subroutine zunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(zunm2l)
 import
 character(len=1)::side
 character(len=1)::trans

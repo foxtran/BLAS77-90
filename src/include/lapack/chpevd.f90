@@ -1,4 +1,4 @@
-subroutine chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(chpevd)
+pure subroutine chpevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(chpevd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

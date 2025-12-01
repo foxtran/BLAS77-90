@@ -1,4 +1,4 @@
-subroutine cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(cupmtr)
+pure subroutine cupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(cupmtr)
 import
 character(len=1)::side
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine zlarfgp(n,alpha,x,incx,tau) CNAME(zlarfgp)
+pure subroutine zlarfgp(n,alpha,x,incx,tau) CNAME(zlarfgp)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::alpha

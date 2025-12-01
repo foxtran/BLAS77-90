@@ -1,4 +1,4 @@
-subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) CNAME(clahef_rk)
+pure subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) CNAME(clahef_rk)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

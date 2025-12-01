@@ -1,4 +1,4 @@
-subroutine dsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(dsyrk)
+pure subroutine dsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(dsyrk)
 import
 character(len=1)::uplo
 character(len=1)::trans

@@ -1,4 +1,4 @@
-subroutine sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) CNAME(sgeqrs)
+pure subroutine sgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) CNAME(sgeqrs)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

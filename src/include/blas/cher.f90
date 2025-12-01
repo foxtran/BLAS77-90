@@ -1,4 +1,4 @@
-subroutine cher(uplo,n,alpha,x,incx,a,lda) CNAME(cher)
+pure subroutine cher(uplo,n,alpha,x,incx,a,lda) CNAME(cher)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

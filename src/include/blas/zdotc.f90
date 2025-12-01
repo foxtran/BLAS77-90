@@ -1,4 +1,4 @@
-function zdotc(n,zx,incx,zy,incy) CNAME(zdotc)
+pure function zdotc(n,zx,incx,zy,incy) CNAME(zdotc)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

@@ -1,4 +1,4 @@
-subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(dgetrs)
+pure subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(dgetrs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

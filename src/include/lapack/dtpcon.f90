@@ -1,4 +1,4 @@
-subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) CNAME(dtpcon)
+pure subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) CNAME(dtpcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

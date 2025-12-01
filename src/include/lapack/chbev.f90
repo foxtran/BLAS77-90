@@ -1,4 +1,4 @@
-subroutine chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) CNAME(chbev)
+pure subroutine chbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,rwork,info) CNAME(chbev)
 import
 character(len=1)::jobz
 character(len=1)::uplo

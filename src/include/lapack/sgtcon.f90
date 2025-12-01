@@ -1,4 +1,4 @@
-subroutine sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) CNAME(sgtcon)
+pure subroutine sgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) CNAME(sgtcon)
 import
 character(len=1)::norm
 integer(blas77_int)::n

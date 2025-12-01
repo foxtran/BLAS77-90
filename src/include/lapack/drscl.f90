@@ -1,4 +1,4 @@
-subroutine drscl(n,sa,sx,incx) CNAME(drscl)
+pure subroutine drscl(n,sa,sx,incx) CNAME(drscl)
 import
 integer(blas77_int)::n
 real(blas77_f64)::sa

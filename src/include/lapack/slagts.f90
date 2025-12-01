@@ -1,4 +1,4 @@
-subroutine slagts(job,n,a,b,c,d,in,y,tol,info) CNAME(slagts)
+pure subroutine slagts(job,n,a,b,c,d,in,y,tol,info) CNAME(slagts)
 import
 integer(blas77_int)::job
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignum,info) CNAME(slaein)
+pure subroutine slaein(rightv,noinit,n,h,ldh,wr,wi,vr,vi,b,ldb,work,eps3,smlnum,bignum,info) CNAME(slaein)
 import
 logical(blas77_int)::rightv
 logical(blas77_int)::noinit

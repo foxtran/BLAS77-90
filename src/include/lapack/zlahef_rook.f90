@@ -1,4 +1,4 @@
-subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(zlahef_rook)
+pure subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(zlahef_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,sigma,dplus,lplus,work,info) CNAME(slarrf)
+pure subroutine slarrf(n,d,l,ld,clstrt,clend,w,wgap,werr,spdiam,clgapl,clgapr,pivmin,sigma,dplus,lplus,work,info) CNAME(slarrf)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

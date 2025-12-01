@@ -1,4 +1,4 @@
-function zlantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(zlantb)
+pure function zlantb(norm,uplo,diag,n,k,ab,ldab,work) CNAME(zlantb)
 import
 character(len=1)::norm
 character(len=1)::uplo

@@ -1,4 +1,4 @@
-subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(stplqt)
+pure subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(stplqt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

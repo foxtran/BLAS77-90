@@ -1,4 +1,4 @@
-subroutine sgebd2(m,n,a,lda,d,e,tauq,taup,work,info) CNAME(sgebd2)
+pure subroutine sgebd2(m,n,a,lda,d,e,tauq,taup,work,info) CNAME(sgebd2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

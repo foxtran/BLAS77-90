@@ -1,4 +1,4 @@
-function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) CNAME(cla_gbrpvgrw)
+pure function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) CNAME(cla_gbrpvgrw)
 import
 integer(blas77_int)::n
 integer(blas77_int)::kl

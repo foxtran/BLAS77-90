@@ -1,4 +1,4 @@
-subroutine ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) CNAME(ssbev_2stage)
+pure subroutine ssbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) CNAME(ssbev_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

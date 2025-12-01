@@ -1,4 +1,4 @@
-subroutine dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info) CNAME(dgedmd)
+pure subroutine dgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info) CNAME(dgedmd)
 import
 character(len=1),intent(in)::jobs
 character(len=1),intent(in)::jobz

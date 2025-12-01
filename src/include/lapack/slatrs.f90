@@ -1,4 +1,4 @@
-subroutine slatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) CNAME(slatrs)
+pure subroutine slatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) CNAME(slatrs)
 import
 character(len=1)::uplo
 character(len=1)::trans

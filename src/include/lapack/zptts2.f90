@@ -1,4 +1,4 @@
-subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) CNAME(zptts2)
+pure subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) CNAME(zptts2)
 import
 integer(blas77_int)::iuplo
 integer(blas77_int)::n

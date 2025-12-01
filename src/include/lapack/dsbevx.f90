@@ -1,4 +1,4 @@
-subroutine dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(dsbevx)
+pure subroutine dsbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(dsbevx)
 import
 character(len=1)::jobz
 character(len=1)::range

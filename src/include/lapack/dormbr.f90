@@ -1,4 +1,4 @@
-subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormbr)
+pure subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormbr)
 import
 character(len=1)::vect
 character(len=1)::side

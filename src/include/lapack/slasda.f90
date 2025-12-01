@@ -1,4 +1,4 @@
-subroutine slasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) CNAME(slasda)
+pure subroutine slasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) CNAME(slasda)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::smlsiz

@@ -1,4 +1,4 @@
-subroutine dgtsv(n,nrhs,dl,d,du,b,ldb,info) CNAME(dgtsv)
+pure subroutine dgtsv(n,nrhs,dl,d,du,b,ldb,info) CNAME(dgtsv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

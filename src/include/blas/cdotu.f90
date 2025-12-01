@@ -1,4 +1,4 @@
-function cdotu(n,cx,incx,cy,incy) CNAME(cdotu)
+pure function cdotu(n,cx,incx,cy,incy) CNAME(cdotu)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::cx(*)

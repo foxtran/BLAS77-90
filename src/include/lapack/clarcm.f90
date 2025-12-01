@@ -1,4 +1,4 @@
-subroutine clarcm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(clarcm)
+pure subroutine clarcm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(clarcm)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

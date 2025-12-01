@@ -1,4 +1,4 @@
-subroutine sgeqr(m,n,a,lda,t,tsize,work,lwork,info) CNAME(sgeqr)
+pure subroutine sgeqr(m,n,a,lda,t,tsize,work,lwork,info) CNAME(sgeqr)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

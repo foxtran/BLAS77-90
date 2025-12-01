@@ -1,4 +1,4 @@
-subroutine cptts2(iuplo,n,nrhs,d,e,b,ldb) CNAME(cptts2)
+pure subroutine cptts2(iuplo,n,nrhs,d,e,b,ldb) CNAME(cptts2)
 import
 integer(blas77_int)::iuplo
 integer(blas77_int)::n

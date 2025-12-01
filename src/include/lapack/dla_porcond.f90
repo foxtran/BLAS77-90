@@ -1,4 +1,4 @@
-function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) CNAME(dla_porcond)
+pure function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) CNAME(dla_porcond)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

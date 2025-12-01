@@ -1,4 +1,4 @@
-subroutine cgetc2(n,a,lda,ipiv,jpiv,info) CNAME(cgetc2)
+pure subroutine cgetc2(n,a,lda,ipiv,jpiv,info) CNAME(cgetc2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

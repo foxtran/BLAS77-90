@@ -1,4 +1,4 @@
-subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) CNAME(dgelss)
+pure subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) CNAME(dgelss)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

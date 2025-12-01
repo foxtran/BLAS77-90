@@ -1,4 +1,4 @@
-subroutine cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) CNAME(cla_gbrfsx_extended)
+pure subroutine cla_gbrfsx_extended(prec_type,trans_type,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) CNAME(cla_gbrfsx_extended)
 import
 integer(blas77_int)::prec_type
 integer(blas77_int)::trans_type

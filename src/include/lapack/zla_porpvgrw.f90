@@ -1,4 +1,4 @@
-function zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) CNAME(zla_porpvgrw)
+pure function zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) CNAME(zla_porpvgrw)
 import
 character(len=1)::uplo
 integer(blas77_int)::ncols

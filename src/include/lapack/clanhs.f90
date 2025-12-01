@@ -1,4 +1,4 @@
-function clanhs(norm,n,a,lda,work) CNAME(clanhs)
+pure function clanhs(norm,n,a,lda,work) CNAME(clanhs)
 import
 character(len=1)::norm
 integer(blas77_int)::n

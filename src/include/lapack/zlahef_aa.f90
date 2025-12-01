@@ -1,4 +1,4 @@
-subroutine zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(zlahef_aa)
+pure subroutine zlahef_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(zlahef_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::j1

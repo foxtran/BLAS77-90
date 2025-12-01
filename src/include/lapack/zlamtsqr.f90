@@ -1,4 +1,4 @@
-subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(zlamtsqr)
+pure subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(zlamtsqr)
 import
 character(len=1)::side
 character(len=1)::trans

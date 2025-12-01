@@ -1,4 +1,4 @@
-subroutine dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) CNAME(dtbcon)
+pure subroutine dtbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) CNAME(dtbcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

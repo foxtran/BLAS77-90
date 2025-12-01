@@ -1,4 +1,4 @@
-subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) CNAME(cbdsqr)
+pure subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) CNAME(cbdsqr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slatrd(uplo,n,nb,a,lda,e,tau,w,ldw) CNAME(slatrd)
+pure subroutine slatrd(uplo,n,nb,a,lda,e,tau,w,ldw) CNAME(slatrd)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dppequ(uplo,n,ap,s,scond,amax,info) CNAME(dppequ)
+pure subroutine dppequ(uplo,n,ap,s,scond,amax,info) CNAME(dppequ)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

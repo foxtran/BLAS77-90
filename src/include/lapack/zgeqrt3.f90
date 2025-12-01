@@ -1,4 +1,4 @@
-recursive subroutine zgeqrt3(m,n,a,lda,t,ldt,info) CNAME(zgeqrt3)
+pure subroutine zgeqrt3(m,n,a,lda,t,ldt,info) CNAME(zgeqrt3)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

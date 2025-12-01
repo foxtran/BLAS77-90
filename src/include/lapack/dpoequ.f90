@@ -1,4 +1,4 @@
-subroutine dpoequ(n,a,lda,s,scond,amax,info) CNAME(dpoequ)
+pure subroutine dpoequ(n,a,lda,s,scond,amax,info) CNAME(dpoequ)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

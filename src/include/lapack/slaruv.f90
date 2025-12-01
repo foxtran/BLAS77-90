@@ -1,4 +1,4 @@
-subroutine slaruv(iseed,n,x) CNAME(slaruv)
+pure subroutine slaruv(iseed,n,x) CNAME(slaruv)
 import
 integer(blas77_int)::iseed(4)
 integer(blas77_int)::n

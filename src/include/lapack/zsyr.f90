@@ -1,4 +1,4 @@
-subroutine zsyr(uplo,n,alpha,x,incx,a,lda) CNAME(zsyr)
+pure subroutine zsyr(uplo,n,alpha,x,incx,a,lda) CNAME(zsyr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sgbrfs)
+pure subroutine sgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sgbrfs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

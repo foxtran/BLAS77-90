@@ -1,4 +1,4 @@
-subroutine clarscl2(m,n,d,x,ldx) CNAME(clarscl2)
+pure subroutine clarscl2(m,n,d,x,ldx) CNAME(clarscl2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

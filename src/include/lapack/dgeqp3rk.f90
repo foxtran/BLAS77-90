@@ -1,4 +1,4 @@
-subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) CNAME(dgeqp3rk)
+pure subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) CNAME(dgeqp3rk)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

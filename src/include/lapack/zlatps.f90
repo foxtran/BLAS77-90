@@ -1,4 +1,4 @@
-subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) CNAME(zlatps)
+pure subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) CNAME(zlatps)
 import
 character(len=1)::uplo
 character(len=1)::trans

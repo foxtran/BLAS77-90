@@ -1,4 +1,4 @@
-subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) CNAME(csyconvf_rook)
+pure subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) CNAME(csyconvf_rook)
 import
 character(len=1)::uplo
 character(len=1)::way

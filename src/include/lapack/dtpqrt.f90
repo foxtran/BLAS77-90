@@ -1,4 +1,4 @@
-subroutine dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(dtpqrt)
+pure subroutine dtpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(dtpqrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

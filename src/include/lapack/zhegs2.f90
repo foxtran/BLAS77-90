@@ -1,4 +1,4 @@
-subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(zhegs2)
+pure subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(zhegs2)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

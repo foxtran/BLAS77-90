@@ -1,4 +1,4 @@
-function dlangt(norm,n,dl,d,du) CNAME(dlangt)
+pure function dlangt(norm,n,dl,d,du) CNAME(dlangt)
 import
 character(len=1)::norm
 integer(blas77_int)::n

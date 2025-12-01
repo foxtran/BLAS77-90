@@ -1,4 +1,4 @@
-subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) CNAME(zcposv)
+pure subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) CNAME(zcposv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

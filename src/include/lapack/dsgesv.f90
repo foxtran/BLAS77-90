@@ -1,4 +1,4 @@
-subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info) CNAME(dsgesv)
+pure subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info) CNAME(dsgesv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

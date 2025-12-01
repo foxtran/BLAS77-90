@@ -1,4 +1,4 @@
-subroutine cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmrz)
+pure subroutine cunmrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmrz)
 import
 character(len=1)::side
 character(len=1)::trans

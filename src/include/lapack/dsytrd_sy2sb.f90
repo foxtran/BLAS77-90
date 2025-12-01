@@ -1,4 +1,4 @@
-subroutine dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(dsytrd_sy2sb)
+pure subroutine dsytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(dsytrd_sy2sb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

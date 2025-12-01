@@ -1,4 +1,4 @@
-subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(dlarzt)
+pure subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(dlarzt)
 import
 character(len=1)::direct
 character(len=1)::storev

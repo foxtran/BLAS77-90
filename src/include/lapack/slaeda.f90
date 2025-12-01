@@ -1,4 +1,4 @@
-subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) CNAME(slaeda)
+pure subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) CNAME(slaeda)
 import
 integer(blas77_int)::n
 integer(blas77_int)::tlvls

@@ -1,4 +1,4 @@
-subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) CNAME(dlarrc)
+pure subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) CNAME(dlarrc)
 import
 character(len=1)::jobt
 integer(blas77_int)::n

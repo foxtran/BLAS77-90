@@ -1,4 +1,4 @@
-subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) CNAME(slaqp2)
+pure subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) CNAME(slaqp2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

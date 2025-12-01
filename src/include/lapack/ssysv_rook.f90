@@ -1,4 +1,4 @@
-subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(ssysv_rook)
+pure subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(ssysv_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

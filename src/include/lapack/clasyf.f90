@@ -1,4 +1,4 @@
-subroutine clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(clasyf)
+pure subroutine clasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(clasyf)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

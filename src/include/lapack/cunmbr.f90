@@ -1,4 +1,4 @@
-subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmbr)
+pure subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmbr)
 import
 character(len=1)::vect
 character(len=1)::side

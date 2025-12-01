@@ -1,4 +1,4 @@
-subroutine clacpy(uplo,m,n,a,lda,b,ldb) CNAME(clacpy)
+pure subroutine clacpy(uplo,m,n,a,lda,b,ldb) CNAME(clacpy)
 import
 character(len=1)::uplo
 integer(blas77_int)::m

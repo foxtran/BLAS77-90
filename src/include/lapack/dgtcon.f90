@@ -1,4 +1,4 @@
-subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) CNAME(dgtcon)
+pure subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) CNAME(dgtcon)
 import
 character(len=1)::norm
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-recursive subroutine dgetrf2(m,n,a,lda,ipiv,info) CNAME(dgetrf2)
+pure subroutine dgetrf2(m,n,a,lda,ipiv,info) CNAME(dgetrf2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine dlag2s(m,n,a,lda,sa,ldsa,info) CNAME(dlag2s)
+pure subroutine dlag2s(m,n,a,lda,sa,ldsa,info) CNAME(dlag2s)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

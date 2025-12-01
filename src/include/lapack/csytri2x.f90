@@ -1,4 +1,4 @@
-subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) CNAME(csytri2x)
+pure subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) CNAME(csytri2x)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) CNAME(zsysvx)
+pure subroutine zsysvx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,lwork,rwork,info) CNAME(zsysvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

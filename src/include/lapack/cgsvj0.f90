@@ -1,4 +1,4 @@
-subroutine cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) CNAME(cgsvj0)
+pure subroutine cgsvj0(jobv,m,n,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) CNAME(cgsvj0)
 import
 character(len=1)::jobv
 integer(blas77_int)::m

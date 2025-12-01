@@ -1,4 +1,4 @@
-subroutine chpr(uplo,n,alpha,x,incx,ap) CNAME(chpr)
+pure subroutine chpr(uplo,n,alpha,x,incx,ap) CNAME(chpr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

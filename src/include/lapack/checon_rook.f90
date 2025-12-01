@@ -1,4 +1,4 @@
-subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon_rook)
+pure subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

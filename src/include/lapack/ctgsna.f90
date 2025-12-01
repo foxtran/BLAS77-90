@@ -1,4 +1,4 @@
-subroutine ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) CNAME(ctgsna)
+pure subroutine ctgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) CNAME(ctgsna)
 import
 character(len=1)::job
 character(len=1)::howmny

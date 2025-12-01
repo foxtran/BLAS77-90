@@ -1,4 +1,4 @@
-subroutine slasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) CNAME(slasd2)
+pure subroutine slasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) CNAME(slasd2)
 import
 integer(blas77_int)::nl
 integer(blas77_int)::nr

@@ -1,4 +1,4 @@
-function slangb(norm,n,kl,ku,ab,ldab,work) CNAME(slangb)
+pure function slangb(norm,n,kl,ku,ab,ldab,work) CNAME(slangb)
 import
 character(len=1)::norm
 integer(blas77_int)::n

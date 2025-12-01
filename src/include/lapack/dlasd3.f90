@@ -1,4 +1,4 @@
-subroutine dlasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) CNAME(dlasd3)
+pure subroutine dlasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) CNAME(dlasd3)
 import
 integer(blas77_int)::nl
 integer(blas77_int)::nr

@@ -1,4 +1,4 @@
-subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) CNAME(ssysv_rk)
+pure subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) CNAME(ssysv_rk)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

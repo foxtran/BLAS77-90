@@ -1,4 +1,4 @@
-subroutine dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(dtrmm)
+pure subroutine dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(dtrmm)
 import
 character(len=1)::side
 character(len=1)::uplo

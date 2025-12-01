@@ -1,4 +1,4 @@
-subroutine cptcon(n,d,e,anorm,rcond,rwork,info) CNAME(cptcon)
+pure subroutine cptcon(n,d,e,anorm,rcond,rwork,info) CNAME(cptcon)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

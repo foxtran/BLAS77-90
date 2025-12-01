@@ -1,4 +1,4 @@
-subroutine slarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(slarfb_gett)
+pure subroutine slarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(slarfb_gett)
 import
 character(len=1)::ident
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-subroutine ssterf(n,d,e,info) CNAME(ssterf)
+pure subroutine ssterf(n,d,e,info) CNAME(ssterf)
 import
 integer(blas77_int)::n
 real(blas77_f32)::d(*)

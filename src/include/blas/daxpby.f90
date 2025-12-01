@@ -1,4 +1,4 @@
-subroutine daxpby(n,da,dx,incx,db,dy,incy) CNAME(daxpby)
+pure subroutine daxpby(n,da,dx,incx,db,dy,incy) CNAME(daxpby)
 import
 integer(blas77_int)::n
 real(blas77_f64)::da

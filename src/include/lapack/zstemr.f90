@@ -1,4 +1,4 @@
-subroutine zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) CNAME(zstemr)
+pure subroutine zstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) CNAME(zstemr)
 import
 character(len=1)::jobz
 character(len=1)::range

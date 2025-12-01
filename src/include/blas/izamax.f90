@@ -1,4 +1,4 @@
-function izamax(n,zx,incx) CNAME(izamax)
+pure function izamax(n,zx,incx) CNAME(izamax)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::zx(*)

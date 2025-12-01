@@ -1,4 +1,4 @@
-subroutine zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zherfs)
+pure subroutine zherfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zherfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

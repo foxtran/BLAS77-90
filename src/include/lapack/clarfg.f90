@@ -1,4 +1,4 @@
-subroutine clarfg(n,alpha,x,incx,tau) CNAME(clarfg)
+pure subroutine clarfg(n,alpha,x,incx,tau) CNAME(clarfg)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::alpha

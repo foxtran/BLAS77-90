@@ -1,4 +1,4 @@
-subroutine chetri(uplo,n,a,lda,ipiv,work,info) CNAME(chetri)
+pure subroutine chetri(uplo,n,a,lda,ipiv,work,info) CNAME(chetri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

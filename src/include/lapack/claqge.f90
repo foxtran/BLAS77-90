@@ -1,4 +1,4 @@
-subroutine claqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(claqge)
+pure subroutine claqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(claqge)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

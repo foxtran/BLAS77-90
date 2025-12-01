@@ -1,4 +1,4 @@
-recursive subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(clarft)
+pure subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(clarft)
 import
 character(len=1)::direct
 character(len=1)::storev

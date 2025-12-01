@@ -1,4 +1,4 @@
-subroutine drotm(n,dx,incx,dy,incy,dparam) CNAME(drotm)
+pure subroutine drotm(n,dx,incx,dy,incy,dparam) CNAME(drotm)
 import
 integer(blas77_int)::n
 real(blas77_f64)::dx(*)

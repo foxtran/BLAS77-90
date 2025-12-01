@@ -1,4 +1,4 @@
-subroutine dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) CNAME(dtrtrs)
+pure subroutine dtrtrs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,info) CNAME(dtrtrs)
 import
 character(len=1)::uplo
 character(len=1)::trans

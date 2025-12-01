@@ -1,4 +1,4 @@
-subroutine dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(dskewsymm)
+pure subroutine dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(dskewsymm)
 import
 character(len=1)::side
 character(len=1)::uplo

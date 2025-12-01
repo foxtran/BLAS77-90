@@ -1,4 +1,4 @@
-subroutine dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) CNAME(dtrcon)
+pure subroutine dtrcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) CNAME(dtrcon)
 import
 character(len=1)::norm
 character(len=1)::uplo

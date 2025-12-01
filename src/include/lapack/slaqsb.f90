@@ -1,4 +1,4 @@
-subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) CNAME(slaqsb)
+pure subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) CNAME(slaqsb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

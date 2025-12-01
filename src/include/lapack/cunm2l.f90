@@ -1,4 +1,4 @@
-subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(cunm2l)
+pure subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(cunm2l)
 import
 character(len=1)::side
 character(len=1)::trans

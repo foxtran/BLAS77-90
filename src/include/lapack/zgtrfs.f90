@@ -1,4 +1,4 @@
-subroutine zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zgtrfs)
+pure subroutine zgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(zgtrfs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

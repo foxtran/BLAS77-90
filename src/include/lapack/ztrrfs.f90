@@ -1,4 +1,4 @@
-subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(ztrrfs)
+pure subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(ztrrfs)
 import
 character(len=1)::uplo
 character(len=1)::trans

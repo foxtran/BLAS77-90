@@ -1,4 +1,4 @@
-subroutine zlauum(uplo,n,a,lda,info) CNAME(zlauum)
+pure subroutine zlauum(uplo,n,a,lda,info) CNAME(zlauum)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

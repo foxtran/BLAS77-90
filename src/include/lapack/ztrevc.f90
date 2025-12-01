@@ -1,4 +1,4 @@
-subroutine ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ztrevc)
+pure subroutine ztrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ztrevc)
 import
 character(len=1)::side
 character(len=1)::howmny

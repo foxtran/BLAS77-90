@@ -1,4 +1,4 @@
-subroutine dcopy(n,dx,incx,dy,incy) CNAME(dcopy)
+pure subroutine dcopy(n,dx,incx,dy,incy) CNAME(dcopy)
 import
 integer(blas77_int)::n
 real(blas77_f64)::dx(*)

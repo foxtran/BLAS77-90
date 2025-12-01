@@ -1,4 +1,4 @@
-recursive subroutine dlarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(dlarft)
+pure subroutine dlarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(dlarft)
 import
 character(len=1)::direct
 character(len=1)::storev

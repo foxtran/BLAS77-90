@@ -1,4 +1,4 @@
-function dlaneg(n,d,lld,sigma,pivmin,r) CNAME(dlaneg)
+pure function dlaneg(n,d,lld,sigma,pivmin,r) CNAME(dlaneg)
 import
 integer(blas77_int)::n
 real(blas77_f64)::d(*)

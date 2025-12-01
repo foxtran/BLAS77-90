@@ -1,4 +1,4 @@
-subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) CNAME(dlasv2)
+pure subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) CNAME(dlasv2)
 import
 real(blas77_f64)::f
 real(blas77_f64)::g

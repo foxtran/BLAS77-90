@@ -1,4 +1,4 @@
-subroutine dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) CNAME(dlaeda)
+pure subroutine dlaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) CNAME(dlaeda)
 import
 integer(blas77_int)::n
 integer(blas77_int)::tlvls

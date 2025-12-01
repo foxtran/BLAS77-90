@@ -1,4 +1,4 @@
-function ilazlc(m,n,a,lda) CNAME(ilazlc)
+pure function ilazlc(m,n,a,lda) CNAME(ilazlc)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

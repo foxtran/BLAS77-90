@@ -1,4 +1,4 @@
-subroutine slartv(n,x,incx,y,incy,c,s,incc) CNAME(slartv)
+pure subroutine slartv(n,x,incx,y,incy,c,s,incc) CNAME(slartv)
 import
 integer(blas77_int)::n
 real(blas77_f32)::x(*)

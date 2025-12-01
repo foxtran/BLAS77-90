@@ -1,4 +1,4 @@
-subroutine clargv(n,x,incx,y,incy,c,incc) CNAME(clargv)
+pure subroutine clargv(n,x,incx,y,incy,c,incc) CNAME(clargv)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

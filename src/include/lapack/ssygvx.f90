@@ -1,4 +1,4 @@
-subroutine ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(ssygvx)
+pure subroutine ssygvx(itype,jobz,range,uplo,n,a,lda,b,ldb,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(ssygvx)
 import
 integer(blas77_int)::itype
 character(len=1)::jobz

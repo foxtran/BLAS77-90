@@ -1,4 +1,4 @@
-subroutine zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(zhetrs_rook)
+pure subroutine zhetrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(zhetrs_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(sgels)
+pure subroutine sgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(sgels)
 import
 character(len=1)::trans
 integer(blas77_int)::m

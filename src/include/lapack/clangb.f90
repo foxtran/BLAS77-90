@@ -1,4 +1,4 @@
-function clangb(norm,n,kl,ku,ab,ldab,work) CNAME(clangb)
+pure function clangb(norm,n,kl,ku,ab,ldab,work) CNAME(clangb)
 import
 character(len=1)::norm
 integer(blas77_int)::n

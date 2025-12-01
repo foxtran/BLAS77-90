@@ -1,4 +1,4 @@
-subroutine slae2(a,b,c,rt1,rt2) CNAME(slae2)
+pure subroutine slae2(a,b,c,rt1,rt2) CNAME(slae2)
 import
 real(blas77_f32)::a
 real(blas77_f32)::b

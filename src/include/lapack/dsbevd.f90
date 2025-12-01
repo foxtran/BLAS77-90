@@ -1,4 +1,4 @@
-subroutine dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dsbevd)
+pure subroutine dsbevd(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dsbevd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

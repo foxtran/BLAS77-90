@@ -1,4 +1,4 @@
-subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) CNAME(dlasq6)
+pure subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) CNAME(dlasq6)
 import
 integer(blas77_int)::i0
 integer(blas77_int)::n0

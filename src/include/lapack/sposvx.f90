@@ -1,4 +1,4 @@
-subroutine sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sposvx)
+pure subroutine sposvx(fact,uplo,n,nrhs,a,lda,af,ldaf,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sposvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

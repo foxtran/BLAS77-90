@@ -1,4 +1,4 @@
-subroutine sptsv(n,nrhs,d,e,b,ldb,info) CNAME(sptsv)
+pure subroutine sptsv(n,nrhs,d,e,b,ldb,info) CNAME(sptsv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

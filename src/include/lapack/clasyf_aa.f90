@@ -1,4 +1,4 @@
-subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(clasyf_aa)
+pure subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(clasyf_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::j1

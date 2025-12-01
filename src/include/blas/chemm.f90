@@ -1,4 +1,4 @@
-subroutine chemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(chemm)
+pure subroutine chemm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(chemm)
 import
 character(len=1)::side
 character(len=1)::uplo

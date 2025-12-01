@@ -1,4 +1,4 @@
-subroutine ctbmv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(ctbmv)
+pure subroutine ctbmv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(ctbmv)
 import
 character(len=1)::uplo
 character(len=1)::trans

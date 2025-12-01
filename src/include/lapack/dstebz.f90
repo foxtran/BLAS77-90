@@ -1,4 +1,4 @@
-subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) CNAME(dstebz)
+pure subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) CNAME(dstebz)
 import
 character(len=1)::range
 character(len=1)::order

@@ -1,4 +1,4 @@
-subroutine zaxpby(n,za,zx,incx,zb,zy,incy) CNAME(zaxpby)
+pure subroutine zaxpby(n,za,zx,incx,zb,zy,incy) CNAME(zaxpby)
 import
 integer(blas77_int)::n
 complex(blas77_f64)::za

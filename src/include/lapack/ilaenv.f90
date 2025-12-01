@@ -1,4 +1,4 @@
-function ilaenv(ispec,name,opts,n1,n2,n3,n4) CNAME(ilaenv)
+pure function ilaenv(ispec,name,opts,n1,n2,n3,n4) CNAME(ilaenv)
 import
 integer(blas77_int)::ispec
 character(len=*)::name

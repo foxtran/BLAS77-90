@@ -1,4 +1,4 @@
-subroutine chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(chpmv)
+pure subroutine chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(chpmv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

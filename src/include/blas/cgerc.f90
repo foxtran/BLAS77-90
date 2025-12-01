@@ -1,4 +1,4 @@
-subroutine cgerc(m,n,alpha,x,incx,y,incy,a,lda) CNAME(cgerc)
+pure subroutine cgerc(m,n,alpha,x,incx,y,incy,a,lda) CNAME(cgerc)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

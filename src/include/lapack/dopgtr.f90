@@ -1,4 +1,4 @@
-subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(dopgtr)
+pure subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(dopgtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

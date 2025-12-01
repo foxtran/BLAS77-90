@@ -1,4 +1,4 @@
-recursive subroutine spotrf2(uplo,n,a,lda,info) CNAME(spotrf2)
+pure subroutine spotrf2(uplo,n,a,lda,info) CNAME(spotrf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

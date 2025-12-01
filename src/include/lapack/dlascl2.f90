@@ -1,4 +1,4 @@
-subroutine dlascl2(m,n,d,x,ldx) CNAME(dlascl2)
+pure subroutine dlascl2(m,n,d,x,ldx) CNAME(dlascl2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

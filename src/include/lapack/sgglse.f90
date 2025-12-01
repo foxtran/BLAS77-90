@@ -1,4 +1,4 @@
-subroutine sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) CNAME(sgglse)
+pure subroutine sgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) CNAME(sgglse)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

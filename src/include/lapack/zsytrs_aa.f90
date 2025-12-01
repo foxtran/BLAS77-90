@@ -1,4 +1,4 @@
-subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsytrs_aa)
+pure subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsytrs_aa)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

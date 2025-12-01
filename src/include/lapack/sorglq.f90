@@ -1,4 +1,4 @@
-subroutine sorglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(sorglq)
+pure subroutine sorglq(m,n,k,a,lda,tau,work,lwork,info) CNAME(sorglq)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

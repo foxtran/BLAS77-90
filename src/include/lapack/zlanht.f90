@@ -1,4 +1,4 @@
-function zlanht(norm,n,d,e) CNAME(zlanht)
+pure function zlanht(norm,n,d,e) CNAME(zlanht)
 import
 character(len=1)::norm
 integer(blas77_int)::n

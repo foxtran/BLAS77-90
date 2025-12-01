@@ -1,4 +1,4 @@
-subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(ssymm)
+pure subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(ssymm)
 import
 character(len=1)::side
 character(len=1)::uplo

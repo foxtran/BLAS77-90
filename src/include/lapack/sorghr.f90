@@ -1,4 +1,4 @@
-subroutine sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(sorghr)
+pure subroutine sorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(sorghr)
 import
 integer(blas77_int)::n
 integer(blas77_int)::ilo

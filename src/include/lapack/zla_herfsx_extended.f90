@@ -1,4 +1,4 @@
-subroutine zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) CNAME(zla_herfsx_extended)
+pure subroutine zla_herfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) CNAME(zla_herfsx_extended)
 import
 integer(blas77_int)::prec_type
 character(len=1)::uplo

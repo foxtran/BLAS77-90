@@ -1,4 +1,4 @@
-subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(chbtrd)
+pure subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(chbtrd)
 import
 character(len=1)::vect
 character(len=1)::uplo

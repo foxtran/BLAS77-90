@@ -1,4 +1,4 @@
-subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) CNAME(dlarrb)
+pure subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) CNAME(dlarrb)
 import
 integer(blas77_int)::n
 real(blas77_f64)::d(*)

@@ -1,4 +1,4 @@
-subroutine cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info) CNAME(cgeev)
+pure subroutine cgeev(jobvl,jobvr,n,a,lda,w,vl,ldvl,vr,ldvr,work,lwork,rwork,info) CNAME(cgeev)
 import
 character(len=1)::jobvl
 character(len=1)::jobvr

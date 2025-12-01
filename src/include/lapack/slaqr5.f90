@@ -1,4 +1,4 @@
-subroutine slaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) CNAME(slaqr5)
+pure subroutine slaqr5(wantt,wantz,kacc22,n,ktop,kbot,nshfts,sr,si,h,ldh,iloz,ihiz,z,ldz,v,ldv,u,ldu,nv,wv,ldwv,nh,wh,ldwh) CNAME(slaqr5)
 import
 logical(blas77_int)::wantt
 logical(blas77_int)::wantz

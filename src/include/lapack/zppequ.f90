@@ -1,4 +1,4 @@
-subroutine zppequ(uplo,n,ap,s,scond,amax,info) CNAME(zppequ)
+pure subroutine zppequ(uplo,n,ap,s,scond,amax,info) CNAME(zppequ)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(ssygs2)
+pure subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(ssygs2)
 import
 integer(blas77_int)::itype
 character(len=1)::uplo

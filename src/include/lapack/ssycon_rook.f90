@@ -1,4 +1,4 @@
-subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) CNAME(ssycon_rook)
+pure subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) CNAME(ssycon_rook)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

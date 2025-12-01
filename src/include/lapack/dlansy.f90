@@ -1,4 +1,4 @@
-function dlansy(norm,uplo,n,a,lda,work) CNAME(dlansy)
+pure function dlansy(norm,uplo,n,a,lda,work) CNAME(dlansy)
 import
 character(len=1)::norm
 character(len=1)::uplo

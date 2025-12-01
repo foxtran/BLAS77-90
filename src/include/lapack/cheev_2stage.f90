@@ -1,4 +1,4 @@
-subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(cheev_2stage)
+pure subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) CNAME(cheev_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

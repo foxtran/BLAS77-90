@@ -1,4 +1,4 @@
-subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(zgetsls)
+pure subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(zgetsls)
 import
 character(len=1)::trans
 integer(blas77_int)::m

@@ -1,4 +1,4 @@
-subroutine dlapmt(forwrd,m,n,x,ldx,k) CNAME(dlapmt)
+pure subroutine dlapmt(forwrd,m,n,x,ldx,k) CNAME(dlapmt)
 import
 logical(blas77_int)::forwrd
 integer(blas77_int)::m

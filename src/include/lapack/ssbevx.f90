@@ -1,4 +1,4 @@
-subroutine ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(ssbevx)
+pure subroutine ssbevx(jobz,range,uplo,n,kd,ab,ldab,q,ldq,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(ssbevx)
 import
 character(len=1)::jobz
 character(len=1)::range

@@ -1,4 +1,4 @@
-recursive subroutine claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info) CNAME(claqz2)
+pure subroutine claqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns,nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info) CNAME(claqz2)
 import
 logical(blas77_int),intent(in)::ilschur
 logical(blas77_int),intent(in)::ilq

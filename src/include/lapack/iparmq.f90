@@ -1,4 +1,4 @@
-function iparmq(ispec,name,opts,n,ilo,ihi,lwork) CNAME(iparmq)
+pure function iparmq(ispec,name,opts,n,ilo,ihi,lwork) CNAME(iparmq)
 import
 integer(blas77_int)::ispec
 character(len=*)::name

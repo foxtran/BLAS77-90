@@ -1,4 +1,4 @@
-subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) CNAME(dgesvd)
+pure subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) CNAME(dgesvd)
 import
 character(len=1)::jobu
 character(len=1)::jobvt

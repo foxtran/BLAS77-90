@@ -1,4 +1,4 @@
-subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) CNAME(slaebz)
+pure subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) CNAME(slaebz)
 import
 integer(blas77_int)::ijob
 integer(blas77_int)::nitmax

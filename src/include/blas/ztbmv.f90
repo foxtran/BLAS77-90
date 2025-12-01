@@ -1,4 +1,4 @@
-subroutine ztbmv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(ztbmv)
+pure subroutine ztbmv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(ztbmv)
 import
 character(len=1)::uplo
 character(len=1)::trans

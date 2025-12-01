@@ -1,4 +1,4 @@
-subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) CNAME(sbdsvdx)
+pure subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) CNAME(sbdsvdx)
 import
 character(len=1)::uplo
 character(len=1)::jobz

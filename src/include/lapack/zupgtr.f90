@@ -1,4 +1,4 @@
-subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(zupgtr)
+pure subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(zupgtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

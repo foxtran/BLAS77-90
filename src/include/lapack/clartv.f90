@@ -1,4 +1,4 @@
-subroutine clartv(n,x,incx,y,incy,c,s,incc) CNAME(clartv)
+pure subroutine clartv(n,x,incx,y,incy,c,s,incc) CNAME(clartv)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::x(*)

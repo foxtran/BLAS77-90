@@ -1,4 +1,4 @@
-subroutine zpotf2(uplo,n,a,lda,info) CNAME(zpotf2)
+pure subroutine zpotf2(uplo,n,a,lda,info) CNAME(zpotf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

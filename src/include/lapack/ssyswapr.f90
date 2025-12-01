@@ -1,4 +1,4 @@
-subroutine ssyswapr(uplo,n,a,lda,i1,i2) CNAME(ssyswapr)
+pure subroutine ssyswapr(uplo,n,a,lda,i1,i2) CNAME(ssyswapr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

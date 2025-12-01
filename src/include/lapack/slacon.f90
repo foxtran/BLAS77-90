@@ -1,4 +1,4 @@
-subroutine slacon(n,v,x,isgn,est,kase) CNAME(slacon)
+pure subroutine slacon(n,v,x,isgn,est,kase) CNAME(slacon)
 import
 integer(blas77_int)::n
 real(blas77_f32)::v(*)

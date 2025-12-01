@@ -1,4 +1,4 @@
-subroutine srotg(a,b,c,s) CNAME(srotg)
+pure subroutine srotg(a,b,c,s) CNAME(srotg)
 import
 real(blas77_f32)::a
 real(blas77_f32)::b

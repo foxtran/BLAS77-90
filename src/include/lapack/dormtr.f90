@@ -1,4 +1,4 @@
-subroutine dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormtr)
+pure subroutine dormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(dormtr)
 import
 character(len=1)::side
 character(len=1)::uplo

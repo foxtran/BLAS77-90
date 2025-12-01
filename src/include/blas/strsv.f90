@@ -1,4 +1,4 @@
-subroutine strsv(uplo,trans,diag,n,a,lda,x,incx) CNAME(strsv)
+pure subroutine strsv(uplo,trans,diag,n,a,lda,x,incx) CNAME(strsv)
 import
 character(len=1)::uplo
 character(len=1)::trans

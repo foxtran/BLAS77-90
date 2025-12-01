@@ -1,4 +1,4 @@
-subroutine csteqr(compz,n,d,e,z,ldz,work,info) CNAME(csteqr)
+pure subroutine csteqr(compz,n,d,e,z,ldz,work,info) CNAME(csteqr)
 import
 character(len=1)::compz
 integer(blas77_int)::n

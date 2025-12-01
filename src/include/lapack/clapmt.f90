@@ -1,4 +1,4 @@
-subroutine clapmt(forwrd,m,n,x,ldx,k) CNAME(clapmt)
+pure subroutine clapmt(forwrd,m,n,x,ldx,k) CNAME(clapmt)
 import
 logical(blas77_int)::forwrd
 integer(blas77_int)::m

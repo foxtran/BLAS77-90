@@ -1,4 +1,4 @@
-subroutine zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(zspsv)
+pure subroutine zspsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(zspsv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

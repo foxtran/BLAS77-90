@@ -1,4 +1,4 @@
-subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) CNAME(slagtm)
+pure subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) CNAME(slagtm)
 import
 character(len=1)::trans
 integer(blas77_int)::n

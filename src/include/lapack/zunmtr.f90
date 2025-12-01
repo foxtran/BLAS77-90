@@ -1,4 +1,4 @@
-subroutine zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmtr)
+pure subroutine zunmtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmtr)
 import
 character(len=1)::side
 character(len=1)::uplo

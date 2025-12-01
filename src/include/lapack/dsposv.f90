@@ -1,4 +1,4 @@
-subroutine dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info) CNAME(dsposv)
+pure subroutine dsposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,iter,info) CNAME(dsposv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

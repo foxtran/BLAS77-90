@@ -1,4 +1,4 @@
-subroutine dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) CNAME(dsycon_3)
+pure subroutine dsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,iwork,info) CNAME(dsycon_3)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

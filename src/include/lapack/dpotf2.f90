@@ -1,4 +1,4 @@
-subroutine dpotf2(uplo,n,a,lda,info) CNAME(dpotf2)
+pure subroutine dpotf2(uplo,n,a,lda,info) CNAME(dpotf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

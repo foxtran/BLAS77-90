@@ -1,4 +1,4 @@
-subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(sspcon)
+pure subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(sspcon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

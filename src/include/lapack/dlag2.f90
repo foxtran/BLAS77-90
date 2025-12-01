@@ -1,4 +1,4 @@
-subroutine dlag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) CNAME(dlag2)
+pure subroutine dlag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) CNAME(dlag2)
 import
 integer(blas77_int)::lda
 real(blas77_f64)::a(lda,*)

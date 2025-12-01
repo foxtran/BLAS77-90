@@ -1,4 +1,4 @@
-subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_heamv)
+pure subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_heamv)
 import
 integer(blas77_int)::uplo
 integer(blas77_int)::n

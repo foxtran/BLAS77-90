@@ -1,4 +1,4 @@
-subroutine zgeql2(m,n,a,lda,tau,work,info) CNAME(zgeql2)
+pure subroutine zgeql2(m,n,a,lda,tau,work,info) CNAME(zgeql2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine slassq(n,x,incx,scale,sumsq) CNAME(slassq)
+pure subroutine slassq(n,x,incx,scale,sumsq) CNAME(slassq)
 import
 integer(blas77_int)::n
 real(blas77_f32)::x(*)

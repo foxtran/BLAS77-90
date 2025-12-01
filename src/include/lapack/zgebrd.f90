@@ -1,4 +1,4 @@
-subroutine zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) CNAME(zgebrd)
+pure subroutine zgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) CNAME(zgebrd)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

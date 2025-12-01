@@ -1,4 +1,4 @@
-subroutine daxpy(n,da,dx,incx,dy,incy) CNAME(daxpy)
+pure subroutine daxpy(n,da,dx,incx,dy,incy) CNAME(daxpy)
 import
 integer(blas77_int)::n
 real(blas77_f64)::da

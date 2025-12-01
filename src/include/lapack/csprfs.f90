@@ -1,4 +1,4 @@
-subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(csprfs)
+pure subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(csprfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

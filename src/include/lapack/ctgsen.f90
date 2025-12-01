@@ -1,4 +1,4 @@
-subroutine ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) CNAME(ctgsen)
+pure subroutine ctgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) CNAME(ctgsen)
 import
 integer(blas77_int)::ijob
 logical(blas77_int)::wantq

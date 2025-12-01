@@ -1,4 +1,4 @@
-subroutine zlaset(uplo,m,n,alpha,beta,a,lda) CNAME(zlaset)
+pure subroutine zlaset(uplo,m,n,alpha,beta,a,lda) CNAME(zlaset)
 import
 character(len=1)::uplo
 integer(blas77_int)::m

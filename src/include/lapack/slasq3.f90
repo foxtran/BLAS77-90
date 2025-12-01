@@ -1,4 +1,4 @@
-subroutine slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau) CNAME(slasq3)
+pure subroutine slasq3(i0,n0,z,pp,dmin,sigma,desig,qmax,nfail,iter,ndiv,ieee,ttype,dmin1,dmin2,dn,dn1,dn2,g,tau) CNAME(slasq3)
 import
 integer(blas77_int)::i0
 integer(blas77_int)::n0

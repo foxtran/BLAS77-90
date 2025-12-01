@@ -1,4 +1,4 @@
-subroutine slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) CNAME(slaed3)
+pure subroutine slaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) CNAME(slaed3)
 import
 integer(blas77_int)::k
 integer(blas77_int)::n

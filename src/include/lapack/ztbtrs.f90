@@ -1,4 +1,4 @@
-subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(ztbtrs)
+pure subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(ztbtrs)
 import
 character(len=1)::uplo
 character(len=1)::trans

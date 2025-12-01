@@ -1,4 +1,4 @@
-subroutine zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info) CNAME(zcgesv)
+pure subroutine zcgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,rwork,iter,info) CNAME(zcgesv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::nrhs

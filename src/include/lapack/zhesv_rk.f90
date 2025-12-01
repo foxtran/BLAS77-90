@@ -1,4 +1,4 @@
-subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) CNAME(zhesv_rk)
+pure subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) CNAME(zhesv_rk)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

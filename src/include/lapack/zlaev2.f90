@@ -1,4 +1,4 @@
-subroutine zlaev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(zlaev2)
+pure subroutine zlaev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(zlaev2)
 import
 complex(blas77_f64)::a
 complex(blas77_f64)::b

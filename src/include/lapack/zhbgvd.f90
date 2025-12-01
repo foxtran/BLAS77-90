@@ -1,4 +1,4 @@
-subroutine zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbgvd)
+pure subroutine zhbgvd(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhbgvd)
 import
 character(len=1)::jobz
 character(len=1)::uplo

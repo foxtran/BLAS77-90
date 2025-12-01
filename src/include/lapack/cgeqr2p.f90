@@ -1,4 +1,4 @@
-subroutine cgeqr2p(m,n,a,lda,tau,work,info) CNAME(cgeqr2p)
+pure subroutine cgeqr2p(m,n,a,lda,tau,work,info) CNAME(cgeqr2p)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

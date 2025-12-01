@@ -1,4 +1,4 @@
-subroutine zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(zgeequ)
+pure subroutine zgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(zgeequ)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

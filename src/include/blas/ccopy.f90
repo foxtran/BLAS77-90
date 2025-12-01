@@ -1,4 +1,4 @@
-subroutine ccopy(n,cx,incx,cy,incy) CNAME(ccopy)
+pure subroutine ccopy(n,cx,incx,cy,incy) CNAME(ccopy)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::cx(*)

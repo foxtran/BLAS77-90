@@ -1,4 +1,4 @@
-subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(dorgtr)
+pure subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(dorgtr)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info) CNAME(zgees)
+pure subroutine zgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info) CNAME(zgees)
 import
 character(len=1)::jobvs
 character(len=1)::sort

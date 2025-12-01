@@ -1,4 +1,4 @@
-function lsamen(n,ca,cb) CNAME(lsamen)
+pure function lsamen(n,ca,cb) CNAME(lsamen)
 import
 integer(blas77_int)::n
 character(len=*)::ca

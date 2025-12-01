@@ -1,4 +1,4 @@
-subroutine ctrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(ctrmm)
+pure subroutine ctrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(ctrmm)
 import
 character(len=1)::side
 character(len=1)::uplo

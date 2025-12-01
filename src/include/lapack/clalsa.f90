@@ -1,4 +1,4 @@
-subroutine clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info) CNAME(clalsa)
+pure subroutine clalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr,z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info) CNAME(clalsa)
 import
 integer(blas77_int)::icompq
 integer(blas77_int)::smlsiz

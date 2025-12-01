@@ -1,4 +1,4 @@
-function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(sla_syrcond)
+pure function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(sla_syrcond)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

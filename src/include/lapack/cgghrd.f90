@@ -1,4 +1,4 @@
-subroutine cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) CNAME(cgghrd)
+pure subroutine cgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) CNAME(cgghrd)
 import
 character(len=1)::compq
 character(len=1)::compz

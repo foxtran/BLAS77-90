@@ -1,4 +1,4 @@
-subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmql)
+pure subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmql)
 import
 character(len=1)::side
 character(len=1)::trans

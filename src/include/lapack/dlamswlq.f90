@@ -1,4 +1,4 @@
-subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(dlamswlq)
+pure subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(dlamswlq)
 import
 character(len=1)::side
 character(len=1)::trans

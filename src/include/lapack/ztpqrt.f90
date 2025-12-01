@@ -1,4 +1,4 @@
-subroutine ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(ztpqrt)
+pure subroutine ztpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(ztpqrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

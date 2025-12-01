@@ -1,4 +1,4 @@
-subroutine srot(n,sx,incx,sy,incy,c,s) CNAME(srot)
+pure subroutine srot(n,sx,incx,sy,incy,c,s) CNAME(srot)
 import
 integer(blas77_int)::n
 real(blas77_f32)::sx(*)

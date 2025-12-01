@@ -1,4 +1,4 @@
-subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) CNAME(clags2)
+pure subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) CNAME(clags2)
 import
 logical(blas77_int)::upper
 real(blas77_f32)::a1

@@ -1,4 +1,4 @@
-subroutine claesy(a,b,c,rt1,rt2,evscal,cs1,sn1) CNAME(claesy)
+pure subroutine claesy(a,b,c,rt1,rt2,evscal,cs1,sn1) CNAME(claesy)
 import
 complex(blas77_f32)::a
 complex(blas77_f32)::b

@@ -1,4 +1,4 @@
-subroutine cpttrs(uplo,n,nrhs,d,e,b,ldb,info) CNAME(cpttrs)
+pure subroutine cpttrs(uplo,n,nrhs,d,e,b,ldb,info) CNAME(cpttrs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine strttp(uplo,n,a,lda,ap,info) CNAME(strttp)
+pure subroutine strttp(uplo,n,a,lda,ap,info) CNAME(strttp)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

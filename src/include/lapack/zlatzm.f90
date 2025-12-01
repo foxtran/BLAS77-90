@@ -1,4 +1,4 @@
-subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) CNAME(zlatzm)
+pure subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) CNAME(zlatzm)
 import
 character(len=1)::side
 integer(blas77_int)::m

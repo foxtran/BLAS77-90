@@ -1,4 +1,4 @@
-subroutine slapmr(forwrd,m,n,x,ldx,k) CNAME(slapmr)
+pure subroutine slapmr(forwrd,m,n,x,ldx,k) CNAME(slapmr)
 import
 logical(blas77_int)::forwrd
 integer(blas77_int)::m

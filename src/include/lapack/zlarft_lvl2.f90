@@ -1,4 +1,4 @@
-subroutine zlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(zlarft_lvl2)
+pure subroutine zlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(zlarft_lvl2)
 import
 character(len=1)::direct
 character(len=1)::storev

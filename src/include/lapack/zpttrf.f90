@@ -1,4 +1,4 @@
-subroutine zpttrf(n,d,e,info) CNAME(zpttrf)
+pure subroutine zpttrf(n,d,e,info) CNAME(zpttrf)
 import
 integer(blas77_int)::n
 real(blas77_f64)::d(*)

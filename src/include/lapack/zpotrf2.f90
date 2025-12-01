@@ -1,4 +1,4 @@
-recursive subroutine zpotrf2(uplo,n,a,lda,info) CNAME(zpotrf2)
+pure subroutine zpotrf2(uplo,n,a,lda,info) CNAME(zpotrf2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

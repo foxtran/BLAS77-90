@@ -1,4 +1,4 @@
-subroutine zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(zhemv)
+pure subroutine zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(zhemv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

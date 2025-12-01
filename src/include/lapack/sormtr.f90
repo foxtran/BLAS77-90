@@ -1,4 +1,4 @@
-subroutine sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(sormtr)
+pure subroutine sormtr(side,uplo,trans,m,n,a,lda,tau,c,ldc,work,lwork,info) CNAME(sormtr)
 import
 character(len=1)::side
 character(len=1)::uplo

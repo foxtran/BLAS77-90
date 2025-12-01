@@ -1,4 +1,4 @@
-subroutine stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) CNAME(stpqrt2)
+pure subroutine stpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) CNAME(stpqrt2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

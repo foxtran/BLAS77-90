@@ -1,4 +1,4 @@
-subroutine dlargv(n,x,incx,y,incy,c,incc) CNAME(dlargv)
+pure subroutine dlargv(n,x,incx,y,incy,c,incc) CNAME(dlargv)
 import
 integer(blas77_int)::n
 real(blas77_f64)::x(*)

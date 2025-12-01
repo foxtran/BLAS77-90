@@ -1,4 +1,4 @@
-subroutine zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(zgbrfsx)
+pure subroutine zgbrfsx(trans,equed,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(zgbrfsx)
 import
 character(len=1)::trans
 character(len=1)::equed

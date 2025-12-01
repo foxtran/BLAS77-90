@@ -1,4 +1,4 @@
-subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(zlarfb_gett)
+pure subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(zlarfb_gett)
 import
 character(len=1)::ident
 integer(blas77_int)::m

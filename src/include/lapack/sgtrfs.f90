@@ -1,4 +1,4 @@
-subroutine sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sgtrfs)
+pure subroutine sgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sgtrfs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

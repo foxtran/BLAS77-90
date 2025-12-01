@@ -1,4 +1,4 @@
-subroutine dorgr2(m,n,k,a,lda,tau,work,info) CNAME(dorgr2)
+pure subroutine dorgr2(m,n,k,a,lda,tau,work,info) CNAME(dorgr2)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

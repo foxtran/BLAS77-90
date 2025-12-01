@@ -1,4 +1,4 @@
-subroutine zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(zhpsvx)
+pure subroutine zhpsvx(fact,uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(zhpsvx)
 import
 character(len=1)::fact
 character(len=1)::uplo

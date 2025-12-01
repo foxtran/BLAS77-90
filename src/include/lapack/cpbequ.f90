@@ -1,4 +1,4 @@
-subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) CNAME(cpbequ)
+pure subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) CNAME(cpbequ)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

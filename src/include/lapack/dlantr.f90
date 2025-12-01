@@ -1,4 +1,4 @@
-function dlantr(norm,uplo,diag,m,n,a,lda,work) CNAME(dlantr)
+pure function dlantr(norm,uplo,diag,m,n,a,lda,work) CNAME(dlantr)
 import
 character(len=1)::norm
 character(len=1)::uplo

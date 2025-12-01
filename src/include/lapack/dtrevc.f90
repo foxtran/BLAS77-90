@@ -1,4 +1,4 @@
-subroutine dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) CNAME(dtrevc)
+pure subroutine dtrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,info) CNAME(dtrevc)
 import
 character(len=1)::side
 character(len=1)::howmny

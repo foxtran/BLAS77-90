@@ -1,4 +1,4 @@
-subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) CNAME(sgbsv)
+pure subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) CNAME(sgbsv)
 import
 integer(blas77_int)::n
 integer(blas77_int)::kl

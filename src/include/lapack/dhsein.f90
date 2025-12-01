@@ -1,4 +1,4 @@
-subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) CNAME(dhsein)
+pure subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) CNAME(dhsein)
 import
 character(len=1)::side
 character(len=1)::eigsrc

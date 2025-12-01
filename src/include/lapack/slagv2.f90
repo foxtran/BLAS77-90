@@ -1,4 +1,4 @@
-subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) CNAME(slagv2)
+pure subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) CNAME(slagv2)
 import
 integer(blas77_int)::lda
 real(blas77_f32)::a(lda,*)

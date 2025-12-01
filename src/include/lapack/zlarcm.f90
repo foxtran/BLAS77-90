@@ -1,4 +1,4 @@
-subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(zlarcm)
+pure subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(zlarcm)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

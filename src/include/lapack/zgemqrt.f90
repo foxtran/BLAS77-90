@@ -1,4 +1,4 @@
-subroutine zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) CNAME(zgemqrt)
+pure subroutine zgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) CNAME(zgemqrt)
 import
 character(len=1)::side
 character(len=1)::trans

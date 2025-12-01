@@ -1,4 +1,4 @@
-subroutine sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(sskewsyr2)
+pure subroutine sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(sskewsyr2)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

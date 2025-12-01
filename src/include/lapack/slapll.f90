@@ -1,4 +1,4 @@
-subroutine slapll(n,x,incx,y,incy,ssmin) CNAME(slapll)
+pure subroutine slapll(n,x,incx,y,incy,ssmin) CNAME(slapll)
 import
 integer(blas77_int)::n
 real(blas77_f32)::x(*)

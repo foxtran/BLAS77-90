@@ -1,4 +1,4 @@
-function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(sla_gercond)
+pure function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(sla_gercond)
 import
 character(len=1)::trans
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine cgttrf(n,dl,d,du,du2,ipiv,info) CNAME(cgttrf)
+pure subroutine cgttrf(n,dl,d,du,du2,ipiv,info) CNAME(cgttrf)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::dl(*)

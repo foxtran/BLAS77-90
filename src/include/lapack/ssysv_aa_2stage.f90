@@ -1,4 +1,4 @@
-subroutine ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) CNAME(ssysv_aa_2stage)
+pure subroutine ssysv_aa_2stage(uplo,n,nrhs,a,lda,tb,ltb,ipiv,ipiv2,b,ldb,work,lwork,info) CNAME(ssysv_aa_2stage)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine crot(n,cx,incx,cy,incy,c,s) CNAME(crot)
+pure subroutine crot(n,cx,incx,cy,incy,c,s) CNAME(crot)
 import
 integer(blas77_int)::n
 complex(blas77_f32)::cx(*)

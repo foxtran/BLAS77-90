@@ -1,4 +1,4 @@
-subroutine zlacp2(uplo,m,n,a,lda,b,ldb) CNAME(zlacp2)
+pure subroutine zlacp2(uplo,m,n,a,lda,b,ldb) CNAME(zlacp2)
 import
 character(len=1)::uplo
 integer(blas77_int)::m

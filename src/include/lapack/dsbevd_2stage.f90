@@ -1,4 +1,4 @@
-subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dsbevd_2stage)
+pure subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dsbevd_2stage)
 import
 character(len=1)::jobz
 character(len=1)::uplo

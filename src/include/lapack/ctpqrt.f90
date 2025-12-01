@@ -1,4 +1,4 @@
-subroutine ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(ctpqrt)
+pure subroutine ctpqrt(m,n,l,nb,a,lda,b,ldb,t,ldt,work,info) CNAME(ctpqrt)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

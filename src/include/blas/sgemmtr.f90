@@ -1,4 +1,4 @@
-subroutine sgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(sgemmtr)
+pure subroutine sgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(sgemmtr)
 import
 character(len=1)::uplo
 character(len=1)::transa

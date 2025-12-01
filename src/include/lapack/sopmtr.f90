@@ -1,4 +1,4 @@
-subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(sopmtr)
+pure subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(sopmtr)
 import
 character(len=1)::side
 character(len=1)::uplo

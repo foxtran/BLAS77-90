@@ -1,4 +1,4 @@
-subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(dspcon)
+pure subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(dspcon)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

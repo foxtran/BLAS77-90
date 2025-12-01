@@ -1,4 +1,4 @@
-subroutine sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sporfs)
+pure subroutine sporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sporfs)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

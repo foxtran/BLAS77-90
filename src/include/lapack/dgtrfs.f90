@@ -1,4 +1,4 @@
-subroutine dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dgtrfs)
+pure subroutine dgtrfs(trans,n,nrhs,dl,d,du,dlf,df,duf,du2,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dgtrfs)
 import
 character(len=1)::trans
 integer(blas77_int)::n

@@ -1,4 +1,4 @@
-subroutine zgetc2(n,a,lda,ipiv,jpiv,info) CNAME(zgetc2)
+pure subroutine zgetc2(n,a,lda,ipiv,jpiv,info) CNAME(zgetc2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::lda

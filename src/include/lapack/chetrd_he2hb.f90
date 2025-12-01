@@ -1,4 +1,4 @@
-subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(chetrd_he2hb)
+pure subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(chetrd_he2hb)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

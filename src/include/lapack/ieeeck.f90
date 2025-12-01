@@ -1,4 +1,4 @@
-function ieeeck(ispec,zero,one) CNAME(ieeeck)
+pure function ieeeck(ispec,zero,one) CNAME(ieeeck)
 import
 integer(blas77_int)::ispec
 real(blas77_f32)::zero

@@ -1,4 +1,4 @@
-function dlapy3(x,y,z) CNAME(dlapy3)
+pure function dlapy3(x,y,z) CNAME(dlapy3)
 import
 real(blas77_f64)::x
 real(blas77_f64)::y

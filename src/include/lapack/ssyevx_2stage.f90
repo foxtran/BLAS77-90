@@ -1,4 +1,4 @@
-subroutine ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(ssyevx_2stage)
+pure subroutine ssyevx_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,work,lwork,iwork,ifail,info) CNAME(ssyevx_2stage)
 import
 character(len=1)::jobz
 character(len=1)::range

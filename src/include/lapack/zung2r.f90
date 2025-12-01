@@ -1,4 +1,4 @@
-subroutine zung2r(m,n,k,a,lda,tau,work,info) CNAME(zung2r)
+pure subroutine zung2r(m,n,k,a,lda,tau,work,info) CNAME(zung2r)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

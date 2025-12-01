@@ -1,4 +1,4 @@
-subroutine cpotri(uplo,n,a,lda,info) CNAME(cpotri)
+pure subroutine cpotri(uplo,n,a,lda,info) CNAME(cpotri)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

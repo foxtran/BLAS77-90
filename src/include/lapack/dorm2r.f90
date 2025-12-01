@@ -1,4 +1,4 @@
-subroutine dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(dorm2r)
+pure subroutine dorm2r(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(dorm2r)
 import
 character(len=1)::side
 character(len=1)::trans

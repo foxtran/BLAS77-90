@@ -1,4 +1,4 @@
-subroutine cherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(cherk)
+pure subroutine cherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(cherk)
 import
 character(len=1)::uplo
 character(len=1)::trans

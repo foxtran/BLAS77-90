@@ -1,4 +1,4 @@
-subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) CNAME(dptsvx)
+pure subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) CNAME(dptsvx)
 import
 character(len=1)::fact
 integer(blas77_int)::n

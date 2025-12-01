@@ -1,4 +1,4 @@
-subroutine sstev(jobz,n,d,e,z,ldz,work,info) CNAME(sstev)
+pure subroutine sstev(jobz,n,d,e,z,ldz,work,info) CNAME(sstev)
 import
 character(len=1)::jobz
 integer(blas77_int)::n

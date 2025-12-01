@@ -1,4 +1,4 @@
-function clansy(norm,uplo,n,a,lda,work) CNAME(clansy)
+pure function clansy(norm,uplo,n,a,lda,work) CNAME(clansy)
 import
 character(len=1)::norm
 character(len=1)::uplo

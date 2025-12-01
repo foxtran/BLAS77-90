@@ -1,4 +1,4 @@
-subroutine cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(cgelst)
+pure subroutine cgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(cgelst)
 import
 character(len=1)::trans
 integer(blas77_int)::m

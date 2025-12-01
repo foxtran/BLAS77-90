@@ -1,4 +1,4 @@
-subroutine dpftri(transr,uplo,n,a,info) CNAME(dpftri)
+pure subroutine dpftri(transr,uplo,n,a,info) CNAME(dpftri)
 import
 character(len=1)::transr
 character(len=1)::uplo

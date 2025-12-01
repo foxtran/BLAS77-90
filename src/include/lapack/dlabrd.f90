@@ -1,4 +1,4 @@
-subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(dlabrd)
+pure subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(dlabrd)
 import
 integer(blas77_int)::m
 integer(blas77_int)::n

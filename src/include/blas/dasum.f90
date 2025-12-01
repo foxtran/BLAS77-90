@@ -1,4 +1,4 @@
-function dasum(n,dx,incx) CNAME(dasum)
+pure function dasum(n,dx,incx) CNAME(dasum)
 import
 integer(blas77_int)::n
 real(blas77_f64)::dx(*)

@@ -1,4 +1,4 @@
-subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(dlahr2)
+pure subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(dlahr2)
 import
 integer(blas77_int)::n
 integer(blas77_int)::k

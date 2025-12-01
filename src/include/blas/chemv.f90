@@ -1,4 +1,4 @@
-subroutine chemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(chemv)
+pure subroutine chemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(chemv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

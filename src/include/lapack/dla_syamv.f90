@@ -1,4 +1,4 @@
-subroutine dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(dla_syamv)
+pure subroutine dla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(dla_syamv)
 import
 integer(blas77_int)::uplo
 integer(blas77_int)::n

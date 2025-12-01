@@ -1,4 +1,4 @@
-subroutine claqsp(uplo,n,ap,s,scond,amax,equed) CNAME(claqsp)
+pure subroutine claqsp(uplo,n,ap,s,scond,amax,equed) CNAME(claqsp)
 import
 character(len=1)::uplo
 integer(blas77_int)::n

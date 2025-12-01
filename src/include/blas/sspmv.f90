@@ -1,4 +1,4 @@
-subroutine sspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(sspmv)
+pure subroutine sspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(sspmv)
 import
 character(len=1)::uplo
 integer(blas77_int)::n
