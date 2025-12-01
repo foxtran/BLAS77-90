@@ -8,5 +8,5 @@ integer(blas77_int), intent(inout) :: ldab
 complex(blas77_f64), intent(inout) :: ab(ldab,*)
 integer(blas77_int), intent(inout) :: ldafb
 complex(blas77_f64), intent(inout) :: afb(ldafb,*)
-real(blas77_f64), intent(inout) :: zla_gbrpvgrw
+real(blas77_f64)::zla_gbrpvgrw
 end

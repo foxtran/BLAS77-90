@@ -7,5 +7,5 @@ integer(blas77_int), intent(inout) :: n1
 integer(blas77_int), intent(inout) :: n2
 integer(blas77_int), intent(inout) :: n3
 integer(blas77_int), intent(inout) :: n4
-integer(blas77_int), intent(inout) :: ilaenv2stage
+integer(blas77_int)::ilaenv2stage
 end

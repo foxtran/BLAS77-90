@@ -6,5 +6,5 @@ integer(blas77_int), intent(inout) :: lda
 real(blas77_f32), intent(inout) :: a(lda,*)
 integer(blas77_int), intent(inout) :: ldaf
 real(blas77_f32), intent(inout) :: af(ldaf,*)
-real(blas77_f32), intent(inout) :: sla_gerpvgrw
+real(blas77_f32)::sla_gerpvgrw
 end

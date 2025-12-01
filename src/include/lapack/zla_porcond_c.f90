@@ -11,5 +11,5 @@ logical(blas77_int), intent(inout) :: capply
 integer(blas77_int), intent(inout) :: info
 complex(blas77_f64), intent(inout) :: work(*)
 real(blas77_f64), intent(inout) :: rwork(*)
-real(blas77_f64), intent(inout) :: zla_porcond_c
+real(blas77_f64)::zla_porcond_c
 end

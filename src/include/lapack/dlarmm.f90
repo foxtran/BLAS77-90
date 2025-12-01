@@ -3,5 +3,5 @@ import
 real(blas77_f64), intent(inout) :: anorm
 real(blas77_f64), intent(inout) :: bnorm
 real(blas77_f64), intent(inout) :: cnorm
-real(blas77_f64), intent(inout) :: dlarmm
+real(blas77_f64)::dlarmm
 end

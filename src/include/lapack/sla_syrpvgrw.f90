@@ -9,5 +9,5 @@ integer(blas77_int), intent(inout) :: ldaf
 real(blas77_f32), intent(inout) :: af(ldaf,*)
 integer(blas77_int), intent(inout) :: ipiv(*)
 real(blas77_f32), intent(inout) :: work(*)
-real(blas77_f32), intent(inout) :: sla_syrpvgrw
+real(blas77_f32)::sla_syrpvgrw
 end

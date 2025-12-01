@@ -3,5 +3,5 @@ import
 integer(blas77_int), intent(inout) :: n
 character(len=*), intent(inout) :: ca
 character(len=*), intent(inout) :: cb
-logical(blas77_int), intent(inout) :: lsamen
+logical(blas77_int)::lsamen
 end

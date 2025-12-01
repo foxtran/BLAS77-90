@@ -5,5 +5,5 @@ integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda
 complex(blas77_f64), intent(inout) :: a(lda,*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: zlanhs
+real(blas77_f64)::zlanhs
 end

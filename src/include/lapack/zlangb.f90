@@ -7,5 +7,5 @@ integer(blas77_int), intent(inout) :: ku
 integer(blas77_int), intent(inout) :: ldab
 complex(blas77_f64), intent(inout) :: ab(ldab,*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: zlangb
+real(blas77_f64)::zlangb
 end

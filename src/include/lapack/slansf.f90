@@ -6,5 +6,5 @@ character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: a(0:*)
 real(blas77_f32), intent(inout) :: work(0:*)
-real(blas77_f32), intent(inout) :: slansf
+real(blas77_f32)::slansf
 end

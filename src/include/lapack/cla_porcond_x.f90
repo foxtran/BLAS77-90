@@ -10,5 +10,5 @@ complex(blas77_f32), intent(inout) :: x(*)
 integer(blas77_int), intent(inout) :: info
 complex(blas77_f32), intent(inout) :: work(*)
 real(blas77_f32), intent(inout) :: rwork(*)
-real(blas77_f32), intent(inout) :: cla_porcond_x
+real(blas77_f32)::cla_porcond_x
 end

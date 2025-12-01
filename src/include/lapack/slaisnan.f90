@@ -2,5 +2,5 @@ pure function slaisnan(sin1,sin2) CNAME(slaisnan)
 import
 real(blas77_f32),intent(in)::sin1
 real(blas77_f32),intent(in)::sin2
-logical(blas77_int), intent(inout) :: slaisnan
+logical(blas77_int)::slaisnan
 end

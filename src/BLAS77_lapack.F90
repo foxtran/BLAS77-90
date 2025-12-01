@@ -3706,7 +3706,7 @@ function chla_transtype(trans) bind(C, name="BLAS77Interface$chla_transtype")
   implicit none
 
   integer(blas77_int), intent(inout) :: trans
-  character(len=1), intent(inout) :: chla_transtype
+  character(len=1)::chla_transtype
 
   error_stop "This is an interface tester!"
 end function chla_transtype
@@ -4090,7 +4090,7 @@ function cla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,r
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_gbrcond_c
+  real(blas77_f32)::cla_gbrcond_c
 
   error_stop "This is an interface tester!"
 end function cla_gbrcond_c
@@ -4112,7 +4112,7 @@ function cla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) b
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_gbrcond_x
+  real(blas77_f32)::cla_gbrcond_x
 
   error_stop "This is an interface tester!"
 end function cla_gbrcond_x
@@ -4168,7 +4168,7 @@ function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   complex(blas77_f32), intent(inout) :: ab(ldab,*)
   integer(blas77_int), intent(inout) :: ldafb
   complex(blas77_f32), intent(inout) :: afb(ldafb,*)
-  real(blas77_f32), intent(inout) :: cla_gbrpvgrw
+  real(blas77_f32)::cla_gbrpvgrw
 
   error_stop "This is an interface tester!"
 end function cla_gbrpvgrw
@@ -4208,7 +4208,7 @@ function cla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_gercond_c
+  real(blas77_f32)::cla_gercond_c
 
   error_stop "This is an interface tester!"
 end function cla_gercond_c
@@ -4228,7 +4228,7 @@ function cla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, nam
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_gercond_x
+  real(blas77_f32)::cla_gercond_x
 
   error_stop "This is an interface tester!"
 end function cla_gercond_x
@@ -4280,7 +4280,7 @@ function cla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$cla_g
   complex(blas77_f32), intent(inout) :: a(lda,*)
   integer(blas77_int), intent(inout) :: ldaf
   complex(blas77_f32), intent(inout) :: af(ldaf,*)
-  real(blas77_f32), intent(inout) :: cla_gerpvgrw
+  real(blas77_f32)::cla_gerpvgrw
 
   error_stop "This is an interface tester!"
 end function cla_gerpvgrw
@@ -4319,7 +4319,7 @@ function cla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_hercond_c
+  real(blas77_f32)::cla_hercond_c
 
   error_stop "This is an interface tester!"
 end function cla_hercond_c
@@ -4339,7 +4339,7 @@ function cla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_hercond_x
+  real(blas77_f32)::cla_hercond_x
 
   error_stop "This is an interface tester!"
 end function cla_hercond_x
@@ -4394,7 +4394,7 @@ function cla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   complex(blas77_f32), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: cla_herpvgrw
+  real(blas77_f32)::cla_herpvgrw
 
   error_stop "This is an interface tester!"
 end function cla_herpvgrw
@@ -4428,7 +4428,7 @@ function cla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, na
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_porcond_c
+  real(blas77_f32)::cla_porcond_c
 
   error_stop "This is an interface tester!"
 end function cla_porcond_c
@@ -4447,7 +4447,7 @@ function cla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLA
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_porcond_x
+  real(blas77_f32)::cla_porcond_x
 
   error_stop "This is an interface tester!"
 end function cla_porcond_x
@@ -4499,7 +4499,7 @@ function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   integer(blas77_int), intent(inout) :: ldaf
   complex(blas77_f32), intent(inout) :: af(ldaf,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: cla_porpvgrw
+  real(blas77_f32)::cla_porpvgrw
 
   error_stop "This is an interface tester!"
 end function cla_porpvgrw
@@ -4538,7 +4538,7 @@ function cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_syrcond_c
+  real(blas77_f32)::cla_syrcond_c
 
   error_stop "This is an interface tester!"
 end function cla_syrcond_c
@@ -4558,7 +4558,7 @@ function cla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f32), intent(inout) :: work(*)
   real(blas77_f32), intent(inout) :: rwork(*)
-  real(blas77_f32), intent(inout) :: cla_syrcond_x
+  real(blas77_f32)::cla_syrcond_x
 
   error_stop "This is an interface tester!"
 end function cla_syrcond_x
@@ -4613,7 +4613,7 @@ function cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   complex(blas77_f32), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: cla_syrpvgrw
+  real(blas77_f32)::cla_syrpvgrw
 
   error_stop "This is an interface tester!"
 end function cla_syrpvgrw
@@ -4757,7 +4757,7 @@ function cladiv(x,y) bind(C, name="BLAS77Interface$cladiv")
 
   complex(blas77_f32), intent(inout) :: x
   complex(blas77_f32), intent(inout) :: y
-  complex(blas77_f32), intent(inout) :: cladiv
+  complex(blas77_f32)::cladiv
 
   error_stop "This is an interface tester!"
 end function cladiv
@@ -5242,7 +5242,7 @@ function clangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$clangb"
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clangb
+  real(blas77_f32)::clangb
 
   error_stop "This is an interface tester!"
 end function clangb
@@ -5257,7 +5257,7 @@ function clange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$clange")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clange
+  real(blas77_f32)::clange
 
   error_stop "This is an interface tester!"
 end function clange
@@ -5271,7 +5271,7 @@ function clangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$clangt")
   complex(blas77_f32), intent(inout) :: dl(*)
   complex(blas77_f32), intent(inout) :: d(*)
   complex(blas77_f32), intent(inout) :: du(*)
-  real(blas77_f32), intent(inout) :: clangt
+  real(blas77_f32)::clangt
 
   error_stop "This is an interface tester!"
 end function clangt
@@ -5287,7 +5287,7 @@ function clanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clanhb
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clanhb
+  real(blas77_f32)::clanhb
 
   error_stop "This is an interface tester!"
 end function clanhb
@@ -5302,7 +5302,7 @@ function clanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clanhe")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clanhe
+  real(blas77_f32)::clanhe
 
   error_stop "This is an interface tester!"
 end function clanhe
@@ -5317,7 +5317,7 @@ function clanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$clanhf"
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: a(0:*)
   real(blas77_f32), intent(inout) :: work(0:*)
-  real(blas77_f32), intent(inout) :: clanhf
+  real(blas77_f32)::clanhf
 
   error_stop "This is an interface tester!"
 end function clanhf
@@ -5331,7 +5331,7 @@ function clanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clanhp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: ap(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clanhp
+  real(blas77_f32)::clanhp
 
   error_stop "This is an interface tester!"
 end function clanhp
@@ -5345,7 +5345,7 @@ function clanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$clanhs")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clanhs
+  real(blas77_f32)::clanhs
 
   error_stop "This is an interface tester!"
 end function clanhs
@@ -5358,7 +5358,7 @@ function clanht(norm,n,d,e) bind(C, name="BLAS77Interface$clanht")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: d(*)
   complex(blas77_f32), intent(inout) :: e(*)
-  real(blas77_f32), intent(inout) :: clanht
+  real(blas77_f32)::clanht
 
   error_stop "This is an interface tester!"
 end function clanht
@@ -5374,7 +5374,7 @@ function clansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$clansb
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clansb
+  real(blas77_f32)::clansb
 
   error_stop "This is an interface tester!"
 end function clansb
@@ -5388,7 +5388,7 @@ function clansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$clansp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: ap(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clansp
+  real(blas77_f32)::clansp
 
   error_stop "This is an interface tester!"
 end function clansp
@@ -5403,7 +5403,7 @@ function clansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$clansy")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clansy
+  real(blas77_f32)::clansy
 
   error_stop "This is an interface tester!"
 end function clansy
@@ -5420,7 +5420,7 @@ function clantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$c
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clantb
+  real(blas77_f32)::clantb
 
   error_stop "This is an interface tester!"
 end function clantb
@@ -5435,7 +5435,7 @@ function clantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$clantp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: ap(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clantp
+  real(blas77_f32)::clantp
 
   error_stop "This is an interface tester!"
 end function clantp
@@ -5452,7 +5452,7 @@ function clantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$cla
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: clantr
+  real(blas77_f32)::clantr
 
   error_stop "This is an interface tester!"
 end function clantr
@@ -12731,7 +12731,7 @@ function disnan(din) bind(C, name="BLAS77Interface$disnan")
   implicit none
 
   real(blas77_f64),intent(in)::din
-  logical(blas77_int), intent(inout) :: disnan
+  logical(blas77_int)::disnan
 
   error_stop "This is an interface tester!"
 end function disnan
@@ -12775,7 +12775,7 @@ function dla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwor
   integer(blas77_int), intent(inout) :: info
   real(blas77_f64), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f64), intent(inout) :: dla_gbrcond
+  real(blas77_f64)::dla_gbrcond
 
   error_stop "This is an interface tester!"
 end function dla_gbrcond
@@ -12831,7 +12831,7 @@ function dla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   real(blas77_f64), intent(inout) :: ab(ldab,*)
   integer(blas77_int), intent(inout) :: ldafb
   real(blas77_f64), intent(inout) :: afb(ldafb,*)
-  real(blas77_f64), intent(inout) :: dla_gbrpvgrw
+  real(blas77_f64)::dla_gbrpvgrw
 
   error_stop "This is an interface tester!"
 end function dla_gbrpvgrw
@@ -12871,7 +12871,7 @@ function dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C,
   integer(blas77_int), intent(inout) :: info
   real(blas77_f64), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f64), intent(inout) :: dla_gercond
+  real(blas77_f64)::dla_gercond
 
   error_stop "This is an interface tester!"
 end function dla_gercond
@@ -12923,7 +12923,7 @@ function dla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$dla_g
   real(blas77_f64), intent(inout) :: a(lda,*)
   integer(blas77_int), intent(inout) :: ldaf
   real(blas77_f64), intent(inout) :: af(ldaf,*)
-  real(blas77_f64), intent(inout) :: dla_gerpvgrw
+  real(blas77_f64)::dla_gerpvgrw
 
   error_stop "This is an interface tester!"
 end function dla_gerpvgrw
@@ -12957,7 +12957,7 @@ function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name=
   integer(blas77_int), intent(inout) :: info
   real(blas77_f64), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f64), intent(inout) :: dla_porcond
+  real(blas77_f64)::dla_porcond
 
   error_stop "This is an interface tester!"
 end function dla_porcond
@@ -13009,7 +13009,7 @@ function dla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   integer(blas77_int), intent(inout) :: ldaf
   real(blas77_f64), intent(inout) :: af(ldaf,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dla_porpvgrw
+  real(blas77_f64)::dla_porpvgrw
 
   error_stop "This is an interface tester!"
 end function dla_porpvgrw
@@ -13048,7 +13048,7 @@ function dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, 
   integer(blas77_int), intent(inout) :: info
   real(blas77_f64), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f64), intent(inout) :: dla_syrcond
+  real(blas77_f64)::dla_syrcond
 
   error_stop "This is an interface tester!"
 end function dla_syrcond
@@ -13103,7 +13103,7 @@ function dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f64), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dla_syrpvgrw
+  real(blas77_f64)::dla_syrpvgrw
 
   error_stop "This is an interface tester!"
 end function dla_syrpvgrw
@@ -13751,7 +13751,7 @@ function dlaisnan(din1,din2) bind(C, name="BLAS77Interface$dlaisnan")
 
   real(blas77_f64),intent(in)::din1
   real(blas77_f64),intent(in)::din2
-  logical(blas77_int), intent(inout) :: dlaisnan
+  logical(blas77_int)::dlaisnan
 
   error_stop "This is an interface tester!"
 end function dlaisnan
@@ -13941,7 +13941,7 @@ function dlaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$dlaneg")
   real(blas77_f64), intent(inout) :: sigma
   real(blas77_f64), intent(inout) :: pivmin
   integer(blas77_int), intent(inout) :: r
-  integer(blas77_int), intent(inout) :: dlaneg
+  integer(blas77_int)::dlaneg
 
   error_stop "This is an interface tester!"
 end function dlaneg
@@ -13957,7 +13957,7 @@ function dlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$dlangb"
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlangb
+  real(blas77_f64)::dlangb
 
   error_stop "This is an interface tester!"
 end function dlangb
@@ -13972,7 +13972,7 @@ function dlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$dlange")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlange
+  real(blas77_f64)::dlange
 
   error_stop "This is an interface tester!"
 end function dlange
@@ -13986,7 +13986,7 @@ function dlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$dlangt")
   real(blas77_f64), intent(inout) :: dl(*)
   real(blas77_f64), intent(inout) :: d(*)
   real(blas77_f64), intent(inout) :: du(*)
-  real(blas77_f64), intent(inout) :: dlangt
+  real(blas77_f64)::dlangt
 
   error_stop "This is an interface tester!"
 end function dlangt
@@ -14000,7 +14000,7 @@ function dlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$dlanhs")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlanhs
+  real(blas77_f64)::dlanhs
 
   error_stop "This is an interface tester!"
 end function dlanhs
@@ -14016,7 +14016,7 @@ function dlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$dlansb
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlansb
+  real(blas77_f64)::dlansb
 
   error_stop "This is an interface tester!"
 end function dlansb
@@ -14031,7 +14031,7 @@ function dlansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$dlansf"
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: a(0:*)
   real(blas77_f64), intent(inout) :: work(0:*)
-  real(blas77_f64), intent(inout) :: dlansf
+  real(blas77_f64)::dlansf
 
   error_stop "This is an interface tester!"
 end function dlansf
@@ -14045,7 +14045,7 @@ function dlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$dlansp")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: ap(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlansp
+  real(blas77_f64)::dlansp
 
   error_stop "This is an interface tester!"
 end function dlansp
@@ -14058,7 +14058,7 @@ function dlanst(norm,n,d,e) bind(C, name="BLAS77Interface$dlanst")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: d(*)
   real(blas77_f64), intent(inout) :: e(*)
-  real(blas77_f64), intent(inout) :: dlanst
+  real(blas77_f64)::dlanst
 
   error_stop "This is an interface tester!"
 end function dlanst
@@ -14073,7 +14073,7 @@ function dlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$dlansy")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlansy
+  real(blas77_f64)::dlansy
 
   error_stop "This is an interface tester!"
 end function dlansy
@@ -14090,7 +14090,7 @@ function dlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$d
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlantb
+  real(blas77_f64)::dlantb
 
   error_stop "This is an interface tester!"
 end function dlantb
@@ -14105,7 +14105,7 @@ function dlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$dlantp")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: ap(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlantp
+  real(blas77_f64)::dlantp
 
   error_stop "This is an interface tester!"
 end function dlantp
@@ -14122,7 +14122,7 @@ function dlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$dla
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: dlantr
+  real(blas77_f64)::dlantr
 
   error_stop "This is an interface tester!"
 end function dlantr
@@ -14221,7 +14221,7 @@ function dlapy2(x,y) bind(C, name="BLAS77Interface$dlapy2")
 
   real(blas77_f64), intent(inout) :: x
   real(blas77_f64), intent(inout) :: y
-  real(blas77_f64), intent(inout) :: dlapy2
+  real(blas77_f64)::dlapy2
 
   error_stop "This is an interface tester!"
 end function dlapy2
@@ -14233,7 +14233,7 @@ function dlapy3(x,y,z) bind(C, name="BLAS77Interface$dlapy3")
   real(blas77_f64), intent(inout) :: x
   real(blas77_f64), intent(inout) :: y
   real(blas77_f64), intent(inout) :: z
-  real(blas77_f64), intent(inout) :: dlapy3
+  real(blas77_f64)::dlapy3
 
   error_stop "This is an interface tester!"
 end function dlapy3
@@ -15004,7 +15004,7 @@ function dlarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$dlarmm")
   real(blas77_f64), intent(inout) :: anorm
   real(blas77_f64), intent(inout) :: bnorm
   real(blas77_f64), intent(inout) :: cnorm
-  real(blas77_f64), intent(inout) :: dlarmm
+  real(blas77_f64)::dlarmm
 
   error_stop "This is an interface tester!"
 end function dlarmm
@@ -20708,7 +20708,7 @@ function dzsum1(n,cx,incx) bind(C, name="BLAS77Interface$dzsum1")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: cx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f64), intent(inout) :: dzsum1
+  real(blas77_f64)::dzsum1
 
   error_stop "This is an interface tester!"
 end function dzsum1
@@ -20720,7 +20720,7 @@ function icmax1(n,cx,incx) bind(C, name="BLAS77Interface$icmax1")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: cx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: icmax1
+  integer(blas77_int)::icmax1
 
   error_stop "This is an interface tester!"
 end function icmax1
@@ -20732,7 +20732,7 @@ function ieeeck(ispec,zero,one) bind(C, name="BLAS77Interface$ieeeck")
   integer(blas77_int), intent(inout) :: ispec
   real(blas77_f32), intent(inout) :: zero
   real(blas77_f32), intent(inout) :: one
-  integer(blas77_int), intent(inout) :: ieeeck
+  integer(blas77_int)::ieeeck
 
   error_stop "This is an interface tester!"
 end function ieeeck
@@ -20745,7 +20745,7 @@ function ilaclc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclc")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilaclc
+  integer(blas77_int)::ilaclc
 
   error_stop "This is an interface tester!"
 end function ilaclc
@@ -20758,7 +20758,7 @@ function ilaclr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaclr")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f32), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilaclr
+  integer(blas77_int)::ilaclr
 
   error_stop "This is an interface tester!"
 end function ilaclr
@@ -20768,7 +20768,7 @@ function iladiag(diag) bind(C, name="BLAS77Interface$iladiag")
   implicit none
 
   character(len=1), intent(inout) :: diag
-  integer(blas77_int), intent(inout) :: iladiag
+  integer(blas77_int)::iladiag
 
   error_stop "This is an interface tester!"
 end function iladiag
@@ -20781,7 +20781,7 @@ function iladlc(m,n,a,lda) bind(C, name="BLAS77Interface$iladlc")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: iladlc
+  integer(blas77_int)::iladlc
 
   error_stop "This is an interface tester!"
 end function iladlc
@@ -20794,7 +20794,7 @@ function iladlr(m,n,a,lda) bind(C, name="BLAS77Interface$iladlr")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f64), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: iladlr
+  integer(blas77_int)::iladlr
 
   error_stop "This is an interface tester!"
 end function iladlr
@@ -20810,7 +20810,7 @@ function ilaenv2stage(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface
   integer(blas77_int), intent(inout) :: n2
   integer(blas77_int), intent(inout) :: n3
   integer(blas77_int), intent(inout) :: n4
-  integer(blas77_int), intent(inout) :: ilaenv2stage
+  integer(blas77_int)::ilaenv2stage
 
   error_stop "This is an interface tester!"
 end function ilaenv2stage
@@ -20826,7 +20826,7 @@ function ilaenv(ispec,name,opts,n1,n2,n3,n4) bind(C, name="BLAS77Interface$ilaen
   integer(blas77_int), intent(inout) :: n2
   integer(blas77_int), intent(inout) :: n3
   integer(blas77_int), intent(inout) :: n4
-  integer(blas77_int), intent(inout) :: ilaenv
+  integer(blas77_int)::ilaenv
 
   error_stop "This is an interface tester!"
 end function ilaenv
@@ -20836,7 +20836,7 @@ function ilaprec(prec) bind(C, name="BLAS77Interface$ilaprec")
   implicit none
 
   character(len=1), intent(inout) :: prec
-  integer(blas77_int), intent(inout) :: ilaprec
+  integer(blas77_int)::ilaprec
 
   error_stop "This is an interface tester!"
 end function ilaprec
@@ -20849,7 +20849,7 @@ function ilaslc(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslc")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilaslc
+  integer(blas77_int)::ilaslc
 
   error_stop "This is an interface tester!"
 end function ilaslc
@@ -20862,7 +20862,7 @@ function ilaslr(m,n,a,lda) bind(C, name="BLAS77Interface$ilaslr")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilaslr
+  integer(blas77_int)::ilaslr
 
   error_stop "This is an interface tester!"
 end function ilaslr
@@ -20872,7 +20872,7 @@ function ilatrans(trans) bind(C, name="BLAS77Interface$ilatrans")
   implicit none
 
   character(len=1), intent(inout) :: trans
-  integer(blas77_int), intent(inout) :: ilatrans
+  integer(blas77_int)::ilatrans
 
   error_stop "This is an interface tester!"
 end function ilatrans
@@ -20882,7 +20882,7 @@ function ilauplo(uplo) bind(C, name="BLAS77Interface$ilauplo")
   implicit none
 
   character(len=1), intent(inout) :: uplo
-  integer(blas77_int), intent(inout) :: ilauplo
+  integer(blas77_int)::ilauplo
 
   error_stop "This is an interface tester!"
 end function ilauplo
@@ -20895,7 +20895,7 @@ function ilazlc(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlc")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilazlc
+  integer(blas77_int)::ilazlc
 
   error_stop "This is an interface tester!"
 end function ilazlc
@@ -20908,7 +20908,7 @@ function ilazlr(m,n,a,lda) bind(C, name="BLAS77Interface$ilazlr")
   integer(blas77_int), intent(inout) :: n
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
-  integer(blas77_int), intent(inout) :: ilazlr
+  integer(blas77_int)::ilazlr
 
   error_stop "This is an interface tester!"
 end function ilazlr
@@ -20924,7 +20924,7 @@ function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) bind(C, name="BLAS77Interf
   integer(blas77_int), intent(inout) :: nbi
   integer(blas77_int), intent(inout) :: ibi
   integer(blas77_int), intent(inout) :: nxi
-  integer(blas77_int), intent(inout) :: iparam2stage
+  integer(blas77_int)::iparam2stage
 
   error_stop "This is an interface tester!"
 end function iparam2stage
@@ -20940,7 +20940,7 @@ function iparmq(ispec,name,opts,n,ilo,ihi,lwork) bind(C, name="BLAS77Interface$i
   integer(blas77_int), intent(inout) :: ilo
   integer(blas77_int), intent(inout) :: ihi
   integer(blas77_int), intent(inout) :: lwork
-  integer(blas77_int), intent(inout) :: iparmq
+  integer(blas77_int)::iparmq
 
   error_stop "This is an interface tester!"
 end function iparmq
@@ -20952,7 +20952,7 @@ function izmax1(n,zx,incx) bind(C, name="BLAS77Interface$izmax1")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: zx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: izmax1
+  integer(blas77_int)::izmax1
 
   error_stop "This is an interface tester!"
 end function izmax1
@@ -20964,7 +20964,7 @@ function lsamen(n,ca,cb) bind(C, name="BLAS77Interface$lsamen")
   integer(blas77_int), intent(inout) :: n
   character(len=*), intent(inout) :: ca
   character(len=*), intent(inout) :: cb
-  logical(blas77_int), intent(inout) :: lsamen
+  logical(blas77_int)::lsamen
 
   error_stop "This is an interface tester!"
 end function lsamen
@@ -21083,7 +21083,7 @@ function scsum1(n,cx,incx) bind(C, name="BLAS77Interface$scsum1")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: cx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f32), intent(inout) :: scsum1
+  real(blas77_f32)::scsum1
 
   error_stop "This is an interface tester!"
 end function scsum1
@@ -23401,7 +23401,7 @@ function sisnan(sin) bind(C, name="BLAS77Interface$sisnan")
   implicit none
 
   real(blas77_f32),intent(in)::sin
-  logical(blas77_int), intent(inout) :: sisnan
+  logical(blas77_int)::sisnan
 
   error_stop "This is an interface tester!"
 end function sisnan
@@ -23445,7 +23445,7 @@ function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwor
   integer(blas77_int), intent(inout) :: info
   real(blas77_f32), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f32), intent(inout) :: sla_gbrcond
+  real(blas77_f32)::sla_gbrcond
 
   error_stop "This is an interface tester!"
 end function sla_gbrcond
@@ -23501,7 +23501,7 @@ function sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   real(blas77_f32), intent(inout) :: ab(ldab,*)
   integer(blas77_int), intent(inout) :: ldafb
   real(blas77_f32), intent(inout) :: afb(ldafb,*)
-  real(blas77_f32), intent(inout) :: sla_gbrpvgrw
+  real(blas77_f32)::sla_gbrpvgrw
 
   error_stop "This is an interface tester!"
 end function sla_gbrpvgrw
@@ -23541,7 +23541,7 @@ function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C,
   integer(blas77_int), intent(inout) :: info
   real(blas77_f32), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f32), intent(inout) :: sla_gercond
+  real(blas77_f32)::sla_gercond
 
   error_stop "This is an interface tester!"
 end function sla_gercond
@@ -23593,7 +23593,7 @@ function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$sla_g
   real(blas77_f32), intent(inout) :: a(lda,*)
   integer(blas77_int), intent(inout) :: ldaf
   real(blas77_f32), intent(inout) :: af(ldaf,*)
-  real(blas77_f32), intent(inout) :: sla_gerpvgrw
+  real(blas77_f32)::sla_gerpvgrw
 
   error_stop "This is an interface tester!"
 end function sla_gerpvgrw
@@ -23627,7 +23627,7 @@ function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) bind(C, name=
   integer(blas77_int), intent(inout) :: info
   real(blas77_f32), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f32), intent(inout) :: sla_porcond
+  real(blas77_f32)::sla_porcond
 
   error_stop "This is an interface tester!"
 end function sla_porcond
@@ -23679,7 +23679,7 @@ function sla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   integer(blas77_int), intent(inout) :: ldaf
   real(blas77_f32), intent(inout) :: af(ldaf,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: sla_porpvgrw
+  real(blas77_f32)::sla_porpvgrw
 
   error_stop "This is an interface tester!"
 end function sla_porpvgrw
@@ -23718,7 +23718,7 @@ function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) bind(C, 
   integer(blas77_int), intent(inout) :: info
   real(blas77_f32), intent(inout) :: work(*)
   integer(blas77_int), intent(inout) :: iwork(*)
-  real(blas77_f32), intent(inout) :: sla_syrcond
+  real(blas77_f32)::sla_syrcond
 
   error_stop "This is an interface tester!"
 end function sla_syrcond
@@ -23773,7 +23773,7 @@ function sla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   real(blas77_f32), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: sla_syrpvgrw
+  real(blas77_f32)::sla_syrpvgrw
 
   error_stop "This is an interface tester!"
 end function sla_syrpvgrw
@@ -24421,7 +24421,7 @@ function slaisnan(sin1,sin2) bind(C, name="BLAS77Interface$slaisnan")
 
   real(blas77_f32),intent(in)::sin1
   real(blas77_f32),intent(in)::sin2
-  logical(blas77_int), intent(inout) :: slaisnan
+  logical(blas77_int)::slaisnan
 
   error_stop "This is an interface tester!"
 end function slaisnan
@@ -24611,7 +24611,7 @@ function slaneg(n,d,lld,sigma,pivmin,r) bind(C, name="BLAS77Interface$slaneg")
   real(blas77_f32), intent(inout) :: sigma
   real(blas77_f32), intent(inout) :: pivmin
   integer(blas77_int), intent(inout) :: r
-  integer(blas77_int), intent(inout) :: slaneg
+  integer(blas77_int)::slaneg
 
   error_stop "This is an interface tester!"
 end function slaneg
@@ -24627,7 +24627,7 @@ function slangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$slangb"
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slangb
+  real(blas77_f32)::slangb
 
   error_stop "This is an interface tester!"
 end function slangb
@@ -24642,7 +24642,7 @@ function slange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$slange")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slange
+  real(blas77_f32)::slange
 
   error_stop "This is an interface tester!"
 end function slange
@@ -24656,7 +24656,7 @@ function slangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$slangt")
   real(blas77_f32), intent(inout) :: dl(*)
   real(blas77_f32), intent(inout) :: d(*)
   real(blas77_f32), intent(inout) :: du(*)
-  real(blas77_f32), intent(inout) :: slangt
+  real(blas77_f32)::slangt
 
   error_stop "This is an interface tester!"
 end function slangt
@@ -24670,7 +24670,7 @@ function slanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$slanhs")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slanhs
+  real(blas77_f32)::slanhs
 
   error_stop "This is an interface tester!"
 end function slanhs
@@ -24686,7 +24686,7 @@ function slansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$slansb
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slansb
+  real(blas77_f32)::slansb
 
   error_stop "This is an interface tester!"
 end function slansb
@@ -24701,7 +24701,7 @@ function slansf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$slansf"
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: a(0:*)
   real(blas77_f32), intent(inout) :: work(0:*)
-  real(blas77_f32), intent(inout) :: slansf
+  real(blas77_f32)::slansf
 
   error_stop "This is an interface tester!"
 end function slansf
@@ -24715,7 +24715,7 @@ function slansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$slansp")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: ap(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slansp
+  real(blas77_f32)::slansp
 
   error_stop "This is an interface tester!"
 end function slansp
@@ -24728,7 +24728,7 @@ function slanst(norm,n,d,e) bind(C, name="BLAS77Interface$slanst")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: d(*)
   real(blas77_f32), intent(inout) :: e(*)
-  real(blas77_f32), intent(inout) :: slanst
+  real(blas77_f32)::slanst
 
   error_stop "This is an interface tester!"
 end function slanst
@@ -24743,7 +24743,7 @@ function slansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$slansy")
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slansy
+  real(blas77_f32)::slansy
 
   error_stop "This is an interface tester!"
 end function slansy
@@ -24760,7 +24760,7 @@ function slantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$s
   integer(blas77_int), intent(inout) :: ldab
   real(blas77_f32), intent(inout) :: ab(ldab,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slantb
+  real(blas77_f32)::slantb
 
   error_stop "This is an interface tester!"
 end function slantb
@@ -24775,7 +24775,7 @@ function slantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$slantp")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: ap(*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slantp
+  real(blas77_f32)::slantp
 
   error_stop "This is an interface tester!"
 end function slantp
@@ -24792,7 +24792,7 @@ function slantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$sla
   integer(blas77_int), intent(inout) :: lda
   real(blas77_f32), intent(inout) :: a(lda,*)
   real(blas77_f32), intent(inout) :: work(*)
-  real(blas77_f32), intent(inout) :: slantr
+  real(blas77_f32)::slantr
 
   error_stop "This is an interface tester!"
 end function slantr
@@ -24891,7 +24891,7 @@ function slapy2(x,y) bind(C, name="BLAS77Interface$slapy2")
 
   real(blas77_f32), intent(inout) :: x
   real(blas77_f32), intent(inout) :: y
-  real(blas77_f32), intent(inout) :: slapy2
+  real(blas77_f32)::slapy2
 
   error_stop "This is an interface tester!"
 end function slapy2
@@ -24903,7 +24903,7 @@ function slapy3(x,y,z) bind(C, name="BLAS77Interface$slapy3")
   real(blas77_f32), intent(inout) :: x
   real(blas77_f32), intent(inout) :: y
   real(blas77_f32), intent(inout) :: z
-  real(blas77_f32), intent(inout) :: slapy3
+  real(blas77_f32)::slapy3
 
   error_stop "This is an interface tester!"
 end function slapy3
@@ -25674,7 +25674,7 @@ function slarmm(anorm,bnorm,cnorm) bind(C, name="BLAS77Interface$slarmm")
   real(blas77_f32), intent(inout) :: anorm
   real(blas77_f32), intent(inout) :: bnorm
   real(blas77_f32), intent(inout) :: cnorm
-  real(blas77_f32), intent(inout) :: slarmm
+  real(blas77_f32)::slarmm
 
   error_stop "This is an interface tester!"
 end function slarmm
@@ -35470,7 +35470,7 @@ function zla_gbrcond_c(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,c,capply,info,work,r
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_gbrcond_c
+  real(blas77_f64)::zla_gbrcond_c
 
   error_stop "This is an interface tester!"
 end function zla_gbrcond_c
@@ -35492,7 +35492,7 @@ function zla_gbrcond_x(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,x,info,work,rwork) b
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_gbrcond_x
+  real(blas77_f64)::zla_gbrcond_x
 
   error_stop "This is an interface tester!"
 end function zla_gbrcond_x
@@ -35548,7 +35548,7 @@ function zla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) bind(C, name="BLAS77Inter
   complex(blas77_f64), intent(inout) :: ab(ldab,*)
   integer(blas77_int), intent(inout) :: ldafb
   complex(blas77_f64), intent(inout) :: afb(ldafb,*)
-  real(blas77_f64), intent(inout) :: zla_gbrpvgrw
+  real(blas77_f64)::zla_gbrpvgrw
 
   error_stop "This is an interface tester!"
 end function zla_gbrpvgrw
@@ -35588,7 +35588,7 @@ function zla_gercond_c(trans,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_gercond_c
+  real(blas77_f64)::zla_gercond_c
 
   error_stop "This is an interface tester!"
 end function zla_gercond_c
@@ -35608,7 +35608,7 @@ function zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, nam
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_gercond_x
+  real(blas77_f64)::zla_gercond_x
 
   error_stop "This is an interface tester!"
 end function zla_gercond_x
@@ -35660,7 +35660,7 @@ function zla_gerpvgrw(n,ncols,a,lda,af,ldaf) bind(C, name="BLAS77Interface$zla_g
   complex(blas77_f64), intent(inout) :: a(lda,*)
   integer(blas77_int), intent(inout) :: ldaf
   complex(blas77_f64), intent(inout) :: af(ldaf,*)
-  real(blas77_f64), intent(inout) :: zla_gerpvgrw
+  real(blas77_f64)::zla_gerpvgrw
 
   error_stop "This is an interface tester!"
 end function zla_gerpvgrw
@@ -35699,7 +35699,7 @@ function zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_hercond_c
+  real(blas77_f64)::zla_hercond_c
 
   error_stop "This is an interface tester!"
 end function zla_hercond_c
@@ -35719,7 +35719,7 @@ function zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_hercond_x
+  real(blas77_f64)::zla_hercond_x
 
   error_stop "This is an interface tester!"
 end function zla_hercond_x
@@ -35774,7 +35774,7 @@ function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   complex(blas77_f64), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zla_herpvgrw
+  real(blas77_f64)::zla_herpvgrw
 
   error_stop "This is an interface tester!"
 end function zla_herpvgrw
@@ -35808,7 +35808,7 @@ function zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) bind(C, na
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_porcond_c
+  real(blas77_f64)::zla_porcond_c
 
   error_stop "This is an interface tester!"
 end function zla_porcond_c
@@ -35827,7 +35827,7 @@ function zla_porcond_x(uplo,n,a,lda,af,ldaf,x,info,work,rwork) bind(C, name="BLA
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_porcond_x
+  real(blas77_f64)::zla_porcond_x
 
   error_stop "This is an interface tester!"
 end function zla_porcond_x
@@ -35879,7 +35879,7 @@ function zla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) bind(C, name="BLAS77Interfa
   integer(blas77_int), intent(inout) :: ldaf
   complex(blas77_f64), intent(inout) :: af(ldaf,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zla_porpvgrw
+  real(blas77_f64)::zla_porpvgrw
 
   error_stop "This is an interface tester!"
 end function zla_porpvgrw
@@ -35918,7 +35918,7 @@ function zla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) bind(
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_syrcond_c
+  real(blas77_f64)::zla_syrcond_c
 
   error_stop "This is an interface tester!"
 end function zla_syrcond_c
@@ -35938,7 +35938,7 @@ function zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) bind(C, name
   integer(blas77_int), intent(inout) :: info
   complex(blas77_f64), intent(inout) :: work(*)
   real(blas77_f64), intent(inout) :: rwork(*)
-  real(blas77_f64), intent(inout) :: zla_syrcond_x
+  real(blas77_f64)::zla_syrcond_x
 
   error_stop "This is an interface tester!"
 end function zla_syrcond_x
@@ -35993,7 +35993,7 @@ function zla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) bind(C, name="BLAS77I
   complex(blas77_f64), intent(inout) :: af(ldaf,*)
   integer(blas77_int), intent(inout) :: ipiv(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zla_syrpvgrw
+  real(blas77_f64)::zla_syrpvgrw
 
   error_stop "This is an interface tester!"
 end function zla_syrpvgrw
@@ -36137,7 +36137,7 @@ function zladiv(x,y) bind(C, name="BLAS77Interface$zladiv")
 
   complex(blas77_f64), intent(inout) :: x
   complex(blas77_f64), intent(inout) :: y
-  complex(blas77_f64), intent(inout) :: zladiv
+  complex(blas77_f64)::zladiv
 
   error_stop "This is an interface tester!"
 end function zladiv
@@ -36622,7 +36622,7 @@ function zlangb(norm,n,kl,ku,ab,ldab,work) bind(C, name="BLAS77Interface$zlangb"
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlangb
+  real(blas77_f64)::zlangb
 
   error_stop "This is an interface tester!"
 end function zlangb
@@ -36637,7 +36637,7 @@ function zlange(norm,m,n,a,lda,work) bind(C, name="BLAS77Interface$zlange")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlange
+  real(blas77_f64)::zlange
 
   error_stop "This is an interface tester!"
 end function zlange
@@ -36651,7 +36651,7 @@ function zlangt(norm,n,dl,d,du) bind(C, name="BLAS77Interface$zlangt")
   complex(blas77_f64), intent(inout) :: dl(*)
   complex(blas77_f64), intent(inout) :: d(*)
   complex(blas77_f64), intent(inout) :: du(*)
-  real(blas77_f64), intent(inout) :: zlangt
+  real(blas77_f64)::zlangt
 
   error_stop "This is an interface tester!"
 end function zlangt
@@ -36667,7 +36667,7 @@ function zlanhb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlanhb
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlanhb
+  real(blas77_f64)::zlanhb
 
   error_stop "This is an interface tester!"
 end function zlanhb
@@ -36682,7 +36682,7 @@ function zlanhe(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhe")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlanhe
+  real(blas77_f64)::zlanhe
 
   error_stop "This is an interface tester!"
 end function zlanhe
@@ -36697,7 +36697,7 @@ function zlanhf(norm,transr,uplo,n,a,work) bind(C, name="BLAS77Interface$zlanhf"
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: a(0:*)
   real(blas77_f64), intent(inout) :: work(0:*)
-  real(blas77_f64), intent(inout) :: zlanhf
+  real(blas77_f64)::zlanhf
 
   error_stop "This is an interface tester!"
 end function zlanhf
@@ -36711,7 +36711,7 @@ function zlanhp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlanhp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: ap(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlanhp
+  real(blas77_f64)::zlanhp
 
   error_stop "This is an interface tester!"
 end function zlanhp
@@ -36725,7 +36725,7 @@ function zlanhs(norm,n,a,lda,work) bind(C, name="BLAS77Interface$zlanhs")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlanhs
+  real(blas77_f64)::zlanhs
 
   error_stop "This is an interface tester!"
 end function zlanhs
@@ -36738,7 +36738,7 @@ function zlanht(norm,n,d,e) bind(C, name="BLAS77Interface$zlanht")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: d(*)
   complex(blas77_f64), intent(inout) :: e(*)
-  real(blas77_f64), intent(inout) :: zlanht
+  real(blas77_f64)::zlanht
 
   error_stop "This is an interface tester!"
 end function zlanht
@@ -36754,7 +36754,7 @@ function zlansb(norm,uplo,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$zlansb
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlansb
+  real(blas77_f64)::zlansb
 
   error_stop "This is an interface tester!"
 end function zlansb
@@ -36768,7 +36768,7 @@ function zlansp(norm,uplo,n,ap,work) bind(C, name="BLAS77Interface$zlansp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: ap(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlansp
+  real(blas77_f64)::zlansp
 
   error_stop "This is an interface tester!"
 end function zlansp
@@ -36783,7 +36783,7 @@ function zlansy(norm,uplo,n,a,lda,work) bind(C, name="BLAS77Interface$zlansy")
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlansy
+  real(blas77_f64)::zlansy
 
   error_stop "This is an interface tester!"
 end function zlansy
@@ -36800,7 +36800,7 @@ function zlantb(norm,uplo,diag,n,k,ab,ldab,work) bind(C, name="BLAS77Interface$z
   integer(blas77_int), intent(inout) :: ldab
   complex(blas77_f64), intent(inout) :: ab(ldab,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlantb
+  real(blas77_f64)::zlantb
 
   error_stop "This is an interface tester!"
 end function zlantb
@@ -36815,7 +36815,7 @@ function zlantp(norm,uplo,diag,n,ap,work) bind(C, name="BLAS77Interface$zlantp")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: ap(*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlantp
+  real(blas77_f64)::zlantp
 
   error_stop "This is an interface tester!"
 end function zlantp
@@ -36832,7 +36832,7 @@ function zlantr(norm,uplo,diag,m,n,a,lda,work) bind(C, name="BLAS77Interface$zla
   integer(blas77_int), intent(inout) :: lda
   complex(blas77_f64), intent(inout) :: a(lda,*)
   real(blas77_f64), intent(inout) :: work(*)
-  real(blas77_f64), intent(inout) :: zlantr
+  real(blas77_f64)::zlantr
 
   error_stop "This is an interface tester!"
 end function zlantr

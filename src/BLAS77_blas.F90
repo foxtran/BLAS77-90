@@ -52,7 +52,7 @@ function cdotc(n,cx,incx,cy,incy) bind(C, name="BLAS77Interface$cdotc")
   integer(blas77_int), intent(inout) :: incx
   complex(blas77_f32), intent(inout) :: cy(*)
   integer(blas77_int), intent(inout) :: incy
-  complex(blas77_f32), intent(inout) :: cdotc
+  complex(blas77_f32)::cdotc
 
   error_stop "This is an interface tester!"
 end function cdotc
@@ -66,7 +66,7 @@ function cdotu(n,cx,incx,cy,incy) bind(C, name="BLAS77Interface$cdotu")
   integer(blas77_int), intent(inout) :: incx
   complex(blas77_f32), intent(inout) :: cy(*)
   integer(blas77_int), intent(inout) :: incy
-  complex(blas77_f32), intent(inout) :: cdotu
+  complex(blas77_f32)::cdotu
 
   error_stop "This is an interface tester!"
 end function cdotu
@@ -624,7 +624,7 @@ function dasum(n,dx,incx) bind(C, name="BLAS77Interface$dasum")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: dx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f64), intent(inout) :: dasum
+  real(blas77_f64)::dasum
 
   error_stop "This is an interface tester!"
 end function dasum
@@ -663,7 +663,7 @@ function dcabs1(z) bind(C, name="BLAS77Interface$dcabs1")
   implicit none
 
   complex(blas77_f64), intent(inout) :: z
-  real(blas77_f64), intent(inout) :: dcabs1
+  real(blas77_f64)::dcabs1
 
   error_stop "This is an interface tester!"
 end function dcabs1
@@ -690,7 +690,7 @@ function ddot(n,dx,incx,dy,incy) bind(C, name="BLAS77Interface$ddot")
   integer(blas77_int), intent(inout) :: incx
   real(blas77_f64), intent(inout) :: dy(*)
   integer(blas77_int), intent(inout) :: incy
-  real(blas77_f64), intent(inout) :: ddot
+  real(blas77_f64)::ddot
 
   error_stop "This is an interface tester!"
 end function ddot
@@ -801,7 +801,7 @@ function dnrm2(n,x,incx) bind(C, name="BLAS77Interface$dnrm2")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: x(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f64), intent(inout) :: dnrm2
+  real(blas77_f64)::dnrm2
 
   error_stop "This is an interface tester!"
 end function dnrm2
@@ -900,7 +900,7 @@ function dsdot(n,sx,incx,sy,incy) bind(C, name="BLAS77Interface$dsdot")
   integer(blas77_int), intent(inout) :: incx
   real(blas77_f32), intent(inout) :: sy(*)
   integer(blas77_int), intent(inout) :: incy
-  real(blas77_f64), intent(inout) :: dsdot
+  real(blas77_f64)::dsdot
 
   error_stop "This is an interface tester!"
 end function dsdot
@@ -1289,7 +1289,7 @@ function dzasum(n,zx,incx) bind(C, name="BLAS77Interface$dzasum")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: zx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f64), intent(inout) :: dzasum
+  real(blas77_f64)::dzasum
 
   error_stop "This is an interface tester!"
 end function dzasum
@@ -1301,7 +1301,7 @@ function dznrm2(n,x,incx) bind(C, name="BLAS77Interface$dznrm2")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: x(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f64), intent(inout) :: dznrm2
+  real(blas77_f64)::dznrm2
 
   error_stop "This is an interface tester!"
 end function dznrm2
@@ -1313,7 +1313,7 @@ function icamax(n,cx,incx) bind(C, name="BLAS77Interface$icamax")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: cx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: icamax
+  integer(blas77_int)::icamax
 
   error_stop "This is an interface tester!"
 end function icamax
@@ -1325,7 +1325,7 @@ function idamax(n,dx,incx) bind(C, name="BLAS77Interface$idamax")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f64), intent(inout) :: dx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: idamax
+  integer(blas77_int)::idamax
 
   error_stop "This is an interface tester!"
 end function idamax
@@ -1337,7 +1337,7 @@ function isamax(n,sx,incx) bind(C, name="BLAS77Interface$isamax")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: sx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: isamax
+  integer(blas77_int)::isamax
 
   error_stop "This is an interface tester!"
 end function isamax
@@ -1349,7 +1349,7 @@ function izamax(n,zx,incx) bind(C, name="BLAS77Interface$izamax")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f64), intent(inout) :: zx(*)
   integer(blas77_int), intent(inout) :: incx
-  integer(blas77_int), intent(inout) :: izamax
+  integer(blas77_int)::izamax
 
   error_stop "This is an interface tester!"
 end function izamax
@@ -1360,7 +1360,7 @@ function lsame(ca,cb) bind(C, name="BLAS77Interface$lsame")
 
   character(len=1), intent(inout) :: ca
   character(len=1), intent(inout) :: cb
-  logical(blas77_int), intent(inout) :: lsame
+  logical(blas77_int)::lsame
 
   error_stop "This is an interface tester!"
 end function lsame
@@ -1372,7 +1372,7 @@ function sasum(n,sx,incx) bind(C, name="BLAS77Interface$sasum")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: sx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f32), intent(inout) :: sasum
+  real(blas77_f32)::sasum
 
   error_stop "This is an interface tester!"
 end function sasum
@@ -1411,7 +1411,7 @@ function scabs1(z) bind(C, name="BLAS77Interface$scabs1")
   implicit none
 
   complex(blas77_f32), intent(inout) :: z
-  real(blas77_f32), intent(inout) :: scabs1
+  real(blas77_f32)::scabs1
 
   error_stop "This is an interface tester!"
 end function scabs1
@@ -1423,7 +1423,7 @@ function scasum(n,cx,incx) bind(C, name="BLAS77Interface$scasum")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: cx(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f32), intent(inout) :: scasum
+  real(blas77_f32)::scasum
 
   error_stop "This is an interface tester!"
 end function scasum
@@ -1435,7 +1435,7 @@ function scnrm2(n,x,incx) bind(C, name="BLAS77Interface$scnrm2")
   integer(blas77_int), intent(inout) :: n
   complex(blas77_f32), intent(inout) :: x(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f32), intent(inout) :: scnrm2
+  real(blas77_f32)::scnrm2
 
   error_stop "This is an interface tester!"
 end function scnrm2
@@ -1462,7 +1462,7 @@ function sdot(n,sx,incx,sy,incy) bind(C, name="BLAS77Interface$sdot")
   integer(blas77_int), intent(inout) :: incx
   real(blas77_f32), intent(inout) :: sy(*)
   integer(blas77_int), intent(inout) :: incy
-  real(blas77_f32), intent(inout) :: sdot
+  real(blas77_f32)::sdot
 
   error_stop "This is an interface tester!"
 end function sdot
@@ -1477,7 +1477,7 @@ function sdsdot(n,sb,sx,incx,sy,incy) bind(C, name="BLAS77Interface$sdsdot")
   integer(blas77_int), intent(inout) :: incx
   real(blas77_f32), intent(inout) :: sy(*)
   integer(blas77_int), intent(inout) :: incy
-  real(blas77_f32), intent(inout) :: sdsdot
+  real(blas77_f32)::sdsdot
 
   error_stop "This is an interface tester!"
 end function sdsdot
@@ -1588,7 +1588,7 @@ function snrm2(n,x,incx) bind(C, name="BLAS77Interface$snrm2")
   integer(blas77_int), intent(inout) :: n
   real(blas77_f32), intent(inout) :: x(*)
   integer(blas77_int), intent(inout) :: incx
-  real(blas77_f32), intent(inout) :: snrm2
+  real(blas77_f32)::snrm2
 
   error_stop "This is an interface tester!"
 end function snrm2
@@ -2127,7 +2127,7 @@ function zdotc(n,zx,incx,zy,incy) bind(C, name="BLAS77Interface$zdotc")
   integer(blas77_int), intent(inout) :: incx
   complex(blas77_f64), intent(inout) :: zy(*)
   integer(blas77_int), intent(inout) :: incy
-  complex(blas77_f64), intent(inout) :: zdotc
+  complex(blas77_f64)::zdotc
 
   error_stop "This is an interface tester!"
 end function zdotc
@@ -2141,7 +2141,7 @@ function zdotu(n,zx,incx,zy,incy) bind(C, name="BLAS77Interface$zdotu")
   integer(blas77_int), intent(inout) :: incx
   complex(blas77_f64), intent(inout) :: zy(*)
   integer(blas77_int), intent(inout) :: incy
-  complex(blas77_f64), intent(inout) :: zdotu
+  complex(blas77_f64)::zdotu
 
   error_stop "This is an interface tester!"
 end function zdotu

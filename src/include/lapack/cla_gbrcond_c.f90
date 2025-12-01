@@ -14,5 +14,5 @@ logical(blas77_int), intent(inout) :: capply
 integer(blas77_int), intent(inout) :: info
 complex(blas77_f32), intent(inout) :: work(*)
 real(blas77_f32), intent(inout) :: rwork(*)
-real(blas77_f32), intent(inout) :: cla_gbrcond_c
+real(blas77_f32)::cla_gbrcond_c
 end

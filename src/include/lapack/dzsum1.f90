@@ -3,5 +3,5 @@ import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: cx(*)
 integer(blas77_int), intent(inout) :: incx
-real(blas77_f64), intent(inout) :: dzsum1
+real(blas77_f64)::dzsum1
 end

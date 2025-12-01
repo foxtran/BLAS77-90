@@ -7,5 +7,5 @@ integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ilo
 integer(blas77_int), intent(inout) :: ihi
 integer(blas77_int), intent(inout) :: lwork
-integer(blas77_int), intent(inout) :: iparmq
+integer(blas77_int)::iparmq
 end

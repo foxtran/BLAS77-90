@@ -6,5 +6,5 @@ integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda
 real(blas77_f32), intent(inout) :: a(lda,*)
 real(blas77_f32), intent(inout) :: work(*)
-real(blas77_f32), intent(inout) :: slansy
+real(blas77_f32)::slansy
 end

@@ -7,5 +7,5 @@ integer(blas77_int), intent(inout) :: ni
 integer(blas77_int), intent(inout) :: nbi
 integer(blas77_int), intent(inout) :: ibi
 integer(blas77_int), intent(inout) :: nxi
-integer(blas77_int), intent(inout) :: iparam2stage
+integer(blas77_int)::iparam2stage
 end

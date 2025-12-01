@@ -6,5 +6,5 @@ character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: a(0:*)
 real(blas77_f32), intent(inout) :: work(0:*)
-real(blas77_f32), intent(inout) :: clanhf
+real(blas77_f32)::clanhf
 end

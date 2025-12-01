@@ -7,5 +7,5 @@ complex(blas77_f64), intent(inout) :: a(lda,*)
 integer(blas77_int), intent(inout) :: ldaf
 complex(blas77_f64), intent(inout) :: af(ldaf,*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: zla_porpvgrw
+real(blas77_f64)::zla_porpvgrw
 end

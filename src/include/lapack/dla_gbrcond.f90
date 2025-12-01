@@ -14,5 +14,5 @@ real(blas77_f64), intent(inout) :: c(*)
 integer(blas77_int), intent(inout) :: info
 real(blas77_f64), intent(inout) :: work(*)
 integer(blas77_int), intent(inout) :: iwork(*)
-real(blas77_f64), intent(inout) :: dla_gbrcond
+real(blas77_f64)::dla_gbrcond
 end

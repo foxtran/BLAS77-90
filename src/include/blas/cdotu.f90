@@ -5,5 +5,5 @@ complex(blas77_f32), intent(inout) :: cx(*)
 integer(blas77_int), intent(inout) :: incx
 complex(blas77_f32), intent(inout) :: cy(*)
 integer(blas77_int), intent(inout) :: incy
-complex(blas77_f32), intent(inout) :: cdotu
+complex(blas77_f32)::cdotu
 end

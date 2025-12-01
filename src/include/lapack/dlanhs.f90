@@ -5,5 +5,5 @@ integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda
 real(blas77_f64), intent(inout) :: a(lda,*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: dlanhs
+real(blas77_f64)::dlanhs
 end

@@ -8,5 +8,5 @@ integer(blas77_int), intent(inout) :: k
 integer(blas77_int), intent(inout) :: ldab
 complex(blas77_f64), intent(inout) :: ab(ldab,*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: zlantb
+real(blas77_f64)::zlantb
 end

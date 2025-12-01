@@ -5,5 +5,5 @@ integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: dl(*)
 real(blas77_f32), intent(inout) :: d(*)
 real(blas77_f32), intent(inout) :: du(*)
-real(blas77_f32), intent(inout) :: slangt
+real(blas77_f32)::slangt
 end

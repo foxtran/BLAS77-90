@@ -5,5 +5,5 @@ character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: ap(*)
 real(blas77_f64), intent(inout) :: work(*)
-real(blas77_f64), intent(inout) :: zlanhp
+real(blas77_f64)::zlanhp
 end
