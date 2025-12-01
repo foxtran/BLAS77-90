@@ -1588,8 +1588,6 @@ module lapack77
 #   include "include/lapack/strttp.f90"
 #   include "include/lapack/stzrqf.f90"
 #   include "include/lapack/stzrzf.f90"
-#   include "include/lapack/xerbla_array.f90"
-#   include "include/lapack/xerbla.f90"
 #   include "include/lapack/zbbcsd.f90"
 #   include "include/lapack/zbdsqr.f90"
 #   include "include/lapack/zcgesv.f90"

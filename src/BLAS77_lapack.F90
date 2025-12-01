@@ -31314,27 +31314,6 @@ subroutine stzrzf(m,n,a,lda,tau,work,lwork,info) bind(C, name="BLAS77Interface$s
   error_stop "This is an interface tester!"
 end subroutine stzrzf
 
-subroutine xerbla_array(srname_array,srname_len,info) bind(C, name="BLAS77Interface$xerbla_array")
-  use blas77_types
-  implicit none
-
-  integer(blas77_int), intent(inout) :: srname_len
-  character(len=1), intent(inout) :: srname_array(srname_len)
-  integer(blas77_int), intent(inout) :: info
-
-  error_stop "This is an interface tester!"
-end subroutine xerbla_array
-
-subroutine xerbla(srname,info) bind(C, name="BLAS77Interface$xerbla")
-  use blas77_types
-  implicit none
-
-  character(len=*), intent(inout) :: srname
-  integer(blas77_int), intent(inout) :: info
-
-  error_stop "This is an interface tester!"
-end subroutine xerbla
-
 subroutine zbbcsd(jobu1,jobu2,jobv1t,jobv2t,trans,m,p,q,theta,phi,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,b11d,b11e,b12d,b12e,b21d,b21e,b22d,b22e,rwork,lrwork,info) bind(C, name="BLAS77Interface$zbbcsd")
   use blas77_types
   implicit none
