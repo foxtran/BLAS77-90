@@ -71,7 +71,7 @@ def process_dummy(code: str, library_name: str) -> str:
 
     out.extend(body_lines)
     out.append("")
-    out.append('  error stop "This is an interface tester!"')
+    out.append('  error_stop "This is an interface tester!"')
 
     out.append(f"end {kind} {name}")
 
@@ -127,6 +127,7 @@ def process_library(library_name: str, interface_dir: Path, src_dir: Path):
 
     dummy_header_lines = [
         '#include "cname-rules.inc"',
+        '#include "error_stop-rules.inc"',
         "",
         "",
     ]
