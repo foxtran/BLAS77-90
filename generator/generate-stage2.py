@@ -126,6 +126,9 @@ def process_long_lines(text: str, max_len: int = 80) -> str:
 
         indent = re.match(r'^\s*', line).group(0)
         parts = re.split(r'([,\s]+)', line)
+        if "BEGCNAME" in line:
+            cmbd = "".join(parts[-5:])
+            parts = parts[:-5] + [cmbd]
 
         new_line = indent
         current_len = len(new_line)
