@@ -76,7 +76,7 @@ def process_dummy(code: str, library_name: str) -> str:
     body_lines = ["  " + line for line in body_lines]
 
     out = [
-        f'{kind} {name}{args} bind(C, name="BLAS77Interface${name}")',
+        f'{kind} {name}{args} bind(C, name="{name}$BLAS77Interface")',
         "  use blas77_types",
     ]
 
