@@ -107,13 +107,46 @@ def process_routine(fname: Path, src_dir: Path, library_name: str) -> (str, str)
     wrapper = process_dummy(interface, library_name)
 
     with out_path.open("w", encoding="utf-8") as f:
-        f.write(include)
+        f.write(process_long_lines(include))
 
     if "procedure" in include:
         print (f"Not generated: {sname}")
         return ("", "")
 
     return (f'#   include "{out_fname}"', wrapper)
+
+
+def process_long_lines(text: str, max_len: int = 80) -> str:
+    out_lines = []
+
+    for line in text.splitlines():
+        if len(line) <= max_len:
+            out_lines.append(line)
+            continue
+
+        indent = re.match(r'^\s*', line).group(0)
+        parts = re.split(r'([,\s]+)', line)
+
+        new_line = indent
+        current_len = len(new_line)
+
+        for i in range(0, len(parts), 2):
+            token = parts[i]
+            sep = parts[i+1] if i+1 < len(parts) else ""
+
+            chunk = token + sep
+
+            if current_len + len(chunk) > max_len:
+                out_lines.append(new_line.rstrip() + " &")
+                new_line = indent + "    " + chunk.lstrip()
+                current_len = len(new_line)
+            else:
+                new_line += chunk
+                current_len += len(chunk)
+
+        out_lines.append(new_line)
+
+    return "\n".join(out_lines)
 
 
 def process_library(library_name: str, interface_dir: Path, src_dir: Path):
@@ -156,8 +189,8 @@ def process_library(library_name: str, interface_dir: Path, src_dir: Path):
         module_body.append(include)
         dummy_body.append(subroutine)
 
-    module_text = "\n".join(module_header_lines) + "\n".join(module_body) + "\n".join(module_footer_lines)
-    dummy_text = "\n".join(dummy_header_lines) + "\n".join(dummy_body)
+    module_text = process_long_lines("\n".join(module_header_lines) + "\n".join(module_body) + "\n".join(module_footer_lines))
+    dummy_text = process_long_lines("\n".join(dummy_header_lines) + "\n".join(dummy_body))
 
     out_path = src_dir / (library_name + "77.F90")
     with out_path.open("w", encoding="utf-8") as f:
