@@ -1,5 +1,5 @@
-pure subroutine zgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) BEGCNAME(zgehrd, &
-    SUFFIX)
+pure subroutine zgehrd(n,ilo,ihi,a,lda,tau,work,lwork, &
+    info) BEGCNAME(zgehrd,SUFFIX)
 ENDCNAME(zgehrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

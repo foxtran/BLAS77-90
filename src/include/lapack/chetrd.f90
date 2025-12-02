@@ -1,5 +1,5 @@
-pure subroutine chetrd(uplo,n,a,lda,d,e,tau,work,lwork,info) BEGCNAME(chetrd, &
-    SUFFIX)
+pure subroutine chetrd(uplo,n,a,lda,d,e,tau,work,lwork, &
+    info) BEGCNAME(chetrd,SUFFIX)
 ENDCNAME(chetrd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

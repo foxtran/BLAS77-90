@@ -1,5 +1,5 @@
-pure subroutine sgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(sgbmv,SUFFIX)
+pure subroutine sgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(sgbmv,SUFFIX)
 ENDCNAME(sgbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

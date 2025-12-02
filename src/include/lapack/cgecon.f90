@@ -1,5 +1,5 @@
-pure subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) &
-    BEGCNAME(cgecon,SUFFIX)
+pure subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork, &
+    info) BEGCNAME(cgecon,SUFFIX)
 ENDCNAME(cgecon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

@@ -1,5 +1,5 @@
-pure subroutine dlasd4(n,i,d,z,delta,rho,sigma,work,info) BEGCNAME(dlasd4, &
-    SUFFIX)
+pure subroutine dlasd4(n,i,d,z,delta,rho,sigma,work, &
+    info) BEGCNAME(dlasd4,SUFFIX)
 ENDCNAME(dlasd4,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

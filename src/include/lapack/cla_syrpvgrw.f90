@@ -1,5 +1,5 @@
-pure function cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) &
-    BEGCNAME(cla_syrpvgrw,SUFFIX)
+pure function cla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv, &
+    work) BEGCNAME(cla_syrpvgrw,SUFFIX)
 ENDCNAME(cla_syrpvgrw,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

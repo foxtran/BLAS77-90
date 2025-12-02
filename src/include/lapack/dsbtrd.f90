@@ -1,5 +1,5 @@
-pure subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) &
-    BEGCNAME(dsbtrd,SUFFIX)
+pure subroutine dsbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work, &
+    info) BEGCNAME(dsbtrd,SUFFIX)
 ENDCNAME(dsbtrd,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

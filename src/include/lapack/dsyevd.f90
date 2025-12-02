@@ -1,5 +1,5 @@
-pure subroutine dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) &
-    BEGCNAME(dsyevd,SUFFIX)
+pure subroutine dsyevd(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork, &
+    info) BEGCNAME(dsyevd,SUFFIX)
 ENDCNAME(dsyevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

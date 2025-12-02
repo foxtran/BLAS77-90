@@ -1,5 +1,5 @@
-pure subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(csycon, &
-    SUFFIX)
+pure subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(csycon,SUFFIX)
 ENDCNAME(csycon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

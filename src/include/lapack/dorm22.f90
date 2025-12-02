@@ -1,5 +1,5 @@
-pure subroutine dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) &
-    BEGCNAME(dorm22,SUFFIX)
+pure subroutine dorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork, &
+    info) BEGCNAME(dorm22,SUFFIX)
 ENDCNAME(dorm22,SUFFIX)
 import
 character(len=1), intent(inout) :: side

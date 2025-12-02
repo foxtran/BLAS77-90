@@ -1,5 +1,5 @@
-pure function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) &
-    BEGCNAME(sla_porcond,SUFFIX)
+pure function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work, &
+    iwork) BEGCNAME(sla_porcond,SUFFIX)
 ENDCNAME(sla_porcond,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

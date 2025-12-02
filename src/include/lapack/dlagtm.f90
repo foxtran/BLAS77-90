@@ -1,5 +1,5 @@
-pure subroutine dlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) &
-    BEGCNAME(dlagtm,SUFFIX)
+pure subroutine dlagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b, &
+    ldb) BEGCNAME(dlagtm,SUFFIX)
 ENDCNAME(dlagtm,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

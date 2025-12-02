@@ -1,6 +1,6 @@
 pure subroutine zlaqz2(ilschur,ilq,ilz,n,ilo,ihi,nw,a,lda,b,ldb,q,ldq,z,ldz,ns, &
-    nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec,info) BEGCNAME(zlaqz2, &
-    SUFFIX)
+    nd,alpha,beta,qc,ldqc,zc,ldzc,work,lwork,rwork,rec, &
+    info) BEGCNAME(zlaqz2,SUFFIX)
 ENDCNAME(zlaqz2,SUFFIX)
 import
 logical(blas77_int),intent(in)::ilschur

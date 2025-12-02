@@ -1,5 +1,5 @@
-pure subroutine ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork,info) &
-    BEGCNAME(ztpcon,SUFFIX)
+pure subroutine ztpcon(norm,uplo,diag,n,ap,rcond,work,rwork, &
+    info) BEGCNAME(ztpcon,SUFFIX)
 ENDCNAME(ztpcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

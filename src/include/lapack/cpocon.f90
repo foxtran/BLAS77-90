@@ -1,5 +1,5 @@
-pure subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork,info) &
-    BEGCNAME(cpocon,SUFFIX)
+pure subroutine cpocon(uplo,n,a,lda,anorm,rcond,work,rwork, &
+    info) BEGCNAME(cpocon,SUFFIX)
 ENDCNAME(cpocon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

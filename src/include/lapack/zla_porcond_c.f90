@@ -1,5 +1,5 @@
-pure function zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work,rwork) &
-    BEGCNAME(zla_porcond_c,SUFFIX)
+pure function zla_porcond_c(uplo,n,a,lda,af,ldaf,c,capply,info,work, &
+    rwork) BEGCNAME(zla_porcond_c,SUFFIX)
 ENDCNAME(zla_porcond_c,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

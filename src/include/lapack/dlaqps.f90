@@ -1,5 +1,5 @@
-pure subroutine dlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f,ldf) &
-    BEGCNAME(dlaqps,SUFFIX)
+pure subroutine dlaqps(m,n,offset,nb,kb,a,lda,jpvt,tau,vn1,vn2,auxv,f, &
+    ldf) BEGCNAME(dlaqps,SUFFIX)
 ENDCNAME(dlaqps,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

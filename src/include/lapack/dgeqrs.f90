@@ -1,5 +1,5 @@
-pure subroutine dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) &
-    BEGCNAME(dgeqrs,SUFFIX)
+pure subroutine dgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork, &
+    info) BEGCNAME(dgeqrs,SUFFIX)
 ENDCNAME(dgeqrs,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

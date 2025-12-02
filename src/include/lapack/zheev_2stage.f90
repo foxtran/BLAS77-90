@@ -1,5 +1,5 @@
-pure subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) &
-    BEGCNAME(zheev_2stage,SUFFIX)
+pure subroutine zheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork, &
+    info) BEGCNAME(zheev_2stage,SUFFIX)
 ENDCNAME(zheev_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

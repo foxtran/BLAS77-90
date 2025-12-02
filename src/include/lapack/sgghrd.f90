@@ -1,5 +1,5 @@
-pure subroutine sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,info) &
-    BEGCNAME(sgghrd,SUFFIX)
+pure subroutine sgghrd(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz, &
+    info) BEGCNAME(sgghrd,SUFFIX)
 ENDCNAME(sgghrd,SUFFIX)
 import
 character(len=1), intent(inout) :: compq

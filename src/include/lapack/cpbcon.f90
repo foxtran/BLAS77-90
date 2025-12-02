@@ -1,5 +1,5 @@
-pure subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) &
-    BEGCNAME(cpbcon,SUFFIX)
+pure subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork, &
+    info) BEGCNAME(cpbcon,SUFFIX)
 ENDCNAME(cpbcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

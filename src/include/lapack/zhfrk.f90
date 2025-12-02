@@ -1,5 +1,5 @@
-pure subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) BEGCNAME(zhfrk, &
-    SUFFIX)
+pure subroutine zhfrk(transr,uplo,trans,n,k,alpha,a,lda,beta, &
+    c) BEGCNAME(zhfrk,SUFFIX)
 ENDCNAME(zhfrk,SUFFIX)
 import
 character(len=1), intent(inout) :: transr

@@ -1,5 +1,5 @@
-pure subroutine zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(zgetrs, &
-    SUFFIX)
+pure subroutine zgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb, &
+    info) BEGCNAME(zgetrs,SUFFIX)
 ENDCNAME(zgetrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

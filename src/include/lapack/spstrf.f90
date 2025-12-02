@@ -1,5 +1,5 @@
-pure subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work,info) BEGCNAME(spstrf, &
-    SUFFIX)
+pure subroutine spstrf(uplo,n,a,lda,piv,rank,tol,work, &
+    info) BEGCNAME(spstrf,SUFFIX)
 ENDCNAME(spstrf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

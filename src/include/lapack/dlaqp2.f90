@@ -1,5 +1,5 @@
-pure subroutine dlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) BEGCNAME(dlaqp2, &
-    SUFFIX)
+pure subroutine dlaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2, &
+    work) BEGCNAME(dlaqp2,SUFFIX)
 ENDCNAME(dlaqp2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

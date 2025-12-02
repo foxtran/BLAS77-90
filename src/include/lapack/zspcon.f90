@@ -1,5 +1,5 @@
-pure subroutine zspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) BEGCNAME(zspcon, &
-    SUFFIX)
+pure subroutine zspcon(uplo,n,ap,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(zspcon,SUFFIX)
 ENDCNAME(zspcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

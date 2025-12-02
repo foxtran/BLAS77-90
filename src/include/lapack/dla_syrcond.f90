@@ -1,5 +1,5 @@
-pure function dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) &
-    BEGCNAME(dla_syrcond,SUFFIX)
+pure function dla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work, &
+    iwork) BEGCNAME(dla_syrcond,SUFFIX)
 ENDCNAME(dla_syrcond,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

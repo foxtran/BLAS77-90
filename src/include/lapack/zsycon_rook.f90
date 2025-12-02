@@ -1,5 +1,5 @@
-pure subroutine zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) &
-    BEGCNAME(zsycon_rook,SUFFIX)
+pure subroutine zsycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(zsycon_rook,SUFFIX)
 ENDCNAME(zsycon_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

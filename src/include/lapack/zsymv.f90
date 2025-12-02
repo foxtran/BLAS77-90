@@ -1,5 +1,5 @@
-pure subroutine zsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(zsymv, &
-    SUFFIX)
+pure subroutine zsymv(uplo,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(zsymv,SUFFIX)
 ENDCNAME(zsymv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

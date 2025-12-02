@@ -1,5 +1,5 @@
-pure subroutine zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(zhetrs_aa,SUFFIX)
+pure subroutine zhetrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(zhetrs_aa,SUFFIX)
 ENDCNAME(zhetrs_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

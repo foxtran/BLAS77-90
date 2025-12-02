@@ -1,5 +1,5 @@
-pure subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(zsysv_aa,SUFFIX)
+pure subroutine zsysv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(zsysv_aa,SUFFIX)
 ENDCNAME(zsysv_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

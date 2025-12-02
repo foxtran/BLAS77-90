@@ -1,5 +1,5 @@
-pure subroutine zsyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) &
-    BEGCNAME(zsyconvf_rook,SUFFIX)
+pure subroutine zsyconvf_rook(uplo,way,n,a,lda,e,ipiv, &
+    info) BEGCNAME(zsyconvf_rook,SUFFIX)
 ENDCNAME(zsyconvf_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

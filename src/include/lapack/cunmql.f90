@@ -1,5 +1,5 @@
-pure subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(cunmql,SUFFIX)
+pure subroutine cunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(cunmql,SUFFIX)
 ENDCNAME(cunmql,SUFFIX)
 import
 character(len=1), intent(inout) :: side

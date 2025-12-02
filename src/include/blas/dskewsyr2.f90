@@ -1,5 +1,5 @@
-pure subroutine dskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda) BEGCNAME(dskewsyr2, &
-    SUFFIX)
+pure subroutine dskewsyr2(uplo,n,alpha,x,incx,y,incy,a, &
+    lda) BEGCNAME(dskewsyr2,SUFFIX)
 ENDCNAME(dskewsyr2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

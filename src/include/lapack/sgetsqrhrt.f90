@@ -1,5 +1,5 @@
-pure subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork,info) &
-    BEGCNAME(sgetsqrhrt,SUFFIX)
+pure subroutine sgetsqrhrt(m,n,mb1,nb1,nb2,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(sgetsqrhrt,SUFFIX)
 ENDCNAME(sgetsqrhrt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

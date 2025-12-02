@@ -1,5 +1,5 @@
-pure subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) &
-    BEGCNAME(zgecon,SUFFIX)
+pure subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork, &
+    info) BEGCNAME(zgecon,SUFFIX)
 ENDCNAME(zgecon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

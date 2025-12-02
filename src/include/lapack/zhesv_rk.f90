@@ -1,5 +1,5 @@
-pure subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(zhesv_rk,SUFFIX)
+pure subroutine zhesv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(zhesv_rk,SUFFIX)
 ENDCNAME(zhesv_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

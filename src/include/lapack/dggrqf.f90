@@ -1,5 +1,5 @@
-pure subroutine dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork,info) &
-    BEGCNAME(dggrqf,SUFFIX)
+pure subroutine dggrqf(m,p,n,a,lda,taua,b,ldb,taub,work,lwork, &
+    info) BEGCNAME(dggrqf,SUFFIX)
 ENDCNAME(dggrqf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

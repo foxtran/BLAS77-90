@@ -1,5 +1,5 @@
-pure subroutine cspcon(uplo,n,ap,ipiv,anorm,rcond,work,info) BEGCNAME(cspcon, &
-    SUFFIX)
+pure subroutine cspcon(uplo,n,ap,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(cspcon,SUFFIX)
 ENDCNAME(cspcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,6 +1,6 @@
 pure subroutine dgges3(jobvsl,jobvsr,sort,selctg,n,a,lda,b,ldb,sdim,alphar, &
-    alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork,info) BEGCNAME(dgges3, &
-    SUFFIX)
+    alphai,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,bwork, &
+    info) BEGCNAME(dgges3,SUFFIX)
 ENDCNAME(dgges3,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvsl

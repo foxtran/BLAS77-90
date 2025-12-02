@@ -1,5 +1,5 @@
-pure function dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) &
-    BEGCNAME(dla_syrpvgrw,SUFFIX)
+pure function dla_syrpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv, &
+    work) BEGCNAME(dla_syrpvgrw,SUFFIX)
 ENDCNAME(dla_syrpvgrw,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

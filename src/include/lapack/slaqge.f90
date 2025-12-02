@@ -1,5 +1,5 @@
-pure subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) BEGCNAME(slaqge, &
-    SUFFIX)
+pure subroutine slaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax, &
+    equed) BEGCNAME(slaqge,SUFFIX)
 ENDCNAME(slaqge,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

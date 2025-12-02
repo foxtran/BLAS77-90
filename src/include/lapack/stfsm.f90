@@ -1,5 +1,5 @@
-pure subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) &
-    BEGCNAME(stfsm,SUFFIX)
+pure subroutine stfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b, &
+    ldb) BEGCNAME(stfsm,SUFFIX)
 ENDCNAME(stfsm,SUFFIX)
 import
 character(len=1), intent(inout) :: transr

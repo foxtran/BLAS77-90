@@ -1,5 +1,5 @@
-pure subroutine chbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(chbmv, &
-    SUFFIX)
+pure subroutine chbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(chbmv,SUFFIX)
 ENDCNAME(chbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

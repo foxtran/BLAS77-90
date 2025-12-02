@@ -1,5 +1,5 @@
-pure subroutine zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) BEGCNAME(zgeequb, &
-    SUFFIX)
+pure subroutine zgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax, &
+    info) BEGCNAME(zgeequb,SUFFIX)
 ENDCNAME(zgeequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

@@ -1,6 +1,6 @@
 pure subroutine sgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k, &
-    reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork,info) &
-    BEGCNAME(sgedmd,SUFFIX)
+    reig,imeig,z,ldz,res,b,ldb,w,ldw,s,lds,work,lwork,iwork,liwork, &
+    info) BEGCNAME(sgedmd,SUFFIX)
 ENDCNAME(sgedmd,SUFFIX)
 import
 character(len=1),intent(in)::jobs

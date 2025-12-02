@@ -1,5 +1,5 @@
-pure subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) &
-    BEGCNAME(chbtrd,SUFFIX)
+pure subroutine chbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work, &
+    info) BEGCNAME(chbtrd,SUFFIX)
 ENDCNAME(chbtrd,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

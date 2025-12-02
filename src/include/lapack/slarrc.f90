@@ -1,5 +1,5 @@
-pure subroutine slarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) &
-    BEGCNAME(slarrc,SUFFIX)
+pure subroutine slarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt, &
+    info) BEGCNAME(slarrc,SUFFIX)
 ENDCNAME(slarrc,SUFFIX)
 import
 character(len=1), intent(inout) :: jobt

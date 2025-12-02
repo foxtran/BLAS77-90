@@ -1,5 +1,5 @@
-pure subroutine zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) &
-    BEGCNAME(zhecon_rook,SUFFIX)
+pure subroutine zhecon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(zhecon_rook,SUFFIX)
 ENDCNAME(zhecon_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

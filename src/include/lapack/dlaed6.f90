@@ -1,5 +1,5 @@
-pure subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau,info) BEGCNAME(dlaed6, &
-    SUFFIX)
+pure subroutine dlaed6(kniter,orgati,rho,d,z,finit,tau, &
+    info) BEGCNAME(dlaed6,SUFFIX)
 ENDCNAME(dlaed6,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: kniter

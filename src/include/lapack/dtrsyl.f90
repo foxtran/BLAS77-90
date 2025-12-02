@@ -1,5 +1,5 @@
-pure subroutine dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) &
-    BEGCNAME(dtrsyl,SUFFIX)
+pure subroutine dtrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale, &
+    info) BEGCNAME(dtrsyl,SUFFIX)
 ENDCNAME(dtrsyl,SUFFIX)
 import
 character(len=1), intent(inout) :: trana

@@ -1,5 +1,5 @@
-pure subroutine csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) &
-    BEGCNAME(csyr2k,SUFFIX)
+pure subroutine csyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c, &
+    ldc) BEGCNAME(csyr2k,SUFFIX)
 ENDCNAME(csyr2k,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

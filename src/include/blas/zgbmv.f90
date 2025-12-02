@@ -1,5 +1,5 @@
-pure subroutine zgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(zgbmv,SUFFIX)
+pure subroutine zgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(zgbmv,SUFFIX)
 ENDCNAME(zgbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

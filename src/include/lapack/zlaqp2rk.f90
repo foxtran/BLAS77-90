@@ -1,6 +1,6 @@
 pure subroutine zlaqp2rk(m,n,nrhs,ioffset,kmax,abstol,reltol,kp1,maxc2nrm,a,lda, &
-    k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work,info) BEGCNAME(zlaqp2rk, &
-    SUFFIX)
+    k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,work, &
+    info) BEGCNAME(zlaqp2rk,SUFFIX)
 ENDCNAME(zlaqp2rk,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

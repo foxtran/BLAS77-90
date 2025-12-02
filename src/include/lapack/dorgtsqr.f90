@@ -1,5 +1,5 @@
-pure subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) &
-    BEGCNAME(dorgtsqr,SUFFIX)
+pure subroutine dorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(dorgtsqr,SUFFIX)
 ENDCNAME(dorgtsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

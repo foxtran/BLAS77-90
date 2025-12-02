@@ -1,5 +1,5 @@
-pure function zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) &
-    BEGCNAME(zla_syrcond_x,SUFFIX)
+pure function zla_syrcond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work, &
+    rwork) BEGCNAME(zla_syrcond_x,SUFFIX)
 ENDCNAME(zla_syrcond_x,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

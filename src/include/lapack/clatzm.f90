@@ -1,5 +1,5 @@
-pure subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) BEGCNAME(clatzm, &
-    SUFFIX)
+pure subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc, &
+    work) BEGCNAME(clatzm,SUFFIX)
 ENDCNAME(clatzm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

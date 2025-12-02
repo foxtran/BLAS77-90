@@ -1,5 +1,5 @@
-pure subroutine ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) &
-    BEGCNAME(ssygv_2stage,SUFFIX)
+pure subroutine ssygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork, &
+    info) BEGCNAME(ssygv_2stage,SUFFIX)
 ENDCNAME(ssygv_2stage,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype

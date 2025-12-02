@@ -1,5 +1,5 @@
-pure subroutine csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(csysv_rk,SUFFIX)
+pure subroutine csysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(csysv_rk,SUFFIX)
 ENDCNAME(csysv_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) &
-    BEGCNAME(zlarfb_gett,SUFFIX)
+pure subroutine zlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work, &
+    ldwork) BEGCNAME(zlarfb_gett,SUFFIX)
 ENDCNAME(zlarfb_gett,SUFFIX)
 import
 character(len=1), intent(inout) :: ident

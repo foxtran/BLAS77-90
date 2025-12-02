@@ -1,5 +1,5 @@
-pure subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(dormbr,SUFFIX)
+pure subroutine dormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(dormbr,SUFFIX)
 ENDCNAME(dormbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

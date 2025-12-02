@@ -1,5 +1,5 @@
-pure subroutine dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,info) &
-    BEGCNAME(dsbgv,SUFFIX)
+pure subroutine dsbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work, &
+    info) BEGCNAME(dsbgv,SUFFIX)
 ENDCNAME(dsbgv,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

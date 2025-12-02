@@ -1,5 +1,5 @@
-pure subroutine csytrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(csytrf_aa, &
-    SUFFIX)
+pure subroutine csytrf_aa(uplo,n,a,lda,ipiv,work,lwork, &
+    info) BEGCNAME(csytrf_aa,SUFFIX)
 ENDCNAME(csytrf_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,6 +1,6 @@
 pure subroutine dlasda(icompq,smlsiz,n,sqre,d,e,u,ldu,vt,k,difl,difr,z,poles, &
-    givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork,info) BEGCNAME(dlasda, &
-    SUFFIX)
+    givptr,givcol,ldgcol,perm,givnum,c,s,work,iwork, &
+    info) BEGCNAME(dlasda,SUFFIX)
 ENDCNAME(dlasda,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq

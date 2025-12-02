@@ -1,5 +1,5 @@
-pure subroutine slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork,info) &
-    BEGCNAME(slalsd,SUFFIX)
+pure subroutine slalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,iwork, &
+    info) BEGCNAME(slalsd,SUFFIX)
 ENDCNAME(slalsd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) &
-    BEGCNAME(slasyf_rk,SUFFIX)
+pure subroutine slasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw, &
+    info) BEGCNAME(slasyf_rk,SUFFIX)
 ENDCNAME(slasyf_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) &
-    BEGCNAME(dgbequb,SUFFIX)
+pure subroutine dgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax, &
+    info) BEGCNAME(dgbequb,SUFFIX)
 ENDCNAME(dgbequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

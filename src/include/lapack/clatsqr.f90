@@ -1,5 +1,5 @@
-pure subroutine clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(clatsqr, &
-    SUFFIX)
+pure subroutine clatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(clatsqr,SUFFIX)
 ENDCNAME(clatsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

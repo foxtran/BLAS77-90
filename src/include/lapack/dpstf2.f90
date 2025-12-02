@@ -1,5 +1,5 @@
-pure subroutine dpstf2(uplo,n,a,lda,piv,rank,tol,work,info) BEGCNAME(dpstf2, &
-    SUFFIX)
+pure subroutine dpstf2(uplo,n,a,lda,piv,rank,tol,work, &
+    info) BEGCNAME(dpstf2,SUFFIX)
 ENDCNAME(dpstf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

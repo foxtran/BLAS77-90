@@ -1,5 +1,5 @@
-pure subroutine checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) &
-    BEGCNAME(checon_3,SUFFIX)
+pure subroutine checon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(checon_3,SUFFIX)
 ENDCNAME(checon_3,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine ssytri_rook(uplo,n,a,lda,ipiv,work,info) BEGCNAME(ssytri_rook, &
-    SUFFIX)
+pure subroutine ssytri_rook(uplo,n,a,lda,ipiv,work, &
+    info) BEGCNAME(ssytri_rook,SUFFIX)
 ENDCNAME(ssytri_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

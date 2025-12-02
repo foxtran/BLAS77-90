@@ -1,5 +1,5 @@
-pure subroutine ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(ssytrs_aa,SUFFIX)
+pure subroutine ssytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(ssytrs_aa,SUFFIX)
 ENDCNAME(ssytrs_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

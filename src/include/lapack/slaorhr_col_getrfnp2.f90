@@ -1,5 +1,5 @@
-pure subroutine slaorhr_col_getrfnp2(m,n,a,lda,d,info) &
-    BEGCNAME(slaorhr_col_getrfnp2,SUFFIX)
+pure subroutine slaorhr_col_getrfnp2(m,n,a,lda,d, &
+    info) BEGCNAME(slaorhr_col_getrfnp2,SUFFIX)
 ENDCNAME(slaorhr_col_getrfnp2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

@@ -1,5 +1,5 @@
-pure subroutine cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) BEGCNAME(cgeequb, &
-    SUFFIX)
+pure subroutine cgeequb(m,n,a,lda,r,c,rowcnd,colcnd,amax, &
+    info) BEGCNAME(cgeequb,SUFFIX)
 ENDCNAME(cgeequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

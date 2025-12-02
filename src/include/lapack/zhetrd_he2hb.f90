@@ -1,5 +1,5 @@
-pure subroutine zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) &
-    BEGCNAME(zhetrd_he2hb,SUFFIX)
+pure subroutine zhetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork, &
+    info) BEGCNAME(zhetrd_he2hb,SUFFIX)
 ENDCNAME(zhetrd_he2hb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

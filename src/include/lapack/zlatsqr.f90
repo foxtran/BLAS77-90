@@ -1,5 +1,5 @@
-pure subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(zlatsqr, &
-    SUFFIX)
+pure subroutine zlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(zlatsqr,SUFFIX)
 ENDCNAME(zlatsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

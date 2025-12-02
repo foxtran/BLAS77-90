@@ -1,6 +1,6 @@
 pure subroutine zporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond, &
-    berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) &
-    BEGCNAME(zporfsx,SUFFIX)
+    berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork, &
+    info) BEGCNAME(zporfsx,SUFFIX)
 ENDCNAME(zporfsx,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork,info) &
-    BEGCNAME(sgesdd,SUFFIX)
+pure subroutine sgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,iwork, &
+    info) BEGCNAME(sgesdd,SUFFIX)
 ENDCNAME(sgesdd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

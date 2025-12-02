@@ -1,5 +1,5 @@
-pure subroutine zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(zlaswlq, &
-    SUFFIX)
+pure subroutine zlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(zlaswlq,SUFFIX)
 ENDCNAME(zlaswlq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

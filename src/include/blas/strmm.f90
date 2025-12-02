@@ -1,5 +1,5 @@
-pure subroutine strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) &
-    BEGCNAME(strmm,SUFFIX)
+pure subroutine strmm(side,uplo,transa,diag,m,n,alpha,a,lda,b, &
+    ldb) BEGCNAME(strmm,SUFFIX)
 ENDCNAME(strmm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

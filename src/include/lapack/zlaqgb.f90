@@ -1,5 +1,5 @@
-pure subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) &
-    BEGCNAME(zlaqgb,SUFFIX)
+pure subroutine zlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax, &
+    equed) BEGCNAME(zlaqgb,SUFFIX)
 ENDCNAME(zlaqgb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

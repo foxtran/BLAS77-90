@@ -1,5 +1,5 @@
-pure subroutine slatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) BEGCNAME(slatzm, &
-    SUFFIX)
+pure subroutine slatzm(side,m,n,v,incv,tau,c1,c2,ldc, &
+    work) BEGCNAME(slatzm,SUFFIX)
 ENDCNAME(slatzm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

@@ -1,5 +1,5 @@
-pure subroutine zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) &
-    BEGCNAME(zhetrf_rk,SUFFIX)
+pure subroutine zhetrf_rk(uplo,n,a,lda,e,ipiv,work,lwork, &
+    info) BEGCNAME(zhetrf_rk,SUFFIX)
 ENDCNAME(zhetrf_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

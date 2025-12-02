@@ -1,5 +1,5 @@
-pure subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(dgetrs, &
-    SUFFIX)
+pure subroutine dgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb, &
+    info) BEGCNAME(dgetrs,SUFFIX)
 ENDCNAME(dgetrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

@@ -1,5 +1,5 @@
-pure subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) &
-    BEGCNAME(dstevd,SUFFIX)
+pure subroutine dstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork, &
+    info) BEGCNAME(dstevd,SUFFIX)
 ENDCNAME(dstevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

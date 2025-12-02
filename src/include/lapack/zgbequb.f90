@@ -1,5 +1,5 @@
-pure subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) &
-    BEGCNAME(zgbequb,SUFFIX)
+pure subroutine zgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax, &
+    info) BEGCNAME(zgbequb,SUFFIX)
 ENDCNAME(zgbequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

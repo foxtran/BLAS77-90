@@ -1,5 +1,5 @@
-pure subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(ssysv_rook,SUFFIX)
+pure subroutine ssysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(ssysv_rook,SUFFIX)
 ENDCNAME(ssysv_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

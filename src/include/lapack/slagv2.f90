@@ -1,5 +1,5 @@
-pure subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) &
-    BEGCNAME(slagv2,SUFFIX)
+pure subroutine slagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr, &
+    snr) BEGCNAME(slagv2,SUFFIX)
 ENDCNAME(slagv2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: lda

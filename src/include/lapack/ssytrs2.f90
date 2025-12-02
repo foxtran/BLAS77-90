@@ -1,5 +1,5 @@
-pure subroutine ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) &
-    BEGCNAME(ssytrs2,SUFFIX)
+pure subroutine ssytrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work, &
+    info) BEGCNAME(ssytrs2,SUFFIX)
 ENDCNAME(ssytrs2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

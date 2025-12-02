@@ -1,5 +1,5 @@
-pure subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) &
-    BEGCNAME(ztbtrs,SUFFIX)
+pure subroutine ztbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb, &
+    info) BEGCNAME(ztbtrs,SUFFIX)
 ENDCNAME(ztbtrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

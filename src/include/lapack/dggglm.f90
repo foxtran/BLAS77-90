@@ -1,5 +1,5 @@
-pure subroutine dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) BEGCNAME(dggglm, &
-    SUFFIX)
+pure subroutine dggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork, &
+    info) BEGCNAME(dggglm,SUFFIX)
 ENDCNAME(dggglm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

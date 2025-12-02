@@ -1,5 +1,5 @@
-pure subroutine zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) &
-    BEGCNAME(zunml2,SUFFIX)
+pure subroutine zunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work, &
+    info) BEGCNAME(zunml2,SUFFIX)
 ENDCNAME(zunml2,SUFFIX)
 import
 character(len=1), intent(inout) :: side

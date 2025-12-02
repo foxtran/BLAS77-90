@@ -1,5 +1,5 @@
-pure subroutine ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork,info) &
-    BEGCNAME(ssyevd_2stage,SUFFIX)
+pure subroutine ssyevd_2stage(jobz,uplo,n,a,lda,w,work,lwork,iwork,liwork, &
+    info) BEGCNAME(ssyevd_2stage,SUFFIX)
 ENDCNAME(ssyevd_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

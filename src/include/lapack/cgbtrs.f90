@@ -1,5 +1,5 @@
-pure subroutine cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) &
-    BEGCNAME(cgbtrs,SUFFIX)
+pure subroutine cgbtrs(trans,n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb, &
+    info) BEGCNAME(cgbtrs,SUFFIX)
 ENDCNAME(cgbtrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

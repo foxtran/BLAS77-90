@@ -1,5 +1,5 @@
-pure subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) &
-    BEGCNAME(zlasyf_aa,SUFFIX)
+pure subroutine zlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh, &
+    work) BEGCNAME(zlasyf_aa,SUFFIX)
 ENDCNAME(zlasyf_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

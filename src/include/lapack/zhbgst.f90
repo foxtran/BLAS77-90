@@ -1,5 +1,5 @@
-pure subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) &
-    BEGCNAME(zhbgst,SUFFIX)
+pure subroutine zhbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork, &
+    info) BEGCNAME(zhbgst,SUFFIX)
 ENDCNAME(zhbgst,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

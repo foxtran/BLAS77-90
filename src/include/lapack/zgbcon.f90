@@ -1,5 +1,5 @@
-pure subroutine zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork,info) &
-    BEGCNAME(zgbcon,SUFFIX)
+pure subroutine zgbcon(norm,n,kl,ku,ab,ldab,ipiv,anorm,rcond,work,rwork, &
+    info) BEGCNAME(zgbcon,SUFFIX)
 ENDCNAME(zgbcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

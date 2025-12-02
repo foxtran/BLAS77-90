@@ -1,5 +1,5 @@
-pure function iparam2stage(ispec,name,opts,ni,nbi,ibi,nxi) &
-    BEGCNAME(iparam2stage,SUFFIX)
+pure function iparam2stage(ispec,name,opts,ni,nbi,ibi, &
+    nxi) BEGCNAME(iparam2stage,SUFFIX)
 ENDCNAME(iparam2stage,SUFFIX)
 import
 integer(blas77_int), intent(in) :: ispec

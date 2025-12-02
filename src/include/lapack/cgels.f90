@@ -1,5 +1,5 @@
-pure subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) &
-    BEGCNAME(cgels,SUFFIX)
+pure subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork, &
+    info) BEGCNAME(cgels,SUFFIX)
 ENDCNAME(cgels,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

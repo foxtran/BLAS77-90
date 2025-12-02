@@ -1,5 +1,5 @@
-pure subroutine cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(cgemv, &
-    SUFFIX)
+pure subroutine cgemv(trans,m,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(cgemv,SUFFIX)
 ENDCNAME(cgemv,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

@@ -1,5 +1,5 @@
-pure subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(dorgbr, &
-    SUFFIX)
+pure subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork, &
+    info) BEGCNAME(dorgbr,SUFFIX)
 ENDCNAME(dorgbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

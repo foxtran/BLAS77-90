@@ -1,5 +1,5 @@
-pure subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) BEGCNAME(cpbequ, &
-    SUFFIX)
+pure subroutine cpbequ(uplo,n,kd,ab,ldab,s,scond,amax, &
+    info) BEGCNAME(cpbequ,SUFFIX)
 ENDCNAME(cpbequ,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

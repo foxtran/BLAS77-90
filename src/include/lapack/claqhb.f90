@@ -1,5 +1,5 @@
-pure subroutine claqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) BEGCNAME(claqhb, &
-    SUFFIX)
+pure subroutine claqhb(uplo,n,kd,ab,ldab,s,scond,amax, &
+    equed) BEGCNAME(claqhb,SUFFIX)
 ENDCNAME(claqhb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) BEGCNAME(chpcon, &
-    SUFFIX)
+pure subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(chpcon,SUFFIX)
 ENDCNAME(chpcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

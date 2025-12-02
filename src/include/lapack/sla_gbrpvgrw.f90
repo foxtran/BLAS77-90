@@ -1,5 +1,5 @@
-pure function sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) &
-    BEGCNAME(sla_gbrpvgrw,SUFFIX)
+pure function sla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb, &
+    ldafb) BEGCNAME(sla_gbrpvgrw,SUFFIX)
 ENDCNAME(sla_gbrpvgrw,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n

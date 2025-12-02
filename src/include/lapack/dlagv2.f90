@@ -1,5 +1,5 @@
-pure subroutine dlagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr,snr) &
-    BEGCNAME(dlagv2,SUFFIX)
+pure subroutine dlagv2(a,lda,b,ldb,alphar,alphai,beta,csl,snl,csr, &
+    snr) BEGCNAME(dlagv2,SUFFIX)
 ENDCNAME(dlagv2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: lda

@@ -1,5 +1,5 @@
-pure subroutine dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) &
-    BEGCNAME(dstedc,SUFFIX)
+pure subroutine dstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork, &
+    info) BEGCNAME(dstedc,SUFFIX)
 ENDCNAME(dstedc,SUFFIX)
 import
 character(len=1), intent(inout) :: compz

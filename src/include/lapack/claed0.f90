@@ -1,5 +1,5 @@
-pure subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork,info) &
-    BEGCNAME(claed0,SUFFIX)
+pure subroutine claed0(qsiz,n,d,e,q,ldq,qstore,ldqs,rwork,iwork, &
+    info) BEGCNAME(claed0,SUFFIX)
 ENDCNAME(claed0,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: qsiz

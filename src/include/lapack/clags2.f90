@@ -1,5 +1,5 @@
-pure subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) &
-    BEGCNAME(clags2,SUFFIX)
+pure subroutine clags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq, &
+    snq) BEGCNAME(clags2,SUFFIX)
 ENDCNAME(clags2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: upper

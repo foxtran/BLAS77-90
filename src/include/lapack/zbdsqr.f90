@@ -1,5 +1,5 @@
-pure subroutine zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) &
-    BEGCNAME(zbdsqr,SUFFIX)
+pure subroutine zbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork, &
+    info) BEGCNAME(zbdsqr,SUFFIX)
 ENDCNAME(zbdsqr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

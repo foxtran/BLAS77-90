@@ -1,5 +1,5 @@
-pure subroutine slabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) BEGCNAME(slabrd, &
-    SUFFIX)
+pure subroutine slabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y, &
+    ldy) BEGCNAME(slabrd,SUFFIX)
 ENDCNAME(slabrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

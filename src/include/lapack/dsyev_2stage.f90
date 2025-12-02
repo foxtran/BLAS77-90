@@ -1,5 +1,5 @@
-pure subroutine dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork,info) &
-    BEGCNAME(dsyev_2stage,SUFFIX)
+pure subroutine dsyev_2stage(jobz,uplo,n,a,lda,w,work,lwork, &
+    info) BEGCNAME(dsyev_2stage,SUFFIX)
 ENDCNAME(dsyev_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

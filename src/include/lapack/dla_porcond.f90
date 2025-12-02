@@ -1,5 +1,5 @@
-pure function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) &
-    BEGCNAME(dla_porcond,SUFFIX)
+pure function dla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work, &
+    iwork) BEGCNAME(dla_porcond,SUFFIX)
 ENDCNAME(dla_porcond,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

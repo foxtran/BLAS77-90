@@ -1,7 +1,7 @@
 pure subroutine sla_syrfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,ipiv, &
     colequ,c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb, &
-    dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) &
-    BEGCNAME(sla_syrfsx_extended,SUFFIX)
+    dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise, &
+    info) BEGCNAME(sla_syrfsx_extended,SUFFIX)
 ENDCNAME(sla_syrfsx_extended,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: prec_type

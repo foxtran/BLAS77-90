@@ -1,5 +1,5 @@
-pure subroutine spbequ(uplo,n,kd,ab,ldab,s,scond,amax,info) BEGCNAME(spbequ, &
-    SUFFIX)
+pure subroutine spbequ(uplo,n,kd,ab,ldab,s,scond,amax, &
+    info) BEGCNAME(spbequ,SUFFIX)
 ENDCNAME(spbequ,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

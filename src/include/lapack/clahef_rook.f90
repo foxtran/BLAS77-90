@@ -1,5 +1,5 @@
-pure subroutine clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) &
-    BEGCNAME(clahef_rook,SUFFIX)
+pure subroutine clahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw, &
+    info) BEGCNAME(clahef_rook,SUFFIX)
 ENDCNAME(clahef_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork,info) BEGCNAME(dsytri_3, &
-    SUFFIX)
+pure subroutine dsytri_3(uplo,n,a,lda,e,ipiv,work,lwork, &
+    info) BEGCNAME(dsytri_3,SUFFIX)
 ENDCNAME(dsytri_3,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

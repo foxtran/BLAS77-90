@@ -1,5 +1,5 @@
-pure subroutine dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) &
-    BEGCNAME(dsytrs_rook,SUFFIX)
+pure subroutine dsytrs_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb, &
+    info) BEGCNAME(dsytrs_rook,SUFFIX)
 ENDCNAME(dsytrs_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

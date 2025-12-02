@@ -1,5 +1,5 @@
-pure subroutine zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(zla_heamv,SUFFIX)
+pure subroutine zla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(zla_heamv,SUFFIX)
 ENDCNAME(zla_heamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: uplo

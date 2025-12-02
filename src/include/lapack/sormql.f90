@@ -1,5 +1,5 @@
-pure subroutine sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(sormql,SUFFIX)
+pure subroutine sormql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(sormql,SUFFIX)
 ENDCNAME(sormql,SUFFIX)
 import
 character(len=1), intent(inout) :: side

@@ -1,5 +1,5 @@
-pure subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) &
-    BEGCNAME(dgetsls,SUFFIX)
+pure subroutine dgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork, &
+    info) BEGCNAME(dgetsls,SUFFIX)
 ENDCNAME(dgetsls,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

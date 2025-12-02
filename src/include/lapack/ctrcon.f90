@@ -1,5 +1,5 @@
-pure subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) &
-    BEGCNAME(ctrcon,SUFFIX)
+pure subroutine ctrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork, &
+    info) BEGCNAME(ctrcon,SUFFIX)
 ENDCNAME(ctrcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

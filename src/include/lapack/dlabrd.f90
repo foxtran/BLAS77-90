@@ -1,5 +1,5 @@
-pure subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) BEGCNAME(dlabrd, &
-    SUFFIX)
+pure subroutine dlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y, &
+    ldy) BEGCNAME(dlabrd,SUFFIX)
 ENDCNAME(dlabrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

@@ -1,5 +1,5 @@
-pure subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) &
-    BEGCNAME(cunm2l,SUFFIX)
+pure subroutine cunm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work, &
+    info) BEGCNAME(cunm2l,SUFFIX)
 ENDCNAME(cunm2l,SUFFIX)
 import
 character(len=1), intent(inout) :: side

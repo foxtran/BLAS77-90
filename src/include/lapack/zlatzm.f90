@@ -1,5 +1,5 @@
-pure subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) BEGCNAME(zlatzm, &
-    SUFFIX)
+pure subroutine zlatzm(side,m,n,v,incv,tau,c1,c2,ldc, &
+    work) BEGCNAME(zlatzm,SUFFIX)
 ENDCNAME(zlatzm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

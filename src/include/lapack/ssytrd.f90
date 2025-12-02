@@ -1,5 +1,5 @@
-pure subroutine ssytrd(uplo,n,a,lda,d,e,tau,work,lwork,info) BEGCNAME(ssytrd, &
-    SUFFIX)
+pure subroutine ssytrd(uplo,n,a,lda,d,e,tau,work,lwork, &
+    info) BEGCNAME(ssytrd,SUFFIX)
 ENDCNAME(ssytrd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

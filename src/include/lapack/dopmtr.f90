@@ -1,5 +1,5 @@
-pure subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) &
-    BEGCNAME(dopmtr,SUFFIX)
+pure subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work, &
+    info) BEGCNAME(dopmtr,SUFFIX)
 ENDCNAME(dopmtr,SUFFIX)
 import
 character(len=1), intent(inout) :: side

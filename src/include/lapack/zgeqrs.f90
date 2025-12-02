@@ -1,5 +1,5 @@
-pure subroutine zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork,info) &
-    BEGCNAME(zgeqrs,SUFFIX)
+pure subroutine zgeqrs(m,n,nrhs,a,lda,tau,b,ldb,work,lwork, &
+    info) BEGCNAME(zgeqrs,SUFFIX)
 ENDCNAME(zgeqrs,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

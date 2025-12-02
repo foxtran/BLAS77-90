@@ -1,5 +1,5 @@
-pure subroutine zhetri2(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(zhetri2, &
-    SUFFIX)
+pure subroutine zhetri2(uplo,n,a,lda,ipiv,work,lwork, &
+    info) BEGCNAME(zhetri2,SUFFIX)
 ENDCNAME(zhetri2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

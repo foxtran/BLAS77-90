@@ -1,5 +1,5 @@
-pure subroutine ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(ssbmv, &
-    SUFFIX)
+pure subroutine ssbmv(uplo,n,k,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(ssbmv,SUFFIX)
 ENDCNAME(ssbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

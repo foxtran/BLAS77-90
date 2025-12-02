@@ -1,5 +1,5 @@
-pure subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,info) &
-    BEGCNAME(dgesvd,SUFFIX)
+pure subroutine dgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork, &
+    info) BEGCNAME(dgesvd,SUFFIX)
 ENDCNAME(dgesvd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu

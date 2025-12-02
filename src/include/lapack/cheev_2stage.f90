@@ -1,5 +1,5 @@
-pure subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) &
-    BEGCNAME(cheev_2stage,SUFFIX)
+pure subroutine cheev_2stage(jobz,uplo,n,a,lda,w,work,lwork,rwork, &
+    info) BEGCNAME(cheev_2stage,SUFFIX)
 ENDCNAME(cheev_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

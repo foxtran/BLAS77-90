@@ -1,5 +1,5 @@
-pure subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) BEGCNAME(dlanv2, &
-    SUFFIX)
+pure subroutine dlanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs, &
+    sn) BEGCNAME(dlanv2,SUFFIX)
 ENDCNAME(dlanv2,SUFFIX)
 import
 real(blas77_f64), intent(inout) :: a

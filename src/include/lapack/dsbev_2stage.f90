@@ -1,5 +1,5 @@
-pure subroutine dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,info) &
-    BEGCNAME(dsbev_2stage,SUFFIX)
+pure subroutine dsbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork, &
+    info) BEGCNAME(dsbev_2stage,SUFFIX)
 ENDCNAME(dsbev_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

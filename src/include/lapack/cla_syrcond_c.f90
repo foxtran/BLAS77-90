@@ -1,5 +1,5 @@
-pure function cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) &
-    BEGCNAME(cla_syrcond_c,SUFFIX)
+pure function cla_syrcond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work, &
+    rwork) BEGCNAME(cla_syrcond_c,SUFFIX)
 ENDCNAME(cla_syrcond_c,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

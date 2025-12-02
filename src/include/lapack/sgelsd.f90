@@ -1,5 +1,5 @@
-pure subroutine sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork,info) &
-    BEGCNAME(sgelsd,SUFFIX)
+pure subroutine sgelsd(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,iwork, &
+    info) BEGCNAME(sgelsd,SUFFIX)
 ENDCNAME(sgelsd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

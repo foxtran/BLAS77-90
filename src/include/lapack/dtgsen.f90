@@ -1,6 +1,6 @@
 pure subroutine dtgsen(ijob,wantq,wantz,select,n,a,lda,b,ldb,alphar,alphai,beta, &
-    q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork,info) BEGCNAME(dtgsen, &
-    SUFFIX)
+    q,ldq,z,ldz,m,pl,pr,dif,work,lwork,iwork,liwork, &
+    info) BEGCNAME(dtgsen,SUFFIX)
 ENDCNAME(dtgsen,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: ijob

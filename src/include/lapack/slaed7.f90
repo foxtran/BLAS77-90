@@ -1,6 +1,6 @@
 pure subroutine slaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho, &
-    cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) &
-    BEGCNAME(slaed7,SUFFIX)
+    cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork, &
+    info) BEGCNAME(slaed7,SUFFIX)
 ENDCNAME(slaed7,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq

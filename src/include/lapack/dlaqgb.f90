@@ -1,5 +1,5 @@
-pure subroutine dlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) &
-    BEGCNAME(dlaqgb,SUFFIX)
+pure subroutine dlaqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax, &
+    equed) BEGCNAME(dlaqgb,SUFFIX)
 ENDCNAME(dlaqgb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

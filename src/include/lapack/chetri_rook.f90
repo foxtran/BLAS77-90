@@ -1,5 +1,5 @@
-pure subroutine chetri_rook(uplo,n,a,lda,ipiv,work,info) BEGCNAME(chetri_rook, &
-    SUFFIX)
+pure subroutine chetri_rook(uplo,n,a,lda,ipiv,work, &
+    info) BEGCNAME(chetri_rook,SUFFIX)
 ENDCNAME(chetri_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

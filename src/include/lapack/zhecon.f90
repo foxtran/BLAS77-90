@@ -1,5 +1,5 @@
-pure subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(zhecon, &
-    SUFFIX)
+pure subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(zhecon,SUFFIX)
 ENDCNAME(zhecon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

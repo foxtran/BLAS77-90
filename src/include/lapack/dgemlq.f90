@@ -1,5 +1,5 @@
-pure subroutine dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) &
-    BEGCNAME(dgemlq,SUFFIX)
+pure subroutine dgemlq(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork, &
+    info) BEGCNAME(dgemlq,SUFFIX)
 ENDCNAME(dgemlq,SUFFIX)
 import
 character(len=1), intent(inout) :: side

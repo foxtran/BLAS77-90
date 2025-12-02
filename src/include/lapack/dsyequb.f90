@@ -1,5 +1,5 @@
-pure subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work,info) BEGCNAME(dsyequb, &
-    SUFFIX)
+pure subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work, &
+    info) BEGCNAME(dsyequb,SUFFIX)
 ENDCNAME(dsyequb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

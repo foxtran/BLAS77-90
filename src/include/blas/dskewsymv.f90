@@ -1,5 +1,5 @@
-pure subroutine dskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(dskewsymv,SUFFIX)
+pure subroutine dskewsymv(uplo,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(dskewsymv,SUFFIX)
 ENDCNAME(dskewsymv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

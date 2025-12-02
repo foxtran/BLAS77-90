@@ -1,6 +1,6 @@
 pure subroutine zuncsd2by1(jobu1,jobu2,jobv1t,m,p,q,x11,ldx11,x21,ldx21,theta, &
-    u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork,info) &
-    BEGCNAME(zuncsd2by1,SUFFIX)
+    u1,ldu1,u2,ldu2,v1t,ldv1t,work,lwork,rwork,lrwork,iwork, &
+    info) BEGCNAME(zuncsd2by1,SUFFIX)
 ENDCNAME(zuncsd2by1,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu1

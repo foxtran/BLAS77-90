@@ -1,5 +1,5 @@
-pure subroutine dlarft_lvl2(direct,storev,n,k,v,ldv,tau,t,ldt) &
-    BEGCNAME(dlarft_lvl2,SUFFIX)
+pure subroutine dlarft_lvl2(direct,storev,n,k,v,ldv,tau,t, &
+    ldt) BEGCNAME(dlarft_lvl2,SUFFIX)
 ENDCNAME(dlarft_lvl2,SUFFIX)
 import
 character(len=1), intent(inout) :: direct

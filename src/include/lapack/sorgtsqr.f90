@@ -1,5 +1,5 @@
-pure subroutine sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) &
-    BEGCNAME(sorgtsqr,SUFFIX)
+pure subroutine sorgtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(sorgtsqr,SUFFIX)
 ENDCNAME(sorgtsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

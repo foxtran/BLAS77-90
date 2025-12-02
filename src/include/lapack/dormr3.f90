@@ -1,5 +1,5 @@
-pure subroutine dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) &
-    BEGCNAME(dormr3,SUFFIX)
+pure subroutine dormr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work, &
+    info) BEGCNAME(dormr3,SUFFIX)
 ENDCNAME(dormr3,SUFFIX)
 import
 character(len=1), intent(inout) :: side

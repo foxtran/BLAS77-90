@@ -1,6 +1,6 @@
 pure subroutine dporfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,s,b,ldb,x,ldx,rcond, &
-    berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) &
-    BEGCNAME(dporfsx,SUFFIX)
+    berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork, &
+    info) BEGCNAME(dporfsx,SUFFIX)
 ENDCNAME(dporfsx,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

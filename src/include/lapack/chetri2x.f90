@@ -1,5 +1,5 @@
-pure subroutine chetri2x(uplo,n,a,lda,ipiv,work,nb,info) BEGCNAME(chetri2x, &
-    SUFFIX)
+pure subroutine chetri2x(uplo,n,a,lda,ipiv,work,nb, &
+    info) BEGCNAME(chetri2x,SUFFIX)
 ENDCNAME(chetri2x,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

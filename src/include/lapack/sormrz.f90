@@ -1,5 +1,5 @@
-pure subroutine sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(sormrz,SUFFIX)
+pure subroutine sormrz(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(sormrz,SUFFIX)
 ENDCNAME(sormrz,SUFFIX)
 import
 character(len=1), intent(inout) :: side

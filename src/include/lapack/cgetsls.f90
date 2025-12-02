@@ -1,5 +1,5 @@
-pure subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) &
-    BEGCNAME(cgetsls,SUFFIX)
+pure subroutine cgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork, &
+    info) BEGCNAME(cgetsls,SUFFIX)
 ENDCNAME(cgetsls,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

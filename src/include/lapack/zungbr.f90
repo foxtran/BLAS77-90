@@ -1,5 +1,5 @@
-pure subroutine zungbr(vect,m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(zungbr, &
-    SUFFIX)
+pure subroutine zungbr(vect,m,n,k,a,lda,tau,work,lwork, &
+    info) BEGCNAME(zungbr,SUFFIX)
 ENDCNAME(zungbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

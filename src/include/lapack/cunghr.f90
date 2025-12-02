@@ -1,5 +1,5 @@
-pure subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) BEGCNAME(cunghr, &
-    SUFFIX)
+pure subroutine cunghr(n,ilo,ihi,a,lda,tau,work,lwork, &
+    info) BEGCNAME(cunghr,SUFFIX)
 ENDCNAME(cunghr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

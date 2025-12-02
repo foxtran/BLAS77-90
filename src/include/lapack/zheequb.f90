@@ -1,5 +1,5 @@
-pure subroutine zheequb(uplo,n,a,lda,s,scond,amax,work,info) BEGCNAME(zheequb, &
-    SUFFIX)
+pure subroutine zheequb(uplo,n,a,lda,s,scond,amax,work, &
+    info) BEGCNAME(zheequb,SUFFIX)
 ENDCNAME(zheequb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

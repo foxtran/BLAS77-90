@@ -1,6 +1,6 @@
 pure subroutine dlarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin, &
-    nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork,info) BEGCNAME(dlarrd, &
-    SUFFIX)
+    nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork, &
+    info) BEGCNAME(dlarrd,SUFFIX)
 ENDCNAME(dlarrd,SUFFIX)
 import
 character(len=1), intent(inout) :: range

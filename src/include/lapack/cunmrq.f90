@@ -1,5 +1,5 @@
-pure subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(cunmrq,SUFFIX)
+pure subroutine cunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(cunmrq,SUFFIX)
 ENDCNAME(cunmrq,SUFFIX)
 import
 character(len=1), intent(inout) :: side

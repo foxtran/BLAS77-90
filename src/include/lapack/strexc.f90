@@ -1,5 +1,5 @@
-pure subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) BEGCNAME(strexc, &
-    SUFFIX)
+pure subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work, &
+    info) BEGCNAME(strexc,SUFFIX)
 ENDCNAME(strexc,SUFFIX)
 import
 character(len=1), intent(inout) :: compq

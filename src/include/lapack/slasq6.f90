@@ -1,5 +1,5 @@
-pure subroutine slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) &
-    BEGCNAME(slasq6,SUFFIX)
+pure subroutine slasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1, &
+    dnm2) BEGCNAME(slasq6,SUFFIX)
 ENDCNAME(slasq6,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: i0

@@ -1,5 +1,5 @@
-pure subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst,info) BEGCNAME(ztrexc, &
-    SUFFIX)
+pure subroutine ztrexc(compq,n,t,ldt,q,ldq,ifst,ilst, &
+    info) BEGCNAME(ztrexc,SUFFIX)
 ENDCNAME(ztrexc,SUFFIX)
 import
 character(len=1), intent(inout) :: compq

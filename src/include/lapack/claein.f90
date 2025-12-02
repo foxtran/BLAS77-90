@@ -1,5 +1,5 @@
-pure subroutine claein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) &
-    BEGCNAME(claein,SUFFIX)
+pure subroutine claein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum, &
+    info) BEGCNAME(claein,SUFFIX)
 ENDCNAME(claein,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: rightv

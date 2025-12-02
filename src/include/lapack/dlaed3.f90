@@ -1,5 +1,5 @@
-pure subroutine dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s,info) &
-    BEGCNAME(dlaed3,SUFFIX)
+pure subroutine dlaed3(k,n,n1,d,q,ldq,rho,dlambda,q2,indx,ctot,w,s, &
+    info) BEGCNAME(dlaed3,SUFFIX)
 ENDCNAME(dlaed3,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: k

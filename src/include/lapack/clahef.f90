@@ -1,5 +1,5 @@
-pure subroutine clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) BEGCNAME(clahef, &
-    SUFFIX)
+pure subroutine clahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw, &
+    info) BEGCNAME(clahef,SUFFIX)
 ENDCNAME(clahef,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

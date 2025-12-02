@@ -1,5 +1,5 @@
-pure subroutine xerbla_array(srname_array,srname_len,info) &
-    BEGCNAME(xerbla_array,SUFFIX)
+pure subroutine xerbla_array(srname_array,srname_len, &
+    info) BEGCNAME(xerbla_array,SUFFIX)
 ENDCNAME(xerbla_array,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: srname_len

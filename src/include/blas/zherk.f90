@@ -1,5 +1,5 @@
-pure subroutine zherk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) BEGCNAME(zherk, &
-    SUFFIX)
+pure subroutine zherk(uplo,trans,n,k,alpha,a,lda,beta,c, &
+    ldc) BEGCNAME(zherk,SUFFIX)
 ENDCNAME(zherk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

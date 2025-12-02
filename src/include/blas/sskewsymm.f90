@@ -1,5 +1,5 @@
-pure subroutine sskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) &
-    BEGCNAME(sskewsymm,SUFFIX)
+pure subroutine sskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c, &
+    ldc) BEGCNAME(sskewsymm,SUFFIX)
 ENDCNAME(sskewsymm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

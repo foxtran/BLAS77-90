@@ -1,5 +1,5 @@
-pure subroutine zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc) &
-    BEGCNAME(zgemm,SUFFIX)
+pure subroutine zgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c, &
+    ldc) BEGCNAME(zgemm,SUFFIX)
 ENDCNAME(zgemm,SUFFIX)
 import
 character(len=1), intent(inout) :: transa

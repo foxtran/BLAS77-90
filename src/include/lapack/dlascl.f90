@@ -1,5 +1,5 @@
-pure subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) BEGCNAME(dlascl, &
-    SUFFIX)
+pure subroutine dlascl(type,kl,ku,cfrom,cto,m,n,a,lda, &
+    info) BEGCNAME(dlascl,SUFFIX)
 ENDCNAME(dlascl,SUFFIX)
 import
 character(len=1), intent(inout) :: type

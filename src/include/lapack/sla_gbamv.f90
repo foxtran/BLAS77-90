@@ -1,5 +1,5 @@
-pure subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) &
-    BEGCNAME(sla_gbamv,SUFFIX)
+pure subroutine sla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y, &
+    incy) BEGCNAME(sla_gbamv,SUFFIX)
 ENDCNAME(sla_gbamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: trans

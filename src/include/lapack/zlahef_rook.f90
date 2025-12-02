@@ -1,5 +1,5 @@
-pure subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) &
-    BEGCNAME(zlahef_rook,SUFFIX)
+pure subroutine zlahef_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw, &
+    info) BEGCNAME(zlahef_rook,SUFFIX)
 ENDCNAME(zlahef_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) &
-    BEGCNAME(dptrfs,SUFFIX)
+pure subroutine dptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work, &
+    info) BEGCNAME(dptrfs,SUFFIX)
 ENDCNAME(dptrfs,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

@@ -1,5 +1,5 @@
-pure subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) BEGCNAME(zhpev, &
-    SUFFIX)
+pure subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork, &
+    info) BEGCNAME(zhpev,SUFFIX)
 ENDCNAME(zhpev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

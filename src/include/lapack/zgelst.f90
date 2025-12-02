@@ -1,5 +1,5 @@
-pure subroutine zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) &
-    BEGCNAME(zgelst,SUFFIX)
+pure subroutine zgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork, &
+    info) BEGCNAME(zgelst,SUFFIX)
 ENDCNAME(zgelst,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

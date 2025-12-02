@@ -1,5 +1,5 @@
-pure subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) &
-    BEGCNAME(dbdsdc,SUFFIX)
+pure subroutine dbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork, &
+    info) BEGCNAME(dbdsdc,SUFFIX)
 ENDCNAME(dbdsdc,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

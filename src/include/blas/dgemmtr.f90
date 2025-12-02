@@ -1,5 +1,5 @@
-pure subroutine dgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c,ldc) &
-    BEGCNAME(dgemmtr,SUFFIX)
+pure subroutine dgemmtr(uplo,transa,transb,n,k,alpha,a,lda,b,ldb,beta,c, &
+    ldc) BEGCNAME(dgemmtr,SUFFIX)
 ENDCNAME(dgemmtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

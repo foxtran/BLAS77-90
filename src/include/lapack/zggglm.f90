@@ -1,5 +1,5 @@
-pure subroutine zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) BEGCNAME(zggglm, &
-    SUFFIX)
+pure subroutine zggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork, &
+    info) BEGCNAME(zggglm,SUFFIX)
 ENDCNAME(zggglm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

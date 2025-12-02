@@ -1,5 +1,5 @@
-pure subroutine ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb,info) BEGCNAME(ztptrs, &
-    SUFFIX)
+pure subroutine ztptrs(uplo,trans,diag,n,nrhs,ap,b,ldb, &
+    info) BEGCNAME(ztptrs,SUFFIX)
 ENDCNAME(ztptrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

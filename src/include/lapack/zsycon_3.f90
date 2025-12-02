@@ -1,5 +1,5 @@
-pure subroutine zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work,info) &
-    BEGCNAME(zsycon_3,SUFFIX)
+pure subroutine zsycon_3(uplo,n,a,lda,e,ipiv,anorm,rcond,work, &
+    info) BEGCNAME(zsycon_3,SUFFIX)
 ENDCNAME(zsycon_3,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

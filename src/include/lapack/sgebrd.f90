@@ -1,5 +1,5 @@
-pure subroutine sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) BEGCNAME(sgebrd, &
-    SUFFIX)
+pure subroutine sgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork, &
+    info) BEGCNAME(sgebrd,SUFFIX)
 ENDCNAME(sgebrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

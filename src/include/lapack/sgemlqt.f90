@@ -1,5 +1,5 @@
-pure subroutine sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work,info) &
-    BEGCNAME(sgemlqt,SUFFIX)
+pure subroutine sgemlqt(side,trans,m,n,k,mb,v,ldv,t,ldt,c,ldc,work, &
+    info) BEGCNAME(sgemlqt,SUFFIX)
 ENDCNAME(sgemlqt,SUFFIX)
 import
 character(len=1), intent(inout) :: side

@@ -1,5 +1,5 @@
-pure subroutine sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) &
-    BEGCNAME(sgttrs,SUFFIX)
+pure subroutine sgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb, &
+    info) BEGCNAME(sgttrs,SUFFIX)
 ENDCNAME(sgttrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

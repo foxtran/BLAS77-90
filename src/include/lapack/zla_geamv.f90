@@ -1,5 +1,5 @@
-pure subroutine zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(zla_geamv,SUFFIX)
+pure subroutine zla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(zla_geamv,SUFFIX)
 ENDCNAME(zla_geamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: trans

@@ -1,5 +1,5 @@
-pure subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,info) &
-    BEGCNAME(sptrfs,SUFFIX)
+pure subroutine sptrfs(n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work, &
+    info) BEGCNAME(sptrfs,SUFFIX)
 ENDCNAME(sptrfs,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

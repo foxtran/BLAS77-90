@@ -1,6 +1,6 @@
 pure subroutine slasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta, &
-    dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s,info) &
-    BEGCNAME(slasd7,SUFFIX)
+    dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s, &
+    info) BEGCNAME(slasd7,SUFFIX)
 ENDCNAME(slasd7,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq

@@ -1,5 +1,5 @@
-pure subroutine sppcon(uplo,n,ap,anorm,rcond,work,iwork,info) BEGCNAME(sppcon, &
-    SUFFIX)
+pure subroutine sppcon(uplo,n,ap,anorm,rcond,work,iwork, &
+    info) BEGCNAME(sppcon,SUFFIX)
 ENDCNAME(sppcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) &
-    BEGCNAME(clarfb_gett,SUFFIX)
+pure subroutine clarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work, &
+    ldwork) BEGCNAME(clarfb_gett,SUFFIX)
 ENDCNAME(clarfb_gett,SUFFIX)
 import
 character(len=1), intent(inout) :: ident

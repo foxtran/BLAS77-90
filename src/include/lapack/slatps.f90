@@ -1,5 +1,5 @@
-pure subroutine slatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) &
-    BEGCNAME(slatps,SUFFIX)
+pure subroutine slatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm, &
+    info) BEGCNAME(slatps,SUFFIX)
 ENDCNAME(slatps,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

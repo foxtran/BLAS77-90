@@ -1,5 +1,5 @@
-pure subroutine cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) BEGCNAME(cgtts2, &
-    SUFFIX)
+pure subroutine cgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b, &
+    ldb) BEGCNAME(cgtts2,SUFFIX)
 ENDCNAME(cgtts2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itrans

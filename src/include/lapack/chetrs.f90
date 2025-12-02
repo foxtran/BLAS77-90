@@ -1,5 +1,5 @@
-pure subroutine chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(chetrs, &
-    SUFFIX)
+pure subroutine chetrs(uplo,n,nrhs,a,lda,ipiv,b,ldb, &
+    info) BEGCNAME(chetrs,SUFFIX)
 ENDCNAME(chetrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

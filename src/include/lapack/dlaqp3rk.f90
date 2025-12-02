@@ -1,6 +1,6 @@
 pure subroutine dlaqp3rk(m,n,nrhs,ioffset,nb,abstol,reltol,kp1,maxc2nrm,a,lda, &
-    done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork,info) &
-    BEGCNAME(dlaqp3rk,SUFFIX)
+    done,kb,maxc2nrmk,relmaxc2nrmk,jpiv,tau,vn1,vn2,auxv,f,ldf,iwork, &
+    info) BEGCNAME(dlaqp3rk,SUFFIX)
 ENDCNAME(dlaqp3rk,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

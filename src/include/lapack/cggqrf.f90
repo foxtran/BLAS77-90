@@ -1,5 +1,5 @@
-pure subroutine cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork,info) &
-    BEGCNAME(cggqrf,SUFFIX)
+pure subroutine cggqrf(n,m,p,a,lda,taua,b,ldb,taub,work,lwork, &
+    info) BEGCNAME(cggqrf,SUFFIX)
 ENDCNAME(cggqrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

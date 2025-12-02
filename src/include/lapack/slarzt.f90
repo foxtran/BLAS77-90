@@ -1,5 +1,5 @@
-pure subroutine slarzt(direct,storev,n,k,v,ldv,tau,t,ldt) BEGCNAME(slarzt, &
-    SUFFIX)
+pure subroutine slarzt(direct,storev,n,k,v,ldv,tau,t, &
+    ldt) BEGCNAME(slarzt,SUFFIX)
 ENDCNAME(slarzt,SUFFIX)
 import
 character(len=1), intent(inout) :: direct

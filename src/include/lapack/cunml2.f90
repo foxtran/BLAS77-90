@@ -1,5 +1,5 @@
-pure subroutine cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) &
-    BEGCNAME(cunml2,SUFFIX)
+pure subroutine cunml2(side,trans,m,n,k,a,lda,tau,c,ldc,work, &
+    info) BEGCNAME(cunml2,SUFFIX)
 ENDCNAME(cunml2,SUFFIX)
 import
 character(len=1), intent(inout) :: side

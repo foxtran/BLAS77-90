@@ -1,5 +1,5 @@
-pure function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) BEGCNAME(cla_porpvgrw, &
-    SUFFIX)
+pure function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf, &
+    work) BEGCNAME(cla_porpvgrw,SUFFIX)
 ENDCNAME(cla_porpvgrw,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

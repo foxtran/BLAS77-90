@@ -1,7 +1,7 @@
 pure subroutine zla_porfsx_extended(prec_type,uplo,n,nrhs,a,lda,af,ldaf,colequ, &
     c,b,ldb,y,ldy,berr_out,n_norms,err_bnds_norm,err_bnds_comp,res,ayb,dy, &
-    y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) &
-    BEGCNAME(zla_porfsx_extended,SUFFIX)
+    y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise, &
+    info) BEGCNAME(zla_porfsx_extended,SUFFIX)
 ENDCNAME(zla_porfsx_extended,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: prec_type

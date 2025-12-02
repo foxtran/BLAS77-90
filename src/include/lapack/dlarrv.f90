@@ -1,6 +1,6 @@
 pure subroutine dlarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w, &
-    werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) BEGCNAME(dlarrv, &
-    SUFFIX)
+    werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork, &
+    info) BEGCNAME(dlarrv,SUFFIX)
 ENDCNAME(dlarrv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

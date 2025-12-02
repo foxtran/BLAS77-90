@@ -1,5 +1,5 @@
-pure subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) &
-    BEGCNAME(dsbgst,SUFFIX)
+pure subroutine dsbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work, &
+    info) BEGCNAME(dsbgst,SUFFIX)
 ENDCNAME(dsbgst,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

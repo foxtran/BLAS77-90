@@ -1,5 +1,5 @@
-pure subroutine cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork,info) &
-    BEGCNAME(cgelss,SUFFIX)
+pure subroutine cgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,rwork, &
+    info) BEGCNAME(cgelss,SUFFIX)
 ENDCNAME(cgelss,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

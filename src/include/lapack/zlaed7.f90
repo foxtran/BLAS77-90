@@ -1,6 +1,6 @@
 pure subroutine zlaed7(n,cutpnt,qsiz,tlvls,curlvl,curpbm,d,q,ldq,rho,indxq, &
-    qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork,info) &
-    BEGCNAME(zlaed7,SUFFIX)
+    qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,rwork,iwork, &
+    info) BEGCNAME(zlaed7,SUFFIX)
 ENDCNAME(zlaed7,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

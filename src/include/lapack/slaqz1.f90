@@ -1,5 +1,5 @@
-pure subroutine slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) BEGCNAME(slaqz1, &
-    SUFFIX)
+pure subroutine slaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2, &
+    v) BEGCNAME(slaqz1,SUFFIX)
 ENDCNAME(slaqz1,SUFFIX)
 import
 integer(blas77_int),intent(in)::lda

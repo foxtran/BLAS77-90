@@ -1,6 +1,6 @@
 pure subroutine slaqz4(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,sr,si, &
-    ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) BEGCNAME(slaqz4, &
-    SUFFIX)
+    ss,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork, &
+    info) BEGCNAME(slaqz4,SUFFIX)
 ENDCNAME(slaqz4,SUFFIX)
 import
 logical(blas77_int),intent(in)::ilschur

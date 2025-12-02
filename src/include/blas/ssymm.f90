@@ -1,5 +1,5 @@
-pure subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) &
-    BEGCNAME(ssymm,SUFFIX)
+pure subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c, &
+    ldc) BEGCNAME(ssymm,SUFFIX)
 ENDCNAME(ssymm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

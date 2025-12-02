@@ -1,5 +1,5 @@
-pure subroutine spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) BEGCNAME(spbtrs, &
-    SUFFIX)
+pure subroutine spbtrs(uplo,n,kd,nrhs,ab,ldab,b,ldb, &
+    info) BEGCNAME(spbtrs,SUFFIX)
 ENDCNAME(spbtrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

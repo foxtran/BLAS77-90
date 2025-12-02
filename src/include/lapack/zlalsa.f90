@@ -1,6 +1,6 @@
 pure subroutine zlalsa(icompq,smlsiz,n,nrhs,b,ldb,bx,ldbx,u,ldu,vt,k,difl,difr, &
-    z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork,info) &
-    BEGCNAME(zlalsa,SUFFIX)
+    z,poles,givptr,givcol,ldgcol,perm,givnum,c,s,rwork,iwork, &
+    info) BEGCNAME(zlalsa,SUFFIX)
 ENDCNAME(zlalsa,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq

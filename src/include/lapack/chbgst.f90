@@ -1,5 +1,5 @@
-pure subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork,info) &
-    BEGCNAME(chbgst,SUFFIX)
+pure subroutine chbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,rwork, &
+    info) BEGCNAME(chbgst,SUFFIX)
 ENDCNAME(chbgst,SUFFIX)
 import
 character(len=1), intent(inout) :: vect

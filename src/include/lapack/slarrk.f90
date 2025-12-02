@@ -1,5 +1,5 @@
-pure subroutine slarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) &
-    BEGCNAME(slarrk,SUFFIX)
+pure subroutine slarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr, &
+    info) BEGCNAME(slarrk,SUFFIX)
 ENDCNAME(slarrk,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

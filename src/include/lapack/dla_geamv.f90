@@ -1,5 +1,5 @@
-pure subroutine dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(dla_geamv,SUFFIX)
+pure subroutine dla_geamv(trans,m,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(dla_geamv,SUFFIX)
 ENDCNAME(dla_geamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: trans

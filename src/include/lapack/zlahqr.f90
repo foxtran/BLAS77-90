@@ -1,5 +1,5 @@
-pure subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz,info) &
-    BEGCNAME(zlahqr,SUFFIX)
+pure subroutine zlahqr(wantt,wantz,n,ilo,ihi,h,ldh,w,iloz,ihiz,z,ldz, &
+    info) BEGCNAME(zlahqr,SUFFIX)
 ENDCNAME(zlahqr,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantt

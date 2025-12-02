@@ -1,5 +1,5 @@
-pure subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) BEGCNAME(slasv2, &
-    SUFFIX)
+pure subroutine slasv2(f,g,h,ssmin,ssmax,snr,csr,snl, &
+    csl) BEGCNAME(slasv2,SUFFIX)
 ENDCNAME(slasv2,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: f

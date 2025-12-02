@@ -1,6 +1,6 @@
 pure subroutine claqz3(ilschur,ilq,ilz,n,ilo,ihi,nshifts,nblock_desired,alpha, &
-    beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork,info) &
-    BEGCNAME(claqz3,SUFFIX)
+    beta,a,lda,b,ldb,q,ldq,z,ldz,qc,ldqc,zc,ldzc,work,lwork, &
+    info) BEGCNAME(claqz3,SUFFIX)
 ENDCNAME(claqz3,SUFFIX)
 import
 logical(blas77_int),intent(in)::ilschur

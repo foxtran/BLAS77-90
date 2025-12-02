@@ -1,5 +1,5 @@
-pure subroutine ctgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1,info) &
-    BEGCNAME(ctgex2,SUFFIX)
+pure subroutine ctgex2(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,j1, &
+    info) BEGCNAME(ctgex2,SUFFIX)
 ENDCNAME(ctgex2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantq

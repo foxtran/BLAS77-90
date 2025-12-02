@@ -1,5 +1,5 @@
-pure subroutine cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) &
-    BEGCNAME(cstein,SUFFIX)
+pure subroutine cstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail, &
+    info) BEGCNAME(cstein,SUFFIX)
 ENDCNAME(cstein,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

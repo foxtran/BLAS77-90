@@ -1,5 +1,5 @@
-pure subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) &
-    BEGCNAME(dtpcon,SUFFIX)
+pure subroutine dtpcon(norm,uplo,diag,n,ap,rcond,work,iwork, &
+    info) BEGCNAME(dtpcon,SUFFIX)
 ENDCNAME(dtpcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

@@ -1,5 +1,5 @@
-pure subroutine ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork,info) &
-    BEGCNAME(ctbcon,SUFFIX)
+pure subroutine ctbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,rwork, &
+    info) BEGCNAME(ctbcon,SUFFIX)
 ENDCNAME(ctbcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

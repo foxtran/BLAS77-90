@@ -1,5 +1,5 @@
-pure subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) &
-    BEGCNAME(chesv,SUFFIX)
+pure subroutine chesv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork, &
+    info) BEGCNAME(chesv,SUFFIX)
 ENDCNAME(chesv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

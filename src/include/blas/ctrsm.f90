@@ -1,5 +1,5 @@
-pure subroutine ctrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) &
-    BEGCNAME(ctrsm,SUFFIX)
+pure subroutine ctrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b, &
+    ldb) BEGCNAME(ctrsm,SUFFIX)
 ENDCNAME(ctrsm,SUFFIX)
 import
 character(len=1), intent(inout) :: side

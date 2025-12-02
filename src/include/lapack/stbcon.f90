@@ -1,5 +1,5 @@
-pure subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork,info) &
-    BEGCNAME(stbcon,SUFFIX)
+pure subroutine stbcon(norm,uplo,diag,n,kd,ab,ldab,rcond,work,iwork, &
+    info) BEGCNAME(stbcon,SUFFIX)
 ENDCNAME(stbcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm

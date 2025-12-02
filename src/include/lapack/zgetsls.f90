@@ -1,5 +1,5 @@
-pure subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) &
-    BEGCNAME(zgetsls,SUFFIX)
+pure subroutine zgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork, &
+    info) BEGCNAME(zgetsls,SUFFIX)
 ENDCNAME(zgetsls,SUFFIX)
 import
 character(len=1), intent(inout) :: trans

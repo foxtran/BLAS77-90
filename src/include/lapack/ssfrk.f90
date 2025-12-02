@@ -1,5 +1,5 @@
-pure subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta,c) BEGCNAME(ssfrk, &
-    SUFFIX)
+pure subroutine ssfrk(transr,uplo,trans,n,k,alpha,a,lda,beta, &
+    c) BEGCNAME(ssfrk,SUFFIX)
 ENDCNAME(ssfrk,SUFFIX)
 import
 character(len=1), intent(inout) :: transr

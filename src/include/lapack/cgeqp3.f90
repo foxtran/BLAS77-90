@@ -1,5 +1,5 @@
-pure subroutine cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork,info) &
-    BEGCNAME(cgeqp3,SUFFIX)
+pure subroutine cgeqp3(m,n,a,lda,jpvt,tau,work,lwork,rwork, &
+    info) BEGCNAME(cgeqp3,SUFFIX)
 ENDCNAME(cgeqp3,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

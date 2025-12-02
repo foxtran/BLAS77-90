@@ -1,5 +1,5 @@
-pure subroutine cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) &
-    BEGCNAME(cggbak,SUFFIX)
+pure subroutine cggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv, &
+    info) BEGCNAME(cggbak,SUFFIX)
 ENDCNAME(cggbak,SUFFIX)
 import
 character(len=1), intent(inout) :: job

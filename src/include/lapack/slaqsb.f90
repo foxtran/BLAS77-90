@@ -1,5 +1,5 @@
-pure subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax,equed) BEGCNAME(slaqsb, &
-    SUFFIX)
+pure subroutine slaqsb(uplo,n,kd,ab,ldab,s,scond,amax, &
+    equed) BEGCNAME(slaqsb,SUFFIX)
 ENDCNAME(slaqsb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

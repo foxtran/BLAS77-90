@@ -1,5 +1,5 @@
-pure subroutine ssyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) BEGCNAME(ssyrk, &
-    SUFFIX)
+pure subroutine ssyrk(uplo,trans,n,k,alpha,a,lda,beta,c, &
+    ldc) BEGCNAME(ssyrk,SUFFIX)
 ENDCNAME(ssyrk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

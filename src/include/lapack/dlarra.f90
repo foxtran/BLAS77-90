@@ -1,5 +1,5 @@
-pure subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) BEGCNAME(dlarra, &
-    SUFFIX)
+pure subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit, &
+    info) BEGCNAME(dlarra,SUFFIX)
 ENDCNAME(dlarra,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

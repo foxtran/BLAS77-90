@@ -1,5 +1,5 @@
-pure subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) BEGCNAME(sgbsv, &
-    SUFFIX)
+pure subroutine sgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb, &
+    info) BEGCNAME(sgbsv,SUFFIX)
 ENDCNAME(sgbsv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

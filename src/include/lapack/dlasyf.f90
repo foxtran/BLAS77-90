@@ -1,5 +1,5 @@
-pure subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) BEGCNAME(dlasyf, &
-    SUFFIX)
+pure subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw, &
+    info) BEGCNAME(dlasyf,SUFFIX)
 ENDCNAME(dlasyf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

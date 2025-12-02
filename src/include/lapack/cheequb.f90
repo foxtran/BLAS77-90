@@ -1,5 +1,5 @@
-pure subroutine cheequb(uplo,n,a,lda,s,scond,amax,work,info) BEGCNAME(cheequb, &
-    SUFFIX)
+pure subroutine cheequb(uplo,n,a,lda,s,scond,amax,work, &
+    info) BEGCNAME(cheequb,SUFFIX)
 ENDCNAME(cheequb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

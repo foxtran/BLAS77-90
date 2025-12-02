@@ -1,5 +1,5 @@
-pure subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,info) &
-    BEGCNAME(sgelsy,SUFFIX)
+pure subroutine sgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork, &
+    info) BEGCNAME(sgelsy,SUFFIX)
 ENDCNAME(sgelsy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

@@ -1,5 +1,5 @@
-pure subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) &
-    BEGCNAME(sggbal,SUFFIX)
+pure subroutine sggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work, &
+    info) BEGCNAME(sggbal,SUFFIX)
 ENDCNAME(sggbal,SUFFIX)
 import
 character(len=1), intent(inout) :: job

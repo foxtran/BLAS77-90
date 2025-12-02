@@ -1,5 +1,5 @@
-pure subroutine ssytrf(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(ssytrf, &
-    SUFFIX)
+pure subroutine ssytrf(uplo,n,a,lda,ipiv,work,lwork, &
+    info) BEGCNAME(ssytrf,SUFFIX)
 ENDCNAME(ssytrf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) &
-    BEGCNAME(zungtsqr,SUFFIX)
+pure subroutine zungtsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork, &
+    info) BEGCNAME(zungtsqr,SUFFIX)
 ENDCNAME(zungtsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m

@@ -1,5 +1,5 @@
-pure subroutine cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork,info) &
-    BEGCNAME(cgemqr,SUFFIX)
+pure subroutine cgemqr(side,trans,m,n,k,a,lda,t,tsize,c,ldc,work,lwork, &
+    info) BEGCNAME(cgemqr,SUFFIX)
 ENDCNAME(cgemqr,SUFFIX)
 import
 character(len=1), intent(inout) :: side

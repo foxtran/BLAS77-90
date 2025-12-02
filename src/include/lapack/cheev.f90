@@ -1,5 +1,5 @@
-pure subroutine cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork,info) BEGCNAME(cheev, &
-    SUFFIX)
+pure subroutine cheev(jobz,uplo,n,a,lda,w,work,lwork,rwork, &
+    info) BEGCNAME(cheev,SUFFIX)
 ENDCNAME(cheev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz

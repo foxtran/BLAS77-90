@@ -1,5 +1,5 @@
-pure subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) BEGCNAME(slascl, &
-    SUFFIX)
+pure subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda, &
+    info) BEGCNAME(slascl,SUFFIX)
 ENDCNAME(slascl,SUFFIX)
 import
 character(len=1), intent(inout) :: type

@@ -1,5 +1,5 @@
-pure function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) &
-    BEGCNAME(sla_gercond,SUFFIX)
+pure function sla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work, &
+    iwork) BEGCNAME(sla_gercond,SUFFIX)
 ENDCNAME(sla_gercond,SUFFIX)
 import
 character(len=1), intent(in) :: trans

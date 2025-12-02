@@ -1,5 +1,5 @@
-pure subroutine zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) &
-    BEGCNAME(zla_syamv,SUFFIX)
+pure subroutine zla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y, &
+    incy) BEGCNAME(zla_syamv,SUFFIX)
 ENDCNAME(zla_syamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: uplo

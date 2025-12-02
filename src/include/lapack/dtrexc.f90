@@ -1,5 +1,5 @@
-pure subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) BEGCNAME(dtrexc, &
-    SUFFIX)
+pure subroutine dtrexc(compq,n,t,ldt,q,ldq,ifst,ilst,work, &
+    info) BEGCNAME(dtrexc,SUFFIX)
 ENDCNAME(dtrexc,SUFFIX)
 import
 character(len=1), intent(inout) :: compq

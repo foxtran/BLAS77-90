@@ -1,5 +1,5 @@
-pure subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter,info) &
-    BEGCNAME(dsgesv,SUFFIX)
+pure subroutine dsgesv(n,nrhs,a,lda,ipiv,b,ldb,x,ldx,work,swork,iter, &
+    info) BEGCNAME(dsgesv,SUFFIX)
 ENDCNAME(dsgesv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

@@ -1,5 +1,5 @@
-pure subroutine zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) BEGCNAME(zlahef, &
-    SUFFIX)
+pure subroutine zlahef(uplo,n,nb,kb,a,lda,ipiv,w,ldw, &
+    info) BEGCNAME(zlahef,SUFFIX)
 ENDCNAME(zlahef,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

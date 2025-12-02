@@ -1,5 +1,5 @@
-pure subroutine zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) &
-    BEGCNAME(zunmql,SUFFIX)
+pure subroutine zunmql(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork, &
+    info) BEGCNAME(zunmql,SUFFIX)
 ENDCNAME(zunmql,SUFFIX)
 import
 character(len=1), intent(inout) :: side

@@ -1,5 +1,5 @@
-pure function zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work,rwork) &
-    BEGCNAME(zla_hercond_c,SUFFIX)
+pure function zla_hercond_c(uplo,n,a,lda,af,ldaf,ipiv,c,capply,info,work, &
+    rwork) BEGCNAME(zla_hercond_c,SUFFIX)
 ENDCNAME(zla_hercond_c,SUFFIX)
 import
 character(len=1), intent(in) :: uplo

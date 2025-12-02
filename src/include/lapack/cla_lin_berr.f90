@@ -1,5 +1,5 @@
-pure subroutine cla_lin_berr(n,nz,nrhs,res,ayb,berr) BEGCNAME(cla_lin_berr, &
-    SUFFIX)
+pure subroutine cla_lin_berr(n,nz,nrhs,res,ayb, &
+    berr) BEGCNAME(cla_lin_berr,SUFFIX)
 ENDCNAME(cla_lin_berr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n

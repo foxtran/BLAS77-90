@@ -1,5 +1,5 @@
-pure subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) &
-    BEGCNAME(clasyf_rk,SUFFIX)
+pure subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw, &
+    info) BEGCNAME(clasyf_rk,SUFFIX)
 ENDCNAME(clasyf_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

@@ -1,5 +1,5 @@
-pure subroutine zlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) BEGCNAME(zlatdf, &
-    SUFFIX)
+pure subroutine zlatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv, &
+    jpiv) BEGCNAME(zlatdf,SUFFIX)
 ENDCNAME(zlatdf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: ijob

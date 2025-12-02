@@ -1,5 +1,5 @@
-pure subroutine zpstf2(uplo,n,a,lda,piv,rank,tol,work,info) BEGCNAME(zpstf2, &
-    SUFFIX)
+pure subroutine zpstf2(uplo,n,a,lda,piv,rank,tol,work, &
+    info) BEGCNAME(zpstf2,SUFFIX)
 ENDCNAME(zpstf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo

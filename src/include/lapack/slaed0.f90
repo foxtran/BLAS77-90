@@ -1,5 +1,5 @@
-pure subroutine slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) &
-    BEGCNAME(slaed0,SUFFIX)
+pure subroutine slaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork, &
+    info) BEGCNAME(slaed0,SUFFIX)
 ENDCNAME(slaed0,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq

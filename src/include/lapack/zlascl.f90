@@ -1,5 +1,5 @@
-pure subroutine zlascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) BEGCNAME(zlascl, &
-    SUFFIX)
+pure subroutine zlascl(type,kl,ku,cfrom,cto,m,n,a,lda, &
+    info) BEGCNAME(zlascl,SUFFIX)
 ENDCNAME(zlascl,SUFFIX)
 import
 character(len=1), intent(inout) :: type
