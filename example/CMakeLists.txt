@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.22)
 project(BLAS77Interface_examples
   VERSION 0.0.1
   DESCRIPTION "Test programs of BLAS77"
-  LANGUAGES Fortran)
+  LANGUAGES C Fortran)
 
 include(FetchContent)
 
