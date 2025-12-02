@@ -1,4 +1,5 @@
-pure subroutine sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) CNAME(sorbdb4)
+pure subroutine sorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) BEGCNAME(sorbdb4,SUFFIX)
+ENDCNAME(sorbdb4,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: p

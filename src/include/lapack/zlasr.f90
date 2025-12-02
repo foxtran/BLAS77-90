@@ -1,4 +1,5 @@
-pure subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) CNAME(zlasr)
+pure subroutine zlasr(side,pivot,direct,m,n,c,s,a,lda) BEGCNAME(zlasr,SUFFIX)
+ENDCNAME(zlasr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: pivot

@@ -1,4 +1,5 @@
-pure subroutine slahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) CNAME(slahqr)
+pure subroutine slahqr(wantt,wantz,n,ilo,ihi,h,ldh,wr,wi,iloz,ihiz,z,ldz,info) BEGCNAME(slahqr,SUFFIX)
+ENDCNAME(slahqr,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantt
 logical(blas77_int), intent(inout) :: wantz

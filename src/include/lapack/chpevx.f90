@@ -1,4 +1,5 @@
-pure subroutine chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) CNAME(chpevx)
+pure subroutine chpevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,rwork,iwork,ifail,info) BEGCNAME(chpevx,SUFFIX)
+ENDCNAME(chpevx,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: range

@@ -1,4 +1,5 @@
-pure subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) CNAME(dlarf)
+pure subroutine dlarf(side,m,n,v,incv,tau,c,ldc,work) BEGCNAME(dlarf,SUFFIX)
+ENDCNAME(dlarf,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 integer(blas77_int), intent(inout) :: m

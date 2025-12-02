@@ -1,4 +1,5 @@
-pure subroutine srot(n,sx,incx,sy,incy,c,s) CNAME(srot)
+pure subroutine srot(n,sx,incx,sy,incy,c,s) BEGCNAME(srot,SUFFIX)
+ENDCNAME(srot,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: sx(*)

@@ -1,4 +1,5 @@
-pure subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(zpftrs)
+pure subroutine zpftrs(transr,uplo,n,nrhs,a,b,ldb,info) BEGCNAME(zpftrs,SUFFIX)
+ENDCNAME(zpftrs,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

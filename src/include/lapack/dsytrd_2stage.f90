@@ -1,4 +1,5 @@
-pure subroutine dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) CNAME(dsytrd_2stage)
+pure subroutine dsytrd_2stage(vect,uplo,n,a,lda,d,e,tau,hous2,lhous2,work,lwork,info) BEGCNAME(dsytrd_2stage,SUFFIX)
+ENDCNAME(dsytrd_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: uplo

@@ -1,4 +1,5 @@
-pure subroutine dlapmt(forwrd,m,n,x,ldx,k) CNAME(dlapmt)
+pure subroutine dlapmt(forwrd,m,n,x,ldx,k) BEGCNAME(dlapmt,SUFFIX)
+ENDCNAME(dlapmt,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: forwrd
 integer(blas77_int), intent(inout) :: m

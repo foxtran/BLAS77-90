@@ -1,4 +1,5 @@
-pure subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) CNAME(zgghd3)
+pure subroutine zgghd3(compq,compz,n,ilo,ihi,a,lda,b,ldb,q,ldq,z,ldz,work,lwork,info) BEGCNAME(zgghd3,SUFFIX)
+ENDCNAME(zgghd3,SUFFIX)
 import
 character(len=1), intent(inout) :: compq
 character(len=1), intent(inout) :: compz

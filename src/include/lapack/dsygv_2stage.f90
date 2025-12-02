@@ -1,4 +1,5 @@
-pure subroutine dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) CNAME(dsygv_2stage)
+pure subroutine dsygv_2stage(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,info) BEGCNAME(dsygv_2stage,SUFFIX)
+ENDCNAME(dsygv_2stage,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: jobz

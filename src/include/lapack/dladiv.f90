@@ -1,4 +1,5 @@
-pure subroutine dladiv(a,b,c,d,p,q) CNAME(dladiv)
+pure subroutine dladiv(a,b,c,d,p,q) BEGCNAME(dladiv,SUFFIX)
+ENDCNAME(dladiv,SUFFIX)
 import
 real(blas77_f64), intent(inout) :: a
 real(blas77_f64), intent(inout) :: b

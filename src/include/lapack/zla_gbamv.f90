@@ -1,4 +1,5 @@
-pure subroutine zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) CNAME(zla_gbamv)
+pure subroutine zla_gbamv(trans,m,n,kl,ku,alpha,ab,ldab,x,incx,beta,y,incy) BEGCNAME(zla_gbamv,SUFFIX)
+ENDCNAME(zla_gbamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

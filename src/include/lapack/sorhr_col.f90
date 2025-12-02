@@ -1,4 +1,5 @@
-pure subroutine sorhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(sorhr_col)
+pure subroutine sorhr_col(m,n,nb,a,lda,t,ldt,d,info) BEGCNAME(sorhr_col,SUFFIX)
+ENDCNAME(sorhr_col,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

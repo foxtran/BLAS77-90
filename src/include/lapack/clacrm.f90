@@ -1,4 +1,5 @@
-pure subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(clacrm)
+pure subroutine clacrm(m,n,a,lda,b,ldb,c,ldc,rwork) BEGCNAME(clacrm,SUFFIX)
+ENDCNAME(clacrm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

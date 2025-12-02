@@ -1,4 +1,5 @@
-pure subroutine zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) CNAME(zgsvj1)
+pure subroutine zgsvj1(jobv,m,n,n1,a,lda,d,sva,mv,v,ldv,eps,sfmin,tol,nsweep,work,lwork,info) BEGCNAME(zgsvj1,SUFFIX)
+ENDCNAME(zgsvj1,SUFFIX)
 import
 character(len=1), intent(inout) :: jobv
 integer(blas77_int), intent(inout) :: m

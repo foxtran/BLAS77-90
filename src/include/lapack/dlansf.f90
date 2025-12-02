@@ -1,4 +1,5 @@
-pure function dlansf(norm,transr,uplo,n,a,work) CNAME(dlansf)
+pure function dlansf(norm,transr,uplo,n,a,work) BEGCNAME(dlansf,SUFFIX)
+ENDCNAME(dlansf,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: transr

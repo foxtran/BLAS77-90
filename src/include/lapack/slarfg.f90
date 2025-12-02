@@ -1,4 +1,5 @@
-pure subroutine slarfg(n,alpha,x,incx,tau) CNAME(slarfg)
+pure subroutine slarfg(n,alpha,x,incx,tau) BEGCNAME(slarfg,SUFFIX)
+ENDCNAME(slarfg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: alpha

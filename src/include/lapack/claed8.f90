@@ -1,4 +1,5 @@
-pure subroutine claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) CNAME(claed8)
+pure subroutine claed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) BEGCNAME(claed8,SUFFIX)
+ENDCNAME(claed8,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: k
 integer(blas77_int), intent(inout) :: n

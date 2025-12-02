@@ -1,4 +1,5 @@
-pure subroutine dlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) CNAME(dlatrs)
+pure subroutine dlatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) BEGCNAME(dlatrs,SUFFIX)
+ENDCNAME(dlatrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

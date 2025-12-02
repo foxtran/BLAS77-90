@@ -1,4 +1,5 @@
-pure subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) CNAME(slanv2)
+pure subroutine slanv2(a,b,c,d,rt1r,rt1i,rt2r,rt2i,cs,sn) BEGCNAME(slanv2,SUFFIX)
+ENDCNAME(slanv2,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: a
 real(blas77_f32), intent(inout) :: b

@@ -1,4 +1,5 @@
-pure subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) CNAME(slaebz)
+pure subroutine slaebz(ijob,nitmax,n,mmax,minp,nbmin,abstol,reltol,pivmin,d,e,e2,nval,ab,c,mout,nab,work,iwork,info) BEGCNAME(slaebz,SUFFIX)
+ENDCNAME(slaebz,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: ijob
 integer(blas77_int), intent(inout) :: nitmax

@@ -1,4 +1,5 @@
-pure subroutine cptcon(n,d,e,anorm,rcond,rwork,info) CNAME(cptcon)
+pure subroutine cptcon(n,d,e,anorm,rcond,rwork,info) BEGCNAME(cptcon,SUFFIX)
+ENDCNAME(cptcon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

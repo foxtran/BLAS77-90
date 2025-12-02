@@ -1,4 +1,5 @@
-pure subroutine dlaorhr_col_getrfnp2(m,n,a,lda,d,info) CNAME(dlaorhr_col_getrfnp2)
+pure subroutine dlaorhr_col_getrfnp2(m,n,a,lda,d,info) BEGCNAME(dlaorhr_col_getrfnp2,SUFFIX)
+ENDCNAME(dlaorhr_col_getrfnp2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(sppsvx)
+pure subroutine sppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) BEGCNAME(sppsvx,SUFFIX)
+ENDCNAME(sppsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: uplo

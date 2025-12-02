@@ -1,4 +1,5 @@
-pure subroutine zheswapr(uplo,n,a,lda,i1,i2) CNAME(zheswapr)
+pure subroutine zheswapr(uplo,n,a,lda,i1,i2) BEGCNAME(zheswapr,SUFFIX)
+ENDCNAME(zheswapr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

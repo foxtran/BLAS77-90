@@ -1,4 +1,5 @@
-pure subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) CNAME(zlarcm)
+pure subroutine zlarcm(m,n,a,lda,b,ldb,c,ldc,rwork) BEGCNAME(zlarcm,SUFFIX)
+ENDCNAME(zlarcm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

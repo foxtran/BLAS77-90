@@ -1,4 +1,5 @@
-pure subroutine chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(chesvxx)
+pure subroutine chesvxx(fact,uplo,n,nrhs,a,lda,af,ldaf,ipiv,equed,s,b,ldb,x,ldx,rcond,rpvgrw,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) BEGCNAME(chesvxx,SUFFIX)
+ENDCNAME(chesvxx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: uplo

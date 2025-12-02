@@ -1,4 +1,5 @@
-pure subroutine zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(zgbsvx)
+pure subroutine zgbsvx(fact,trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,equed,r,c,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) BEGCNAME(zgbsvx,SUFFIX)
+ENDCNAME(zgbsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: trans

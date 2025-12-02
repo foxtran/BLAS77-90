@@ -1,4 +1,5 @@
-pure subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) CNAME(dlasq6)
+pure subroutine dlasq6(i0,n0,z,pp,dmin,dmin1,dmin2,dn,dnm1,dnm2) BEGCNAME(dlasq6,SUFFIX)
+ENDCNAME(dlasq6,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: i0
 integer(blas77_int), intent(inout) :: n0

@@ -1,4 +1,5 @@
-pure subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(ssymm)
+pure subroutine ssymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(ssymm,SUFFIX)
+ENDCNAME(ssymm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

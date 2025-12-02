@@ -1,4 +1,5 @@
-pure subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(ssyrfs)
+pure subroutine ssyrfs(uplo,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(ssyrfs,SUFFIX)
+ENDCNAME(ssyrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

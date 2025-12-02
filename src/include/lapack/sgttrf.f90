@@ -1,4 +1,5 @@
-pure subroutine sgttrf(n,dl,d,du,du2,ipiv,info) CNAME(sgttrf)
+pure subroutine sgttrf(n,dl,d,du,du2,ipiv,info) BEGCNAME(sgttrf,SUFFIX)
+ENDCNAME(sgttrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: dl(*)

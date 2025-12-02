@@ -1,4 +1,5 @@
-pure subroutine sdisna(job,m,n,d,sep,info) CNAME(sdisna)
+pure subroutine sdisna(job,m,n,d,sep,info) BEGCNAME(sdisna,SUFFIX)
+ENDCNAME(sdisna,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 integer(blas77_int), intent(inout) :: m

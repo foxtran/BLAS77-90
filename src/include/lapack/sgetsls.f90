@@ -1,4 +1,5 @@
-pure subroutine sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(sgetsls)
+pure subroutine sgetsls(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) BEGCNAME(sgetsls,SUFFIX)
+ENDCNAME(sgetsls,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

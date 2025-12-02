@@ -1,4 +1,5 @@
-pure subroutine daxpby(n,da,dx,incx,db,dy,incy) CNAME(daxpby)
+pure subroutine daxpby(n,da,dx,incx,db,dy,incy) BEGCNAME(daxpby,SUFFIX)
+ENDCNAME(daxpby,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: da

@@ -1,4 +1,5 @@
-pure subroutine dlasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) CNAME(dlasd8)
+pure subroutine dlasd8(icompq,k,d,z,vf,vl,difl,difr,lddifr,dsigma,work,info) BEGCNAME(dlasd8,SUFFIX)
+ENDCNAME(dlasd8,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq
 integer(blas77_int), intent(inout) :: k

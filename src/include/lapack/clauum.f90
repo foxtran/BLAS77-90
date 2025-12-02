@@ -1,4 +1,5 @@
-pure subroutine clauum(uplo,n,a,lda,info) CNAME(clauum)
+pure subroutine clauum(uplo,n,a,lda,info) BEGCNAME(clauum,SUFFIX)
+ENDCNAME(clauum,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

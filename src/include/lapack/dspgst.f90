@@ -1,4 +1,5 @@
-pure subroutine dspgst(itype,uplo,n,ap,bp,info) CNAME(dspgst)
+pure subroutine dspgst(itype,uplo,n,ap,bp,info) BEGCNAME(dspgst,SUFFIX)
+ENDCNAME(dspgst,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: uplo

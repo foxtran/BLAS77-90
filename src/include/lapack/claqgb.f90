@@ -1,4 +1,5 @@
-pure subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) CNAME(claqgb)
+pure subroutine claqgb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,equed) BEGCNAME(claqgb,SUFFIX)
+ENDCNAME(claqgb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine csyconvf(uplo,way,n,a,lda,e,ipiv,info) CNAME(csyconvf)
+pure subroutine csyconvf(uplo,way,n,a,lda,e,ipiv,info) BEGCNAME(csyconvf,SUFFIX)
+ENDCNAME(csyconvf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: way

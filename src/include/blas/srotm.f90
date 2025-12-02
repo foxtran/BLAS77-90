@@ -1,4 +1,5 @@
-pure subroutine srotm(n,sx,incx,sy,incy,sparam) CNAME(srotm)
+pure subroutine srotm(n,sx,incx,sy,incy,sparam) BEGCNAME(srotm,SUFFIX)
+ENDCNAME(srotm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: sx(*)

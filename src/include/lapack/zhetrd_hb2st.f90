@@ -1,4 +1,5 @@
-pure subroutine zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) CNAME(zhetrd_hb2st)
+pure subroutine zhetrd_hb2st(stage1,vect,uplo,n,kd,ab,ldab,d,e,hous,lhous,work,lwork,info) BEGCNAME(zhetrd_hb2st,SUFFIX)
+ENDCNAME(zhetrd_hb2st,SUFFIX)
 import
 character(len=1), intent(inout) :: stage1
 character(len=1), intent(inout) :: vect

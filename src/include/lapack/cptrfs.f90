@@ -1,4 +1,5 @@
-pure subroutine cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cptrfs)
+pure subroutine cptrfs(uplo,n,nrhs,d,e,df,ef,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(cptrfs,SUFFIX)
+ENDCNAME(cptrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

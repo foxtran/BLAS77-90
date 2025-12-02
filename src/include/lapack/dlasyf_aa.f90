@@ -1,4 +1,5 @@
-pure subroutine dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(dlasyf_aa)
+pure subroutine dlasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) BEGCNAME(dlasyf_aa,SUFFIX)
+ENDCNAME(dlasyf_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: j1

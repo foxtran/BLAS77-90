@@ -1,4 +1,5 @@
-pure subroutine zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) CNAME(zgttrs)
+pure subroutine zgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) BEGCNAME(zgttrs,SUFFIX)
+ENDCNAME(zgttrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine slasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) CNAME(slasd3)
+pure subroutine slasd3(nl,nr,sqre,k,d,q,ldq,dsigma,u,ldu,u2,ldu2,vt,ldvt,vt2,ldvt2,idxc,ctot,z,info) BEGCNAME(slasd3,SUFFIX)
+ENDCNAME(slasd3,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: nl
 integer(blas77_int), intent(inout) :: nr

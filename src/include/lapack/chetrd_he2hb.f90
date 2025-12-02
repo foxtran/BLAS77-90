@@ -1,4 +1,5 @@
-pure subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(chetrd_he2hb)
+pure subroutine chetrd_he2hb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) BEGCNAME(chetrd_he2hb,SUFFIX)
+ENDCNAME(chetrd_he2hb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

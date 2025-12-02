@@ -1,4 +1,5 @@
-pure subroutine cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) CNAME(cggev3)
+pure subroutine cggev3(jobvl,jobvr,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,work,lwork,rwork,info) BEGCNAME(cggev3,SUFFIX)
+ENDCNAME(cggev3,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvl
 character(len=1), intent(inout) :: jobvr

@@ -1,4 +1,5 @@
-pure subroutine ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) CNAME(ctrsna)
+pure subroutine ctrsna(job,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,s,sep,mm,m,work,ldwork,rwork,info) BEGCNAME(ctrsna,SUFFIX)
+ENDCNAME(ctrsna,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: howmny

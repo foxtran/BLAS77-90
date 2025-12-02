@@ -1,4 +1,5 @@
-pure subroutine spotrf2(uplo,n,a,lda,info) CNAME(spotrf2)
+pure subroutine spotrf2(uplo,n,a,lda,info) BEGCNAME(spotrf2,SUFFIX)
+ENDCNAME(spotrf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

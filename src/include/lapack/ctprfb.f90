@@ -1,4 +1,5 @@
-pure subroutine ctprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(ctprfb)
+pure subroutine ctprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) BEGCNAME(ctprfb,SUFFIX)
+ENDCNAME(ctprfb,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

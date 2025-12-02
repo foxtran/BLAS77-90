@@ -1,4 +1,5 @@
-pure subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dsbevd_2stage)
+pure subroutine dsbevd_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,iwork,liwork,info) BEGCNAME(dsbevd_2stage,SUFFIX)
+ENDCNAME(dsbevd_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

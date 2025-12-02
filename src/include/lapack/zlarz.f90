@@ -1,4 +1,5 @@
-pure subroutine zlarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(zlarz)
+pure subroutine zlarz(side,m,n,l,v,incv,tau,c,ldc,work) BEGCNAME(zlarz,SUFFIX)
+ENDCNAME(zlarz,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 integer(blas77_int), intent(inout) :: m

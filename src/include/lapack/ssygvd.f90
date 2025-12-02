@@ -1,4 +1,5 @@
-pure subroutine ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) CNAME(ssygvd)
+pure subroutine ssygvd(itype,jobz,uplo,n,a,lda,b,ldb,w,work,lwork,iwork,liwork,info) BEGCNAME(ssygvd,SUFFIX)
+ENDCNAME(ssygvd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: jobz

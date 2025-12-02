@@ -1,4 +1,5 @@
-pure subroutine zsyconv(uplo,way,n,a,lda,ipiv,e,info) CNAME(zsyconv)
+pure subroutine zsyconv(uplo,way,n,a,lda,ipiv,e,info) BEGCNAME(zsyconv,SUFFIX)
+ENDCNAME(zsyconv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: way

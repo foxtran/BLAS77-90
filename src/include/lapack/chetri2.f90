@@ -1,4 +1,5 @@
-pure subroutine chetri2(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(chetri2)
+pure subroutine chetri2(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(chetri2,SUFFIX)
+ENDCNAME(chetri2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

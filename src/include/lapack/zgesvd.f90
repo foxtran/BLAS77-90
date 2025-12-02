@@ -1,4 +1,5 @@
-pure subroutine zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) CNAME(zgesvd)
+pure subroutine zgesvd(jobu,jobvt,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,info) BEGCNAME(zgesvd,SUFFIX)
+ENDCNAME(zgesvd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu
 character(len=1), intent(inout) :: jobvt

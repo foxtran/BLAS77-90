@@ -1,4 +1,5 @@
-pure subroutine dlasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) CNAME(dlasdq)
+pure subroutine dlasdq(uplo,sqre,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,work,info) BEGCNAME(dlasdq,SUFFIX)
+ENDCNAME(dlasdq,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: sqre

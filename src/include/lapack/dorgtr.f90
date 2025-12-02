@@ -1,4 +1,5 @@
-pure subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(dorgtr)
+pure subroutine dorgtr(uplo,n,a,lda,tau,work,lwork,info) BEGCNAME(dorgtr,SUFFIX)
+ENDCNAME(dorgtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

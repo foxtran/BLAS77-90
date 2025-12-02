@@ -1,4 +1,5 @@
-pure subroutine cgerc(m,n,alpha,x,incx,y,incy,a,lda) CNAME(cgerc)
+pure subroutine cgerc(m,n,alpha,x,incx,y,incy,a,lda) BEGCNAME(cgerc,SUFFIX)
+ENDCNAME(cgerc,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

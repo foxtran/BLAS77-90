@@ -1,4 +1,5 @@
-pure subroutine slascl2(m,n,d,x,ldx) CNAME(slascl2)
+pure subroutine slascl2(m,n,d,x,ldx) BEGCNAME(slascl2,SUFFIX)
+ENDCNAME(slascl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

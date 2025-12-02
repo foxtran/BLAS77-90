@@ -1,4 +1,5 @@
-pure subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) CNAME(chetf2_rook)
+pure subroutine chetf2_rook(uplo,n,a,lda,ipiv,info) BEGCNAME(chetf2_rook,SUFFIX)
+ENDCNAME(chetf2_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

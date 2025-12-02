@@ -1,4 +1,5 @@
-pure subroutine dlauum(uplo,n,a,lda,info) CNAME(dlauum)
+pure subroutine dlauum(uplo,n,a,lda,info) BEGCNAME(dlauum,SUFFIX)
+ENDCNAME(dlauum,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

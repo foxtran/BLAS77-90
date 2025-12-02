@@ -1,4 +1,5 @@
-pure subroutine dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) CNAME(dstein)
+pure subroutine dstein(n,d,e,m,w,iblock,isplit,z,ldz,work,iwork,ifail,info) BEGCNAME(dstein,SUFFIX)
+ENDCNAME(dstein,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: d(*)

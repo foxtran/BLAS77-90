@@ -1,4 +1,5 @@
-pure subroutine slartgp(f,g,cs,sn,r) CNAME(slartgp)
+pure subroutine slartgp(f,g,cs,sn,r) BEGCNAME(slartgp,SUFFIX)
+ENDCNAME(slartgp,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: f
 real(blas77_f32), intent(inout) :: g

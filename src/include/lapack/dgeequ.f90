@@ -1,4 +1,5 @@
-pure subroutine dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) CNAME(dgeequ)
+pure subroutine dgeequ(m,n,a,lda,r,c,rowcnd,colcnd,amax,info) BEGCNAME(dgeequ,SUFFIX)
+ENDCNAME(dgeequ,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

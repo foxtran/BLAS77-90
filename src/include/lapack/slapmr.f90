@@ -1,4 +1,5 @@
-pure subroutine slapmr(forwrd,m,n,x,ldx,k) CNAME(slapmr)
+pure subroutine slapmr(forwrd,m,n,x,ldx,k) BEGCNAME(slapmr,SUFFIX)
+ENDCNAME(slapmr,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: forwrd
 integer(blas77_int), intent(inout) :: m

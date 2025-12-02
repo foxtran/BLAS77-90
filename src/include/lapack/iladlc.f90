@@ -1,4 +1,5 @@
-pure function iladlc(m,n,a,lda) CNAME(iladlc)
+pure function iladlc(m,n,a,lda) BEGCNAME(iladlc,SUFFIX)
+ENDCNAME(iladlc,SUFFIX)
 import
 integer(blas77_int), intent(in) :: m
 integer(blas77_int), intent(in) :: n

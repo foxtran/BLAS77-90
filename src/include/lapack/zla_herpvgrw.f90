@@ -1,4 +1,5 @@
-pure function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) CNAME(zla_herpvgrw)
+pure function zla_herpvgrw(uplo,n,info,a,lda,af,ldaf,ipiv,work) BEGCNAME(zla_herpvgrw,SUFFIX)
+ENDCNAME(zla_herpvgrw,SUFFIX)
 import
 character(len=1), intent(in) :: uplo
 integer(blas77_int), intent(in) :: n

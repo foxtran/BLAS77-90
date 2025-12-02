@@ -1,4 +1,5 @@
-pure subroutine zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zheevd)
+pure subroutine zheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) BEGCNAME(zheevd,SUFFIX)
+ENDCNAME(zheevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

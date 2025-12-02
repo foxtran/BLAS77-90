@@ -1,4 +1,5 @@
-pure subroutine zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) CNAME(zgerfsx)
+pure subroutine zgerfsx(trans,equed,n,nrhs,a,lda,af,ldaf,ipiv,r,c,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,rwork,info) BEGCNAME(zgerfsx,SUFFIX)
+ENDCNAME(zgerfsx,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 character(len=1), intent(inout) :: equed

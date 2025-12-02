@@ -1,4 +1,5 @@
-pure subroutine slaruv(iseed,n,x) CNAME(slaruv)
+pure subroutine slaruv(iseed,n,x) BEGCNAME(slaruv,SUFFIX)
+ENDCNAME(slaruv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: iseed(4)
 integer(blas77_int), intent(inout) :: n

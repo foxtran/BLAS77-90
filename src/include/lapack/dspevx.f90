@@ -1,4 +1,5 @@
-pure subroutine dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) CNAME(dspevx)
+pure subroutine dspevx(jobz,range,uplo,n,ap,vl,vu,il,iu,abstol,m,w,z,ldz,work,iwork,ifail,info) BEGCNAME(dspevx,SUFFIX)
+ENDCNAME(dspevx,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: range

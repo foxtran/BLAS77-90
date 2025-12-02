@@ -1,4 +1,5 @@
-pure subroutine zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) CNAME(zstegr)
+pure subroutine zstegr(jobz,range,n,d,e,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,iwork,liwork,info) BEGCNAME(zstegr,SUFFIX)
+ENDCNAME(zstegr,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: range

@@ -1,4 +1,5 @@
-pure subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) CNAME(dgelss)
+pure subroutine dgelss(m,n,nrhs,a,lda,b,ldb,s,rcond,rank,work,lwork,info) BEGCNAME(dgelss,SUFFIX)
+ENDCNAME(dgelss,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

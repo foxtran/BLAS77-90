@@ -1,4 +1,5 @@
-pure subroutine zgetri(n,a,lda,ipiv,work,lwork,info) CNAME(zgetri)
+pure subroutine zgetri(n,a,lda,ipiv,work,lwork,info) BEGCNAME(zgetri,SUFFIX)
+ENDCNAME(zgetri,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

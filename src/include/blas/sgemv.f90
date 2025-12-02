@@ -1,4 +1,5 @@
-pure subroutine sgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(sgemv)
+pure subroutine sgemv(trans,m,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(sgemv,SUFFIX)
+ENDCNAME(sgemv,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

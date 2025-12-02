@@ -1,4 +1,5 @@
-pure subroutine cppequ(uplo,n,ap,s,scond,amax,info) CNAME(cppequ)
+pure subroutine cppequ(uplo,n,ap,s,scond,amax,info) BEGCNAME(cppequ,SUFFIX)
+ENDCNAME(cppequ,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

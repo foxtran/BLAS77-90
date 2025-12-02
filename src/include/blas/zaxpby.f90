@@ -1,4 +1,5 @@
-pure subroutine zaxpby(n,za,zx,incx,zb,zy,incy) CNAME(zaxpby)
+pure subroutine zaxpby(n,za,zx,incx,zb,zy,incy) BEGCNAME(zaxpby,SUFFIX)
+ENDCNAME(zaxpby,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: za

@@ -1,4 +1,5 @@
-pure subroutine sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(sskewsyr2)
+pure subroutine sskewsyr2(uplo,n,alpha,x,incx,y,incy,a,lda) BEGCNAME(sskewsyr2,SUFFIX)
+ENDCNAME(sskewsyr2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

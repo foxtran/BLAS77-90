@@ -1,4 +1,5 @@
-pure function clantp(norm,uplo,diag,n,ap,work) CNAME(clantp)
+pure function clantp(norm,uplo,diag,n,ap,work) BEGCNAME(clantp,SUFFIX)
+ENDCNAME(clantp,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

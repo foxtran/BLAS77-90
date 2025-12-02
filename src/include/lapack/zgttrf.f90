@@ -1,4 +1,5 @@
-pure subroutine zgttrf(n,dl,d,du,du2,ipiv,info) CNAME(zgttrf)
+pure subroutine zgttrf(n,dl,d,du,du2,ipiv,info) BEGCNAME(zgttrf,SUFFIX)
+ENDCNAME(zgttrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: dl(*)

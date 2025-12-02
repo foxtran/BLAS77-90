@@ -1,4 +1,5 @@
-pure subroutine cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(cheevr_2stage)
+pure subroutine cheevr_2stage(jobz,range,uplo,n,a,lda,vl,vu,il,iu,abstol,m,w,z,ldz,isuppz,work,lwork,rwork,lrwork,iwork,liwork,info) BEGCNAME(cheevr_2stage,SUFFIX)
+ENDCNAME(cheevr_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: range

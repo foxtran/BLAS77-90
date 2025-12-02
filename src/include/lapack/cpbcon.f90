@@ -1,4 +1,5 @@
-pure subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) CNAME(cpbcon)
+pure subroutine cpbcon(uplo,n,kd,ab,ldab,anorm,rcond,work,rwork,info) BEGCNAME(cpbcon,SUFFIX)
+ENDCNAME(cpbcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

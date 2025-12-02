@@ -1,4 +1,5 @@
-pure subroutine zlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(zlabrd)
+pure subroutine zlabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) BEGCNAME(zlabrd,SUFFIX)
+ENDCNAME(zlabrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

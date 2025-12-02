@@ -1,4 +1,5 @@
-pure subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(stplqt)
+pure subroutine stplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) BEGCNAME(stplqt,SUFFIX)
+ENDCNAME(stplqt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

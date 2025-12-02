@@ -1,4 +1,5 @@
-pure subroutine ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(ssytrf_rook)
+pure subroutine ssytrf_rook(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(ssytrf_rook,SUFFIX)
+ENDCNAME(ssytrf_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

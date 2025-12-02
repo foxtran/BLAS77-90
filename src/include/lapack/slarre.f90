@@ -1,4 +1,5 @@
-pure subroutine slarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) CNAME(slarre)
+pure subroutine slarre(range,n,vl,vu,il,iu,d,e,e2,rtol1,rtol2,spltol,nsplit,isplit,m,w,werr,wgap,iblock,indexw,gers,pivmin,work,iwork,info) BEGCNAME(slarre,SUFFIX)
+ENDCNAME(slarre,SUFFIX)
 import
 character(len=1), intent(inout) :: range
 integer(blas77_int), intent(inout) :: n

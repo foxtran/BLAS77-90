@@ -1,4 +1,5 @@
-pure subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon)
+pure subroutine checon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(checon,SUFFIX)
+ENDCNAME(checon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) CNAME(strexc)
+pure subroutine strexc(compq,n,t,ldt,q,ldq,ifst,ilst,work,info) BEGCNAME(strexc,SUFFIX)
+ENDCNAME(strexc,SUFFIX)
 import
 character(len=1), intent(inout) :: compq
 integer(blas77_int), intent(inout) :: n

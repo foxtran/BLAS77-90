@@ -1,4 +1,5 @@
-pure subroutine claqr1(n,h,ldh,s1,s2,v) CNAME(claqr1)
+pure subroutine claqr1(n,h,ldh,s1,s2,v) BEGCNAME(claqr1,SUFFIX)
+ENDCNAME(claqr1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ldh

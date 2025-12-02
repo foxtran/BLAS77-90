@@ -1,4 +1,5 @@
-pure subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(claev2)
+pure subroutine claev2(a,b,c,rt1,rt2,cs1,sn1) BEGCNAME(claev2,SUFFIX)
+ENDCNAME(claev2,SUFFIX)
 import
 complex(blas77_f32), intent(inout) :: a
 complex(blas77_f32), intent(inout) :: b

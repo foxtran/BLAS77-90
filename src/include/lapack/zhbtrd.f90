@@ -1,4 +1,5 @@
-pure subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) CNAME(zhbtrd)
+pure subroutine zhbtrd(vect,uplo,n,kd,ab,ldab,d,e,q,ldq,work,info) BEGCNAME(zhbtrd,SUFFIX)
+ENDCNAME(zhbtrd,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: uplo

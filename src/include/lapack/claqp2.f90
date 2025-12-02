@@ -1,4 +1,5 @@
-pure subroutine claqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) CNAME(claqp2)
+pure subroutine claqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) BEGCNAME(claqp2,SUFFIX)
+ENDCNAME(claqp2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

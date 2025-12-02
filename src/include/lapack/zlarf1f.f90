@@ -1,4 +1,5 @@
-pure subroutine zlarf1f(side,m,n,v,incv,tau,c,ldc,work) CNAME(zlarf1f)
+pure subroutine zlarf1f(side,m,n,v,incv,tau,c,ldc,work) BEGCNAME(zlarf1f,SUFFIX)
+ENDCNAME(zlarf1f,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 integer(blas77_int), intent(inout) :: m

@@ -1,4 +1,5 @@
-pure subroutine zlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) CNAME(zlaqr2)
+pure subroutine zlaqr2(wantt,wantz,n,ktop,kbot,nw,h,ldh,iloz,ihiz,z,ldz,ns,nd,sh,v,ldv,nh,t,ldt,nv,wv,ldwv,work,lwork) BEGCNAME(zlaqr2,SUFFIX)
+ENDCNAME(zlaqr2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantt
 logical(blas77_int), intent(inout) :: wantz

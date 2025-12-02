@@ -1,4 +1,5 @@
-pure subroutine dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info) CNAME(dlaed2)
+pure subroutine dlaed2(k,n,n1,d,q,ldq,indxq,rho,z,dlambda,w,q2,indx,indxc,indxp,coltyp,info) BEGCNAME(dlaed2,SUFFIX)
+ENDCNAME(dlaed2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: k
 integer(blas77_int), intent(inout) :: n

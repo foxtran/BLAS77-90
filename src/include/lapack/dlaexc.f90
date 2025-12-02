@@ -1,4 +1,5 @@
-pure subroutine dlaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) CNAME(dlaexc)
+pure subroutine dlaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) BEGCNAME(dlaexc,SUFFIX)
+ENDCNAME(dlaexc,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantq
 integer(blas77_int), intent(inout) :: n

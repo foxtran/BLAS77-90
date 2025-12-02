@@ -1,4 +1,5 @@
-pure subroutine zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsysv_rook)
+pure subroutine zsysv_rook(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) BEGCNAME(zsysv_rook,SUFFIX)
+ENDCNAME(zsysv_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

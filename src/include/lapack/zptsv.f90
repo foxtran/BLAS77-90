@@ -1,4 +1,5 @@
-pure subroutine zptsv(n,nrhs,d,e,b,ldb,info) CNAME(zptsv)
+pure subroutine zptsv(n,nrhs,d,e,b,ldb,info) BEGCNAME(zptsv,SUFFIX)
+ENDCNAME(zptsv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

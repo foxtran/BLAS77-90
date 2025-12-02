@@ -1,4 +1,5 @@
-pure subroutine zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(zupmtr)
+pure subroutine zupmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) BEGCNAME(zupmtr,SUFFIX)
+ENDCNAME(zupmtr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

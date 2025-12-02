@@ -1,4 +1,5 @@
-pure subroutine cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) CNAME(cgemqrt)
+pure subroutine cgemqrt(side,trans,m,n,k,nb,v,ldv,t,ldt,c,ldc,work,info) BEGCNAME(cgemqrt,SUFFIX)
+ENDCNAME(cgemqrt,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

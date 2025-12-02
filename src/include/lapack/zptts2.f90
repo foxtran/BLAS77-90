@@ -1,4 +1,5 @@
-pure subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) CNAME(zptts2)
+pure subroutine zptts2(iuplo,n,nrhs,d,e,b,ldb) BEGCNAME(zptts2,SUFFIX)
+ENDCNAME(zptts2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: iuplo
 integer(blas77_int), intent(inout) :: n

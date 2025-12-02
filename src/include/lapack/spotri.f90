@@ -1,4 +1,5 @@
-pure subroutine spotri(uplo,n,a,lda,info) CNAME(spotri)
+pure subroutine spotri(uplo,n,a,lda,info) BEGCNAME(spotri,SUFFIX)
+ENDCNAME(spotri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dptsv(n,nrhs,d,e,b,ldb,info) CNAME(dptsv)
+pure subroutine dptsv(n,nrhs,d,e,b,ldb,info) BEGCNAME(dptsv,SUFFIX)
+ENDCNAME(dptsv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

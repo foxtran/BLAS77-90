@@ -1,4 +1,5 @@
-pure subroutine dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(dgelst)
+pure subroutine dgelst(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) BEGCNAME(dgelst,SUFFIX)
+ENDCNAME(dgelst,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

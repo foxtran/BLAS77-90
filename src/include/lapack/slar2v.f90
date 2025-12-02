@@ -1,4 +1,5 @@
-pure subroutine slar2v(n,x,y,z,incx,c,s,incc) CNAME(slar2v)
+pure subroutine slar2v(n,x,y,z,incx,c,s,incc) BEGCNAME(slar2v,SUFFIX)
+ENDCNAME(slar2v,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: x(*)

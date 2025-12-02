@@ -1,4 +1,5 @@
-pure subroutine ztgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) CNAME(ztgsy2)
+pure subroutine ztgsy2(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,rdsum,rdscal,info) BEGCNAME(ztgsy2,SUFFIX)
+ENDCNAME(ztgsy2,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: ijob

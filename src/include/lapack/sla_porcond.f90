@@ -1,4 +1,5 @@
-pure function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) CNAME(sla_porcond)
+pure function sla_porcond(uplo,n,a,lda,af,ldaf,cmode,c,info,work,iwork) BEGCNAME(sla_porcond,SUFFIX)
+ENDCNAME(sla_porcond,SUFFIX)
 import
 character(len=1), intent(in) :: uplo
 integer(blas77_int), intent(in) :: n

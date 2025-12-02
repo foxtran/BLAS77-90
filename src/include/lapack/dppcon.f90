@@ -1,4 +1,5 @@
-pure subroutine dppcon(uplo,n,ap,anorm,rcond,work,iwork,info) CNAME(dppcon)
+pure subroutine dppcon(uplo,n,ap,anorm,rcond,work,iwork,info) BEGCNAME(dppcon,SUFFIX)
+ENDCNAME(dppcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

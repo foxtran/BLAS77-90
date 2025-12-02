@@ -1,4 +1,5 @@
-pure subroutine csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(csysv)
+pure subroutine csysv(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) BEGCNAME(csysv,SUFFIX)
+ENDCNAME(csysv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

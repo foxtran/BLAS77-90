@@ -1,4 +1,5 @@
-pure subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) CNAME(slagtf)
+pure subroutine slagtf(n,a,lambda,b,c,tol,d,in,info) BEGCNAME(slagtf,SUFFIX)
+ENDCNAME(slagtf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: a(*)

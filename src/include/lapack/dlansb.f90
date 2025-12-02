@@ -1,4 +1,5 @@
-pure function dlansb(norm,uplo,n,k,ab,ldab,work) CNAME(dlansb)
+pure function dlansb(norm,uplo,n,k,ab,ldab,work) BEGCNAME(dlansb,SUFFIX)
+ENDCNAME(dlansb,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

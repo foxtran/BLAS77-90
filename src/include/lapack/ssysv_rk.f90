@@ -1,4 +1,5 @@
-pure subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) CNAME(ssysv_rk)
+pure subroutine ssysv_rk(uplo,n,nrhs,a,lda,e,ipiv,b,ldb,work,lwork,info) BEGCNAME(ssysv_rk,SUFFIX)
+ENDCNAME(ssysv_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

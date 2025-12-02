@@ -1,4 +1,5 @@
-pure subroutine zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmbr)
+pure subroutine zunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) BEGCNAME(zunmbr,SUFFIX)
+ENDCNAME(zunmbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: side

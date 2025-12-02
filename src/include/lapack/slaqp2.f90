@@ -1,4 +1,5 @@
-pure subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) CNAME(slaqp2)
+pure subroutine slaqp2(m,n,offset,a,lda,jpvt,tau,vn1,vn2,work) BEGCNAME(slaqp2,SUFFIX)
+ENDCNAME(slaqp2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

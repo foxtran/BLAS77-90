@@ -1,4 +1,5 @@
-pure subroutine sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) CNAME(sstevd)
+pure subroutine sstevd(jobz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) BEGCNAME(sstevd,SUFFIX)
+ENDCNAME(sstevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dlarnv(idist,iseed,n,x) CNAME(dlarnv)
+pure subroutine dlarnv(idist,iseed,n,x) BEGCNAME(dlarnv,SUFFIX)
+ENDCNAME(dlarnv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: idist
 integer(blas77_int), intent(inout) :: iseed(4)

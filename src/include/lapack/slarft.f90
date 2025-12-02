@@ -1,4 +1,5 @@
-pure subroutine slarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(slarft)
+pure subroutine slarft(direct,storev,n,k,v,ldv,tau,t,ldt) BEGCNAME(slarft,SUFFIX)
+ENDCNAME(slarft,SUFFIX)
 import
 character(len=1), intent(inout) :: direct
 character(len=1), intent(inout) :: storev

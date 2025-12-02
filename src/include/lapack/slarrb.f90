@@ -1,4 +1,5 @@
-pure subroutine slarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) CNAME(slarrb)
+pure subroutine slarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) BEGCNAME(slarrb,SUFFIX)
+ENDCNAME(slarrb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

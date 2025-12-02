@@ -1,4 +1,5 @@
-pure subroutine dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) CNAME(dorbdb6)
+pure subroutine dorbdb6(m1,m2,n,x1,incx1,x2,incx2,q1,ldq1,q2,ldq2,work,lwork,info) BEGCNAME(dorbdb6,SUFFIX)
+ENDCNAME(dorbdb6,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m1
 integer(blas77_int), intent(inout) :: m2

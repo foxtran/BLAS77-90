@@ -1,4 +1,5 @@
-pure subroutine sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) CNAME(sggesx)
+pure subroutine sggesx(jobvsl,jobvsr,sort,selctg,sense,n,a,lda,b,ldb,sdim,alphar,alphai,beta,vsl,ldvsl,vsr,ldvsr,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) BEGCNAME(sggesx,SUFFIX)
+ENDCNAME(sggesx,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvsl
 character(len=1), intent(inout) :: jobvsr

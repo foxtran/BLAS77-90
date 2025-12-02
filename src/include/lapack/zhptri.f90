@@ -1,4 +1,5 @@
-pure subroutine zhptri(uplo,n,ap,ipiv,work,info) CNAME(zhptri)
+pure subroutine zhptri(uplo,n,ap,ipiv,work,info) BEGCNAME(zhptri,SUFFIX)
+ENDCNAME(zhptri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

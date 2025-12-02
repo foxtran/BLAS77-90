@@ -1,4 +1,5 @@
-pure subroutine clatrd(uplo,n,nb,a,lda,e,tau,w,ldw) CNAME(clatrd)
+pure subroutine clatrd(uplo,n,nb,a,lda,e,tau,w,ldw) BEGCNAME(clatrd,SUFFIX)
+ENDCNAME(clatrd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine slaset(uplo,m,n,alpha,beta,a,lda) CNAME(slaset)
+pure subroutine slaset(uplo,m,n,alpha,beta,a,lda) BEGCNAME(slaset,SUFFIX)
+ENDCNAME(slaset,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: m

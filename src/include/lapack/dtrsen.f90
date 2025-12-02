@@ -1,4 +1,5 @@
-pure subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) CNAME(dtrsen)
+pure subroutine dtrsen(job,compq,select,n,t,ldt,q,ldq,wr,wi,m,s,sep,work,lwork,iwork,liwork,info) BEGCNAME(dtrsen,SUFFIX)
+ENDCNAME(dtrsen,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: compq

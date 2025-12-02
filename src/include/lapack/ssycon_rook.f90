@@ -1,4 +1,5 @@
-pure subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) CNAME(ssycon_rook)
+pure subroutine ssycon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,iwork,info) BEGCNAME(ssycon_rook,SUFFIX)
+ENDCNAME(ssycon_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

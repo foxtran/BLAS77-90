@@ -1,4 +1,5 @@
-pure subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) CNAME(cgelq)
+pure subroutine cgelq(m,n,a,lda,t,tsize,work,lwork,info) BEGCNAME(cgelq,SUFFIX)
+ENDCNAME(cgelq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

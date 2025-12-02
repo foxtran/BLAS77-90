@@ -1,4 +1,5 @@
-pure subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) CNAME(dlarrk)
+pure subroutine dlarrk(n,iw,gl,gu,d,e2,pivmin,reltol,w,werr,info) BEGCNAME(dlarrk,SUFFIX)
+ENDCNAME(dlarrk,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: iw

@@ -1,4 +1,5 @@
-pure subroutine zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(zpbsvx)
+pure subroutine zpbsvx(fact,uplo,n,kd,nrhs,ab,ldab,afb,ldafb,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) BEGCNAME(zpbsvx,SUFFIX)
+ENDCNAME(zpbsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: uplo

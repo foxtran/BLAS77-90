@@ -1,4 +1,5 @@
-pure subroutine dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) CNAME(dorbdb4)
+pure subroutine dorbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) BEGCNAME(dorbdb4,SUFFIX)
+ENDCNAME(dorbdb4,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: p

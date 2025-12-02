@@ -1,4 +1,5 @@
-pure subroutine ctzrqf(m,n,a,lda,tau,info) CNAME(ctzrqf)
+pure subroutine ctzrqf(m,n,a,lda,tau,info) BEGCNAME(ctzrqf,SUFFIX)
+ENDCNAME(ctzrqf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

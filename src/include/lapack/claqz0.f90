@@ -1,4 +1,5 @@
-pure subroutine claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) CNAME(claqz0)
+pure subroutine claqz0(wants,wantq,wantz,n,ilo,ihi,a,lda,b,ldb,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,rec,info) BEGCNAME(claqz0,SUFFIX)
+ENDCNAME(claqz0,SUFFIX)
 import
 character(len=1),intent(in)::wants
 character(len=1),intent(in)::wantq

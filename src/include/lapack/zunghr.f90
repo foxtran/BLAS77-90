@@ -1,4 +1,5 @@
-pure subroutine zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(zunghr)
+pure subroutine zunghr(n,ilo,ihi,a,lda,tau,work,lwork,info) BEGCNAME(zunghr,SUFFIX)
+ENDCNAME(zunghr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ilo

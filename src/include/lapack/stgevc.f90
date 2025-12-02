@@ -1,4 +1,5 @@
-pure subroutine stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info) CNAME(stgevc)
+pure subroutine stgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,info) BEGCNAME(stgevc,SUFFIX)
+ENDCNAME(stgevc,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: howmny

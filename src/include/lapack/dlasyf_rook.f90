@@ -1,4 +1,5 @@
-pure subroutine dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(dlasyf_rook)
+pure subroutine dlasyf_rook(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) BEGCNAME(dlasyf_rook,SUFFIX)
+ENDCNAME(dlasyf_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(zlaic1)
+pure subroutine zlaic1(job,j,x,sest,w,gamma,sestpr,s,c) BEGCNAME(zlaic1,SUFFIX)
+ENDCNAME(zlaic1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: job
 integer(blas77_int), intent(inout) :: j

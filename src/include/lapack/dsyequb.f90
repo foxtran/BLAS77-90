@@ -1,4 +1,5 @@
-pure subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(dsyequb)
+pure subroutine dsyequb(uplo,n,a,lda,s,scond,amax,work,info) BEGCNAME(dsyequb,SUFFIX)
+ENDCNAME(dsyequb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

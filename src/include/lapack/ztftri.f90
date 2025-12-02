@@ -1,4 +1,5 @@
-pure subroutine ztftri(transr,uplo,diag,n,a,info) CNAME(ztftri)
+pure subroutine ztftri(transr,uplo,diag,n,a,info) BEGCNAME(ztftri,SUFFIX)
+ENDCNAME(ztftri,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

@@ -1,4 +1,5 @@
-pure subroutine zlarfg(n,alpha,x,incx,tau) CNAME(zlarfg)
+pure subroutine zlarfg(n,alpha,x,incx,tau) BEGCNAME(zlarfg,SUFFIX)
+ENDCNAME(zlarfg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: alpha

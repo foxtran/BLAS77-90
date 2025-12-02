@@ -1,4 +1,5 @@
-pure subroutine slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) CNAME(slasq4)
+pure subroutine slasq4(i0,n0,z,pp,n0in,dmin,dmin1,dmin2,dn,dn1,dn2,tau,ttype,g) BEGCNAME(slasq4,SUFFIX)
+ENDCNAME(slasq4,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: i0
 integer(blas77_int), intent(inout) :: n0

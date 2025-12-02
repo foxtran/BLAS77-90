@@ -1,4 +1,5 @@
-pure subroutine zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(zsycon)
+pure subroutine zsycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(zsycon,SUFFIX)
+ENDCNAME(zsycon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

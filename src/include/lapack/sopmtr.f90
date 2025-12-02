@@ -1,4 +1,5 @@
-pure subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(sopmtr)
+pure subroutine sopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) BEGCNAME(sopmtr,SUFFIX)
+ENDCNAME(sopmtr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

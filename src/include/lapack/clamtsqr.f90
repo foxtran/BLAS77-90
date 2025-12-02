@@ -1,4 +1,5 @@
-pure subroutine clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(clamtsqr)
+pure subroutine clamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) BEGCNAME(clamtsqr,SUFFIX)
+ENDCNAME(clamtsqr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

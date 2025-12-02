@@ -1,4 +1,5 @@
-pure subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) CNAME(dtgexc)
+pure subroutine dtgexc(wantq,wantz,n,a,lda,b,ldb,q,ldq,z,ldz,ifst,ilst,work,lwork,info) BEGCNAME(dtgexc,SUFFIX)
+ENDCNAME(dtgexc,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantq
 logical(blas77_int), intent(inout) :: wantz

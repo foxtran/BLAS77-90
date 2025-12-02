@@ -1,4 +1,5 @@
-pure subroutine strsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(strsm)
+pure subroutine strsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) BEGCNAME(strsm,SUFFIX)
+ENDCNAME(strsm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

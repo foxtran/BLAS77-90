@@ -1,4 +1,5 @@
-pure subroutine zungl2(m,n,k,a,lda,tau,work,info) CNAME(zungl2)
+pure subroutine zungl2(m,n,k,a,lda,tau,work,info) BEGCNAME(zungl2,SUFFIX)
+ENDCNAME(zungl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

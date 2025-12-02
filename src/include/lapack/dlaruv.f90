@@ -1,4 +1,5 @@
-pure subroutine dlaruv(iseed,n,x) CNAME(dlaruv)
+pure subroutine dlaruv(iseed,n,x) BEGCNAME(dlaruv,SUFFIX)
+ENDCNAME(dlaruv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: iseed(4)
 integer(blas77_int), intent(inout) :: n

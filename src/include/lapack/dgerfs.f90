@@ -1,4 +1,5 @@
-pure subroutine dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dgerfs)
+pure subroutine dgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(dgerfs,SUFFIX)
+ENDCNAME(dgerfs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

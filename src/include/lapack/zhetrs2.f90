@@ -1,4 +1,5 @@
-pure subroutine zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) CNAME(zhetrs2)
+pure subroutine zhetrs2(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,info) BEGCNAME(zhetrs2,SUFFIX)
+ENDCNAME(zhetrs2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

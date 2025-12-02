@@ -1,4 +1,5 @@
-pure subroutine chetf2(uplo,n,a,lda,ipiv,info) CNAME(chetf2)
+pure subroutine chetf2(uplo,n,a,lda,ipiv,info) BEGCNAME(chetf2,SUFFIX)
+ENDCNAME(chetf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

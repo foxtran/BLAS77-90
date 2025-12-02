@@ -1,4 +1,5 @@
-pure subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(zupgtr)
+pure subroutine zupgtr(uplo,n,ap,tau,q,ldq,work,info) BEGCNAME(zupgtr,SUFFIX)
+ENDCNAME(zupgtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

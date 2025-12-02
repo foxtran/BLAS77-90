@@ -1,4 +1,5 @@
-pure subroutine sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(sgetrs)
+pure subroutine sgetrs(trans,n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(sgetrs,SUFFIX)
+ENDCNAME(sgetrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

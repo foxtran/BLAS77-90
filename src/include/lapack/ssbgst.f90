@@ -1,4 +1,5 @@
-pure subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) CNAME(ssbgst)
+pure subroutine ssbgst(vect,uplo,n,ka,kb,ab,ldab,bb,ldbb,x,ldx,work,info) BEGCNAME(ssbgst,SUFFIX)
+ENDCNAME(ssbgst,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: uplo

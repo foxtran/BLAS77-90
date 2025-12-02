@@ -1,4 +1,5 @@
-pure subroutine slargv(n,x,incx,y,incy,c,incc) CNAME(slargv)
+pure subroutine slargv(n,x,incx,y,incy,c,incc) BEGCNAME(slargv,SUFFIX)
+ENDCNAME(slargv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: x(*)

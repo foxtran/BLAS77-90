@@ -1,4 +1,5 @@
-pure subroutine cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(cher2k)
+pure subroutine cher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(cher2k,SUFFIX)
+ENDCNAME(cher2k,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

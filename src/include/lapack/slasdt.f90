@@ -1,4 +1,5 @@
-pure subroutine slasdt(n,lvl,nd,inode,ndiml,ndimr,msub) CNAME(slasdt)
+pure subroutine slasdt(n,lvl,nd,inode,ndiml,ndimr,msub) BEGCNAME(slasdt,SUFFIX)
+ENDCNAME(slasdt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lvl

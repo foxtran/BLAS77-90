@@ -1,4 +1,5 @@
-pure subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(zhegs2)
+pure subroutine zhegs2(itype,uplo,n,a,lda,b,ldb,info) BEGCNAME(zhegs2,SUFFIX)
+ENDCNAME(zhegs2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: uplo

@@ -1,4 +1,5 @@
-pure subroutine dlaic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(dlaic1)
+pure subroutine dlaic1(job,j,x,sest,w,gamma,sestpr,s,c) BEGCNAME(dlaic1,SUFFIX)
+ENDCNAME(dlaic1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: job
 integer(blas77_int), intent(inout) :: j

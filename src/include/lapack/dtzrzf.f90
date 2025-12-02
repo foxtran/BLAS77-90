@@ -1,4 +1,5 @@
-pure subroutine dtzrzf(m,n,a,lda,tau,work,lwork,info) CNAME(dtzrzf)
+pure subroutine dtzrzf(m,n,a,lda,tau,work,lwork,info) BEGCNAME(dtzrzf,SUFFIX)
+ENDCNAME(dtzrzf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

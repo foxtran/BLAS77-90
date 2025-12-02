@@ -1,4 +1,5 @@
-pure subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) CNAME(zcposv)
+pure subroutine zcposv(uplo,n,nrhs,a,lda,b,ldb,x,ldx,work,swork,rwork,iter,info) BEGCNAME(zcposv,SUFFIX)
+ENDCNAME(zcposv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

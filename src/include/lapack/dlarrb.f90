@@ -1,4 +1,5 @@
-pure subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) CNAME(dlarrb)
+pure subroutine dlarrb(n,d,lld,ifirst,ilast,rtol1,rtol2,offset,w,wgap,werr,work,iwork,pivmin,spdiam,twist,info) BEGCNAME(dlarrb,SUFFIX)
+ENDCNAME(dlarrb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: d(*)

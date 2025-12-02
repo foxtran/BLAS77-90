@@ -1,4 +1,5 @@
-pure subroutine sorgtr(uplo,n,a,lda,tau,work,lwork,info) CNAME(sorgtr)
+pure subroutine sorgtr(uplo,n,a,lda,tau,work,lwork,info) BEGCNAME(sorgtr,SUFFIX)
+ENDCNAME(sorgtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

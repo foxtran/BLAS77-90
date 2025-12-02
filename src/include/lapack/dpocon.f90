@@ -1,4 +1,5 @@
-pure subroutine dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) CNAME(dpocon)
+pure subroutine dpocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) BEGCNAME(dpocon,SUFFIX)
+ENDCNAME(dpocon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

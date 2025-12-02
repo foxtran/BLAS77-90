@@ -1,4 +1,5 @@
-pure subroutine csytri_rook(uplo,n,a,lda,ipiv,work,info) CNAME(csytri_rook)
+pure subroutine csytri_rook(uplo,n,a,lda,ipiv,work,info) BEGCNAME(csytri_rook,SUFFIX)
+ENDCNAME(csytri_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

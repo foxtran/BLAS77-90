@@ -1,4 +1,5 @@
-pure subroutine strttp(uplo,n,a,lda,ap,info) CNAME(strttp)
+pure subroutine strttp(uplo,n,a,lda,ap,info) BEGCNAME(strttp,SUFFIX)
+ENDCNAME(strttp,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

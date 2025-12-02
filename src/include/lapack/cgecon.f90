@@ -1,4 +1,5 @@
-pure subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) CNAME(cgecon)
+pure subroutine cgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) BEGCNAME(cgecon,SUFFIX)
+ENDCNAME(cgecon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 integer(blas77_int), intent(inout) :: n

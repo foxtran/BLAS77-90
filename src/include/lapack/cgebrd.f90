@@ -1,4 +1,5 @@
-pure subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) CNAME(cgebrd)
+pure subroutine cgebrd(m,n,a,lda,d,e,tauq,taup,work,lwork,info) BEGCNAME(cgebrd,SUFFIX)
+ENDCNAME(cgebrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

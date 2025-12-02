@@ -1,4 +1,5 @@
-pure subroutine cpotrf2(uplo,n,a,lda,info) CNAME(cpotrf2)
+pure subroutine cpotrf2(uplo,n,a,lda,info) BEGCNAME(cpotrf2,SUFFIX)
+ENDCNAME(cpotrf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

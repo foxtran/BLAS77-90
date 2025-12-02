@@ -1,4 +1,5 @@
-pure subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgqr)
+pure subroutine dorgqr(m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(dorgqr,SUFFIX)
+ENDCNAME(dorgqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) CNAME(slatrs3)
+pure subroutine slatrs3(uplo,trans,diag,normin,n,nrhs,a,lda,x,ldx,scale,cnorm,work,lwork,info) BEGCNAME(slatrs3,SUFFIX)
+ENDCNAME(slatrs3,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

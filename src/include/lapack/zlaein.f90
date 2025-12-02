@@ -1,4 +1,5 @@
-pure subroutine zlaein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) CNAME(zlaein)
+pure subroutine zlaein(rightv,noinit,n,h,ldh,w,v,b,ldb,rwork,eps3,smlnum,info) BEGCNAME(zlaein,SUFFIX)
+ENDCNAME(zlaein,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: rightv
 logical(blas77_int), intent(inout) :: noinit

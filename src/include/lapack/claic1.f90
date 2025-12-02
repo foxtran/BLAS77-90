@@ -1,4 +1,5 @@
-pure subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) CNAME(claic1)
+pure subroutine claic1(job,j,x,sest,w,gamma,sestpr,s,c) BEGCNAME(claic1,SUFFIX)
+ENDCNAME(claic1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: job
 integer(blas77_int), intent(inout) :: j

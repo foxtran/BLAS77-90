@@ -1,4 +1,5 @@
-pure function dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(dla_gercond)
+pure function dla_gercond(trans,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) BEGCNAME(dla_gercond,SUFFIX)
+ENDCNAME(dla_gercond,SUFFIX)
 import
 character(len=1), intent(in) :: trans
 integer(blas77_int), intent(in) :: n

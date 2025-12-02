@@ -1,4 +1,5 @@
-pure subroutine ctrttf(transr,uplo,n,a,lda,arf,info) CNAME(ctrttf)
+pure subroutine ctrttf(transr,uplo,n,a,lda,arf,info) BEGCNAME(ctrttf,SUFFIX)
+ENDCNAME(ctrttf,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

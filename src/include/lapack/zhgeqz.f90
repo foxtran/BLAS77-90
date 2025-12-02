@@ -1,4 +1,5 @@
-pure subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) CNAME(zhgeqz)
+pure subroutine zhgeqz(job,compq,compz,n,ilo,ihi,h,ldh,t,ldt,alpha,beta,q,ldq,z,ldz,work,lwork,rwork,info) BEGCNAME(zhgeqz,SUFFIX)
+ENDCNAME(zhgeqz,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: compq

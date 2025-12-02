@@ -1,4 +1,5 @@
-pure subroutine dptcon(n,d,e,anorm,rcond,work,info) CNAME(dptcon)
+pure subroutine dptcon(n,d,e,anorm,rcond,work,info) BEGCNAME(dptcon,SUFFIX)
+ENDCNAME(dptcon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: d(*)

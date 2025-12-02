@@ -1,4 +1,5 @@
-pure function icmax1(n,cx,incx) CNAME(icmax1)
+pure function icmax1(n,cx,incx) BEGCNAME(icmax1,SUFFIX)
+ENDCNAME(icmax1,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 complex(blas77_f32), intent(in) :: cx(*)

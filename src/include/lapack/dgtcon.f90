@@ -1,4 +1,5 @@
-pure subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) CNAME(dgtcon)
+pure subroutine dgtcon(norm,n,dl,d,du,du2,ipiv,anorm,rcond,work,iwork,info) BEGCNAME(dgtcon,SUFFIX)
+ENDCNAME(dgtcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine clarfg(n,alpha,x,incx,tau) CNAME(clarfg)
+pure subroutine clarfg(n,alpha,x,incx,tau) BEGCNAME(clarfg,SUFFIX)
+ENDCNAME(clarfg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: alpha

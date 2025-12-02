@@ -1,4 +1,5 @@
-pure subroutine dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dspevd)
+pure subroutine dspevd(jobz,uplo,n,ap,w,z,ldz,work,lwork,iwork,liwork,info) BEGCNAME(dspevd,SUFFIX)
+ENDCNAME(dspevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

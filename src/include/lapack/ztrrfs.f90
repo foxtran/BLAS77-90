@@ -1,4 +1,5 @@
-pure subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(ztrrfs)
+pure subroutine ztrrfs(uplo,trans,diag,n,nrhs,a,lda,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(ztrrfs,SUFFIX)
+ENDCNAME(ztrrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

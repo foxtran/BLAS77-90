@@ -1,4 +1,5 @@
-pure subroutine dptts2(n,nrhs,d,e,b,ldb) CNAME(dptts2)
+pure subroutine dptts2(n,nrhs,d,e,b,ldb) BEGCNAME(dptts2,SUFFIX)
+ENDCNAME(dptts2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

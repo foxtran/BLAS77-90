@@ -1,4 +1,5 @@
-pure subroutine cungqr(m,n,k,a,lda,tau,work,lwork,info) CNAME(cungqr)
+pure subroutine cungqr(m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(cungqr,SUFFIX)
+ENDCNAME(cungqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

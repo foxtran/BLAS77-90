@@ -1,4 +1,5 @@
-pure subroutine slamrg(n1,n2,a,strd1,strd2,index) CNAME(slamrg)
+pure subroutine slamrg(n1,n2,a,strd1,strd2,index) BEGCNAME(slamrg,SUFFIX)
+ENDCNAME(slamrg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n1
 integer(blas77_int), intent(inout) :: n2

@@ -1,4 +1,5 @@
-pure subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(dlamswlq)
+pure subroutine dlamswlq(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) BEGCNAME(dlamswlq,SUFFIX)
+ENDCNAME(dlamswlq,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

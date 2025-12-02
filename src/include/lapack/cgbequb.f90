@@ -1,4 +1,5 @@
-pure subroutine cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) CNAME(cgbequb)
+pure subroutine cgbequb(m,n,kl,ku,ab,ldab,r,c,rowcnd,colcnd,amax,info) BEGCNAME(cgbequb,SUFFIX)
+ENDCNAME(cgbequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

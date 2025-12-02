@@ -1,4 +1,5 @@
-pure subroutine ztptri(uplo,diag,n,ap,info) CNAME(ztptri)
+pure subroutine ztptri(uplo,diag,n,ap,info) BEGCNAME(ztptri,SUFFIX)
+ENDCNAME(ztptri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: diag

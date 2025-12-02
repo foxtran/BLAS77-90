@@ -1,4 +1,5 @@
-pure subroutine chetri_rook(uplo,n,a,lda,ipiv,work,info) CNAME(chetri_rook)
+pure subroutine chetri_rook(uplo,n,a,lda,ipiv,work,info) BEGCNAME(chetri_rook,SUFFIX)
+ENDCNAME(chetri_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

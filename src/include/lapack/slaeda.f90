@@ -1,4 +1,5 @@
-pure subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) CNAME(slaeda)
+pure subroutine slaeda(n,tlvls,curlvl,curpbm,prmptr,perm,givptr,givcol,givnum,q,qptr,z,ztemp,info) BEGCNAME(slaeda,SUFFIX)
+ENDCNAME(slaeda,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: tlvls

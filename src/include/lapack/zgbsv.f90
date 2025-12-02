@@ -1,4 +1,5 @@
-pure subroutine zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) CNAME(zgbsv)
+pure subroutine zgbsv(n,kl,ku,nrhs,ab,ldab,ipiv,b,ldb,info) BEGCNAME(zgbsv,SUFFIX)
+ENDCNAME(zgbsv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: kl

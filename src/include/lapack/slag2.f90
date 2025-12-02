@@ -1,4 +1,5 @@
-pure subroutine slag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) CNAME(slag2)
+pure subroutine slag2(a,lda,b,ldb,safmin,scale1,scale2,wr1,wr2,wi) BEGCNAME(slag2,SUFFIX)
+ENDCNAME(slag2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: lda
 real(blas77_f32), intent(inout) :: a(lda,*)

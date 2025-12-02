@@ -1,4 +1,5 @@
-pure subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) CNAME(dlarra)
+pure subroutine dlarra(n,d,e,e2,spltol,tnrm,nsplit,isplit,info) BEGCNAME(dlarra,SUFFIX)
+ENDCNAME(dlarra,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: d(*)

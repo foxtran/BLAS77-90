@@ -1,4 +1,5 @@
-pure function scsum1(n,cx,incx) CNAME(scsum1)
+pure function scsum1(n,cx,incx) BEGCNAME(scsum1,SUFFIX)
+ENDCNAME(scsum1,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 complex(blas77_f32), intent(in) :: cx(*)

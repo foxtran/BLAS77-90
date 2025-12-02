@@ -1,4 +1,5 @@
-pure subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(clarft)
+pure subroutine clarft(direct,storev,n,k,v,ldv,tau,t,ldt) BEGCNAME(clarft,SUFFIX)
+ENDCNAME(clarft,SUFFIX)
 import
 character(len=1), intent(inout) :: direct
 character(len=1), intent(inout) :: storev

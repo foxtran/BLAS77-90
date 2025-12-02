@@ -1,4 +1,5 @@
-pure subroutine zlacon(n,v,x,est,kase) CNAME(zlacon)
+pure subroutine zlacon(n,v,x,est,kase) BEGCNAME(zlacon,SUFFIX)
+ENDCNAME(zlacon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: v(n)

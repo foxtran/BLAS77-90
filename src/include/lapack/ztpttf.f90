@@ -1,4 +1,5 @@
-pure subroutine ztpttf(transr,uplo,n,ap,arf,info) CNAME(ztpttf)
+pure subroutine ztpttf(transr,uplo,n,ap,arf,info) BEGCNAME(ztpttf,SUFFIX)
+ENDCNAME(ztpttf,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

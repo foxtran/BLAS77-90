@@ -1,4 +1,5 @@
-pure subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) CNAME(cgegs)
+pure subroutine cgegs(jobvsl,jobvsr,n,a,lda,b,ldb,alpha,beta,vsl,ldvsl,vsr,ldvsr,work,lwork,rwork,info) BEGCNAME(cgegs,SUFFIX)
+ENDCNAME(cgegs,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvsl
 character(len=1), intent(inout) :: jobvsr

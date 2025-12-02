@@ -1,4 +1,5 @@
-pure subroutine zrot(n,cx,incx,cy,incy,c,s) CNAME(zrot)
+pure subroutine zrot(n,cx,incx,cy,incy,c,s) BEGCNAME(zrot,SUFFIX)
+ENDCNAME(zrot,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: cx(*)

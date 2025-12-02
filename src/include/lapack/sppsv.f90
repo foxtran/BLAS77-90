@@ -1,4 +1,5 @@
-pure subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) CNAME(sppsv)
+pure subroutine sppsv(uplo,n,nrhs,ap,b,ldb,info) BEGCNAME(sppsv,SUFFIX)
+ENDCNAME(sppsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

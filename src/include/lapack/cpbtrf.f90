@@ -1,4 +1,5 @@
-pure subroutine cpbtrf(uplo,n,kd,ab,ldab,info) CNAME(cpbtrf)
+pure subroutine cpbtrf(uplo,n,kd,ab,ldab,info) BEGCNAME(cpbtrf,SUFFIX)
+ENDCNAME(cpbtrf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

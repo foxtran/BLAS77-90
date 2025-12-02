@@ -1,4 +1,5 @@
-pure subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) CNAME(cggglm)
+pure subroutine cggglm(n,m,p,a,lda,b,ldb,d,x,y,work,lwork,info) BEGCNAME(cggglm,SUFFIX)
+ENDCNAME(cggglm,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: m

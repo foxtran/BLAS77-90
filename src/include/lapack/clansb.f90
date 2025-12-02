@@ -1,4 +1,5 @@
-pure function clansb(norm,uplo,n,k,ab,ldab,work) CNAME(clansb)
+pure function clansb(norm,uplo,n,k,ab,ldab,work) BEGCNAME(clansb,SUFFIX)
+ENDCNAME(clansb,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

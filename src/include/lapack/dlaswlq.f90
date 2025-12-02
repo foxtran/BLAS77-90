@@ -1,4 +1,5 @@
-pure subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlaswlq)
+pure subroutine dlaswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(dlaswlq,SUFFIX)
+ENDCNAME(dlaswlq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) CNAME(cunmr3)
+pure subroutine cunmr3(side,trans,m,n,k,l,a,lda,tau,c,ldc,work,info) BEGCNAME(cunmr3,SUFFIX)
+ENDCNAME(cunmr3,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

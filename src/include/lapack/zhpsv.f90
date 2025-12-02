@@ -1,4 +1,5 @@
-pure subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(zhpsv)
+pure subroutine zhpsv(uplo,n,nrhs,ap,ipiv,b,ldb,info) BEGCNAME(zhpsv,SUFFIX)
+ENDCNAME(zhpsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

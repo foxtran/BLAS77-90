@@ -1,4 +1,5 @@
-pure function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) CNAME(cla_gbrpvgrw)
+pure function cla_gbrpvgrw(n,kl,ku,ncols,ab,ldab,afb,ldafb) BEGCNAME(cla_gbrpvgrw,SUFFIX)
+ENDCNAME(cla_gbrpvgrw,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 integer(blas77_int), intent(in) :: kl

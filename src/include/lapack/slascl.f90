@@ -1,4 +1,5 @@
-pure subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) CNAME(slascl)
+pure subroutine slascl(type,kl,ku,cfrom,cto,m,n,a,lda,info) BEGCNAME(slascl,SUFFIX)
+ENDCNAME(slascl,SUFFIX)
 import
 character(len=1), intent(inout) :: type
 integer(blas77_int), intent(inout) :: kl

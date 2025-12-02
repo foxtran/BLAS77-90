@@ -1,4 +1,5 @@
-pure subroutine ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) CNAME(ztgsna)
+pure subroutine ztgsna(job,howmny,select,n,a,lda,b,ldb,vl,ldvl,vr,ldvr,s,dif,mm,m,work,lwork,iwork,info) BEGCNAME(ztgsna,SUFFIX)
+ENDCNAME(ztgsna,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: howmny

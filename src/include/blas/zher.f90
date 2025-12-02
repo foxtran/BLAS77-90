@@ -1,4 +1,5 @@
-pure subroutine zher(uplo,n,alpha,x,incx,a,lda) CNAME(zher)
+pure subroutine zher(uplo,n,alpha,x,incx,a,lda) BEGCNAME(zher,SUFFIX)
+ENDCNAME(zher,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

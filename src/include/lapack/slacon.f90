@@ -1,4 +1,5 @@
-pure subroutine slacon(n,v,x,isgn,est,kase) CNAME(slacon)
+pure subroutine slacon(n,v,x,isgn,est,kase) BEGCNAME(slacon,SUFFIX)
+ENDCNAME(slacon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: v(*)

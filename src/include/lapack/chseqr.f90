@@ -1,4 +1,5 @@
-pure subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) CNAME(chseqr)
+pure subroutine chseqr(job,compz,n,ilo,ihi,h,ldh,w,z,ldz,work,lwork,info) BEGCNAME(chseqr,SUFFIX)
+ENDCNAME(chseqr,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: compz

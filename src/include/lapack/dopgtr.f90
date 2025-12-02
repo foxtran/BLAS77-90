@@ -1,4 +1,5 @@
-pure subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(dopgtr)
+pure subroutine dopgtr(uplo,n,ap,tau,q,ldq,work,info) BEGCNAME(dopgtr,SUFFIX)
+ENDCNAME(dopgtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

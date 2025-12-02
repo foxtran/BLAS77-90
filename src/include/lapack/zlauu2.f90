@@ -1,4 +1,5 @@
-pure subroutine zlauu2(uplo,n,a,lda,info) CNAME(zlauu2)
+pure subroutine zlauu2(uplo,n,a,lda,info) BEGCNAME(zlauu2,SUFFIX)
+ENDCNAME(zlauu2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

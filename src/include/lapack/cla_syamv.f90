@@ -1,4 +1,5 @@
-pure subroutine cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_syamv)
+pure subroutine cla_syamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(cla_syamv,SUFFIX)
+ENDCNAME(cla_syamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

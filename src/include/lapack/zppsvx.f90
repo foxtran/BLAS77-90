@@ -1,4 +1,5 @@
-pure subroutine zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) CNAME(zppsvx)
+pure subroutine zppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,rwork,info) BEGCNAME(zppsvx,SUFFIX)
+ENDCNAME(zppsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: uplo

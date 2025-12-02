@@ -1,4 +1,5 @@
-pure subroutine dsyev(jobz,uplo,n,a,lda,w,work,lwork,info) CNAME(dsyev)
+pure subroutine dsyev(jobz,uplo,n,a,lda,w,work,lwork,info) BEGCNAME(dsyev,SUFFIX)
+ENDCNAME(dsyev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

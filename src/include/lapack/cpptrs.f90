@@ -1,4 +1,5 @@
-pure subroutine cpptrs(uplo,n,nrhs,ap,b,ldb,info) CNAME(cpptrs)
+pure subroutine cpptrs(uplo,n,nrhs,ap,b,ldb,info) BEGCNAME(cpptrs,SUFFIX)
+ENDCNAME(cpptrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

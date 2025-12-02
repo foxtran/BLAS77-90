@@ -1,4 +1,5 @@
-pure subroutine ssterf(n,d,e,info) CNAME(ssterf)
+pure subroutine ssterf(n,d,e,info) BEGCNAME(ssterf,SUFFIX)
+ENDCNAME(ssterf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

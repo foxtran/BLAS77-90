@@ -1,4 +1,5 @@
-pure subroutine zppequ(uplo,n,ap,s,scond,amax,info) CNAME(zppequ)
+pure subroutine zppequ(uplo,n,ap,s,scond,amax,info) BEGCNAME(zppequ,SUFFIX)
+ENDCNAME(zppequ,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

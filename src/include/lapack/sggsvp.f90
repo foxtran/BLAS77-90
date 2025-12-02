@@ -1,4 +1,5 @@
-pure subroutine sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) CNAME(sggsvp)
+pure subroutine sggsvp(jobu,jobv,jobq,m,p,n,a,lda,b,ldb,tola,tolb,k,l,u,ldu,v,ldv,q,ldq,iwork,tau,work,info) BEGCNAME(sggsvp,SUFFIX)
+ENDCNAME(sggsvp,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu
 character(len=1), intent(inout) :: jobv

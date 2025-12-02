@@ -1,4 +1,5 @@
-pure function dlantr(norm,uplo,diag,m,n,a,lda,work) CNAME(dlantr)
+pure function dlantr(norm,uplo,diag,m,n,a,lda,work) BEGCNAME(dlantr,SUFFIX)
+ENDCNAME(dlantr,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

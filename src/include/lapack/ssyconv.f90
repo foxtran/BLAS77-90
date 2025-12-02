@@ -1,4 +1,5 @@
-pure subroutine ssyconv(uplo,way,n,a,lda,ipiv,e,info) CNAME(ssyconv)
+pure subroutine ssyconv(uplo,way,n,a,lda,ipiv,e,info) BEGCNAME(ssyconv,SUFFIX)
+ENDCNAME(ssyconv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: way

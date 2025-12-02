@@ -1,4 +1,5 @@
-pure subroutine zlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(zlaqge)
+pure subroutine zlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) BEGCNAME(zlaqge,SUFFIX)
+ENDCNAME(zlaqge,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

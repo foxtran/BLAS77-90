@@ -1,4 +1,5 @@
-pure subroutine ztbmv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(ztbmv)
+pure subroutine ztbmv(uplo,trans,diag,n,k,a,lda,x,incx) BEGCNAME(ztbmv,SUFFIX)
+ENDCNAME(ztbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

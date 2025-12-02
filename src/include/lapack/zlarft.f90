@@ -1,4 +1,5 @@
-pure subroutine zlarft(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(zlarft)
+pure subroutine zlarft(direct,storev,n,k,v,ldv,tau,t,ldt) BEGCNAME(zlarft,SUFFIX)
+ENDCNAME(zlarft,SUFFIX)
 import
 character(len=1), intent(inout) :: direct
 character(len=1), intent(inout) :: storev

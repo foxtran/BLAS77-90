@@ -1,4 +1,5 @@
-pure subroutine zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) CNAME(zlaed8)
+pure subroutine zlaed8(k,n,qsiz,q,ldq,d,rho,cutpnt,z,dlambda,q2,ldq2,w,indxp,indx,indxq,perm,givptr,givcol,givnum,info) BEGCNAME(zlaed8,SUFFIX)
+ENDCNAME(zlaed8,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: k
 integer(blas77_int), intent(inout) :: n

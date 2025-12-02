@@ -1,4 +1,5 @@
-pure subroutine clarfy(uplo,n,v,incv,tau,c,ldc,work) CNAME(clarfy)
+pure subroutine clarfy(uplo,n,v,incv,tau,c,ldc,work) BEGCNAME(clarfy,SUFFIX)
+ENDCNAME(clarfy,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

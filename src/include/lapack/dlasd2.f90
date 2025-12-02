@@ -1,4 +1,5 @@
-pure subroutine dlasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) CNAME(dlasd2)
+pure subroutine dlasd2(nl,nr,sqre,k,d,z,alpha,beta,u,ldu,vt,ldvt,dsigma,u2,ldu2,vt2,ldvt2,idxp,idx,idxc,idxq,coltyp,info) BEGCNAME(dlasd2,SUFFIX)
+ENDCNAME(dlasd2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: nl
 integer(blas77_int), intent(inout) :: nr

@@ -1,4 +1,5 @@
-pure subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(zlaswp)
+pure subroutine zlaswp(n,a,lda,k1,k2,ipiv,incx) BEGCNAME(zlaswp,SUFFIX)
+ENDCNAME(zlaswp,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

@@ -1,4 +1,5 @@
-pure subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) CNAME(zsyequb)
+pure subroutine zsyequb(uplo,n,a,lda,s,scond,amax,work,info) BEGCNAME(zsyequb,SUFFIX)
+ENDCNAME(zsyequb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

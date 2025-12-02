@@ -1,4 +1,5 @@
-pure subroutine sposv(uplo,n,nrhs,a,lda,b,ldb,info) CNAME(sposv)
+pure subroutine sposv(uplo,n,nrhs,a,lda,b,ldb,info) BEGCNAME(sposv,SUFFIX)
+ENDCNAME(sposv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

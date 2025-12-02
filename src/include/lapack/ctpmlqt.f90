@@ -1,4 +1,5 @@
-pure subroutine ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(ctpmlqt)
+pure subroutine ctpmlqt(side,trans,m,n,k,l,mb,v,ldv,t,ldt,a,lda,b,ldb,work,info) BEGCNAME(ctpmlqt,SUFFIX)
+ENDCNAME(ctpmlqt,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

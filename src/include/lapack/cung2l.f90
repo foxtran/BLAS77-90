@@ -1,4 +1,5 @@
-pure subroutine cung2l(m,n,k,a,lda,tau,work,info) CNAME(cung2l)
+pure subroutine cung2l(m,n,k,a,lda,tau,work,info) BEGCNAME(cung2l,SUFFIX)
+ENDCNAME(cung2l,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

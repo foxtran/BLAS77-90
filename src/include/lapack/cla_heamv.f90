@@ -1,4 +1,5 @@
-pure subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(cla_heamv)
+pure subroutine cla_heamv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(cla_heamv,SUFFIX)
+ENDCNAME(cla_heamv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

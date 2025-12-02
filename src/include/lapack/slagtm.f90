@@ -1,4 +1,5 @@
-pure subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) CNAME(slagtm)
+pure subroutine slagtm(trans,n,nrhs,alpha,dl,d,du,x,ldx,beta,b,ldb) BEGCNAME(slagtm,SUFFIX)
+ENDCNAME(slagtm,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) CNAME(ztrcon)
+pure subroutine ztrcon(norm,uplo,diag,n,a,lda,rcond,work,rwork,info) BEGCNAME(ztrcon,SUFFIX)
+ENDCNAME(ztrcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 character(len=1), intent(inout) :: uplo

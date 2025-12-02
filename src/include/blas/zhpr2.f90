@@ -1,4 +1,5 @@
-pure subroutine zhpr2(uplo,n,alpha,x,incx,y,incy,ap) CNAME(zhpr2)
+pure subroutine zhpr2(uplo,n,alpha,x,incx,y,incy,ap) BEGCNAME(zhpr2,SUFFIX)
+ENDCNAME(zhpr2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

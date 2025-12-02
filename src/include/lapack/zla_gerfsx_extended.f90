@@ -1,4 +1,5 @@
-pure subroutine zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) CNAME(zla_gerfsx_extended)
+pure subroutine zla_gerfsx_extended(prec_type,trans_type,n,nrhs,a,lda,af,ldaf,ipiv,colequ,c,b,ldb,y,ldy,berr_out,n_norms,errs_n,errs_c,res,ayb,dy,y_tail,rcond,ithresh,rthresh,dz_ub,ignore_cwise,info) BEGCNAME(zla_gerfsx_extended,SUFFIX)
+ENDCNAME(zla_gerfsx_extended,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: prec_type
 integer(blas77_int), intent(inout) :: trans_type

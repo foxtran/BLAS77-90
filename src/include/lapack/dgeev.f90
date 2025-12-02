@@ -1,4 +1,5 @@
-pure subroutine dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) CNAME(dgeev)
+pure subroutine dgeev(jobvl,jobvr,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,work,lwork,info) BEGCNAME(dgeev,SUFFIX)
+ENDCNAME(dgeev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvl
 character(len=1), intent(inout) :: jobvr

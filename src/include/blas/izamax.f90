@@ -1,4 +1,5 @@
-pure function izamax(n,zx,incx) CNAME(izamax)
+pure function izamax(n,zx,incx) BEGCNAME(izamax,SUFFIX)
+ENDCNAME(izamax,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 complex(blas77_f64), intent(in) :: zx(*)

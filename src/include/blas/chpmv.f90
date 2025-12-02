@@ -1,4 +1,5 @@
-pure subroutine chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(chpmv)
+pure subroutine chpmv(uplo,n,alpha,ap,x,incx,beta,y,incy) BEGCNAME(chpmv,SUFFIX)
+ENDCNAME(chpmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

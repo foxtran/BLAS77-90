@@ -1,4 +1,5 @@
-pure subroutine dlagtf(n,a,lambda,b,c,tol,d,in,info) CNAME(dlagtf)
+pure subroutine dlagtf(n,a,lambda,b,c,tol,d,in,info) BEGCNAME(dlagtf,SUFFIX)
+ENDCNAME(dlagtf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: a(*)

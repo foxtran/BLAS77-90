@@ -1,4 +1,5 @@
-pure subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) CNAME(dorgbr)
+pure subroutine dorgbr(vect,m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(dorgbr,SUFFIX)
+ENDCNAME(dorgbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 integer(blas77_int), intent(inout) :: m

@@ -1,4 +1,5 @@
-pure subroutine csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) CNAME(csptrs)
+pure subroutine csptrs(uplo,n,nrhs,ap,ipiv,b,ldb,info) BEGCNAME(csptrs,SUFFIX)
+ENDCNAME(csptrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

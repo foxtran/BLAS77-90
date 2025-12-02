@@ -1,4 +1,5 @@
-pure subroutine zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) CNAME(zgelsy)
+pure subroutine zgelsy(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,lwork,rwork,info) BEGCNAME(zgelsy,SUFFIX)
+ENDCNAME(zgelsy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

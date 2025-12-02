@@ -1,4 +1,5 @@
-pure subroutine dlaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) CNAME(dlaln2)
+pure subroutine dlaln2(ltrans,na,nw,smin,ca,a,lda,d1,d2,b,ldb,wr,wi,x,ldx,scale,xnorm,info) BEGCNAME(dlaln2,SUFFIX)
+ENDCNAME(dlaln2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: ltrans
 integer(blas77_int), intent(inout) :: na

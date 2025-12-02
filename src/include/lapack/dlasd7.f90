@@ -1,4 +1,5 @@
-pure subroutine dlasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s,info) CNAME(dlasd7)
+pure subroutine dlasd7(icompq,nl,nr,sqre,k,d,z,zw,vf,vfw,vl,vlw,alpha,beta,dsigma,idx,idxp,idxq,perm,givptr,givcol,ldgcol,givnum,ldgnum,c,s,info) BEGCNAME(dlasd7,SUFFIX)
+ENDCNAME(dlasd7,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq
 integer(blas77_int), intent(inout) :: nl

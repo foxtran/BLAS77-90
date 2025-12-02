@@ -1,4 +1,5 @@
-pure subroutine cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(cheevd)
+pure subroutine cheevd(jobz,uplo,n,a,lda,w,work,lwork,rwork,lrwork,iwork,liwork,info) BEGCNAME(cheevd,SUFFIX)
+ENDCNAME(cheevd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

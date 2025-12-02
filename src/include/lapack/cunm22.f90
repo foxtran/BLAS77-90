@@ -1,4 +1,5 @@
-pure subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) CNAME(cunm22)
+pure subroutine cunm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) BEGCNAME(cunm22,SUFFIX)
+ENDCNAME(cunm22,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

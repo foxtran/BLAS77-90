@@ -1,4 +1,5 @@
-pure subroutine ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(ctpmqrt)
+pure subroutine ctpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) BEGCNAME(ctpmqrt,SUFFIX)
+ENDCNAME(ctpmqrt,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

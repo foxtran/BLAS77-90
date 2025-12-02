@@ -1,4 +1,5 @@
-pure subroutine zswap(n,zx,incx,zy,incy) CNAME(zswap)
+pure subroutine zswap(n,zx,incx,zy,incy) BEGCNAME(zswap,SUFFIX)
+ENDCNAME(zswap,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: zx(*)

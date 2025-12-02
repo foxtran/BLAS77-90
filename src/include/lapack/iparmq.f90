@@ -1,4 +1,5 @@
-pure function iparmq(ispec,name,opts,n,ilo,ihi,lwork) CNAME(iparmq)
+pure function iparmq(ispec,name,opts,n,ilo,ihi,lwork) BEGCNAME(iparmq,SUFFIX)
+ENDCNAME(iparmq,SUFFIX)
 import
 integer(blas77_int), intent(in) :: ispec
 character(len=*), intent(in) :: name

@@ -1,4 +1,5 @@
-pure subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) CNAME(cbdsqr)
+pure subroutine cbdsqr(uplo,n,ncvt,nru,ncc,d,e,vt,ldvt,u,ldu,c,ldc,rwork,info) BEGCNAME(cbdsqr,SUFFIX)
+ENDCNAME(cbdsqr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

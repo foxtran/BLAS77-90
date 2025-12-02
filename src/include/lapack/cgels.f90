@@ -1,4 +1,5 @@
-pure subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) CNAME(cgels)
+pure subroutine cgels(trans,m,n,nrhs,a,lda,b,ldb,work,lwork,info) BEGCNAME(cgels,SUFFIX)
+ENDCNAME(cgels,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

@@ -1,4 +1,5 @@
-pure subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) CNAME(dlaev2)
+pure subroutine dlaev2(a,b,c,rt1,rt2,cs1,sn1) BEGCNAME(dlaev2,SUFFIX)
+ENDCNAME(dlaev2,SUFFIX)
 import
 real(blas77_f64), intent(inout) :: a
 real(blas77_f64), intent(inout) :: b

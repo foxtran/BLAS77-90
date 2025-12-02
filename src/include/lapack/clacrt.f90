@@ -1,4 +1,5 @@
-pure subroutine clacrt(n,cx,incx,cy,incy,c,s) CNAME(clacrt)
+pure subroutine clacrt(n,cx,incx,cy,incy,c,s) BEGCNAME(clacrt,SUFFIX)
+ENDCNAME(clacrt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: cx(*)

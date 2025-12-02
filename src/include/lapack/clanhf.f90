@@ -1,4 +1,5 @@
-pure function clanhf(norm,transr,uplo,n,a,work) CNAME(clanhf)
+pure function clanhf(norm,transr,uplo,n,a,work) BEGCNAME(clanhf,SUFFIX)
+ENDCNAME(clanhf,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: transr

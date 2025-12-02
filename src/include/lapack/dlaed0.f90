@@ -1,4 +1,5 @@
-pure subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) CNAME(dlaed0)
+pure subroutine dlaed0(icompq,qsiz,n,d,e,q,ldq,qstore,ldqs,work,iwork,info) BEGCNAME(dlaed0,SUFFIX)
+ENDCNAME(dlaed0,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq
 integer(blas77_int), intent(inout) :: qsiz

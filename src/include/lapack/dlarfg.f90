@@ -1,4 +1,5 @@
-pure subroutine dlarfg(n,alpha,x,incx,tau) CNAME(dlarfg)
+pure subroutine dlarfg(n,alpha,x,incx,tau) BEGCNAME(dlarfg,SUFFIX)
+ENDCNAME(dlarfg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: alpha

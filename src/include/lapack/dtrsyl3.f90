@@ -1,4 +1,5 @@
-pure subroutine dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info) CNAME(dtrsyl3)
+pure subroutine dtrsyl3(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,iwork,liwork,swork,ldswork,info) BEGCNAME(dtrsyl3,SUFFIX)
+ENDCNAME(dtrsyl3,SUFFIX)
 import
 character(len=1), intent(inout) :: trana
 character(len=1), intent(inout) :: tranb

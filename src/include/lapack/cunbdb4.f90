@@ -1,4 +1,5 @@
-pure subroutine cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) CNAME(cunbdb4)
+pure subroutine cunbdb4(m,p,q,x11,ldx11,x21,ldx21,theta,phi,taup1,taup2,tauq1,phantom,work,lwork,info) BEGCNAME(cunbdb4,SUFFIX)
+ENDCNAME(cunbdb4,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: p

@@ -1,4 +1,5 @@
-pure function zlansb(norm,uplo,n,k,ab,ldab,work) CNAME(zlansb)
+pure function zlansb(norm,uplo,n,k,ab,ldab,work) BEGCNAME(zlansb,SUFFIX)
+ENDCNAME(zlansb,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

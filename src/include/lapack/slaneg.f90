@@ -1,4 +1,5 @@
-pure function slaneg(n,d,lld,sigma,pivmin,r) CNAME(slaneg)
+pure function slaneg(n,d,lld,sigma,pivmin,r) BEGCNAME(slaneg,SUFFIX)
+ENDCNAME(slaneg,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 real(blas77_f32), intent(in) :: d(*)

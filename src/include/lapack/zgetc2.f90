@@ -1,4 +1,5 @@
-pure subroutine zgetc2(n,a,lda,ipiv,jpiv,info) CNAME(zgetc2)
+pure subroutine zgetc2(n,a,lda,ipiv,jpiv,info) BEGCNAME(zgetc2,SUFFIX)
+ENDCNAME(zgetc2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

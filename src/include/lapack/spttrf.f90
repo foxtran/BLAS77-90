@@ -1,4 +1,5 @@
-pure subroutine spttrf(n,d,e,info) CNAME(spttrf)
+pure subroutine spttrf(n,d,e,info) BEGCNAME(spttrf,SUFFIX)
+ENDCNAME(spttrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

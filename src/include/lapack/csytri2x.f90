@@ -1,4 +1,5 @@
-pure subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) CNAME(csytri2x)
+pure subroutine csytri2x(uplo,n,a,lda,ipiv,work,nb,info) BEGCNAME(csytri2x,SUFFIX)
+ENDCNAME(csytri2x,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

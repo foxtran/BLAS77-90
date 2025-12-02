@@ -1,4 +1,5 @@
-pure subroutine slassq(n,x,incx,scale,sumsq) CNAME(slassq)
+pure subroutine slassq(n,x,incx,scale,sumsq) BEGCNAME(slassq,SUFFIX)
+ENDCNAME(slassq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: x(*)

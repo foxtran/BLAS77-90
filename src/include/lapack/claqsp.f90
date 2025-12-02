@@ -1,4 +1,5 @@
-pure subroutine claqsp(uplo,n,ap,s,scond,amax,equed) CNAME(claqsp)
+pure subroutine claqsp(uplo,n,ap,s,scond,amax,equed) BEGCNAME(claqsp,SUFFIX)
+ENDCNAME(claqsp,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

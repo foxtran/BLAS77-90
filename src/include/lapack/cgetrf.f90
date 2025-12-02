@@ -1,4 +1,5 @@
-pure subroutine cgetrf(m,n,a,lda,ipiv,info) CNAME(cgetrf)
+pure subroutine cgetrf(m,n,a,lda,ipiv,info) BEGCNAME(cgetrf,SUFFIX)
+ENDCNAME(cgetrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

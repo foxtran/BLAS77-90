@@ -1,4 +1,5 @@
-pure subroutine cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmqr)
+pure subroutine cunmqr(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) BEGCNAME(cunmqr,SUFFIX)
+ENDCNAME(cunmqr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

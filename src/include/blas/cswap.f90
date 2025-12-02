@@ -1,4 +1,5 @@
-pure subroutine cswap(n,cx,incx,cy,incy) CNAME(cswap)
+pure subroutine cswap(n,cx,incx,cy,incy) BEGCNAME(cswap,SUFFIX)
+ENDCNAME(cswap,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: cx(*)

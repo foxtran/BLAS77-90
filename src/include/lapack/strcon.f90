@@ -1,4 +1,5 @@
-pure subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) CNAME(strcon)
+pure subroutine strcon(norm,uplo,diag,n,a,lda,rcond,work,iwork,info) BEGCNAME(strcon,SUFFIX)
+ENDCNAME(strcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 character(len=1), intent(inout) :: uplo

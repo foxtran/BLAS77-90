@@ -1,4 +1,5 @@
-pure subroutine zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info) CNAME(zuncsd)
+pure subroutine zuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info) BEGCNAME(zuncsd,SUFFIX)
+ENDCNAME(zuncsd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu1
 character(len=1), intent(inout) :: jobu2

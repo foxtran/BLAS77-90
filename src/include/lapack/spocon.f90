@@ -1,4 +1,5 @@
-pure subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) CNAME(spocon)
+pure subroutine spocon(uplo,n,a,lda,anorm,rcond,work,iwork,info) BEGCNAME(spocon,SUFFIX)
+ENDCNAME(spocon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

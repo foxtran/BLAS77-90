@@ -1,4 +1,5 @@
-pure subroutine dlaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) CNAME(dlaqtr)
+pure subroutine dlaqtr(ltran,lreal,n,t,ldt,b,w,scale,x,work,info) BEGCNAME(dlaqtr,SUFFIX)
+ENDCNAME(dlaqtr,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: ltran
 logical(blas77_int), intent(inout) :: lreal

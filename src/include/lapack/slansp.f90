@@ -1,4 +1,5 @@
-pure function slansp(norm,uplo,n,ap,work) CNAME(slansp)
+pure function slansp(norm,uplo,n,ap,work) BEGCNAME(slansp,SUFFIX)
+ENDCNAME(slansp,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

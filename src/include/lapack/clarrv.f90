@@ -1,4 +1,5 @@
-pure subroutine clarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) CNAME(clarrv)
+pure subroutine clarrv(n,vl,vu,d,l,pivmin,isplit,m,dol,dou,minrgp,rtol1,rtol2,w,werr,wgap,iblock,indexw,gers,z,ldz,isuppz,work,iwork,info) BEGCNAME(clarrv,SUFFIX)
+ENDCNAME(clarrv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: vl

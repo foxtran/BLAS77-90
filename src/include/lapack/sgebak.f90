@@ -1,4 +1,5 @@
-pure subroutine sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) CNAME(sgebak)
+pure subroutine sgebak(job,side,n,ilo,ihi,scale,m,v,ldv,info) BEGCNAME(sgebak,SUFFIX)
+ENDCNAME(sgebak,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: side

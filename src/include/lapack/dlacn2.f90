@@ -1,4 +1,5 @@
-pure subroutine dlacn2(n,v,x,isgn,est,kase,isave) CNAME(dlacn2)
+pure subroutine dlacn2(n,v,x,isgn,est,kase,isave) BEGCNAME(dlacn2,SUFFIX)
+ENDCNAME(dlacn2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: v(*)

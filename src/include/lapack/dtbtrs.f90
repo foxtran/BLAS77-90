@@ -1,4 +1,5 @@
-pure subroutine dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(dtbtrs)
+pure subroutine dtbtrs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,info) BEGCNAME(dtbtrs,SUFFIX)
+ENDCNAME(dtbtrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

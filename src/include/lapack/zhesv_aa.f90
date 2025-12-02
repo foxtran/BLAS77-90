@@ -1,4 +1,5 @@
-pure subroutine zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zhesv_aa)
+pure subroutine zhesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) BEGCNAME(zhesv_aa,SUFFIX)
+ENDCNAME(zhesv_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) CNAME(zlarfy)
+pure subroutine zlarfy(uplo,n,v,incv,tau,c,ldc,work) BEGCNAME(zlarfy,SUFFIX)
+ENDCNAME(zlarfy,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

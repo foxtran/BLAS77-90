@@ -1,4 +1,5 @@
-pure subroutine zlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) CNAME(zlags2)
+pure subroutine zlags2(upper,a1,a2,a3,b1,b2,b3,csu,snu,csv,snv,csq,snq) BEGCNAME(zlags2,SUFFIX)
+ENDCNAME(zlags2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: upper
 real(blas77_f64), intent(inout) :: a1

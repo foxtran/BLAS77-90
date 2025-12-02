@@ -1,4 +1,5 @@
-pure subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) CNAME(dopmtr)
+pure subroutine dopmtr(side,uplo,trans,m,n,ap,tau,c,ldc,work,info) BEGCNAME(dopmtr,SUFFIX)
+ENDCNAME(dopmtr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

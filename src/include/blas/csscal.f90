@@ -1,4 +1,5 @@
-pure subroutine csscal(n,sa,cx,incx) CNAME(csscal)
+pure subroutine csscal(n,sa,cx,incx) BEGCNAME(csscal,SUFFIX)
+ENDCNAME(csscal,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: sa

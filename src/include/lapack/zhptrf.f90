@@ -1,4 +1,5 @@
-pure subroutine zhptrf(uplo,n,ap,ipiv,info) CNAME(zhptrf)
+pure subroutine zhptrf(uplo,n,ap,ipiv,info) BEGCNAME(zhptrf,SUFFIX)
+ENDCNAME(zhptrf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

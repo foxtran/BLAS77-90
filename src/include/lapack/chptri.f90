@@ -1,4 +1,5 @@
-pure subroutine chptri(uplo,n,ap,ipiv,work,info) CNAME(chptri)
+pure subroutine chptri(uplo,n,ap,ipiv,work,info) BEGCNAME(chptri,SUFFIX)
+ENDCNAME(chptri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

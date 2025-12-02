@@ -1,4 +1,5 @@
-pure subroutine dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(dskewsymm)
+pure subroutine dskewsymm(side,uplo,m,n,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(dskewsymm,SUFFIX)
+ENDCNAME(dskewsymm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

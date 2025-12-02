@@ -1,4 +1,5 @@
-pure subroutine zlaesy(a,b,c,rt1,rt2,evscal,cs1,sn1) CNAME(zlaesy)
+pure subroutine zlaesy(a,b,c,rt1,rt2,evscal,cs1,sn1) BEGCNAME(zlaesy,SUFFIX)
+ENDCNAME(zlaesy,SUFFIX)
 import
 complex(blas77_f64), intent(inout) :: a
 complex(blas77_f64), intent(inout) :: b

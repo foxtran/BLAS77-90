@@ -1,4 +1,5 @@
-pure subroutine dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) CNAME(dsb2st_kernels)
+pure subroutine dsb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) BEGCNAME(dsb2st_kernels,SUFFIX)
+ENDCNAME(dsb2st_kernels,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 logical(blas77_int), intent(inout) :: wantz

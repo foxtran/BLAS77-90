@@ -1,4 +1,5 @@
-pure subroutine zlar2v(n,x,y,z,incx,c,s,incc) CNAME(zlar2v)
+pure subroutine zlar2v(n,x,y,z,incx,c,s,incc) BEGCNAME(zlar2v,SUFFIX)
+ENDCNAME(zlar2v,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: x(*)

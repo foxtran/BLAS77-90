@@ -1,4 +1,5 @@
-pure subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) CNAME(zgecon)
+pure subroutine zgecon(norm,n,a,lda,anorm,rcond,work,rwork,info) BEGCNAME(zgecon,SUFFIX)
+ENDCNAME(zgecon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 integer(blas77_int), intent(inout) :: n

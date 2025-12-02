@@ -1,4 +1,5 @@
-pure subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) CNAME(clarz)
+pure subroutine clarz(side,m,n,l,v,incv,tau,c,ldc,work) BEGCNAME(clarz,SUFFIX)
+ENDCNAME(clarz,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 integer(blas77_int), intent(inout) :: m

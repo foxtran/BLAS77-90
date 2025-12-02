@@ -1,4 +1,5 @@
-pure subroutine sgeqrt(m,n,nb,a,lda,t,ldt,work,info) CNAME(sgeqrt)
+pure subroutine sgeqrt(m,n,nb,a,lda,t,ldt,work,info) BEGCNAME(sgeqrt,SUFFIX)
+ENDCNAME(sgeqrt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

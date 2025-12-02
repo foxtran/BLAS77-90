@@ -1,4 +1,5 @@
-pure subroutine csyr(uplo,n,alpha,x,incx,a,lda) CNAME(csyr)
+pure subroutine csyr(uplo,n,alpha,x,incx,a,lda) BEGCNAME(csyr,SUFFIX)
+ENDCNAME(csyr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

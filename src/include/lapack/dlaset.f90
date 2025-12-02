@@ -1,4 +1,5 @@
-pure subroutine dlaset(uplo,m,n,alpha,beta,a,lda) CNAME(dlaset)
+pure subroutine dlaset(uplo,m,n,alpha,beta,a,lda) BEGCNAME(dlaset,SUFFIX)
+ENDCNAME(dlaset,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: m

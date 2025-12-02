@@ -1,4 +1,5 @@
-pure subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) CNAME(chpcon)
+pure subroutine chpcon(uplo,n,ap,ipiv,anorm,rcond,work,info) BEGCNAME(chpcon,SUFFIX)
+ENDCNAME(chpcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

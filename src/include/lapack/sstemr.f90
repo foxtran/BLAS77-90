@@ -1,4 +1,5 @@
-pure subroutine sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) CNAME(sstemr)
+pure subroutine sstemr(jobz,range,n,d,e,vl,vu,il,iu,m,w,z,ldz,nzc,isuppz,tryrac,work,lwork,iwork,liwork,info) BEGCNAME(sstemr,SUFFIX)
+ENDCNAME(sstemr,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: range

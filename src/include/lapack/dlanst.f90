@@ -1,4 +1,5 @@
-pure function dlanst(norm,n,d,e) CNAME(dlanst)
+pure function dlanst(norm,n,d,e) BEGCNAME(dlanst,SUFFIX)
+ENDCNAME(dlanst,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: n

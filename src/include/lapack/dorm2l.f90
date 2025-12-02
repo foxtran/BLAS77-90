@@ -1,4 +1,5 @@
-pure subroutine dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(dorm2l)
+pure subroutine dorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) BEGCNAME(dorm2l,SUFFIX)
+ENDCNAME(dorm2l,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

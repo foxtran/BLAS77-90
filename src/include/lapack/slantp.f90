@@ -1,4 +1,5 @@
-pure function slantp(norm,uplo,diag,n,ap,work) CNAME(slantp)
+pure function slantp(norm,uplo,diag,n,ap,work) BEGCNAME(slantp,SUFFIX)
+ENDCNAME(slantp,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

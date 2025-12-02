@@ -1,4 +1,5 @@
-pure subroutine cungl2(m,n,k,a,lda,tau,work,info) CNAME(cungl2)
+pure subroutine cungl2(m,n,k,a,lda,tau,work,info) BEGCNAME(cungl2,SUFFIX)
+ENDCNAME(cungl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

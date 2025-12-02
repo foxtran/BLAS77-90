@@ -1,4 +1,5 @@
-pure subroutine sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) CNAME(sspgv)
+pure subroutine sspgv(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,info) BEGCNAME(sspgv,SUFFIX)
+ENDCNAME(sspgv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: jobz

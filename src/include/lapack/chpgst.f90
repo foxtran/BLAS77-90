@@ -1,4 +1,5 @@
-pure subroutine chpgst(itype,uplo,n,ap,bp,info) CNAME(chpgst)
+pure subroutine chpgst(itype,uplo,n,ap,bp,info) BEGCNAME(chpgst,SUFFIX)
+ENDCNAME(chpgst,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: uplo

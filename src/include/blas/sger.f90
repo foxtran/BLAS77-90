@@ -1,4 +1,5 @@
-pure subroutine sger(m,n,alpha,x,incx,y,incy,a,lda) CNAME(sger)
+pure subroutine sger(m,n,alpha,x,incx,y,incy,a,lda) BEGCNAME(sger,SUFFIX)
+ENDCNAME(sger,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) CNAME(sla_syrcond)
+pure function sla_syrcond(uplo,n,a,lda,af,ldaf,ipiv,cmode,c,info,work,iwork) BEGCNAME(sla_syrcond,SUFFIX)
+ENDCNAME(sla_syrcond,SUFFIX)
 import
 character(len=1), intent(in) :: uplo
 integer(blas77_int), intent(in) :: n

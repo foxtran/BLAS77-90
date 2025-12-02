@@ -1,4 +1,5 @@
-pure subroutine dspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(dspmv)
+pure subroutine dspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) BEGCNAME(dspmv,SUFFIX)
+ENDCNAME(dspmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

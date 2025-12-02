@@ -1,4 +1,5 @@
-pure subroutine cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) CNAME(cgeqpf)
+pure subroutine cgeqpf(m,n,a,lda,jpvt,tau,work,rwork,info) BEGCNAME(cgeqpf,SUFFIX)
+ENDCNAME(cgeqpf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

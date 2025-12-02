@@ -1,4 +1,5 @@
-pure function slange(norm,m,n,a,lda,work) CNAME(slange)
+pure function slange(norm,m,n,a,lda,work) BEGCNAME(slange,SUFFIX)
+ENDCNAME(slange,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: m

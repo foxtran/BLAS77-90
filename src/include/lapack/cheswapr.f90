@@ -1,4 +1,5 @@
-pure subroutine cheswapr(uplo,n,a,lda,i1,i2) CNAME(cheswapr)
+pure subroutine cheswapr(uplo,n,a,lda,i1,i2) BEGCNAME(cheswapr,SUFFIX)
+ENDCNAME(cheswapr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

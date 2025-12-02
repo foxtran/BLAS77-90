@@ -1,4 +1,5 @@
-pure subroutine clar2v(n,x,y,z,incx,c,s,incc) CNAME(clar2v)
+pure subroutine clar2v(n,x,y,z,incx,c,s,incc) BEGCNAME(clar2v,SUFFIX)
+ENDCNAME(clar2v,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: x(*)

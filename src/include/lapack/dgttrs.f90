@@ -1,4 +1,5 @@
-pure subroutine dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) CNAME(dgttrs)
+pure subroutine dgttrs(trans,n,nrhs,dl,d,du,du2,ipiv,b,ldb,info) BEGCNAME(dgttrs,SUFFIX)
+ENDCNAME(dgttrs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

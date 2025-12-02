@@ -1,4 +1,5 @@
-pure subroutine dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dporfs)
+pure subroutine dporfs(uplo,n,nrhs,a,lda,af,ldaf,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(dporfs,SUFFIX)
+ENDCNAME(dporfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

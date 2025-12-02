@@ -1,4 +1,5 @@
-pure subroutine sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(sormbr)
+pure subroutine sormbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) BEGCNAME(sormbr,SUFFIX)
+ENDCNAME(sormbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: side

@@ -1,4 +1,5 @@
-pure subroutine dcopy(n,dx,incx,dy,incy) CNAME(dcopy)
+pure subroutine dcopy(n,dx,incx,dy,incy) BEGCNAME(dcopy,SUFFIX)
+ENDCNAME(dcopy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: dx(*)

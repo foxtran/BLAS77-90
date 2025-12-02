@@ -1,4 +1,5 @@
-pure subroutine ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) CNAME(ctfsm)
+pure subroutine ctfsm(transr,side,uplo,trans,diag,m,n,alpha,a,b,ldb) BEGCNAME(ctfsm,SUFFIX)
+ENDCNAME(ctfsm,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: side

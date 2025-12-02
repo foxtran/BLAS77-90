@@ -1,4 +1,5 @@
-pure subroutine sgetrf2(m,n,a,lda,ipiv,info) CNAME(sgetrf2)
+pure subroutine sgetrf2(m,n,a,lda,ipiv,info) BEGCNAME(sgetrf2,SUFFIX)
+ENDCNAME(sgetrf2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

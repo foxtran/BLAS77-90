@@ -1,4 +1,5 @@
-pure subroutine dlarscl2(m,n,d,x,ldx) CNAME(dlarscl2)
+pure subroutine dlarscl2(m,n,d,x,ldx) BEGCNAME(dlarscl2,SUFFIX)
+ENDCNAME(dlarscl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine cher2(uplo,n,alpha,x,incx,y,incy,a,lda) CNAME(cher2)
+pure subroutine cher2(uplo,n,alpha,x,incx,y,incy,a,lda) BEGCNAME(cher2,SUFFIX)
+ENDCNAME(cher2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

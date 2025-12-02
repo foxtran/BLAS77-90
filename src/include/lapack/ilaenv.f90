@@ -1,4 +1,5 @@
-pure function ilaenv(ispec,name,opts,n1,n2,n3,n4) CNAME(ilaenv)
+pure function ilaenv(ispec,name,opts,n1,n2,n3,n4) BEGCNAME(ilaenv,SUFFIX)
+ENDCNAME(ilaenv,SUFFIX)
 import
 integer(blas77_int), intent(in) :: ispec
 character(len=*), intent(in) :: name

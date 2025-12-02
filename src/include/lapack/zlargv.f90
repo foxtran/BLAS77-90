@@ -1,4 +1,5 @@
-pure subroutine zlargv(n,x,incx,y,incy,c,incc) CNAME(zlargv)
+pure subroutine zlargv(n,x,incx,y,incy,c,incc) BEGCNAME(zlargv,SUFFIX)
+ENDCNAME(zlargv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: x(*)

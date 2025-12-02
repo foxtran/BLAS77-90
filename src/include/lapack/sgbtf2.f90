@@ -1,4 +1,5 @@
-pure subroutine sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) CNAME(sgbtf2)
+pure subroutine sgbtf2(m,n,kl,ku,ab,ldab,ipiv,info) BEGCNAME(sgbtf2,SUFFIX)
+ENDCNAME(sgbtf2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

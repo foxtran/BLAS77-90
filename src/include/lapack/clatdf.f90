@@ -1,4 +1,5 @@
-pure subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) CNAME(clatdf)
+pure subroutine clatdf(ijob,n,z,ldz,rhs,rdsum,rdscal,ipiv,jpiv) BEGCNAME(clatdf,SUFFIX)
+ENDCNAME(clatdf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: ijob
 integer(blas77_int), intent(inout) :: n

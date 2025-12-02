@@ -1,4 +1,5 @@
-pure subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) CNAME(dlasyf)
+pure subroutine dlasyf(uplo,n,nb,kb,a,lda,ipiv,w,ldw,info) BEGCNAME(dlasyf,SUFFIX)
+ENDCNAME(dlasyf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

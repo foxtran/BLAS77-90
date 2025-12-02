@@ -1,4 +1,5 @@
-pure function zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) CNAME(zla_gercond_x)
+pure function zla_gercond_x(trans,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) BEGCNAME(zla_gercond_x,SUFFIX)
+ENDCNAME(zla_gercond_x,SUFFIX)
 import
 character(len=1), intent(in) :: trans
 integer(blas77_int), intent(in) :: n

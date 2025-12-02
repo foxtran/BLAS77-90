@@ -1,4 +1,5 @@
-pure function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) CNAME(sla_gerpvgrw)
+pure function sla_gerpvgrw(n,ncols,a,lda,af,ldaf) BEGCNAME(sla_gerpvgrw,SUFFIX)
+ENDCNAME(sla_gerpvgrw,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 integer(blas77_int), intent(in) :: ncols

@@ -1,4 +1,5 @@
-pure subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) CNAME(dlaqge)
+pure subroutine dlaqge(m,n,a,lda,r,c,rowcnd,colcnd,amax,equed) BEGCNAME(dlaqge,SUFFIX)
+ENDCNAME(dlaqge,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

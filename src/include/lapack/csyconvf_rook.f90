@@ -1,4 +1,5 @@
-pure subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) CNAME(csyconvf_rook)
+pure subroutine csyconvf_rook(uplo,way,n,a,lda,e,ipiv,info) BEGCNAME(csyconvf_rook,SUFFIX)
+ENDCNAME(csyconvf_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: way

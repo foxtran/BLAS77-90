@@ -1,4 +1,5 @@
-pure subroutine dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) CNAME(dgeesx)
+pure subroutine dgeesx(jobvs,sort,select,sense,n,a,lda,sdim,wr,wi,vs,ldvs,rconde,rcondv,work,lwork,iwork,liwork,bwork,info) BEGCNAME(dgeesx,SUFFIX)
+ENDCNAME(dgeesx,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvs
 character(len=1), intent(inout) :: sort

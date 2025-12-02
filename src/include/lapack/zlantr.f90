@@ -1,4 +1,5 @@
-pure function zlantr(norm,uplo,diag,m,n,a,lda,work) CNAME(zlantr)
+pure function zlantr(norm,uplo,diag,m,n,a,lda,work) BEGCNAME(zlantr,SUFFIX)
+ENDCNAME(zlantr,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

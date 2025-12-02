@@ -1,4 +1,5 @@
-pure subroutine stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(stbrfs)
+pure subroutine stbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(stbrfs,SUFFIX)
+ENDCNAME(stbrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

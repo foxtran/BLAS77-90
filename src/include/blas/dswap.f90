@@ -1,4 +1,5 @@
-pure subroutine dswap(n,dx,incx,dy,incy) CNAME(dswap)
+pure subroutine dswap(n,dx,incx,dy,incy) BEGCNAME(dswap,SUFFIX)
+ENDCNAME(dswap,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: dx(*)

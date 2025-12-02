@@ -1,4 +1,5 @@
-pure subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(dorghr)
+pure subroutine dorghr(n,ilo,ihi,a,lda,tau,work,lwork,info) BEGCNAME(dorghr,SUFFIX)
+ENDCNAME(dorghr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ilo

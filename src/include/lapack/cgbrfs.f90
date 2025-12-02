@@ -1,4 +1,5 @@
-pure subroutine cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(cgbrfs)
+pure subroutine cgbrfs(trans,n,kl,ku,nrhs,ab,ldab,afb,ldafb,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(cgbrfs,SUFFIX)
+ENDCNAME(cgbrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

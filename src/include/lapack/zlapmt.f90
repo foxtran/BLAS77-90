@@ -1,4 +1,5 @@
-pure subroutine zlapmt(forwrd,m,n,x,ldx,k) CNAME(zlapmt)
+pure subroutine zlapmt(forwrd,m,n,x,ldx,k) BEGCNAME(zlapmt,SUFFIX)
+ENDCNAME(zlapmt,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: forwrd
 integer(blas77_int), intent(inout) :: m

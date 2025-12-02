@@ -1,4 +1,5 @@
-pure subroutine spoequb(n,a,lda,s,scond,amax,info) CNAME(spoequb)
+pure subroutine spoequb(n,a,lda,s,scond,amax,info) BEGCNAME(spoequb,SUFFIX)
+ENDCNAME(spoequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

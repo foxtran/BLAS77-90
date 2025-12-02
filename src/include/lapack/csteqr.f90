@@ -1,4 +1,5 @@
-pure subroutine csteqr(compz,n,d,e,z,ldz,work,info) CNAME(csteqr)
+pure subroutine csteqr(compz,n,d,e,z,ldz,work,info) BEGCNAME(csteqr,SUFFIX)
+ENDCNAME(csteqr,SUFFIX)
 import
 character(len=1), intent(inout) :: compz
 integer(blas77_int), intent(inout) :: n

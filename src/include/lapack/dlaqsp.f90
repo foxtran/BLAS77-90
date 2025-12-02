@@ -1,4 +1,5 @@
-pure subroutine dlaqsp(uplo,n,ap,s,scond,amax,equed) CNAME(dlaqsp)
+pure subroutine dlaqsp(uplo,n,ap,s,scond,amax,equed) BEGCNAME(dlaqsp,SUFFIX)
+ENDCNAME(dlaqsp,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

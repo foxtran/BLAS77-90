@@ -1,4 +1,5 @@
-pure function slansf(norm,transr,uplo,n,a,work) CNAME(slansf)
+pure function slansf(norm,transr,uplo,n,a,work) BEGCNAME(slansf,SUFFIX)
+ENDCNAME(slansf,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: transr

@@ -1,4 +1,5 @@
-pure subroutine zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) CNAME(zlalsd)
+pure subroutine zlalsd(uplo,smlsiz,n,nrhs,d,e,b,ldb,rcond,rank,work,rwork,iwork,info) BEGCNAME(zlalsd,SUFFIX)
+ENDCNAME(zlalsd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: smlsiz

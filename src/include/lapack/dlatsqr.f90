@@ -1,4 +1,5 @@
-pure subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(dlatsqr)
+pure subroutine dlatsqr(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(dlatsqr,SUFFIX)
+ENDCNAME(dlatsqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

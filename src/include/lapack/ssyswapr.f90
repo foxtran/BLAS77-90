@@ -1,4 +1,5 @@
-pure subroutine ssyswapr(uplo,n,a,lda,i1,i2) CNAME(ssyswapr)
+pure subroutine ssyswapr(uplo,n,a,lda,i1,i2) BEGCNAME(ssyswapr,SUFFIX)
+ENDCNAME(ssyswapr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

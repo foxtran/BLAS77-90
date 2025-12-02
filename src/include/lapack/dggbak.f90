@@ -1,4 +1,5 @@
-pure subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) CNAME(dggbak)
+pure subroutine dggbak(job,side,n,ilo,ihi,lscale,rscale,m,v,ldv,info) BEGCNAME(dggbak,SUFFIX)
+ENDCNAME(dggbak,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: side

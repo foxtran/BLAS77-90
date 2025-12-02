@@ -1,4 +1,5 @@
-pure subroutine ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) CNAME(ztpqrt2)
+pure subroutine ztpqrt2(m,n,l,a,lda,b,ldb,t,ldt,info) BEGCNAME(ztpqrt2,SUFFIX)
+ENDCNAME(ztpqrt2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

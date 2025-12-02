@@ -1,4 +1,5 @@
-pure subroutine csrot(n,cx,incx,cy,incy,c,s) CNAME(csrot)
+pure subroutine csrot(n,cx,incx,cy,incy,c,s) BEGCNAME(csrot,SUFFIX)
+ENDCNAME(csrot,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: cx(*)

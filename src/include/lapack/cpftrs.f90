@@ -1,4 +1,5 @@
-pure subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) CNAME(cpftrs)
+pure subroutine cpftrs(transr,uplo,n,nrhs,a,b,ldb,info) BEGCNAME(cpftrs,SUFFIX)
+ENDCNAME(cpftrs,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

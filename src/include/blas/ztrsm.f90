@@ -1,4 +1,5 @@
-pure subroutine ztrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(ztrsm)
+pure subroutine ztrsm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) BEGCNAME(ztrsm,SUFFIX)
+ENDCNAME(ztrsm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

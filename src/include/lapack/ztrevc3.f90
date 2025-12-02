@@ -1,4 +1,5 @@
-pure subroutine ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info) CNAME(ztrevc3)
+pure subroutine ztrevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,rwork,lrwork,info) BEGCNAME(ztrevc3,SUFFIX)
+ENDCNAME(ztrevc3,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: howmny

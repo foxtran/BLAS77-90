@@ -1,4 +1,5 @@
-pure subroutine cpoequb(n,a,lda,s,scond,amax,info) CNAME(cpoequb)
+pure subroutine cpoequb(n,a,lda,s,scond,amax,info) BEGCNAME(cpoequb,SUFFIX)
+ENDCNAME(cpoequb,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

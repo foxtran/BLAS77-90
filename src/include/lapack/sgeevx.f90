@@ -1,4 +1,5 @@
-pure subroutine sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info) CNAME(sgeevx)
+pure subroutine sgeevx(balanc,jobvl,jobvr,sense,n,a,lda,wr,wi,vl,ldvl,vr,ldvr,ilo,ihi,scale,abnrm,rconde,rcondv,work,lwork,iwork,info) BEGCNAME(sgeevx,SUFFIX)
+ENDCNAME(sgeevx,SUFFIX)
 import
 character(len=1), intent(inout) :: balanc
 character(len=1), intent(inout) :: jobvl

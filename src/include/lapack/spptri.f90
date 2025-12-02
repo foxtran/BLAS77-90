@@ -1,4 +1,5 @@
-pure subroutine spptri(uplo,n,ap,info) CNAME(spptri)
+pure subroutine spptri(uplo,n,ap,info) BEGCNAME(spptri,SUFFIX)
+ENDCNAME(spptri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) CNAME(dpbsv)
+pure subroutine dpbsv(uplo,n,kd,nrhs,ab,ldab,b,ldb,info) BEGCNAME(dpbsv,SUFFIX)
+ENDCNAME(dpbsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

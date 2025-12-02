@@ -1,4 +1,5 @@
-pure subroutine ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(ssytrs)
+pure subroutine ssytrs(uplo,n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(ssytrs,SUFFIX)
+ENDCNAME(ssytrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

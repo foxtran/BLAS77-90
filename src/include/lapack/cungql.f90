@@ -1,4 +1,5 @@
-pure subroutine cungql(m,n,k,a,lda,tau,work,lwork,info) CNAME(cungql)
+pure subroutine cungql(m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(cungql,SUFFIX)
+ENDCNAME(cungql,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

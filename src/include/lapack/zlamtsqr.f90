@@ -1,4 +1,5 @@
-pure subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) CNAME(zlamtsqr)
+pure subroutine zlamtsqr(side,trans,m,n,k,mb,nb,a,lda,t,ldt,c,ldc,work,lwork,info) BEGCNAME(zlamtsqr,SUFFIX)
+ENDCNAME(zlamtsqr,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

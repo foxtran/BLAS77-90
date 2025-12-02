@@ -1,4 +1,5 @@
-pure subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) CNAME(dspgvd)
+pure subroutine dspgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,iwork,liwork,info) BEGCNAME(dspgvd,SUFFIX)
+ENDCNAME(dspgvd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: jobz

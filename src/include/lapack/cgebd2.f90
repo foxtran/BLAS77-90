@@ -1,4 +1,5 @@
-pure subroutine cgebd2(m,n,a,lda,d,e,tauq,taup,work,info) CNAME(cgebd2)
+pure subroutine cgebd2(m,n,a,lda,d,e,tauq,taup,work,info) BEGCNAME(cgebd2,SUFFIX)
+ENDCNAME(cgebd2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

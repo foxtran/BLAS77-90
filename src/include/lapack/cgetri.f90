@@ -1,4 +1,5 @@
-pure subroutine cgetri(n,a,lda,ipiv,work,lwork,info) CNAME(cgetri)
+pure subroutine cgetri(n,a,lda,ipiv,work,lwork,info) BEGCNAME(cgetri,SUFFIX)
+ENDCNAME(cgetri,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

@@ -1,4 +1,5 @@
-pure subroutine slartgs(x,y,sigma,cs,sn) CNAME(slartgs)
+pure subroutine slartgs(x,y,sigma,cs,sn) BEGCNAME(slartgs,SUFFIX)
+ENDCNAME(slartgs,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: x
 real(blas77_f32), intent(inout) :: y

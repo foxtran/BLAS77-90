@@ -1,4 +1,5 @@
-pure subroutine zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info) CNAME(zggevx)
+pure subroutine zggevx(balanc,jobvl,jobvr,sense,n,a,lda,b,ldb,alpha,beta,vl,ldvl,vr,ldvr,ilo,ihi,lscale,rscale,abnrm,bbnrm,rconde,rcondv,work,lwork,rwork,iwork,bwork,info) BEGCNAME(zggevx,SUFFIX)
+ENDCNAME(zggevx,SUFFIX)
 import
 character(len=1), intent(inout) :: balanc
 character(len=1), intent(inout) :: jobvl

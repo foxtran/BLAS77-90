@@ -1,4 +1,5 @@
-pure subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) CNAME(sbdsvdx)
+pure subroutine sbdsvdx(uplo,jobz,range,n,d,e,vl,vu,il,iu,ns,s,z,ldz,work,iwork,info) BEGCNAME(sbdsvdx,SUFFIX)
+ENDCNAME(sbdsvdx,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: jobz

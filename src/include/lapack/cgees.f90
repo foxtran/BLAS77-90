@@ -1,4 +1,5 @@
-pure subroutine cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info) CNAME(cgees)
+pure subroutine cgees(jobvs,sort,select,n,a,lda,sdim,w,vs,ldvs,work,lwork,rwork,bwork,info) BEGCNAME(cgees,SUFFIX)
+ENDCNAME(cgees,SUFFIX)
 import
 character(len=1), intent(inout) :: jobvs
 character(len=1), intent(inout) :: sort

@@ -1,4 +1,5 @@
-pure subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) CNAME(dlaed7)
+pure subroutine dlaed7(icompq,n,qsiz,tlvls,curlvl,curpbm,d,q,ldq,indxq,rho,cutpnt,qstore,qptr,prmptr,perm,givptr,givcol,givnum,work,iwork,info) BEGCNAME(dlaed7,SUFFIX)
+ENDCNAME(dlaed7,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: icompq
 integer(blas77_int), intent(inout) :: n

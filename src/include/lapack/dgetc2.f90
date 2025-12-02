@@ -1,4 +1,5 @@
-pure subroutine dgetc2(n,a,lda,ipiv,jpiv,info) CNAME(dgetc2)
+pure subroutine dgetc2(n,a,lda,ipiv,jpiv,info) BEGCNAME(dgetc2,SUFFIX)
+ENDCNAME(dgetc2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

@@ -1,4 +1,5 @@
-pure subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) CNAME(ztpmqrt)
+pure subroutine ztpmqrt(side,trans,m,n,k,l,nb,v,ldv,t,ldt,a,lda,b,ldb,work,info) BEGCNAME(ztpmqrt,SUFFIX)
+ENDCNAME(ztpmqrt,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

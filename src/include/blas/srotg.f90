@@ -1,4 +1,5 @@
-pure subroutine srotg(a,b,c,s) CNAME(srotg)
+pure subroutine srotg(a,b,c,s) BEGCNAME(srotg,SUFFIX)
+ENDCNAME(srotg,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: a
 real(blas77_f32), intent(inout) :: b

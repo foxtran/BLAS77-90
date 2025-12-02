@@ -1,4 +1,5 @@
-pure subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(checon_rook)
+pure subroutine checon_rook(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(checon_rook,SUFFIX)
+ENDCNAME(checon_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

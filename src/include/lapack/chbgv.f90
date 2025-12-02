@@ -1,4 +1,5 @@
-pure subroutine chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) CNAME(chbgv)
+pure subroutine chbgv(jobz,uplo,n,ka,kb,ab,ldab,bb,ldbb,w,z,ldz,work,rwork,info) BEGCNAME(chbgv,SUFFIX)
+ENDCNAME(chbgv,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

@@ -1,4 +1,5 @@
-pure subroutine clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) CNAME(clarzb)
+pure subroutine clarzb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,c,ldc,work,ldwork) BEGCNAME(clarzb,SUFFIX)
+ENDCNAME(clarzb,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

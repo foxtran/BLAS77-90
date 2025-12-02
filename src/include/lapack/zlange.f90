@@ -1,4 +1,5 @@
-pure function zlange(norm,m,n,a,lda,work) CNAME(zlange)
+pure function zlange(norm,m,n,a,lda,work) BEGCNAME(zlange,SUFFIX)
+ENDCNAME(zlange,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: m

@@ -1,4 +1,5 @@
-pure subroutine dtftri(transr,uplo,diag,n,a,info) CNAME(dtftri)
+pure subroutine dtftri(transr,uplo,diag,n,a,info) BEGCNAME(dtftri,SUFFIX)
+ENDCNAME(dtftri,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

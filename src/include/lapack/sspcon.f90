@@ -1,4 +1,5 @@
-pure subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(sspcon)
+pure subroutine sspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) BEGCNAME(sspcon,SUFFIX)
+ENDCNAME(sspcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

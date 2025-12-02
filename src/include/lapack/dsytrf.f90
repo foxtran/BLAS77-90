@@ -1,4 +1,5 @@
-pure subroutine dsytrf(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(dsytrf)
+pure subroutine dsytrf(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(dsytrf,SUFFIX)
+ENDCNAME(dsytrf,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

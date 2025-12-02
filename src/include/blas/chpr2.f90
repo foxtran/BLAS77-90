@@ -1,4 +1,5 @@
-pure subroutine chpr2(uplo,n,alpha,x,incx,y,incy,ap) CNAME(chpr2)
+pure subroutine chpr2(uplo,n,alpha,x,incx,y,incy,ap) BEGCNAME(chpr2,SUFFIX)
+ENDCNAME(chpr2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

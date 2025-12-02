@@ -1,4 +1,5 @@
-pure subroutine zlag2c(m,n,a,lda,sa,ldsa,info) CNAME(zlag2c)
+pure subroutine zlag2c(m,n,a,lda,sa,ldsa,info) BEGCNAME(zlag2c,SUFFIX)
+ENDCNAME(zlag2c,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

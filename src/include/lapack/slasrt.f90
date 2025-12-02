@@ -1,4 +1,5 @@
-pure subroutine slasrt(id,n,d,info) CNAME(slasrt)
+pure subroutine slasrt(id,n,d,info) BEGCNAME(slasrt,SUFFIX)
+ENDCNAME(slasrt,SUFFIX)
 import
 character(len=1), intent(inout) :: id
 integer(blas77_int), intent(inout) :: n

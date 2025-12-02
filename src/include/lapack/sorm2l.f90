@@ -1,4 +1,5 @@
-pure subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) CNAME(sorm2l)
+pure subroutine sorm2l(side,trans,m,n,k,a,lda,tau,c,ldc,work,info) BEGCNAME(sorm2l,SUFFIX)
+ENDCNAME(sorm2l,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

@@ -1,4 +1,5 @@
-pure subroutine daxpy(n,da,dx,incx,dy,incy) CNAME(daxpy)
+pure subroutine daxpy(n,da,dx,incx,dy,incy) BEGCNAME(daxpy,SUFFIX)
+ENDCNAME(daxpy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: da

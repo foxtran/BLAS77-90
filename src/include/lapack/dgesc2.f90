@@ -1,4 +1,5 @@
-pure subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) CNAME(dgesc2)
+pure subroutine dgesc2(n,a,lda,rhs,ipiv,jpiv,scale) BEGCNAME(dgesc2,SUFFIX)
+ENDCNAME(dgesc2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

@@ -1,4 +1,5 @@
-pure subroutine dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) CNAME(dsbev)
+pure subroutine dsbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) BEGCNAME(dsbev,SUFFIX)
+ENDCNAME(dsbev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

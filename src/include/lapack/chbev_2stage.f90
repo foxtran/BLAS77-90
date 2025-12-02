@@ -1,4 +1,5 @@
-pure subroutine chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) CNAME(chbev_2stage)
+pure subroutine chbev_2stage(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,lwork,rwork,info) BEGCNAME(chbev_2stage,SUFFIX)
+ENDCNAME(chbev_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

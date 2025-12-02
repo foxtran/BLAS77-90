@@ -1,4 +1,5 @@
-pure subroutine ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) CNAME(ssbev)
+pure subroutine ssbev(jobz,uplo,n,kd,ab,ldab,w,z,ldz,work,info) BEGCNAME(ssbev,SUFFIX)
+ENDCNAME(ssbev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

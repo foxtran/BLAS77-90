@@ -1,4 +1,5 @@
-pure function zlanht(norm,n,d,e) CNAME(zlanht)
+pure function zlanht(norm,n,d,e) BEGCNAME(zlanht,SUFFIX)
+ENDCNAME(zlanht,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: n

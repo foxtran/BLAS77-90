@@ -1,4 +1,5 @@
-pure subroutine dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) CNAME(dsytri_3x)
+pure subroutine dsytri_3x(uplo,n,a,lda,e,ipiv,work,nb,info) BEGCNAME(dsytri_3x,SUFFIX)
+ENDCNAME(dsytri_3x,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

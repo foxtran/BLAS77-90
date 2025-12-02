@@ -1,4 +1,5 @@
-pure subroutine ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(ctbrfs)
+pure subroutine ctbrfs(uplo,trans,diag,n,kd,nrhs,ab,ldab,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(ctbrfs,SUFFIX)
+ENDCNAME(ctbrfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

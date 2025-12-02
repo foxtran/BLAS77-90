@@ -1,4 +1,5 @@
-pure subroutine dspr(uplo,n,alpha,x,incx,ap) CNAME(dspr)
+pure subroutine dspr(uplo,n,alpha,x,incx,ap) BEGCNAME(dspr,SUFFIX)
+ENDCNAME(dspr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

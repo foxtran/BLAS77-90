@@ -1,4 +1,5 @@
-pure subroutine stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) CNAME(stgsyl)
+pure subroutine stgsyl(trans,ijob,m,n,a,lda,b,ldb,c,ldc,d,ldd,e,lde,f,ldf,scale,dif,work,lwork,iwork,info) BEGCNAME(stgsyl,SUFFIX)
+ENDCNAME(stgsyl,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: ijob

@@ -1,4 +1,5 @@
-pure function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) CNAME(cla_porpvgrw)
+pure function cla_porpvgrw(uplo,ncols,a,lda,af,ldaf,work) BEGCNAME(cla_porpvgrw,SUFFIX)
+ENDCNAME(cla_porpvgrw,SUFFIX)
 import
 character(len=1), intent(in) :: uplo
 integer(blas77_int), intent(in) :: ncols

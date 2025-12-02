@@ -1,4 +1,5 @@
-pure subroutine zlatrz(m,n,l,a,lda,tau,work) CNAME(zlatrz)
+pure subroutine zlatrz(m,n,l,a,lda,tau,work) BEGCNAME(zlatrz,SUFFIX)
+ENDCNAME(zlatrz,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

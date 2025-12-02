@@ -1,4 +1,5 @@
-pure subroutine claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) CNAME(claswlq)
+pure subroutine claswlq(m,n,mb,nb,a,lda,t,ldt,work,lwork,info) BEGCNAME(claswlq,SUFFIX)
+ENDCNAME(claswlq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

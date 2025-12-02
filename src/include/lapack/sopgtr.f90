@@ -1,4 +1,5 @@
-pure subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) CNAME(sopgtr)
+pure subroutine sopgtr(uplo,n,ap,tau,q,ldq,work,info) BEGCNAME(sopgtr,SUFFIX)
+ENDCNAME(sopgtr,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

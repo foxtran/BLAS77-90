@@ -1,4 +1,5 @@
-pure subroutine ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) CNAME(ztrsen)
+pure subroutine ztrsen(job,compq,select,n,t,ldt,q,ldq,w,m,s,sep,work,lwork,info) BEGCNAME(ztrsen,SUFFIX)
+ENDCNAME(ztrsen,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 character(len=1), intent(inout) :: compq

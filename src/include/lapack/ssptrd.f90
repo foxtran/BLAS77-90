@@ -1,4 +1,5 @@
-pure subroutine ssptrd(uplo,n,ap,d,e,tau,info) CNAME(ssptrd)
+pure subroutine ssptrd(uplo,n,ap,d,e,tau,info) BEGCNAME(ssptrd,SUFFIX)
+ENDCNAME(ssptrd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

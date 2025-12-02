@@ -1,4 +1,5 @@
-pure subroutine clatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) CNAME(clatrs)
+pure subroutine clatrs(uplo,trans,diag,normin,n,a,lda,x,scale,cnorm,info) BEGCNAME(clatrs,SUFFIX)
+ENDCNAME(clatrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

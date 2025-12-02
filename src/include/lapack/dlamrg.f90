@@ -1,4 +1,5 @@
-pure subroutine dlamrg(n1,n2,a,dtrd1,dtrd2,index) CNAME(dlamrg)
+pure subroutine dlamrg(n1,n2,a,dtrd1,dtrd2,index) BEGCNAME(dlamrg,SUFFIX)
+ENDCNAME(dlamrg,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n1
 integer(blas77_int), intent(inout) :: n2

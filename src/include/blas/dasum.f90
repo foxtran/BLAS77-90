@@ -1,4 +1,5 @@
-pure function dasum(n,dx,incx) CNAME(dasum)
+pure function dasum(n,dx,incx) BEGCNAME(dasum,SUFFIX)
+ENDCNAME(dasum,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 real(blas77_f64), intent(in) :: dx(*)

@@ -1,4 +1,5 @@
-pure subroutine cgehd2(n,ilo,ihi,a,lda,tau,work,info) CNAME(cgehd2)
+pure subroutine cgehd2(n,ilo,ihi,a,lda,tau,work,info) BEGCNAME(cgehd2,SUFFIX)
+ENDCNAME(cgehd2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ilo

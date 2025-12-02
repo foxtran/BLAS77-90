@@ -1,4 +1,5 @@
-pure subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(dtplqt)
+pure subroutine dtplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) BEGCNAME(dtplqt,SUFFIX)
+ENDCNAME(dtplqt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

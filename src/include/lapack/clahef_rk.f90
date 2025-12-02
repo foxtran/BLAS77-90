@@ -1,4 +1,5 @@
-pure subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) CNAME(clahef_rk)
+pure subroutine clahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) BEGCNAME(clahef_rk,SUFFIX)
+ENDCNAME(clahef_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

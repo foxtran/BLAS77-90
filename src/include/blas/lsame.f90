@@ -1,4 +1,5 @@
-pure function lsame(ca,cb) CNAME(lsame)
+pure function lsame(ca,cb) BEGCNAME(lsame,SUFFIX)
+ENDCNAME(lsame,SUFFIX)
 import
 character(len=1), intent(in) :: ca
 character(len=1), intent(in) :: cb

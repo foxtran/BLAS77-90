@@ -1,4 +1,5 @@
-pure subroutine zptcon(n,d,e,anorm,rcond,rwork,info) CNAME(zptcon)
+pure subroutine zptcon(n,d,e,anorm,rcond,rwork,info) BEGCNAME(zptcon,SUFFIX)
+ENDCNAME(zptcon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: d(*)

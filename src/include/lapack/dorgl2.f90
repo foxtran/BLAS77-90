@@ -1,4 +1,5 @@
-pure subroutine dorgl2(m,n,k,a,lda,tau,work,info) CNAME(dorgl2)
+pure subroutine dorgl2(m,n,k,a,lda,tau,work,info) BEGCNAME(dorgl2,SUFFIX)
+ENDCNAME(dorgl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

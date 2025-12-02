@@ -1,4 +1,5 @@
-pure subroutine zpoequ(n,a,lda,s,scond,amax,info) CNAME(zpoequ)
+pure subroutine zpoequ(n,a,lda,s,scond,amax,info) BEGCNAME(zpoequ,SUFFIX)
+ENDCNAME(zpoequ,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

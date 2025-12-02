@@ -1,4 +1,5 @@
-pure subroutine dpoequ(n,a,lda,s,scond,amax,info) CNAME(dpoequ)
+pure subroutine dpoequ(n,a,lda,s,scond,amax,info) BEGCNAME(dpoequ,SUFFIX)
+ENDCNAME(dpoequ,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

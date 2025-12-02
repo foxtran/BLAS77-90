@@ -1,4 +1,5 @@
-pure subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) CNAME(dlarzt)
+pure subroutine dlarzt(direct,storev,n,k,v,ldv,tau,t,ldt) BEGCNAME(dlarzt,SUFFIX)
+ENDCNAME(dlarzt,SUFFIX)
 import
 character(len=1), intent(inout) :: direct
 character(len=1), intent(inout) :: storev

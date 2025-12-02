@@ -1,4 +1,5 @@
-pure subroutine sorgl2(m,n,k,a,lda,tau,work,info) CNAME(sorgl2)
+pure subroutine sorgl2(m,n,k,a,lda,tau,work,info) BEGCNAME(sorgl2,SUFFIX)
+ENDCNAME(sorgl2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

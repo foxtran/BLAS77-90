@@ -1,4 +1,5 @@
-pure subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) CNAME(zgglse)
+pure subroutine zgglse(m,n,p,a,lda,b,ldb,c,d,x,work,lwork,info) BEGCNAME(zgglse,SUFFIX)
+ENDCNAME(zgglse,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

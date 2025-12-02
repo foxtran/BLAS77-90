@@ -1,4 +1,5 @@
-pure subroutine zlartv(n,x,incx,y,incy,c,s,incc) CNAME(zlartv)
+pure subroutine zlartv(n,x,incx,y,incy,c,s,incc) BEGCNAME(zlartv,SUFFIX)
+ENDCNAME(zlartv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: x(*)

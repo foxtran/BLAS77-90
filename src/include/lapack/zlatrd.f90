@@ -1,4 +1,5 @@
-pure subroutine zlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) CNAME(zlatrd)
+pure subroutine zlatrd(uplo,n,nb,a,lda,e,tau,w,ldw) BEGCNAME(zlatrd,SUFFIX)
+ENDCNAME(zlatrd,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

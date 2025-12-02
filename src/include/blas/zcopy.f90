@@ -1,4 +1,5 @@
-pure subroutine zcopy(n,zx,incx,zy,incy) CNAME(zcopy)
+pure subroutine zcopy(n,zx,incx,zy,incy) BEGCNAME(zcopy,SUFFIX)
+ENDCNAME(zcopy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: zx(*)

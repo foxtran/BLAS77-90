@@ -1,4 +1,5 @@
-pure subroutine dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) CNAME(dlaqz1)
+pure subroutine dlaqz1(a,lda,b,ldb,sr1,sr2,si,beta1,beta2,v) BEGCNAME(dlaqz1,SUFFIX)
+ENDCNAME(dlaqz1,SUFFIX)
 import
 integer(blas77_int),intent(in)::lda
 real(blas77_f64),intent(in)::a(lda,*)

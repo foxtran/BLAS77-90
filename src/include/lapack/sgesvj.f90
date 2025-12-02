@@ -1,4 +1,5 @@
-pure subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) CNAME(sgesvj)
+pure subroutine sgesvj(joba,jobu,jobv,m,n,a,lda,sva,mv,v,ldv,work,lwork,info) BEGCNAME(sgesvj,SUFFIX)
+ENDCNAME(sgesvj,SUFFIX)
 import
 character(len=1), intent(inout) :: joba
 character(len=1), intent(inout) :: jobu

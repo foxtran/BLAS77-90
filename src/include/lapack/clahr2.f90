@@ -1,4 +1,5 @@
-pure subroutine clahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(clahr2)
+pure subroutine clahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) BEGCNAME(clahr2,SUFFIX)
+ENDCNAME(clahr2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: k

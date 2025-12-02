@@ -1,4 +1,5 @@
-pure subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) CNAME(clabrd)
+pure subroutine clabrd(m,n,nb,a,lda,d,e,tauq,taup,x,ldx,y,ldy) BEGCNAME(clabrd,SUFFIX)
+ENDCNAME(clabrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) CNAME(zhpgvd)
+pure subroutine zhpgvd(itype,jobz,uplo,n,ap,bp,w,z,ldz,work,lwork,rwork,lrwork,iwork,liwork,info) BEGCNAME(zhpgvd,SUFFIX)
+ENDCNAME(zhpgvd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: jobz

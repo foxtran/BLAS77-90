@@ -1,4 +1,5 @@
-pure subroutine dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) CNAME(dsyrfsx)
+pure subroutine dsyrfsx(uplo,equed,n,nrhs,a,lda,af,ldaf,ipiv,s,b,ldb,x,ldx,rcond,berr,n_err_bnds,err_bnds_norm,err_bnds_comp,nparams,params,work,iwork,info) BEGCNAME(dsyrfsx,SUFFIX)
+ENDCNAME(dsyrfsx,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: equed

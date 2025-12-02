@@ -1,4 +1,5 @@
-pure subroutine ssyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(ssyr2k)
+pure subroutine ssyr2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(ssyr2k,SUFFIX)
+ENDCNAME(ssyr2k,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

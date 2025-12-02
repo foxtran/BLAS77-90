@@ -1,4 +1,5 @@
-pure subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) CNAME(sgehrd)
+pure subroutine sgehrd(n,ilo,ihi,a,lda,tau,work,lwork,info) BEGCNAME(sgehrd,SUFFIX)
+ENDCNAME(sgehrd,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ilo

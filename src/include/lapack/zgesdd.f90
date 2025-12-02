@@ -1,4 +1,5 @@
-pure subroutine zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) CNAME(zgesdd)
+pure subroutine zgesdd(jobz,m,n,a,lda,s,u,ldu,vt,ldvt,work,lwork,rwork,iwork,info) BEGCNAME(zgesdd,SUFFIX)
+ENDCNAME(zgesdd,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 integer(blas77_int), intent(inout) :: m

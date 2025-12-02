@@ -1,4 +1,5 @@
-pure subroutine chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) CNAME(chetrf_aa_2stage)
+pure subroutine chetrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) BEGCNAME(chetrf_aa_2stage,SUFFIX)
+ENDCNAME(chetrf_aa_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure function sdot(n,sx,incx,sy,incy) CNAME(sdot)
+pure function sdot(n,sx,incx,sy,incy) BEGCNAME(sdot,SUFFIX)
+ENDCNAME(sdot,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 real(blas77_f32), intent(in) :: sx(*)

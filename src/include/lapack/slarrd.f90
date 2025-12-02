@@ -1,4 +1,5 @@
-pure subroutine slarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork,info) CNAME(slarrd)
+pure subroutine slarrd(range,order,n,vl,vu,il,iu,gers,reltol,d,e,e2,pivmin,nsplit,isplit,m,w,werr,wl,wu,iblock,indexw,work,iwork,info) BEGCNAME(slarrd,SUFFIX)
+ENDCNAME(slarrd,SUFFIX)
 import
 character(len=1), intent(inout) :: range
 character(len=1), intent(inout) :: order

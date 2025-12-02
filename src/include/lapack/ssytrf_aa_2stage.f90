@@ -1,4 +1,5 @@
-pure subroutine ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) CNAME(ssytrf_aa_2stage)
+pure subroutine ssytrf_aa_2stage(uplo,n,a,lda,tb,ltb,ipiv,ipiv2,work,lwork,info) BEGCNAME(ssytrf_aa_2stage,SUFFIX)
+ENDCNAME(ssytrf_aa_2stage,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dlapll(n,x,incx,y,incy,ssmin) CNAME(dlapll)
+pure subroutine dlapll(n,x,incx,y,incy,ssmin) BEGCNAME(dlapll,SUFFIX)
+ENDCNAME(dlapll,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: x(*)

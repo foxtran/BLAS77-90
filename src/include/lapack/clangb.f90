@@ -1,4 +1,5 @@
-pure function clangb(norm,n,kl,ku,ab,ldab,work) CNAME(clangb)
+pure function clangb(norm,n,kl,ku,ab,ldab,work) BEGCNAME(clangb,SUFFIX)
+ENDCNAME(clangb,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: n

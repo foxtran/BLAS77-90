@@ -1,4 +1,5 @@
-pure subroutine slagts(job,n,a,b,c,d,in,y,tol,info) CNAME(slagts)
+pure subroutine slagts(job,n,a,b,c,d,in,y,tol,info) BEGCNAME(slagts,SUFFIX)
+ENDCNAME(slagts,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: job
 integer(blas77_int), intent(inout) :: n

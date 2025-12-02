@@ -1,4 +1,5 @@
-pure subroutine zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info) CNAME(zggsvd3)
+pure subroutine zggsvd3(jobu,jobv,jobq,m,n,p,k,l,a,lda,b,ldb,alpha,beta,u,ldu,v,ldv,q,ldq,work,lwork,rwork,iwork,info) BEGCNAME(zggsvd3,SUFFIX)
+ENDCNAME(zggsvd3,SUFFIX)
 import
 character(len=1), intent(inout) :: jobu
 character(len=1), intent(inout) :: jobv

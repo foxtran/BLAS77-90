@@ -1,4 +1,5 @@
-pure subroutine dtfttp(transr,uplo,n,arf,ap,info) CNAME(dtfttp)
+pure subroutine dtfttp(transr,uplo,n,arf,ap,info) BEGCNAME(dtfttp,SUFFIX)
+ENDCNAME(dtfttp,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

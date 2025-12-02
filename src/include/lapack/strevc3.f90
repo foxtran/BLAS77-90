@@ -1,4 +1,5 @@
-pure subroutine strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info) CNAME(strevc3)
+pure subroutine strevc3(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,lwork,info) BEGCNAME(strevc3,SUFFIX)
+ENDCNAME(strevc3,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: howmny

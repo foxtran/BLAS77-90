@@ -1,4 +1,5 @@
-pure subroutine ssytf2_rk(uplo,n,a,lda,e,ipiv,info) CNAME(ssytf2_rk)
+pure subroutine ssytf2_rk(uplo,n,a,lda,e,ipiv,info) BEGCNAME(ssytf2_rk,SUFFIX)
+ENDCNAME(ssytf2_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dpbtf2(uplo,n,kd,ab,ldab,info) CNAME(dpbtf2)
+pure subroutine dpbtf2(uplo,n,kd,ab,ldab,info) BEGCNAME(dpbtf2,SUFFIX)
+ENDCNAME(dpbtf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

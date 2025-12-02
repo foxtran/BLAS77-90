@@ -1,4 +1,5 @@
-pure subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) CNAME(clatzm)
+pure subroutine clatzm(side,m,n,v,incv,tau,c1,c2,ldc,work) BEGCNAME(clatzm,SUFFIX)
+ENDCNAME(clatzm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 integer(blas77_int), intent(inout) :: m

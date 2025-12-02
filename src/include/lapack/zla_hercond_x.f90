@@ -1,4 +1,5 @@
-pure function zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) CNAME(zla_hercond_x)
+pure function zla_hercond_x(uplo,n,a,lda,af,ldaf,ipiv,x,info,work,rwork) BEGCNAME(zla_hercond_x,SUFFIX)
+ENDCNAME(zla_hercond_x,SUFFIX)
 import
 character(len=1), intent(in) :: uplo
 integer(blas77_int), intent(in) :: n

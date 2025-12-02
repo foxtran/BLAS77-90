@@ -1,4 +1,5 @@
-pure subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) CNAME(slaswp)
+pure subroutine slaswp(n,a,lda,k1,k2,ipiv,incx) BEGCNAME(slaswp,SUFFIX)
+ENDCNAME(slaswp,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

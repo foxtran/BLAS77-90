@@ -1,4 +1,5 @@
-pure subroutine ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) CNAME(ctrsyl)
+pure subroutine ctrsyl(trana,tranb,isgn,m,n,a,lda,b,ldb,c,ldc,scale,info) BEGCNAME(ctrsyl,SUFFIX)
+ENDCNAME(ctrsyl,SUFFIX)
 import
 character(len=1), intent(inout) :: trana
 character(len=1), intent(inout) :: tranb

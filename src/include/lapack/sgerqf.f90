@@ -1,4 +1,5 @@
-pure subroutine sgerqf(m,n,a,lda,tau,work,lwork,info) CNAME(sgerqf)
+pure subroutine sgerqf(m,n,a,lda,tau,work,lwork,info) BEGCNAME(sgerqf,SUFFIX)
+ENDCNAME(sgerqf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

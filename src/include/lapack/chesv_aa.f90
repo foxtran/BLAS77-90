@@ -1,4 +1,5 @@
-pure subroutine chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(chesv_aa)
+pure subroutine chesv_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) BEGCNAME(chesv_aa,SUFFIX)
+ENDCNAME(chesv_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

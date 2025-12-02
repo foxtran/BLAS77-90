@@ -1,4 +1,5 @@
-pure subroutine dtrttp(uplo,n,a,lda,ap,info) CNAME(dtrttp)
+pure subroutine dtrttp(uplo,n,a,lda,ap,info) BEGCNAME(dtrttp,SUFFIX)
+ENDCNAME(dtrttp,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

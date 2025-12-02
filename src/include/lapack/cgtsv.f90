@@ -1,4 +1,5 @@
-pure subroutine cgtsv(n,nrhs,dl,d,du,b,ldb,info) CNAME(cgtsv)
+pure subroutine cgtsv(n,nrhs,dl,d,du,b,ldb,info) BEGCNAME(cgtsv,SUFFIX)
+ENDCNAME(cgtsv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

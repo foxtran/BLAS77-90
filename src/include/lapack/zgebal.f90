@@ -1,4 +1,5 @@
-pure subroutine zgebal(job,n,a,lda,ilo,ihi,scale,info) CNAME(zgebal)
+pure subroutine zgebal(job,n,a,lda,ilo,ihi,scale,info) BEGCNAME(zgebal,SUFFIX)
+ENDCNAME(zgebal,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 integer(blas77_int), intent(inout) :: n

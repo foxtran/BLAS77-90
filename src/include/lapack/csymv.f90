@@ -1,4 +1,5 @@
-pure subroutine csymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(csymv)
+pure subroutine csymv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(csymv,SUFFIX)
+ENDCNAME(csymv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

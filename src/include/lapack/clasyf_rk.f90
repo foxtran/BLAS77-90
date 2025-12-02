@@ -1,4 +1,5 @@
-pure subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) CNAME(clasyf_rk)
+pure subroutine clasyf_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) BEGCNAME(clasyf_rk,SUFFIX)
+ENDCNAME(clasyf_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

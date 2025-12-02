@@ -1,4 +1,5 @@
-pure subroutine chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) CNAME(chb2st_kernels)
+pure subroutine chb2st_kernels(uplo,wantz,ttype,st,ed,sweep,n,nb,ib,a,lda,v,tau,ldvt,work) BEGCNAME(chb2st_kernels,SUFFIX)
+ENDCNAME(chb2st_kernels,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 logical(blas77_int), intent(inout) :: wantz

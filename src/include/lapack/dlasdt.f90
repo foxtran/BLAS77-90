@@ -1,4 +1,5 @@
-pure subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) CNAME(dlasdt)
+pure subroutine dlasdt(n,lvl,nd,inode,ndiml,ndimr,msub) BEGCNAME(dlasdt,SUFFIX)
+ENDCNAME(dlasdt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lvl

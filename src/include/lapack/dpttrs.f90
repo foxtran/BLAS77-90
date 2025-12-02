@@ -1,4 +1,5 @@
-pure subroutine dpttrs(n,nrhs,d,e,b,ldb,info) CNAME(dpttrs)
+pure subroutine dpttrs(n,nrhs,d,e,b,ldb,info) BEGCNAME(dpttrs,SUFFIX)
+ENDCNAME(dpttrs,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

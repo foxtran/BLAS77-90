@@ -1,4 +1,5 @@
-pure subroutine crot(n,cx,incx,cy,incy,c,s) CNAME(crot)
+pure subroutine crot(n,cx,incx,cy,incy,c,s) BEGCNAME(crot,SUFFIX)
+ENDCNAME(crot,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: cx(*)

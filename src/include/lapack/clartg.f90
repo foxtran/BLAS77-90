@@ -1,4 +1,5 @@
-pure subroutine clartg(f,g,c,s,r) CNAME(clartg)
+pure subroutine clartg(f,g,c,s,r) BEGCNAME(clartg,SUFFIX)
+ENDCNAME(clartg,SUFFIX)
 import
 complex(blas77_f32), intent(inout) :: f
 complex(blas77_f32), intent(inout) :: g

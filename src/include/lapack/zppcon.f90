@@ -1,4 +1,5 @@
-pure subroutine zppcon(uplo,n,ap,anorm,rcond,work,rwork,info) CNAME(zppcon)
+pure subroutine zppcon(uplo,n,ap,anorm,rcond,work,rwork,info) BEGCNAME(zppcon,SUFFIX)
+ENDCNAME(zppcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

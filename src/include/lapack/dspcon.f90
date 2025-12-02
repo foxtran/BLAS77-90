@@ -1,4 +1,5 @@
-pure subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) CNAME(dspcon)
+pure subroutine dspcon(uplo,n,ap,ipiv,anorm,rcond,work,iwork,info) BEGCNAME(dspcon,SUFFIX)
+ENDCNAME(dspcon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

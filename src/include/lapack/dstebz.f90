@@ -1,4 +1,5 @@
-pure subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) CNAME(dstebz)
+pure subroutine dstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) BEGCNAME(dstebz,SUFFIX)
+ENDCNAME(dstebz,SUFFIX)
 import
 character(len=1), intent(inout) :: range
 character(len=1), intent(inout) :: order

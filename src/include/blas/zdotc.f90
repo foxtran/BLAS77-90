@@ -1,4 +1,5 @@
-pure function zdotc(n,zx,incx,zy,incy) CNAME(zdotc)
+pure function zdotc(n,zx,incx,zy,incy) BEGCNAME(zdotc,SUFFIX)
+ENDCNAME(zdotc,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 complex(blas77_f64), intent(in) :: zx(*)

@@ -1,4 +1,5 @@
-pure subroutine zunhr_col(m,n,nb,a,lda,t,ldt,d,info) CNAME(zunhr_col)
+pure subroutine zunhr_col(m,n,nb,a,lda,t,ldt,d,info) BEGCNAME(zunhr_col,SUFFIX)
+ENDCNAME(zunhr_col,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

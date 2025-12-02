@@ -1,4 +1,5 @@
-pure subroutine cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) CNAME(cggbal)
+pure subroutine cggbal(job,n,a,lda,b,ldb,ilo,ihi,lscale,rscale,work,info) BEGCNAME(cggbal,SUFFIX)
+ENDCNAME(cggbal,SUFFIX)
 import
 character(len=1), intent(inout) :: job
 integer(blas77_int), intent(inout) :: n

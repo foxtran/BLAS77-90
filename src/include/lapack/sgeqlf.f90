@@ -1,4 +1,5 @@
-pure subroutine sgeqlf(m,n,a,lda,tau,work,lwork,info) CNAME(sgeqlf)
+pure subroutine sgeqlf(m,n,a,lda,tau,work,lwork,info) BEGCNAME(sgeqlf,SUFFIX)
+ENDCNAME(sgeqlf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

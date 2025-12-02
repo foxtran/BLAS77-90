@@ -1,4 +1,5 @@
-pure subroutine zgerq2(m,n,a,lda,tau,work,info) CNAME(zgerq2)
+pure subroutine zgerq2(m,n,a,lda,tau,work,info) BEGCNAME(zgerq2,SUFFIX)
+ENDCNAME(zgerq2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

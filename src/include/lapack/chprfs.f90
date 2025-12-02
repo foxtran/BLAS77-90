@@ -1,4 +1,5 @@
-pure subroutine chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(chprfs)
+pure subroutine chprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(chprfs,SUFFIX)
+ENDCNAME(chprfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

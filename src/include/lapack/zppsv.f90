@@ -1,4 +1,5 @@
-pure subroutine zppsv(uplo,n,nrhs,ap,b,ldb,info) CNAME(zppsv)
+pure subroutine zppsv(uplo,n,nrhs,ap,b,ldb,info) BEGCNAME(zppsv,SUFFIX)
+ENDCNAME(zppsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

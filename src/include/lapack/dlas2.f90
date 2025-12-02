@@ -1,4 +1,5 @@
-pure subroutine dlas2(f,g,h,ssmin,ssmax) CNAME(dlas2)
+pure subroutine dlas2(f,g,h,ssmin,ssmax) BEGCNAME(dlas2,SUFFIX)
+ENDCNAME(dlas2,SUFFIX)
 import
 real(blas77_f64), intent(inout) :: f
 real(blas77_f64), intent(inout) :: g

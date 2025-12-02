@@ -1,4 +1,5 @@
-pure subroutine slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) CNAME(slaqz2)
+pure subroutine slaqz2(ilq,ilz,k,istartm,istopm,ihi,a,lda,b,ldb,nq,qstart,q,ldq,nz,zstart,z,ldz) BEGCNAME(slaqz2,SUFFIX)
+ENDCNAME(slaqz2,SUFFIX)
 import
 logical(blas77_int),intent(in)::ilq
 logical(blas77_int),intent(in)::ilz

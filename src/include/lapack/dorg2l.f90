@@ -1,4 +1,5 @@
-pure subroutine dorg2l(m,n,k,a,lda,tau,work,info) CNAME(dorg2l)
+pure subroutine dorg2l(m,n,k,a,lda,tau,work,info) BEGCNAME(dorg2l,SUFFIX)
+ENDCNAME(dorg2l,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

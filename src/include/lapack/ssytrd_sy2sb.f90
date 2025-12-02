@@ -1,4 +1,5 @@
-pure subroutine ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) CNAME(ssytrd_sy2sb)
+pure subroutine ssytrd_sy2sb(uplo,n,kd,a,lda,ab,ldab,tau,work,lwork,info) BEGCNAME(ssytrd_sy2sb,SUFFIX)
+ENDCNAME(ssytrd_sy2sb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

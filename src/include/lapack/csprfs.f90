@@ -1,4 +1,5 @@
-pure subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) CNAME(csprfs)
+pure subroutine csprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,rwork,info) BEGCNAME(csprfs,SUFFIX)
+ENDCNAME(csprfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

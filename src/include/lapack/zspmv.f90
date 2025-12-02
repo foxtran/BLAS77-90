@@ -1,4 +1,5 @@
-pure subroutine zspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) CNAME(zspmv)
+pure subroutine zspmv(uplo,n,alpha,ap,x,incx,beta,y,incy) BEGCNAME(zspmv,SUFFIX)
+ENDCNAME(zspmv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) CNAME(slaed9)
+pure subroutine slaed9(k,kstart,kstop,n,d,q,ldq,rho,dlambda,w,s,lds,info) BEGCNAME(slaed9,SUFFIX)
+ENDCNAME(slaed9,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: k
 integer(blas77_int), intent(inout) :: kstart

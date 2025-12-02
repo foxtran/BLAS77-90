@@ -1,4 +1,5 @@
-pure subroutine cgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(cgemm)
+pure subroutine cgemm(transa,transb,m,n,k,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(cgemm,SUFFIX)
+ENDCNAME(cgemm,SUFFIX)
 import
 character(len=1), intent(inout) :: transa
 character(len=1), intent(inout) :: transb

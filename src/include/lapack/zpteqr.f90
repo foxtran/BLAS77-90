@@ -1,4 +1,5 @@
-pure subroutine zpteqr(compz,n,d,e,z,ldz,work,info) CNAME(zpteqr)
+pure subroutine zpteqr(compz,n,d,e,z,ldz,work,info) BEGCNAME(zpteqr,SUFFIX)
+ENDCNAME(zpteqr,SUFFIX)
 import
 character(len=1), intent(inout) :: compz
 integer(blas77_int), intent(inout) :: n

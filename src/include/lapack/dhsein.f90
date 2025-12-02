@@ -1,4 +1,5 @@
-pure subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) CNAME(dhsein)
+pure subroutine dhsein(side,eigsrc,initv,select,n,h,ldh,wr,wi,vl,ldvl,vr,ldvr,mm,m,work,ifaill,ifailr,info) BEGCNAME(dhsein,SUFFIX)
+ENDCNAME(dhsein,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: eigsrc

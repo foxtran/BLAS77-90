@@ -1,4 +1,5 @@
-pure subroutine zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) CNAME(zgelsx)
+pure subroutine zgelsx(m,n,nrhs,a,lda,b,ldb,jpvt,rcond,rank,work,rwork,info) BEGCNAME(zgelsx,SUFFIX)
+ENDCNAME(zgelsx,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

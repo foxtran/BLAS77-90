@@ -1,4 +1,5 @@
-pure function clanhp(norm,uplo,n,ap,work) CNAME(clanhp)
+pure function clanhp(norm,uplo,n,ap,work) BEGCNAME(clanhp,SUFFIX)
+ENDCNAME(clanhp,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

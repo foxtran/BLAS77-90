@@ -1,4 +1,5 @@
-pure subroutine zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) CNAME(zlahef_rk)
+pure subroutine zlahef_rk(uplo,n,nb,kb,a,lda,e,ipiv,w,ldw,info) BEGCNAME(zlahef_rk,SUFFIX)
+ENDCNAME(zlahef_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

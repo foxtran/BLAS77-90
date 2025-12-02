@@ -1,4 +1,5 @@
-pure subroutine sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) CNAME(sptsvx)
+pure subroutine sptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) BEGCNAME(sptsvx,SUFFIX)
+ENDCNAME(sptsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 integer(blas77_int), intent(inout) :: n

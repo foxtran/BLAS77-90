@@ -1,4 +1,5 @@
-pure subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) CNAME(clasyf_aa)
+pure subroutine clasyf_aa(uplo,j1,m,nb,a,lda,ipiv,h,ldh,work) BEGCNAME(clasyf_aa,SUFFIX)
+ENDCNAME(clasyf_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: j1

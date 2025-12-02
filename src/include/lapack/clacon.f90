@@ -1,4 +1,5 @@
-pure subroutine clacon(n,v,x,est,kase) CNAME(clacon)
+pure subroutine clacon(n,v,x,est,kase) BEGCNAME(clacon,SUFFIX)
+ENDCNAME(clacon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f32), intent(inout) :: v(n)

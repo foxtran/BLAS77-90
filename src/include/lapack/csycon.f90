@@ -1,4 +1,5 @@
-pure subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(csycon)
+pure subroutine csycon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(csycon,SUFFIX)
+ENDCNAME(csycon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

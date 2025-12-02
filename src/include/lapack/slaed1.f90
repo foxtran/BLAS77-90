@@ -1,4 +1,5 @@
-pure subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) CNAME(slaed1)
+pure subroutine slaed1(n,d,q,ldq,indxq,rho,cutpnt,work,iwork,info) BEGCNAME(slaed1,SUFFIX)
+ENDCNAME(slaed1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

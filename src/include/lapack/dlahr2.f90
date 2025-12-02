@@ -1,4 +1,5 @@
-pure subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) CNAME(dlahr2)
+pure subroutine dlahr2(n,k,nb,a,lda,tau,t,ldt,y,ldy) BEGCNAME(dlahr2,SUFFIX)
+ENDCNAME(dlahr2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: k

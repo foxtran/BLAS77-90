@@ -1,4 +1,5 @@
-pure subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) CNAME(dptsvx)
+pure subroutine dptsvx(fact,n,nrhs,d,e,df,ef,b,ldb,x,ldx,rcond,ferr,berr,work,info) BEGCNAME(dptsvx,SUFFIX)
+ENDCNAME(dptsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 integer(blas77_int), intent(inout) :: n

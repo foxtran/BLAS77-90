@@ -1,4 +1,5 @@
-pure subroutine zpotri(uplo,n,a,lda,info) CNAME(zpotri)
+pure subroutine zpotri(uplo,n,a,lda,info) BEGCNAME(zpotri,SUFFIX)
+ENDCNAME(zpotri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

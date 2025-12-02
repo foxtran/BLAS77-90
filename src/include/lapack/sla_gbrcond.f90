@@ -1,4 +1,5 @@
-pure function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) CNAME(sla_gbrcond)
+pure function sla_gbrcond(trans,n,kl,ku,ab,ldab,afb,ldafb,ipiv,cmode,c,info,work,iwork) BEGCNAME(sla_gbrcond,SUFFIX)
+ENDCNAME(sla_gbrcond,SUFFIX)
 import
 character(len=1), intent(in) :: trans
 integer(blas77_int), intent(in) :: n

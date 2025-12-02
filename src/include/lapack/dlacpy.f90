@@ -1,4 +1,5 @@
-pure subroutine dlacpy(uplo,m,n,a,lda,b,ldb) CNAME(dlacpy)
+pure subroutine dlacpy(uplo,m,n,a,lda,b,ldb) BEGCNAME(dlacpy,SUFFIX)
+ENDCNAME(dlacpy,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: m

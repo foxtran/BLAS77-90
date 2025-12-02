@@ -1,4 +1,5 @@
-pure subroutine sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(sgerfs)
+pure subroutine sgerfs(trans,n,nrhs,a,lda,af,ldaf,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(sgerfs,SUFFIX)
+ENDCNAME(sgerfs,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) CNAME(dppsvx)
+pure subroutine dppsvx(fact,uplo,n,nrhs,ap,afp,equed,s,b,ldb,x,ldx,rcond,ferr,berr,work,iwork,info) BEGCNAME(dppsvx,SUFFIX)
+ENDCNAME(dppsvx,SUFFIX)
 import
 character(len=1), intent(inout) :: fact
 character(len=1), intent(inout) :: uplo

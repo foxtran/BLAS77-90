@@ -1,4 +1,5 @@
-pure subroutine claset(uplo,m,n,alpha,beta,a,lda) CNAME(claset)
+pure subroutine claset(uplo,m,n,alpha,beta,a,lda) BEGCNAME(claset,SUFFIX)
+ENDCNAME(claset,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: m

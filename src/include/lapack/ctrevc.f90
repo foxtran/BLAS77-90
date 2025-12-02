@@ -1,4 +1,5 @@
-pure subroutine ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ctrevc)
+pure subroutine ctrevc(side,howmny,select,n,t,ldt,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) BEGCNAME(ctrevc,SUFFIX)
+ENDCNAME(ctrevc,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: howmny

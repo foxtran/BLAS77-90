@@ -1,4 +1,5 @@
-pure subroutine dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) CNAME(dtrmm)
+pure subroutine dtrmm(side,uplo,transa,diag,m,n,alpha,a,lda,b,ldb) BEGCNAME(dtrmm,SUFFIX)
+ENDCNAME(dtrmm,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: uplo

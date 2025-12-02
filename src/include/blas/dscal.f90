@@ -1,4 +1,5 @@
-pure subroutine dscal(n,da,dx,incx) CNAME(dscal)
+pure subroutine dscal(n,da,dx,incx) BEGCNAME(dscal,SUFFIX)
+ENDCNAME(dscal,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: da

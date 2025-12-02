@@ -1,4 +1,5 @@
-pure subroutine slas2(f,g,h,ssmin,ssmax) CNAME(slas2)
+pure subroutine slas2(f,g,h,ssmin,ssmax) BEGCNAME(slas2,SUFFIX)
+ENDCNAME(slas2,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: f
 real(blas77_f32), intent(inout) :: g

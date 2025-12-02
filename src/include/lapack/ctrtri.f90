@@ -1,4 +1,5 @@
-pure subroutine ctrtri(uplo,diag,n,a,lda,info) CNAME(ctrtri)
+pure subroutine ctrtri(uplo,diag,n,a,lda,info) BEGCNAME(ctrtri,SUFFIX)
+ENDCNAME(ctrtri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: diag

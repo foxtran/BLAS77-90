@@ -1,4 +1,5 @@
-pure subroutine dlaqr1(n,h,ldh,sr1,si1,sr2,si2,v) CNAME(dlaqr1)
+pure subroutine dlaqr1(n,h,ldh,sr1,si1,sr2,si2,v) BEGCNAME(dlaqr1,SUFFIX)
+ENDCNAME(dlaqr1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: ldh

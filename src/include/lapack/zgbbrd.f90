@@ -1,4 +1,5 @@
-pure subroutine zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) CNAME(zgbbrd)
+pure subroutine zgbbrd(vect,m,n,ncc,kl,ku,ab,ldab,d,e,q,ldq,pt,ldpt,c,ldc,work,rwork,info) BEGCNAME(zgbbrd,SUFFIX)
+ENDCNAME(zgbbrd,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 integer(blas77_int), intent(inout) :: m

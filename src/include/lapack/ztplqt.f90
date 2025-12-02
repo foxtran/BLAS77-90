@@ -1,4 +1,5 @@
-pure subroutine ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) CNAME(ztplqt)
+pure subroutine ztplqt(m,n,l,mb,a,lda,b,ldb,t,ldt,work,info) BEGCNAME(ztplqt,SUFFIX)
+ENDCNAME(ztplqt,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

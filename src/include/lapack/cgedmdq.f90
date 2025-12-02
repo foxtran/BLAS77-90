@@ -1,4 +1,5 @@
-pure subroutine cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info) CNAME(cgedmdq)
+pure subroutine cgedmdq(jobs,jobz,jobr,jobq,jobt,jobf,whtsvd,m,n,f,ldf,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,v,ldv,s,lds,zwork,lzwork,work,lwork,iwork,liwork,info) BEGCNAME(cgedmdq,SUFFIX)
+ENDCNAME(cgedmdq,SUFFIX)
 import
 character(len=1),intent(in)::jobs
 character(len=1),intent(in)::jobz

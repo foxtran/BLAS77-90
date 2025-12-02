@@ -1,4 +1,5 @@
-pure subroutine stbsv(uplo,trans,diag,n,k,a,lda,x,incx) CNAME(stbsv)
+pure subroutine stbsv(uplo,trans,diag,n,k,a,lda,x,incx) BEGCNAME(stbsv,SUFFIX)
+ENDCNAME(stbsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

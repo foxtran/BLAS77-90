@@ -1,4 +1,5 @@
-pure subroutine dgeqr2(m,n,a,lda,tau,work,info) CNAME(dgeqr2)
+pure subroutine dgeqr2(m,n,a,lda,tau,work,info) BEGCNAME(dgeqr2,SUFFIX)
+ENDCNAME(dgeqr2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

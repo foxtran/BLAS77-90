@@ -1,4 +1,5 @@
-pure subroutine zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(zunmrq)
+pure subroutine zunmrq(side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) BEGCNAME(zunmrq,SUFFIX)
+ENDCNAME(zunmrq,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

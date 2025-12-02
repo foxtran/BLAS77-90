@@ -1,4 +1,5 @@
-pure subroutine slasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) CNAME(slasd0)
+pure subroutine slasd0(n,sqre,d,e,u,ldu,vt,ldvt,smlsiz,iwork,work,info) BEGCNAME(slasd0,SUFFIX)
+ENDCNAME(slasd0,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: sqre

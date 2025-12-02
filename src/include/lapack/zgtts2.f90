@@ -1,4 +1,5 @@
-pure subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) CNAME(zgtts2)
+pure subroutine zgtts2(itrans,n,nrhs,dl,d,du,du2,ipiv,b,ldb) BEGCNAME(zgtts2,SUFFIX)
+ENDCNAME(zgtts2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itrans
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine zgeqrf(m,n,a,lda,tau,work,lwork,info) CNAME(zgeqrf)
+pure subroutine zgeqrf(m,n,a,lda,tau,work,lwork,info) BEGCNAME(zgeqrf,SUFFIX)
+ENDCNAME(zgeqrf,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

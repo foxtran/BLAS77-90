@@ -1,4 +1,5 @@
-pure subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) CNAME(cunmbr)
+pure subroutine cunmbr(vect,side,trans,m,n,k,a,lda,tau,c,ldc,work,lwork,info) BEGCNAME(cunmbr,SUFFIX)
+ENDCNAME(cunmbr,SUFFIX)
 import
 character(len=1), intent(inout) :: vect
 character(len=1), intent(inout) :: side

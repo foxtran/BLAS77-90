@@ -1,4 +1,5 @@
-pure subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) CNAME(zsytrf_rk)
+pure subroutine zsytrf_rk(uplo,n,a,lda,e,ipiv,work,lwork,info) BEGCNAME(zsytrf_rk,SUFFIX)
+ENDCNAME(zsytrf_rk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

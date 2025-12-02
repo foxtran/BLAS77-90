@@ -1,4 +1,5 @@
-pure subroutine sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) CNAME(sbdsdc)
+pure subroutine sbdsdc(uplo,compq,n,d,e,u,ldu,vt,ldvt,q,iq,work,iwork,info) BEGCNAME(sbdsdc,SUFFIX)
+ENDCNAME(sbdsdc,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: compq

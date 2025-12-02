@@ -1,4 +1,5 @@
-pure subroutine slasq1(n,d,e,work,info) CNAME(slasq1)
+pure subroutine slasq1(n,d,e,work,info) BEGCNAME(slasq1,SUFFIX)
+ENDCNAME(slasq1,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: d(*)

@@ -1,4 +1,5 @@
-pure subroutine slapll(n,x,incx,y,incy,ssmin) CNAME(slapll)
+pure subroutine slapll(n,x,incx,y,incy,ssmin) BEGCNAME(slapll,SUFFIX)
+ENDCNAME(slapll,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: x(*)

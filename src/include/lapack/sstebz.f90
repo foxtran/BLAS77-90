@@ -1,4 +1,5 @@
-pure subroutine sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) CNAME(sstebz)
+pure subroutine sstebz(range,order,n,vl,vu,il,iu,abstol,d,e,m,nsplit,w,iblock,isplit,work,iwork,info) BEGCNAME(sstebz,SUFFIX)
+ENDCNAME(sstebz,SUFFIX)
 import
 character(len=1), intent(inout) :: range
 character(len=1), intent(inout) :: order

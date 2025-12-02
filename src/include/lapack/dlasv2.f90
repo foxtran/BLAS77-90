@@ -1,4 +1,5 @@
-pure subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) CNAME(dlasv2)
+pure subroutine dlasv2(f,g,h,ssmin,ssmax,snr,csr,snl,csl) BEGCNAME(dlasv2,SUFFIX)
+ENDCNAME(dlasv2,SUFFIX)
 import
 real(blas77_f64), intent(inout) :: f
 real(blas77_f64), intent(inout) :: g

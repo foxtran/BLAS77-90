@@ -1,4 +1,5 @@
-pure subroutine csytf2(uplo,n,a,lda,ipiv,info) CNAME(csytf2)
+pure subroutine csytf2(uplo,n,a,lda,ipiv,info) BEGCNAME(csytf2,SUFFIX)
+ENDCNAME(csytf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

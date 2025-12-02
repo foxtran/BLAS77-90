@@ -1,4 +1,5 @@
-pure subroutine dsytd2(uplo,n,a,lda,d,e,tau,info) CNAME(dsytd2)
+pure subroutine dsytd2(uplo,n,a,lda,d,e,tau,info) BEGCNAME(dsytd2,SUFFIX)
+ENDCNAME(dsytd2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine ztrsv(uplo,trans,diag,n,a,lda,x,incx) CNAME(ztrsv)
+pure subroutine ztrsv(uplo,trans,diag,n,a,lda,x,incx) BEGCNAME(ztrsv,SUFFIX)
+ENDCNAME(ztrsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

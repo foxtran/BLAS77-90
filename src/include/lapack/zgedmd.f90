@@ -1,4 +1,5 @@
-pure subroutine zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) CNAME(zgedmd)
+pure subroutine zgedmd(jobs,jobz,jobr,jobf,whtsvd,m,n,x,ldx,y,ldy,nrnk,tol,k,eigs,z,ldz,res,b,ldb,w,ldw,s,lds,zwork,lzwork,rwork,lrwork,iwork,liwork,info) BEGCNAME(zgedmd,SUFFIX)
+ENDCNAME(zgedmd,SUFFIX)
 import
 character(len=1),intent(in)::jobs
 character(len=1),intent(in)::jobz

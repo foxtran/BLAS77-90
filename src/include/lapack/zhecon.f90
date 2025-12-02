@@ -1,4 +1,5 @@
-pure subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) CNAME(zhecon)
+pure subroutine zhecon(uplo,n,a,lda,ipiv,anorm,rcond,work,info) BEGCNAME(zhecon,SUFFIX)
+ENDCNAME(zhecon,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

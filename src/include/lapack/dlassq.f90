@@ -1,4 +1,5 @@
-pure subroutine dlassq(n,x,incx,scale,sumsq) CNAME(dlassq)
+pure subroutine dlassq(n,x,incx,scale,sumsq) BEGCNAME(dlassq,SUFFIX)
+ENDCNAME(dlassq,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: x(*)

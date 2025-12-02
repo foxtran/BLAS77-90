@@ -1,4 +1,5 @@
-pure subroutine zlapll(n,x,incx,y,incy,ssmin) CNAME(zlapll)
+pure subroutine zlapll(n,x,incx,y,incy,ssmin) BEGCNAME(zlapll,SUFFIX)
+ENDCNAME(zlapll,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 complex(blas77_f64), intent(inout) :: x(*)

@@ -1,4 +1,5 @@
-pure subroutine dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) CNAME(dsprfs)
+pure subroutine dsprfs(uplo,n,nrhs,ap,afp,ipiv,b,ldb,x,ldx,ferr,berr,work,iwork,info) BEGCNAME(dsprfs,SUFFIX)
+ENDCNAME(dsprfs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

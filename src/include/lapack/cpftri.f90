@@ -1,4 +1,5 @@
-pure subroutine cpftri(transr,uplo,n,a,info) CNAME(cpftri)
+pure subroutine cpftri(transr,uplo,n,a,info) BEGCNAME(cpftri,SUFFIX)
+ENDCNAME(cpftri,SUFFIX)
 import
 character(len=1), intent(inout) :: transr
 character(len=1), intent(inout) :: uplo

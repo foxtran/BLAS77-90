@@ -1,4 +1,5 @@
-pure subroutine slag2d(m,n,sa,ldsa,a,lda,info) CNAME(slag2d)
+pure subroutine slag2d(m,n,sa,ldsa,a,lda,info) BEGCNAME(slag2d,SUFFIX)
+ENDCNAME(slag2d,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) CNAME(ssygs2)
+pure subroutine ssygs2(itype,uplo,n,a,lda,b,ldb,info) BEGCNAME(ssygs2,SUFFIX)
+ENDCNAME(ssygs2,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: itype
 character(len=1), intent(inout) :: uplo

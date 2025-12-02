@@ -1,4 +1,5 @@
-pure subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) CNAME(zhpev)
+pure subroutine zhpev(jobz,uplo,n,ap,w,z,ldz,work,rwork,info) BEGCNAME(zhpev,SUFFIX)
+ENDCNAME(zhpev,SUFFIX)
 import
 character(len=1), intent(inout) :: jobz
 character(len=1), intent(inout) :: uplo

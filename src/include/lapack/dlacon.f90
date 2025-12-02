@@ -1,4 +1,5 @@
-pure subroutine dlacon(n,v,x,isgn,est,kase) CNAME(dlacon)
+pure subroutine dlacon(n,v,x,isgn,est,kase) BEGCNAME(dlacon,SUFFIX)
+ENDCNAME(dlacon,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: v(*)

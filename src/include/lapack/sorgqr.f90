@@ -1,4 +1,5 @@
-pure subroutine sorgqr(m,n,k,a,lda,tau,work,lwork,info) CNAME(sorgqr)
+pure subroutine sorgqr(m,n,k,a,lda,tau,work,lwork,info) BEGCNAME(sorgqr,SUFFIX)
+ENDCNAME(sorgqr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

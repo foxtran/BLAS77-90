@@ -1,4 +1,5 @@
-pure function dnrm2(n,x,incx) CNAME(dnrm2)
+pure function dnrm2(n,x,incx) BEGCNAME(dnrm2,SUFFIX)
+ENDCNAME(dnrm2,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 real(blas77_f64), intent(in) :: x(*)

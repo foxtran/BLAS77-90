@@ -1,4 +1,5 @@
-pure subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) CNAME(dlasy2)
+pure subroutine dlasy2(ltranl,ltranr,isgn,n1,n2,tl,ldtl,tr,ldtr,b,ldb,scale,x,ldx,xnorm,info) BEGCNAME(dlasy2,SUFFIX)
+ENDCNAME(dlasy2,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: ltranl
 logical(blas77_int), intent(inout) :: ltranr

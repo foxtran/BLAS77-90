@@ -1,4 +1,5 @@
-pure subroutine sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) CNAME(sstedc)
+pure subroutine sstedc(compz,n,d,e,z,ldz,work,lwork,iwork,liwork,info) BEGCNAME(sstedc,SUFFIX)
+ENDCNAME(sstedc,SUFFIX)
 import
 character(len=1), intent(inout) :: compz
 integer(blas77_int), intent(inout) :: n

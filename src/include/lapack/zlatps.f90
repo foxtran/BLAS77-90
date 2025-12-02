@@ -1,4 +1,5 @@
-pure subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) CNAME(zlatps)
+pure subroutine zlatps(uplo,trans,diag,normin,n,ap,x,scale,cnorm,info) BEGCNAME(zlatps,SUFFIX)
+ENDCNAME(zlatps,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

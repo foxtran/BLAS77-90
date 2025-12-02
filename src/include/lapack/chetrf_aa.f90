@@ -1,4 +1,5 @@
-pure subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) CNAME(chetrf_aa)
+pure subroutine chetrf_aa(uplo,n,a,lda,ipiv,work,lwork,info) BEGCNAME(chetrf_aa,SUFFIX)
+ENDCNAME(chetrf_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

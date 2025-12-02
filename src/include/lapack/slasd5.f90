@@ -1,4 +1,5 @@
-pure subroutine slasd5(i,d,z,delta,rho,dsigma,work) CNAME(slasd5)
+pure subroutine slasd5(i,d,z,delta,rho,dsigma,work) BEGCNAME(slasd5,SUFFIX)
+ENDCNAME(slasd5,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: i
 real(blas77_f32), intent(inout) :: d(2)

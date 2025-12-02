@@ -1,4 +1,5 @@
-pure subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) CNAME(slaexc)
+pure subroutine slaexc(wantq,n,t,ldt,q,ldq,j1,n1,n2,work,info) BEGCNAME(slaexc,SUFFIX)
+ENDCNAME(slaexc,SUFFIX)
 import
 logical(blas77_int), intent(inout) :: wantq
 integer(blas77_int), intent(inout) :: n

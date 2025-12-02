@@ -1,4 +1,5 @@
-pure function scnrm2(n,x,incx) CNAME(scnrm2)
+pure function scnrm2(n,x,incx) BEGCNAME(scnrm2,SUFFIX)
+ENDCNAME(scnrm2,SUFFIX)
 import
 integer(blas77_int), intent(in) :: n
 complex(blas77_f32), intent(in) :: x(*)

@@ -1,4 +1,5 @@
-pure subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) CNAME(zsytrs_aa)
+pure subroutine zsytrs_aa(uplo,n,nrhs,a,lda,ipiv,b,ldb,work,lwork,info) BEGCNAME(zsytrs_aa,SUFFIX)
+ENDCNAME(zsytrs_aa,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

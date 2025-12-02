@@ -1,4 +1,5 @@
-pure subroutine zsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) CNAME(zsyrk)
+pure subroutine zsyrk(uplo,trans,n,k,alpha,a,lda,beta,c,ldc) BEGCNAME(zsyrk,SUFFIX)
+ENDCNAME(zsyrk,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

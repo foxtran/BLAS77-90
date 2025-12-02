@@ -1,4 +1,5 @@
-pure subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) CNAME(dlat2s)
+pure subroutine dlat2s(uplo,n,a,lda,sa,ldsa,info) BEGCNAME(dlat2s,SUFFIX)
+ENDCNAME(dlat2s,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

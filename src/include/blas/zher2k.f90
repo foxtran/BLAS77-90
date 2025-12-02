@@ -1,4 +1,5 @@
-pure subroutine zher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) CNAME(zher2k)
+pure subroutine zher2k(uplo,trans,n,k,alpha,a,lda,b,ldb,beta,c,ldc) BEGCNAME(zher2k,SUFFIX)
+ENDCNAME(zher2k,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans

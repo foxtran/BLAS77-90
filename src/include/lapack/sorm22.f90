@@ -1,4 +1,5 @@
-pure subroutine sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) CNAME(sorm22)
+pure subroutine sorm22(side,trans,m,n,n1,n2,q,ldq,c,ldc,work,lwork,info) BEGCNAME(sorm22,SUFFIX)
+ENDCNAME(sorm22,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

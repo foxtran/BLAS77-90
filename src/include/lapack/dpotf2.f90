@@ -1,4 +1,5 @@
-pure subroutine dpotf2(uplo,n,a,lda,info) CNAME(dpotf2)
+pure subroutine dpotf2(uplo,n,a,lda,info) BEGCNAME(dpotf2,SUFFIX)
+ENDCNAME(dpotf2,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

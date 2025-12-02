@@ -1,4 +1,5 @@
-pure subroutine dlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(dlarfb_gett)
+pure subroutine dlarfb_gett(ident,m,n,k,t,ldt,a,lda,b,ldb,work,ldwork) BEGCNAME(dlarfb_gett,SUFFIX)
+ENDCNAME(dlarfb_gett,SUFFIX)
 import
 character(len=1), intent(inout) :: ident
 integer(blas77_int), intent(inout) :: m

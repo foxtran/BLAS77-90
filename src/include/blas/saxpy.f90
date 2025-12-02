@@ -1,4 +1,5 @@
-pure subroutine saxpy(n,sa,sx,incx,sy,incy) CNAME(saxpy)
+pure subroutine saxpy(n,sa,sx,incx,sy,incy) BEGCNAME(saxpy,SUFFIX)
+ENDCNAME(saxpy,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f32), intent(inout) :: sa

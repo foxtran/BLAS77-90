@@ -1,4 +1,5 @@
-pure subroutine stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) CNAME(stpcon)
+pure subroutine stpcon(norm,uplo,diag,n,ap,rcond,work,iwork,info) BEGCNAME(stpcon,SUFFIX)
+ENDCNAME(stpcon,SUFFIX)
 import
 character(len=1), intent(inout) :: norm
 character(len=1), intent(inout) :: uplo

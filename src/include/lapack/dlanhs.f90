@@ -1,4 +1,5 @@
-pure function dlanhs(norm,n,a,lda,work) CNAME(dlanhs)
+pure function dlanhs(norm,n,a,lda,work) BEGCNAME(dlanhs,SUFFIX)
+ENDCNAME(dlanhs,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: n

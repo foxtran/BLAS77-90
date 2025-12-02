@@ -1,4 +1,5 @@
-pure subroutine ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) CNAME(ztgevc)
+pure subroutine ztgevc(side,howmny,select,n,s,lds,p,ldp,vl,ldvl,vr,ldvr,mm,m,work,rwork,info) BEGCNAME(ztgevc,SUFFIX)
+ENDCNAME(ztgevc,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: howmny

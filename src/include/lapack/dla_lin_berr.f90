@@ -1,4 +1,5 @@
-pure subroutine dla_lin_berr(n,nz,nrhs,res,ayb,berr) CNAME(dla_lin_berr)
+pure subroutine dla_lin_berr(n,nz,nrhs,res,ayb,berr) BEGCNAME(dla_lin_berr,SUFFIX)
+ENDCNAME(dla_lin_berr,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nz

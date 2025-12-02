@@ -1,4 +1,5 @@
-pure function dlange(norm,m,n,a,lda,work) CNAME(dlange)
+pure function dlange(norm,m,n,a,lda,work) BEGCNAME(dlange,SUFFIX)
+ENDCNAME(dlange,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 integer(blas77_int), intent(in) :: m

@@ -1,4 +1,5 @@
-pure function dlansy(norm,uplo,n,a,lda,work) CNAME(dlansy)
+pure function dlansy(norm,uplo,n,a,lda,work) BEGCNAME(dlansy,SUFFIX)
+ENDCNAME(dlansy,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

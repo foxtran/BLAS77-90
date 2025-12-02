@@ -1,4 +1,5 @@
-pure function clanhe(norm,uplo,n,a,lda,work) CNAME(clanhe)
+pure function clanhe(norm,uplo,n,a,lda,work) BEGCNAME(clanhe,SUFFIX)
+ENDCNAME(clanhe,SUFFIX)
 import
 character(len=1), intent(in) :: norm
 character(len=1), intent(in) :: uplo

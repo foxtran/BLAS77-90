@@ -1,4 +1,5 @@
-pure subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) CNAME(csytf2_rook)
+pure subroutine csytf2_rook(uplo,n,a,lda,ipiv,info) BEGCNAME(csytf2_rook,SUFFIX)
+ENDCNAME(csytf2_rook,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

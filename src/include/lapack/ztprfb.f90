@@ -1,4 +1,5 @@
-pure subroutine ztprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) CNAME(ztprfb)
+pure subroutine ztprfb(side,trans,direct,storev,m,n,k,l,v,ldv,t,ldt,a,lda,b,ldb,work,ldwork) BEGCNAME(ztprfb,SUFFIX)
+ENDCNAME(ztprfb,SUFFIX)
 import
 character(len=1), intent(inout) :: side
 character(len=1), intent(inout) :: trans

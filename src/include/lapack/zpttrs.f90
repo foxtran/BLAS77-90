@@ -1,4 +1,5 @@
-pure subroutine zpttrs(uplo,n,nrhs,d,e,b,ldb,info) CNAME(zpttrs)
+pure subroutine zpttrs(uplo,n,nrhs,d,e,b,ldb,info) BEGCNAME(zpttrs,SUFFIX)
+ENDCNAME(zpttrs,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

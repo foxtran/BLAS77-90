@@ -1,4 +1,5 @@
-pure subroutine claswp(n,a,lda,k1,k2,ipiv,incx) CNAME(claswp)
+pure subroutine claswp(n,a,lda,k1,k2,ipiv,incx) BEGCNAME(claswp,SUFFIX)
+ENDCNAME(claswp,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: lda

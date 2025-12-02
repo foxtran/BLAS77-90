@@ -1,4 +1,5 @@
-pure subroutine ssytri(uplo,n,a,lda,ipiv,work,info) CNAME(ssytri)
+pure subroutine ssytri(uplo,n,a,lda,ipiv,work,info) BEGCNAME(ssytri,SUFFIX)
+ENDCNAME(ssytri,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

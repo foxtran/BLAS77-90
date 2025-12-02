@@ -1,4 +1,5 @@
-pure subroutine slaed5(i,d,z,delta,rho,dlam) CNAME(slaed5)
+pure subroutine slaed5(i,d,z,delta,rho,dlam) BEGCNAME(slaed5,SUFFIX)
+ENDCNAME(slaed5,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: i
 real(blas77_f32), intent(inout) :: d(2)

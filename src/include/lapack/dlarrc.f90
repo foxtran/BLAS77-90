@@ -1,4 +1,5 @@
-pure subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) CNAME(dlarrc)
+pure subroutine dlarrc(jobt,n,vl,vu,d,e,pivmin,eigcnt,lcnt,rcnt,info) BEGCNAME(dlarrc,SUFFIX)
+ENDCNAME(dlarrc,SUFFIX)
 import
 character(len=1), intent(inout) :: jobt
 integer(blas77_int), intent(inout) :: n

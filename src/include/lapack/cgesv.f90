@@ -1,4 +1,5 @@
-pure subroutine cgesv(n,nrhs,a,lda,ipiv,b,ldb,info) CNAME(cgesv)
+pure subroutine cgesv(n,nrhs,a,lda,ipiv,b,ldb,info) BEGCNAME(cgesv,SUFFIX)
+ENDCNAME(cgesv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 integer(blas77_int), intent(inout) :: nrhs

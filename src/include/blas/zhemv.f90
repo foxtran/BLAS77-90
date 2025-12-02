@@ -1,4 +1,5 @@
-pure subroutine zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) CNAME(zhemv)
+pure subroutine zhemv(uplo,n,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(zhemv,SUFFIX)
+ENDCNAME(zhemv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

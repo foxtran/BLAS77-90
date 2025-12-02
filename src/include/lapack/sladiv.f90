@@ -1,4 +1,5 @@
-pure subroutine sladiv(a,b,c,d,p,q) CNAME(sladiv)
+pure subroutine sladiv(a,b,c,d,p,q) BEGCNAME(sladiv,SUFFIX)
+ENDCNAME(sladiv,SUFFIX)
 import
 real(blas77_f32), intent(inout) :: a
 real(blas77_f32), intent(inout) :: b

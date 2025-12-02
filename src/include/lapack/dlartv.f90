@@ -1,4 +1,5 @@
-pure subroutine dlartv(n,x,incx,y,incy,c,s,incc) CNAME(dlartv)
+pure subroutine dlartv(n,x,incx,y,incy,c,s,incc) BEGCNAME(dlartv,SUFFIX)
+ENDCNAME(dlartv,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: n
 real(blas77_f64), intent(inout) :: x(*)

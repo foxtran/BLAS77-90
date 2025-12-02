@@ -1,4 +1,5 @@
-pure subroutine dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) CNAME(dgbmv)
+pure subroutine dgbmv(trans,m,n,kl,ku,alpha,a,lda,x,incx,beta,y,incy) BEGCNAME(dgbmv,SUFFIX)
+ENDCNAME(dgbmv,SUFFIX)
 import
 character(len=1), intent(inout) :: trans
 integer(blas77_int), intent(inout) :: m

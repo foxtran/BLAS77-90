@@ -1,4 +1,5 @@
-pure subroutine dgeqrfp(m,n,a,lda,tau,work,lwork,info) CNAME(dgeqrfp)
+pure subroutine dgeqrfp(m,n,a,lda,tau,work,lwork,info) BEGCNAME(dgeqrfp,SUFFIX)
+ENDCNAME(dgeqrfp,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

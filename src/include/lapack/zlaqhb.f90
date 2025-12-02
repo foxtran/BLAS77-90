@@ -1,4 +1,5 @@
-pure subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) CNAME(zlaqhb)
+pure subroutine zlaqhb(uplo,n,kd,ab,ldab,s,scond,amax,equed) BEGCNAME(zlaqhb,SUFFIX)
+ENDCNAME(zlaqhb,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 integer(blas77_int), intent(inout) :: n

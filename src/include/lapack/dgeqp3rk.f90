@@ -1,4 +1,5 @@
-pure subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) CNAME(dgeqp3rk)
+pure subroutine dgeqp3rk(m,n,nrhs,kmax,abstol,reltol,a,lda,k,maxc2nrmk,relmaxc2nrmk,jpiv,tau,work,lwork,iwork,info) BEGCNAME(dgeqp3rk,SUFFIX)
+ENDCNAME(dgeqp3rk,SUFFIX)
 import
 integer(blas77_int), intent(inout) :: m
 integer(blas77_int), intent(inout) :: n

@@ -1,4 +1,5 @@
-pure subroutine ctpsv(uplo,trans,diag,n,ap,x,incx) CNAME(ctpsv)
+pure subroutine ctpsv(uplo,trans,diag,n,ap,x,incx) BEGCNAME(ctpsv,SUFFIX)
+ENDCNAME(ctpsv,SUFFIX)
 import
 character(len=1), intent(inout) :: uplo
 character(len=1), intent(inout) :: trans
